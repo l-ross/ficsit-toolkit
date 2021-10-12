@@ -82,6 +82,16 @@ func TestPropertyValues(t *testing.T) {
 			},
 		},
 		{
+			name:     "InterfaceProperty",
+			testData: "testdata/interface.prop",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetInterfaceValue()
+				require.NoError(t, err)
+				assert.Equal(t, "TheLevelName", v.LevelName)
+				assert.Equal(t, "ThePathName", v.PathName)
+			},
+		},
+		{
 			name:     "NameProperty",
 			testData: "testdata/name.prop",
 			assertValue: func(t *testing.T, p *Property) {

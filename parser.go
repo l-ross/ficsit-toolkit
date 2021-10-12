@@ -217,6 +217,8 @@ func parseObjectData(r *bytes.Reader) (*ObjectData, error) {
 		case IntPropertyType:
 			v := IntPropertyValue(0)
 			p.Value = &v
+		case InterfacePropertyType:
+			p.Value = &InterfacePropertyValue{}
 		case NamePropertyType:
 			v := NamePropertyValue("")
 			p.Value = &v

@@ -240,7 +240,38 @@ func (v *Int64PropertyValue) Parse(r *bytes.Reader) error {
 // InterfaceProperty
 //
 
-type InterfacePropertyValue struct{}
+type InterfacePropertyValue struct {
+	LevelName string
+	PathName  string
+}
+
+func (p *Property) GetInterfaceValue() (*InterfacePropertyValue, error) {
+	if v, ok := p.Value.(*InterfacePropertyValue); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", p.Type)
+}
+
+func (v *InterfacePropertyValue) Parse(r *bytes.Reader) error {
+	// TODO: What is this byte for?
+	err := nextByteIsNull(r)
+	if err != nil {
+		return err
+	}
+
+	v.LevelName, err = readString(r)
+	if err != nil {
+		return err
+	}
+
+	v.PathName, err = readString(r)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
 
 //
 // IntProperty
