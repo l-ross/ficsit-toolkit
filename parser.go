@@ -140,6 +140,7 @@ func (p *Parser) parseObjectsData(s *Save) error {
 	}
 
 	for i := int32(0); i < objectDataCount; i++ {
+		fmt.Println(i)
 		_, err := p.parseObjectData()
 		if err != nil {
 			return err

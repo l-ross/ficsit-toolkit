@@ -5,7 +5,10 @@ import "fmt"
 type StructType string
 
 const (
-	BoxStructType StructType = "Box"
+	BoxStructType         StructType = "Box"
+	LinearColorStructType StructType = "LinearColor"
+	QuatStructType        StructType = "Quat"
+	VectorStructType      StructType = "Vector"
 )
 
 //
@@ -72,6 +75,108 @@ func (s *BoxStruct) parse(p *Parser) error {
 
 	// TODO: Is this definitely a bool?
 	s.IsValid, err = p.readBool()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+//
+// LinearColor
+//
+
+type LinearColor struct {
+	R float32
+	G float32
+	B float32
+	A float32
+}
+
+func (s *LinearColor) parse(p *Parser) error {
+	var err error
+	s.R, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.G, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.B, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.A, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+//
+// QuatStruct
+//
+
+type QuatStruct struct {
+	X float32
+	Y float32
+	Z float32
+	W float32
+}
+
+func (s *QuatStruct) parse(p *Parser) error {
+	var err error
+	s.X, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.Y, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.Z, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.W, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+//
+// VectorStruct
+//
+
+type VectorStruct struct {
+	X float32
+	Y float32
+	Z float32
+}
+
+func (s *VectorStruct) parse(p *Parser) error {
+	var err error
+	s.X, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.Y, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	s.Z, err = p.readFloat32()
 	if err != nil {
 		return err
 	}

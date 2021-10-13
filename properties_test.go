@@ -40,6 +40,15 @@ func TestProperties(t *testing.T) {
 			},
 		},
 		{
+			name:     "ArrayProperty_StructProperty",
+			testData: "testdata/prop_array_struct.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetArrayValue()
+				require.NoError(t, err)
+				require.Len(t, v.Values, 1)
+			},
+		},
+		{
 			name:     "BoolProperty",
 			testData: "testdata/prop_bool.dat",
 			assertValue: func(t *testing.T, p *Property) {

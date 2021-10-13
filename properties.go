@@ -79,30 +79,37 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 
 	v.Values = make([]PropertyValue, elemCount)
 
-	var newInner func() PropertyValue
+	var newInnerValue func() PropertyValue
 
 	switch v.ValueType {
 	case InterfacePropertyType:
-		newInner = func() PropertyValue {
+		newInnerValue = func() PropertyValue {
 			return &InterfacePropertyValue{}
 		}
 	case ObjectPropertyType:
-		newInner = func() PropertyValue {
+		newInnerValue = func() PropertyValue {
 			return &ObjectPropertyValue{}
+		}
+	case StructPropertyType:
+		newInnerValue = func() PropertyValue {
+			return &StructPropertyValue{
+				// TODO: Explain this
+				inArray: true,
+			}
 		}
 	default:
 		return fmt.Errorf("unsupported array type %s", v.ValueType)
 	}
 
 	for i := int32(0); i < elemCount; i++ {
-		inner := newInner()
+		innerValue := newInnerValue()
 
-		err := inner.parse(p, true)
+		err := innerValue.parse(p, true)
 		if err != nil {
 			return err
 		}
 
-		v.Values[i] = inner
+		v.Values[i] = innerValue
 	}
 
 	return nil
@@ -528,6 +535,11 @@ type StructPropertyValue struct {
 	GUID  []int32
 	Type  StructType
 	Value StructValue
+
+	innerName string
+	innerType StructType
+
+	inArray bool
 }
 
 func (p *Property) GetStructValue() (*StructPropertyValue, error) {
@@ -539,6 +551,10 @@ func (p *Property) GetStructValue() (*StructPropertyValue, error) {
 }
 
 func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
+	if v.inArray {
+		return v.parseInArray(p)
+	}
+
 	structType, err := p.readString()
 	if err != nil {
 		return err
@@ -561,6 +577,12 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	switch v.Type {
 	case BoxStructType:
 		v.Value = &BoxStruct{}
+	case LinearColorStructType:
+		v.Value = &LinearColor{}
+	case QuatStructType:
+		v.Value = &QuatStruct{}
+	case VectorStructType:
+		v.Value = &VectorStruct{}
 	default:
 		v.Value = &ArbitraryStruct{}
 	}
@@ -569,6 +591,27 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	if err != nil {
 		return err
 	}
+
+	return nil
+}
+
+func (v *StructPropertyValue) parseInArray(p *Parser) error {
+	prop, err := p.parseProperty()
+	if err != nil {
+		return err
+	}
+	if prop == nil {
+		// Reached the end of the array.
+		return nil
+	}
+
+	v.innerName = prop.Name
+	inner, err := prop.GetStructValue()
+	if err != nil {
+		return err
+	}
+	v.innerType = inner.Type
+	v.Value = inner.Value
 
 	return nil
 }
