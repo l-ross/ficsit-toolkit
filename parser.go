@@ -181,8 +181,22 @@ func (p *Parser) parseObjectData() (*ObjectData, error) {
 		return nil, err
 	}
 
-	if childCount != 0 {
-		return nil, fmt.Errorf("non zero child count %d", childCount)
+	o.Children = make([]*Child, childCount)
+
+	for i := int32(0); i < childCount; i++ {
+		c := &Child{}
+
+		c.LevelName, err = p.readString()
+		if err != nil {
+			return nil, err
+		}
+
+		c.PathName, err = p.readString()
+		if err != nil {
+			return nil, err
+		}
+
+		o.Children[i] = c
 	}
 
 	o.Properties = make([]*Property, 0)

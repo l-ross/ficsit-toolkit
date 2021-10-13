@@ -56,16 +56,16 @@ type Entity struct {
 }
 
 type ObjectData struct {
-	LevelName        string             `json:"level_name,omitempty"`
-	PathName         string             `json:"path_name,omitempty"`
-	ObjectReferences []*ObjectReference `json:"object_references,omitempty"`
-	Properties       []*Property        `json:"properties,omitempty"`
+	LevelName  string      `json:"level_name,omitempty"`
+	PathName   string      `json:"path_name,omitempty"`
+	Children   []*Child    `json:"children,omitempty"`
+	Properties []*Property `json:"properties,omitempty"`
 
 	offset int64
 	len    int32
 }
 
-type ObjectReference struct {
+type Child struct {
 	LevelName string
 	PathName  string
 }
