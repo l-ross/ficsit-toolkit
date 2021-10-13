@@ -19,6 +19,27 @@ func TestPropertyValues(t *testing.T) {
 		assertValue func(t *testing.T, p *Property)
 	}{
 		{
+			name:     "ArrayProperty_InterfaceValueType",
+			testData: "testdata/array_interface.prop",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetArrayValue()
+				require.NoError(t, err)
+				assert.Equal(t, &ArrayPropertyValue{
+					ValueType: InterfacePropertyType,
+					Values: []PropertyValue{
+						&InterfacePropertyValue{
+							LevelName: "LevelName1",
+							PathName:  "PathName1",
+						},
+						&InterfacePropertyValue{
+							LevelName: "LevelName2",
+							PathName:  "PathName2",
+						},
+					},
+				}, v)
+			},
+		},
+		{
 			name:     "BoolProperty",
 			testData: "testdata/bool.prop",
 			assertValue: func(t *testing.T, p *Property) {
@@ -129,12 +150,14 @@ func TestPropertyValues(t *testing.T) {
 			data, err := ioutil.ReadFile(tt.testData)
 			require.NoError(t, err)
 
-			r := bytes.NewReader(data)
-			objData, err := parseObjectData(r)
+			p := &Parser{
+				body: bytes.NewReader(data),
+			}
+			objData, err := p.parseObjectData()
 			require.NoError(t, err)
 			require.NotNil(t, objData)
 			require.Len(t, objData.Properties, 1, "we should have 1 property")
-			assert.Zero(t, r.Len(), "we should have consumed the entire reader")
+			assert.Zero(t, p.body.Len(), "we should have consumed the entire reader")
 
 			tt.assertValue(t, objData.Properties[0])
 		})

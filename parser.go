@@ -190,6 +190,11 @@ func (p *Parser) parseObjectData() (*ObjectData, error) {
 			return nil, err
 		}
 
+		if name == "None" {
+			// TODO: Should we skip the next 4 bytes?
+			continue
+		}
+
 		propType, err := p.readString()
 		if err != nil {
 			return nil, err
@@ -213,6 +218,8 @@ func (p *Parser) parseObjectData() (*ObjectData, error) {
 		}
 
 		switch prop.Type {
+		case ArrayPropertyType:
+			prop.Value = &ArrayPropertyValue{}
 		case BoolPropertyType:
 			v := BoolPropertyValue(false)
 			prop.Value = &v
@@ -248,7 +255,7 @@ func (p *Parser) parseObjectData() (*ObjectData, error) {
 			return nil, fmt.Errorf("unknown property type %s", propType)
 		}
 
-		err = prop.Value.Parse(p)
+		err = prop.Value.parse(p, false)
 		if err != nil {
 			return nil, err
 		}
