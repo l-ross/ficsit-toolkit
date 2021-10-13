@@ -4,17 +4,26 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"io/ioutil"
 )
 
 type Parser struct {
-	r io.Reader
+	// Decompressed body
+	body *bytes.Reader
+	// Counter of how many bytes have been read. Can be reset.
+	counter int32
 }
 
 // NewParser constructs a new Parser to parse a Satisfactory save file.
 func NewParser(r io.Reader) (*Parser, error) {
-	p := &Parser{
-		r: r,
+	p := &Parser{}
+
+	data, err := ioutil.ReadAll(r)
+	if err != nil {
+		return nil, err
 	}
+
+	p.body = bytes.NewReader(data)
 
 	return p, nil
 }
@@ -34,12 +43,13 @@ func (p *Parser) Parse() (*Save, error) {
 		CollectedObjects: make([]*CollectedObject, 0),
 	}
 
-	b, err := p.decompressBody()
+	// Decompress the save body and replace p.body with it.
+	p.body, err = p.decompressBody()
 	if err != nil {
 		return nil, err
 	}
 
-	err = p.parseBody(b, s)
+	err = p.parseBody(s)
 	if err != nil {
 		return nil, err
 	}
@@ -47,56 +57,65 @@ func (p *Parser) Parse() (*Save, error) {
 	return s, nil
 }
 
-func (p *Parser) parseBody(r *bytes.Reader, s *Save) error {
-	err := parseObjects(r, s)
+func (p *Parser) parseBody(s *Save) error {
+	bodyLen, err := p.readInt32()
 	if err != nil {
 		return err
 	}
 
-	fmt.Println(r.Size() - int64(r.Len()))
+	// Verify the body is the expected length.
+	// Account for the fact that the specified body length does not include itself (+4 bytes).
+	if bodyLen+4 != int32(p.body.Size()) {
+		return fmt.Errorf("expected decompressed body to be %d but was %d", p.body.Size(), bodyLen)
+	}
 
-	err = parseObjectsData(r, s)
+	err = p.parseObjects(s)
 	if err != nil {
 		return err
 	}
 
-	err = parseCollectedObjects(r, s)
+	err = p.parseObjectsData(s)
+	if err != nil {
+		return err
+	}
+
+	err = p.parseCollectedObjects(s)
 	if err != nil {
 		return err
 	}
 
 	// At this point we should have reached the end of the file.
 	// Check that there is no data left.
-	if r.Len() != 0 {
-		return fmt.Errorf("found %d unparsed bytes at the end of the body", r.Len())
+	if p.body.Len() != 0 {
+		return fmt.Errorf("found %d unparsed bytes at the end of the body", p.body.Len())
 	}
 
 	return nil
 }
 
-func parseObjects(b *bytes.Reader, s *Save) error {
+func (p *Parser) parseObjects(s *Save) error {
 	var err error
-	s.objectCount, err = readInt32(b)
+	s.objectCount, err = p.readInt32()
 	if err != nil {
 		return err
 	}
 
 	for i := int32(0); i < s.objectCount; i++ {
-		objectType, err := readInt32(b)
+		objectType, err := p.readInt32()
 		if err != nil {
 			return err
 		}
 
 		switch ObjectType(objectType) {
 		case ComponentType:
-			c, err := parseComponent(b)
+			c, err := p.parseComponent()
 			if err != nil {
 				return err
 			}
 
 			s.Components = append(s.Components, c)
 		case EntityType:
-			e, err := parseEntity(b)
+			e, err := p.parseEntity()
 			if err != nil {
 				return err
 			}
@@ -110,8 +129,8 @@ func parseObjects(b *bytes.Reader, s *Save) error {
 	return nil
 }
 
-func parseObjectsData(r *bytes.Reader, s *Save) error {
-	objectDataCount, err := readInt32(r)
+func (p *Parser) parseObjectsData(s *Save) error {
+	objectDataCount, err := p.readInt32()
 	if err != nil {
 		return err
 	}
@@ -121,7 +140,7 @@ func parseObjectsData(r *bytes.Reader, s *Save) error {
 	}
 
 	for i := int32(0); i < objectDataCount; i++ {
-		_, err := parseObjectData(r)
+		_, err := p.parseObjectData()
 		if err != nil {
 			return err
 		}
@@ -130,29 +149,30 @@ func parseObjectsData(r *bytes.Reader, s *Save) error {
 	return nil
 }
 
-func parseObjectData(r *bytes.Reader) (*ObjectData, error) {
-	o := &ObjectData{}
+func (p *Parser) parseObjectData() (*ObjectData, error) {
+	p.resetCounter()
 
-	o.offset = r.Size() - int64(r.Len())
-	startPos := r.Len()
+	o := &ObjectData{
+		offset: p.body.Size() - int64(p.body.Len()),
+	}
 
 	var err error
-	o.len, err = readInt32(r)
+	o.len, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	o.LevelName, err = readString(r)
+	o.LevelName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	o.PathName, err = readString(r)
+	o.PathName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	childCount, err := readInt32(r)
+	childCount, err := p.readInt32()
 	if err != nil {
 		return nil, err
 	}
@@ -163,82 +183,77 @@ func parseObjectData(r *bytes.Reader) (*ObjectData, error) {
 
 	o.Properties = make([]*Property, 0)
 
-	rem := startPos - r.Len()
-
-	for rem > 0 {
-		pos := r.Len()
-
+	for o.len-p.counter > 0 {
 		// PropName
-		name, err := readString(r)
+		name, err := p.readString()
 		if err != nil {
 			return nil, err
 		}
 
-		propType, err := readString(r)
+		propType, err := p.readString()
 		if err != nil {
 			return nil, err
 		}
 
-		valueLen, err := readInt32(r)
+		valueLen, err := p.readInt32()
 		if err != nil {
 			return nil, err
 		}
 
-		index, err := readInt32(r)
+		index, err := p.readInt32()
 		if err != nil {
 			return nil, err
 		}
 
-		p := &Property{
+		prop := &Property{
 			Name:     name,
 			Type:     PropertyType(propType),
 			ValueLen: valueLen,
 			Index:    index,
 		}
 
-		switch p.Type {
+		switch prop.Type {
 		case BoolPropertyType:
 			v := BoolPropertyValue(false)
-			p.Value = &v
+			prop.Value = &v
 		case BytePropertyType:
-			p.Value = &BytePropertyValue{}
+			prop.Value = &BytePropertyValue{}
 		case DoublePropertyType:
 			v := DoublePropertyValue(0)
-			p.Value = &v
+			prop.Value = &v
 		case FloatPropertyType:
 			v := FloatPropertyValue(0)
-			p.Value = &v
+			prop.Value = &v
 		case Int8PropertyType:
 			v := Int8PropertyValue(0)
-			p.Value = &v
+			prop.Value = &v
 		case Int64PropertyType:
 			v := Int64PropertyValue(0)
-			p.Value = &v
+			prop.Value = &v
 		case IntPropertyType:
 			v := IntPropertyValue(0)
-			p.Value = &v
+			prop.Value = &v
 		case InterfacePropertyType:
-			p.Value = &InterfacePropertyValue{}
+			prop.Value = &InterfacePropertyValue{}
 		case NamePropertyType:
 			v := NamePropertyValue("")
-			p.Value = &v
+			prop.Value = &v
 		case ObjectPropertyType:
-			p.Value = &ObjectPropertyValue{}
+			prop.Value = &ObjectPropertyValue{}
 		case StringPropertyType:
 			v := StringPropertyValue("")
-			p.Value = &v
+			prop.Value = &v
 		default:
 			// TODO: Have a UnknownPropertyType where we just store the value as a byte slice.
 			return nil, fmt.Errorf("unknown property type %s", propType)
 		}
 
-		err = p.Value.Parse(r)
+		err = prop.Value.Parse(p)
 		if err != nil {
 			return nil, err
 		}
 
-		o.Properties = append(o.Properties, p)
-		rem = rem - (pos - r.Len())
+		o.Properties = append(o.Properties, prop)
 	}
 
 	//// For now just skip parsing the entity internals.
@@ -251,8 +266,8 @@ func parseObjectData(r *bytes.Reader) (*ObjectData, error) {
 	return o, nil
 }
 
-func parseCollectedObjects(r *bytes.Reader, s *Save) error {
-	collectedObjectCount, err := readInt32(r)
+func (p *Parser) parseCollectedObjects(s *Save) error {
+	collectedObjectCount, err := p.readInt32()
 	if err != nil {
 		return err
 	}
@@ -260,12 +275,12 @@ func parseCollectedObjects(r *bytes.Reader, s *Save) error {
 	for i := int32(0); i < collectedObjectCount; i++ {
 		co := &CollectedObject{}
 
-		co.LevelName, err = readString(r)
+		co.LevelName, err = p.readString()
 		if err != nil {
 			return err
 		}
 
-		co.PathName, err = readString(r)
+		co.PathName, err = p.readString()
 		if err != nil {
 			return err
 		}
@@ -276,46 +291,46 @@ func parseCollectedObjects(r *bytes.Reader, s *Save) error {
 	return nil
 }
 
-func parseEntity(r io.Reader) (*Entity, error) {
+func (p *Parser) parseEntity() (*Entity, error) {
 	e := &Entity{}
 
 	var err error
-	e.ClassName, err = readString(r)
+	e.ClassName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	e.LevelName, err = readString(r)
+	e.LevelName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	e.PathName, err = readString(r)
+	e.PathName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	e.NeedTransform, err = readInt32(r)
+	e.NeedTransform, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	e.Rotation, err = readFloat32Array(r, 4)
+	e.Rotation, err = p.readFloat32Array(4)
 	if err != nil {
 		return nil, err
 	}
 
-	e.Translation, err = readFloat32Array(r, 3)
+	e.Translation, err = p.readFloat32Array(3)
 	if err != nil {
 		return nil, err
 	}
 
-	e.Scale3D, err = readFloat32Array(r, 3)
+	e.Scale3D, err = p.readFloat32Array(3)
 	if err != nil {
 		return nil, err
 	}
 
-	e.WasPlacedInLevel, err = readInt32(r)
+	e.WasPlacedInLevel, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
@@ -323,35 +338,35 @@ func parseEntity(r io.Reader) (*Entity, error) {
 	return e, nil
 }
 
-func parseComponent(b *bytes.Reader) (*Component, error) {
+func (p *Parser) parseComponent() (*Component, error) {
 	c := &Component{
 		// We already read the type so shift the offset back 4 bytes.
-		offset: b.Size() - int64(b.Len()) - 4,
+		offset: p.body.Size() - int64(p.body.Len()) - 4,
 	}
 
 	var err error
 
-	c.ClassName, err = readString(b)
+	c.ClassName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	c.LevelName, err = readString(b)
+	c.LevelName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	c.PathName, err = readString(b)
+	c.PathName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	c.OuterPathName, err = readString(b)
+	c.OuterPathName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	c.len = b.Size() - c.offset - int64(b.Len())
+	c.len = p.body.Size() - c.offset - int64(p.body.Len())
 
 	return c, nil
 }

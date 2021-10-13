@@ -10,7 +10,7 @@ func (p *Parser) ParseHeader() (*Header, error) {
 
 	var err error
 
-	h.HeaderVersion, err = readInt32(p.r)
+	h.HeaderVersion, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
@@ -20,58 +20,58 @@ func (p *Parser) ParseHeader() (*Header, error) {
 		return nil, fmt.Errorf("only support save header version 8, got %d", h.HeaderVersion)
 	}
 
-	h.SaveVersion, err = readInt32(p.r)
+	h.SaveVersion, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.BuildVersion, err = readInt32(p.r)
+	h.BuildVersion, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.MapName, err = readString(p.r)
+	h.MapName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
 	// TODO: Convert to a map?
-	h.MapOptions, err = readString(p.r)
+	h.MapOptions, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	h.SessionName, err = readString(p.r)
+	h.SessionName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	h.PlayTime, err = readInt32(p.r)
+	h.PlayTime, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.SaveDate, err = readInt64(p.r)
+	h.SaveDate, err = p.readInt64()
 	if err != nil {
 		return nil, err
 	}
 
-	h.SessionVisibility, err = readByte(p.r)
+	h.SessionVisibility, err = p.readByte()
 	if err != nil {
 		return nil, err
 	}
 
-	h.EditorObjectVersion, err = readInt32(p.r)
+	h.EditorObjectVersion, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.ModMetadata, err = readString(p.r)
+	h.ModMetadata, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	h.ModFlags, err = readInt32(p.r)
+	h.ModFlags, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}

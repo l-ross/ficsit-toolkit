@@ -3,43 +3,52 @@ package satisfactorysave
 import (
 	"encoding/binary"
 	"fmt"
-	"io"
 )
 
-func readInt8(r io.Reader) (int8, error) {
+func (p *Parser) resetCounter() {
+	p.counter = 0
+}
+
+func (p *Parser) readInt8() (int8, error) {
 	var v int8
-	err := binary.Read(r, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	p.counter += 1
 	return v, err
 }
 
-func readInt32(r io.Reader) (int32, error) {
+func (p *Parser) readInt32() (int32, error) {
 	var v int32
-	err := binary.Read(r, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	p.counter += 4
 	return v, err
 }
 
-func readInt64(r io.Reader) (int64, error) {
+func (p *Parser) readInt64() (int64, error) {
 	var v int64
-	err := binary.Read(r, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	p.counter += 8
 	return v, err
 }
-func readFloat32(r io.Reader) (float32, error) {
+
+func (p *Parser) readFloat32() (float32, error) {
 	var v float32
-	err := binary.Read(r, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	p.counter += 4
 	return v, err
 }
 
-func readFloat64(r io.Reader) (float64, error) {
+func (p *Parser) readFloat64() (float64, error) {
 	var v float64
-	err := binary.Read(r, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	p.counter += 8
 	return v, err
 }
 
-func readFloat32Array(r io.Reader, l int) ([]float32, error) {
+func (p *Parser) readFloat32Array(l int) ([]float32, error) {
 	v := make([]float32, l)
 
 	for i := 0; i < l; i++ {
-		f, err := readFloat32(r)
+		f, err := p.readFloat32()
 		if err != nil {
 			return nil, err
 		}
@@ -47,31 +56,35 @@ func readFloat32Array(r io.Reader, l int) ([]float32, error) {
 		v[i] = f
 	}
 
+	p.counter += int32(l)
+
 	return v, nil
 }
 
-func readByte(r io.Reader) (byte, error) {
-	v, err := readBytes(r, 1)
+func (p *Parser) readByte() (byte, error) {
+	v, err := p.readBytes(1)
 	if err != nil {
 		return 0, err
 	}
+	// Don't increment counter.
 	return v[0], nil
 }
 
-func readBytes(r io.Reader, l int32) ([]byte, error) {
+func (p *Parser) readBytes(l int32) ([]byte, error) {
 	v := make([]byte, l)
-	read, err := r.Read(v)
+	read, err := p.body.Read(v)
 	if err != nil {
 		return nil, err
 	}
 	if read != int(l) {
 		return nil, fmt.Errorf("expected to read %d but read %d", l, read)
 	}
+	p.counter += l
 	return v, nil
 }
 
-func readString(r io.Reader) (string, error) {
-	l, err := readInt32(r)
+func (p *Parser) readString() (string, error) {
+	l, err := p.readInt32()
 	if err != nil {
 		return "", err
 	}
@@ -81,7 +94,7 @@ func readString(r io.Reader) (string, error) {
 	}
 
 	v := make([]byte, l)
-	read, err := r.Read(v)
+	read, err := p.body.Read(v)
 	if err != nil {
 		return "", err
 	}
@@ -89,21 +102,25 @@ func readString(r io.Reader) (string, error) {
 		return "", fmt.Errorf("expected to read %d but only read %d", l, read)
 	}
 
+	p.counter += l
+
 	// Drop the null terminator
 	v = v[:l-1]
 	return string(v), nil
 }
 
-func readBool(r io.Reader) (bool, error) {
-	b, err := readByte(r)
+func (p *Parser) readBool() (bool, error) {
+	b, err := p.readByte()
 	if err != nil {
 		return false, nil
 	}
 
-	err = nextByteIsNull(r)
+	err = p.nextByteIsNull()
 	if err != nil {
 		return false, err
 	}
+
+	// Don't increment counter.
 
 	if b == 0 {
 		return false, nil
@@ -111,13 +128,16 @@ func readBool(r io.Reader) (bool, error) {
 	return true, nil
 }
 
-func nextByteIsNull(r io.Reader) error {
-	b, err := readByte(r)
+func (p *Parser) nextByteIsNull() error {
+	b, err := p.readByte()
 	if err != nil {
 		return err
 	}
 	if b != 0 {
 		return fmt.Errorf("expected byte to be null")
 	}
+
+	// Don't increment counter.
+
 	return nil
 }

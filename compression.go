@@ -12,7 +12,7 @@ func (p *Parser) decompressBody() (*bytes.Reader, error) {
 	chunks := make([]byte, 0)
 
 	for {
-		ch, err := p.readChunkHeader(p.r)
+		ch, err := p.readChunkHeader()
 		if err != nil {
 			return nil, err
 		}
@@ -21,7 +21,7 @@ func (p *Parser) decompressBody() (*bytes.Reader, error) {
 			break
 		}
 
-		chunk, err := p.readChunk(ch, p.r)
+		chunk, err := p.readChunk(ch)
 		if err != nil {
 			return nil, err
 		}
@@ -29,20 +29,7 @@ func (p *Parser) decompressBody() (*bytes.Reader, error) {
 		chunks = append(chunks, chunk...)
 	}
 
-	b := bytes.NewReader(chunks)
-
-	bodyLen, err := readInt32(b)
-	if err != nil {
-		return nil, err
-	}
-
-	// Verify the body is the expected length.
-	// Account for the fact that the specified body length does not include itself (+4 bytes).
-	if bodyLen+4 != int32(b.Size()) {
-		return nil, fmt.Errorf("expected decompressed body to be %d but was %d", b.Size(), bodyLen)
-	}
-
-	return b, nil
+	return bytes.NewReader(chunks), nil
 }
 
 type chunkHeader struct {
@@ -52,12 +39,12 @@ type chunkHeader struct {
 	uncompressedLength int64
 }
 
-func (p *Parser) readChunkHeader(r io.Reader) (*chunkHeader, error) {
+func (p *Parser) readChunkHeader() (*chunkHeader, error) {
 	ch := &chunkHeader{}
 
 	var err error
 
-	ch.packageFileTag, err = readInt64(r)
+	ch.packageFileTag, err = p.readInt64()
 	if err != nil {
 		if err == io.EOF {
 			return nil, nil
@@ -66,28 +53,28 @@ func (p *Parser) readChunkHeader(r io.Reader) (*chunkHeader, error) {
 		return nil, err
 	}
 
-	ch.maximumChunkSize, err = readInt64(r)
+	ch.maximumChunkSize, err = p.readInt64()
 	if err != nil {
 		return nil, err
 	}
 
-	ch.compressedLength, err = readInt64(r)
+	ch.compressedLength, err = p.readInt64()
 	if err != nil {
 		return nil, err
 	}
 
-	ch.uncompressedLength, err = readInt64(r)
+	ch.uncompressedLength, err = p.readInt64()
 	if err != nil {
 		return nil, err
 	}
 
 	// For some reason the compressed and uncompressed lengths are repeated
 	// TODO: Make this less crap
-	_, err = readInt64(r)
+	_, err = p.readInt64()
 	if err != nil {
 		return nil, err
 	}
-	_, err = readInt64(r)
+	_, err = p.readInt64()
 	if err != nil {
 		return nil, err
 	}
@@ -96,10 +83,10 @@ func (p *Parser) readChunkHeader(r io.Reader) (*chunkHeader, error) {
 }
 
 // readChunk will read the next chunk and return the decompressed data.
-func (p *Parser) readChunk(ch *chunkHeader, r io.Reader) ([]byte, error) {
+func (p *Parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	compressed := make([]byte, ch.compressedLength)
 
-	read, err := r.Read(compressed)
+	read, err := p.body.Read(compressed)
 	if err != nil {
 		return nil, err
 	}

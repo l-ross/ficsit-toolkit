@@ -1,7 +1,6 @@
 package satisfactorysave
 
 import (
-	"bytes"
 	"fmt"
 )
 
@@ -35,12 +34,17 @@ type Property struct {
 }
 
 type PropertyValue interface {
-	Parse(r *bytes.Reader) error
+	Parse(p *Parser) error
 }
 
 //
 // ArrayProperty
 //
+
+type ArrayPropertyValue struct {
+	ValueType PropertyType
+	Values    []PropertyValue
+}
 
 //
 // BoolProperty
@@ -56,8 +60,8 @@ func (p *Property) GetBoolValue() (bool, error) {
 	return false, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *BoolPropertyValue) Parse(r *bytes.Reader) error {
-	b, err := readBool(r)
+func (v *BoolPropertyValue) Parse(p *Parser) error {
+	b, err := p.readBool()
 	if err != nil {
 		return err
 	}
@@ -82,35 +86,35 @@ func (p *Property) GetByteValue() ([]byte, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *BytePropertyValue) Parse(r *bytes.Reader) error {
+func (v *BytePropertyValue) Parse(p *Parser) error {
 
 	var err error
-	v.Type, err = readString(r)
+	v.Type, err = p.readString()
 	if err != nil {
 		return err
 	}
 
 	switch v.Type {
 	case "None":
-		b, err := readByte(r)
+		b, err := p.readByte()
 		if err != nil {
 			return err
 		}
 
 		v.Value = []byte{b}
 	default:
-		bytesLen, err := readInt32(r)
+		bytesLen, err := p.readInt32()
 		if err != nil {
 			return err
 		}
 
-		v.Value, err = readBytes(r, bytesLen)
+		v.Value, err = p.readBytes(bytesLen)
 		if err != nil {
 			return err
 		}
 	}
 
-	err = nextByteIsNull(r)
+	err = p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
@@ -132,14 +136,14 @@ func (p *Property) GetDoubleValue() (float64, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *DoublePropertyValue) Parse(r *bytes.Reader) error {
+func (v *DoublePropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	f, err := readFloat64(r)
+	f, err := p.readFloat64()
 	if err != nil {
 		return err
 	}
@@ -162,14 +166,14 @@ func (p *Property) GetFloatValue() (float32, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *FloatPropertyValue) Parse(r *bytes.Reader) error {
+func (v *FloatPropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	f, err := readFloat32(r)
+	f, err := p.readFloat32()
 	if err != nil {
 		return err
 	}
@@ -192,14 +196,14 @@ func (p *Property) GetInt8Value() (int8, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *Int8PropertyValue) Parse(r *bytes.Reader) error {
+func (v *Int8PropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	f, err := readInt8(r)
+	f, err := p.readInt8()
 	if err != nil {
 		return err
 	}
@@ -221,14 +225,14 @@ func (p *Property) GetInt64Value() (int64, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *Int64PropertyValue) Parse(r *bytes.Reader) error {
+func (v *Int64PropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	f, err := readInt64(r)
+	f, err := p.readInt64()
 	if err != nil {
 		return err
 	}
@@ -253,19 +257,19 @@ func (p *Property) GetInterfaceValue() (*InterfacePropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *InterfacePropertyValue) Parse(r *bytes.Reader) error {
+func (v *InterfacePropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	v.LevelName, err = readString(r)
+	v.LevelName, err = p.readString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = readString(r)
+	v.PathName, err = p.readString()
 	if err != nil {
 		return err
 	}
@@ -287,14 +291,14 @@ func (p *Property) GetIntValue() (int32, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *IntPropertyValue) Parse(r *bytes.Reader) error {
+func (v *IntPropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	i, err := readInt32(r)
+	i, err := p.readInt32()
 	if err != nil {
 		return err
 	}
@@ -354,14 +358,14 @@ func (p *Property) GetNameValue() (string, error) {
 	return "", fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *NamePropertyValue) Parse(r *bytes.Reader) error {
+func (v *NamePropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	s, err := readString(r)
+	s, err := p.readString()
 	if err != nil {
 		return err
 	}
@@ -386,19 +390,19 @@ func (p *Property) GetObjectValue() (*ObjectPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *ObjectPropertyValue) Parse(r *bytes.Reader) error {
+func (v *ObjectPropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	v.LevelName, err = readString(r)
+	v.LevelName, err = p.readString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = readString(r)
+	v.PathName, err = p.readString()
 	if err != nil {
 		return err
 	}
@@ -420,14 +424,14 @@ func (p *Property) GetStringValue() (string, error) {
 	return "", fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *StringPropertyValue) Parse(r *bytes.Reader) error {
+func (v *StringPropertyValue) Parse(p *Parser) error {
 	// TODO: What is this byte for?
-	err := nextByteIsNull(r)
+	err := p.nextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	s, err := readString(r)
+	s, err := p.readString()
 	if err != nil {
 		return err
 	}
