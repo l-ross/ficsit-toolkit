@@ -127,6 +127,12 @@ func (v *BoolPropertyValue) parse(p *Parser, inner bool) error {
 	if err != nil {
 		return err
 	}
+
+	err = p.nextByteIsNull()
+	if err != nil {
+		return err
+	}
+
 	*v = BoolPropertyValue(b)
 	return nil
 }
@@ -539,6 +545,8 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	}
 	v.Type = StructType(structType)
 
+	fmt.Println(structType)
+
 	v.GUID, err = p.readInt32Array(4)
 	if err != nil {
 		return err
@@ -551,6 +559,8 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	}
 
 	switch v.Type {
+	case BoxStructType:
+		v.Value = &BoxStruct{}
 	default:
 		v.Value = &ArbitraryStruct{}
 	}

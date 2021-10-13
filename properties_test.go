@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestPropertyValues(t *testing.T) {
+func TestProperties(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
@@ -20,7 +20,7 @@ func TestPropertyValues(t *testing.T) {
 	}{
 		{
 			name:     "ArrayProperty_InterfaceValueType",
-			testData: "testdata/array_interface.prop",
+			testData: "testdata/prop_array_interface.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetArrayValue()
 				require.NoError(t, err)
@@ -41,7 +41,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "BoolProperty",
-			testData: "testdata/bool.prop",
+			testData: "testdata/prop_bool.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetBoolValue()
 				require.NoError(t, err)
@@ -50,7 +50,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "ByteProperty",
-			testData: "testdata/byte.prop",
+			testData: "testdata/prop_byte.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetByteValue()
 				require.NoError(t, err)
@@ -59,7 +59,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "DoubleProperty",
-			testData: "testdata/double.prop",
+			testData: "testdata/prop_double.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetDoubleValue()
 				require.NoError(t, err)
@@ -68,7 +68,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "FloatProperty",
-			testData: "testdata/float.prop",
+			testData: "testdata/prop_float.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetFloatValue()
 				require.NoError(t, err)
@@ -77,7 +77,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "Int8Property",
-			testData: "testdata/int8.prop",
+			testData: "testdata/prop_int8.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetInt8Value()
 				require.NoError(t, err)
@@ -86,7 +86,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "Int64Property",
-			testData: "testdata/int64.prop",
+			testData: "testdata/prop_int64.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetInt64Value()
 				require.NoError(t, err)
@@ -95,7 +95,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "IntProperty",
-			testData: "testdata/int.prop",
+			testData: "testdata/prop_int.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetIntValue()
 				require.NoError(t, err)
@@ -104,7 +104,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "InterfaceProperty",
-			testData: "testdata/interface.prop",
+			testData: "testdata/prop_interface.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetInterfaceValue()
 				require.NoError(t, err)
@@ -114,7 +114,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "NameProperty",
-			testData: "testdata/name.prop",
+			testData: "testdata/prop_name.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetNameValue()
 				require.NoError(t, err)
@@ -123,7 +123,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "ObjectProperty",
-			testData: "testdata/object.prop",
+			testData: "testdata/prop_object.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetObjectValue()
 				require.NoError(t, err)
@@ -133,7 +133,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "StringProperty",
-			testData: "testdata/string.prop",
+			testData: "testdata/prop_string.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetStringValue()
 				require.NoError(t, err)
@@ -142,7 +142,7 @@ func TestPropertyValues(t *testing.T) {
 		},
 		{
 			name:     "StructProperty",
-			testData: "testdata/struct.prop",
+			testData: "testdata/prop_struct.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetStructValue()
 				require.NoError(t, err)
@@ -167,9 +167,9 @@ func TestPropertyValues(t *testing.T) {
 			objData, err := p.parseObjectData()
 			require.NoError(t, err)
 			require.NotNil(t, objData)
-			require.Len(t, objData.Properties, 1, "we should have 1 property")
 			assert.Zero(t, p.body.Len(), "we should have consumed the entire reader")
 
+			require.Len(t, objData.Properties, 1, "we should have 1 property")
 			tt.assertValue(t, objData.Properties[0])
 		})
 	}

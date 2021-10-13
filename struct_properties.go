@@ -4,7 +4,9 @@ import "fmt"
 
 type StructType string
 
-const ()
+const (
+	BoxStructType StructType = "Box"
+)
 
 //
 // ArbitraryStruct
@@ -33,6 +35,45 @@ func (s *ArbitraryStruct) parse(p *Parser) error {
 		}
 
 		s.Properties = append(s.Properties, prop)
+	}
+
+	return nil
+}
+
+//
+// BoxStruct
+//
+
+type BoxStruct struct {
+	Min     []float32
+	Max     []float32
+	IsValid bool
+}
+
+func (s *StructPropertyValue) GetBoxStruct() (*BoxStruct, error) {
+	if v, ok := s.Value.(*BoxStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", s.Type)
+}
+
+func (s *BoxStruct) parse(p *Parser) error {
+	var err error
+	s.Min, err = p.readFloat32Array(3)
+	if err != nil {
+		return err
+	}
+
+	s.Max, err = p.readFloat32Array(3)
+	if err != nil {
+		return err
+	}
+
+	// TODO: Is this definitely a bool?
+	s.IsValid, err = p.readBool()
+	if err != nil {
+		return err
 	}
 
 	return nil

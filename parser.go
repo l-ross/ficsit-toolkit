@@ -161,6 +161,9 @@ func (p *Parser) parseObjectData() (*ObjectData, error) {
 	if err != nil {
 		return nil, err
 	}
+	if o.len == 0 {
+		return nil, nil
+	}
 
 	o.LevelName, err = p.readString()
 	if err != nil {
@@ -210,16 +213,16 @@ func (p *Parser) parseProperty() (*Property, error) {
 		return nil, err
 	}
 
+	if prop.Name == "None" {
+		// Parsing props inside a structure of some kind and we have reached the end.
+		return nil, nil
+	}
+
 	propType, err := p.readString()
 	if err != nil {
 		return nil, err
 	}
 	prop.Type = PropertyType(propType)
-
-	if prop.Name == "None" && prop.Type == "" {
-		// Parsing props inside a structure of some kind and we have reached the end.
-		return nil, nil
-	}
 
 	prop.ValueLen, err = p.readInt32()
 	if err != nil {

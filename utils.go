@@ -130,11 +130,6 @@ func (p *Parser) readBool() (bool, error) {
 		return false, nil
 	}
 
-	err = p.nextByteIsNull()
-	if err != nil {
-		return false, err
-	}
-
 	// Don't increment counter.
 
 	if b == 0 {
