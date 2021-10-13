@@ -23,6 +23,21 @@ func (p *Parser) readInt32() (int32, error) {
 	return v, err
 }
 
+func (p *Parser) readInt32Array(l int) ([]int32, error) {
+	v := make([]int32, l)
+
+	for i := 0; i < l; i++ {
+		vv, err := p.readInt32()
+		if err != nil {
+			return nil, err
+		}
+
+		v[i] = vv
+	}
+
+	return v, nil
+}
+
 func (p *Parser) readInt64() (int64, error) {
 	var v int64
 	err := binary.Read(p.body, binary.LittleEndian, &v)

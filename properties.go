@@ -34,7 +34,12 @@ type Property struct {
 }
 
 type PropertyValue interface {
-	parse(p *Parser, inArray bool) error
+	// Parse the property value
+	//
+	// If inner is true then the property value is a child element of another property value
+	// e.g. a StringProperty inside an ArrayProperty. In some cases this can change the format
+	// of the property value slightly.
+	parse(p *Parser, inner bool) error
 }
 
 //
@@ -54,7 +59,7 @@ func (p *Property) GetArrayValue() (*ArrayPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *ArrayPropertyValue) parse(p *Parser, inArray bool) error {
+func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	valueType, err := p.readString()
 	if err != nil {
 		return err
@@ -74,20 +79,23 @@ func (v *ArrayPropertyValue) parse(p *Parser, inArray bool) error {
 
 	v.Values = make([]PropertyValue, elemCount)
 
-	var innerValue func() PropertyValue
+	var newInner func() PropertyValue
 
-	// TODO: Other property types
 	switch v.ValueType {
 	case InterfacePropertyType:
-		innerValue = func() PropertyValue {
+		newInner = func() PropertyValue {
 			return &InterfacePropertyValue{}
+		}
+	case ObjectPropertyType:
+		newInner = func() PropertyValue {
+			return &ObjectPropertyValue{}
 		}
 	default:
 		return fmt.Errorf("unsupported array type %s", v.ValueType)
 	}
 
 	for i := int32(0); i < elemCount; i++ {
-		inner := innerValue()
+		inner := newInner()
 
 		err := inner.parse(p, true)
 		if err != nil {
@@ -114,7 +122,7 @@ func (p *Property) GetBoolValue() (bool, error) {
 	return false, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *BoolPropertyValue) parse(p *Parser, inArray bool) error {
+func (v *BoolPropertyValue) parse(p *Parser, inner bool) error {
 	b, err := p.readBool()
 	if err != nil {
 		return err
@@ -140,8 +148,7 @@ func (p *Property) GetByteValue() ([]byte, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *BytePropertyValue) parse(p *Parser, inArray bool) error {
-
+func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 	var err error
 	v.Type, err = p.readString()
 	if err != nil {
@@ -190,7 +197,7 @@ func (p *Property) GetDoubleValue() (float64, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *DoublePropertyValue) parse(p *Parser, inArray bool) error {
+func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
 	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
@@ -220,7 +227,7 @@ func (p *Property) GetFloatValue() (float32, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *FloatPropertyValue) parse(p *Parser, inArray bool) error {
+func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
 	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
@@ -250,7 +257,7 @@ func (p *Property) GetInt8Value() (int8, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *Int8PropertyValue) parse(p *Parser, inArray bool) error {
+func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
 	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
@@ -279,7 +286,7 @@ func (p *Property) GetInt64Value() (int64, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *Int64PropertyValue) parse(p *Parser, inArray bool) error {
+func (v *Int64PropertyValue) parse(p *Parser, inner bool) error {
 	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
@@ -311,10 +318,10 @@ func (p *Property) GetInterfaceValue() (*InterfacePropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *InterfacePropertyValue) parse(p *Parser, inArray bool) error {
+func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
 	var err error
 
-	if !inArray {
+	if !inner {
 		// TODO: What is this byte for?
 		err := p.nextByteIsNull()
 		if err != nil {
@@ -349,11 +356,13 @@ func (p *Property) GetIntValue() (int32, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *IntPropertyValue) parse(p *Parser, inArray bool) error {
-	// TODO: What is this byte for?
-	err := p.nextByteIsNull()
-	if err != nil {
-		return err
+func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
+	if !inner {
+		// TODO: What is this byte for?
+		err := p.nextByteIsNull()
+		if err != nil {
+			return err
+		}
 	}
 
 	i, err := p.readInt32()
@@ -416,7 +425,7 @@ func (p *Property) GetNameValue() (string, error) {
 	return "", fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *NamePropertyValue) parse(p *Parser, inArray bool) error {
+func (v *NamePropertyValue) parse(p *Parser, inner bool) error {
 	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
@@ -448,11 +457,15 @@ func (p *Property) GetObjectValue() (*ObjectPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *ObjectPropertyValue) parse(p *Parser, inArray bool) error {
-	// TODO: What is this byte for?
-	err := p.nextByteIsNull()
-	if err != nil {
-		return err
+func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
+	var err error
+
+	if !inner {
+		// TODO: What is this byte for?
+		err := p.nextByteIsNull()
+		if err != nil {
+			return err
+		}
 	}
 
 	v.LevelName, err = p.readString()
@@ -482,7 +495,7 @@ func (p *Property) GetStringValue() (string, error) {
 	return "", fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *StringPropertyValue) parse(p *Parser, inArray bool) error {
+func (v *StringPropertyValue) parse(p *Parser, inner bool) error {
 	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
@@ -500,6 +513,55 @@ func (v *StringPropertyValue) parse(p *Parser, inArray bool) error {
 //
 // StructProperty
 //
+
+type StructValue interface {
+	parse(p *Parser) error
+}
+
+type StructPropertyValue struct {
+	GUID  []int32
+	Type  StructType
+	Value StructValue
+}
+
+func (p *Property) GetStructValue() (*StructPropertyValue, error) {
+	if v, ok := p.Value.(*StructPropertyValue); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", p.Type)
+}
+
+func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
+	structType, err := p.readString()
+	if err != nil {
+		return err
+	}
+	v.Type = StructType(structType)
+
+	v.GUID, err = p.readInt32Array(4)
+	if err != nil {
+		return err
+	}
+
+	// TODO: What is this byte for?
+	err = p.nextByteIsNull()
+	if err != nil {
+		return err
+	}
+
+	switch v.Type {
+	default:
+		v.Value = &ArbitraryStruct{}
+	}
+
+	err = v.Value.parse(p)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
 
 //
 // TextProperty

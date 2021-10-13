@@ -184,93 +184,99 @@ func (p *Parser) parseObjectData() (*ObjectData, error) {
 	o.Properties = make([]*Property, 0)
 
 	for o.len-p.counter > 0 {
-		// PropName
-		name, err := p.readString()
+		prop, err := p.parseProperty()
 		if err != nil {
 			return nil, err
 		}
-
-		propType, err := p.readString()
-		if err != nil {
-			return nil, err
-		}
-
-		if name == "None" && propType == "" {
-			// Skip empty property
+		if prop == nil {
+			// TODO: Can this happen?
+			// We should only get nil if we are parsing props in a child.
 			continue
-		}
-
-		valueLen, err := p.readInt32()
-		if err != nil {
-			return nil, err
-		}
-
-		index, err := p.readInt32()
-		if err != nil {
-			return nil, err
-		}
-
-		prop := &Property{
-			Name:     name,
-			Type:     PropertyType(propType),
-			ValueLen: valueLen,
-			Index:    index,
-		}
-
-		switch prop.Type {
-		case ArrayPropertyType:
-			prop.Value = &ArrayPropertyValue{}
-		case BoolPropertyType:
-			v := BoolPropertyValue(false)
-			prop.Value = &v
-		case BytePropertyType:
-			prop.Value = &BytePropertyValue{}
-		case DoublePropertyType:
-			v := DoublePropertyValue(0)
-			prop.Value = &v
-		case FloatPropertyType:
-			v := FloatPropertyValue(0)
-			prop.Value = &v
-		case Int8PropertyType:
-			v := Int8PropertyValue(0)
-			prop.Value = &v
-		case Int64PropertyType:
-			v := Int64PropertyValue(0)
-			prop.Value = &v
-		case IntPropertyType:
-			v := IntPropertyValue(0)
-			prop.Value = &v
-		case InterfacePropertyType:
-			prop.Value = &InterfacePropertyValue{}
-		case NamePropertyType:
-			v := NamePropertyValue("")
-			prop.Value = &v
-		case ObjectPropertyType:
-			prop.Value = &ObjectPropertyValue{}
-		case StringPropertyType:
-			v := StringPropertyValue("")
-			prop.Value = &v
-		default:
-			// TODO: Have a UnknownPropertyType where we just store the value as a byte slice.
-			return nil, fmt.Errorf("unknown property type %s", propType)
-		}
-
-		err = prop.Value.parse(p, false)
-		if err != nil {
-			return nil, err
 		}
 
 		o.Properties = append(o.Properties, prop)
 	}
 
-	//// For now just skip parsing the entity internals.
-	//seekLoc := o.offset + int64(o.len) + 4
-	//_, err = r.Seek(seekLoc, io.SeekStart)
-	//if err != nil {
-	//	return nil, err
-	//}
-
 	return o, nil
+}
+
+func (p *Parser) parseProperty() (*Property, error) {
+	var err error
+	prop := &Property{}
+
+	// PropName
+	prop.Name, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	propType, err := p.readString()
+	if err != nil {
+		return nil, err
+	}
+	prop.Type = PropertyType(propType)
+
+	if prop.Name == "None" && prop.Type == "" {
+		// Parsing props inside a structure of some kind and we have reached the end.
+		return nil, nil
+	}
+
+	prop.ValueLen, err = p.readInt32()
+	if err != nil {
+		return nil, err
+	}
+
+	prop.Index, err = p.readInt32()
+	if err != nil {
+		return nil, err
+	}
+
+	switch prop.Type {
+	case ArrayPropertyType:
+		prop.Value = &ArrayPropertyValue{}
+	case BoolPropertyType:
+		v := BoolPropertyValue(false)
+		prop.Value = &v
+	case BytePropertyType:
+		prop.Value = &BytePropertyValue{}
+	case DoublePropertyType:
+		v := DoublePropertyValue(0)
+		prop.Value = &v
+	case FloatPropertyType:
+		v := FloatPropertyValue(0)
+		prop.Value = &v
+	case Int8PropertyType:
+		v := Int8PropertyValue(0)
+		prop.Value = &v
+	case Int64PropertyType:
+		v := Int64PropertyValue(0)
+		prop.Value = &v
+	case IntPropertyType:
+		v := IntPropertyValue(0)
+		prop.Value = &v
+	case InterfacePropertyType:
+		prop.Value = &InterfacePropertyValue{}
+	case NamePropertyType:
+		v := NamePropertyValue("")
+		prop.Value = &v
+	case ObjectPropertyType:
+		prop.Value = &ObjectPropertyValue{}
+	case StringPropertyType:
+		v := StringPropertyValue("")
+		prop.Value = &v
+	case StructPropertyType:
+		prop.Value = &StructPropertyValue{}
+	default:
+		// TODO: Have a UnknownPropertyType where we just store the value as a byte slice.
+		return nil, fmt.Errorf("unknown property type %s", propType)
+	}
+
+	err = prop.Value.parse(p, false)
+	if err != nil {
+		return nil, err
+	}
+
+	return prop, nil
 }
 
 func (p *Parser) parseCollectedObjects(s *Save) error {

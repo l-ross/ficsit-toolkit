@@ -140,6 +140,17 @@ func TestPropertyValues(t *testing.T) {
 				assert.Equal(t, "AStringValue", v)
 			},
 		},
+		{
+			name:     "StructProperty",
+			testData: "testdata/struct.prop",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetStructValue()
+				require.NoError(t, err)
+				a, err := v.GetArbitraryStruct()
+				require.NoError(t, err)
+				require.Len(t, a.Properties, 3)
+			},
+		},
 	}
 
 	for _, tt := range tests {
