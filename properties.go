@@ -76,11 +76,14 @@ func (v *ArrayPropertyValue) parse(p *Parser, inArray bool) error {
 
 	var innerValue func() PropertyValue
 
+	// TODO: Other property types
 	switch v.ValueType {
 	case InterfacePropertyType:
 		innerValue = func() PropertyValue {
 			return &InterfacePropertyValue{}
 		}
+	default:
+		return fmt.Errorf("unsupported array type %s", v.ValueType)
 	}
 
 	for i := int32(0); i < elemCount; i++ {

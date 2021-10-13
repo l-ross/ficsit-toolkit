@@ -190,14 +190,14 @@ func (p *Parser) parseObjectData() (*ObjectData, error) {
 			return nil, err
 		}
 
-		if name == "None" {
-			// TODO: Should we skip the next 4 bytes?
-			continue
-		}
-
 		propType, err := p.readString()
 		if err != nil {
 			return nil, err
+		}
+
+		if name == "None" && propType == "" {
+			// Skip empty property
+			continue
 		}
 
 		valueLen, err := p.readInt32()
