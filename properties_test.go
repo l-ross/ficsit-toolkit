@@ -1,10 +1,10 @@
 package satisfactorysave
 
 import (
-	"bytes"
 	"io/ioutil"
 	"testing"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/stretchr/testify/require"
@@ -26,14 +26,18 @@ func TestProperties(t *testing.T) {
 				require.NoError(t, err)
 				assert.Equal(t, &ArrayPropertyValue{
 					ValueType: InterfacePropertyType,
-					Values: []PropertyValue{
-						&InterfacePropertyValue{
-							LevelName: "LevelName1",
-							PathName:  "PathName1",
+					Values: []*Property{
+						{
+							PropertyValue: &InterfacePropertyValue{
+								LevelName: "LevelName1",
+								PathName:  "PathName1",
+							},
 						},
-						&InterfacePropertyValue{
-							LevelName: "LevelName2",
-							PathName:  "PathName2",
+						{
+							PropertyValue: &InterfacePropertyValue{
+								LevelName: "LevelName2",
+								PathName:  "PathName2",
+							},
 						},
 					},
 				}, v)
@@ -43,9 +47,15 @@ func TestProperties(t *testing.T) {
 			name:     "ArrayProperty_StructProperty",
 			testData: "testdata/prop_array_struct.dat",
 			assertValue: func(t *testing.T, p *Property) {
-				v, err := p.GetArrayValue()
+				s1, err := p.GetStructValue()
 				require.NoError(t, err)
-				require.Len(t, v.Values, 1)
+				a, err := s1.GetArbitraryStruct()
+				require.NoError(t, err)
+				require.Len(t, a.Properties, 1)
+				arr, err := a.Properties[0].GetArrayValue()
+				require.NoError(t, err)
+				require.Len(t, arr.Values, 1)
+
 			},
 		},
 		{
@@ -171,12 +181,14 @@ func TestProperties(t *testing.T) {
 			require.NoError(t, err)
 
 			p := &Parser{
-				body: bytes.NewReader(data),
+				body: data,
 			}
-			objData, err := p.parseObjectData()
+			objData, err := p.parseObjectData(0, int32(len(data)))
 			require.NoError(t, err)
 			require.NotNil(t, objData)
-			assert.Zero(t, p.body.Len(), "we should have consumed the entire reader")
+			assert.Zero(t, p.buf.Len(), "we should have consumed the entire reader")
+
+			spew.Dump(objData)
 
 			require.Len(t, objData.Properties, 1, "we should have 1 property")
 			tt.assertValue(t, objData.Properties[0])

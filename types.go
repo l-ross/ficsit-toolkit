@@ -6,7 +6,13 @@ type Save struct {
 	Entities         []*Entity          `json:"entities"`
 	CollectedObjects []*CollectedObject `json:"collected_objects"`
 
+	objData     map[int32]*dataLoc
 	objectCount int32
+}
+
+type dataLoc struct {
+	offset int64
+	len    int32
 }
 
 type Header struct {
@@ -37,8 +43,12 @@ type Component struct {
 	PathName      string `json:"path_name,omitempty"`
 	OuterPathName string `json:"outer_path_name,omitempty"`
 
+	order  int32
 	offset int64
-	len    int64
+	len    int32
+
+	dataOffset int64
+	dataLen    int32
 }
 
 type Entity struct {
@@ -51,8 +61,12 @@ type Entity struct {
 	Scale3D          []float32 `json:"scale_3_d,omitempty"`
 	WasPlacedInLevel int32     `json:"was_placed_in_level,omitempty"`
 
-	offset int32
+	order  int32
+	offset int64
 	len    int32
+
+	dataOffset int64
+	dataLen    int32
 }
 
 type ObjectData struct {
@@ -60,9 +74,6 @@ type ObjectData struct {
 	PathName   string      `json:"path_name,omitempty"`
 	Children   []*Child    `json:"children,omitempty"`
 	Properties []*Property `json:"properties,omitempty"`
-
-	offset int64
-	len    int32
 }
 
 type Child struct {

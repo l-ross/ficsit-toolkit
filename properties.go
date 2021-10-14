@@ -26,11 +26,11 @@ const (
 )
 
 type Property struct {
-	Name     string        `json:"name"`
-	Type     PropertyType  `json:"type"`
-	ValueLen int32         `json:"value_len"`
-	Index    int32         `json:"index"`
-	Value    PropertyValue `json:"value"`
+	Name          string       `json:"name"`
+	Type          PropertyType `json:"type"`
+	ValueLen      int32        `json:"value_len"`
+	Index         int32        `json:"index"`
+	PropertyValue `json:"value"`
 }
 
 type PropertyValue interface {
@@ -48,11 +48,11 @@ type PropertyValue interface {
 
 type ArrayPropertyValue struct {
 	ValueType PropertyType
-	Values    []PropertyValue
+	Values    []*Property
 }
 
 func (p *Property) GetArrayValue() (*ArrayPropertyValue, error) {
-	if v, ok := p.Value.(*ArrayPropertyValue); ok {
+	if v, ok := p.PropertyValue.(*ArrayPropertyValue); ok {
 		return v, nil
 	}
 
@@ -77,24 +77,62 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 		return err
 	}
 
-	v.Values = make([]PropertyValue, elemCount)
+	v.Values = make([]*Property, elemCount)
 
-	var newInnerValue func() PropertyValue
+	var newProp func() PropertyValue
 
 	switch v.ValueType {
+	case BytePropertyType:
+		newProp = func() PropertyValue {
+			return &BytePropertyValue{
+				countHint: elemCount,
+			}
+		}
 	case InterfacePropertyType:
-		newInnerValue = func() PropertyValue {
+		newProp = func() PropertyValue {
 			return &InterfacePropertyValue{}
 		}
+	case IntPropertyType:
+		newProp = func() PropertyValue {
+			v := IntPropertyValue(0)
+			return &v
+		}
 	case ObjectPropertyType:
-		newInnerValue = func() PropertyValue {
+		newProp = func() PropertyValue {
 			return &ObjectPropertyValue{}
 		}
 	case StructPropertyType:
-		newInnerValue = func() PropertyValue {
+		// TODO: Figure out what to do with all this.
+		_, err = p.readString()
+		if err != nil {
+			return err
+		}
+
+		_, err = p.readString()
+		if err != nil {
+			return err
+		}
+
+		_, err = p.readBytes(8)
+		if err != nil {
+			return err
+		}
+
+		_, err = p.readString()
+		if err != nil {
+			return err
+		}
+
+		_, err = p.readBytes(17)
+		if err != nil {
+			return err
+		}
+
+		newProp = func() PropertyValue {
 			return &StructPropertyValue{
+				Value: &ArbitraryStruct{},
 				// TODO: Explain this
-				inArray: true,
+				numProps: elemCount,
 			}
 		}
 	default:
@@ -102,14 +140,16 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	}
 
 	for i := int32(0); i < elemCount; i++ {
-		innerValue := newInnerValue()
+		prop := &Property{
+			PropertyValue: newProp(),
+		}
 
-		err := innerValue.parse(p, true)
+		err := prop.parse(p, true)
 		if err != nil {
 			return err
 		}
 
-		v.Values[i] = innerValue
+		v.Values[i] = prop
 	}
 
 	return nil
@@ -122,7 +162,7 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 type BoolPropertyValue bool
 
 func (p *Property) GetBoolValue() (bool, error) {
-	if v, ok := p.Value.(*BoolPropertyValue); ok {
+	if v, ok := p.PropertyValue.(*BoolPropertyValue); ok {
 		return bool(*v), nil
 	}
 
@@ -151,10 +191,12 @@ func (v *BoolPropertyValue) parse(p *Parser, inner bool) error {
 type BytePropertyValue struct {
 	Type  string
 	Value []byte
+
+	countHint int32
 }
 
 func (p *Property) GetByteValue() ([]byte, error) {
-	if v, ok := p.Value.(*BytePropertyValue); ok {
+	if v, ok := p.PropertyValue.(*BytePropertyValue); ok {
 		return v.Value, nil
 	}
 
@@ -162,6 +204,10 @@ func (p *Property) GetByteValue() ([]byte, error) {
 }
 
 func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
+	if inner {
+		return v.parseInArray(p)
+	}
+
 	var err error
 	v.Type, err = p.readString()
 	if err != nil {
@@ -196,6 +242,20 @@ func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *BytePropertyValue) parseInArray(p *Parser) error {
+	// TODO: Fix this so we handle all of the bytes at once.
+	v.Type = "None"
+
+	b, err := p.readByte()
+	if err != nil {
+		return err
+	}
+
+	v.Value = append(v.Value, b)
+
+	return nil
+}
+
 //
 // DoubleProperty
 //
@@ -203,7 +263,7 @@ func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 type DoublePropertyValue float64
 
 func (p *Property) GetDoubleValue() (float64, error) {
-	if v, ok := p.Value.(*DoublePropertyValue); ok {
+	if v, ok := p.PropertyValue.(*DoublePropertyValue); ok {
 		return float64(*v), nil
 	}
 
@@ -233,7 +293,7 @@ func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
 type FloatPropertyValue float32
 
 func (p *Property) GetFloatValue() (float32, error) {
-	if v, ok := p.Value.(*FloatPropertyValue); ok {
+	if v, ok := p.PropertyValue.(*FloatPropertyValue); ok {
 		return float32(*v), nil
 	}
 
@@ -263,7 +323,7 @@ func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
 type Int8PropertyValue int8
 
 func (p *Property) GetInt8Value() (int8, error) {
-	if v, ok := p.Value.(*Int8PropertyValue); ok {
+	if v, ok := p.PropertyValue.(*Int8PropertyValue); ok {
 		return int8(*v), nil
 	}
 
@@ -292,7 +352,7 @@ func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
 type Int64PropertyValue int8
 
 func (p *Property) GetInt64Value() (int64, error) {
-	if v, ok := p.Value.(*Int64PropertyValue); ok {
+	if v, ok := p.PropertyValue.(*Int64PropertyValue); ok {
 		return int64(*v), nil
 	}
 
@@ -324,7 +384,7 @@ type InterfacePropertyValue struct {
 }
 
 func (p *Property) GetInterfaceValue() (*InterfacePropertyValue, error) {
-	if v, ok := p.Value.(*InterfacePropertyValue); ok {
+	if v, ok := p.PropertyValue.(*InterfacePropertyValue); ok {
 		return v, nil
 	}
 
@@ -362,7 +422,7 @@ func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
 type IntPropertyValue int32
 
 func (p *Property) GetIntValue() (int32, error) {
-	if v, ok := p.Value.(*IntPropertyValue); ok {
+	if v, ok := p.PropertyValue.(*IntPropertyValue); ok {
 		return int32(*v), nil
 	}
 
@@ -431,7 +491,7 @@ func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
 type NamePropertyValue string
 
 func (p *Property) GetNameValue() (string, error) {
-	if v, ok := p.Value.(*NamePropertyValue); ok {
+	if v, ok := p.PropertyValue.(*NamePropertyValue); ok {
 		return string(*v), nil
 	}
 
@@ -463,7 +523,7 @@ type ObjectPropertyValue struct {
 }
 
 func (p *Property) GetObjectValue() (*ObjectPropertyValue, error) {
-	if v, ok := p.Value.(*ObjectPropertyValue); ok {
+	if v, ok := p.PropertyValue.(*ObjectPropertyValue); ok {
 		return v, nil
 	}
 
@@ -501,7 +561,7 @@ func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
 type StringPropertyValue string
 
 func (p *Property) GetStringValue() (string, error) {
-	if v, ok := p.Value.(*StringPropertyValue); ok {
+	if v, ok := p.PropertyValue.(*StringPropertyValue); ok {
 		return string(*v), nil
 	}
 
@@ -539,11 +599,11 @@ type StructPropertyValue struct {
 	innerName string
 	innerType StructType
 
-	inArray bool
+	numProps int32
 }
 
 func (p *Property) GetStructValue() (*StructPropertyValue, error) {
-	if v, ok := p.Value.(*StructPropertyValue); ok {
+	if v, ok := p.PropertyValue.(*StructPropertyValue); ok {
 		return v, nil
 	}
 
@@ -551,7 +611,7 @@ func (p *Property) GetStructValue() (*StructPropertyValue, error) {
 }
 
 func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
-	if v.inArray {
+	if v.numProps > 0 {
 		return v.parseInArray(p)
 	}
 
@@ -560,8 +620,6 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 		return err
 	}
 	v.Type = StructType(structType)
-
-	fmt.Println(structType)
 
 	v.GUID, err = p.readInt32Array(4)
 	if err != nil {
@@ -577,6 +635,8 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	switch v.Type {
 	case BoxStructType:
 		v.Value = &BoxStruct{}
+	case InventoryItemStructType:
+		v.Value = &InventoryItemStruct{}
 	case LinearColorStructType:
 		v.Value = &LinearColor{}
 	case QuatStructType:
@@ -596,22 +656,23 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 }
 
 func (v *StructPropertyValue) parseInArray(p *Parser) error {
-	prop, err := p.parseProperty()
-	if err != nil {
-		return err
-	}
-	if prop == nil {
-		// Reached the end of the array.
-		return nil
-	}
+	for {
+		prop, err := p.parseProperty()
+		if err != nil {
+			return err
+		}
+		if prop == nil {
+			// Reached the end of the array.
+			break
+		}
 
-	v.innerName = prop.Name
-	inner, err := prop.GetStructValue()
-	if err != nil {
-		return err
+		a, err := v.GetArbitraryStruct()
+		if err != nil {
+			return err
+		}
+
+		a.Properties = append(a.Properties, prop)
 	}
-	v.innerType = inner.Type
-	v.Value = inner.Value
 
 	return nil
 }

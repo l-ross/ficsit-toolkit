@@ -5,10 +5,11 @@ import "fmt"
 type StructType string
 
 const (
-	BoxStructType         StructType = "Box"
-	LinearColorStructType StructType = "LinearColor"
-	QuatStructType        StructType = "Quat"
-	VectorStructType      StructType = "Vector"
+	BoxStructType           StructType = "Box"
+	InventoryItemStructType StructType = "InventoryItem"
+	LinearColorStructType   StructType = "LinearColor"
+	QuatStructType          StructType = "Quat"
+	VectorStructType        StructType = "Vector"
 )
 
 //
@@ -17,6 +18,8 @@ const (
 
 type ArbitraryStruct struct {
 	Properties []*Property
+
+	numProps int32
 }
 
 func (s *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
@@ -28,7 +31,11 @@ func (s *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
 }
 
 func (s *ArbitraryStruct) parse(p *Parser) error {
-	for {
+	for i := int32(0); ; i++ {
+		if s.numProps != 0 && i < s.numProps {
+			break
+		}
+
 		prop, err := p.parseProperty()
 		if err != nil {
 			return err
@@ -75,6 +82,76 @@ func (s *BoxStruct) parse(p *Parser) error {
 
 	// TODO: Is this definitely a bool?
 	s.IsValid, err = p.readBool()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+//
+// InventoryItem
+//
+
+type InventoryItemStruct struct {
+	ItemName string
+	NumItems int32
+}
+
+func (s *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, error) {
+	if v, ok := s.Value.(*InventoryItemStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", s.Type)
+}
+
+func (s *InventoryItemStruct) parse(p *Parser) error {
+	// Unknown
+	_, err := p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	s.ItemName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	// Unknown
+	_, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	// Unknown
+	_, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	propName, err := p.readString()
+	if err != nil {
+		return err
+	}
+	if propName != "NumItems" {
+		return fmt.Errorf("found item property that was not NumItems %q", propName)
+	}
+
+	propType, err := p.readString()
+	if err != nil {
+		return err
+	}
+	if propType != "IntProperty" {
+		return fmt.Errorf("found item property type that was not IntProperty %q", propType)
+	}
+
+	s.NumItems, err = p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	_, err = p.readBytes(9)
 	if err != nil {
 		return err
 	}
