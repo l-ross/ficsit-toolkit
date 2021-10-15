@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/l-ross/satisfactorysave/save"
+	"github.com/l-ross/ficsit-toolkit/save"
 )
 
 func main() {
