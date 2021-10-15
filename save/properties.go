@@ -42,6 +42,8 @@ type PropertyValue interface {
 	parse(p *Parser, inner bool) error
 }
 
+type newPropValueFunc func(elemCount int32) PropertyValue
+
 //
 // ArrayProperty
 //
@@ -49,6 +51,10 @@ type PropertyValue interface {
 type ArrayPropertyValue struct {
 	ValueType PropertyType
 	Values    []*Property
+}
+
+func newArrayPropertyValue(elemCount int32) PropertyValue {
+	return &ArrayPropertyValue{}
 }
 
 func (p *Property) GetArrayValue() (*ArrayPropertyValue, error) {
@@ -79,28 +85,17 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 
 	v.Values = make([]*Property, elemCount)
 
-	var newProp func() PropertyValue
+	var newPropValue newPropValueFunc
 
 	switch v.ValueType {
 	case BytePropertyType:
-		newProp = func() PropertyValue {
-			return &BytePropertyValue{
-				countHint: elemCount,
-			}
-		}
+		newPropValue = newBytePropertyValue
 	case InterfacePropertyType:
-		newProp = func() PropertyValue {
-			return &InterfacePropertyValue{}
-		}
+		newPropValue = newInterfacePropertyValue
 	case IntPropertyType:
-		newProp = func() PropertyValue {
-			v := IntPropertyValue(0)
-			return &v
-		}
+		newPropValue = newIntPropertyValue
 	case ObjectPropertyType:
-		newProp = func() PropertyValue {
-			return &ObjectPropertyValue{}
-		}
+		newPropValue = newObjectPropertyValue
 	case StructPropertyType:
 		// TODO: Figure out what to do with all this.
 		_, err = p.readString()
@@ -128,20 +123,14 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 			return err
 		}
 
-		newProp = func() PropertyValue {
-			return &StructPropertyValue{
-				Value: &ArbitraryStruct{},
-				// TODO: Explain this
-				numProps: elemCount,
-			}
-		}
+		newPropValue = newStructPropertyValue
 	default:
 		return fmt.Errorf("unsupported array type %s", v.ValueType)
 	}
 
 	for i := int32(0); i < elemCount; i++ {
 		prop := &Property{
-			PropertyValue: newProp(),
+			PropertyValue: newPropValue(elemCount),
 		}
 
 		err := prop.parse(p, true)
@@ -160,6 +149,11 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 //
 
 type BoolPropertyValue bool
+
+func newBoolPropertyValue(elemCount int32) PropertyValue {
+	v := BoolPropertyValue(false)
+	return &v
+}
 
 func (p *Property) GetBoolValue() (bool, error) {
 	if v, ok := p.PropertyValue.(*BoolPropertyValue); ok {
@@ -192,7 +186,13 @@ type BytePropertyValue struct {
 	Type  string
 	Value []byte
 
-	countHint int32
+	elemCount int32
+}
+
+func newBytePropertyValue(elemCount int32) PropertyValue {
+	return &BytePropertyValue{
+		elemCount: elemCount,
+	}
 }
 
 func (p *Property) GetByteValue() ([]byte, error) {
@@ -262,6 +262,11 @@ func (v *BytePropertyValue) parseInArray(p *Parser) error {
 
 type DoublePropertyValue float64
 
+func newDoublePropertyValue(elemCount int32) PropertyValue {
+	v := DoublePropertyValue(0)
+	return &v
+}
+
 func (p *Property) GetDoubleValue() (float64, error) {
 	if v, ok := p.PropertyValue.(*DoublePropertyValue); ok {
 		return float64(*v), nil
@@ -293,6 +298,10 @@ func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
 type EnumPropertyValue struct {
 	Type  string
 	Value string
+}
+
+func newEnumPropertyValue(elemCount int32) PropertyValue {
+	return &EnumPropertyValue{}
 }
 
 func (p *Property) GetEnumPropertyValue() (*EnumPropertyValue, error) {
@@ -349,6 +358,11 @@ func (v *EnumPropertyValue) parseInner(p *Parser) error {
 
 type FloatPropertyValue float32
 
+func newFloatPropertyValue(elemCount int32) PropertyValue {
+	v := FloatPropertyValue(0)
+	return &v
+}
+
 func (p *Property) GetFloatValue() (float32, error) {
 	if v, ok := p.PropertyValue.(*FloatPropertyValue); ok {
 		return float32(*v), nil
@@ -379,6 +393,11 @@ func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
 
 type Int8PropertyValue int8
 
+func newInt8PropertyValue(elemCount int32) PropertyValue {
+	v := Int8PropertyValue(0)
+	return &v
+}
+
 func (p *Property) GetInt8Value() (int8, error) {
 	if v, ok := p.PropertyValue.(*Int8PropertyValue); ok {
 		return int8(*v), nil
@@ -407,6 +426,11 @@ func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
 //
 
 type Int64PropertyValue int8
+
+func newInt64PropertyValue(elemCount int32) PropertyValue {
+	v := Int64PropertyValue(0)
+	return &v
+}
 
 func (p *Property) GetInt64Value() (int64, error) {
 	if v, ok := p.PropertyValue.(*Int64PropertyValue); ok {
@@ -438,6 +462,10 @@ func (v *Int64PropertyValue) parse(p *Parser, inner bool) error {
 type InterfacePropertyValue struct {
 	LevelName string
 	PathName  string
+}
+
+func newInterfacePropertyValue(elemCount int32) PropertyValue {
+	return &InterfacePropertyValue{}
 }
 
 func (p *Property) GetInterfaceValue() (*InterfacePropertyValue, error) {
@@ -478,6 +506,11 @@ func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
 
 type IntPropertyValue int32
 
+func newIntPropertyValue(elemCount int32) PropertyValue {
+	v := IntPropertyValue(0)
+	return &v
+}
+
 func (p *Property) GetIntValue() (int32, error) {
 	if v, ok := p.PropertyValue.(*IntPropertyValue); ok {
 		return int32(*v), nil
@@ -511,6 +544,10 @@ type MapPropertyValue struct {
 	KeyType   PropertyType
 	ValueType PropertyType
 	Values    map[PropertyValue]PropertyValue
+}
+
+func newMapPropertyValue(elemCount int32) PropertyValue {
+	return &MapPropertyValue{}
 }
 
 func (p *Property) GetMapPropertyValue() (*MapPropertyValue, error) {
@@ -554,45 +591,35 @@ func (v *MapPropertyValue) parse(p *Parser, inner bool) error {
 		return err
 	}
 
-	var newKey func() PropertyValue
-	var newValue func() PropertyValue
+	var newKey newPropValueFunc
+	var newValue newPropValueFunc
 
 	switch v.KeyType {
 	case EnumPropertyType:
-		newKey = func() PropertyValue {
-			return &EnumPropertyValue{}
-		}
+		newKey = newEnumPropertyValue
 	case IntPropertyType:
-		newKey = func() PropertyValue {
-			v := IntPropertyValue(0)
-			return &v
-		}
+		newKey = newIntPropertyValue
 	default:
 		return fmt.Errorf("unsupported property type in map key %s", v.KeyType)
 	}
 
 	switch v.ValueType {
 	case EnumPropertyType:
-		newKey = func() PropertyValue {
-			return &EnumPropertyValue{}
-		}
+		newValue = newEnumPropertyValue
 	case IntPropertyType:
-		newValue = func() PropertyValue {
-			v := IntPropertyValue(0)
-			return &v
-		}
+		newValue = newIntPropertyValue
 	default:
 		return fmt.Errorf("unsupported property type in map key %s", v.KeyType)
 	}
 
 	for i := int32(0); i < count; i++ {
-		key := newKey()
+		key := newKey(0)
 		err = key.parse(p, true)
 		if err != nil {
 			return err
 		}
 
-		val := newValue()
+		val := newValue(0)
 		err = val.parse(p, true)
 		if err != nil {
 			return err
@@ -609,6 +636,11 @@ func (v *MapPropertyValue) parse(p *Parser, inner bool) error {
 //
 
 type NamePropertyValue string
+
+func newNamePropertyValue(elemCount int32) PropertyValue {
+	v := NamePropertyValue("")
+	return &v
+}
 
 func (p *Property) GetNameValue() (string, error) {
 	if v, ok := p.PropertyValue.(*NamePropertyValue); ok {
@@ -640,6 +672,10 @@ func (v *NamePropertyValue) parse(p *Parser, inner bool) error {
 type ObjectPropertyValue struct {
 	LevelName string
 	PathName  string
+}
+
+func newObjectPropertyValue(elemCount int32) PropertyValue {
+	return &ObjectPropertyValue{}
 }
 
 func (p *Property) GetObjectValue() (*ObjectPropertyValue, error) {
@@ -680,6 +716,11 @@ func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
 
 type StringPropertyValue string
 
+func newStringPropertyValue(elemCount int32) PropertyValue {
+	v := StringPropertyValue("")
+	return &v
+}
+
 func (p *Property) GetStringValue() (string, error) {
 	if v, ok := p.PropertyValue.(*StringPropertyValue); ok {
 		return string(*v), nil
@@ -719,7 +760,16 @@ type StructPropertyValue struct {
 	innerName string
 	innerType StructType
 
-	numProps int32
+	elemCount int32
+}
+
+func newStructPropertyValue(elemCount int32) PropertyValue {
+	return &StructPropertyValue{
+		// Default to ArbitraryStruct as that's the only value type we will encounter when parsing a struct inside
+		// an array. If the struct isn't in an array then Value will be reset as part of the parsing.
+		Value:     &ArbitraryStruct{},
+		elemCount: elemCount,
+	}
 }
 
 func (p *Property) GetStructValue() (*StructPropertyValue, error) {
@@ -731,7 +781,7 @@ func (p *Property) GetStructValue() (*StructPropertyValue, error) {
 }
 
 func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
-	if v.numProps > 0 {
+	if v.elemCount > 0 {
 		return v.parseInArray(p)
 	}
 

@@ -274,7 +274,6 @@ func (p *Parser) parseProperty() (*Property, error) {
 	var err error
 	prop := &Property{}
 
-	// PropName
 	prop.Name, err = p.readString()
 	if err != nil {
 		return nil, err
@@ -301,49 +300,45 @@ func (p *Parser) parseProperty() (*Property, error) {
 		return nil, err
 	}
 
+	var newPropValue newPropValueFunc
+
 	switch prop.Type {
 	case ArrayPropertyType:
-		prop.PropertyValue = &ArrayPropertyValue{}
+		newPropValue = newArrayPropertyValue
 	case BoolPropertyType:
-		v := BoolPropertyValue(false)
-		prop.PropertyValue = &v
+		newPropValue = newBoolPropertyValue
 	case BytePropertyType:
-		prop.PropertyValue = &BytePropertyValue{}
+		newPropValue = newBytePropertyValue
 	case DoublePropertyType:
-		v := DoublePropertyValue(0)
-		prop.PropertyValue = &v
+		newPropValue = newDoublePropertyValue
 	case EnumPropertyType:
-		prop.PropertyValue = &EnumPropertyValue{}
+		newPropValue = newEnumPropertyValue
 	case FloatPropertyType:
-		v := FloatPropertyValue(0)
-		prop.PropertyValue = &v
+		newPropValue = newFloatPropertyValue
 	case Int8PropertyType:
-		v := Int8PropertyValue(0)
-		prop.PropertyValue = &v
+		newPropValue = newInt8PropertyValue
 	case Int64PropertyType:
-		v := Int64PropertyValue(0)
-		prop.PropertyValue = &v
+		newPropValue = newInt64PropertyValue
 	case IntPropertyType:
-		v := IntPropertyValue(0)
-		prop.PropertyValue = &v
+		newPropValue = newIntPropertyValue
 	case InterfacePropertyType:
-		prop.PropertyValue = &InterfacePropertyValue{}
+		newPropValue = newInterfacePropertyValue
 	case NamePropertyType:
-		v := NamePropertyValue("")
-		prop.PropertyValue = &v
+		newPropValue = newNamePropertyValue
 	case MapPropertyType:
-		prop.PropertyValue = &MapPropertyValue{}
+		newPropValue = newMapPropertyValue
 	case ObjectPropertyType:
-		prop.PropertyValue = &ObjectPropertyValue{}
+		newPropValue = newObjectPropertyValue
 	case StringPropertyType:
-		v := StringPropertyValue("")
-		prop.PropertyValue = &v
+		newPropValue = newStringPropertyValue
 	case StructPropertyType:
-		prop.PropertyValue = &StructPropertyValue{}
+		newPropValue = newStructPropertyValue
 	default:
-		// TODO: Have a UnknownPropertyType where we just store the value as a byte slice.
+		// TODO: Possibly have a UnknownPropertyType where we just store the value as a byte slice.
 		return nil, fmt.Errorf("unknown property type %s", propType)
 	}
+
+	prop.PropertyValue = newPropValue(0)
 
 	err = prop.PropertyValue.parse(p, false)
 	if err != nil {
