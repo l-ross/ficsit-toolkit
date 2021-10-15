@@ -1,4 +1,4 @@
-package satisfactorysave
+package save
 
 type Save struct {
 	Header           *Header            `json:"header"`

@@ -1,4 +1,4 @@
-package satisfactorysave
+package save
 
 import (
 	"bytes"
@@ -109,14 +109,17 @@ func (p *Parser) parseBody(s *Save) error {
 		}
 	}
 
-	//for _, c := range s.Components {
-	//	dataLoc := s.objData[c.order]
-	//
-	//	_, err = p.parseObjectData(dataLoc.offset, dataLoc.len)
-	//	if err != nil {
-	//		return err
-	//	}
-	//}
+	for _, c := range s.Components {
+		index := c.order
+		fmt.Println(index)
+
+		dataLoc := s.objData[c.order]
+
+		_, err = p.parseObjectData(dataLoc.offset, dataLoc.len)
+		if err != nil {
+			return err
+		}
+	}
 
 	return nil
 }

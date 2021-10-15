@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/l-ross/satisfactorysave"
+	"github.com/l-ross/satisfactorysave/save"
 )
 
 func main() {
@@ -21,7 +21,7 @@ func realMain() error {
 	}
 	defer f.Close()
 
-	p, err := satisfactorysave.NewParser(f)
+	p, err := save.NewParser(f)
 	if err != nil {
 		return err
 	}

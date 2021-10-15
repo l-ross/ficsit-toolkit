@@ -1,4 +1,4 @@
-package satisfactorysave
+package save
 
 import (
 	"fmt"
