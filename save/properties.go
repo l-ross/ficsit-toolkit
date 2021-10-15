@@ -2,6 +2,7 @@ package save
 
 import (
 	"fmt"
+	"strings"
 )
 
 type PropertyType string
@@ -36,9 +37,8 @@ type Property struct {
 type PropertyValue interface {
 	// Parse the property value
 	//
-	// If inner is true then the property value is a child element of another property value
-	// e.g. a StringProperty inside an ArrayProperty. In some cases this can change the format
-	// of the property value slightly.
+	// If inner is true then the property value is inside an ArrayProperty.
+	// In some cases this can change the format of the property value.
 	parse(p *Parser, inner bool) error
 }
 
@@ -287,6 +287,63 @@ func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
 }
 
 //
+// EnumProperty
+//
+
+type EnumPropertyValue struct {
+	Type  string
+	Value string
+}
+
+func (p *Property) GetEnumPropertyValue() (*EnumPropertyValue, error) {
+	if v, ok := p.PropertyValue.(*EnumPropertyValue); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", p.Type)
+}
+
+func (v *EnumPropertyValue) parse(p *Parser, inner bool) error {
+	if inner {
+		return v.parseInner(p)
+	}
+
+	var err error
+	v.Type, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	err = p.nextByteIsNull()
+	if err != nil {
+		return err
+	}
+
+	v.Value, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (v *EnumPropertyValue) parseInner(p *Parser) error {
+	enum, err := p.readString()
+	if err != nil {
+		return err
+	}
+
+	enumSplit := strings.SplitN(enum, "::", 1)
+	if len(enumSplit) != 2 {
+		return fmt.Errorf("failed to parse enum value %s", enumSplit)
+	}
+
+	v.Type, v.Value = enumSplit[0], enumSplit[1]
+
+	return nil
+}
+
+//
 // FloatProperty
 //
 
@@ -450,39 +507,102 @@ func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
 // MapProperty
 //
 
-//type MapPropertyValue struct {
-//}
-//
-//func (v *MapPropertyValue) parse(r *bytes.Reader) error {
-//	keyType, err := readString(r)
-//	if err != nil {
-//		return err
-//	}
-//
-//	valueType, err := readString(r)
-//	if err != nil {
-//		return err
-//	}
-//
-//	// TODO: What is this?
-//	_, err = readInt32(r)
-//	if err != nil {
-//		return err
-//	}
-//
-//	// TODO: What is this byte for?
-//	err = nextByteIsNull(r)
-//	if err != nil {
-//		return err
-//	}
-//
-//	itemCount, err := readInt32(r)
-//	if err != nil {
-//		return err
-//	}
-//
-//	return nil
-//}
+type MapPropertyValue struct {
+	KeyType   PropertyType
+	ValueType PropertyType
+	Values    map[PropertyValue]PropertyValue
+}
+
+func (p *Property) GetMapPropertyValue() (*MapPropertyValue, error) {
+	if v, ok := p.PropertyValue.(*MapPropertyValue); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", p.Type)
+}
+
+func (v *MapPropertyValue) parse(p *Parser, inner bool) error {
+	if v.Values == nil {
+		v.Values = make(map[PropertyValue]PropertyValue)
+	}
+
+	keyType, err := p.readString()
+	if err != nil {
+		return err
+	}
+	v.KeyType = PropertyType(keyType)
+
+	valueType, err := p.readString()
+	if err != nil {
+		return err
+	}
+	v.ValueType = PropertyType(valueType)
+
+	err = p.nextByteIsNull()
+	if err != nil {
+		return err
+	}
+
+	// TODO: What is this?
+	_, err = p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	count, err := p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	var newKey func() PropertyValue
+	var newValue func() PropertyValue
+
+	switch v.KeyType {
+	case EnumPropertyType:
+		newKey = func() PropertyValue {
+			return &EnumPropertyValue{}
+		}
+	case IntPropertyType:
+		newKey = func() PropertyValue {
+			v := IntPropertyValue(0)
+			return &v
+		}
+	default:
+		return fmt.Errorf("unsupported property type in map key %s", v.KeyType)
+	}
+
+	switch v.ValueType {
+	case EnumPropertyType:
+		newKey = func() PropertyValue {
+			return &EnumPropertyValue{}
+		}
+	case IntPropertyType:
+		newValue = func() PropertyValue {
+			v := IntPropertyValue(0)
+			return &v
+		}
+	default:
+		return fmt.Errorf("unsupported property type in map key %s", v.KeyType)
+	}
+
+	for i := int32(0); i < count; i++ {
+		key := newKey()
+		err = key.parse(p, true)
+		if err != nil {
+			return err
+		}
+
+		val := newValue()
+		err = val.parse(p, true)
+		if err != nil {
+			return err
+		}
+
+		v.Values[key] = val
+	}
+
+	return nil
+}
 
 //
 // NameProperty

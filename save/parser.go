@@ -312,6 +312,8 @@ func (p *Parser) parseProperty() (*Property, error) {
 	case DoublePropertyType:
 		v := DoublePropertyValue(0)
 		prop.PropertyValue = &v
+	case EnumPropertyType:
+		prop.PropertyValue = &EnumPropertyValue{}
 	case FloatPropertyType:
 		v := FloatPropertyValue(0)
 		prop.PropertyValue = &v
@@ -329,6 +331,8 @@ func (p *Parser) parseProperty() (*Property, error) {
 	case NamePropertyType:
 		v := NamePropertyValue("")
 		prop.PropertyValue = &v
+	case MapPropertyType:
+		prop.PropertyValue = &MapPropertyValue{}
 	case ObjectPropertyType:
 		prop.PropertyValue = &ObjectPropertyValue{}
 	case StringPropertyType:
