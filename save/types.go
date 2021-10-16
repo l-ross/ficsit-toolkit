@@ -38,42 +38,34 @@ const (
 )
 
 type Component struct {
-	ClassName     string `json:"class_name,omitempty"`
-	LevelName     string `json:"level_name,omitempty"`
-	PathName      string `json:"path_name,omitempty"`
-	OuterPathName string `json:"outer_path_name,omitempty"`
+	TypePath         string      `json:"class_name,omitempty"`
+	RootObject       string      `json:"level_name,omitempty"`
+	InstanceName     string      `json:"path_name,omitempty"`
+	ParentEntityName string      `json:"outer_path_name,omitempty"`
+	Properties       []*Property `json:"properties"`
 
 	order  int32
 	offset int64
 	len    int32
-
-	dataOffset int64
-	dataLen    int32
 }
 
 type Entity struct {
-	ClassName        string    `json:"class_name,omitempty"`
-	LevelName        string    `json:"level_name,omitempty"`
-	PathName         string    `json:"path_name,omitempty"`
-	NeedTransform    int32     `json:"need_transform,omitempty"`
-	Rotation         []float32 `json:"rotation,omitempty"`
-	Translation      []float32 `json:"translation,omitempty"`
-	Scale3D          []float32 `json:"scale_3_d,omitempty"`
-	WasPlacedInLevel int32     `json:"was_placed_in_level,omitempty"`
+	TypePath         string      `json:"class_name,omitempty"`
+	RootObject       string      `json:"level_name,omitempty"`
+	InstanceName     string      `json:"path_name,omitempty"`
+	NeedTransform    int32       `json:"need_transform,omitempty"`
+	Rotation         []float32   `json:"rotation,omitempty"`
+	Position         []float32   `json:"position,omitempty"`
+	Scale            []float32   `json:"scale,omitempty"`
+	WasPlacedInLevel int32       `json:"was_placed_in_level,omitempty"`
+	ParentObjectRoot string      `json:"parent_object_root"`
+	ParentObjectName string      `json:"parent_object_name"`
+	Children         []*Child    `json:"children,omitempty"`
+	Properties       []*Property `json:"properties,omitempty"`
 
 	order  int32
 	offset int64
 	len    int32
-
-	dataOffset int64
-	dataLen    int32
-}
-
-type ObjectData struct {
-	LevelName  string      `json:"level_name,omitempty"`
-	PathName   string      `json:"path_name,omitempty"`
-	Children   []*Child    `json:"children,omitempty"`
-	Properties []*Property `json:"properties,omitempty"`
 }
 
 type Child struct {

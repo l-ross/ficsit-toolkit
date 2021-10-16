@@ -1,10 +1,10 @@
 package save
 
 import (
+	"bytes"
 	"io/ioutil"
 	"testing"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/stretchr/testify/require"
@@ -26,18 +26,14 @@ func TestProperties(t *testing.T) {
 				require.NoError(t, err)
 				assert.Equal(t, &ArrayPropertyValue{
 					ValueType: InterfacePropertyType,
-					Values: []*Property{
-						{
-							PropertyValue: &InterfacePropertyValue{
-								LevelName: "LevelName1",
-								PathName:  "PathName1",
-							},
+					Values: []PropertyValue{
+						&InterfacePropertyValue{
+							LevelName: "LevelName1",
+							PathName:  "PathName1",
 						},
-						{
-							PropertyValue: &InterfacePropertyValue{
-								LevelName: "LevelName2",
-								PathName:  "PathName2",
-							},
+						&InterfacePropertyValue{
+							LevelName: "LevelName2",
+							PathName:  "PathName2",
 						},
 					},
 				}, v)
@@ -181,6 +177,12 @@ func TestProperties(t *testing.T) {
 				require.Len(t, a.Properties, 3)
 			},
 		},
+		//{
+		//	name:     "TEST",
+		//	testData: "testdata/test.dat",
+		//	assertValue: func(t *testing.T, p *Property) {
+		//	},
+		//},
 	}
 
 	for _, tt := range tests {
@@ -192,17 +194,14 @@ func TestProperties(t *testing.T) {
 			require.NoError(t, err)
 
 			p := &Parser{
-				body: data,
+				buf: bytes.NewReader(data),
 			}
-			objData, err := p.parseObjectData(0, int32(len(data)))
+			props, err := p.parseProperties()
 			require.NoError(t, err)
-			require.NotNil(t, objData)
 			assert.Zero(t, p.buf.Len(), "we should have consumed the entire reader")
 
-			spew.Dump(objData)
-
-			require.Len(t, objData.Properties, 1, "we should have 1 property")
-			tt.assertValue(t, objData.Properties[0])
+			require.Len(t, props, 1, "we should have 1 property")
+			tt.assertValue(t, props[0])
 		})
 	}
 }

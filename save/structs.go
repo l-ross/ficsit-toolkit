@@ -5,11 +5,18 @@ import "fmt"
 type StructType string
 
 const (
-	BoxStructType           StructType = "Box"
-	InventoryItemStructType StructType = "InventoryItem"
-	LinearColorStructType   StructType = "LinearColor"
-	QuatStructType          StructType = "Quat"
-	VectorStructType        StructType = "Vector"
+	ArbitraryStructType             StructType = "Arbitrary"
+	BoxStructType                   StructType = "Box"
+	ColorStructType                 StructType = "Color"
+	DateTimeStructType              StructType = "DateTime"
+	FluidBoxStructType              StructType = "FluidBox"
+	GUIDStructType                  StructType = "GUID"
+	InventoryItemStructType         StructType = "InventoryItem"
+	LinearColorStructType           StructType = "LinearColor"
+	QuatStructType                  StructType = "Quat"
+	RailroadTrackPositionStructType StructType = "RailroadTrackPosition"
+	VectorStructType                StructType = "Vector"
+	Vector2DStructType              StructType = "Vector2D"
 )
 
 //
@@ -17,6 +24,10 @@ const (
 //
 
 type ArbitraryStruct struct {
+	//Name       string
+	//Type       string
+	//InnerType  string
+	//GUID       []int32
 	Properties []*Property
 
 	numProps int32
@@ -90,6 +101,23 @@ func (s *BoxStruct) parse(p *Parser) error {
 }
 
 //
+// FluidBox
+//
+
+type FluidBoxStruct float32
+
+func (s *FluidBoxStruct) parse(p *Parser) error {
+	v, err := p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	*s = FluidBoxStruct(v)
+
+	return nil
+}
+
+//
 // InventoryItem
 //
 
@@ -146,12 +174,18 @@ func (s *InventoryItemStruct) parse(p *Parser) error {
 		return fmt.Errorf("found item property type that was not IntProperty %q", propType)
 	}
 
-	s.NumItems, err = p.readInt32()
+	// Unknown. Possibly value length.
+	_, err = p.readInt32()
 	if err != nil {
 		return err
 	}
 
-	_, err = p.readBytes(9)
+	_, err = p.readBytes(5)
+	if err != nil {
+		return err
+	}
+
+	s.NumItems, err = p.readInt32()
 	if err != nil {
 		return err
 	}

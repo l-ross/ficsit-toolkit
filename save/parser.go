@@ -98,30 +98,114 @@ func (p *Parser) parseBody(s *Save) error {
 	}
 
 	for _, e := range s.Entities {
-		index := e.order
-		fmt.Println(index)
-
 		dataLoc := s.objData[e.order]
 
-		_, err = p.parseObjectData(dataLoc.offset, dataLoc.len)
+		err = p.parseEntityData(e, dataLoc.offset, dataLoc.len)
 		if err != nil {
 			return err
 		}
 	}
 
 	for _, c := range s.Components {
-		index := c.order
-		fmt.Println(index)
-
+		fmt.Println(c.order)
 		dataLoc := s.objData[c.order]
 
-		_, err = p.parseObjectData(dataLoc.offset, dataLoc.len)
+		err = p.parseComponentData(c, dataLoc.offset, dataLoc.len)
 		if err != nil {
 			return err
 		}
 	}
 
 	return nil
+}
+
+func (p *Parser) parseComponentData(c *Component, offset int64, l int32) error {
+	p.buf = bytes.NewReader(p.body[offset : offset+int64(l)])
+
+	var err error
+	//c.ParentEntityName, err = p.readString()
+	//if err != nil {
+	//	return err
+	//}
+
+	c.Properties, err = p.parseProperties()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (p *Parser) parseEntityData(e *Entity, offset int64, l int32) error {
+	p.buf = bytes.NewReader(p.body[offset : offset+int64(l)])
+
+	var err error
+	e.ParentObjectRoot, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	e.ParentObjectName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	childCount, err := p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	e.Children = make([]*Child, childCount)
+
+	for i := int32(0); i < childCount; i++ {
+		c := &Child{}
+
+		c.LevelName, err = p.readString()
+		if err != nil {
+			return err
+		}
+
+		c.PathName, err = p.readString()
+		if err != nil {
+			return err
+		}
+
+		e.Children[i] = c
+	}
+
+	e.Properties, err = p.parseProperties()
+	if err != nil {
+		return err
+	}
+
+	// ExtraCount
+	_, err = p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	// TODO: Handle ExtraCount
+
+	return nil
+}
+
+func (p *Parser) parseProperties() ([]*Property, error) {
+	props := make([]*Property, 0)
+
+	for {
+		prop, err := p.parseProperty()
+		if err != nil {
+			return nil, err
+		}
+		if prop == nil {
+			// Reached the end of the property list.
+			break
+		}
+
+		props = append(props, prop)
+	}
+
+	return props, nil
 }
 
 func (p *Parser) parseObjects(s *Save) error {
@@ -189,85 +273,6 @@ func (p *Parser) scanObjectData(s *Save) error {
 	}
 
 	return nil
-}
-
-func (p *Parser) parseObjectData(offset int64, l int32) (*ObjectData, error) {
-	p.resetCounter()
-
-	p.buf = bytes.NewReader(p.body[offset : offset+int64(l)])
-
-	o := &ObjectData{}
-	var err error
-
-	o.LevelName, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	o.PathName, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	childCount, err := p.readInt32()
-	if err != nil {
-		return nil, err
-	}
-
-	o.Children = make([]*Child, childCount)
-
-	for i := int32(0); i < childCount; i++ {
-		c := &Child{}
-
-		c.LevelName, err = p.readString()
-		if err != nil {
-			return nil, err
-		}
-
-		c.PathName, err = p.readString()
-		if err != nil {
-			return nil, err
-		}
-
-		o.Children[i] = c
-	}
-
-	o.Properties = make([]*Property, 0)
-
-	for p.counter < l {
-		prop, err := p.parseProperty()
-		if err != nil {
-			return nil, err
-		}
-		if prop == nil {
-			// Reached the end of the property list.
-			break
-		}
-
-		o.Properties = append(o.Properties, prop)
-	}
-
-	// ExtraCount
-	_, err = p.readInt32()
-	if err != nil {
-		return nil, err
-	}
-
-	//for o.len-p.counter > 0 {
-	//	prop, err := p.parseProperty()
-	//	if err != nil {
-	//		return nil, err
-	//	}
-	//	//if prop == nil {
-	//	//	// TODO: Can this happen?
-	//	//	// We should only get nil if we are parsing props in a child.
-	//	//	continue
-	//	//}
-	//
-	//	o.Properties = append(o.Properties, prop)
-	//}
-
-	return o, nil
 }
 
 func (p *Parser) parseProperty() (*Property, error) {
@@ -338,7 +343,7 @@ func (p *Parser) parseProperty() (*Property, error) {
 		return nil, fmt.Errorf("unknown property type %s", propType)
 	}
 
-	prop.PropertyValue = newPropValue(0)
+	prop.PropertyValue = newPropValue()
 
 	err = prop.PropertyValue.parse(p, false)
 	if err != nil {
@@ -381,17 +386,17 @@ func (p *Parser) parseEntity() (*Entity, error) {
 	p.resetCounter()
 
 	var err error
-	e.ClassName, err = p.readString()
+	e.TypePath, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	e.LevelName, err = p.readString()
+	e.RootObject, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	e.PathName, err = p.readString()
+	e.InstanceName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
@@ -406,12 +411,12 @@ func (p *Parser) parseEntity() (*Entity, error) {
 		return nil, err
 	}
 
-	e.Translation, err = p.readFloat32Array(3)
+	e.Position, err = p.readFloat32Array(3)
 	if err != nil {
 		return nil, err
 	}
 
-	e.Scale3D, err = p.readFloat32Array(3)
+	e.Scale, err = p.readFloat32Array(3)
 	if err != nil {
 		return nil, err
 	}
@@ -435,22 +440,22 @@ func (p *Parser) parseComponent() (*Component, error) {
 
 	var err error
 
-	c.ClassName, err = p.readString()
+	c.TypePath, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	c.LevelName, err = p.readString()
+	c.RootObject, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	c.PathName, err = p.readString()
+	c.InstanceName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
 
-	c.OuterPathName, err = p.readString()
+	c.ParentEntityName, err = p.readString()
 	if err != nil {
 		return nil, err
 	}
