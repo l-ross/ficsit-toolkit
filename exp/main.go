@@ -15,7 +15,7 @@ func main() {
 }
 
 func realMain() error {
-	f, err := os.Open("./Luke.sav")
+	f, err := os.Open("./Example.sav")
 	if err != nil {
 		return err
 	}

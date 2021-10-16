@@ -44,9 +44,7 @@ type Component struct {
 	ParentEntityName string      `json:"outer_path_name,omitempty"`
 	Properties       []*Property `json:"properties"`
 
-	order  int32
-	offset int64
-	len    int32
+	order int32
 }
 
 type Entity struct {
@@ -63,14 +61,12 @@ type Entity struct {
 	Children         []*Child    `json:"children,omitempty"`
 	Properties       []*Property `json:"properties,omitempty"`
 
-	order  int32
-	offset int64
-	len    int32
+	order int32
 }
 
 type Child struct {
-	LevelName string
-	PathName  string
+	LevelName string `json:"level_name,omitempty"`
+	PathName  string `json:"path_name,omitempty"`
 }
 
 type CollectedObject struct {

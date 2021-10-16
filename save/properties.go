@@ -37,7 +37,7 @@ type Property struct {
 type PropertyValue interface {
 	// Parse the property value
 	//
-	// If inner is true then the property value is inside an ArrayProperty.
+	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
 	parse(p *Parser, inner bool) error
 }
@@ -72,7 +72,7 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	}
 	v.ValueType = PropertyType(valueType)
 
-	// TODO: What is this?
+	// UNKNOWN_DATA
 	_, err = p.readByte()
 	if err != nil {
 		return err
@@ -83,6 +83,9 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 		return err
 	}
 
+	// Special handling for BytePropertyType.
+	// Rather than creating 1 entry in the array per byte we just want to parse all
+	//  the data in to a single BytePropertyValue.
 	if v.ValueType == BytePropertyType {
 		v.Values = make([]PropertyValue, 1)
 
@@ -117,7 +120,8 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	case StringPropertyType:
 		newPropValue = newStringPropertyValue
 	case StructPropertyType:
-		// TODO: What to do with this?
+		// TODO: Do these elements server any purpose? Will they ever be anything other than expected values?
+		//  Possibly add some checks and log if they are found to differ.
 		// Name
 		_, err = p.readString()
 		if err != nil {
@@ -130,13 +134,12 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 			return err
 		}
 
-		// Unknown
+		// UNKNOWN_DATA
 		_, err = p.readBytes(8)
 		if err != nil {
 			return err
 		}
 
-		// InnerType
 		innerType, err := p.readString()
 		if err != nil {
 			return err
@@ -253,7 +256,6 @@ func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 
 	switch v.Type {
 	case "None":
-		// TODO: Is this relevant?
 		b, err := p.readByte()
 		if err != nil {
 			return err
@@ -261,7 +263,6 @@ func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 
 		v.Value = []byte{b}
 	default:
-
 		value, err := p.readString()
 		if err != nil {
 			return err
@@ -305,7 +306,6 @@ func (p *Property) GetDoubleValue() (float64, error) {
 }
 
 func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
-	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -365,6 +365,8 @@ func (v *EnumPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+// When inside an array the entire enum is stored as a single string.
+// Split based on the delimiter ::
 func (v *EnumPropertyValue) parseInner(p *Parser) error {
 	enum, err := p.readString()
 	if err != nil {
@@ -402,7 +404,6 @@ func (p *Property) GetFloatValue() (float32, error) {
 
 func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
 	if !inner {
-		// TODO: What is this byte for?
 		err := p.nextByteIsNull()
 		if err != nil {
 			return err
@@ -438,7 +439,6 @@ func (p *Property) GetInt8Value() (int8, error) {
 }
 
 func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
-	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -472,7 +472,6 @@ func (p *Property) GetInt64Value() (int64, error) {
 }
 
 func (v *Int64PropertyValue) parse(p *Parser, inner bool) error {
-	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -511,7 +510,6 @@ func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
 	var err error
 
 	if !inner {
-		// TODO: What is this byte for?
 		err := p.nextByteIsNull()
 		if err != nil {
 			return err
@@ -552,7 +550,6 @@ func (p *Property) GetIntValue() (int32, error) {
 
 func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
 	if !inner {
-		// TODO: What is this byte for?
 		err := p.nextByteIsNull()
 		if err != nil {
 			return err
@@ -611,7 +608,7 @@ func (v *MapPropertyValue) parse(p *Parser, inner bool) error {
 		return err
 	}
 
-	// TODO: What is this?
+	// UNKNOWN_DATA
 	_, err = p.readInt32()
 	if err != nil {
 		return err
@@ -699,7 +696,6 @@ func (p *Property) GetNameValue() (string, error) {
 }
 
 func (v *NamePropertyValue) parse(p *Parser, inner bool) error {
-	// TODO: What is this byte for?
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -738,7 +734,6 @@ func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
 	var err error
 
 	if !inner {
-		// TODO: What is this byte for?
 		err := p.nextByteIsNull()
 		if err != nil {
 			return err
@@ -779,7 +774,6 @@ func (p *Property) GetStringValue() (string, error) {
 
 func (v *StringPropertyValue) parse(p *Parser, inner bool) error {
 	if !inner {
-		// TODO: What is this byte for?
 		err := p.nextByteIsNull()
 		if err != nil {
 			return err
@@ -833,7 +827,6 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 			return err
 		}
 
-		// TODO: What is this byte for?
 		err = p.nextByteIsNull()
 		if err != nil {
 			return err
@@ -879,3 +872,5 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 //
 // TextProperty
 //
+
+// TODO: TextProperty

@@ -24,10 +24,6 @@ const (
 //
 
 type ArbitraryStruct struct {
-	//Name       string
-	//Type       string
-	//InnerType  string
-	//GUID       []int32
 	Properties []*Property
 
 	numProps int32
@@ -42,11 +38,7 @@ func (s *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
 }
 
 func (s *ArbitraryStruct) parse(p *Parser) error {
-	for i := int32(0); ; i++ {
-		if s.numProps != 0 && i < s.numProps {
-			break
-		}
-
+	for {
 		prop, err := p.parseProperty()
 		if err != nil {
 			return err
@@ -135,7 +127,7 @@ func (s *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, er
 }
 
 func (s *InventoryItemStruct) parse(p *Parser) error {
-	// Unknown
+	// UNKNOWN_DATA
 	_, err := p.readInt32()
 	if err != nil {
 		return err
@@ -146,13 +138,13 @@ func (s *InventoryItemStruct) parse(p *Parser) error {
 		return err
 	}
 
-	// Unknown
+	// UNKNOWN_DATA
 	_, err = p.readString()
 	if err != nil {
 		return err
 	}
 
-	// Unknown
+	// UNKNOWN_DATA
 	_, err = p.readString()
 	if err != nil {
 		return err
@@ -174,12 +166,13 @@ func (s *InventoryItemStruct) parse(p *Parser) error {
 		return fmt.Errorf("found item property type that was not IntProperty %q", propType)
 	}
 
-	// Unknown. Possibly value length.
+	// UNKNOWN_DATA. Possibly value length.
 	_, err = p.readInt32()
 	if err != nil {
 		return err
 	}
 
+	// UNKNOWN_DATA
 	_, err = p.readBytes(5)
 	if err != nil {
 		return err

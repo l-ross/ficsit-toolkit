@@ -177,12 +177,6 @@ func TestProperties(t *testing.T) {
 				require.Len(t, a.Properties, 3)
 			},
 		},
-		//{
-		//	name:     "TEST",
-		//	testData: "testdata/test.dat",
-		//	assertValue: func(t *testing.T, p *Property) {
-		//	},
-		//},
 	}
 
 	for _, tt := range tests {

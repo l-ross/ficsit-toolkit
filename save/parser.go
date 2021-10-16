@@ -11,9 +11,8 @@ type Parser struct {
 	// Decompressed body
 	body []byte
 
+	// Part of the body we are currently parsing.
 	buf *bytes.Reader
-	// Counter of how many bytes have been read. Can be reset.
-	counter int32
 }
 
 // NewParser constructs a new Parser to parse a Satisfactory save file.
@@ -119,15 +118,152 @@ func (p *Parser) parseBody(s *Save) error {
 	return nil
 }
 
+func (p *Parser) parseObjects(s *Save) error {
+	var err error
+	s.objectCount, err = p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	for i := int32(0); i < s.objectCount; i++ {
+		objectType, err := p.readInt32()
+		if err != nil {
+			return err
+		}
+
+		switch ObjectType(objectType) {
+		case ComponentType:
+			c, err := p.parseComponent()
+			if err != nil {
+				return err
+			}
+			c.order = i
+			s.Components = append(s.Components, c)
+		case EntityType:
+			e, err := p.parseEntity()
+			if err != nil {
+				return err
+			}
+			e.order = i
+			s.Entities = append(s.Entities, e)
+		default:
+			return fmt.Errorf("unknown object type %d", objectType)
+		}
+	}
+
+	return nil
+}
+
+func (p *Parser) parseEntity() (*Entity, error) {
+	e := &Entity{}
+
+	var err error
+	e.TypePath, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	e.RootObject, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	e.InstanceName, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	e.NeedTransform, err = p.readInt32()
+	if err != nil {
+		return nil, err
+	}
+
+	e.Rotation, err = p.readFloat32Array(4)
+	if err != nil {
+		return nil, err
+	}
+
+	e.Position, err = p.readFloat32Array(3)
+	if err != nil {
+		return nil, err
+	}
+
+	e.Scale, err = p.readFloat32Array(3)
+	if err != nil {
+		return nil, err
+	}
+
+	e.WasPlacedInLevel, err = p.readInt32()
+	if err != nil {
+		return nil, err
+	}
+
+	return e, nil
+}
+
+func (p *Parser) parseComponent() (*Component, error) {
+	c := &Component{}
+
+	var err error
+	c.TypePath, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	c.RootObject, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	c.InstanceName, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	c.ParentEntityName, err = p.readString()
+	if err != nil {
+		return nil, err
+	}
+
+	return c, nil
+}
+
+func (p *Parser) scanObjectData(s *Save) error {
+	objectDataCount, err := p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	if s.objectCount != objectDataCount {
+		return fmt.Errorf("total objects and object data counts should be the same but were %d and %d", s.objectCount, objectDataCount)
+	}
+
+	for i := int32(0); i < objectDataCount; i++ {
+		l, err := p.readInt32()
+		if err != nil {
+			return err
+		}
+		offset := p.offset()
+
+		s.objData[i] = &dataLoc{
+			offset: offset,
+			len:    l,
+		}
+
+		// Move buf to start of next object data chunk.
+		_, err = p.buf.Seek(offset+int64(l), io.SeekStart)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
 func (p *Parser) parseComponentData(c *Component, offset int64, l int32) error {
 	p.buf = bytes.NewReader(p.body[offset : offset+int64(l)])
 
 	var err error
-	//c.ParentEntityName, err = p.readString()
-	//if err != nil {
-	//	return err
-	//}
-
 	c.Properties, err = p.parseProperties()
 	if err != nil {
 		return err
@@ -206,73 +342,6 @@ func (p *Parser) parseProperties() ([]*Property, error) {
 	}
 
 	return props, nil
-}
-
-func (p *Parser) parseObjects(s *Save) error {
-	var err error
-	s.objectCount, err = p.readInt32()
-	if err != nil {
-		return err
-	}
-
-	for i := int32(0); i < s.objectCount; i++ {
-		objectType, err := p.readInt32()
-		if err != nil {
-			return err
-		}
-
-		switch ObjectType(objectType) {
-		case ComponentType:
-			c, err := p.parseComponent()
-			if err != nil {
-				return err
-			}
-			c.order = i
-			s.Components = append(s.Components, c)
-		case EntityType:
-			e, err := p.parseEntity()
-			if err != nil {
-				return err
-			}
-			e.order = i
-			s.Entities = append(s.Entities, e)
-		default:
-			return fmt.Errorf("unknown object type %d", objectType)
-		}
-	}
-
-	return nil
-}
-
-func (p *Parser) scanObjectData(s *Save) error {
-	objectDataCount, err := p.readInt32()
-	if err != nil {
-		return err
-	}
-
-	if s.objectCount != objectDataCount {
-		return fmt.Errorf("total objects and object data counts should be the same but were %d and %d", s.objectCount, objectDataCount)
-	}
-
-	for i := int32(0); i < objectDataCount; i++ {
-		l, err := p.readInt32()
-		if err != nil {
-			return err
-		}
-		offset := p.offset()
-
-		s.objData[i] = &dataLoc{
-			offset: offset,
-			len:    l,
-		}
-
-		_, err = p.buf.Seek(offset+int64(l), io.SeekStart)
-		if err != nil {
-			return err
-		}
-	}
-
-	return nil
 }
 
 func (p *Parser) parseProperty() (*Property, error) {
@@ -376,91 +445,4 @@ func (p *Parser) parseCollectedObjects(s *Save) error {
 	}
 
 	return nil
-}
-
-func (p *Parser) parseEntity() (*Entity, error) {
-	e := &Entity{
-		offset: p.offset(),
-	}
-
-	p.resetCounter()
-
-	var err error
-	e.TypePath, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	e.RootObject, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	e.InstanceName, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	e.NeedTransform, err = p.readInt32()
-	if err != nil {
-		return nil, err
-	}
-
-	e.Rotation, err = p.readFloat32Array(4)
-	if err != nil {
-		return nil, err
-	}
-
-	e.Position, err = p.readFloat32Array(3)
-	if err != nil {
-		return nil, err
-	}
-
-	e.Scale, err = p.readFloat32Array(3)
-	if err != nil {
-		return nil, err
-	}
-
-	e.WasPlacedInLevel, err = p.readInt32()
-	if err != nil {
-		return nil, err
-	}
-
-	e.len = p.counter + 4
-
-	return e, nil
-}
-
-func (p *Parser) parseComponent() (*Component, error) {
-	c := &Component{
-		offset: p.offset(),
-	}
-
-	p.resetCounter()
-
-	var err error
-
-	c.TypePath, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	c.RootObject, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	c.InstanceName, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	c.ParentEntityName, err = p.readString()
-	if err != nil {
-		return nil, err
-	}
-
-	c.len = p.counter + 4
-
-	return c, nil
 }
