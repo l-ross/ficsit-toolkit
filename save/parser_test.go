@@ -1,6 +1,8 @@
 package save
 
 import (
+	"encoding/json"
+	"io/ioutil"
 	"os"
 	"testing"
 
@@ -16,6 +18,13 @@ func TestParser_Parse(t *testing.T) {
 	p, err := NewParser(f)
 	require.NoError(t, err)
 
-	_, err = p.Parse()
+	s, err := p.Parse()
+	require.NoError(t, err)
+	require.NotNil(t, s)
+
+	out, err := json.MarshalIndent(s, "", "  ")
+	require.NoError(t, err)
+
+	err = ioutil.WriteFile("out.json", out, 0644)
 	require.NoError(t, err)
 }

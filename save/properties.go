@@ -1,6 +1,7 @@
 package save
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 )
@@ -29,7 +30,7 @@ const (
 type Property struct {
 	Name          string       `json:"name"`
 	Type          PropertyType `json:"type"`
-	ValueLen      int32        `json:"value_len"`
+	ValueLen      int32        `json:"-"`
 	Index         int32        `json:"index"`
 	PropertyValue `json:"value"`
 }
@@ -49,8 +50,8 @@ type newPropValueFunc func() PropertyValue
 //
 
 type ArrayPropertyValue struct {
-	ValueType PropertyType
-	Values    []PropertyValue
+	ValueType PropertyType    `json:"value_type,omitempty"`
+	Values    []PropertyValue `json:"values,omitempty"`
 }
 
 func newArrayPropertyValue() PropertyValue {
@@ -181,6 +182,10 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *ArrayPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // BoolProperty
 //
@@ -215,13 +220,21 @@ func (v *BoolPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *BoolPropertyValue) write() ([]byte, error) {
+	if *v {
+		return []byte{0x01, 0x00}, nil
+	}
+
+	return []byte{0x00, 0x00}, nil
+}
+
 //
 // ByteProperty
 //
 
 type BytePropertyValue struct {
-	Type  string
-	Value []byte
+	Type  string `json:"text,omitempty"`
+	Value []byte `json:"value,omitempty"`
 
 	len int32
 }
@@ -286,6 +299,10 @@ func (v *BytePropertyValue) parseInArray(p *Parser) error {
 	return nil
 }
 
+func (v *BytePropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // DoubleProperty
 //
@@ -320,13 +337,17 @@ func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *DoublePropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // EnumProperty
 //
 
 type EnumPropertyValue struct {
-	Type  string
-	Value string
+	Type  string `json:"type,omitempty"`
+	Value string `json:"value,omitempty"`
 }
 
 func newEnumPropertyValue() PropertyValue {
@@ -383,6 +404,10 @@ func (v *EnumPropertyValue) parseInner(p *Parser) error {
 	return nil
 }
 
+func (v *EnumPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // FloatProperty
 //
@@ -419,6 +444,10 @@ func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *FloatPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // Int8Property
 //
@@ -450,6 +479,10 @@ func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
 	}
 	*v = Int8PropertyValue(f)
 	return nil
+}
+
+func (v *Int8PropertyValue) write() ([]byte, error) {
+	panic("implement me")
 }
 
 //
@@ -485,13 +518,17 @@ func (v *Int64PropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *Int64PropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // InterfaceProperty
 //
 
 type InterfacePropertyValue struct {
-	LevelName string
-	PathName  string
+	LevelName string `json:"level_name"`
+	PathName  string `json:"path_name"`
 }
 
 func newInterfacePropertyValue() PropertyValue {
@@ -529,6 +566,10 @@ func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *InterfacePropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // IntProperty
 //
@@ -564,14 +605,18 @@ func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *IntPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // MapProperty
 //
 
 type MapPropertyValue struct {
-	KeyType   PropertyType
-	ValueType PropertyType
-	Values    map[PropertyValue]PropertyValue
+	KeyType   PropertyType                    `json:"key_type,omitempty"`
+	ValueType PropertyType                    `json:"value_type,omitempty"`
+	Values    map[PropertyValue]PropertyValue `json:"values,omitempty"`
 }
 
 func newMapPropertyValue() PropertyValue {
@@ -676,6 +721,22 @@ func (v *MapPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *MapPropertyValue) MarshalJSON() ([]byte, error) {
+	out := struct {
+		KeyType  string `json:"key_type"`
+		KeyValue string `json:"key_value"`
+	}{
+		KeyType:  string(v.KeyType),
+		KeyValue: string(v.ValueType),
+	}
+
+	return json.Marshal(out)
+}
+
+func (v *MapPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // NameProperty
 //
@@ -709,13 +770,17 @@ func (v *NamePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *NamePropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // ObjectProperty
 //
 
 type ObjectPropertyValue struct {
-	LevelName string
-	PathName  string
+	LevelName string `json:"level_name,omitempty"`
+	PathName  string `json:"path_name,omitempty"`
 }
 
 func newObjectPropertyValue() PropertyValue {
@@ -753,6 +818,10 @@ func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *ObjectPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // StringProperty
 //
@@ -788,6 +857,10 @@ func (v *StringPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *StringPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // StructProperty
 //
@@ -797,9 +870,9 @@ type StructValue interface {
 }
 
 type StructPropertyValue struct {
-	GUID  []int32
-	Type  StructType
-	Value StructValue
+	GUID  []int32     `json:"guid,omitempty"`
+	Type  StructType  `json:"type,omitempty"`
+	Value StructValue `json:"value,omitempty"`
 }
 
 func newStructPropertyValue() PropertyValue {
@@ -869,8 +942,26 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
+func (v *StructPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
+
 //
 // TextProperty
 //
+
+type TextPropertyValue struct{}
+
+func newTextPropertyValue() PropertyValue {
+	return &TextPropertyValue{}
+}
+
+func (v *TextPropertyValue) parse(p *Parser, inner bool) error {
+	panic("implement me")
+}
+
+func (v *TextPropertyValue) write() ([]byte, error) {
+	panic("implement me")
+}
 
 // TODO: TextProperty

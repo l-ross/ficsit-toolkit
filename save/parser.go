@@ -106,7 +106,6 @@ func (p *Parser) parseBody(s *Save) error {
 	}
 
 	for _, c := range s.Components {
-		fmt.Println(c.order)
 		dataLoc := s.objData[c.order]
 
 		err = p.parseComponentData(c, dataLoc.offset, dataLoc.len)
@@ -243,7 +242,8 @@ func (p *Parser) scanObjectData(s *Save) error {
 		if err != nil {
 			return err
 		}
-		offset := p.offset()
+
+		offset := p.buf.Size() - int64(p.buf.Len())
 
 		s.objData[i] = &dataLoc{
 			offset: offset,
@@ -407,6 +407,8 @@ func (p *Parser) parseProperty() (*Property, error) {
 		newPropValue = newStringPropertyValue
 	case StructPropertyType:
 		newPropValue = newStructPropertyValue
+	case TextPropertyType:
+		newPropValue = newTextPropertyValue
 	default:
 		// TODO: Possibly have a UnknownPropertyType where we just store the value as a byte slice.
 		return nil, fmt.Errorf("unknown property type %s", propType)

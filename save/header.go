@@ -78,3 +78,69 @@ func (p *Parser) ParseHeader() (*Header, error) {
 
 	return h, nil
 }
+
+func (s *Save) serializeHeader() error {
+	h := s.Header
+
+	err := s.writeInt32(h.HeaderVersion)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt32(h.SaveVersion)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt32(h.BuildVersion)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(h.MapName)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(h.MapOptions)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(h.SessionName)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt32(h.PlayTime)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt64(h.SaveDate)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeByte(h.SessionVisibility)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt32(h.EditorObjectVersion)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(h.ModMetadata)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt32(h.ModFlags)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}

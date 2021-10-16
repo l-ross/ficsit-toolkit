@@ -1,5 +1,7 @@
 package save
 
+import "io"
+
 type Save struct {
 	Header           *Header            `json:"header"`
 	Components       []*Component       `json:"components"`
@@ -8,6 +10,8 @@ type Save struct {
 
 	objData     map[int32]*dataLoc
 	objectCount int32
+
+	w io.Writer
 }
 
 type dataLoc struct {
@@ -38,10 +42,10 @@ const (
 )
 
 type Component struct {
-	TypePath         string      `json:"class_name,omitempty"`
-	RootObject       string      `json:"level_name,omitempty"`
-	InstanceName     string      `json:"path_name,omitempty"`
-	ParentEntityName string      `json:"outer_path_name,omitempty"`
+	TypePath         string      `json:"class_name"`
+	RootObject       string      `json:"level_name"`
+	InstanceName     string      `json:"path_name"`
+	ParentEntityName string      `json:"outer_path_name"`
 	Properties       []*Property `json:"properties"`
 
 	order int32

@@ -5,9 +5,9 @@ import (
 	"fmt"
 )
 
-func (p *Parser) offset() int64 {
-	return p.buf.Size() - int64(p.buf.Len())
-}
+//
+// Read
+//
 
 func (p *Parser) readInt8() (int8, error) {
 	var v int8
@@ -140,4 +140,37 @@ func (p *Parser) nextByteIsNull() error {
 	}
 
 	return nil
+}
+
+//
+// Write
+//
+
+func (s *Save) writeByte(b byte) error {
+	_, err := s.w.Write([]byte{b})
+	return err
+}
+
+func (s *Save) writeInt32(i int32) error {
+	return binary.Write(s.w, binary.LittleEndian, i)
+}
+
+func (s *Save) writeInt64(i int64) error {
+	return binary.Write(s.w, binary.LittleEndian, i)
+}
+
+func (s *Save) writeString(str string) error {
+	if len(str) == 0 {
+		return s.writeInt32(0)
+	}
+
+	// Add null termination.
+	str += "\x00"
+
+	err := s.writeInt32(int32(len(str)))
+	if err != nil {
+		return err
+	}
+
+	return binary.Write(s.w, binary.LittleEndian, []byte(str))
 }
