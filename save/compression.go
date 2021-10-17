@@ -68,13 +68,9 @@ func (p *Parser) readChunkHeader() (*chunkHeader, error) {
 		return nil, err
 	}
 
-	// For some reason the compressed and uncompressed lengths are repeated
-	// TODO: Make this less crap
-	_, err = p.readInt64()
-	if err != nil {
-		return nil, err
-	}
-	_, err = p.readInt64()
+	// Skip the next 16 bytes as they are seemingly just a repeat the compressed
+	// and uncompressed lengths
+	err = p.skipBytes(16)
 	if err != nil {
 		return nil, err
 	}

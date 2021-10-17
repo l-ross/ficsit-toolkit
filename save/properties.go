@@ -121,7 +121,7 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	case StringPropertyType:
 		newPropValue = newStringPropertyValue
 	case StructPropertyType:
-		// TODO: Do these elements server any purpose? Will they ever be anything other than expected values?
+		// TODO: Do these elements serve any purpose? Will they ever be anything other than expected values?
 		//  Possibly add some checks and log if they are found to differ.
 		// Name
 		_, err = p.readString()
@@ -253,7 +253,7 @@ func (p *Property) GetByteValue() ([]byte, error) {
 
 func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 	if inner {
-		return v.parseInArray(p)
+		return v.parseInner(p)
 	}
 
 	var err error
@@ -287,7 +287,13 @@ func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *BytePropertyValue) parseInArray(p *Parser) error {
+func (v *BytePropertyValue) parseInner(p *Parser) error {
+	// If len is 0 then we must be parsing a ByteProperty in the value of a MapProperty.
+	// Best guess is that it's only a single byte.
+	if v.len == 0 {
+		v.len = 1
+	}
+
 	v.Type = "None"
 
 	var err error
@@ -686,7 +692,6 @@ func (v *MapPropertyValue) parse(p *Parser, inner bool) error {
 
 	switch v.ValueType {
 	case BytePropertyType:
-		// TODO: Special handling needed here.
 		newValue = newBytePropertyValue
 	case EnumPropertyType:
 		newValue = newEnumPropertyValue
@@ -950,6 +955,8 @@ func (v *StructPropertyValue) write() ([]byte, error) {
 // TextProperty
 //
 
+// TODO: TextProperty
+
 type TextPropertyValue struct{}
 
 func newTextPropertyValue() PropertyValue {
@@ -963,5 +970,3 @@ func (v *TextPropertyValue) parse(p *Parser, inner bool) error {
 func (v *TextPropertyValue) write() ([]byte, error) {
 	panic("implement me")
 }
-
-// TODO: TextProperty

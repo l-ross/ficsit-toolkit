@@ -3,6 +3,7 @@ package save
 import (
 	"encoding/binary"
 	"fmt"
+	"io"
 )
 
 //
@@ -144,6 +145,11 @@ func (p *Parser) nextByteIsNull() error {
 	}
 
 	return nil
+}
+
+func (p *Parser) skipBytes(l int64) error {
+	_, err := p.buf.Seek(l, io.SeekCurrent)
+	return err
 }
 
 //

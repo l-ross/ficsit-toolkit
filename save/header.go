@@ -56,6 +56,7 @@ func (p *Parser) ParseHeader() (*Header, error) {
 		return nil, err
 	}
 
+	// TODO: Constants for different visibility states
 	h.SessionVisibility, err = p.readByte()
 	if err != nil {
 		return nil, err
