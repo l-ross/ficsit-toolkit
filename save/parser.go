@@ -41,9 +41,9 @@ func (p *Parser) Parse() (*Save, error) {
 		Header:           h,
 		Components:       make([]*Component, 0),
 		Entities:         make([]*Entity, 0),
-		CollectedObjects: make([]*CollectedObject, 0),
+		CollectedObjects: make([]*ObjectReference, 0),
 
-		objData: make(map[int32]*dataLoc),
+		objects: make([]object, 0),
 	}
 
 	// Decompress the save body and replace p.body with it.
@@ -56,7 +56,7 @@ func (p *Parser) Parse() (*Save, error) {
 
 	err = p.parseBody(s)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("parse error at %d: %w", p.offset(), err)
 	}
 
 	return s, nil
@@ -96,19 +96,17 @@ func (p *Parser) parseBody(s *Save) error {
 		return fmt.Errorf("found %d unparsed bytes at the end of the body", p.buf.Len())
 	}
 
+	// Parse data for all entities.
 	for _, e := range s.Entities {
-		dataLoc := s.objData[e.order]
-
-		err = p.parseEntityData(e, dataLoc.offset, dataLoc.len)
+		err = p.parseEntityData(e)
 		if err != nil {
 			return err
 		}
 	}
 
+	// Parse data for all components.
 	for _, c := range s.Components {
-		dataLoc := s.objData[c.order]
-
-		err = p.parseComponentData(c, dataLoc.offset, dataLoc.len)
+		err = p.parseComponentData(c)
 		if err != nil {
 			return err
 		}
@@ -136,15 +134,17 @@ func (p *Parser) parseObjects(s *Save) error {
 			if err != nil {
 				return err
 			}
-			c.order = i
+
 			s.Components = append(s.Components, c)
+			s.objects = append(s.objects, c)
 		case EntityType:
 			e, err := p.parseEntity()
 			if err != nil {
 				return err
 			}
-			e.order = i
+
 			s.Entities = append(s.Entities, e)
+			s.objects = append(s.objects, e)
 		default:
 			return fmt.Errorf("unknown object type %d", objectType)
 		}
@@ -243,12 +243,10 @@ func (p *Parser) scanObjectData(s *Save) error {
 			return err
 		}
 
-		offset := p.buf.Size() - int64(p.buf.Len())
+		offset := p.offset()
 
-		s.objData[i] = &dataLoc{
-			offset: offset,
-			len:    l,
-		}
+		// Set location of this object's data.
+		s.objects[i].setLoc(offset, l)
 
 		// Move buf to start of next object data chunk.
 		_, err = p.buf.Seek(offset+int64(l), io.SeekStart)
@@ -260,11 +258,19 @@ func (p *Parser) scanObjectData(s *Save) error {
 	return nil
 }
 
-func (p *Parser) parseComponentData(c *Component, offset int64, l int32) error {
-	p.buf = bytes.NewReader(p.body[offset : offset+int64(l)])
+func (p *Parser) parseComponentData(c *Component) error {
+	_, err := p.buf.Seek(c.offset, io.SeekStart)
+	if err != nil {
+		return err
+	}
 
-	var err error
 	c.Properties, err = p.parseProperties()
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	_, err = p.readInt32()
 	if err != nil {
 		return err
 	}
@@ -272,10 +278,12 @@ func (p *Parser) parseComponentData(c *Component, offset int64, l int32) error {
 	return nil
 }
 
-func (p *Parser) parseEntityData(e *Entity, offset int64, l int32) error {
-	p.buf = bytes.NewReader(p.body[offset : offset+int64(l)])
+func (p *Parser) parseEntityData(e *Entity) error {
+	_, err := p.buf.Seek(e.offset, io.SeekStart)
+	if err != nil {
+		return err
+	}
 
-	var err error
 	e.ParentObjectRoot, err = p.readString()
 	if err != nil {
 		return err
@@ -291,22 +299,22 @@ func (p *Parser) parseEntityData(e *Entity, offset int64, l int32) error {
 		return err
 	}
 
-	e.Children = make([]*Child, childCount)
+	e.Children = make([]*ObjectReference, childCount)
 
 	for i := int32(0); i < childCount; i++ {
-		c := &Child{}
+		o := &ObjectReference{}
 
-		c.LevelName, err = p.readString()
+		o.LevelName, err = p.readString()
 		if err != nil {
 			return err
 		}
 
-		c.PathName, err = p.readString()
+		o.PathName, err = p.readString()
 		if err != nil {
 			return err
 		}
 
-		e.Children[i] = c
+		e.Children[i] = o
 	}
 
 	e.Properties, err = p.parseProperties()
@@ -315,12 +323,32 @@ func (p *Parser) parseEntityData(e *Entity, offset int64, l int32) error {
 	}
 
 	// ExtraCount
+	// Is this ever not zero?
 	_, err = p.readInt32()
 	if err != nil {
 		return err
 	}
 
-	// TODO: Handle ExtraCount
+	// Parse extra data
+	// If we have a specific handler for extra data then use it, otherwise
+	// treat as unknown data.
+	extraFunc := hasExtra(e.TypePath)
+	if extraFunc != nil {
+		e.Extra = extraFunc()
+		err = e.Extra.Value.parse(p)
+		if err != nil {
+			return err
+		}
+	} else {
+		expPos := e.offset + int64(e.len)
+		if rem := expPos - p.offset(); rem > 0 {
+			e.Extra = newUnknownExtra(int32(rem))
+			err = e.Extra.Value.parse(p)
+			if err != nil {
+				return err
+			}
+		}
+	}
 
 	return nil
 }
@@ -431,19 +459,19 @@ func (p *Parser) parseCollectedObjects(s *Save) error {
 	}
 
 	for i := int32(0); i < collectedObjectCount; i++ {
-		co := &CollectedObject{}
+		o := &ObjectReference{}
 
-		co.LevelName, err = p.readString()
+		o.LevelName, err = p.readString()
 		if err != nil {
 			return err
 		}
 
-		co.PathName, err = p.readString()
+		o.PathName, err = p.readString()
 		if err != nil {
 			return err
 		}
 
-		s.CollectedObjects = append(s.CollectedObjects, co)
+		s.CollectedObjects = append(s.CollectedObjects, o)
 	}
 
 	return nil

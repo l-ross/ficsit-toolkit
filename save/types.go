@@ -6,32 +6,27 @@ type Save struct {
 	Header           *Header            `json:"header"`
 	Components       []*Component       `json:"components"`
 	Entities         []*Entity          `json:"entities"`
-	CollectedObjects []*CollectedObject `json:"collected_objects"`
+	CollectedObjects []*ObjectReference `json:"collected_objects"`
 
-	objData     map[int32]*dataLoc
+	objects     []object
 	objectCount int32
 
 	w io.Writer
 }
 
-type dataLoc struct {
-	offset int64
-	len    int32
-}
-
 type Header struct {
-	HeaderVersion       int32  `json:"header_version"`
-	SaveVersion         int32  `json:"save_version"`
-	BuildVersion        int32  `json:"build_version"`
-	MapName             string `json:"map_name"`
-	MapOptions          string `json:"map_options"`
-	SessionName         string `json:"session_name"`
-	PlayTime            int32  `json:"play_time"`
-	SaveDate            int64  `json:"save_date"`
-	SessionVisibility   byte   `json:"session_visibility"`
-	EditorObjectVersion int32  `json:"editor_object_version,omitempty"`
-	ModMetadata         string `json:"mod_metadata,omitempty"`
-	ModFlags            int32  `json:"mod_flags,omitempty"`
+	HeaderVersion       int32  `json:"headerVersion"`
+	SaveVersion         int32  `json:"saveVersion"`
+	BuildVersion        int32  `json:"buildVersion"`
+	MapName             string `json:"mapName"`
+	MapOptions          string `json:"mapOptions"`
+	SessionName         string `json:"sessionName"`
+	PlayTime            int32  `json:"playTime"`
+	SaveDate            int64  `json:"saveDate"`
+	SessionVisibility   byte   `json:"sessionVisibility"`
+	EditorObjectVersion int32  `json:"editorObjectVersion"`
+	ModMetadata         string `json:"modMetadata"`
+	ModFlags            int32  `json:"modFlags"`
 }
 
 type ObjectType int32
@@ -41,39 +36,51 @@ const (
 	EntityType    ObjectType = 1
 )
 
+type object interface {
+	setLoc(offset int64, len int32)
+}
+
 type Component struct {
-	TypePath         string      `json:"class_name"`
-	RootObject       string      `json:"level_name"`
-	InstanceName     string      `json:"path_name"`
-	ParentEntityName string      `json:"outer_path_name"`
+	TypePath         string      `json:"typePath"`
+	RootObject       string      `json:"rootObject"`
+	InstanceName     string      `json:"instanceName"`
+	ParentEntityName string      `json:"parentEntityName"`
 	Properties       []*Property `json:"properties"`
 
-	order int32
+	offset int64
+	len    int32
+}
+
+func (c *Component) setLoc(offset int64, len int32) {
+	c.offset = offset
+	c.len = len
 }
 
 type Entity struct {
-	TypePath         string      `json:"class_name,omitempty"`
-	RootObject       string      `json:"level_name,omitempty"`
-	InstanceName     string      `json:"path_name,omitempty"`
-	NeedTransform    int32       `json:"need_transform,omitempty"`
-	Rotation         []float32   `json:"rotation,omitempty"`
-	Position         []float32   `json:"position,omitempty"`
-	Scale            []float32   `json:"scale,omitempty"`
-	WasPlacedInLevel int32       `json:"was_placed_in_level,omitempty"`
-	ParentObjectRoot string      `json:"parent_object_root"`
-	ParentObjectName string      `json:"parent_object_name"`
-	Children         []*Child    `json:"children,omitempty"`
-	Properties       []*Property `json:"properties,omitempty"`
+	TypePath         string             `json:"typePath"`
+	RootObject       string             `json:"rootObject"`
+	InstanceName     string             `json:"instanceName"`
+	NeedTransform    int32              `json:"needTransform"`
+	Rotation         []float32          `json:"rotation"`
+	Position         []float32          `json:"position"`
+	Scale            []float32          `json:"scale"`
+	WasPlacedInLevel int32              `json:"wasPlacedInLevel"`
+	ParentObjectRoot string             `json:"parentObjectRoot"`
+	ParentObjectName string             `json:"parentObjectName"`
+	Children         []*ObjectReference `json:"children"`
+	Properties       []*Property        `json:"properties"`
+	Extra            *Extra             `json:"extras"`
 
-	order int32
+	offset int64
+	len    int32
 }
 
-type Child struct {
-	LevelName string `json:"level_name,omitempty"`
-	PathName  string `json:"path_name,omitempty"`
+func (e *Entity) setLoc(offset int64, len int32) {
+	e.offset = offset
+	e.len = len
 }
 
-type CollectedObject struct {
-	LevelName string `json:"level_name,omitempty"`
-	PathName  string `json:"path_name,omitempty"`
+type ObjectReference struct {
+	LevelName string `json:"levelName"`
+	PathName  string `json:"pathName"`
 }

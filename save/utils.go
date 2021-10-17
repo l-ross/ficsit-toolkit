@@ -9,6 +9,10 @@ import (
 // Read
 //
 
+func (p *Parser) offset() int64 {
+	return p.buf.Size() - int64(p.buf.Len())
+}
+
 func (p *Parser) readInt8() (int8, error) {
 	var v int8
 	err := binary.Read(p.buf, binary.LittleEndian, &v)

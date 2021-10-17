@@ -30,7 +30,7 @@ const (
 type Property struct {
 	Name          string       `json:"name"`
 	Type          PropertyType `json:"type"`
-	ValueLen      int32        `json:"-"`
+	ValueLen      int32        `json:"valueLen"`
 	Index         int32        `json:"index"`
 	PropertyValue `json:"value"`
 }
