@@ -11,18 +11,18 @@ import (
 //
 
 func (p *Parser) offset() int64 {
-	return p.buf.Size() - int64(p.buf.Len())
+	return p.body.Size() - int64(p.body.Len())
 }
 
 func (p *Parser) readInt8() (int8, error) {
 	var v int8
-	err := binary.Read(p.buf, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
 func (p *Parser) readInt32() (int32, error) {
 	var v int32
-	err := binary.Read(p.buf, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
@@ -43,19 +43,19 @@ func (p *Parser) readInt32Array(l int) ([]int32, error) {
 
 func (p *Parser) readInt64() (int64, error) {
 	var v int64
-	err := binary.Read(p.buf, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
 func (p *Parser) readFloat32() (float32, error) {
 	var v float32
-	err := binary.Read(p.buf, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
 func (p *Parser) readFloat64() (float64, error) {
 	var v float64
-	err := binary.Read(p.buf, binary.LittleEndian, &v)
+	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
@@ -88,7 +88,7 @@ func (p *Parser) readBytes(l int32) ([]byte, error) {
 	totalRead := int32(0)
 
 	for totalRead < l {
-		read, err := p.buf.Read(v)
+		read, err := p.body.Read(v)
 		if err != nil {
 			return nil, err
 		}
@@ -110,7 +110,7 @@ func (p *Parser) readString() (string, error) {
 	}
 
 	v := make([]byte, l)
-	read, err := p.buf.Read(v)
+	read, err := p.body.Read(v)
 	if err != nil {
 		return "", err
 	}
@@ -148,7 +148,7 @@ func (p *Parser) nextByteIsNull() error {
 }
 
 func (p *Parser) skipBytes(l int64) error {
-	_, err := p.buf.Seek(l, io.SeekCurrent)
+	_, err := p.body.Seek(l, io.SeekCurrent)
 	return err
 }
 

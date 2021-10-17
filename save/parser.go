@@ -8,11 +8,8 @@ import (
 )
 
 type Parser struct {
-	// Decompressed body
-	body []byte
-
-	// Part of the body we are currently parsing.
-	buf *bytes.Reader
+	// Body of the save file.
+	body *bytes.Reader
 }
 
 // NewParser constructs a new Parser to parse a Satisfactory save file.
@@ -24,7 +21,7 @@ func NewParser(r io.Reader) (*Parser, error) {
 		return nil, err
 	}
 
-	p.buf = bytes.NewReader(data)
+	p.body = bytes.NewReader(data)
 
 	return p, nil
 }
@@ -46,13 +43,11 @@ func (p *Parser) Parse() (*Save, error) {
 		objects: make([]object, 0),
 	}
 
-	// Decompress the save body and replace p.body with it.
+	// Decompress the save file and replace p.body with the decompressed version.
 	p.body, err = p.decompressBody()
 	if err != nil {
 		return nil, err
 	}
-
-	p.buf = bytes.NewReader(p.body)
 
 	err = p.parseBody(s)
 	if err != nil {
@@ -70,8 +65,8 @@ func (p *Parser) parseBody(s *Save) error {
 
 	// Verify the body is the expected length.
 	// Account for the fact that the specified body length does not include itself (+4 bytes).
-	if bodyLen+4 != int32(p.buf.Size()) {
-		return fmt.Errorf("expected decompressed body to be %d but was %d", p.buf.Size(), bodyLen)
+	if bodyLen+4 != int32(p.body.Size()) {
+		return fmt.Errorf("expected decompressed body to be %d but was %d", p.body.Size(), bodyLen)
 	}
 
 	err = p.parseObjects(s)
@@ -92,8 +87,8 @@ func (p *Parser) parseBody(s *Save) error {
 
 	// At this point we should have reached the end of the file.
 	// Check that there is no data left.
-	if p.buf.Len() != 0 {
-		return fmt.Errorf("found %d unparsed bytes at the end of the body", p.buf.Len())
+	if p.body.Len() != 0 {
+		return fmt.Errorf("found %d unparsed bytes at the end of the body", p.body.Len())
 	}
 
 	// Parse data for all entities.
@@ -248,8 +243,8 @@ func (p *Parser) scanObjectData(s *Save) error {
 		// Set location of this object's data.
 		s.objects[i].setLoc(offset, l)
 
-		// Move buf to start of next object data chunk.
-		_, err = p.buf.Seek(offset+int64(l), io.SeekStart)
+		// Move body to start of next object data chunk.
+		_, err = p.body.Seek(offset+int64(l), io.SeekStart)
 		if err != nil {
 			return err
 		}
@@ -259,7 +254,7 @@ func (p *Parser) scanObjectData(s *Save) error {
 }
 
 func (p *Parser) parseComponentData(c *Component) error {
-	_, err := p.buf.Seek(c.offset, io.SeekStart)
+	_, err := p.body.Seek(c.offset, io.SeekStart)
 	if err != nil {
 		return err
 	}
@@ -279,7 +274,7 @@ func (p *Parser) parseComponentData(c *Component) error {
 }
 
 func (p *Parser) parseEntityData(e *Entity) error {
-	_, err := p.buf.Seek(e.offset, io.SeekStart)
+	_, err := p.body.Seek(e.offset, io.SeekStart)
 	if err != nil {
 		return err
 	}

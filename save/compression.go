@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 )
 
-func (p *Parser) decompressBody() ([]byte, error) {
+func (p *Parser) decompressBody() (*bytes.Reader, error) {
 	chunks := make([]byte, 0)
 
 	for {
@@ -29,7 +29,7 @@ func (p *Parser) decompressBody() ([]byte, error) {
 		chunks = append(chunks, chunk...)
 	}
 
-	return chunks, nil
+	return bytes.NewReader(chunks), nil
 }
 
 type chunkHeader struct {
@@ -82,7 +82,7 @@ func (p *Parser) readChunkHeader() (*chunkHeader, error) {
 func (p *Parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	compressed := make([]byte, ch.compressedLength)
 
-	read, err := p.buf.Read(compressed)
+	read, err := p.body.Read(compressed)
 	if err != nil {
 		return nil, err
 	}

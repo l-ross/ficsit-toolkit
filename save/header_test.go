@@ -17,7 +17,7 @@ func TestHeader(t *testing.T) {
 	require.NoError(t, err)
 
 	p := &Parser{
-		buf: bytes.NewReader(data),
+		body: bytes.NewReader(data),
 	}
 
 	h1, err := p.ParseHeader()

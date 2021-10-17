@@ -188,11 +188,11 @@ func TestProperties(t *testing.T) {
 			require.NoError(t, err)
 
 			p := &Parser{
-				buf: bytes.NewReader(data),
+				body: bytes.NewReader(data),
 			}
 			props, err := p.parseProperties()
 			require.NoError(t, err)
-			assert.Zero(t, p.buf.Len(), "we should have consumed the entire reader")
+			assert.Zero(t, p.body.Len(), "we should have consumed the entire reader")
 
 			require.Len(t, props, 1, "we should have 1 property")
 			tt.assertValue(t, props[0])
