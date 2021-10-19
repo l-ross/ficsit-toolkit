@@ -26,7 +26,18 @@ func realMain() error {
 		return err
 	}
 
-	_, err = p.Parse()
+	s, err := p.Parse()
+	if err != nil {
+		return err
+	}
+
+	fOut, err := os.OpenFile("out.sav", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0644)
+	if err != nil {
+		return err
+	}
+	defer fOut.Close()
+
+	err = s.Serialize(fOut)
 	if err != nil {
 		return err
 	}

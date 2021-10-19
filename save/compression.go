@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+
+	"github.com/mattetti/filebuffer"
 )
 
-func (p *Parser) decompressBody() (*bytes.Reader, error) {
+func (p *Parser) decompressBody() (*filebuffer.Buffer, error) {
 	chunks := make([]byte, 0)
 
 	for {
@@ -29,7 +31,7 @@ func (p *Parser) decompressBody() (*bytes.Reader, error) {
 		chunks = append(chunks, chunk...)
 	}
 
-	return bytes.NewReader(chunks), nil
+	return filebuffer.New(chunks), nil
 }
 
 type chunkHeader struct {

@@ -5,32 +5,36 @@ import (
 	"testing"
 
 	"github.com/mattetti/filebuffer"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
-func TestHeader(t *testing.T) {
-	// Parse a header then serialize it back and confirm it
-	// matches the original data.
+func TestComponent(t *testing.T) {
+	// Parse a component, then serialize it back and confirm it
+	// matches the original.
 	t.Parallel()
 
-	data, err := ioutil.ReadFile("testdata/header.dat")
+	data, err := ioutil.ReadFile("testdata/component.dat")
 	require.NoError(t, err)
 
 	p := &Parser{
 		body: filebuffer.New(data),
 	}
 
-	h, err := p.ParseHeader()
+	c, err := p.parseComponent()
 	require.NoError(t, err)
+	assert.Equal(t,
+		"Persistent_Level:PersistentLevel.Build_Workshop_C_2146449192.FGFactoryLegs",
+		c.InstanceName,
+	)
 
 	out := filebuffer.New([]byte{})
 	s := &Save{
-		Header: h,
-		body:   out,
+		body: out,
 	}
 
-	err = s.serializeHeader()
+	err = s.serializeComponent(c)
 	require.NoError(t, err)
 
 	assert.Equal(t, data, out.Buff.Bytes())

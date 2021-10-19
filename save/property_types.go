@@ -41,6 +41,8 @@ type PropertyValue interface {
 	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
 	parse(p *Parser, inner bool) error
+
+	serialize(s *Save, inner bool) error
 }
 
 type newPropValueFunc func() PropertyValue
@@ -182,7 +184,7 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *ArrayPropertyValue) write() ([]byte, error) {
+func (v *ArrayPropertyValue) serialize(s *Save, inner bool) error {
 	panic("implement me")
 }
 
@@ -220,12 +222,18 @@ func (v *BoolPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *BoolPropertyValue) write() ([]byte, error) {
+func (v *BoolPropertyValue) serialize(s *Save, inner bool) error {
+	var err error
 	if *v {
-		return []byte{0x01, 0x00}, nil
+		err = s.writeBool(true)
+	} else {
+		err = s.writeBool(false)
+	}
+	if err != nil {
+		return err
 	}
 
-	return []byte{0x00, 0x00}, nil
+	return s.writeNull()
 }
 
 //
@@ -305,7 +313,38 @@ func (v *BytePropertyValue) parseInner(p *Parser) error {
 	return nil
 }
 
-func (v *BytePropertyValue) write() ([]byte, error) {
+func (v *BytePropertyValue) serialize(s *Save, inner bool) error {
+	if inner {
+		return v.serializeInner(s)
+	}
+
+	err := s.writeString(v.Type)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeNull()
+	if err != nil {
+		return err
+	}
+
+	switch v.Type {
+	case "None":
+		err = s.writeByte(v.Value[0])
+		if err != nil {
+			return err
+		}
+	default:
+		err = s.writeString(string(v.Value))
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (v *BytePropertyValue) serializeInner(s *Save) error {
 	panic("implement me")
 }
 
@@ -343,8 +382,18 @@ func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *DoublePropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *DoublePropertyValue) serialize(s *Save, inner bool) error {
+	err := s.writeNull()
+	if err != nil {
+		return err
+	}
+
+	err = s.writeFloat64(float64(*v))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -410,8 +459,27 @@ func (v *EnumPropertyValue) parseInner(p *Parser) error {
 	return nil
 }
 
-func (v *EnumPropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *EnumPropertyValue) serialize(s *Save, inner bool) error {
+	if inner {
+		return s.writeString(fmt.Sprintf("%s::%s", v.Type, v.Value))
+	}
+
+	err := s.writeString(v.Type)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeNull()
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(v.Value)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -450,8 +518,20 @@ func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *FloatPropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *FloatPropertyValue) serialize(s *Save, inner bool) error {
+	if !inner {
+		err := s.writeNull()
+		if err != nil {
+			return err
+		}
+	}
+
+	err := s.writeFloat32(float32(*v))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -487,8 +567,18 @@ func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *Int8PropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *Int8PropertyValue) serialize(s *Save, inner bool) error {
+	err := s.writeNull()
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt8(int8(*v))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -524,8 +614,18 @@ func (v *Int64PropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *Int64PropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *Int64PropertyValue) serialize(s *Save, inner bool) error {
+	err := s.writeNull()
+	if err != nil {
+		return err
+	}
+
+	err = s.writeInt64(int64(*v))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -572,8 +672,25 @@ func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *InterfacePropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *InterfacePropertyValue) serialize(s *Save, inner bool) error {
+	if !inner {
+		err := s.writeNull()
+		if err != nil {
+			return err
+		}
+	}
+
+	err := s.writeString(v.LevelName)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(v.PathName)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -611,8 +728,20 @@ func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *IntPropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *IntPropertyValue) serialize(s *Save, inner bool) error {
+	if !inner {
+		err := s.writeNull()
+		if err != nil {
+			return err
+		}
+	}
+
+	err := s.writeInt32(int32(*v))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -738,7 +867,7 @@ func (v *MapPropertyValue) MarshalJSON() ([]byte, error) {
 	return json.Marshal(out)
 }
 
-func (v *MapPropertyValue) write() ([]byte, error) {
+func (v *MapPropertyValue) serialize(s *Save, inner bool) error {
 	panic("implement me")
 }
 
@@ -775,8 +904,18 @@ func (v *NamePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *NamePropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *NamePropertyValue) serialize(s *Save, inner bool) error {
+	err := s.writeNull()
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(string(*v))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -823,8 +962,25 @@ func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *ObjectPropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *ObjectPropertyValue) serialize(s *Save, inner bool) error {
+	if !inner {
+		err := s.writeNull()
+		if err != nil {
+			return err
+		}
+	}
+
+	err := s.writeString(v.LevelName)
+	if err != nil {
+		return err
+	}
+
+	err = s.writeString(v.PathName)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -862,8 +1018,20 @@ func (v *StringPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *StringPropertyValue) write() ([]byte, error) {
-	panic("implement me")
+func (v *StringPropertyValue) serialize(s *Save, inner bool) error {
+	if !inner {
+		err := s.writeNull()
+		if err != nil {
+			return err
+		}
+	}
+
+	err := s.writeString(string(*v))
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -947,7 +1115,7 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *StructPropertyValue) write() ([]byte, error) {
+func (v *StructPropertyValue) serialize(s *Save, inner bool) error {
 	panic("implement me")
 }
 
@@ -967,6 +1135,6 @@ func (v *TextPropertyValue) parse(p *Parser, inner bool) error {
 	panic("implement me")
 }
 
-func (v *TextPropertyValue) write() ([]byte, error) {
+func (v *TextPropertyValue) serialize(s *Save, inner bool) error {
 	panic("implement me")
 }

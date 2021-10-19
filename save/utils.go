@@ -10,10 +10,6 @@ import (
 // Read
 //
 
-func (p *Parser) offset() int64 {
-	return p.body.Size() - int64(p.body.Len())
-}
-
 func (p *Parser) readInt8() (int8, error) {
 	var v int8
 	err := binary.Read(p.body, binary.LittleEndian, &v)
@@ -28,17 +24,8 @@ func (p *Parser) readInt32() (int32, error) {
 
 func (p *Parser) readInt32Array(l int) ([]int32, error) {
 	v := make([]int32, l)
-
-	for i := 0; i < l; i++ {
-		vv, err := p.readInt32()
-		if err != nil {
-			return nil, err
-		}
-
-		v[i] = vv
-	}
-
-	return v, nil
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	return v, err
 }
 
 func (p *Parser) readInt64() (int64, error) {
@@ -61,17 +48,8 @@ func (p *Parser) readFloat64() (float64, error) {
 
 func (p *Parser) readFloat32Array(l int) ([]float32, error) {
 	v := make([]float32, l)
-
-	for i := 0; i < l; i++ {
-		f, err := p.readFloat32()
-		if err != nil {
-			return nil, err
-		}
-
-		v[i] = f
-	}
-
-	return v, nil
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	return v, err
 }
 
 func (p *Parser) readByte() (byte, error) {
@@ -84,19 +62,8 @@ func (p *Parser) readByte() (byte, error) {
 
 func (p *Parser) readBytes(l int32) ([]byte, error) {
 	v := make([]byte, l)
-
-	totalRead := int32(0)
-
-	for totalRead < l {
-		read, err := p.body.Read(v)
-		if err != nil {
-			return nil, err
-		}
-
-		totalRead += int32(read)
-	}
-
-	return v, nil
+	err := binary.Read(p.body, binary.LittleEndian, &v)
+	return v, err
 }
 
 func (p *Parser) readString() (string, error) {
@@ -157,16 +124,43 @@ func (p *Parser) skipBytes(l int64) error {
 //
 
 func (s *Save) writeByte(b byte) error {
-	_, err := s.w.Write([]byte{b})
+	_, err := s.body.Write([]byte{b})
 	return err
 }
 
+func (s *Save) writeInt8(i int8) error {
+	return binary.Write(s.body, binary.LittleEndian, i)
+}
+
 func (s *Save) writeInt32(i int32) error {
-	return binary.Write(s.w, binary.LittleEndian, i)
+	return binary.Write(s.body, binary.LittleEndian, i)
 }
 
 func (s *Save) writeInt64(i int64) error {
-	return binary.Write(s.w, binary.LittleEndian, i)
+	return binary.Write(s.body, binary.LittleEndian, i)
+}
+
+func (s *Save) writeFloat32(f float32) error {
+	return binary.Write(s.body, binary.LittleEndian, f)
+}
+
+func (s *Save) writeFloat32Array(f []float32) error {
+	return binary.Write(s.body, binary.LittleEndian, f)
+}
+
+func (s *Save) writeFloat64(f float64) error {
+	return binary.Write(s.body, binary.LittleEndian, f)
+}
+
+func (s *Save) writeBool(b bool) error {
+	if b {
+		return binary.Write(s.body, binary.LittleEndian, byte(0x01))
+	}
+	return binary.Write(s.body, binary.LittleEndian, byte(0x00))
+}
+
+func (s *Save) writeNull() error {
+	return binary.Write(s.body, binary.LittleEndian, byte(0x00))
 }
 
 func (s *Save) writeString(str string) error {
@@ -182,5 +176,9 @@ func (s *Save) writeString(str string) error {
 		return err
 	}
 
-	return binary.Write(s.w, binary.LittleEndian, []byte(str))
+	return binary.Write(s.body, binary.LittleEndian, []byte(str))
+}
+
+func (s *Save) writeNoneProp() error {
+	return s.writeString("None")
 }
