@@ -27,23 +27,23 @@ func (p *Parser) parseComponent() (*Component, error) {
 	return c, nil
 }
 
-func (s *Save) serializeComponent(c *Component) error {
-	err := s.writeString(c.TypePath)
+func (p *Parser) serializeComponent(c *Component) error {
+	err := p.writeString(c.TypePath)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(c.RootObject)
+	err = p.writeString(c.RootObject)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(c.InstanceName)
+	err = p.writeString(c.InstanceName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(c.ParentEntityName)
+	err = p.writeString(c.ParentEntityName)
 	if err != nil {
 		return err
 	}

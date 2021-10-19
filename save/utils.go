@@ -123,62 +123,66 @@ func (p *Parser) skipBytes(l int64) error {
 // Write
 //
 
-func (s *Save) writeByte(b byte) error {
-	_, err := s.body.Write([]byte{b})
+func (p *Parser) writeByte(b byte) error {
+	_, err := p.body.Write([]byte{b})
 	return err
 }
 
-func (s *Save) writeInt8(i int8) error {
-	return binary.Write(s.body, binary.LittleEndian, i)
+func (p *Parser) writeInt8(i int8) error {
+	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (s *Save) writeInt32(i int32) error {
-	return binary.Write(s.body, binary.LittleEndian, i)
+func (p *Parser) writeInt32(i int32) error {
+	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (s *Save) writeInt64(i int64) error {
-	return binary.Write(s.body, binary.LittleEndian, i)
+func (p *Parser) writeInt32Array(i []int32) error {
+	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (s *Save) writeFloat32(f float32) error {
-	return binary.Write(s.body, binary.LittleEndian, f)
+func (p *Parser) writeInt64(i int64) error {
+	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (s *Save) writeFloat32Array(f []float32) error {
-	return binary.Write(s.body, binary.LittleEndian, f)
+func (p *Parser) writeFloat32(f float32) error {
+	return binary.Write(p.body, binary.LittleEndian, f)
 }
 
-func (s *Save) writeFloat64(f float64) error {
-	return binary.Write(s.body, binary.LittleEndian, f)
+func (p *Parser) writeFloat32Array(f []float32) error {
+	return binary.Write(p.body, binary.LittleEndian, f)
 }
 
-func (s *Save) writeBool(b bool) error {
+func (p *Parser) writeFloat64(f float64) error {
+	return binary.Write(p.body, binary.LittleEndian, f)
+}
+
+func (p *Parser) writeBool(b bool) error {
 	if b {
-		return binary.Write(s.body, binary.LittleEndian, byte(0x01))
+		return binary.Write(p.body, binary.LittleEndian, byte(0x01))
 	}
-	return binary.Write(s.body, binary.LittleEndian, byte(0x00))
+	return binary.Write(p.body, binary.LittleEndian, byte(0x00))
 }
 
-func (s *Save) writeNull() error {
-	return binary.Write(s.body, binary.LittleEndian, byte(0x00))
+func (p *Parser) writeNull() error {
+	return binary.Write(p.body, binary.LittleEndian, byte(0x00))
 }
 
-func (s *Save) writeString(str string) error {
+func (p *Parser) writeString(str string) error {
 	if len(str) == 0 {
-		return s.writeInt32(0)
+		return p.writeInt32(0)
 	}
 
 	// Add null termination.
 	str += "\x00"
 
-	err := s.writeInt32(int32(len(str)))
+	err := p.writeInt32(int32(len(str)))
 	if err != nil {
 		return err
 	}
 
-	return binary.Write(s.body, binary.LittleEndian, []byte(str))
+	return binary.Write(p.body, binary.LittleEndian, []byte(str))
 }
 
-func (s *Save) writeNoneProp() error {
-	return s.writeString("None")
+func (p *Parser) writeNoneProp() error {
+	return p.writeString("None")
 }

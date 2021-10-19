@@ -53,6 +53,22 @@ func (s *ArbitraryStruct) parse(p *Parser) error {
 	return nil
 }
 
+func (s *ArbitraryStruct) serialize(p *Parser) error {
+	for _, prop := range s.Properties {
+		err := p.serializeProperty(prop)
+		if err != nil {
+			return err
+		}
+	}
+
+	err := p.writeNoneProp()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 //
 // BoxStruct
 //
@@ -92,6 +108,10 @@ func (s *BoxStruct) parse(p *Parser) error {
 	return nil
 }
 
+func (s *BoxStruct) serialize(p *Parser) error {
+	return nil
+}
+
 //
 // FluidBox
 //
@@ -106,6 +126,10 @@ func (s *FluidBoxStruct) parse(p *Parser) error {
 
 	*s = FluidBoxStruct(v)
 
+	return nil
+}
+
+func (s *FluidBoxStruct) serialize(p *Parser) error {
 	return nil
 }
 
@@ -186,6 +210,10 @@ func (s *InventoryItemStruct) parse(p *Parser) error {
 	return nil
 }
 
+func (s *InventoryItemStruct) serialize(p *Parser) error {
+	return nil
+}
+
 //
 // LinearColor
 //
@@ -219,6 +247,10 @@ func (s *LinearColor) parse(p *Parser) error {
 		return err
 	}
 
+	return nil
+}
+
+func (s *LinearColor) serialize(p *Parser) error {
 	return nil
 }
 
@@ -258,6 +290,10 @@ func (s *QuatStruct) parse(p *Parser) error {
 	return nil
 }
 
+func (s *QuatStruct) serialize(p *Parser) error {
+	return nil
+}
+
 //
 // VectorStruct
 //
@@ -285,5 +321,9 @@ func (s *VectorStruct) parse(p *Parser) error {
 		return err
 	}
 
+	return nil
+}
+
+func (s *VectorStruct) serialize(p *Parser) error {
 	return nil
 }

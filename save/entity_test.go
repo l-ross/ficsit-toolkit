@@ -30,11 +30,11 @@ func TestEntity(t *testing.T) {
 	)
 
 	out := filebuffer.New([]byte{})
-	s := &Save{
+	p = &Parser{
 		body: out,
 	}
 
-	err = s.serializeEntity(e)
+	err = p.serializeEntity(e)
 	require.NoError(t, err)
 
 	assert.Equal(t, data, out.Buff.Bytes())

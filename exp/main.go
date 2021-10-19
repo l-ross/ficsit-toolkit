@@ -37,7 +37,7 @@ func realMain() error {
 	}
 	defer fOut.Close()
 
-	err = s.Serialize(fOut)
+	err = save.Serialize(s, fOut)
 	if err != nil {
 		return err
 	}

@@ -6,26 +6,28 @@ import (
 	"github.com/mattetti/filebuffer"
 )
 
-func (s *Save) Serialize(w io.Writer) error {
-	s.body = filebuffer.New([]byte{})
+func Serialize(s *Save, w io.Writer) error {
+	p := &Parser{
+		body: filebuffer.New([]byte{}),
+	}
 
 	// Write placeholder length.
-	err := s.writeInt32(0)
+	err := p.writeInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = s.serializeObjects()
+	err = p.serializeObjects(s)
 	if err != nil {
 		return err
 	}
 
-	err = s.serializeObjectData()
+	err = p.serializeObjectData(s)
 	if err != nil {
 		return err
 	}
 
-	//_, err = w.Write(s.body.Buff.Bytes())
+	//_, err = w.Write(p.body.Buff.Bytes())
 	//if err != nil {
 	//	return err
 	//}
@@ -33,32 +35,32 @@ func (s *Save) Serialize(w io.Writer) error {
 	return nil
 }
 
-func (s *Save) serializeObjects() error {
+func (p *Parser) serializeObjects(s *Save) error {
 	objectCount := len(s.Components) + len(s.Entities)
-	err := s.writeInt32(int32(objectCount))
+	err := p.writeInt32(int32(objectCount))
 	if err != nil {
 		return err
 	}
 
 	for _, e := range s.Entities {
-		err = s.writeInt32(int32(EntityType))
+		err = p.writeInt32(int32(EntityType))
 		if err != nil {
 			return err
 		}
 
-		err = s.serializeEntity(e)
+		err = p.serializeEntity(e)
 		if err != nil {
 			return err
 		}
 	}
 
 	for _, c := range s.Components {
-		err = s.writeInt32(int32(ComponentType))
+		err = p.writeInt32(int32(ComponentType))
 		if err != nil {
 			return err
 		}
 
-		err = s.serializeComponent(c)
+		err = p.serializeComponent(c)
 		if err != nil {
 			return err
 		}
@@ -67,19 +69,19 @@ func (s *Save) serializeObjects() error {
 	return nil
 }
 
-func (s *Save) serializeObjectData() error {
+func (p *Parser) serializeObjectData(s *Save) error {
 	objectCount := len(s.Components) + len(s.Entities)
-	err := s.writeInt32(int32(objectCount))
+	err := p.writeInt32(int32(objectCount))
 	if err != nil {
 		return err
 	}
 
 	//for _, e := range save.Entities {
 	//	// Record location of the length.
-	//	startPos := s.body.Index
+	//	startPos := p.body.Index
 	//
 	//	// Write placeholder length
-	//	err := s.writeInt32(0)
+	//	err := p.writeInt32(0)
 	//	if err != nil {
 	//		return err
 	//	}

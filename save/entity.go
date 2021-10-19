@@ -49,43 +49,43 @@ func (p *Parser) parseEntity() (*Entity, error) {
 	return e, nil
 }
 
-func (s *Save) serializeEntity(e *Entity) error {
-	err := s.writeString(e.TypePath)
+func (p *Parser) serializeEntity(e *Entity) error {
+	err := p.writeString(e.TypePath)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.RootObject)
+	err = p.writeString(e.RootObject)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.InstanceName)
+	err = p.writeString(e.InstanceName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(e.NeedTransform)
+	err = p.writeInt32(e.NeedTransform)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeFloat32Array(e.Rotation)
+	err = p.writeFloat32Array(e.Rotation)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeFloat32Array(e.Position)
+	err = p.writeFloat32Array(e.Position)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeFloat32Array(e.Scale)
+	err = p.writeFloat32Array(e.Scale)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(e.WasPlacedInLevel)
+	err = p.writeInt32(e.WasPlacedInLevel)
 	if err != nil {
 		return err
 	}

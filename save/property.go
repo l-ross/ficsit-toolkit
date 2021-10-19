@@ -101,35 +101,35 @@ func (p *Parser) parseProperty() (*Property, error) {
 	return prop, nil
 }
 
-func (s *Save) serializeProperty(p *Property) error {
-	err := s.writeString(p.Name)
+func (p *Parser) serializeProperty(prop *Property) error {
+	err := p.writeString(prop.Name)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(string(p.Type))
+	err = p.writeString(string(prop.Type))
 	if err != nil {
 		return err
 	}
 
 	// TODO: Do we want to write the actual length?
 	//  How often is it actually set by the game?
-	err = s.writeInt32(0)
+	err = p.writeInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(p.Index)
+	err = p.writeInt32(prop.Index)
 	if err != nil {
 		return err
 	}
 
-	err = p.serialize(s, false)
+	err = prop.serialize(p, false)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeNoneProp()
+	err = p.writeNoneProp()
 	if err != nil {
 		return err
 	}

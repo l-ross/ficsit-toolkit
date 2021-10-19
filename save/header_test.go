@@ -25,12 +25,11 @@ func TestHeader(t *testing.T) {
 	require.NoError(t, err)
 
 	out := filebuffer.New([]byte{})
-	s := &Save{
-		Header: h,
-		body:   out,
+	p = &Parser{
+		body: out,
 	}
 
-	err = s.serializeHeader()
+	err = p.serializeHeader(h)
 	require.NoError(t, err)
 
 	assert.Equal(t, data, out.Buff.Bytes())

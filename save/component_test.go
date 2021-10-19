@@ -30,11 +30,11 @@ func TestComponent(t *testing.T) {
 	)
 
 	out := filebuffer.New([]byte{})
-	s := &Save{
+	p = &Parser{
 		body: out,
 	}
 
-	err = s.serializeComponent(c)
+	err = p.serializeComponent(c)
 	require.NoError(t, err)
 
 	assert.Equal(t, data, out.Buff.Bytes())

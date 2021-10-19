@@ -1,7 +1,5 @@
 package save
 
-import "github.com/mattetti/filebuffer"
-
 type Save struct {
 	Header           *Header            `json:"header"`
 	Components       []*Component       `json:"components"`
@@ -10,8 +8,6 @@ type Save struct {
 
 	objects     []object
 	objectCount int32
-
-	body *filebuffer.Buffer
 }
 
 type Header struct {

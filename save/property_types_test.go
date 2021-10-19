@@ -203,14 +203,14 @@ func TestProperties(t *testing.T) {
 			tt.assertValue(t, prop)
 
 			out := filebuffer.New([]byte{})
-			s := &Save{
+			p = &Parser{
 				body: out,
 			}
 
-			err = s.serializeProperty(prop)
+			err = p.serializeProperty(prop)
 			require.NoError(t, err)
 
-			assert.Equal(t, data, s.body.Buff.Bytes())
+			assert.Equal(t, data, p.body.Buff.Bytes())
 		})
 	}
 }
