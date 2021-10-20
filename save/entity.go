@@ -144,24 +144,13 @@ func (p *parser) parseEntityData(e *Entity) error {
 		return err
 	}
 
-	// Parse extra data
-	// If we have a specific handler for extra data then use it, otherwise
-	// treat as unknown data.
-	extraFunc := hasExtra(e.TypePath)
-	if extraFunc != nil {
-		e.Extra = extraFunc()
+	// If we have extra data then parse it.
+	extraLen := (int32(e.offset) + e.len) - int32(p.body.Index)
+	if extraLen > 0 {
+		e.Extra = getExtra(e.TypePath)(extraLen)
 		err = e.Extra.Value.parse(p)
 		if err != nil {
 			return err
-		}
-	} else {
-		expPos := e.offset + int64(e.len)
-		if rem := expPos - p.body.Index; rem > 0 {
-			e.Extra = newUnknownExtra(int32(rem))
-			err = e.Extra.Value.parse(p)
-			if err != nil {
-				return err
-			}
 		}
 	}
 

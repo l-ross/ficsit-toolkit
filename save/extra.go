@@ -2,14 +2,15 @@ package save
 
 type ExtraType string
 
-// TODO: Train
 // TODO: Vehicle
 const (
 	CircuitSubsystemExtraType ExtraType = "CircuitSubsystem"
 	ConveyorBeltExtraType     ExtraType = "ConveyorBelt"
 	GameModeExtraType         ExtraType = "GameMode"
 	GameStateExtraType        ExtraType = "GameState"
+	PlayerStateExtraType      ExtraType = "PlayerState"
 	PowerLineExtraType        ExtraType = "PowerLine"
+	TrainExtraType            ExtraType = "Train"
 	UnknownExtraType          ExtraType = "Unknown"
 )
 
@@ -22,7 +23,7 @@ type ExtraValue interface {
 	parse(p *parser) error
 }
 
-func hasExtra(c string) func() *Extra {
+func getExtra(c string) func(l int32) *Extra {
 	switch c {
 	case "/Game/FactoryGame/-Shared/Blueprint/BP_CircuitSubsystem.BP_CircuitSubsystem_C":
 		return newCircuitSubsystem
@@ -41,11 +42,16 @@ func hasExtra(c string) func() *Extra {
 		return newGameMode
 	case "/Game/FactoryGame/-Shared/Blueprint/BP_GameState.BP_GameState_C":
 		return newGameState
+	case "/Game/FactoryGame/Character/Player/BP_PlayerState.BP_PlayerState_C":
+		return newPlayerState
 	case "/Game/FactoryGame/Buildable/Factory/PowerLine/Build_PowerLine.Build_PowerLine_C",
 		"/Game/FactoryGame/Events/Christmas/Buildings/PowerLineLights/Build_XmassLightsLine.Build_XmassLightsLine_C":
 		return newPowerLine
+	case "/Game/FactoryGame/Buildable/Vehicle/Train/Wagon/BP_FreightWagon.BP_FreightWagon_C",
+		"/Game/FactoryGame/Buildable/Vehicle/Train/Locomotive/BP_Locomotive.BP_Locomotive_C":
+		return newTrainExtra
 	}
-	return nil
+	return newUnknownExtra
 }
 
 //
@@ -62,7 +68,7 @@ type Circuit struct {
 	PathName  string
 }
 
-func newCircuitSubsystem() *Extra {
+func newCircuitSubsystem(_ int32) *Extra {
 	return &Extra{
 		Type:  CircuitSubsystemExtraType,
 		Value: &CircuitSubsystemExtra{},
@@ -116,7 +122,7 @@ type ConveyorBeltItem struct {
 	Position     float32
 }
 
-func newConveyorBelt() *Extra {
+func newConveyorBelt(_ int32) *Extra {
 	return &Extra{
 		Type:  ConveyorBeltExtraType,
 		Value: &ConveyorBeltExtra{},
@@ -174,7 +180,7 @@ type GameModeExtra struct {
 	Objects []*ObjectReference
 }
 
-func newGameMode() *Extra {
+func newGameMode(_ int32) *Extra {
 	return &Extra{
 		Type:  GameModeExtraType,
 		Value: &GameModeExtra{},
@@ -212,7 +218,7 @@ type GameStateExtra struct {
 	Objects []*ObjectReference
 }
 
-func newGameState() *Extra {
+func newGameState(_ int32) *Extra {
 	return &Extra{
 		Type:  GameStateExtraType,
 		Value: &GameStateExtra{},
@@ -243,6 +249,35 @@ func (e *GameStateExtra) parse(p *parser) error {
 }
 
 //
+// PlayerState
+//
+
+type PlayerStateExtra struct {
+	Data []byte
+
+	len int32
+}
+
+func newPlayerState(l int32) *Extra {
+	return &Extra{
+		Type: PlayerStateExtraType,
+		Value: &PlayerStateExtra{
+			len: l,
+		},
+	}
+}
+
+func (e *PlayerStateExtra) parse(p *parser) error {
+	var err error
+	e.Data, err = p.readBytes(e.len)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+//
 // PowerLine
 //
 
@@ -253,7 +288,7 @@ type PowerLineExtra struct {
 	TargetPathName  string
 }
 
-func newPowerLine() *Extra {
+func newPowerLine(_ int32) *Extra {
 	return &Extra{
 		Type:  PowerLineExtraType,
 		Value: &PowerLineExtra{},
@@ -278,6 +313,54 @@ func (e *PowerLineExtra) parse(p *parser) error {
 	}
 
 	e.TargetPathName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+//
+// Train
+//
+
+type TrainExtra struct {
+	PreviousLevelName string
+	PreviousPathName  string
+	NextLevelName     string
+	NextPathName      string
+}
+
+func newTrainExtra(_ int32) *Extra {
+	return &Extra{
+		Type:  TrainExtraType,
+		Value: &TrainExtra{},
+	}
+}
+
+func (e *TrainExtra) parse(p *parser) error {
+	// UNKNOWN_DATA
+	_, err := p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	e.PreviousLevelName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	e.PreviousPathName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	e.NextLevelName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	e.NextPathName, err = p.readString()
 	if err != nil {
 		return err
 	}
