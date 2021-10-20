@@ -170,17 +170,17 @@ func TestProperties(t *testing.T) {
 				assert.Equal(t, "AStringValue", v)
 			},
 		},
-		//{
-		//	name:     "StructProperty",
-		//	testData: "testdata/prop_struct.dat",
-		//	assertValue: func(t *testing.T, p *Property) {
-		//		v, err := p.GetStructValue()
-		//		require.NoError(t, err)
-		//		a, err := v.GetArbitraryStruct()
-		//		require.NoError(t, err)
-		//		require.Len(t, a.Properties, 3)
-		//	},
-		//},
+		{
+			name:     "StructProperty",
+			testData: "testdata/prop_struct.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetStructValue()
+				require.NoError(t, err)
+				a, err := v.GetArbitraryStruct()
+				require.NoError(t, err)
+				require.Len(t, a.Properties, 3)
+			},
+		},
 	}
 
 	for _, tt := range tests {
@@ -210,10 +210,13 @@ func TestProperties(t *testing.T) {
 				body: out,
 			}
 
-			err = p.serializeProperty(prop)
+			err = p.serializeProperties(props)
 			require.NoError(t, err)
 
 			assert.Equal(t, data, out.Buffer)
+
+			err = ioutil.WriteFile("out.dump", out.Buffer, 0644)
+			require.NoError(t, err)
 		})
 	}
 }

@@ -187,6 +187,8 @@ func (p *parser) writeNoneProp() error {
 	return p.writeString("None")
 }
 
+// writeLen writes the int32 at the specified index.
+// Resets its position to its original location after writing.
 func (p *parser) writeLen(i int32, idx int64) error {
 	currentPos := p.body.Index
 
@@ -206,4 +208,13 @@ func (p *parser) writeLen(i int32, idx int64) error {
 	}
 
 	return nil
+}
+
+// measure returns a function that will return the difference between the index when measure was
+// called and when the returned function was called.
+func (p *parser) measure() func() int32 {
+	startPos := p.body.Index
+	return func() int32 {
+		return int32(p.body.Index - startPos)
+	}
 }

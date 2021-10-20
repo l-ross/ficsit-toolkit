@@ -101,6 +101,22 @@ func (p *parser) parseProperty() (*Property, error) {
 	return prop, nil
 }
 
+func (p *parser) serializeProperties(props []*Property) error {
+	for _, prop := range props {
+		err := p.serializeProperty(prop)
+		if err != nil {
+			return err
+		}
+	}
+
+	err := p.writeNoneProp()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (p *parser) serializeProperty(prop *Property) error {
 	err := p.writeString(prop.Name)
 	if err != nil {
@@ -124,26 +140,22 @@ func (p *parser) serializeProperty(prop *Property) error {
 		return err
 	}
 
-	err = prop.serialize(p, false)
+	l, err := prop.serialize(p, false)
 	if err != nil {
 		return err
 	}
 
 	// Write length at the recorded position.
-	// Satisfactory only seems to bother setting the length for some property types.
-	// Maintain consistency with the game and only write it for those same types.
+	// Satisfactory only seems to bother setting the length for some property types. No idea if this is intentional
+	// or not. Maintain consistency with the game and only write it for those same types.
 	switch prop.Type {
-	case ArrayPropertyType:
-		size := p.body.Index - lenPos - 4
-		err = p.writeLen(int32(size), lenPos)
+	case ArrayPropertyType,
+		ObjectPropertyType,
+		StructPropertyType:
+		err = p.writeLen(l, lenPos)
 		if err != nil {
 			return err
 		}
-	}
-
-	err = p.writeNoneProp()
-	if err != nil {
-		return err
 	}
 
 	return nil

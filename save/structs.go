@@ -29,12 +29,12 @@ type ArbitraryStruct struct {
 	numProps int32
 }
 
-func (s *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
-	if v, ok := s.Value.(*ArbitraryStruct); ok {
+func (v *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
+	if v, ok := v.Value.(*ArbitraryStruct); ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("wrong type %s", s.Type)
+	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
 func (s *ArbitraryStruct) parse(p *parser) error {
@@ -54,14 +54,7 @@ func (s *ArbitraryStruct) parse(p *parser) error {
 }
 
 func (s *ArbitraryStruct) serialize(p *parser) error {
-	for _, prop := range s.Properties {
-		err := p.serializeProperty(prop)
-		if err != nil {
-			return err
-		}
-	}
-
-	err := p.writeNoneProp()
+	err := p.serializeProperties(s.Properties)
 	if err != nil {
 		return err
 	}
@@ -79,12 +72,12 @@ type BoxStruct struct {
 	IsValid bool
 }
 
-func (s *StructPropertyValue) GetBoxStruct() (*BoxStruct, error) {
-	if v, ok := s.Value.(*BoxStruct); ok {
+func (v *StructPropertyValue) GetBoxStruct() (*BoxStruct, error) {
+	if v, ok := v.Value.(*BoxStruct); ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("wrong type %s", s.Type)
+	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
 func (s *BoxStruct) parse(p *parser) error {
@@ -142,12 +135,12 @@ type InventoryItemStruct struct {
 	NumItems int32
 }
 
-func (s *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, error) {
-	if v, ok := s.Value.(*InventoryItemStruct); ok {
+func (v *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, error) {
+	if v, ok := v.Value.(*InventoryItemStruct); ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("wrong type %s", s.Type)
+	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
 func (s *InventoryItemStruct) parse(p *parser) error {
