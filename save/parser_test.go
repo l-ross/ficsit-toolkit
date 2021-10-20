@@ -13,10 +13,7 @@ func TestParser_Parse(t *testing.T) {
 	require.NoError(t, err)
 	defer f.Close()
 
-	p, err := NewParser(f)
-	require.NoError(t, err)
-
-	s, err := p.Parse()
+	s, err := Parse(f)
 	require.NoError(t, err)
 	require.NotNil(t, s)
 }

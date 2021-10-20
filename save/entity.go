@@ -2,7 +2,7 @@ package save
 
 import "io"
 
-func (p *Parser) parseEntity() (*Entity, error) {
+func (p *parser) parseEntity() (*Entity, error) {
 	e := &Entity{}
 
 	var err error
@@ -49,7 +49,7 @@ func (p *Parser) parseEntity() (*Entity, error) {
 	return e, nil
 }
 
-func (p *Parser) serializeEntity(e *Entity) error {
+func (p *parser) serializeEntity(e *Entity) error {
 	err := p.writeString(e.TypePath)
 	if err != nil {
 		return err
@@ -93,7 +93,7 @@ func (p *Parser) serializeEntity(e *Entity) error {
 	return nil
 }
 
-func (p *Parser) parseEntityData(e *Entity) error {
+func (p *parser) parseEntityData(e *Entity) error {
 	_, err := p.body.Seek(e.offset, io.SeekStart)
 	if err != nil {
 		return err

@@ -55,7 +55,7 @@ func TestStructs(t *testing.T) {
 			data, err := ioutil.ReadFile(tt.testData)
 			require.NoError(t, err)
 
-			p := &Parser{
+			p := &parser{
 				body: filebuffer.New(data),
 			}
 			props, err := p.parseProperties()

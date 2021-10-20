@@ -3,34 +3,37 @@ package save
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
 
 	"github.com/mattetti/filebuffer"
 )
 
-type Parser struct {
+type parser struct {
 	// Body of the save file.
 	body *filebuffer.Buffer
 }
 
-// NewParser constructs a new Parser to parse a Satisfactory save file.
-func NewParser(r io.Reader) (*Parser, error) {
-	p := &Parser{}
+func newParser(r io.Reader) (*parser, error) {
+	p := &parser{}
 
-	data, err := ioutil.ReadAll(r)
+	body, err := filebuffer.NewFromReader(r)
 	if err != nil {
 		return nil, err
 	}
 
-	p.body = filebuffer.New(data)
+	p.body = body
 
 	return p, nil
 }
 
 // Parse will parse the entire file and return a Save object that contains
 // the entire data structure of the file.
-func (p *Parser) Parse() (*Save, error) {
-	h, err := p.ParseHeader()
+func Parse(r io.Reader) (*Save, error) {
+	p, err := newParser(r)
+	if err != nil {
+		return nil, err
+	}
+
+	h, err := p.parseHeader()
 	if err != nil {
 		return nil, err
 	}
@@ -58,7 +61,7 @@ func (p *Parser) Parse() (*Save, error) {
 	return s, nil
 }
 
-func (p *Parser) parseBody(s *Save) error {
+func (p *parser) parseBody(s *Save) error {
 	bodyLen, err := p.readInt32()
 	if err != nil {
 		return err
@@ -114,7 +117,7 @@ func (p *Parser) parseBody(s *Save) error {
 	return nil
 }
 
-func (p *Parser) parseObjects(s *Save) error {
+func (p *parser) parseObjects(s *Save) error {
 	var err error
 	s.objectCount, err = p.readInt32()
 	if err != nil {
@@ -152,7 +155,7 @@ func (p *Parser) parseObjects(s *Save) error {
 	return nil
 }
 
-func (p *Parser) scanObjectData(s *Save) error {
+func (p *parser) scanObjectData(s *Save) error {
 	objectDataCount, err := p.readInt32()
 	if err != nil {
 		return err
@@ -183,7 +186,7 @@ func (p *Parser) scanObjectData(s *Save) error {
 	return nil
 }
 
-func (p *Parser) parseComponentData(c *Component) error {
+func (p *parser) parseComponentData(c *Component) error {
 	_, err := p.body.Seek(c.offset, io.SeekStart)
 	if err != nil {
 		return err
@@ -203,7 +206,7 @@ func (p *Parser) parseComponentData(c *Component) error {
 	return nil
 }
 
-func (p *Parser) parseCollectedObjects(s *Save) error {
+func (p *parser) parseCollectedObjects(s *Save) error {
 	collectedObjectCount, err := p.readInt32()
 	if err != nil {
 		return err

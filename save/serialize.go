@@ -7,7 +7,7 @@ import (
 )
 
 func Serialize(s *Save, w io.Writer) error {
-	p := &Parser{
+	p := &parser{
 		body: filebuffer.New([]byte{}),
 	}
 
@@ -35,7 +35,7 @@ func Serialize(s *Save, w io.Writer) error {
 	return nil
 }
 
-func (p *Parser) serializeObjects(s *Save) error {
+func (p *parser) serializeObjects(s *Save) error {
 	objectCount := len(s.Components) + len(s.Entities)
 	err := p.writeInt32(int32(objectCount))
 	if err != nil {
@@ -69,7 +69,7 @@ func (p *Parser) serializeObjects(s *Save) error {
 	return nil
 }
 
-func (p *Parser) serializeObjectData(s *Save) error {
+func (p *parser) serializeObjectData(s *Save) error {
 	objectCount := len(s.Components) + len(s.Entities)
 	err := p.writeInt32(int32(objectCount))
 	if err != nil {

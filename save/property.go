@@ -2,7 +2,7 @@ package save
 
 import "fmt"
 
-func (p *Parser) parseProperties() ([]*Property, error) {
+func (p *parser) parseProperties() ([]*Property, error) {
 	props := make([]*Property, 0)
 
 	for {
@@ -21,7 +21,7 @@ func (p *Parser) parseProperties() ([]*Property, error) {
 	return props, nil
 }
 
-func (p *Parser) parseProperty() (*Property, error) {
+func (p *parser) parseProperty() (*Property, error) {
 	var err error
 	prop := &Property{}
 
@@ -101,7 +101,7 @@ func (p *Parser) parseProperty() (*Property, error) {
 	return prop, nil
 }
 
-func (p *Parser) serializeProperty(prop *Property) error {
+func (p *parser) serializeProperty(prop *Property) error {
 	err := p.writeString(prop.Name)
 	if err != nil {
 		return err

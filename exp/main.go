@@ -21,12 +21,7 @@ func realMain() error {
 	}
 	defer f.Close()
 
-	p, err := save.NewParser(f)
-	if err != nil {
-		return err
-	}
-
-	s, err := p.Parse()
+	s, err := save.Parse(f)
 	if err != nil {
 		return err
 	}

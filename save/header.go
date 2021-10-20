@@ -2,10 +2,20 @@ package save
 
 import (
 	"fmt"
+	"io"
 )
 
 // ParseHeader will only parse the header of the save file and return it.
-func (p *Parser) ParseHeader() (*Header, error) {
+func ParseHeader(r io.Reader) (*Header, error) {
+	p, err := newParser(r)
+	if err != nil {
+		return nil, err
+	}
+
+	return p.parseHeader()
+}
+
+func (p *parser) parseHeader() (*Header, error) {
 	h := &Header{}
 
 	var err error
@@ -80,7 +90,7 @@ func (p *Parser) ParseHeader() (*Header, error) {
 	return h, nil
 }
 
-func (p *Parser) serializeHeader(h *Header) error {
+func (p *parser) serializeHeader(h *Header) error {
 	err := p.writeInt32(h.HeaderVersion)
 	if err != nil {
 		return err

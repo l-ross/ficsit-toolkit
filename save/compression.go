@@ -10,7 +10,7 @@ import (
 	"github.com/mattetti/filebuffer"
 )
 
-func (p *Parser) decompressBody() (*filebuffer.Buffer, error) {
+func (p *parser) decompressBody() (*filebuffer.Buffer, error) {
 	chunks := make([]byte, 0)
 
 	for {
@@ -41,7 +41,7 @@ type chunkHeader struct {
 	uncompressedLength int64
 }
 
-func (p *Parser) readChunkHeader() (*chunkHeader, error) {
+func (p *parser) readChunkHeader() (*chunkHeader, error) {
 	ch := &chunkHeader{}
 
 	var err error
@@ -81,7 +81,7 @@ func (p *Parser) readChunkHeader() (*chunkHeader, error) {
 }
 
 // readChunk will read the next chunk and return the decompressed data.
-func (p *Parser) readChunk(ch *chunkHeader) ([]byte, error) {
+func (p *parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	compressed := make([]byte, ch.compressedLength)
 
 	read, err := p.body.Read(compressed)

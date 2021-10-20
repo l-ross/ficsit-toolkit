@@ -17,15 +17,15 @@ func TestHeader(t *testing.T) {
 	data, err := ioutil.ReadFile("testdata/header.dat")
 	require.NoError(t, err)
 
-	p := &Parser{
+	p := &parser{
 		body: filebuffer.New(data),
 	}
 
-	h, err := p.ParseHeader()
+	h, err := p.parseHeader()
 	require.NoError(t, err)
 
 	out := filebuffer.New([]byte{})
-	p = &Parser{
+	p = &parser{
 		body: out,
 	}
 

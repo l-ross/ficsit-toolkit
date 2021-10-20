@@ -18,7 +18,7 @@ func TestEntity(t *testing.T) {
 	data, err := ioutil.ReadFile("testdata/entity.dat")
 	require.NoError(t, err)
 
-	p := &Parser{
+	p := &parser{
 		body: filebuffer.New(data),
 	}
 
@@ -30,7 +30,7 @@ func TestEntity(t *testing.T) {
 	)
 
 	out := filebuffer.New([]byte{})
-	p = &Parser{
+	p = &parser{
 		body: out,
 	}
 

@@ -10,49 +10,49 @@ import (
 // Read
 //
 
-func (p *Parser) readInt8() (int8, error) {
+func (p *parser) readInt8() (int8, error) {
 	var v int8
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readInt32() (int32, error) {
+func (p *parser) readInt32() (int32, error) {
 	var v int32
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readInt32Array(l int) ([]int32, error) {
+func (p *parser) readInt32Array(l int) ([]int32, error) {
 	v := make([]int32, l)
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readInt64() (int64, error) {
+func (p *parser) readInt64() (int64, error) {
 	var v int64
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readFloat32() (float32, error) {
+func (p *parser) readFloat32() (float32, error) {
 	var v float32
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readFloat64() (float64, error) {
+func (p *parser) readFloat64() (float64, error) {
 	var v float64
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readFloat32Array(l int) ([]float32, error) {
+func (p *parser) readFloat32Array(l int) ([]float32, error) {
 	v := make([]float32, l)
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readByte() (byte, error) {
+func (p *parser) readByte() (byte, error) {
 	v, err := p.readBytes(1)
 	if err != nil {
 		return 0, err
@@ -60,13 +60,13 @@ func (p *Parser) readByte() (byte, error) {
 	return v[0], nil
 }
 
-func (p *Parser) readBytes(l int32) ([]byte, error) {
+func (p *parser) readBytes(l int32) ([]byte, error) {
 	v := make([]byte, l)
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readString() (string, error) {
+func (p *parser) readString() (string, error) {
 	l, err := p.readInt32()
 	if err != nil {
 		return "", err
@@ -90,7 +90,7 @@ func (p *Parser) readString() (string, error) {
 	return string(v), nil
 }
 
-func (p *Parser) readBool() (bool, error) {
+func (p *parser) readBool() (bool, error) {
 	b, err := p.readByte()
 	if err != nil {
 		return false, nil
@@ -102,7 +102,7 @@ func (p *Parser) readBool() (bool, error) {
 	return true, nil
 }
 
-func (p *Parser) nextByteIsNull() error {
+func (p *parser) nextByteIsNull() error {
 	b, err := p.readByte()
 	if err != nil {
 		return err
@@ -114,7 +114,7 @@ func (p *Parser) nextByteIsNull() error {
 	return nil
 }
 
-func (p *Parser) skipBytes(l int64) error {
+func (p *parser) skipBytes(l int64) error {
 	_, err := p.body.Seek(l, io.SeekCurrent)
 	return err
 }
@@ -123,51 +123,51 @@ func (p *Parser) skipBytes(l int64) error {
 // Write
 //
 
-func (p *Parser) writeByte(b byte) error {
+func (p *parser) writeByte(b byte) error {
 	_, err := p.body.Write([]byte{b})
 	return err
 }
 
-func (p *Parser) writeInt8(i int8) error {
+func (p *parser) writeInt8(i int8) error {
 	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (p *Parser) writeInt32(i int32) error {
+func (p *parser) writeInt32(i int32) error {
 	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (p *Parser) writeInt32Array(i []int32) error {
+func (p *parser) writeInt32Array(i []int32) error {
 	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (p *Parser) writeInt64(i int64) error {
+func (p *parser) writeInt64(i int64) error {
 	return binary.Write(p.body, binary.LittleEndian, i)
 }
 
-func (p *Parser) writeFloat32(f float32) error {
+func (p *parser) writeFloat32(f float32) error {
 	return binary.Write(p.body, binary.LittleEndian, f)
 }
 
-func (p *Parser) writeFloat32Array(f []float32) error {
+func (p *parser) writeFloat32Array(f []float32) error {
 	return binary.Write(p.body, binary.LittleEndian, f)
 }
 
-func (p *Parser) writeFloat64(f float64) error {
+func (p *parser) writeFloat64(f float64) error {
 	return binary.Write(p.body, binary.LittleEndian, f)
 }
 
-func (p *Parser) writeBool(b bool) error {
+func (p *parser) writeBool(b bool) error {
 	if b {
 		return binary.Write(p.body, binary.LittleEndian, byte(0x01))
 	}
 	return binary.Write(p.body, binary.LittleEndian, byte(0x00))
 }
 
-func (p *Parser) writeNull() error {
+func (p *parser) writeNull() error {
 	return binary.Write(p.body, binary.LittleEndian, byte(0x00))
 }
 
-func (p *Parser) writeString(str string) error {
+func (p *parser) writeString(str string) error {
 	if len(str) == 0 {
 		return p.writeInt32(0)
 	}
@@ -183,6 +183,6 @@ func (p *Parser) writeString(str string) error {
 	return binary.Write(p.body, binary.LittleEndian, []byte(str))
 }
 
-func (p *Parser) writeNoneProp() error {
+func (p *parser) writeNoneProp() error {
 	return p.writeString("None")
 }

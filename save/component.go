@@ -1,6 +1,6 @@
 package save
 
-func (p *Parser) parseComponent() (*Component, error) {
+func (p *parser) parseComponent() (*Component, error) {
 	c := &Component{}
 
 	var err error
@@ -27,7 +27,7 @@ func (p *Parser) parseComponent() (*Component, error) {
 	return c, nil
 }
 
-func (p *Parser) serializeComponent(c *Component) error {
+func (p *parser) serializeComponent(c *Component) error {
 	err := p.writeString(c.TypePath)
 	if err != nil {
 		return err

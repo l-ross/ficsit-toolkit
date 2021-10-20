@@ -40,9 +40,9 @@ type PropertyValue interface {
 	//
 	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
-	parse(p *Parser, inner bool) error
+	parse(p *parser, inner bool) error
 
-	serialize(p *Parser, inner bool) error
+	serialize(p *parser, inner bool) error
 }
 
 type newPropValueFunc func() PropertyValue
@@ -68,7 +68,7 @@ func (p *Property) GetArrayValue() (*ArrayPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
+func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 	valueType, err := p.readString()
 	if err != nil {
 		return err
@@ -184,7 +184,7 @@ func (v *ArrayPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *ArrayPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *ArrayPropertyValue) serialize(p *parser, inner bool) error {
 	panic("implement me")
 }
 
@@ -207,7 +207,7 @@ func (p *Property) GetBoolValue() (bool, error) {
 	return false, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *BoolPropertyValue) parse(p *Parser, inner bool) error {
+func (v *BoolPropertyValue) parse(p *parser, inner bool) error {
 	b, err := p.readBool()
 	if err != nil {
 		return err
@@ -222,7 +222,7 @@ func (v *BoolPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *BoolPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *BoolPropertyValue) serialize(p *parser, inner bool) error {
 	var err error
 	if *v {
 		err = p.writeBool(true)
@@ -259,7 +259,7 @@ func (p *Property) GetByteValue() ([]byte, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
+func (v *BytePropertyValue) parse(p *parser, inner bool) error {
 	if inner {
 		return v.parseInner(p)
 	}
@@ -295,7 +295,7 @@ func (v *BytePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *BytePropertyValue) parseInner(p *Parser) error {
+func (v *BytePropertyValue) parseInner(p *parser) error {
 	// If len is 0 then we must be parsing a ByteProperty in the value of a MapProperty.
 	// Best guess is that it's only a single byte.
 	if v.len == 0 {
@@ -313,7 +313,7 @@ func (v *BytePropertyValue) parseInner(p *Parser) error {
 	return nil
 }
 
-func (v *BytePropertyValue) serialize(p *Parser, inner bool) error {
+func (v *BytePropertyValue) serialize(p *parser, inner bool) error {
 	if inner {
 		return v.serializeInner(p)
 	}
@@ -344,7 +344,7 @@ func (v *BytePropertyValue) serialize(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *BytePropertyValue) serializeInner(p *Parser) error {
+func (v *BytePropertyValue) serializeInner(p *parser) error {
 	panic("implement me")
 }
 
@@ -367,7 +367,7 @@ func (p *Property) GetDoubleValue() (float64, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
+func (v *DoublePropertyValue) parse(p *parser, inner bool) error {
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -382,7 +382,7 @@ func (v *DoublePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *DoublePropertyValue) serialize(p *Parser, inner bool) error {
+func (v *DoublePropertyValue) serialize(p *parser, inner bool) error {
 	err := p.writeNull()
 	if err != nil {
 		return err
@@ -417,7 +417,7 @@ func (p *Property) GetEnumPropertyValue() (*EnumPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *EnumPropertyValue) parse(p *Parser, inner bool) error {
+func (v *EnumPropertyValue) parse(p *parser, inner bool) error {
 	if inner {
 		return v.parseInner(p)
 	}
@@ -443,7 +443,7 @@ func (v *EnumPropertyValue) parse(p *Parser, inner bool) error {
 
 // When inside an array the entire enum is stored as a single string.
 // Split based on the delimiter ::
-func (v *EnumPropertyValue) parseInner(p *Parser) error {
+func (v *EnumPropertyValue) parseInner(p *parser) error {
 	enum, err := p.readString()
 	if err != nil {
 		return err
@@ -459,7 +459,7 @@ func (v *EnumPropertyValue) parseInner(p *Parser) error {
 	return nil
 }
 
-func (v *EnumPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *EnumPropertyValue) serialize(p *parser, inner bool) error {
 	if inner {
 		return p.writeString(fmt.Sprintf("%s::%s", v.Type, v.Value))
 	}
@@ -501,7 +501,7 @@ func (p *Property) GetFloatValue() (float32, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
+func (v *FloatPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
 		err := p.nextByteIsNull()
 		if err != nil {
@@ -518,7 +518,7 @@ func (v *FloatPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *FloatPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *FloatPropertyValue) serialize(p *parser, inner bool) error {
 	if !inner {
 		err := p.writeNull()
 		if err != nil {
@@ -553,7 +553,7 @@ func (p *Property) GetInt8Value() (int8, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
+func (v *Int8PropertyValue) parse(p *parser, inner bool) error {
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -567,7 +567,7 @@ func (v *Int8PropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *Int8PropertyValue) serialize(p *Parser, inner bool) error {
+func (v *Int8PropertyValue) serialize(p *parser, inner bool) error {
 	err := p.writeNull()
 	if err != nil {
 		return err
@@ -600,7 +600,7 @@ func (p *Property) GetInt64Value() (int64, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *Int64PropertyValue) parse(p *Parser, inner bool) error {
+func (v *Int64PropertyValue) parse(p *parser, inner bool) error {
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -614,7 +614,7 @@ func (v *Int64PropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *Int64PropertyValue) serialize(p *Parser, inner bool) error {
+func (v *Int64PropertyValue) serialize(p *parser, inner bool) error {
 	err := p.writeNull()
 	if err != nil {
 		return err
@@ -649,7 +649,7 @@ func (p *Property) GetInterfaceValue() (*InterfacePropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
+func (v *InterfacePropertyValue) parse(p *parser, inner bool) error {
 	var err error
 
 	if !inner {
@@ -672,7 +672,7 @@ func (v *InterfacePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *InterfacePropertyValue) serialize(p *Parser, inner bool) error {
+func (v *InterfacePropertyValue) serialize(p *parser, inner bool) error {
 	if !inner {
 		err := p.writeNull()
 		if err != nil {
@@ -712,7 +712,7 @@ func (p *Property) GetIntValue() (int32, error) {
 	return 0, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
+func (v *IntPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
 		err := p.nextByteIsNull()
 		if err != nil {
@@ -728,7 +728,7 @@ func (v *IntPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *IntPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *IntPropertyValue) serialize(p *parser, inner bool) error {
 	if !inner {
 		err := p.writeNull()
 		if err != nil {
@@ -766,7 +766,7 @@ func (p *Property) GetMapPropertyValue() (*MapPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *MapPropertyValue) parse(p *Parser, inner bool) error {
+func (v *MapPropertyValue) parse(p *parser, inner bool) error {
 	if v.Values == nil {
 		v.Values = make(map[PropertyValue]PropertyValue)
 	}
@@ -867,7 +867,7 @@ func (v *MapPropertyValue) MarshalJSON() ([]byte, error) {
 	return json.Marshal(out)
 }
 
-func (v *MapPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *MapPropertyValue) serialize(p *parser, inner bool) error {
 	panic("implement me")
 }
 
@@ -890,7 +890,7 @@ func (p *Property) GetNameValue() (string, error) {
 	return "", fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *NamePropertyValue) parse(p *Parser, inner bool) error {
+func (v *NamePropertyValue) parse(p *parser, inner bool) error {
 	err := p.nextByteIsNull()
 	if err != nil {
 		return err
@@ -904,7 +904,7 @@ func (v *NamePropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *NamePropertyValue) serialize(p *Parser, inner bool) error {
+func (v *NamePropertyValue) serialize(p *parser, inner bool) error {
 	err := p.writeNull()
 	if err != nil {
 		return err
@@ -939,7 +939,7 @@ func (p *Property) GetObjectValue() (*ObjectPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
+func (v *ObjectPropertyValue) parse(p *parser, inner bool) error {
 	var err error
 
 	if !inner {
@@ -962,7 +962,7 @@ func (v *ObjectPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *ObjectPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *ObjectPropertyValue) serialize(p *parser, inner bool) error {
 	if !inner {
 		err := p.writeNull()
 		if err != nil {
@@ -1002,7 +1002,7 @@ func (p *Property) GetStringValue() (string, error) {
 	return "", fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *StringPropertyValue) parse(p *Parser, inner bool) error {
+func (v *StringPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
 		err := p.nextByteIsNull()
 		if err != nil {
@@ -1018,7 +1018,7 @@ func (v *StringPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *StringPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *StringPropertyValue) serialize(p *parser, inner bool) error {
 	if !inner {
 		err := p.writeNull()
 		if err != nil {
@@ -1039,8 +1039,8 @@ func (v *StringPropertyValue) serialize(p *Parser, inner bool) error {
 //
 
 type StructValue interface {
-	parse(p *Parser) error
-	serialize(p *Parser) error
+	parse(p *parser) error
+	serialize(p *parser) error
 }
 
 type StructPropertyValue struct {
@@ -1061,7 +1061,7 @@ func (p *Property) GetStructValue() (*StructPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
+func (v *StructPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
 		structType, err := p.readString()
 		if err != nil {
@@ -1116,7 +1116,7 @@ func (v *StructPropertyValue) parse(p *Parser, inner bool) error {
 	return nil
 }
 
-func (v *StructPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *StructPropertyValue) serialize(p *parser, inner bool) error {
 	if !inner {
 		err := p.writeString(string(v.Type))
 		if err != nil {
@@ -1154,10 +1154,10 @@ func newTextPropertyValue() PropertyValue {
 	return &TextPropertyValue{}
 }
 
-func (v *TextPropertyValue) parse(p *Parser, inner bool) error {
+func (v *TextPropertyValue) parse(p *parser, inner bool) error {
 	panic("implement me")
 }
 
-func (v *TextPropertyValue) serialize(p *Parser, inner bool) error {
+func (v *TextPropertyValue) serialize(p *parser, inner bool) error {
 	panic("implement me")
 }

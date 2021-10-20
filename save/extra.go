@@ -19,7 +19,7 @@ type Extra struct {
 }
 
 type ExtraValue interface {
-	parse(p *Parser) error
+	parse(p *parser) error
 }
 
 func hasExtra(c string) func() *Extra {
@@ -68,7 +68,7 @@ func newCircuitSubsystem() *Extra {
 	}
 }
 
-func (e *CircuitSubsystemExtra) parse(p *Parser) error {
+func (e *CircuitSubsystemExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -122,7 +122,7 @@ func newConveyorBelt() *Extra {
 	}
 }
 
-func (e *ConveyorBeltExtra) parse(p *Parser) error {
+func (e *ConveyorBeltExtra) parse(p *parser) error {
 	itemCount, err := p.readInt32()
 	if err != nil {
 		return err
@@ -180,7 +180,7 @@ func newGameMode() *Extra {
 	}
 }
 
-func (e *GameModeExtra) parse(p *Parser) error {
+func (e *GameModeExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -218,7 +218,7 @@ func newGameState() *Extra {
 	}
 }
 
-func (e *GameStateExtra) parse(p *Parser) error {
+func (e *GameStateExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -259,7 +259,7 @@ func newPowerLine() *Extra {
 	}
 }
 
-func (e *PowerLineExtra) parse(p *Parser) error {
+func (e *PowerLineExtra) parse(p *parser) error {
 	var err error
 	e.SourceLevelName, err = p.readString()
 	if err != nil {
@@ -303,7 +303,7 @@ func newUnknownExtra(l int32) *Extra {
 	}
 }
 
-func (e *UnknownExtra) parse(p *Parser) error {
+func (e *UnknownExtra) parse(p *parser) error {
 	var err error
 	e.Data, err = p.readBytes(e.len)
 	if err != nil {
