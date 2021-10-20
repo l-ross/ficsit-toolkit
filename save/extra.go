@@ -50,6 +50,7 @@ func hasExtra(c string) func() *Extra {
 
 //
 // CircuitSubsystem
+//
 
 type CircuitSubsystemExtra struct {
 	Circuits []*Circuit

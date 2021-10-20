@@ -4,8 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/mattetti/filebuffer"
-
+	"github.com/ViRb3/slicewriteseek"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/stretchr/testify/require"
@@ -56,8 +55,11 @@ func TestStructs(t *testing.T) {
 			require.NoError(t, err)
 
 			p := &parser{
-				body: filebuffer.New(data),
+				body: &slicewriteseek.SliceWriteSeeker{
+					Buffer: data,
+				},
 			}
+
 			props, err := p.parseProperties()
 			require.NoError(t, err)
 			//assert.Zero(t, p.body.Len(), "we should have consumed the entire reader")

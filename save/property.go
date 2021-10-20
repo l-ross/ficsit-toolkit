@@ -112,8 +112,8 @@ func (p *parser) serializeProperty(prop *Property) error {
 		return err
 	}
 
-	// TODO: Do we want to write the actual length?
-	//  How often is it actually set by the game?
+	// Write placeholder length and record position.
+	lenPos := p.body.Index
 	err = p.writeInt32(0)
 	if err != nil {
 		return err
@@ -127,6 +127,18 @@ func (p *parser) serializeProperty(prop *Property) error {
 	err = prop.serialize(p, false)
 	if err != nil {
 		return err
+	}
+
+	// Write length at the recorded position.
+	// Satisfactory only seems to bother setting the length for some property types.
+	// Maintain consistency with the game and only write it for those same types.
+	switch prop.Type {
+	case ArrayPropertyType:
+		size := p.body.Index - lenPos - 4
+		err = p.writeLen(int32(size), lenPos)
+		if err != nil {
+			return err
+		}
 	}
 
 	err = p.writeNoneProp()

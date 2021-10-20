@@ -36,12 +36,16 @@ type Property struct {
 }
 
 type PropertyValue interface {
-	// Parse the property value
+	// parse the property value
 	//
 	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
 	parse(p *parser, inner bool) error
 
+	// serialize the property value
+	//
+	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
+	// In some cases this can change the format of the property value.
 	serialize(p *parser, inner bool) error
 }
 
@@ -88,7 +92,7 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 
 	// Special handling for BytePropertyType.
 	// Rather than creating 1 entry in the array per byte we just want to parse all
-	//  the data in to a single BytePropertyValue.
+	// the data in to a single BytePropertyValue.
 	if v.ValueType == BytePropertyType {
 		v.Values = make([]PropertyValue, 1)
 
@@ -185,7 +189,34 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 }
 
 func (v *ArrayPropertyValue) serialize(p *parser, inner bool) error {
-	panic("implement me")
+	err := p.writeString(string(v.ValueType))
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	err = p.writeNull()
+	if err != nil {
+		return err
+	}
+
+	err = p.writeInt32(int32(len(v.Values)))
+	if err != nil {
+		return err
+	}
+
+	if v.ValueType == BytePropertyType {
+		// TODO: Special handling
+	}
+
+	for _, pv := range v.Values {
+		err := pv.serialize(p, true)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 //

@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/mattetti/filebuffer"
+	"github.com/ViRb3/slicewriteseek"
 
 	"github.com/stretchr/testify/assert"
 
@@ -22,27 +22,27 @@ func TestProperties(t *testing.T) {
 		testData    string
 		assertValue func(t *testing.T, p *Property)
 	}{
-		//{
-		//	name:     "ArrayProperty_InterfaceValueType",
-		//	testData: "testdata/prop_array_interface.dat",
-		//	assertValue: func(t *testing.T, p *Property) {
-		//		v, err := p.GetArrayValue()
-		//		require.NoError(t, err)
-		//		assert.Equal(t, &ArrayPropertyValue{
-		//			ValueType: InterfacePropertyType,
-		//			Values: []PropertyValue{
-		//				&InterfacePropertyValue{
-		//					LevelName: "LevelName1",
-		//					PathName:  "PathName1",
-		//				},
-		//				&InterfacePropertyValue{
-		//					LevelName: "LevelName2",
-		//					PathName:  "PathName2",
-		//				},
-		//			},
-		//		}, v)
-		//	},
-		//},
+		{
+			name:     "ArrayProperty_InterfaceValueType",
+			testData: "testdata/prop_array_interface.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetArrayValue()
+				require.NoError(t, err)
+				assert.Equal(t, &ArrayPropertyValue{
+					ValueType: InterfacePropertyType,
+					Values: []PropertyValue{
+						&InterfacePropertyValue{
+							LevelName: "LevelName1",
+							PathName:  "PathName1",
+						},
+						&InterfacePropertyValue{
+							LevelName: "LevelName2",
+							PathName:  "PathName2",
+						},
+					},
+				}, v)
+			},
+		},
 		//{
 		//	name:     "ArrayProperty_StructProperty",
 		//	testData: "testdata/prop_array_struct.dat",
@@ -192,8 +192,11 @@ func TestProperties(t *testing.T) {
 			require.NoError(t, err)
 
 			p := &parser{
-				body: filebuffer.New(data),
+				body: &slicewriteseek.SliceWriteSeeker{
+					Buffer: data,
+				},
 			}
+
 			props, err := p.parseProperties()
 			require.NoError(t, err)
 			assert.Equal(t, p.body.Index, int64(len(data)), "we should have consumed the entire reader")
@@ -202,7 +205,7 @@ func TestProperties(t *testing.T) {
 			prop := props[0]
 			tt.assertValue(t, prop)
 
-			out := filebuffer.New([]byte{})
+			out := slicewriteseek.New()
 			p = &parser{
 				body: out,
 			}
@@ -210,7 +213,7 @@ func TestProperties(t *testing.T) {
 			err = p.serializeProperty(prop)
 			require.NoError(t, err)
 
-			assert.Equal(t, data, p.body.Buff.Bytes())
+			assert.Equal(t, data, out.Buffer)
 		})
 	}
 }

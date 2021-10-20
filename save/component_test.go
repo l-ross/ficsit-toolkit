@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/mattetti/filebuffer"
+	"github.com/ViRb3/slicewriteseek"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -19,7 +19,9 @@ func TestComponent(t *testing.T) {
 	require.NoError(t, err)
 
 	p := &parser{
-		body: filebuffer.New(data),
+		body: &slicewriteseek.SliceWriteSeeker{
+			Buffer: data,
+		},
 	}
 
 	c, err := p.parseComponent()
@@ -29,7 +31,7 @@ func TestComponent(t *testing.T) {
 		c.InstanceName,
 	)
 
-	out := filebuffer.New([]byte{})
+	out := slicewriteseek.New()
 	p = &parser{
 		body: out,
 	}
@@ -37,5 +39,5 @@ func TestComponent(t *testing.T) {
 	err = p.serializeComponent(c)
 	require.NoError(t, err)
 
-	assert.Equal(t, data, out.Buff.Bytes())
+	assert.Equal(t, data, out.Buffer)
 }

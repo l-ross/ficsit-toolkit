@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/mattetti/filebuffer"
+	"github.com/ViRb3/slicewriteseek"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -19,7 +19,9 @@ func TestEntity(t *testing.T) {
 	require.NoError(t, err)
 
 	p := &parser{
-		body: filebuffer.New(data),
+		body: &slicewriteseek.SliceWriteSeeker{
+			Buffer: data,
+		},
 	}
 
 	e, err := p.parseEntity()
@@ -29,7 +31,7 @@ func TestEntity(t *testing.T) {
 		e.InstanceName,
 	)
 
-	out := filebuffer.New([]byte{})
+	out := slicewriteseek.New()
 	p = &parser{
 		body: out,
 	}
@@ -37,5 +39,5 @@ func TestEntity(t *testing.T) {
 	err = p.serializeEntity(e)
 	require.NoError(t, err)
 
-	assert.Equal(t, data, out.Buff.Bytes())
+	assert.Equal(t, data, out.Buffer)
 }

@@ -186,3 +186,24 @@ func (p *parser) writeString(str string) error {
 func (p *parser) writeNoneProp() error {
 	return p.writeString("None")
 }
+
+func (p *parser) writeLen(i int32, idx int64) error {
+	currentPos := p.body.Index
+
+	_, err := p.body.Seek(idx, io.SeekStart)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeInt32(i)
+	if err != nil {
+		return err
+	}
+
+	_, err = p.body.Seek(currentPos, io.SeekStart)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}

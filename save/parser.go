@@ -3,24 +3,28 @@ package save
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 
-	"github.com/mattetti/filebuffer"
+	"github.com/ViRb3/slicewriteseek"
 )
 
 type parser struct {
 	// Body of the save file.
-	body *filebuffer.Buffer
+	body *slicewriteseek.SliceWriteSeeker
 }
 
 func newParser(r io.Reader) (*parser, error) {
 	p := &parser{}
 
-	body, err := filebuffer.NewFromReader(r)
+	data, err := ioutil.ReadAll(r)
 	if err != nil {
 		return nil, err
 	}
 
-	p.body = body
+	p.body = &slicewriteseek.SliceWriteSeeker{
+		Buffer: data,
+		Index:  0,
+	}
 
 	return p, nil
 }
@@ -71,7 +75,7 @@ func (p *parser) parseBody(s *Save) error {
 	bodyLen += 4
 
 	// Verify the body is the expected length.
-	actualLen := len(p.body.Buff.Bytes())
+	actualLen := p.body.Len()
 	if bodyLen != int32(actualLen) {
 		return fmt.Errorf("expected decompressed body to be %d but was %d", actualLen, bodyLen)
 	}

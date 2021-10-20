@@ -7,10 +7,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/mattetti/filebuffer"
+	"github.com/ViRb3/slicewriteseek"
 )
 
-func (p *parser) decompressBody() (*filebuffer.Buffer, error) {
+func (p *parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
 	chunks := make([]byte, 0)
 
 	for {
@@ -31,7 +31,11 @@ func (p *parser) decompressBody() (*filebuffer.Buffer, error) {
 		chunks = append(chunks, chunk...)
 	}
 
-	return filebuffer.New(chunks), nil
+	b := &slicewriteseek.SliceWriteSeeker{
+		Buffer: chunks,
+	}
+
+	return b, nil
 }
 
 type chunkHeader struct {

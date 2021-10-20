@@ -3,12 +3,12 @@ package save
 import (
 	"io"
 
-	"github.com/mattetti/filebuffer"
+	"github.com/ViRb3/slicewriteseek"
 )
 
 func Serialize(s *Save, w io.Writer) error {
 	p := &parser{
-		body: filebuffer.New([]byte{}),
+		body: slicewriteseek.New(),
 	}
 
 	// Write placeholder length.
