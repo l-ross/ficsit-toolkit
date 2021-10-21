@@ -150,6 +150,7 @@ func (p *parser) serializeProperty(prop *Property) error {
 	// or not. Maintain consistency with the game and only write it for those same types.
 	switch prop.Type {
 	case ArrayPropertyType,
+		MapPropertyType,
 		ObjectPropertyType,
 		StructPropertyType:
 		err = p.writeLen(l, lenPos)

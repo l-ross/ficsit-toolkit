@@ -825,6 +825,8 @@ type MapPropertyValue struct {
 	KeyType   PropertyType                    `json:"key_type,omitempty"`
 	ValueType PropertyType                    `json:"value_type,omitempty"`
 	Values    map[PropertyValue]PropertyValue `json:"values,omitempty"`
+
+	keyOrder []PropertyValue
 }
 
 func newMapPropertyValue() PropertyValue {
@@ -842,6 +844,7 @@ func (p *Property) GetMapPropertyValue() (*MapPropertyValue, error) {
 func (v *MapPropertyValue) parse(p *parser, inner bool) error {
 	if v.Values == nil {
 		v.Values = make(map[PropertyValue]PropertyValue)
+		v.keyOrder = make([]PropertyValue, 0)
 	}
 
 	keyType, err := p.readString()
@@ -916,6 +919,8 @@ func (v *MapPropertyValue) parse(p *parser, inner bool) error {
 			return err
 		}
 
+		v.keyOrder = append(v.keyOrder, key)
+
 		val := newValue()
 		err = val.parse(p, true)
 		if err != nil {
@@ -941,7 +946,52 @@ func (v *MapPropertyValue) MarshalJSON() ([]byte, error) {
 }
 
 func (v *MapPropertyValue) serialize(p *parser, inner bool) (int32, error) {
-	panic("implement me")
+	err := p.writeString(string(v.KeyType))
+	if err != nil {
+		return 0, err
+	}
+
+	err = p.writeString(string(v.ValueType))
+	if err != nil {
+		return 0, err
+	}
+
+	err = p.writeNull()
+	if err != nil {
+		return 0, err
+	}
+
+	m := p.measure()
+
+	// UNKNOWN_DATA
+	err = p.writeInt32(0)
+	if err != nil {
+		return 0, err
+	}
+
+	err = p.writeInt32(int32(len(v.keyOrder)))
+	if err != nil {
+		return 0, err
+	}
+
+	for _, k := range v.keyOrder {
+		value, ok := v.Values[k]
+		if !ok {
+			return 0, fmt.Errorf("failed to find value for key %v", k)
+		}
+
+		_, err = k.serialize(p, true)
+		if err != nil {
+			return 0, err
+		}
+
+		_, err = value.serialize(p, true)
+		if err != nil {
+			return 0, err
+		}
+	}
+
+	return m(), nil
 }
 
 //

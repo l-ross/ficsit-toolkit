@@ -131,17 +131,17 @@ func TestProperties(t *testing.T) {
 				assert.Equal(t, int32(4), v)
 			},
 		},
-		//{
-		//	name:     "MapProperty_IntKey_IntValue",
-		//	testData: "testdata/prop_map_int_int.dat",
-		//	assertValue: func(t *testing.T, p *Property) {
-		//		v, err := p.GetMapPropertyValue()
-		//		require.NoError(t, err)
-		//		assert.Equal(t, IntPropertyType, v.KeyType)
-		//		assert.Equal(t, IntPropertyType, v.ValueType)
-		//		assert.Len(t, v.Values, 20)
-		//	},
-		//},
+		{
+			name:     "MapProperty_IntKey_IntValue",
+			testData: "testdata/prop_map_int_int.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetMapPropertyValue()
+				require.NoError(t, err)
+				assert.Equal(t, IntPropertyType, v.KeyType)
+				assert.Equal(t, IntPropertyType, v.ValueType)
+				assert.Len(t, v.Values, 20)
+			},
+		},
 		{
 			name:     "NameProperty",
 			testData: "testdata/prop_name.dat",
