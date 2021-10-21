@@ -43,21 +43,21 @@ func TestProperties(t *testing.T) {
 				}, v)
 			},
 		},
-		//{
-		//	name:     "ArrayProperty_StructProperty",
-		//	testData: "testdata/prop_array_struct.dat",
-		//	assertValue: func(t *testing.T, p *Property) {
-		//		s1, err := p.GetStructValue()
-		//		require.NoError(t, err)
-		//		a, err := s1.GetArbitraryStruct()
-		//		require.NoError(t, err)
-		//		require.Len(t, a.Properties, 1)
-		//		arr, err := a.Properties[0].GetArrayValue()
-		//		require.NoError(t, err)
-		//		require.Len(t, arr.Values, 1)
-		//
-		//	},
-		//},
+		{
+			name:     "ArrayProperty_StructProperty",
+			testData: "testdata/prop_array_struct.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				s1, err := p.GetStructValue()
+				require.NoError(t, err)
+				a, err := s1.GetArbitraryStruct()
+				require.NoError(t, err)
+				require.Len(t, a.Properties, 1)
+				arr, err := a.Properties[0].GetArrayValue()
+				require.NoError(t, err)
+				require.Len(t, arr.Values, 1)
+
+			},
+		},
 		{
 			name:     "BoolProperty",
 			testData: "testdata/prop_bool.dat",

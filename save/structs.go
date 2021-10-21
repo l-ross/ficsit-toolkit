@@ -102,6 +102,21 @@ func (s *BoxStruct) parse(p *parser) error {
 }
 
 func (s *BoxStruct) serialize(p *parser) error {
+	err := p.writeFloat32Array(s.Min)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32Array(s.Max)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeBool(s.IsValid)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
 
@@ -123,7 +138,7 @@ func (s *FluidBoxStruct) parse(p *parser) error {
 }
 
 func (s *FluidBoxStruct) serialize(p *parser) error {
-	return nil
+	return p.writeFloat32(float32(*s))
 }
 
 //
@@ -204,6 +219,56 @@ func (s *InventoryItemStruct) parse(p *parser) error {
 }
 
 func (s *InventoryItemStruct) serialize(p *parser) error {
+	// UNKNOWN_DATA
+	err := p.writeInt32(0)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(s.ItemName)
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	err = p.writeInt32(0)
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	err = p.writeInt32(0)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString("NumItems")
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString("IntProperty")
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	err = p.writeInt32(0)
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	err = p.writeNulls(5)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeInt32(s.NumItems)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
 
@@ -244,6 +309,26 @@ func (s *LinearColor) parse(p *parser) error {
 }
 
 func (s *LinearColor) serialize(p *parser) error {
+	err := p.writeFloat32(s.R)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.G)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.B)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.A)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
 
@@ -284,6 +369,26 @@ func (s *QuatStruct) parse(p *parser) error {
 }
 
 func (s *QuatStruct) serialize(p *parser) error {
+	err := p.writeFloat32(s.X)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.Y)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.Z)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.W)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
 
@@ -318,5 +423,20 @@ func (s *VectorStruct) parse(p *parser) error {
 }
 
 func (s *VectorStruct) serialize(p *parser) error {
+	err := p.writeFloat32(s.X)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.Y)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeFloat32(s.Z)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }

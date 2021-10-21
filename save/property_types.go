@@ -60,6 +60,11 @@ type newPropValueFunc func() PropertyValue
 type ArrayPropertyValue struct {
 	ValueType PropertyType    `json:"value_type,omitempty"`
 	Values    []PropertyValue `json:"values,omitempty"`
+
+	StructName      string
+	StructBytes     []byte
+	StructInnerType string
+	StructGUID      []int32
 }
 
 func newArrayPropertyValue() PropertyValue {
@@ -132,30 +137,31 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 		// TODO: Do these elements serve any purpose? Will they ever be anything other than expected values?
 		//  Possibly add some checks and log if they are found to differ.
 		// Name
-		_, err = p.readString()
+		v.StructName, err = p.readString()
 		if err != nil {
 			return err
 		}
 
 		// Type
+		// Is this always StructProperty?
 		_, err = p.readString()
 		if err != nil {
 			return err
 		}
 
 		// UNKNOWN_DATA
-		_, err = p.readBytes(8)
+		v.StructBytes, err = p.readBytes(8)
 		if err != nil {
 			return err
 		}
 
-		innerType, err := p.readString()
+		v.StructInnerType, err = p.readString()
 		if err != nil {
 			return err
 		}
 
 		// GUID
-		_, err = p.readInt32Array(4)
+		v.StructGUID, err = p.readInt32Array(4)
 		if err != nil {
 			return err
 		}
@@ -167,7 +173,7 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 
 		newPropValue = func() PropertyValue {
 			return &StructPropertyValue{
-				Type: StructType(innerType),
+				Type: StructType(v.StructInnerType),
 			}
 		}
 	case TextPropertyType:
@@ -211,6 +217,38 @@ func (v *ArrayPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 
 	if v.ValueType == BytePropertyType {
 		// TODO: Special handling
+	}
+
+	if v.ValueType == StructPropertyType {
+		err = p.writeString(v.StructName)
+		if err != nil {
+			return 0, err
+		}
+
+		err = p.writeString("StructProperty")
+		if err != nil {
+			return 0, err
+		}
+
+		err = p.writeBytes(v.StructBytes)
+		if err != nil {
+			return 0, err
+		}
+
+		err = p.writeString(v.StructInnerType)
+		if err != nil {
+			return 0, err
+		}
+
+		err = p.writeInt32Array(v.StructGUID)
+		if err != nil {
+			return 0, err
+		}
+
+		err = p.writeNull()
+		if err != nil {
+			return 0, err
+		}
 	}
 
 	for _, pv := range v.Values {

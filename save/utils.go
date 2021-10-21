@@ -128,6 +128,11 @@ func (p *parser) writeByte(b byte) error {
 	return err
 }
 
+func (p *parser) writeBytes(b []byte) error {
+	_, err := p.body.Write(b)
+	return err
+}
+
 func (p *parser) writeInt8(i int8) error {
 	return binary.Write(p.body, binary.LittleEndian, i)
 }
@@ -165,6 +170,17 @@ func (p *parser) writeBool(b bool) error {
 
 func (p *parser) writeNull() error {
 	return binary.Write(p.body, binary.LittleEndian, byte(0x00))
+}
+
+func (p *parser) writeNulls(len int32) error {
+	for i := int32(0); i < len; i++ {
+		err := p.writeNull()
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 func (p *parser) writeString(str string) error {
