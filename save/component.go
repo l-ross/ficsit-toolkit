@@ -79,5 +79,30 @@ func (c *Component) serialize(p *parser) error {
 }
 
 func (c *Component) serializeData(p *parser) error {
+	// Write placeholder length
+	lenPos := p.body.Index
+	err := p.writeInt32(0)
+	if err != nil {
+		return err
+	}
+
+	m := p.measure()
+
+	err = p.serializeProperties(c.Properties)
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	err = p.writeInt32(0)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeLen(m(), lenPos)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }

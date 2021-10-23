@@ -41,3 +41,31 @@ func TestComponent_parse(t *testing.T) {
 	require.NoError(t, err)
 	assert.Equal(t, data, out.Buffer)
 }
+
+func TestComponent_parseData(t *testing.T) {
+	// Parse a component's data, then serialize it back and confirm
+	// it matches the original.
+
+	data, err := ioutil.ReadFile("testdata/component_data.dat")
+	require.NoError(t, err)
+
+	p := &parser{
+		body: &slicewriteseek.SliceWriteSeeker{
+			Buffer: data,
+		},
+	}
+
+	c := &Component{}
+	err = c.parseData(p)
+
+	out := slicewriteseek.New()
+	p = &parser{
+		body: out,
+	}
+
+	err = c.serializeData(p)
+	require.NoError(t, err)
+	assert.Equal(t, data, out.Buffer)
+
+	err = ioutil.WriteFile("out.dump", out.Buffer, 0644)
+}

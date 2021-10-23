@@ -401,6 +401,8 @@ func (v *BytePropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
+	m := p.measure()
+
 	switch v.Type {
 	case "None":
 		err = p.writeByte(v.Value[0])
@@ -414,7 +416,7 @@ func (v *BytePropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		}
 	}
 
-	return 0, nil
+	return m(), nil
 }
 
 func (v *BytePropertyValue) serializeInner(p *parser) (int32, error) {

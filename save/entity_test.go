@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestParseEntity(t *testing.T) {
+func TestEntity_parse(t *testing.T) {
 	// Parse an entity, then serialize it back and confirm it
 	// matches the original.
 	t.Parallel()
@@ -43,7 +43,9 @@ func TestParseEntity(t *testing.T) {
 	assert.Equal(t, data, out.Buffer)
 }
 
-func TestParseEntityData(t *testing.T) {
+func TestEntity_parseData(t *testing.T) {
+	// Parse an entity's data, then serialize it back and confirm
+	// it matches the original.
 	t.Parallel()
 
 	data, err := ioutil.ReadFile("testdata/entity_data.dat")
@@ -58,6 +60,7 @@ func TestParseEntityData(t *testing.T) {
 	e := &Entity{}
 	err = e.parseData(p)
 	require.NoError(t, err)
+	assert.Len(t, e.Properties, 3)
 
 	out := slicewriteseek.New()
 	p = &parser{
@@ -68,7 +71,4 @@ func TestParseEntityData(t *testing.T) {
 	require.NoError(t, err)
 
 	assert.Equal(t, data, out.Buffer)
-
-	err = ioutil.WriteFile("out.dump", out.Buffer, 0644)
-	require.NoError(t, err)
 }
