@@ -27,10 +27,15 @@ func Serialize(s *Save, w io.Writer) error {
 		return err
 	}
 
-	//_, err = w.Write(p.body.Buff.Bytes())
-	//if err != nil {
-	//	return err
-	//}
+	err = p.writeLen(int32(p.body.Len()), 0)
+	if err != nil {
+		return err
+	}
+
+	_, err = w.Write(p.body.Buffer)
+	if err != nil {
+		return err
+	}
 
 	return nil
 }
@@ -48,7 +53,7 @@ func (p *parser) serializeObjects(s *Save) error {
 			return err
 		}
 
-		err = p.serializeEntity(e)
+		err = e.serialize(p)
 		if err != nil {
 			return err
 		}
@@ -60,7 +65,7 @@ func (p *parser) serializeObjects(s *Save) error {
 			return err
 		}
 
-		err = p.serializeComponent(c)
+		err = c.serialize(p)
 		if err != nil {
 			return err
 		}

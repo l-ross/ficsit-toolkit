@@ -1,33 +1,60 @@
 package save
 
-func (p *parser) parseComponent() (*Component, error) {
-	c := &Component{}
+type Component struct {
+	TypePath         string      `json:"typePath"`
+	RootObject       string      `json:"rootObject"`
+	InstanceName     string      `json:"instanceName"`
+	ParentEntityName string      `json:"parentEntityName"`
+	Properties       []*Property `json:"properties"`
+}
 
+func (c *Component) parse(p *parser) error {
 	var err error
 	c.TypePath, err = p.readString()
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	c.RootObject, err = p.readString()
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	c.InstanceName, err = p.readString()
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	c.ParentEntityName, err = p.readString()
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	return c, nil
+	return nil
 }
 
-func (p *parser) serializeComponent(c *Component) error {
+func (c *Component) parseData(p *parser) error {
+	// Data length
+	_, err := p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	c.Properties, err = p.parseProperties()
+	if err != nil {
+		return err
+	}
+
+	// UNKNOWN_DATA
+	_, err = p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (c *Component) serialize(p *parser) error {
 	err := p.writeString(c.TypePath)
 	if err != nil {
 		return err
@@ -48,5 +75,9 @@ func (p *parser) serializeComponent(c *Component) error {
 		return err
 	}
 
+	return nil
+}
+
+func (c *Component) serializeData(p *parser) error {
 	return nil
 }

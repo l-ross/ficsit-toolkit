@@ -21,6 +21,8 @@ type Extra struct {
 
 type ExtraValue interface {
 	parse(p *parser) error
+
+	serialize(p *parser) error
 }
 
 func getExtra(c string) func(l int32) *Extra {
@@ -107,6 +109,10 @@ func (e *CircuitSubsystemExtra) parse(p *parser) error {
 	return nil
 }
 
+func (e *CircuitSubsystemExtra) serialize(p *parser) error {
+	panic("implement me")
+}
+
 //
 // ConveyorBelt
 //
@@ -172,6 +178,10 @@ func (e *ConveyorBeltExtra) parse(p *parser) error {
 	return nil
 }
 
+func (e *ConveyorBeltExtra) serialize(p *parser) error {
+	panic("implement me")
+}
+
 //
 // GameMode
 //
@@ -208,6 +218,10 @@ func (e *GameModeExtra) parse(p *parser) error {
 	}
 
 	return nil
+}
+
+func (e *GameModeExtra) serialize(p *parser) error {
+	panic("implement me")
 }
 
 //
@@ -248,6 +262,10 @@ func (e *GameStateExtra) parse(p *parser) error {
 	return nil
 }
 
+func (e *GameStateExtra) serialize(p *parser) error {
+	panic("implement me")
+}
+
 //
 // PlayerState
 //
@@ -275,6 +293,10 @@ func (e *PlayerStateExtra) parse(p *parser) error {
 	}
 
 	return nil
+}
+
+func (e *PlayerStateExtra) serialize(p *parser) error {
+	panic("implement me")
 }
 
 //
@@ -318,6 +340,10 @@ func (e *PowerLineExtra) parse(p *parser) error {
 	}
 
 	return nil
+}
+
+func (e *PowerLineExtra) serialize(p *parser) error {
+	panic("implement me")
 }
 
 //
@@ -368,6 +394,10 @@ func (e *TrainExtra) parse(p *parser) error {
 	return nil
 }
 
+func (e *TrainExtra) serialize(p *parser) error {
+	panic("implement me")
+}
+
 //
 // UnknownExtra
 //
@@ -395,4 +425,8 @@ func (e *UnknownExtra) parse(p *parser) error {
 	}
 
 	return nil
+}
+
+func (e *UnknownExtra) serialize(p *parser) error {
+	panic("implement me")
 }

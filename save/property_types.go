@@ -466,7 +466,7 @@ func (v *DoublePropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
-	return 0, nil
+	return 8, nil
 }
 
 //
@@ -547,12 +547,14 @@ func (v *EnumPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
+	m := p.measure()
+
 	err = p.writeString(v.Value)
 	if err != nil {
 		return 0, err
 	}
 
-	return 0, nil
+	return m(), nil
 }
 
 //
@@ -604,7 +606,7 @@ func (v *FloatPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
-	return 0, nil
+	return 4, nil
 }
 
 //
@@ -651,7 +653,7 @@ func (v *Int8PropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
-	return 0, nil
+	return 1, nil
 }
 
 //
@@ -698,7 +700,7 @@ func (v *Int64PropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
-	return 0, nil
+	return 8, nil
 }
 
 //
@@ -753,6 +755,8 @@ func (v *InterfacePropertyValue) serialize(p *parser, inner bool) (int32, error)
 		}
 	}
 
+	m := p.measure()
+
 	err := p.writeString(v.LevelName)
 	if err != nil {
 		return 0, err
@@ -763,7 +767,7 @@ func (v *InterfacePropertyValue) serialize(p *parser, inner bool) (int32, error)
 		return 0, err
 	}
 
-	return 0, nil
+	return m(), nil
 }
 
 //
@@ -814,7 +818,7 @@ func (v *IntPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
-	return 0, nil
+	return 4, nil
 }
 
 //
@@ -1033,12 +1037,14 @@ func (v *NamePropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		return 0, err
 	}
 
+	m := p.measure()
+
 	err = p.writeString(string(*v))
 	if err != nil {
 		return 0, err
 	}
 
-	return 0, nil
+	return m(), nil
 }
 
 //
@@ -1151,12 +1157,14 @@ func (v *StringPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		}
 	}
 
+	m := p.measure()
+
 	err := p.writeString(string(*v))
 	if err != nil {
 		return 0, err
 	}
 
-	return 0, nil
+	return m(), nil
 }
 
 //

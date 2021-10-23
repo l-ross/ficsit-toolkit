@@ -15,6 +15,21 @@ func ParseHeader(r io.Reader) (*Header, error) {
 	return p.parseHeader()
 }
 
+type Header struct {
+	HeaderVersion       int32  `json:"headerVersion"`
+	SaveVersion         int32  `json:"saveVersion"`
+	BuildVersion        int32  `json:"buildVersion"`
+	MapName             string `json:"mapName"`
+	MapOptions          string `json:"mapOptions"`
+	SessionName         string `json:"sessionName"`
+	PlayTime            int32  `json:"playTime"`
+	SaveDate            int64  `json:"saveDate"`
+	SessionVisibility   byte   `json:"sessionVisibility"`
+	EditorObjectVersion int32  `json:"editorObjectVersion"`
+	ModMetadata         string `json:"modMetadata"`
+	ModFlags            int32  `json:"modFlags"`
+}
+
 func (p *parser) parseHeader() (*Header, error) {
 	h := &Header{}
 
@@ -45,7 +60,7 @@ func (p *parser) parseHeader() (*Header, error) {
 		return nil, err
 	}
 
-	// TODO: Convert to a map?
+	// TODO: Add Get method to return map[string]string
 	h.MapOptions, err = p.readString()
 	if err != nil {
 		return nil, err

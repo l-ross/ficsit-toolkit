@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestEntity(t *testing.T) {
+func TestParseEntity(t *testing.T) {
 	// Parse an entity, then serialize it back and confirm it
 	// matches the original.
 	t.Parallel()
@@ -24,7 +24,8 @@ func TestEntity(t *testing.T) {
 		},
 	}
 
-	e, err := p.parseEntity()
+	e := &Entity{}
+	err = e.parse(p)
 	require.NoError(t, err)
 	assert.Equal(t,
 		"Persistent_Level:PersistentLevel.FGPipeNetwork_2147302283",
@@ -36,8 +37,38 @@ func TestEntity(t *testing.T) {
 		body: out,
 	}
 
-	err = p.serializeEntity(e)
+	err = e.serialize(p)
 	require.NoError(t, err)
 
 	assert.Equal(t, data, out.Buffer)
+}
+
+func TestParseEntityData(t *testing.T) {
+	t.Parallel()
+
+	data, err := ioutil.ReadFile("testdata/entity_data.dat")
+	require.NoError(t, err)
+
+	p := &parser{
+		body: &slicewriteseek.SliceWriteSeeker{
+			Buffer: data,
+		},
+	}
+
+	e := &Entity{}
+	err = e.parseData(p)
+	require.NoError(t, err)
+
+	out := slicewriteseek.New()
+	p = &parser{
+		body: out,
+	}
+
+	err = e.serializeData(p)
+	require.NoError(t, err)
+
+	assert.Equal(t, data, out.Buffer)
+
+	err = ioutil.WriteFile("out.dump", out.Buffer, 0644)
+	require.NoError(t, err)
 }

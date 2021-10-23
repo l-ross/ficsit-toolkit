@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestComponent(t *testing.T) {
+func TestComponent_parse(t *testing.T) {
 	// Parse a component, then serialize it back and confirm it
 	// matches the original.
 	t.Parallel()
@@ -24,7 +24,8 @@ func TestComponent(t *testing.T) {
 		},
 	}
 
-	c, err := p.parseComponent()
+	c := &Component{}
+	err = c.parse(p)
 	require.NoError(t, err)
 	assert.Equal(t,
 		"Persistent_Level:PersistentLevel.Build_Workshop_C_2146449192.FGFactoryLegs",
@@ -36,8 +37,7 @@ func TestComponent(t *testing.T) {
 		body: out,
 	}
 
-	err = p.serializeComponent(c)
+	err = c.serialize(p)
 	require.NoError(t, err)
-
 	assert.Equal(t, data, out.Buffer)
 }

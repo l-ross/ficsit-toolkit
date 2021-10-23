@@ -25,17 +25,20 @@ func realMain() error {
 	if err != nil {
 		return err
 	}
+	if s == nil {
 
-	fOut, err := os.OpenFile("out.sav", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0644)
-	if err != nil {
-		return err
 	}
-	defer fOut.Close()
 
-	err = save.Serialize(s, fOut)
-	if err != nil {
-		return err
-	}
+	//fOut, err := os.OpenFile("out.sav", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0644)
+	//if err != nil {
+	//	return err
+	//}
+	//defer fOut.Close()
+	//
+	//err = save.Serialize(s, fOut)
+	//if err != nil {
+	//	return err
+	//}
 
 	return nil
 }

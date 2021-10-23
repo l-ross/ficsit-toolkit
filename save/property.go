@@ -146,17 +146,9 @@ func (p *parser) serializeProperty(prop *Property) error {
 	}
 
 	// Write length at the recorded position.
-	// Satisfactory only seems to bother setting the length for some property types. No idea if this is intentional
-	// or not. Maintain consistency with the game and only write it for those same types.
-	switch prop.Type {
-	case ArrayPropertyType,
-		MapPropertyType,
-		ObjectPropertyType,
-		StructPropertyType:
-		err = p.writeLen(l, lenPos)
-		if err != nil {
-			return err
-		}
+	err = p.writeLen(l, lenPos)
+	if err != nil {
+		return err
 	}
 
 	return nil
