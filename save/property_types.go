@@ -30,7 +30,6 @@ const (
 type Property struct {
 	Name          string       `json:"name"`
 	Type          PropertyType `json:"type"`
-	ValueLen      int32        `json:"valueLen"`
 	Index         int32        `json:"index"`
 	PropertyValue `json:"value"`
 }
@@ -696,7 +695,7 @@ func (v *Int8PropertyValue) serialize(p *parser, inner bool) (int32, error) {
 // Int64Property
 //
 
-type Int64PropertyValue int8
+type Int64PropertyValue int64
 
 func newInt64PropertyValue() PropertyValue {
 	v := Int64PropertyValue(0)
@@ -1209,7 +1208,7 @@ func (v *StringPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 
 type StructValue interface {
 	parse(p *parser) error
-	serialize(p *parser) error
+	serialize(p *parser) (int32, error)
 }
 
 type StructPropertyValue struct {
@@ -1303,14 +1302,12 @@ func (v *StructPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 		}
 	}
 
-	m := p.measure()
-
-	err := v.Value.serialize(p)
+	l, err := v.Value.serialize(p)
 	if err != nil {
 		return 0, err
 	}
 
-	return m(), nil
+	return l, nil
 }
 
 //

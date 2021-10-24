@@ -1,5 +1,10 @@
 package save
 
+import (
+	"encoding/binary"
+	"io"
+)
+
 type Entity struct {
 	TypePath         string             `json:"typePath"`
 	RootObject       string             `json:"rootObject"`
@@ -14,6 +19,9 @@ type Entity struct {
 	Children         []*ObjectReference `json:"children"`
 	Properties       []*Property        `json:"properties"`
 	Extra            *Extra             `json:"extras"`
+
+	objectDataPos int64
+	objectData    []byte
 }
 
 func (e *Entity) parse(p *parser) error {
@@ -65,6 +73,27 @@ func (e *Entity) parseData(p *parser) error {
 	dataSize, err := p.readInt32()
 	if err != nil {
 		return err
+	}
+
+	if debug {
+		e.objectDataPos = p.body.Index - 4
+
+		pos := p.body.Index
+
+		e.objectData = make([]byte, 4)
+		binary.LittleEndian.PutUint32(e.objectData, uint32(dataSize))
+
+		b, err := p.readBytes(dataSize)
+		if err != nil {
+			return err
+		}
+
+		e.objectData = append(e.objectData, b...)
+
+		_, err = p.body.Seek(pos, io.SeekStart)
+		if err != nil {
+			return err
+		}
 	}
 
 	m := p.measure()

@@ -349,6 +349,8 @@ func (e *GameStateExtra) parse(p *parser) error {
 		if err != nil {
 			return err
 		}
+
+		e.Objects = append(e.Objects, o)
 	}
 
 	return nil

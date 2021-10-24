@@ -29,6 +29,11 @@ func Serialize(s *Save, w io.Writer) error {
 		return err
 	}
 
+	err = p.serializeCollectedObjects(s)
+	if err != nil {
+		return err
+	}
+
 	err = p.writeLen(m(), 0)
 	if err != nil {
 		return err
@@ -92,6 +97,27 @@ func (p *parser) serializeObjectData(s *Save) error {
 
 	for _, c := range s.Components {
 		err = c.serializeData(p)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (p *parser) serializeCollectedObjects(s *Save) error {
+	err := p.writeInt32(int32(len(s.CollectedObjects)))
+	if err != nil {
+		return err
+	}
+
+	for _, c := range s.CollectedObjects {
+		err = p.writeString(c.LevelName)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(c.PathName)
 		if err != nil {
 			return err
 		}

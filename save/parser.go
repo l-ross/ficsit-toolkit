@@ -8,6 +8,8 @@ import (
 	"github.com/ViRb3/slicewriteseek"
 )
 
+var debug = false
+
 type Save struct {
 	Header           *Header            `json:"header"`
 	Components       []*Component       `json:"components"`

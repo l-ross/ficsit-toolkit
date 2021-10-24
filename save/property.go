@@ -41,7 +41,8 @@ func (p *parser) parseProperty() (*Property, error) {
 	}
 	prop.Type = PropertyType(propType)
 
-	prop.ValueLen, err = p.readInt32()
+	// Value length
+	_, err = p.readInt32()
 	if err != nil {
 		return nil, err
 	}
