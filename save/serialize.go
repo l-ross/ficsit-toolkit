@@ -17,6 +17,8 @@ func Serialize(s *Save, w io.Writer) error {
 		return err
 	}
 
+	m := p.measure()
+
 	err = p.serializeObjects(s)
 	if err != nil {
 		return err
@@ -27,7 +29,7 @@ func Serialize(s *Save, w io.Writer) error {
 		return err
 	}
 
-	err = p.writeLen(int32(p.body.Len()), 0)
+	err = p.writeLen(m(), 0)
 	if err != nil {
 		return err
 	}

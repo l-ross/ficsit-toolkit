@@ -40,5 +40,15 @@ func realMain() error {
 		return err
 	}
 
+	f2, err := os.Open("out.sav")
+	if err != nil {
+		return err
+	}
+
+	_, err = save.Parse(f2)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }

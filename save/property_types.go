@@ -212,13 +212,38 @@ func (v *ArrayPropertyValue) serialize(p *parser, inner bool) (int32, error) {
 
 	m := p.measure()
 
+	// Special handling for BytePropertyType.
+	// See parse() for more details.
+	if v.ValueType == BytePropertyType {
+		if len(v.Values) != 1 {
+			return 0, fmt.Errorf("arrayproperty containg byteproperty, expected 1 value got %d", len(v.Values))
+		}
+
+		// Write placeholder element count.
+		elemCountPos := p.body.Index
+		err = p.writeInt32(0)
+		if err != nil {
+			return 0, err
+		}
+
+		// Write all bytes.
+		l, err := v.Values[0].serialize(p, true)
+		if err != nil {
+			return 0, err
+		}
+
+		// Update element count.
+		err = p.writeLen(l, elemCountPos)
+		if err != nil {
+			return 0, err
+		}
+
+		return m(), nil
+	}
+
 	err = p.writeInt32(int32(len(v.Values)))
 	if err != nil {
 		return 0, err
-	}
-
-	if v.ValueType == BytePropertyType {
-		// TODO: Special handling
 	}
 
 	if v.ValueType == StructPropertyType {
