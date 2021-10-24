@@ -81,18 +81,19 @@ func (p *parser) serializeObjectData(s *Save) error {
 		return err
 	}
 
-	//for _, e := range save.Entities {
-	//	// Record location of the length.
-	//	startPos := p.body.Index
-	//
-	//	// Write placeholder length
-	//	err := p.writeInt32(0)
-	//	if err != nil {
-	//		return err
-	//	}
-	//
-	//
-	//}
+	for _, e := range s.Entities {
+		err = e.serializeData(p)
+		if err != nil {
+			return err
+		}
+	}
+
+	for _, c := range s.Components {
+		err = c.serializeData(p)
+		if err != nil {
+			return err
+		}
+	}
 
 	return nil
 }

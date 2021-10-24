@@ -61,6 +61,8 @@ type ArrayPropertyValue struct {
 	ValueType PropertyType    `json:"value_type,omitempty"`
 	Values    []PropertyValue `json:"values,omitempty"`
 
+	// TODO: Explain the fields below.
+
 	StructName      string
 	StructBytes     []byte
 	StructInnerType string
@@ -420,7 +422,14 @@ func (v *BytePropertyValue) serialize(p *parser, inner bool) (int32, error) {
 }
 
 func (v *BytePropertyValue) serializeInner(p *parser) (int32, error) {
-	panic("implement me")
+	m := p.measure()
+
+	err := p.writeBytes(v.Value)
+	if err != nil {
+		return 0, err
+	}
+
+	return m(), nil
 }
 
 //

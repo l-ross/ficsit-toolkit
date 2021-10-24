@@ -1,5 +1,9 @@
 package save
 
+import (
+	"fmt"
+)
+
 type ExtraType string
 
 // TODO: Vehicle
@@ -77,6 +81,14 @@ func newCircuitSubsystem(_ int32) *Extra {
 	}
 }
 
+func (e *Extra) getCircuitSubsystem() (*CircuitSubsystemExtra, error) {
+	if v, ok := e.Value.(*CircuitSubsystemExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
+}
+
 func (e *CircuitSubsystemExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
@@ -110,7 +122,29 @@ func (e *CircuitSubsystemExtra) parse(p *parser) error {
 }
 
 func (e *CircuitSubsystemExtra) serialize(p *parser) error {
-	panic("implement me")
+	err := p.writeInt32(int32(len(e.Circuits)))
+	if err != nil {
+		return err
+	}
+
+	for _, c := range e.Circuits {
+		err = p.writeInt32(c.ID)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(c.LevelName)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(c.PathName)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 //
@@ -133,6 +167,14 @@ func newConveyorBelt(_ int32) *Extra {
 		Type:  ConveyorBeltExtraType,
 		Value: &ConveyorBeltExtra{},
 	}
+}
+
+func (e *Extra) getConveyorBelt() (*ConveyorBeltExtra, error) {
+	if v, ok := e.Value.(*ConveyorBeltExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
 func (e *ConveyorBeltExtra) parse(p *parser) error {
@@ -179,7 +221,40 @@ func (e *ConveyorBeltExtra) parse(p *parser) error {
 }
 
 func (e *ConveyorBeltExtra) serialize(p *parser) error {
-	panic("implement me")
+	err := p.writeInt32(int32(len(e.Items)))
+	if err != nil {
+		return err
+	}
+
+	for _, i := range e.Items {
+		// UNKNOWN_DATA
+		err = p.writeInt32(0)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(i.ResourceName)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(i.LevelName)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(i.PathName)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeFloat32(i.Position)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 //
@@ -221,7 +296,24 @@ func (e *GameModeExtra) parse(p *parser) error {
 }
 
 func (e *GameModeExtra) serialize(p *parser) error {
-	panic("implement me")
+	err := p.writeInt32(int32(len(e.Objects)))
+	if err != nil {
+		return err
+	}
+
+	for _, o := range e.Objects {
+		err = p.writeString(o.LevelName)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(o.PathName)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 //
@@ -263,7 +355,24 @@ func (e *GameStateExtra) parse(p *parser) error {
 }
 
 func (e *GameStateExtra) serialize(p *parser) error {
-	panic("implement me")
+	err := p.writeInt32(int32(len(e.Objects)))
+	if err != nil {
+		return err
+	}
+
+	for _, o := range e.Objects {
+		err = p.writeString(o.LevelName)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeString(o.PathName)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
 
 //
@@ -296,7 +405,7 @@ func (e *PlayerStateExtra) parse(p *parser) error {
 }
 
 func (e *PlayerStateExtra) serialize(p *parser) error {
-	panic("implement me")
+	return p.writeBytes(e.Data)
 }
 
 //
@@ -343,7 +452,27 @@ func (e *PowerLineExtra) parse(p *parser) error {
 }
 
 func (e *PowerLineExtra) serialize(p *parser) error {
-	panic("implement me")
+	err := p.writeString(e.SourceLevelName)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(e.SourcePathName)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(e.TargetLevelName)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(e.TargetPathName)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -395,7 +524,32 @@ func (e *TrainExtra) parse(p *parser) error {
 }
 
 func (e *TrainExtra) serialize(p *parser) error {
-	panic("implement me")
+	err := p.writeInt32(0)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(e.PreviousLevelName)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(e.PreviousPathName)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(e.NextLevelName)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeString(e.NextPathName)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 //
@@ -428,5 +582,5 @@ func (e *UnknownExtra) parse(p *parser) error {
 }
 
 func (e *UnknownExtra) serialize(p *parser) error {
-	panic("implement me")
+	return p.writeBytes(e.Data)
 }
