@@ -1,12 +1,10 @@
 package save
 
 import (
-	"io/ioutil"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/ViRb3/slicewriteseek"
 	"github.com/stretchr/testify/require"
 )
 
@@ -46,31 +44,23 @@ func TestExtra(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
-			data, err := ioutil.ReadFile(tt.testData)
+			// Parse extra
+			p1 := createTestParserFromFile(t, tt.testData)
+			e := getExtra(tt.typePath)(int32(len(p1.body.Buffer)))
+			err := e.Value.parse(p1)
 			require.NoError(t, err)
+			assertAllBufferRead(t, p1)
 
-			p := &parser{
-				body: &slicewriteseek.SliceWriteSeeker{
-					Buffer: data,
-				},
-			}
-
-			e := getExtra(tt.typePath)(int32(len(data)))
-			err = e.Value.parse(p)
-			require.NoError(t, err)
-			assert.Equal(t, p.body.Index, int64(len(data)), "we should have consumed the entire reader")
-
+			// Verify extra
 			tt.assertValue(t, e)
 
-			out := slicewriteseek.New()
-			p = &parser{
-				body: out,
-			}
-
-			err = e.Value.serialize(p)
+			// Serialize extra
+			p2 := createTestParserInMemory()
+			err = e.Value.serialize(p2)
 			require.NoError(t, err)
 
-			assert.Equal(t, data, out.Buffer)
+			// Verify serialization is correct
+			assertBuffersEqual(t, p1, p2)
 		})
 	}
 }

@@ -1,12 +1,10 @@
 package save
 
 import (
-	"io/ioutil"
 	"testing"
 
-	"github.com/ViRb3/slicewriteseek"
-
 	"github.com/stretchr/testify/assert"
+
 	"github.com/stretchr/testify/require"
 )
 
@@ -15,25 +13,21 @@ func TestHeader(t *testing.T) {
 	// matches the original data.
 	t.Parallel()
 
-	data, err := ioutil.ReadFile("testdata/header.dat")
+	// Parse header
+	p1 := createTestParserFromFile(t, "testdata/header.dat")
+	h, err := p1.parseHeader()
+	require.NoError(t, err)
+	assertAllBufferRead(t, p1)
+
+	// Verify header
+	assert.Equal(t, "Luke", h.SessionName)
+	assert.Equal(t, int32(152331), h.BuildVersion)
+
+	// Serialize header
+	p2 := createTestParserInMemory()
+	err = p2.serializeHeader(h)
 	require.NoError(t, err)
 
-	p := &parser{
-		body: &slicewriteseek.SliceWriteSeeker{
-			Buffer: data,
-		},
-	}
-
-	h, err := p.parseHeader()
-	require.NoError(t, err)
-
-	out := slicewriteseek.New()
-	p = &parser{
-		body: out,
-	}
-
-	err = p.serializeHeader(h)
-	require.NoError(t, err)
-
-	assert.Equal(t, data, out.Buffer)
+	// Verify serialization is correct
+	assertBuffersEqual(t, p1, p2)
 }

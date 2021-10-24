@@ -1,10 +1,8 @@
 package save
 
 import (
-	"io/ioutil"
 	"testing"
 
-	"github.com/ViRb3/slicewriteseek"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/stretchr/testify/require"
@@ -20,7 +18,7 @@ func TestStructs(t *testing.T) {
 	}{
 		{
 			name:     "Box",
-			testData: "testdata/struct_box.dat",
+			testData: "testdata/struct/box.dat",
 			assertValue: func(t *testing.T, s *StructPropertyValue) {
 				v, err := s.GetBoxStruct()
 				require.NoError(t, err)
@@ -31,7 +29,7 @@ func TestStructs(t *testing.T) {
 		},
 		{
 			name:     "InventoryItem",
-			testData: "testdata/prop_struct_inventoryitem.dat",
+			testData: "testdata/struct/inventory_item.dat",
 			assertValue: func(t *testing.T, s *StructPropertyValue) {
 				s1, err := s.GetArbitraryStruct()
 				require.NoError(t, err)
@@ -51,23 +49,25 @@ func TestStructs(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
-			data, err := ioutil.ReadFile(tt.testData)
+			// Parse struct
+			p1 := createTestParserFromFile(t, tt.testData)
+			props, err := p1.parseProperties()
 			require.NoError(t, err)
+			assertAllBufferRead(t, p1)
 
-			p := &parser{
-				body: &slicewriteseek.SliceWriteSeeker{
-					Buffer: data,
-				},
-			}
-
-			props, err := p.parseProperties()
-			require.NoError(t, err)
-			//assert.Zero(t, p.body.Len(), "we should have consumed the entire reader")
-
+			// Verify struct
 			require.Len(t, props, 1, "we should have 1 property")
 			s, err := props[0].GetStructValue()
 			require.NoError(t, err)
 			tt.assertValue(t, s)
+
+			// Serialize struct
+			p2 := createTestParserInMemory()
+			err = p2.serializeProperties(props)
+			require.NoError(t, err)
+
+			// Verify serialization is correct
+			assertBuffersEqual(t, p1, p2)
 		})
 	}
 }

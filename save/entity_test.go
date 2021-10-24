@@ -1,10 +1,7 @@
 package save
 
 import (
-	"io/ioutil"
 	"testing"
-
-	"github.com/ViRb3/slicewriteseek"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -15,32 +12,26 @@ func TestEntity_parse(t *testing.T) {
 	// matches the original.
 	t.Parallel()
 
-	data, err := ioutil.ReadFile("testdata/entity.dat")
-	require.NoError(t, err)
-
-	p := &parser{
-		body: &slicewriteseek.SliceWriteSeeker{
-			Buffer: data,
-		},
-	}
-
+	// Parse entity
+	p1 := createTestParserFromFile(t, "testdata/entity.dat")
 	e := &Entity{}
-	err = e.parse(p)
+	err := e.parse(p1)
 	require.NoError(t, err)
+	assertAllBufferRead(t, p1)
+
+	// Verify entity
 	assert.Equal(t,
 		"Persistent_Level:PersistentLevel.FGPipeNetwork_2147302283",
 		e.InstanceName,
 	)
 
-	out := slicewriteseek.New()
-	p = &parser{
-		body: out,
-	}
-
-	err = e.serialize(p)
+	// Serialize entity
+	p2 := createTestParserInMemory()
+	err = e.serialize(p2)
 	require.NoError(t, err)
 
-	assert.Equal(t, data, out.Buffer)
+	// Verify serialization is correct
+	assertBuffersEqual(t, p1, p2)
 }
 
 func TestEntity_parseData(t *testing.T) {
@@ -48,27 +39,21 @@ func TestEntity_parseData(t *testing.T) {
 	// it matches the original.
 	t.Parallel()
 
-	data, err := ioutil.ReadFile("testdata/entity_data.dat")
-	require.NoError(t, err)
-
-	p := &parser{
-		body: &slicewriteseek.SliceWriteSeeker{
-			Buffer: data,
-		},
-	}
-
+	// Parse entity data
+	p1 := createTestParserFromFile(t, "testdata/entity_data.dat")
 	e := &Entity{}
-	err = e.parseData(p)
+	err := e.parseData(p1)
 	require.NoError(t, err)
+	assertAllBufferRead(t, p1)
+
+	// Verify entity data
 	assert.Len(t, e.Properties, 3)
 
-	out := slicewriteseek.New()
-	p = &parser{
-		body: out,
-	}
-
-	err = e.serializeData(p)
+	// Serialize entity data
+	p2 := createTestParserInMemory()
+	err = e.serializeData(p2)
 	require.NoError(t, err)
 
-	assert.Equal(t, data, out.Buffer)
+	// Verify serialization is correct
+	assertBuffersEqual(t, p1, p2)
 }

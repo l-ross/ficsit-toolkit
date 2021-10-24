@@ -1,10 +1,7 @@
 package save
 
 import (
-	"io/ioutil"
 	"testing"
-
-	"github.com/ViRb3/slicewriteseek"
 
 	"github.com/stretchr/testify/assert"
 
@@ -24,7 +21,7 @@ func TestProperties(t *testing.T) {
 	}{
 		{
 			name:     "ArrayProperty_InterfaceValueType",
-			testData: "testdata/prop_array_interface.dat",
+			testData: "testdata/property_type/array_interface.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetArrayValue()
 				require.NoError(t, err)
@@ -45,7 +42,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "ArrayProperty_StructProperty",
-			testData: "testdata/prop_array_struct.dat",
+			testData: "testdata/property_type/array_struct.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				s1, err := p.GetStructValue()
 				require.NoError(t, err)
@@ -60,7 +57,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "BoolProperty",
-			testData: "testdata/prop_bool.dat",
+			testData: "testdata/property_type/bool.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetBoolValue()
 				require.NoError(t, err)
@@ -69,7 +66,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "ByteProperty",
-			testData: "testdata/prop_byte.dat",
+			testData: "testdata/property_type/byte.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetByteValue()
 				require.NoError(t, err)
@@ -78,7 +75,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "DoubleProperty",
-			testData: "testdata/prop_double.dat",
+			testData: "testdata/property_type/double.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetDoubleValue()
 				require.NoError(t, err)
@@ -87,7 +84,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "FloatProperty",
-			testData: "testdata/prop_float.dat",
+			testData: "testdata/property_type/float.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetFloatValue()
 				require.NoError(t, err)
@@ -96,7 +93,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "Int8Property",
-			testData: "testdata/prop_int8.dat",
+			testData: "testdata/property_type/int8.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetInt8Value()
 				require.NoError(t, err)
@@ -105,7 +102,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "Int64Property",
-			testData: "testdata/prop_int64.dat",
+			testData: "testdata/property_type/int64.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetInt64Value()
 				require.NoError(t, err)
@@ -114,7 +111,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "InterfaceProperty",
-			testData: "testdata/prop_interface.dat",
+			testData: "testdata/property_type/interface.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetInterfaceValue()
 				require.NoError(t, err)
@@ -124,7 +121,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "IntProperty",
-			testData: "testdata/prop_int.dat",
+			testData: "testdata/property_type/int.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetIntValue()
 				require.NoError(t, err)
@@ -133,7 +130,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "MapProperty_IntKey_IntValue",
-			testData: "testdata/prop_map_int_int.dat",
+			testData: "testdata/property_type/map_int_int.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetMapPropertyValue()
 				require.NoError(t, err)
@@ -144,7 +141,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "NameProperty",
-			testData: "testdata/prop_name.dat",
+			testData: "testdata/property_type/name.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetNameValue()
 				require.NoError(t, err)
@@ -153,7 +150,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "ObjectProperty",
-			testData: "testdata/prop_object.dat",
+			testData: "testdata/property_type/object.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetObjectValue()
 				require.NoError(t, err)
@@ -163,7 +160,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "StringProperty",
-			testData: "testdata/prop_string.dat",
+			testData: "testdata/property_type/string.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetStringValue()
 				require.NoError(t, err)
@@ -172,7 +169,7 @@ func TestProperties(t *testing.T) {
 		},
 		{
 			name:     "StructProperty",
-			testData: "testdata/prop_struct.dat",
+			testData: "testdata/property_type/struct.dat",
 			assertValue: func(t *testing.T, p *Property) {
 				v, err := p.GetStructValue()
 				require.NoError(t, err)
@@ -188,35 +185,24 @@ func TestProperties(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
-			data, err := ioutil.ReadFile(tt.testData)
+			// Parse property
+			p1 := createTestParserFromFile(t, tt.testData)
+			props, err := p1.parseProperties()
 			require.NoError(t, err)
+			assertAllBufferRead(t, p1)
 
-			p := &parser{
-				body: &slicewriteseek.SliceWriteSeeker{
-					Buffer: data,
-				},
-			}
-
-			props, err := p.parseProperties()
-			require.NoError(t, err)
-			assert.Equal(t, p.body.Index, int64(len(data)), "we should have consumed the entire reader")
-
+			// Verify property
 			require.Len(t, props, 1, "we should have 1 property")
 			prop := props[0]
 			tt.assertValue(t, prop)
 
-			out := slicewriteseek.New()
-			p = &parser{
-				body: out,
-			}
-
-			err = p.serializeProperties(props)
+			// Serialize property
+			p2 := createTestParserInMemory()
+			err = p2.serializeProperties(props)
 			require.NoError(t, err)
 
-			assert.Equal(t, data, out.Buffer)
-
-			err = ioutil.WriteFile("out.dump", out.Buffer, 0644)
-			require.NoError(t, err)
+			// Verify serialization is correct
+			assertBuffersEqual(t, p1, p2)
 		})
 	}
 }
