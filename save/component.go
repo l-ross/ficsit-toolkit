@@ -1,10 +1,5 @@
 package save
 
-import (
-	"encoding/binary"
-	"io"
-)
-
 type Component struct {
 	TypePath         string      `json:"typePath"`
 	RootObject       string      `json:"rootObject"`
@@ -48,25 +43,10 @@ func (c *Component) parseData(p *parser) error {
 		return err
 	}
 
+	// Capture all bytes if debug is enabled.
 	if debug {
 		c.objectDataPos = p.body.Index - 4
-
-		pos := p.body.Index
-
-		c.objectData = make([]byte, 4)
-		binary.LittleEndian.PutUint32(c.objectData, uint32(dataSize))
-
-		b, err := p.readBytes(dataSize)
-		if err != nil {
-			return err
-		}
-
-		c.objectData = append(c.objectData, b...)
-
-		_, err = p.body.Seek(pos, io.SeekStart)
-		if err != nil {
-			return err
-		}
+		c.objectData, err = p.debugReadDataChunk(dataSize)
 	}
 
 	c.Properties, err = p.parseProperties()

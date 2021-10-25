@@ -9,8 +9,6 @@ import (
 
 // Simple E2E test.
 func TestParser_Parse(t *testing.T) {
-	debug = true
-
 	f, err := os.Open("../exp/Example.sav")
 	require.NoError(t, err)
 	defer f.Close()

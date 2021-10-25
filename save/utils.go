@@ -119,6 +119,32 @@ func (p *parser) skipBytes(l int64) error {
 	return err
 }
 
+// Reads a data chunk and returns the bytes with the length of the
+// chunk prepended.
+// Resets p.body back to where the function started reading from.
+// Useful when debugging a data chunk.
+func (p *parser) debugReadDataChunk(l int32) ([]byte, error) {
+	pos := p.body.Index
+
+	b := make([]byte, 4)
+	binary.LittleEndian.PutUint32(b, uint32(l))
+
+	b2, err := p.readBytes(l)
+	if err != nil {
+		return nil, err
+	}
+
+	b = append(b, b2...)
+
+	_, err = p.body.Seek(pos, io.SeekStart)
+	if err != nil {
+		return nil, err
+	}
+
+	return b, nil
+
+}
+
 //
 // Write
 //
