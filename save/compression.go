@@ -10,6 +10,11 @@ import (
 	"github.com/ViRb3/slicewriteseek"
 )
 
+const (
+	maximumChunkSize = int64(131072)
+	packageFileTag   = int64(2653586369)
+)
+
 func (p *parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
 	chunks := make([]byte, 0)
 
@@ -111,4 +116,87 @@ func (p *parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	}
 
 	return uncompressed, nil
+}
+
+func (p *parser) compressBody(b []byte) error {
+	done := false
+
+	for !done {
+		var chunk []byte
+		if int64(len(b)) < maximumChunkSize {
+			// Last chunk
+			chunk = b
+			done = true
+		} else {
+			chunk, b = b[:maximumChunkSize], b[maximumChunkSize:]
+		}
+
+		var cb bytes.Buffer
+		zw := zlib.NewWriter(&cb)
+
+		_, err := zw.Write(chunk)
+		if err != nil {
+			return err
+		}
+
+		err = zw.Close()
+		if err != nil {
+			return err
+		}
+
+		ch := &chunkHeader{
+			packageFileTag:     packageFileTag,
+			maximumChunkSize:   maximumChunkSize,
+			compressedLength:   int64(len(cb.Bytes())),
+			uncompressedLength: int64(len(chunk)),
+		}
+
+		err = p.writeChunkHeader(ch)
+		if err != nil {
+			return err
+		}
+
+		err = p.writeBytes(cb.Bytes())
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (p *parser) writeChunkHeader(ch *chunkHeader) error {
+	err := p.writeInt64(ch.packageFileTag)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeInt64(ch.maximumChunkSize)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeInt64(ch.compressedLength)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeInt64(ch.uncompressedLength)
+	if err != nil {
+		return err
+	}
+
+	// Duplicate the compressed and uncompressed lengths.
+
+	err = p.writeInt64(ch.compressedLength)
+	if err != nil {
+		return err
+	}
+
+	err = p.writeInt64(ch.uncompressedLength)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }

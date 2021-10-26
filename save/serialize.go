@@ -11,6 +11,38 @@ func Serialize(s *Save, w io.Writer) error {
 		body: slicewriteseek.New(),
 	}
 
+	// Serialize the uncompressed body.
+	err := p.serializeBody(s)
+	if err != nil {
+		return err
+	}
+
+	// Take a copy of the uncompressed save
+	uncompressed := make([]byte, len(p.body.Buffer))
+	copy(uncompressed, p.body.Buffer)
+
+	// Empty out p.body as we will now write the header / compressed data
+	p.body = slicewriteseek.New()
+
+	err = p.serializeHeader(s.Header)
+	if err != nil {
+		return err
+	}
+
+	err = p.compressBody(uncompressed)
+	if err != nil {
+		return err
+	}
+
+	_, err = w.Write(p.body.Buffer)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (p *parser) serializeBody(s *Save) error {
 	// Write placeholder length.
 	err := p.writeInt32(0)
 	if err != nil {
@@ -35,11 +67,6 @@ func Serialize(s *Save, w io.Writer) error {
 	}
 
 	err = p.writeLen(m(), 0)
-	if err != nil {
-		return err
-	}
-
-	_, err = w.Write(p.body.Buffer)
 	if err != nil {
 		return err
 	}

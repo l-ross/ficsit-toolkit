@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -25,9 +26,11 @@ func realMain() error {
 	if err != nil {
 		return err
 	}
-	if s == nil {
 
-	}
+	fmt.Println(len(s.Components))
+	fmt.Println(s.Components[0].TypePath)
+	fmt.Println(len(s.Entities))
+	fmt.Println(s.Entities[0].TypePath)
 
 	fOut, err := os.OpenFile("out.sav", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0644)
 	if err != nil {
@@ -45,10 +48,15 @@ func realMain() error {
 		return err
 	}
 
-	_, err = save.Parse(f2)
+	s2, err := save.Parse(f2)
 	if err != nil {
 		return err
 	}
+
+	fmt.Println(len(s2.Components))
+	fmt.Println(s2.Components[0].TypePath)
+	fmt.Println(len(s2.Entities))
+	fmt.Println(s2.Entities[0].TypePath)
 
 	return nil
 }
