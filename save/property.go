@@ -2,7 +2,51 @@ package save
 
 import "fmt"
 
-func (p *parser) parseProperties() ([]*Property, error) {
+type Property struct {
+	Name          string       `json:"name"`
+	Type          PropertyType `json:"type"`
+	Index         int32        `json:"index"`
+	PropertyValue `json:"value"`
+}
+
+type PropertyType string
+
+const (
+	ArrayPropertyType     PropertyType = "ArrayProperty"
+	BoolPropertyType      PropertyType = "BoolProperty"
+	BytePropertyType      PropertyType = "ByteProperty"
+	DoublePropertyType    PropertyType = "DoubleProperty"
+	EnumPropertyType      PropertyType = "EnumProperty"
+	FloatPropertyType     PropertyType = "FloatProperty"
+	Int8PropertyType      PropertyType = "Int8Property"
+	Int64PropertyType     PropertyType = "Int64Property"
+	InterfacePropertyType PropertyType = "InterfaceProperty"
+	IntPropertyType       PropertyType = "IntProperty"
+	MapPropertyType       PropertyType = "MapProperty"
+	NamePropertyType      PropertyType = "NameProperty"
+	ObjectPropertyType    PropertyType = "ObjectProperty"
+	StringPropertyType    PropertyType = "StrProperty"
+	StructPropertyType    PropertyType = "StructProperty"
+	TextPropertyType      PropertyType = "TextProperty"
+)
+
+type PropertyValue interface {
+	// parse the property value
+	//
+	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
+	// In some cases this can change the format of the property value.
+	parse(p *Parser, inner bool) error
+
+	// serialize the property value and return the length of the property data.
+	// Some PropertyValue implementations always return a zero length as they aren't
+	// always set.
+	//
+	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
+	// In some cases this can change the format of the property value.
+	serialize(s *Serializer, inner bool) (int32, error)
+}
+
+func (p *Parser) parseProperties() ([]*Property, error) {
 	props := make([]*Property, 0)
 
 	for {
@@ -21,7 +65,7 @@ func (p *parser) parseProperties() ([]*Property, error) {
 	return props, nil
 }
 
-func (p *parser) parseProperty() (*Property, error) {
+func (p *Parser) parseProperty() (*Property, error) {
 	var err error
 	prop := &Property{}
 
@@ -102,15 +146,15 @@ func (p *parser) parseProperty() (*Property, error) {
 	return prop, nil
 }
 
-func (p *parser) serializeProperties(props []*Property) error {
+func (s *Serializer) serializeProperties(props []*Property) error {
 	for _, prop := range props {
-		err := p.serializeProperty(prop)
+		err := s.serializeProperty(prop)
 		if err != nil {
 			return err
 		}
 	}
 
-	err := p.writeNoneProp()
+	err := s.writeNoneProp()
 	if err != nil {
 		return err
 	}
@@ -118,36 +162,36 @@ func (p *parser) serializeProperties(props []*Property) error {
 	return nil
 }
 
-func (p *parser) serializeProperty(prop *Property) error {
-	err := p.writeString(prop.Name)
+func (s *Serializer) serializeProperty(prop *Property) error {
+	err := s.writeString(prop.Name)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(string(prop.Type))
+	err = s.writeString(string(prop.Type))
 	if err != nil {
 		return err
 	}
 
 	// Write placeholder length and record position.
-	lenPos := p.body.Index
-	err = p.writeInt32(0)
+	lenPos := s.body.Index
+	err = s.writeInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt32(prop.Index)
+	err = s.writeInt32(prop.Index)
 	if err != nil {
 		return err
 	}
 
-	l, err := prop.serialize(p, false)
+	l, err := prop.serialize(s, false)
 	if err != nil {
 		return err
 	}
 
 	// Write length at the recorded position.
-	err = p.writeLen(l, lenPos)
+	err = s.writeLen(l, lenPos)
 	if err != nil {
 		return err
 	}

@@ -186,10 +186,10 @@ func TestProperties(t *testing.T) {
 			t.Parallel()
 
 			// Parse property
-			p1 := createTestParserFromFile(t, tt.testData)
-			props, err := p1.parseProperties()
+			p := createTestParser(t, tt.testData)
+			props, err := p.parseProperties()
 			require.NoError(t, err)
-			assertAllBufferRead(t, p1)
+			assertAllBufferRead(t, p)
 
 			// Verify property
 			require.Len(t, props, 1, "we should have 1 property")
@@ -197,12 +197,12 @@ func TestProperties(t *testing.T) {
 			tt.assertValue(t, prop)
 
 			// Serialize property
-			p2 := createTestParserInMemory()
-			err = p2.serializeProperties(props)
+			s := createTestSerializer()
+			err = s.serializeProperties(props)
 			require.NoError(t, err)
 
 			// Verify serialization is correct
-			assertBuffersEqual(t, p1, p2)
+			assertBuffersEqual(t, p, s)
 		})
 	}
 }

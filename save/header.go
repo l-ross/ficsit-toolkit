@@ -7,7 +7,7 @@ import (
 
 // ParseHeader will only parse the header of the save file and return it.
 func ParseHeader(r io.Reader) (*Header, error) {
-	p, err := newParser(r)
+	p, err := NewParser(r)
 	if err != nil {
 		return nil, err
 	}
@@ -30,7 +30,7 @@ type Header struct {
 	ModFlags            int32  `json:"modFlags"`
 }
 
-func (p *parser) parseHeader() (*Header, error) {
+func (p *Parser) parseHeader() (*Header, error) {
 	h := &Header{}
 
 	var err error
@@ -105,63 +105,63 @@ func (p *parser) parseHeader() (*Header, error) {
 	return h, nil
 }
 
-func (p *parser) serializeHeader(h *Header) error {
-	err := p.writeInt32(h.HeaderVersion)
+func (s *Serializer) serializeHeader(h *Header) error {
+	err := s.writeInt32(h.HeaderVersion)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt32(h.SaveVersion)
+	err = s.writeInt32(h.SaveVersion)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt32(h.BuildVersion)
+	err = s.writeInt32(h.BuildVersion)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(h.MapName)
+	err = s.writeString(h.MapName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(h.MapOptions)
+	err = s.writeString(h.MapOptions)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(h.SessionName)
+	err = s.writeString(h.SessionName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt32(h.PlayTime)
+	err = s.writeInt32(h.PlayTime)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt64(h.SaveDate)
+	err = s.writeInt64(h.SaveDate)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeByte(h.SessionVisibility)
+	err = s.writeByte(h.SessionVisibility)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt32(h.EditorObjectVersion)
+	err = s.writeInt32(h.EditorObjectVersion)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(h.ModMetadata)
+	err = s.writeString(h.ModMetadata)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt32(h.ModFlags)
+	err = s.writeInt32(h.ModFlags)
 	if err != nil {
 		return err
 	}

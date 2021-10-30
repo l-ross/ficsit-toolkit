@@ -11,7 +11,7 @@ type Component struct {
 	objectData    []byte
 }
 
-func (c *Component) parse(p *parser) error {
+func (c *Component) parse(p *Parser) error {
 	var err error
 	c.TypePath, err = p.readString()
 	if err != nil {
@@ -36,7 +36,7 @@ func (c *Component) parse(p *parser) error {
 	return nil
 }
 
-func (c *Component) parseData(p *parser) error {
+func (c *Component) parseData(p *Parser) error {
 	// Data length
 	dataSize, err := p.readInt32()
 	if err != nil {
@@ -63,23 +63,23 @@ func (c *Component) parseData(p *parser) error {
 	return nil
 }
 
-func (c *Component) serialize(p *parser) error {
-	err := p.writeString(c.TypePath)
+func (c *Component) serialize(s *Serializer) error {
+	err := s.writeString(c.TypePath)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(c.RootObject)
+	err = s.writeString(c.RootObject)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(c.InstanceName)
+	err = s.writeString(c.InstanceName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(c.ParentEntityName)
+	err = s.writeString(c.ParentEntityName)
 	if err != nil {
 		return err
 	}
@@ -87,28 +87,28 @@ func (c *Component) serialize(p *parser) error {
 	return nil
 }
 
-func (c *Component) serializeData(p *parser) error {
+func (c *Component) serializeData(s *Serializer) error {
 	// Write placeholder length
-	lenPos := p.body.Index
-	err := p.writeInt32(0)
+	lenPos := s.body.Index
+	err := s.writeInt32(0)
 	if err != nil {
 		return err
 	}
 
-	m := p.measure()
+	m := s.measure()
 
-	err = p.serializeProperties(c.Properties)
+	err = s.serializeProperties(c.Properties)
 	if err != nil {
 		return err
 	}
 
 	// UNKNOWN_DATA
-	err = p.writeInt32(0)
+	err = s.writeInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeLen(m(), lenPos)
+	err = s.writeLen(m(), lenPos)
 	if err != nil {
 		return err
 	}

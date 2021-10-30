@@ -13,11 +13,11 @@ func TestComponent_parse(t *testing.T) {
 	t.Parallel()
 
 	// Parse component
-	p1 := createTestParserFromFile(t, "testdata/component.dat")
+	p := createTestParser(t, "testdata/component.dat")
 	c := &Component{}
-	err := c.parse(p1)
+	err := c.parse(p)
 	require.NoError(t, err)
-	assertAllBufferRead(t, p1)
+	assertAllBufferRead(t, p)
 
 	// Verify component
 	assert.Equal(t,
@@ -26,12 +26,12 @@ func TestComponent_parse(t *testing.T) {
 	)
 
 	// Serialize component
-	p2 := createTestParserInMemory()
-	err = c.serialize(p2)
+	s := createTestSerializer()
+	err = c.serialize(s)
 	require.NoError(t, err)
 
 	// Verify serialization is correct
-	assertBuffersEqual(t, p1, p2)
+	assertBuffersEqual(t, p, s)
 }
 
 func TestComponent_parseData(t *testing.T) {
@@ -39,21 +39,21 @@ func TestComponent_parseData(t *testing.T) {
 	// it matches the original.
 
 	// Parse component data
-	p1 := createTestParserFromFile(t, "testdata/component_data.dat")
+	p := createTestParser(t, "testdata/component_data.dat")
 	c := &Component{}
-	err := c.parseData(p1)
+	err := c.parseData(p)
 	require.NoError(t, err)
-	assertAllBufferRead(t, p1)
+	assertAllBufferRead(t, p)
 
 	// Verify component data
 	require.Len(t, c.Properties, 1)
 	assert.Equal(t, "mCachedFeetOffset", c.Properties[0].Name)
 
 	// Serialize component data
-	p2 := createTestParserInMemory()
-	err = c.serializeData(p2)
+	s := createTestSerializer()
+	err = c.serializeData(s)
 	require.NoError(t, err)
 
 	// Verify serialization is correct
-	assertBuffersEqual(t, p1, p2)
+	assertBuffersEqual(t, p, s)
 }

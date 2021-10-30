@@ -15,7 +15,7 @@ const (
 	packageFileTag   = int64(2653586369)
 )
 
-func (p *parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
+func (p *Parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
 	chunks := make([]byte, 0)
 
 	for {
@@ -50,7 +50,7 @@ type chunkHeader struct {
 	uncompressedLength int64
 }
 
-func (p *parser) readChunkHeader() (*chunkHeader, error) {
+func (p *Parser) readChunkHeader() (*chunkHeader, error) {
 	ch := &chunkHeader{}
 
 	var err error
@@ -90,7 +90,7 @@ func (p *parser) readChunkHeader() (*chunkHeader, error) {
 }
 
 // readChunk will read the next chunk and return the decompressed data.
-func (p *parser) readChunk(ch *chunkHeader) ([]byte, error) {
+func (p *Parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	compressed := make([]byte, ch.compressedLength)
 
 	read, err := p.body.Read(compressed)
@@ -118,7 +118,7 @@ func (p *parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	return uncompressed, nil
 }
 
-func (p *parser) compressBody(b []byte) error {
+func (s *Serializer) compressBody(b []byte) error {
 	done := false
 
 	for !done {
@@ -151,12 +151,12 @@ func (p *parser) compressBody(b []byte) error {
 			uncompressedLength: int64(len(chunk)),
 		}
 
-		err = p.writeChunkHeader(ch)
+		err = s.writeChunkHeader(ch)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeBytes(cb.Bytes())
+		err = s.writeBytes(cb.Bytes())
 		if err != nil {
 			return err
 		}
@@ -165,35 +165,35 @@ func (p *parser) compressBody(b []byte) error {
 	return nil
 }
 
-func (p *parser) writeChunkHeader(ch *chunkHeader) error {
-	err := p.writeInt64(ch.packageFileTag)
+func (s *Serializer) writeChunkHeader(ch *chunkHeader) error {
+	err := s.writeInt64(ch.packageFileTag)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt64(ch.maximumChunkSize)
+	err = s.writeInt64(ch.maximumChunkSize)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt64(ch.compressedLength)
+	err = s.writeInt64(ch.compressedLength)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt64(ch.uncompressedLength)
+	err = s.writeInt64(ch.uncompressedLength)
 	if err != nil {
 		return err
 	}
 
 	// Duplicate the compressed and uncompressed lengths.
 
-	err = p.writeInt64(ch.compressedLength)
+	err = s.writeInt64(ch.compressedLength)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeInt64(ch.uncompressedLength)
+	err = s.writeInt64(ch.uncompressedLength)
 	if err != nil {
 		return err
 	}

@@ -45,22 +45,22 @@ func TestExtra(t *testing.T) {
 			t.Parallel()
 
 			// Parse extra
-			p1 := createTestParserFromFile(t, tt.testData)
-			e := getExtra(tt.typePath)(int32(len(p1.body.Buffer)))
-			err := e.Value.parse(p1)
+			p := createTestParser(t, tt.testData)
+			e := getExtra(tt.typePath)(int32(len(p.body.Buffer)))
+			err := e.Value.parse(p)
 			require.NoError(t, err)
-			assertAllBufferRead(t, p1)
+			assertAllBufferRead(t, p)
 
 			// Verify extra
 			tt.assertValue(t, e)
 
 			// Serialize extra
-			p2 := createTestParserInMemory()
-			err = e.Value.serialize(p2)
+			s := createTestSerializer()
+			err = e.Value.serialize(s)
 			require.NoError(t, err)
 
 			// Verify serialization is correct
-			assertBuffersEqual(t, p1, p2)
+			assertBuffersEqual(t, p, s)
 		})
 	}
 }

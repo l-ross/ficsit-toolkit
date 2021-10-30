@@ -50,24 +50,24 @@ func TestStructs(t *testing.T) {
 			t.Parallel()
 
 			// Parse struct
-			p1 := createTestParserFromFile(t, tt.testData)
-			props, err := p1.parseProperties()
+			p := createTestParser(t, tt.testData)
+			props, err := p.parseProperties()
 			require.NoError(t, err)
-			assertAllBufferRead(t, p1)
+			assertAllBufferRead(t, p)
 
 			// Verify struct
 			require.Len(t, props, 1, "we should have 1 property")
-			s, err := props[0].GetStructValue()
+			structValue, err := props[0].GetStructValue()
 			require.NoError(t, err)
-			tt.assertValue(t, s)
+			tt.assertValue(t, structValue)
 
 			// Serialize struct
-			p2 := createTestParserInMemory()
-			err = p2.serializeProperties(props)
+			s := createTestSerializer()
+			err = s.serializeProperties(props)
 			require.NoError(t, err)
 
 			// Verify serialization is correct
-			assertBuffersEqual(t, p1, p2)
+			assertBuffersEqual(t, p, s)
 		})
 	}
 }

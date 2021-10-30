@@ -24,9 +24,9 @@ type Extra struct {
 }
 
 type ExtraValue interface {
-	parse(p *parser) error
+	parse(p *Parser) error
 
-	serialize(p *parser) error
+	serialize(s *Serializer) error
 }
 
 func getExtra(c string) func(l int32) *Extra {
@@ -89,7 +89,7 @@ func (e *Extra) getCircuitSubsystem() (*CircuitSubsystemExtra, error) {
 	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
-func (e *CircuitSubsystemExtra) parse(p *parser) error {
+func (e *CircuitSubsystemExtra) parse(p *Parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -121,24 +121,24 @@ func (e *CircuitSubsystemExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *CircuitSubsystemExtra) serialize(p *parser) error {
-	err := p.writeInt32(int32(len(e.Circuits)))
+func (e *CircuitSubsystemExtra) serialize(s *Serializer) error {
+	err := s.writeInt32(int32(len(e.Circuits)))
 	if err != nil {
 		return err
 	}
 
 	for _, c := range e.Circuits {
-		err = p.writeInt32(c.ID)
+		err = s.writeInt32(c.ID)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeString(c.LevelName)
+		err = s.writeString(c.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeString(c.PathName)
+		err = s.writeString(c.PathName)
 		if err != nil {
 			return err
 		}
@@ -177,7 +177,7 @@ func (e *Extra) getConveyorBelt() (*ConveyorBeltExtra, error) {
 	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
-func (e *ConveyorBeltExtra) parse(p *parser) error {
+func (e *ConveyorBeltExtra) parse(p *Parser) error {
 	itemCount, err := p.readInt32()
 	if err != nil {
 		return err
@@ -220,35 +220,35 @@ func (e *ConveyorBeltExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *ConveyorBeltExtra) serialize(p *parser) error {
-	err := p.writeInt32(int32(len(e.Items)))
+func (e *ConveyorBeltExtra) serialize(s *Serializer) error {
+	err := s.writeInt32(int32(len(e.Items)))
 	if err != nil {
 		return err
 	}
 
 	for _, i := range e.Items {
 		// UNKNOWN_DATA
-		err = p.writeInt32(0)
+		err = s.writeInt32(0)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeString(i.ResourceName)
+		err = s.writeString(i.ResourceName)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeString(i.LevelName)
+		err = s.writeString(i.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeString(i.PathName)
+		err = s.writeString(i.PathName)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeFloat32(i.Position)
+		err = s.writeFloat32(i.Position)
 		if err != nil {
 			return err
 		}
@@ -272,7 +272,7 @@ func newGameMode(_ int32) *Extra {
 	}
 }
 
-func (e *GameModeExtra) parse(p *parser) error {
+func (e *GameModeExtra) parse(p *Parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -295,19 +295,19 @@ func (e *GameModeExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *GameModeExtra) serialize(p *parser) error {
-	err := p.writeInt32(int32(len(e.Objects)))
+func (e *GameModeExtra) serialize(s *Serializer) error {
+	err := s.writeInt32(int32(len(e.Objects)))
 	if err != nil {
 		return err
 	}
 
 	for _, o := range e.Objects {
-		err = p.writeString(o.LevelName)
+		err = s.writeString(o.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeString(o.PathName)
+		err = s.writeString(o.PathName)
 		if err != nil {
 			return err
 		}
@@ -331,7 +331,7 @@ func newGameState(_ int32) *Extra {
 	}
 }
 
-func (e *GameStateExtra) parse(p *parser) error {
+func (e *GameStateExtra) parse(p *Parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -356,19 +356,19 @@ func (e *GameStateExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *GameStateExtra) serialize(p *parser) error {
-	err := p.writeInt32(int32(len(e.Objects)))
+func (e *GameStateExtra) serialize(s *Serializer) error {
+	err := s.writeInt32(int32(len(e.Objects)))
 	if err != nil {
 		return err
 	}
 
 	for _, o := range e.Objects {
-		err = p.writeString(o.LevelName)
+		err = s.writeString(o.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = p.writeString(o.PathName)
+		err = s.writeString(o.PathName)
 		if err != nil {
 			return err
 		}
@@ -396,7 +396,7 @@ func newPlayerState(l int32) *Extra {
 	}
 }
 
-func (e *PlayerStateExtra) parse(p *parser) error {
+func (e *PlayerStateExtra) parse(p *Parser) error {
 	var err error
 	e.Data, err = p.readBytes(e.len)
 	if err != nil {
@@ -406,8 +406,8 @@ func (e *PlayerStateExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *PlayerStateExtra) serialize(p *parser) error {
-	return p.writeBytes(e.Data)
+func (e *PlayerStateExtra) serialize(s *Serializer) error {
+	return s.writeBytes(e.Data)
 }
 
 //
@@ -428,7 +428,7 @@ func newPowerLine(_ int32) *Extra {
 	}
 }
 
-func (e *PowerLineExtra) parse(p *parser) error {
+func (e *PowerLineExtra) parse(p *Parser) error {
 	var err error
 	e.SourceLevelName, err = p.readString()
 	if err != nil {
@@ -453,23 +453,23 @@ func (e *PowerLineExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *PowerLineExtra) serialize(p *parser) error {
-	err := p.writeString(e.SourceLevelName)
+func (e *PowerLineExtra) serialize(s *Serializer) error {
+	err := s.writeString(e.SourceLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(e.SourcePathName)
+	err = s.writeString(e.SourcePathName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(e.TargetLevelName)
+	err = s.writeString(e.TargetLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(e.TargetPathName)
+	err = s.writeString(e.TargetPathName)
 	if err != nil {
 		return err
 	}
@@ -495,7 +495,7 @@ func newTrainExtra(_ int32) *Extra {
 	}
 }
 
-func (e *TrainExtra) parse(p *parser) error {
+func (e *TrainExtra) parse(p *Parser) error {
 	// UNKNOWN_DATA
 	_, err := p.readInt32()
 	if err != nil {
@@ -525,28 +525,28 @@ func (e *TrainExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *TrainExtra) serialize(p *parser) error {
-	err := p.writeInt32(0)
+func (e *TrainExtra) serialize(s *Serializer) error {
+	err := s.writeInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(e.PreviousLevelName)
+	err = s.writeString(e.PreviousLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(e.PreviousPathName)
+	err = s.writeString(e.PreviousPathName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(e.NextLevelName)
+	err = s.writeString(e.NextLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = p.writeString(e.NextPathName)
+	err = s.writeString(e.NextPathName)
 	if err != nil {
 		return err
 	}
@@ -573,7 +573,7 @@ func newUnknownExtra(l int32) *Extra {
 	}
 }
 
-func (e *UnknownExtra) parse(p *parser) error {
+func (e *UnknownExtra) parse(p *Parser) error {
 	var err error
 	e.Data, err = p.readBytes(e.len)
 	if err != nil {
@@ -583,6 +583,6 @@ func (e *UnknownExtra) parse(p *parser) error {
 	return nil
 }
 
-func (e *UnknownExtra) serialize(p *parser) error {
-	return p.writeBytes(e.Data)
+func (e *UnknownExtra) serialize(s *Serializer) error {
+	return s.writeBytes(e.Data)
 }

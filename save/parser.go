@@ -10,41 +10,33 @@ import (
 
 var debug = false
 
-type Save struct {
-	Header           *Header            `json:"header"`
-	Components       []*Component       `json:"components"`
-	Entities         []*Entity          `json:"entities"`
-	CollectedObjects []*ObjectReference `json:"collected_objects"`
+type Parser struct {
+	r io.Reader
 
-	objects     []object
-	objectCount int32
-}
-
-type ObjectType int32
-
-const (
-	ComponentType ObjectType = 0
-	EntityType    ObjectType = 1
-)
-
-type object interface {
-	parseData(p *parser) error
-}
-
-type ObjectReference struct {
-	LevelName string `json:"levelName"`
-	PathName  string `json:"pathName"`
-}
-
-type parser struct {
 	// Body of the save file.
 	body *slicewriteseek.SliceWriteSeeker
+
+	parserOptions
 }
 
-func newParser(r io.Reader) (*parser, error) {
-	p := &parser{}
+func NewParser(r io.Reader, opts ...ParserOption) (*Parser, error) {
+	p := &Parser{
+		r: r,
+	}
 
-	data, err := ioutil.ReadAll(r)
+	for _, opt := range opts {
+		if opt != nil {
+			if err := opt(&p.parserOptions); err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	return p, nil
+}
+
+func (p *Parser) Parse() (*Save, error) {
+	data, err := ioutil.ReadAll(p.r)
 	if err != nil {
 		return nil, err
 	}
@@ -52,17 +44,6 @@ func newParser(r io.Reader) (*parser, error) {
 	p.body = &slicewriteseek.SliceWriteSeeker{
 		Buffer: data,
 		Index:  0,
-	}
-
-	return p, nil
-}
-
-// Parse will parse the entire file and return a Save object that contains
-// the entire data structure of the file.
-func Parse(r io.Reader) (*Save, error) {
-	p, err := newParser(r)
-	if err != nil {
-		return nil, err
 	}
 
 	h, err := p.parseHeader()
@@ -93,7 +74,7 @@ func Parse(r io.Reader) (*Save, error) {
 	return s, nil
 }
 
-func (p *parser) parseBody(s *Save) error {
+func (p *Parser) parseBody(s *Save) error {
 	bodyLen, err := p.readInt32()
 	if err != nil {
 		return err
@@ -146,7 +127,7 @@ func (p *parser) parseBody(s *Save) error {
 	return nil
 }
 
-func (p *parser) parseObjects(s *Save) error {
+func (p *Parser) parseObjects(s *Save) error {
 	var err error
 	s.objectCount, err = p.readInt32()
 	if err != nil {
@@ -186,7 +167,7 @@ func (p *parser) parseObjects(s *Save) error {
 	return nil
 }
 
-func (p *parser) parseCollectedObjects(s *Save) error {
+func (p *Parser) parseCollectedObjects(s *Save) error {
 	collectedObjectCount, err := p.readInt32()
 	if err != nil {
 		return err

@@ -13,11 +13,11 @@ func TestEntity_parse(t *testing.T) {
 	t.Parallel()
 
 	// Parse entity
-	p1 := createTestParserFromFile(t, "testdata/entity.dat")
+	p := createTestParser(t, "testdata/entity.dat")
 	e := &Entity{}
-	err := e.parse(p1)
+	err := e.parse(p)
 	require.NoError(t, err)
-	assertAllBufferRead(t, p1)
+	assertAllBufferRead(t, p)
 
 	// Verify entity
 	assert.Equal(t,
@@ -26,12 +26,12 @@ func TestEntity_parse(t *testing.T) {
 	)
 
 	// Serialize entity
-	p2 := createTestParserInMemory()
-	err = e.serialize(p2)
+	s := createTestSerializer()
+	err = e.serialize(s)
 	require.NoError(t, err)
 
 	// Verify serialization is correct
-	assertBuffersEqual(t, p1, p2)
+	assertBuffersEqual(t, p, s)
 }
 
 func TestEntity_parseData(t *testing.T) {
@@ -40,20 +40,20 @@ func TestEntity_parseData(t *testing.T) {
 	t.Parallel()
 
 	// Parse entity data
-	p1 := createTestParserFromFile(t, "testdata/entity_data.dat")
+	p := createTestParser(t, "testdata/entity_data.dat")
 	e := &Entity{}
-	err := e.parseData(p1)
+	err := e.parseData(p)
 	require.NoError(t, err)
-	assertAllBufferRead(t, p1)
+	assertAllBufferRead(t, p)
 
 	// Verify entity data
 	assert.Len(t, e.Properties, 3)
 
 	// Serialize entity data
-	p2 := createTestParserInMemory()
-	err = e.serializeData(p2)
+	s := createTestSerializer()
+	err = e.serializeData(s)
 	require.NoError(t, err)
 
 	// Verify serialization is correct
-	assertBuffersEqual(t, p1, p2)
+	assertBuffersEqual(t, p, s)
 }

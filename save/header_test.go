@@ -14,20 +14,20 @@ func TestHeader(t *testing.T) {
 	t.Parallel()
 
 	// Parse header
-	p1 := createTestParserFromFile(t, "testdata/header.dat")
-	h, err := p1.parseHeader()
+	p := createTestParser(t, "testdata/header.dat")
+	h, err := p.parseHeader()
 	require.NoError(t, err)
-	assertAllBufferRead(t, p1)
+	assertAllBufferRead(t, p)
 
 	// Verify header
 	assert.Equal(t, "Luke", h.SessionName)
 	assert.Equal(t, int32(152331), h.BuildVersion)
 
 	// Serialize header
-	p2 := createTestParserInMemory()
-	err = p2.serializeHeader(h)
+	s := createTestSerializer()
+	err = s.serializeHeader(h)
 	require.NoError(t, err)
 
 	// Verify serialization is correct
-	assertBuffersEqual(t, p1, p2)
+	assertBuffersEqual(t, p, s)
 }
