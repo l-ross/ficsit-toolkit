@@ -14,5 +14,8 @@
 # Satisfactory save files
 *.sav
 
-# Extension used for dumped data during debugging.
+# Extensions used for dumped data during debugging.
 *.dump
+*.json
+
+.DS_STORE

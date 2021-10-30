@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
+
+	"github.com/davecgh/go-spew/spew"
 
 	"github.com/l-ross/ficsit-toolkit/save"
 )
@@ -27,36 +28,13 @@ func realMain() error {
 		return err
 	}
 
-	fmt.Println(len(s.Components))
-	fmt.Println(s.Components[0].TypePath)
-	fmt.Println(len(s.Entities))
-	fmt.Println(s.Entities[0].TypePath)
+	//for _, e := range s.Entities {
+	//	if e.InstanceName == "Persistent_Level:PersistentLevel.Build_ConstructorMk1_C_2147415632" {
+	//		spew.Dump(e.References)
+	//	}
+	//}
 
-	fOut, err := os.OpenFile("out.sav", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0644)
-	if err != nil {
-		return err
-	}
-	defer fOut.Close()
-
-	err = save.Serialize(s, fOut)
-	if err != nil {
-		return err
-	}
-
-	f2, err := os.Open("out.sav")
-	if err != nil {
-		return err
-	}
-
-	s2, err := save.Parse(f2)
-	if err != nil {
-		return err
-	}
-
-	fmt.Println(len(s2.Components))
-	fmt.Println(s2.Components[0].TypePath)
-	fmt.Println(len(s2.Entities))
-	fmt.Println(s2.Entities[0].TypePath)
+	spew.Dump(s.Header)
 
 	return nil
 }

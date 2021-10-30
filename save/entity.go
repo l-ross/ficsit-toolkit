@@ -11,7 +11,7 @@ type Entity struct {
 	WasPlacedInLevel int32              `json:"wasPlacedInLevel"`
 	ParentObjectRoot string             `json:"parentObjectRoot"`
 	ParentObjectName string             `json:"parentObjectName"`
-	Children         []*ObjectReference `json:"children"`
+	References       []*ObjectReference `json:"component"`
 	Properties       []*Property        `json:"properties"`
 	Extra            *Extra             `json:"extras"`
 
@@ -93,7 +93,7 @@ func (e *Entity) parseData(p *Parser) error {
 		return err
 	}
 
-	e.Children = make([]*ObjectReference, childCount)
+	e.References = make([]*ObjectReference, childCount)
 
 	for i := int32(0); i < childCount; i++ {
 		o := &ObjectReference{}
@@ -108,7 +108,7 @@ func (e *Entity) parseData(p *Parser) error {
 			return err
 		}
 
-		e.Children[i] = o
+		e.References[i] = o
 	}
 
 	e.Properties, err = p.parseProperties()
@@ -200,12 +200,12 @@ func (e *Entity) serializeData(s *Serializer) error {
 		return err
 	}
 
-	err = s.writeInt32(int32(len(e.Children)))
+	err = s.writeInt32(int32(len(e.References)))
 	if err != nil {
 		return err
 	}
 
-	for _, c := range e.Children {
+	for _, c := range e.References {
 		err = s.writeString(c.LevelName)
 		if err != nil {
 			return err

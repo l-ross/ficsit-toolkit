@@ -5,13 +5,14 @@ import (
 )
 
 type Save struct {
-	Header           *Header            `json:"header"`
-	Components       []*Component       `json:"components"`
-	Entities         []*Entity          `json:"entities"`
-	CollectedObjects []*ObjectReference `json:"collected_objects"`
+	Header           *Header               `json:"header"`
+	Components       map[string]*Component `json:"components"`
+	Entities         map[string]*Entity    `json:"entities"`
+	CollectedObjects []*ObjectReference    `json:"collected_objects"`
 
-	objects     []object
-	objectCount int32
+	objects                  []object
+	objectCount              int32
+	componentsByInstanceName map[string]*Component
 }
 
 type ObjectType int32

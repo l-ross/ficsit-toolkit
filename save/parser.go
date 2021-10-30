@@ -53,11 +53,12 @@ func (p *Parser) Parse() (*Save, error) {
 
 	s := &Save{
 		Header:           h,
-		Components:       make([]*Component, 0),
-		Entities:         make([]*Entity, 0),
+		Components:       make(map[string]*Component),
+		Entities:         make(map[string]*Entity),
 		CollectedObjects: make([]*ObjectReference, 0),
 
-		objects: make([]object, 0),
+		objects:                  make([]object, 0),
+		componentsByInstanceName: make(map[string]*Component),
 	}
 
 	// Decompress the save file and replace p.body with the decompressed version.
@@ -89,6 +90,7 @@ func (p *Parser) parseBody(s *Save) error {
 		return fmt.Errorf("expected decompressed body to be %d but was %d", actualLen, bodyLen)
 	}
 
+	// Parse the components and entities.
 	err = p.parseObjects(s)
 	if err != nil {
 		return err
@@ -105,7 +107,7 @@ func (p *Parser) parseBody(s *Save) error {
 		return fmt.Errorf("total objects and object data counts should be the same but were %d and %d", s.objectCount, objectDataCount)
 	}
 
-	// Parse the data for each object.
+	// Parse the data for each entity and component.
 	for _, o := range s.objects {
 		err = o.parseData(p)
 		if err != nil {
@@ -148,7 +150,11 @@ func (p *Parser) parseObjects(s *Save) error {
 				return err
 			}
 
-			s.Components = append(s.Components, c)
+			if _, exist := s.Components[c.InstanceName]; exist {
+				return fmt.Errorf("duplicate components with instance name %s", c.InstanceName)
+			}
+
+			s.Components[c.InstanceName] = c
 			s.objects = append(s.objects, c)
 		case EntityType:
 			e := &Entity{}
@@ -157,7 +163,11 @@ func (p *Parser) parseObjects(s *Save) error {
 				return err
 			}
 
-			s.Entities = append(s.Entities, e)
+			if _, exist := s.Entities[e.InstanceName]; exist {
+				return fmt.Errorf("duplicate entities with instance name %s", e.InstanceName)
+			}
+
+			s.Entities[e.InstanceName] = e
 			s.objects = append(s.objects, e)
 		default:
 			return fmt.Errorf("unknown object type %d", objectType)
