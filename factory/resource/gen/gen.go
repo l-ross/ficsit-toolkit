@@ -533,7 +533,7 @@ package {{.PkgName}}
 import (
 	"fmt"
 
-	{{if .ImportResourcePkg}}"github.com/l-ross/ficsit-toolkit/resource" {{end}}
+	{{if .ImportResourcePkg}}"github.com/l-ross/ficsit-toolkit/factory/resource" {{end}}
 )
 
 type {{.TypeName}} struct{

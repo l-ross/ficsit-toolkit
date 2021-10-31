@@ -5,7 +5,7 @@ package ItemDescriptorNuclearFuel
 import (
 	"fmt"
 
-	"github.com/l-ross/ficsit-toolkit/resource"
+	"github.com/l-ross/ficsit-toolkit/factory/resource"
 )
 
 type FGItemDescriptorNuclearFuel struct {
