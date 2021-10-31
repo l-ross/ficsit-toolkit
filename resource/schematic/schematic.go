@@ -4,6 +4,8 @@ package Schematic
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGSchematic struct {
@@ -28,7 +30,7 @@ type FGSchematic struct {
 	MSubCategories      string
 	MTechTier           int
 	MTimeToComplete     float64
-	MType               string
+	MType               resource.SchematicType
 	MUnlocks            []struct {
 		Class                         string
 		MItemsToGive                  string
@@ -58,7 +60,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -78,7 +80,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -112,7 +114,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -146,7 +148,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -180,7 +182,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -225,7 +227,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -259,7 +261,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -279,7 +281,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -299,7 +301,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -319,7 +321,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -353,7 +355,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -387,7 +389,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -432,7 +434,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -477,7 +479,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -522,7 +524,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -567,7 +569,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -612,7 +614,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -657,7 +659,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -702,7 +704,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -747,7 +749,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -792,7 +794,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -837,7 +839,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -882,7 +884,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -927,7 +929,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -972,7 +974,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           3,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1017,7 +1019,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           3,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1062,7 +1064,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1107,7 +1109,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1152,7 +1154,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1197,7 +1199,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1242,7 +1244,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1287,7 +1289,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1332,7 +1334,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1377,7 +1379,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1411,7 +1413,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
+		MType:                   resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1456,7 +1458,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1501,7 +1503,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1546,7 +1548,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1591,7 +1593,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1636,7 +1638,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1681,7 +1683,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1726,7 +1728,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1771,7 +1773,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           7,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1816,7 +1818,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1861,7 +1863,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1906,7 +1908,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1951,7 +1953,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1996,7 +1998,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2041,7 +2043,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2086,7 +2088,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           7,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2131,7 +2133,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2176,7 +2178,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2221,7 +2223,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2266,7 +2268,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2311,7 +2313,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2345,7 +2347,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
+		MType:                   resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2390,7 +2392,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2435,7 +2437,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2480,7 +2482,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2525,7 +2527,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2559,7 +2561,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
+		MType:                   resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2604,7 +2606,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2649,7 +2651,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2694,7 +2696,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2739,7 +2741,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2784,7 +2786,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           7,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2829,7 +2831,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2874,7 +2876,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           5,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2919,7 +2921,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2964,7 +2966,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3009,7 +3011,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3054,7 +3056,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3099,7 +3101,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3144,7 +3146,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3189,7 +3191,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3234,7 +3236,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3279,7 +3281,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3324,7 +3326,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           3,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3369,7 +3371,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3414,7 +3416,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           7,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3459,7 +3461,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3493,7 +3495,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
+		MType:                   resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3527,7 +3529,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
+		MType:                   resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3572,7 +3574,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3617,7 +3619,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3662,7 +3664,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3696,7 +3698,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
+		MType:                   resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3741,7 +3743,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3786,7 +3788,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3831,7 +3833,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3876,7 +3878,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           4,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3921,7 +3923,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3966,7 +3968,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4011,7 +4013,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4056,7 +4058,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4101,7 +4103,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4146,7 +4148,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4191,7 +4193,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           6,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4236,7 +4238,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4281,7 +4283,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           7,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4326,7 +4328,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4371,7 +4373,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           7,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4416,7 +4418,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4450,7 +4452,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
+		MType:                   resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4495,7 +4497,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           3,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Alternate`,
+		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4540,7 +4542,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4585,7 +4587,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4630,7 +4632,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4675,7 +4677,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4709,7 +4711,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4754,7 +4756,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4788,7 +4790,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4822,7 +4824,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4857,7 +4859,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4891,7 +4893,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4925,7 +4927,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4959,7 +4961,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -4979,7 +4981,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         120.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5013,7 +5015,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5047,7 +5049,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5081,7 +5083,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5115,7 +5117,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5149,7 +5151,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5183,7 +5185,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5217,7 +5219,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5251,7 +5253,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         360.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5285,7 +5287,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -5305,7 +5307,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5339,7 +5341,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5378,7 +5380,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5423,7 +5425,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5457,7 +5459,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5502,7 +5504,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5547,7 +5549,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5581,7 +5583,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5615,7 +5617,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5649,7 +5651,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5683,7 +5685,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5728,7 +5730,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5773,7 +5775,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5807,7 +5809,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5852,7 +5854,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5886,7 +5888,7 @@ var (
 		MSubCategories:          `(None)`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks:                nil,
 	}
 
@@ -5906,7 +5908,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5940,7 +5942,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5974,7 +5976,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6019,7 +6021,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6064,7 +6066,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6109,7 +6111,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6154,7 +6156,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6188,7 +6190,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6222,7 +6224,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6256,7 +6258,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -6276,7 +6278,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6310,7 +6312,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6344,7 +6346,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6378,7 +6380,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6412,7 +6414,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6457,7 +6459,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6501,7 +6503,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6535,7 +6537,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         600.000000,
-		MType:                   `EST_HardDrive`,
+		MType:                   resource.HardDrive,
 		MUnlocks:                nil,
 	}
 
@@ -6566,7 +6568,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6611,7 +6613,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6656,7 +6658,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6701,7 +6703,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6735,7 +6737,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6769,7 +6771,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6803,7 +6805,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6837,7 +6839,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6871,7 +6873,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6905,7 +6907,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6950,7 +6952,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6995,7 +6997,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7029,7 +7031,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7063,7 +7065,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7097,7 +7099,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7131,7 +7133,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -7151,7 +7153,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7185,7 +7187,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -7205,7 +7207,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -7225,7 +7227,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -7245,7 +7247,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -7265,7 +7267,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7310,7 +7312,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7355,7 +7357,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7400,7 +7402,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7445,7 +7447,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7479,7 +7481,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7524,7 +7526,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7558,7 +7560,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7603,7 +7605,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7637,7 +7639,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7671,7 +7673,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7704,7 +7706,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         120.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -7724,7 +7726,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7758,7 +7760,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7792,7 +7794,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7827,7 +7829,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7861,7 +7863,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7895,7 +7897,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7929,7 +7931,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -7949,7 +7951,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7983,7 +7985,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8016,7 +8018,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8050,7 +8052,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8084,7 +8086,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -8115,7 +8117,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8160,7 +8162,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8205,7 +8207,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8239,7 +8241,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8273,7 +8275,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8318,7 +8320,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8363,7 +8365,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8397,7 +8399,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8431,7 +8433,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         120.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8465,7 +8467,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         240.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8502,7 +8504,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8544,7 +8546,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         360.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8578,7 +8580,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8616,7 +8618,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         240.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8650,7 +8652,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8684,7 +8686,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8723,7 +8725,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         360.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8757,7 +8759,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         240.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8795,7 +8797,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8829,7 +8831,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         600.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8863,7 +8865,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8905,7 +8907,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         600.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8939,7 +8941,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         720.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8982,7 +8984,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9016,7 +9018,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         720.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9050,7 +9052,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9084,7 +9086,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         480.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9122,7 +9124,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9156,7 +9158,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         900.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9195,7 +9197,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9233,7 +9235,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         900.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9267,7 +9269,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9305,7 +9307,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         600.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9339,7 +9341,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         600.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9382,7 +9384,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9416,7 +9418,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         60.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9450,7 +9452,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9488,7 +9490,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         900.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9531,7 +9533,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9565,7 +9567,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         900.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9604,7 +9606,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         900.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9651,7 +9653,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9685,7 +9687,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9723,7 +9725,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         300.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9757,7 +9759,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         1200.000000,
-		MType:                   `EST_Milestone`,
+		MType:                   resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9795,7 +9797,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9829,7 +9831,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9874,7 +9876,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9908,7 +9910,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9942,7 +9944,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Custom`,
+		MType:                   resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9992,7 +9994,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10026,7 +10028,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Pioneering.SC_RSS_Pioneering_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10060,7 +10062,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Pioneering.SC_RSS_Pioneering_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10094,7 +10096,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10128,7 +10130,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10162,7 +10164,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10196,7 +10198,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Pioneering.SC_RSS_Pioneering_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10230,7 +10232,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10275,7 +10277,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10320,7 +10322,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10354,7 +10356,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10388,7 +10390,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10423,7 +10425,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10457,7 +10459,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -10477,7 +10479,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -10497,7 +10499,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10531,7 +10533,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -10551,7 +10553,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10585,7 +10587,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -10605,7 +10607,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10639,7 +10641,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks:                nil,
 	}
 
@@ -10659,7 +10661,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10693,7 +10695,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10727,7 +10729,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10772,7 +10774,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10817,7 +10819,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10851,7 +10853,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_Tutorial`,
+		MType:                   resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10900,7 +10902,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Tutorial`,
+		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10950,7 +10952,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Tutorial`,
+		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11000,7 +11002,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Tutorial`,
+		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11049,7 +11051,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Tutorial`,
+		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11098,7 +11100,7 @@ var (
 		MSubCategories:      ``,
 		MTechTier:           0,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_Tutorial`,
+		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11132,7 +11134,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11166,7 +11168,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11211,7 +11213,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11256,7 +11258,7 @@ var (
 		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:           1,
 		MTimeToComplete:     0.000000,
-		MType:               `EST_ResourceSink`,
+		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11290,7 +11292,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11324,7 +11326,7 @@ var (
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
+		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11358,7 +11360,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11392,7 +11394,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11426,7 +11428,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11460,7 +11462,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11498,7 +11500,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11532,7 +11534,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11566,7 +11568,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11600,7 +11602,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11634,7 +11636,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11668,7 +11670,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11702,7 +11704,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11736,7 +11738,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11770,7 +11772,7 @@ var (
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
-		MType:                   `EST_MAM`,
+		MType:                   resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string

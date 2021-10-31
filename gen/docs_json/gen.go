@@ -336,6 +336,15 @@ func (r *Resource) createStructField(k string, v interface{}) (*StructField, err
 				return nil, fmt.Errorf("failed to parse resource form value %s", vString)
 			}
 			sf.Value = v
+		case strings.HasPrefix(vString, "EST_"):
+			r.ImportResourcePkg = true
+			sf.Type = "resource.SchematicType"
+
+			v, ok := schematicType[vString]
+			if !ok {
+				return nil, fmt.Errorf("failed to parse schematic type value %s", vString)
+			}
+			sf.Value = v
 		case floatRegexp.MatchString(vString):
 			sf.Type = "float64"
 			sf.Value = vString

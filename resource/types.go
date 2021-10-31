@@ -20,3 +20,18 @@ const (
 	Gas
 	Heat
 )
+
+type SchematicType int
+
+const (
+	Custom SchematicType = iota
+	Cheat
+	Tutorial
+	Milestone
+	Alternate
+	Story
+	MAM
+	ResourceSink
+	HardDrive
+	Prototype
+)
