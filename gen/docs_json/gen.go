@@ -421,47 +421,36 @@ func (r *Resource) parseArrayFields() error {
 					arrayValue = append(arrayValue, sf)
 				}
 
-				sort.Slice(arrayValue, func(i, j int) bool {
-					if arrayValue[i].Name < arrayValue[j].Name {
-						return true
-					}
-					return false
-				})
-
+				sortFields(arrayValue)
 				arrayValues = append(arrayValues, arrayValue)
-
 			}
 
 			values[i] = arrayValues
 		}
 
-		sortedTypes := make([]*StructField, 0)
+		// Create type definition for array of structs.
 
+		arrayStructDefs := make([]*StructField, 0)
 		for n, t := range structTypes {
-			sortedTypes = append(sortedTypes, &StructField{
+			arrayStructDefs = append(arrayStructDefs, &StructField{
 				Name: n,
 				Type: t,
 			})
 		}
-
-		sort.Slice(sortedTypes, func(i, j int) bool {
-			if sortedTypes[i].Name < sortedTypes[j].Name {
-				return true
-			}
-			return false
-		})
+		sortFields(arrayStructDefs)
 
 		var b bytes.Buffer
 
-		err := arrayStructDef.Execute(&b, sortedTypes)
+		err := arrayStructDef.Execute(&b, arrayStructDefs)
 		if err != nil {
 			return err
 		}
 
 		r.structDef[name] = b.String()
 
+		// Update each class to add their array fields.
 		a := array{
-			Fields: sortedTypes,
+			Fields: arrayStructDefs,
 		}
 
 		for i, v := range values {
