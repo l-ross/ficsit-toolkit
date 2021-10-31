@@ -4,6 +4,8 @@ package Parachute
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGParachute struct {
@@ -12,7 +14,7 @@ type FGParachute struct {
 	MAttachSocket          string
 	MBackAnimation         string
 	MCostToUse             string
-	MEquipmentSlot         string
+	MEquipmentSlot         resource.EquipmentSlot
 	MHasPersistentOwner    bool
 	MIsDeployed            bool
 	MTerminalVelocityZ     float64
@@ -26,7 +28,7 @@ var (
 		MAttachSocket:          `root`,
 		MBackAnimation:         `BE_None`,
 		MCostToUse:             `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/Desc_Parachute.Desc_Parachute_C"',Amount=1))`,
-		MEquipmentSlot:         `ES_BACK`,
+		MEquipmentSlot:         resource.Back,
 		MHasPersistentOwner:    false,
 		MIsDeployed:            false,
 		MTerminalVelocityZ:     300.000000,

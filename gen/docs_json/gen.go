@@ -318,33 +318,43 @@ func (r *Resource) createStructField(k string, v interface{}) (*StructField, err
 		case strings.ToUpper(vString) == "FALSE":
 			sf.Type = "bool"
 			sf.Value = "false"
-		case strings.HasPrefix(vString, "SS_"):
+		case isEnum(vString):
 			r.ImportResourcePkg = true
-			sf.Type = "resource.StackSize"
-
-			v, ok := stackSize[vString]
-			if !ok {
-				return nil, fmt.Errorf("failed to parse stack size value %s", vString)
+			value, t, err := getEnum(vString)
+			if err != nil {
+				return nil, err
 			}
-			sf.Value = v
-		case strings.HasPrefix(vString, "RF_"):
-			r.ImportResourcePkg = true
-			sf.Type = "resource.Form"
 
-			v, ok := resourceForm[vString]
-			if !ok {
-				return nil, fmt.Errorf("failed to parse resource form value %s", vString)
-			}
-			sf.Value = v
-		case strings.HasPrefix(vString, "EST_"):
-			r.ImportResourcePkg = true
-			sf.Type = "resource.SchematicType"
+			sf.Value = value
+			sf.Type = t
 
-			v, ok := schematicType[vString]
-			if !ok {
-				return nil, fmt.Errorf("failed to parse schematic type value %s", vString)
-			}
-			sf.Value = v
+		//case strings.HasPrefix(vString, "SS_"):
+		//	r.ImportResourcePkg = true
+		//	sf.Type = "resource.StackSize"
+		//
+		//	v, ok := stackSize[vString]
+		//	if !ok {
+		//		return nil, fmt.Errorf("failed to parse stack size value %s", vString)
+		//	}
+		//	sf.Value = v
+		//case strings.HasPrefix(vString, "RF_"):
+		//	r.ImportResourcePkg = true
+		//	sf.Type = "resource.Form"
+		//
+		//	v, ok := resourceForm[vString]
+		//	if !ok {
+		//		return nil, fmt.Errorf("failed to parse resource form value %s", vString)
+		//	}
+		//	sf.Value = v
+		//case strings.HasPrefix(vString, "EST_"):
+		//	r.ImportResourcePkg = true
+		//	sf.Type = "resource.SchematicType"
+		//
+		//	v, ok := schematicType[vString]
+		//	if !ok {
+		//		return nil, fmt.Errorf("failed to parse schematic type value %s", vString)
+		//	}
+		//	sf.Value = v
 		case floatRegexp.MatchString(vString):
 			sf.Type = "float64"
 			sf.Value = vString

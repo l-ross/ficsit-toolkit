@@ -4,6 +4,8 @@ package ColorGun
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGColorGun struct {
@@ -15,7 +17,7 @@ type FGColorGun struct {
 	MColorSlot                        int
 	MCostToUse                        string
 	MCurrentAmmo                      int
-	MEquipmentSlot                    string
+	MEquipmentSlot                    resource.EquipmentSlot
 	MFireRate                         float64
 	MHasPersistentOwner               bool
 	MInstantHitDamage                 float64
@@ -40,7 +42,7 @@ var (
 		MColorSlot:                        1,
 		MCostToUse:                        ``,
 		MCurrentAmmo:                      0,
-		MEquipmentSlot:                    `ES_ARMS`,
+		MEquipmentSlot:                    resource.Arms,
 		MFireRate:                         0.500000,
 		MHasPersistentOwner:               false,
 		MInstantHitDamage:                 10.000000,

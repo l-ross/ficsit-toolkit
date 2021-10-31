@@ -4,6 +4,8 @@ package SuitBase
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGSuitBase struct {
@@ -15,7 +17,7 @@ type FGSuitBase struct {
 	MCountdown             float64
 	MDamageNegated         float64
 	MDisableEffectTimer    float64
-	MEquipmentSlot         string
+	MEquipmentSlot         resource.EquipmentSlot
 	MFilterDuration        float64
 	MHasNegatedDamage      bool
 	MHasPersistentOwner    bool
@@ -35,7 +37,7 @@ var (
 		MCountdown:             0.000000,
 		MDamageNegated:         0.000000,
 		MDisableEffectTimer:    0.000000,
-		MEquipmentSlot:         `ES_BACK`,
+		MEquipmentSlot:         resource.Back,
 		MFilterDuration:        240.000000,
 		MHasNegatedDamage:      false,
 		MHasPersistentOwner:    false,

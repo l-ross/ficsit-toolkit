@@ -35,3 +35,28 @@ const (
 	HardDrive
 	Prototype
 )
+
+type EquipmentSlot int
+
+const (
+	None EquipmentSlot = iota
+	Arms
+	Back
+)
+
+type DroneDockingState int
+
+const (
+	Undocked DroneDockingState = iota
+	Docking
+	Docked
+	Takeoff
+)
+
+type PowerPoleType int
+
+const (
+	Pole PowerPoleType = iota
+	Wall
+	WallDouble
+)

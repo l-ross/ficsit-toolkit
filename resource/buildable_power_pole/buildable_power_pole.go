@@ -4,6 +4,8 @@ package BuildablePowerPole
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGBuildablePowerPole struct {
@@ -23,7 +25,7 @@ type FGBuildablePowerPole struct {
 	MIsUseable                              bool
 	MMaterialNameToInstanceManager          string
 	MPowerConnections                       string
-	MPowerPoleType                          string
+	MPowerPoleType                          resource.PowerPoleType
 	MShouldModifyWorldGrid                  bool
 	MShouldShowHighlight                    bool
 	MSkipBuildEffect                        bool
@@ -51,7 +53,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      true,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_POLE`,
+		MPowerPoleType:                  resource.Pole,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -78,7 +80,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      true,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_POLE`,
+		MPowerPoleType:                  resource.Pole,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -105,7 +107,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      true,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_POLE`,
+		MPowerPoleType:                  resource.Pole,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -134,7 +136,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      false,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_WALL`,
+		MPowerPoleType:                  resource.Wall,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -163,7 +165,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      false,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_WALL_DOUBLE`,
+		MPowerPoleType:                  resource.WallDouble,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -192,7 +194,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      false,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_WALL_DOUBLE`,
+		MPowerPoleType:                  resource.WallDouble,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -221,7 +223,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      false,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_WALL_DOUBLE`,
+		MPowerPoleType:                  resource.WallDouble,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -250,7 +252,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      false,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_WALL`,
+		MPowerPoleType:                  resource.Wall,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,
@@ -279,7 +281,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 		MIsUseable:                      false,
 		MMaterialNameToInstanceManager:  `()`,
 		MPowerConnections:               ``,
-		MPowerPoleType:                  `PPT_WALL`,
+		MPowerPoleType:                  resource.Wall,
 		MShouldModifyWorldGrid:          true,
 		MShouldShowHighlight:            false,
 		MSkipBuildEffect:                false,

@@ -4,6 +4,8 @@ package Chainsaw
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGChainsaw struct {
@@ -17,7 +19,7 @@ type FGChainsaw struct {
 	MCurrentState               string
 	MEnergyConsumption          float64
 	MEnergyStored               float64
-	MEquipmentSlot              string
+	MEquipmentSlot              resource.EquipmentSlot
 	MExcludeChainsawableFoliage bool
 	MHasPersistentOwner         bool
 	MInterpSawProgress          float64
@@ -41,7 +43,7 @@ var (
 		MCurrentState:               `NewEnumerator3`,
 		MEnergyConsumption:          75.000000,
 		MEnergyStored:               0.000000,
-		MEquipmentSlot:              `ES_ARMS`,
+		MEquipmentSlot:              resource.Arms,
 		MExcludeChainsawableFoliage: false,
 		MHasPersistentOwner:         false,
 		MInterpSawProgress:          0.000000,

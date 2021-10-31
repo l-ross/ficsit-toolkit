@@ -69,7 +69,7 @@ type FGBuildableDroneStation struct {
 	MTripInformationSampleCount             int
 	MTripPowerCost                          float64
 	MTripPowerPerMeterCost                  float64
-	M_DockingStates                         string
+	M_DockingStates                         resource.DroneDockingState
 	M_OffsetTime                            float64
 	MaxRenderDistance                       float64
 	OnReplicationDetailActorCreatedEvent    string
@@ -140,7 +140,7 @@ The Drone Port interface provides delivery details and allows management of Port
 		MTripInformationSampleCount:          1,
 		MTripPowerCost:                       24000.000000,
 		MTripPowerPerMeterCost:               6.000000,
-		M_DockingStates:                      `DS_UNDOCKED`,
+		M_DockingStates:                      resource.Undocked,
 		M_OffsetTime:                         0.000000,
 		MaxRenderDistance:                    -1.000000,
 		OnReplicationDetailActorCreatedEvent: `()`,

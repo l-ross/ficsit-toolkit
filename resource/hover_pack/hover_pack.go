@@ -4,6 +4,8 @@ package HoverPack
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGHoverPack struct {
@@ -23,7 +25,7 @@ type FGHoverPack struct {
 	MCurrentMouseDelta                       float64
 	MCurrentPlayerVelocity                   float64
 	MCurrentPowerLevel                       float64
-	MEquipmentSlot                           string
+	MEquipmentSlot                           resource.EquipmentSlot
 	MFallSpeedLimitWhenPowered               float64
 	MHasConnection                           bool
 	MHasPersistentOwner                      bool
@@ -67,7 +69,7 @@ var (
 		MCurrentMouseDelta:                       0.000000,
 		MCurrentPlayerVelocity:                   0.000000,
 		MCurrentPowerLevel:                       0.000000,
-		MEquipmentSlot:                           `ES_BACK`,
+		MEquipmentSlot:                           resource.Back,
 		MFallSpeedLimitWhenPowered:               600.000000,
 		MHasConnection:                           false,
 		MHasPersistentOwner:                      false,

@@ -4,6 +4,8 @@ package EquipmentStunSpear
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGEquipmentStunSpear struct {
@@ -15,7 +17,7 @@ type FGEquipmentStunSpear struct {
 	MCostToUse                string
 	MCurrentMontageSection    string
 	MDamage                   int
-	MEquipmentSlot            string
+	MEquipmentSlot            resource.EquipmentSlot
 	MFirstAttackTimer         float64
 	MHasPersistentOwner       bool
 	MPlayingSound             bool
@@ -38,7 +40,7 @@ var (
 		MCostToUse:                ``,
 		MCurrentMontageSection:    `None`,
 		MDamage:                   7,
-		MEquipmentSlot:            `ES_ARMS`,
+		MEquipmentSlot:            resource.Arms,
 		MFirstAttackTimer:         0.000000,
 		MHasPersistentOwner:       false,
 		MRandomAttackAnim:         0,
@@ -57,7 +59,7 @@ var (
 		MBackAnimation:            `BE_None`,
 		MCostToUse:                ``,
 		MDamage:                   5,
-		MEquipmentSlot:            `ES_ARMS`,
+		MEquipmentSlot:            resource.Arms,
 		MHasPersistentOwner:       false,
 		MPlayingSound:             false,
 		MRandomAttackAnim:         0,
@@ -76,7 +78,7 @@ var (
 		MCostToUse:                ``,
 		MCurrentMontageSection:    `None`,
 		MDamage:                   7,
-		MEquipmentSlot:            `ES_ARMS`,
+		MEquipmentSlot:            resource.Arms,
 		MFirstAttackTimer:         0.000000,
 		MHasPersistentOwner:       false,
 		MRandomAttackAnim:         0,

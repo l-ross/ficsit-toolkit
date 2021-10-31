@@ -4,6 +4,8 @@ package SnowballWeapon
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGSnowballWeapon struct {
@@ -16,7 +18,7 @@ type FGSnowballWeapon struct {
 	MCurrentAmmo            int
 	MDelayBetweenExplosions float64
 	MDispensedExplosives    string
-	MEquipmentSlot          string
+	MEquipmentSlot          resource.EquipmentSlot
 	MExplosiveData          string
 	MFireRate               float64
 	MHasPersistentOwner     bool
@@ -40,7 +42,7 @@ var (
 		MCurrentAmmo:            0,
 		MDelayBetweenExplosions: 0.000000,
 		MDispensedExplosives:    ``,
-		MEquipmentSlot:          `ES_ARMS`,
+		MEquipmentSlot:          resource.Arms,
 		MExplosiveData:          `(ProjectileClass=BlueprintGeneratedClass'"/Game/FactoryGame/Equipment/Holiday/SnowballWeapon/BP_SnowballProjectile.BP_SnowballProjectile_C"',ProjectileLifeSpan=-1.000000,ProjectileStickSpan=-1.000000,ExplosionDamage=50,ExplosionRadius=750.000000,ImpactDamage=1,ExplodeAtEndOfLife=True,DamageType=BlueprintGeneratedClass'"/Game/FactoryGame/Equipment/Holiday/SnowballWeapon/DamageType_SnowballImpact.DamageType_SnowballImpact_C"',DamageTypeExplode=BlueprintGeneratedClass'"/Game/FactoryGame/Equipment/Holiday/SnowballWeapon/DamageType_SnowballExplosive.DamageType_SnowballExplosive_C"')`,
 		MFireRate:               0.500000,
 		MHasPersistentOwner:     false,

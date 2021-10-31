@@ -4,6 +4,8 @@ package NobeliskDetonator
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGNobeliskDetonator struct {
@@ -16,7 +18,7 @@ type FGNobeliskDetonator struct {
 	MCurrentAmmo            int
 	MDelayBetweenExplosions float64
 	MDispensedExplosives    string
-	MEquipmentSlot          string
+	MEquipmentSlot          resource.EquipmentSlot
 	MExplosiveData          string
 	MFireRate               float64
 	MHasPersistentOwner     bool
@@ -40,7 +42,7 @@ var (
 		MCurrentAmmo:            0,
 		MDelayBetweenExplosions: 0.150000,
 		MDispensedExplosives:    ``,
-		MEquipmentSlot:          `ES_ARMS`,
+		MEquipmentSlot:          resource.Arms,
 		MExplosiveData:          `(ProjectileClass=BlueprintGeneratedClass'"/Game/FactoryGame/Equipment/NobeliskDetonator/BP_NobeliskExplosive.BP_NobeliskExplosive_C"',ProjectileLifeSpan=-1.000000,ProjectileStickSpan=-1.000000,ExplosionDamage=50,ExplosionRadius=750.000000,ImpactDamage=1,ExplodeAtEndOfLife=True,DamageType=BlueprintGeneratedClass'"/Game/FactoryGame/Equipment/NobeliskDetonator/DamageType_NobeliskExplosiveImpact.DamageType_NobeliskExplosiveImpact_C"',DamageTypeExplode=BlueprintGeneratedClass'"/Game/FactoryGame/Equipment/NobeliskDetonator/DamageType_NobeliskExplosive.DamageType_NobeliskExplosive_C"')`,
 		MFireRate:               0.500000,
 		MHasPersistentOwner:     false,

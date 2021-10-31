@@ -4,6 +4,8 @@ package WeaponInstantFire
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGWeaponInstantFire struct {
@@ -15,7 +17,7 @@ type FGWeaponInstantFire struct {
 	MBlockSprintWhenFiring bool
 	MCostToUse             string
 	MCurrentAmmo           int
-	MEquipmentSlot         string
+	MEquipmentSlot         resource.EquipmentSlot
 	MFireRate              float64
 	MHasPersistentOwner    bool
 	MHasReloadedOnce       bool
@@ -37,7 +39,7 @@ var (
 		MBlockSprintWhenFiring: true,
 		MCostToUse:             ``,
 		MCurrentAmmo:           0,
-		MEquipmentSlot:         `ES_ARMS`,
+		MEquipmentSlot:         resource.Arms,
 		MFireRate:              0.200000,
 		MHasPersistentOwner:    false,
 		MHasReloadedOnce:       false,

@@ -4,6 +4,8 @@ package GolfCartDispenser
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGGolfCartDispenser struct {
@@ -12,7 +14,7 @@ type FGGolfCartDispenser struct {
 	MAttachSocket          string
 	MBackAnimation         string
 	MCostToUse             string
-	MEquipmentSlot         string
+	MEquipmentSlot         resource.EquipmentSlot
 	MHasPersistentOwner    bool
 	MPlaceDistanceMax      float64
 	MUseDefaultPrimaryFire bool
@@ -25,7 +27,7 @@ var (
 		MAttachSocket:          `hand_rSocket`,
 		MBackAnimation:         `BE_None`,
 		MCostToUse:             ``,
-		MEquipmentSlot:         `ES_ARMS`,
+		MEquipmentSlot:         resource.Arms,
 		MHasPersistentOwner:    false,
 		MPlaceDistanceMax:      1000.000000,
 		MUseDefaultPrimaryFire: false,

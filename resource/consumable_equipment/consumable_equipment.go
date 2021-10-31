@@ -4,6 +4,8 @@ package ConsumableEquipment
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGConsumableEquipment struct {
@@ -15,7 +17,7 @@ type FGConsumableEquipment struct {
 	MCanPress              bool
 	MCostToUse             string
 	MCurrentAnimData       string
-	MEquipmentSlot         string
+	MEquipmentSlot         resource.EquipmentSlot
 	MHasPersistentOwner    bool
 	MRandomAnim            int
 	MUseDefaultPrimaryFire bool
@@ -28,7 +30,7 @@ var (
 		MAttachSocket:          `hand_rSocket`,
 		MBackAnimation:         `BE_None`,
 		MCostToUse:             ``,
-		MEquipmentSlot:         `ES_ARMS`,
+		MEquipmentSlot:         resource.Arms,
 		MHasPersistentOwner:    false,
 		MUseDefaultPrimaryFire: false,
 	}
@@ -40,7 +42,7 @@ var (
 		MBackAnimation:         `BE_None`,
 		MCanPress:              false,
 		MCostToUse:             ``,
-		MEquipmentSlot:         `ES_ARMS`,
+		MEquipmentSlot:         resource.Arms,
 		MHasPersistentOwner:    false,
 		MRandomAnim:            0,
 		MUseDefaultPrimaryFire: false,
@@ -55,7 +57,7 @@ var (
 		MCanPress:              false,
 		MCostToUse:             ``,
 		MCurrentAnimData:       `()`,
-		MEquipmentSlot:         `ES_ARMS`,
+		MEquipmentSlot:         resource.Arms,
 		MHasPersistentOwner:    false,
 		MRandomAnim:            0,
 		MUseDefaultPrimaryFire: false,

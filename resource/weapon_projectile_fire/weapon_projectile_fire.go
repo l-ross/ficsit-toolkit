@@ -4,6 +4,8 @@ package WeaponProjectileFire
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGWeaponProjectileFire struct {
@@ -14,7 +16,7 @@ type FGWeaponProjectileFire struct {
 	MBlockSprintWhenFiring bool
 	MCostToUse             string
 	MCurrentAmmo           int
-	MEquipmentSlot         string
+	MEquipmentSlot         resource.EquipmentSlot
 	MFireRate              float64
 	MHasPersistentOwner    bool
 	MMagSize               int
@@ -35,7 +37,7 @@ var (
 		MBlockSprintWhenFiring: true,
 		MCostToUse:             ``,
 		MCurrentAmmo:           0,
-		MEquipmentSlot:         `ES_ARMS`,
+		MEquipmentSlot:         resource.Arms,
 		MFireRate:              1.000000,
 		MHasPersistentOwner:    false,
 		MMagSize:               1,

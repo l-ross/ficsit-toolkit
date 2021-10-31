@@ -4,6 +4,8 @@ package JumpingStilts
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGJumpingStilts struct {
@@ -12,7 +14,7 @@ type FGJumpingStilts struct {
 	MAttachSocket          string
 	MBackAnimation         string
 	MCostToUse             string
-	MEquipmentSlot         string
+	MEquipmentSlot         resource.EquipmentSlot
 	MHasPersistentOwner    bool
 	MJumpSpeedFactor       float64
 	MSprintSpeedFactor     float64
@@ -26,7 +28,7 @@ var (
 		MAttachSocket:          `jumpingStilt_lSocket`,
 		MBackAnimation:         `BE_None`,
 		MCostToUse:             ``,
-		MEquipmentSlot:         `ES_BACK`,
+		MEquipmentSlot:         resource.Back,
 		MHasPersistentOwner:    false,
 		MJumpSpeedFactor:       1.500000,
 		MSprintSpeedFactor:     1.500000,

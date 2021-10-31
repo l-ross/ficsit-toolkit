@@ -4,6 +4,8 @@ package JetPack
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGJetPack struct {
@@ -14,7 +16,7 @@ type FGJetPack struct {
 	MCostToUse               string
 	MCurrentFuel             float64
 	MDefaultAirControl       float64
-	MEquipmentSlot           string
+	MEquipmentSlot           resource.EquipmentSlot
 	MFuelConsumeRate         float64
 	MFuelRegenRate           float64
 	MFuelWorth               float64
@@ -42,7 +44,7 @@ var (
 		MCostToUse:               `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_Fuel.Desc_Fuel_C"',Amount=1))`,
 		MCurrentFuel:             1.000000,
 		MDefaultAirControl:       0.000000,
-		MEquipmentSlot:           `ES_BACK`,
+		MEquipmentSlot:           resource.Back,
 		MFuelConsumeRate:         0.200000,
 		MFuelRegenRate:           0.500000,
 		MFuelWorth:               0.500000,

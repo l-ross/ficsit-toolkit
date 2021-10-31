@@ -4,6 +4,8 @@ package EquipmentZipline
 
 import (
 	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGEquipmentZipline struct {
@@ -12,7 +14,7 @@ type FGEquipmentZipline struct {
 	MAttachSocket              string
 	MBackAnimation             string
 	MCostToUse                 string
-	MEquipmentSlot             string
+	MEquipmentSlot             resource.EquipmentSlot
 	MHasPersistentOwner        bool
 	MMaxZiplineAngle           float64
 	MShouldPlayDeactivateSound bool
@@ -32,7 +34,7 @@ var (
 		MAttachSocket:              `hand_rSocket`,
 		MBackAnimation:             `BE_None`,
 		MCostToUse:                 ``,
-		MEquipmentSlot:             `ES_ARMS`,
+		MEquipmentSlot:             resource.Arms,
 		MHasPersistentOwner:        false,
 		MMaxZiplineAngle:           0.950000,
 		MShouldPlayDeactivateSound: false,
