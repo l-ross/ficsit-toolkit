@@ -91,13 +91,26 @@ var (
 Has no input and must therefore be fed biomass manually.
 
 Resource consumption will automatically be lowered to meet power demands.`,
-		MDisplayName:                         `Biomass Burner`,
-		MEffectUpdateInterval:                1.000000,
-		MExcludeFromMaterialInstancing:       ``,
-		MFluidStackSizeDefault:               resource.Fluid,
-		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  ``,
-		MForceNetUpdateOnRegisterPlayer:      false,
+		MDisplayName:                    `Biomass Burner`,
+		MEffectUpdateInterval:           1.000000,
+		MExcludeFromMaterialInstancing:  ``,
+		MFluidStackSizeDefault:          resource.Fluid,
+		MFluidStackSizeMultiplier:       1,
+		MFogPlaneTransforms:             ``,
+		MForceNetUpdateOnRegisterPlayer: false,
+		MFuel: []struct {
+			MByproduct                 string
+			MByproductAmount           string
+			MFuelClass                 string
+			MSupplementalResourceClass string
+		}{
+			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
+				MFuelClass:                 `FGItemDescriptorBiomass`,
+				MSupplementalResourceClass: ``,
+			},
+		},
 		MFuelClasses:                         ``,
 		MFuelLoadAmount:                      1,
 		MFuelResourceForm:                    resource.Solid,
@@ -132,19 +145,6 @@ Resource consumption will automatically be lowered to meet power demands.`,
 		MToggleDormancyOnInteraction:         false,
 		MaxRenderDistance:                    -1.000000,
 		OnReplicationDetailActorCreatedEvent: `()`,
-		MFuel: []struct {
-			MByproduct                 string
-			MByproductAmount           string
-			MFuelClass                 string
-			MSupplementalResourceClass string
-		}{
-			{
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
-				MFuelClass:                 `FGItemDescriptorBiomass`,
-				MSupplementalResourceClass: ``,
-			},
-		},
 	}
 
 	GeneratorCoal = FGBuildableGeneratorFuel{
@@ -163,13 +163,38 @@ Resource consumption will automatically be lowered to meet power demands.`,
 Has a Conveyor Belt and Pipe input, so both the Coal and Water supply can be automated.
 
 Caution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.`,
-		MDisplayName:                         `Coal Generator`,
-		MEffectUpdateInterval:                0.000000,
-		MExcludeFromMaterialInstancing:       ``,
-		MFluidStackSizeDefault:               resource.Fluid,
-		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  `((Translation=(X=199.904510,Y=1143.047119,Z=162.721100)))`,
-		MForceNetUpdateOnRegisterPlayer:      false,
+		MDisplayName:                    `Coal Generator`,
+		MEffectUpdateInterval:           0.000000,
+		MExcludeFromMaterialInstancing:  ``,
+		MFluidStackSizeDefault:          resource.Fluid,
+		MFluidStackSizeMultiplier:       1,
+		MFogPlaneTransforms:             `((Translation=(X=199.904510,Y=1143.047119,Z=162.721100)))`,
+		MForceNetUpdateOnRegisterPlayer: false,
+		MFuel: []struct {
+			MByproduct                 string
+			MByproductAmount           string
+			MFuelClass                 string
+			MSupplementalResourceClass string
+		}{
+			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
+				MFuelClass:                 `Desc_Coal_C`,
+				MSupplementalResourceClass: `Desc_Water_C`,
+			},
+			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
+				MFuelClass:                 `Desc_CompactedCoal_C`,
+				MSupplementalResourceClass: `Desc_Water_C`,
+			},
+			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
+				MFuelClass:                 `Desc_PetroleumCoke_C`,
+				MSupplementalResourceClass: `Desc_Water_C`,
+			},
+		},
 		MFuelClasses:                         ``,
 		MFuelLoadAmount:                      1,
 		MFuelResourceForm:                    resource.Solid,
@@ -206,31 +231,6 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		M_SFXSockets:                         `("AudioSocketTurbine","CoalGeneratorPotential")`,
 		MaxRenderDistance:                    -1.000000,
 		OnReplicationDetailActorCreatedEvent: `()`,
-		MFuel: []struct {
-			MByproduct                 string
-			MByproductAmount           string
-			MFuelClass                 string
-			MSupplementalResourceClass string
-		}{
-			{
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
-				MFuelClass:                 `Desc_Coal_C`,
-				MSupplementalResourceClass: `Desc_Water_C`,
-			},
-			{
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
-				MFuelClass:                 `Desc_CompactedCoal_C`,
-				MSupplementalResourceClass: `Desc_Water_C`,
-			},
-			{
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
-				MFuelClass:                 `Desc_PetroleumCoke_C`,
-				MSupplementalResourceClass: `Desc_Water_C`,
-			},
-		},
 	}
 
 	GeneratorFuel = FGBuildableGeneratorFuel{
@@ -250,13 +250,38 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 Has a Pipe input so the Fuel supply can be automated.
 
 Caution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.`,
-		MDisplayName:                         `Fuel Generator`,
-		MEffectUpdateInterval:                2.000000,
-		MExcludeFromMaterialInstancing:       ``,
-		MFluidStackSizeDefault:               resource.Fluid,
-		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  ``,
-		MForceNetUpdateOnRegisterPlayer:      false,
+		MDisplayName:                    `Fuel Generator`,
+		MEffectUpdateInterval:           2.000000,
+		MExcludeFromMaterialInstancing:  ``,
+		MFluidStackSizeDefault:          resource.Fluid,
+		MFluidStackSizeMultiplier:       1,
+		MFogPlaneTransforms:             ``,
+		MForceNetUpdateOnRegisterPlayer: false,
+		MFuel: []struct {
+			MByproduct                 string
+			MByproductAmount           string
+			MFuelClass                 string
+			MSupplementalResourceClass string
+		}{
+			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
+				MFuelClass:                 `Desc_LiquidFuel_C`,
+				MSupplementalResourceClass: ``,
+			},
+			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
+				MFuelClass:                 `Desc_LiquidTurboFuel_C`,
+				MSupplementalResourceClass: ``,
+			},
+			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
+				MFuelClass:                 `Desc_LiquidBiofuel_C`,
+				MSupplementalResourceClass: ``,
+			},
+		},
 		MFuelClasses:                         ``,
 		MFuelLoadAmount:                      1000,
 		MFuelResourceForm:                    resource.Liquid,
@@ -294,31 +319,6 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		M_SFXSockets:                         `("AudioSocket_Exhaust","AudioSocket_Root")`,
 		MaxRenderDistance:                    -1.000000,
 		OnReplicationDetailActorCreatedEvent: `()`,
-		MFuel: []struct {
-			MByproduct                 string
-			MByproductAmount           string
-			MFuelClass                 string
-			MSupplementalResourceClass string
-		}{
-			{
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
-				MFuelClass:                 `Desc_LiquidFuel_C`,
-				MSupplementalResourceClass: ``,
-			},
-			{
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
-				MFuelClass:                 `Desc_LiquidTurboFuel_C`,
-				MSupplementalResourceClass: ``,
-			},
-			{
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
-				MFuelClass:                 `Desc_LiquidBiofuel_C`,
-				MSupplementalResourceClass: ``,
-			},
-		},
 	}
 )
 

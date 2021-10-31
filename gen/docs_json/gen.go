@@ -166,6 +166,15 @@ func (r *Resource) generate() error {
 		return false
 	})
 
+	for _, c := range r.Classes {
+		sort.Slice(c.Fields, func(i, j int) bool {
+			if c.Fields[i].Name < c.Fields[j].Name {
+				return true
+			}
+			return false
+		})
+	}
+
 	for n, t := range r.structFields {
 		r.StructFields = append(r.StructFields, StructField{
 			Name: n,
@@ -256,7 +265,6 @@ func (r *Resource) determineArrayFields() error {
 			}
 
 			values[i] = arrayValues
-
 		}
 
 		sortedTypes := make([]*StructField, 0)
@@ -451,13 +459,6 @@ func (r *Resource) determineFields(v map[string]interface{}) ([]StructField, err
 
 		i++
 	}
-
-	sort.Slice(fields, func(i, j int) bool {
-		if fields[i].Name < fields[j].Name {
-			return true
-		}
-		return false
-	})
 
 	return fields, nil
 }

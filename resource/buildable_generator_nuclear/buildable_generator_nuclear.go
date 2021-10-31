@@ -92,13 +92,32 @@ var (
 Produces Nuclear Waste, which is extracted from the conveyor belt output.
 
 Caution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.`,
-		MDisplayName:                         `Nuclear Power Plant`,
-		MEffectUpdateInterval:                2.000000,
-		MExcludeFromMaterialInstancing:       ``,
-		MFluidStackSizeDefault:               resource.Fluid,
-		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  `((Translation=(X=-200.000000,Y=2088.737549,Z=181.784302)),(Translation=(X=200.000000,Y=2088.737549,Z=181.784302)))`,
-		MForceNetUpdateOnRegisterPlayer:      false,
+		MDisplayName:                    `Nuclear Power Plant`,
+		MEffectUpdateInterval:           2.000000,
+		MExcludeFromMaterialInstancing:  ``,
+		MFluidStackSizeDefault:          resource.Fluid,
+		MFluidStackSizeMultiplier:       1,
+		MFogPlaneTransforms:             `((Translation=(X=-200.000000,Y=2088.737549,Z=181.784302)),(Translation=(X=200.000000,Y=2088.737549,Z=181.784302)))`,
+		MForceNetUpdateOnRegisterPlayer: false,
+		MFuel: []struct {
+			MByproduct                 string
+			MByproductAmount           int
+			MFuelClass                 string
+			MSupplementalResourceClass string
+		}{
+			{
+				MByproduct:                 `Desc_NuclearWaste_C`,
+				MByproductAmount:           50,
+				MFuelClass:                 `Desc_NuclearFuelRod_C`,
+				MSupplementalResourceClass: `Desc_Water_C`,
+			},
+			{
+				MByproduct:                 `Desc_PlutoniumWaste_C`,
+				MByproductAmount:           10,
+				MFuelClass:                 `Desc_PlutoniumFuelRod_C`,
+				MSupplementalResourceClass: `Desc_Water_C`,
+			},
+		},
 		MFuelClasses:                         ``,
 		MFuelLoadAmount:                      1,
 		MFuelResourceForm:                    resource.Solid,
@@ -134,25 +153,6 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MWasteLeftFromCurrentFuel:            0,
 		MaxRenderDistance:                    -1.000000,
 		OnReplicationDetailActorCreatedEvent: `()`,
-		MFuel: []struct {
-			MByproduct                 string
-			MByproductAmount           int
-			MFuelClass                 string
-			MSupplementalResourceClass string
-		}{
-			{
-				MByproduct:                 `Desc_NuclearWaste_C`,
-				MByproductAmount:           50,
-				MFuelClass:                 `Desc_NuclearFuelRod_C`,
-				MSupplementalResourceClass: `Desc_Water_C`,
-			},
-			{
-				MByproduct:                 `Desc_PlutoniumWaste_C`,
-				MByproductAmount:           10,
-				MFuelClass:                 `Desc_PlutoniumFuelRod_C`,
-				MSupplementalResourceClass: `Desc_Water_C`,
-			},
-		},
 	}
 )
 

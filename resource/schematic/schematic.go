@@ -50,13 +50,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/AnimalParts/UI/IconDesc_HogPart_64.IconDesc_HogPart_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -70,13 +70,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/IconDesc_Biomass_Final_64.IconDesc_Biomass_Final_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -104,13 +104,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/NailGun/UI/RebarGun_64.RebarGun_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -138,13 +138,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SpikedRebar/UI/IconDesc_SpikedRebar_64.IconDesc_SpikedRebar_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -172,13 +172,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/ThumbsUp_64.ThumbsUp_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -206,12 +206,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/AIlimiter/UI/IconDesc_AILimiter_256.IconDesc_AILimiter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -224,6 +218,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/AIlimiter/UI/IconDesc_AILimiter_256.IconDesc_AILimiter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -251,13 +251,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/InGame/-Shared/Mam_Key_64.Mam_Key_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -271,13 +271,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/ObjectScanner/Icons/Monsters_256.Monsters_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -291,13 +291,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/AnimalParts/UI/IconDesc_SpitterPart_64.IconDesc_SpitterPart_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -311,13 +311,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/IconDesc_Biomass_Final_64.IconDesc_Biomass_Final_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -345,13 +345,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Medkit/UI/Inhaler_64.Inhaler_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -379,13 +379,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/ThumbsUp_64.ThumbsUp_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -413,12 +413,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CartridgeStandard/UI/Rifle_Magazine_256.Rifle_Magazine_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -431,6 +425,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_4_2_1.Research_Sulfur_4_2_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CartridgeStandard/UI/Rifle_Magazine_256.Rifle_Magazine_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -458,12 +458,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/AluminumPlate/UI/IconDesc_AluminiumSheet_256.IconDesc_AluminiumSheet_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/AluminumPlate/UI/IconDesc_AluminiumSheet_64.IconDesc_AluminiumSheet_64`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -476,6 +470,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/AluminumPlate/UI/IconDesc_AluminiumSheet_256.IconDesc_AluminiumSheet_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `Texture2D /Game/FactoryGame/Resource/Parts/AluminumPlate/UI/IconDesc_AluminiumSheet_64.IconDesc_AluminiumSheet_64`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -503,12 +503,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -521,6 +515,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -548,12 +548,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -566,6 +560,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -593,12 +593,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -611,6 +605,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -638,12 +638,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -656,6 +650,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -683,12 +683,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -701,6 +695,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -728,12 +728,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -746,6 +740,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -773,12 +773,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -791,6 +785,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -818,12 +818,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -836,6 +830,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -863,12 +863,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -881,6 +875,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -908,12 +908,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -926,6 +920,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -953,12 +953,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               3,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -971,6 +965,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           3,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -998,12 +998,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               3,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1016,6 +1010,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           3,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1043,12 +1043,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1061,6 +1055,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1088,12 +1088,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1106,6 +1100,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1133,12 +1133,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1151,6 +1145,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1178,12 +1178,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1196,6 +1190,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1223,12 +1223,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1241,6 +1235,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1268,12 +1268,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1286,6 +1280,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1313,12 +1313,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1331,6 +1325,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1358,12 +1358,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1376,6 +1370,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1403,13 +1403,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1437,12 +1437,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1455,6 +1449,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1482,12 +1482,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1500,6 +1494,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_2.Research_Quartz_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_3.Research_Caterium_3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1527,12 +1527,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1545,6 +1539,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1572,12 +1572,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1590,6 +1584,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1617,12 +1617,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1635,6 +1629,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1662,12 +1662,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1680,6 +1674,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1707,12 +1707,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1725,6 +1719,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1752,12 +1752,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               7,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1770,6 +1764,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           7,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1797,12 +1797,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1815,6 +1809,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1842,12 +1842,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1860,6 +1854,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1887,12 +1887,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1905,6 +1899,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1932,12 +1932,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1950,6 +1944,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1977,12 +1977,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -1995,6 +1989,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2022,12 +2022,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2040,6 +2034,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2067,12 +2067,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               7,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2085,6 +2079,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           7,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2112,12 +2112,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2130,6 +2124,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2157,12 +2157,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2175,6 +2169,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2202,12 +2202,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2220,6 +2214,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2247,12 +2247,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2265,6 +2259,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_5.Research_Caterium_5_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2292,12 +2292,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2310,6 +2304,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2337,13 +2337,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2371,12 +2371,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2389,6 +2383,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2416,12 +2416,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2434,6 +2428,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2461,12 +2461,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2479,6 +2473,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2506,12 +2506,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2524,6 +2518,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2551,13 +2551,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2585,12 +2585,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2603,6 +2597,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2630,12 +2630,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2648,6 +2642,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2675,12 +2675,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2693,6 +2687,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2720,12 +2720,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2738,6 +2732,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2_1.Research_Sulfur_3_2_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2765,12 +2765,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               7,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2783,6 +2777,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           7,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2810,12 +2810,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2828,6 +2822,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2855,12 +2855,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               5,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2873,6 +2867,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           5,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2900,12 +2900,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2918,6 +2912,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2945,12 +2945,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -2963,6 +2957,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2990,12 +2990,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3008,6 +3002,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_2.Research_Mycelia_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3035,12 +3035,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3053,6 +3047,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3080,12 +3080,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3098,6 +3092,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3125,12 +3125,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3143,6 +3137,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3170,12 +3170,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3188,6 +3182,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3215,12 +3215,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3233,6 +3227,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3260,12 +3260,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3278,6 +3272,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3305,12 +3305,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               3,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3323,6 +3317,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           3,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3350,12 +3350,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3368,6 +3362,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3395,12 +3395,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               7,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3413,6 +3407,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           7,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3440,12 +3440,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3458,6 +3452,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3485,13 +3485,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3519,13 +3519,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3553,12 +3553,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3571,6 +3565,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3598,12 +3598,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3616,6 +3610,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3643,12 +3643,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3661,6 +3655,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3688,13 +3688,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3722,12 +3722,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3740,6 +3734,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3767,12 +3767,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3785,6 +3779,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_2.Research_Quartz_1_2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3812,12 +3812,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3830,6 +3824,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3857,12 +3857,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               4,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3875,6 +3869,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           4,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3902,12 +3902,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3920,6 +3914,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3947,12 +3947,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -3965,6 +3959,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3992,12 +3992,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4010,6 +4004,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4037,12 +4037,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4055,6 +4049,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4082,12 +4082,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4100,6 +4094,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4127,12 +4127,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4145,6 +4139,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4172,12 +4172,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               6,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4190,6 +4184,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           6,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4217,12 +4217,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4235,6 +4229,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4262,12 +4262,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               7,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4280,6 +4274,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-4.Schematic_8-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           7,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4307,12 +4307,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4325,6 +4319,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4352,12 +4352,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               7,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4370,6 +4364,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           7,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4397,12 +4397,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4415,6 +4409,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4442,13 +4442,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4476,12 +4476,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               3,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Alternate`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4494,6 +4488,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_MAM.SchematicIcon_MAM"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           3,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Alternate`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4521,12 +4521,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SpikedRebar/UI/IconDesc_SpikedRebar_256.IconDesc_SpikedRebar_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4539,6 +4533,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_2_1.Research_ACarapace_2_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SpikedRebar/UI/IconDesc_SpikedRebar_256.IconDesc_SpikedRebar_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4566,12 +4566,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Battery/UI/IconDesc_Battery_256.IconDesc_Battery_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4584,6 +4578,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Battery/UI/IconDesc_Battery_256.IconDesc_Battery_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4611,12 +4611,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Beacon/UI/IconDesc_Beacon_256.IconDesc_Beacon_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4629,6 +4623,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_1-3.Schematic_1-3_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Beacon/UI/IconDesc_Beacon_256.IconDesc_Beacon_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4656,12 +4656,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SolidBiofuel/UI/IconDesc_SolidBiofuel_256.IconDesc_SolidBiofuel_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4674,6 +4668,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-2.Schematic_2-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SolidBiofuel/UI/IconDesc_SolidBiofuel_256.IconDesc_SolidBiofuel_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4701,13 +4701,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/IconDesc_Biomass_Final_256.IconDesc_Biomass_Final_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4735,12 +4735,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GunPowder/UI/IconDesc_Gunpowder_256.IconDesc_Gunpowder_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -4753,6 +4747,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_1.Research_Sulfur_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GunPowder/UI/IconDesc_Gunpowder_256.IconDesc_Gunpowder_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4780,13 +4780,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Cable/UI/IconDesc_Cables_256.IconDesc_Cables_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4814,13 +4814,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/RawResources/Nodes/UI/CateriumOre_64.CateriumOre_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4849,13 +4849,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GoldIngot/UI/IconDesc_CateriumIngot_64.IconDesc_CateriumIngot_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4883,13 +4883,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/UI/IconDesc_Quickwire_64.IconDesc_Quickwire_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4917,13 +4917,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/Zipline/UI/IconDesc_Zipline_64.IconDesc_Zipline_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4951,13 +4951,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/InGame/-Shared/Mam_Key_64.Mam_Key_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -4971,13 +4971,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/ThumbsUp_64.ThumbsUp_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         120.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5005,13 +5005,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/AIlimiter/UI/IconDesc_AILimiter_64.IconDesc_AILimiter_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5039,13 +5039,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/CA_SplitterSmart/UI/SmartSplitter_256.SmartSplitter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5073,13 +5073,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerSwitch/UI/IconDesc_PowerSwitch_256.IconDesc_PowerSwitch_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5107,13 +5107,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerPoleMk2/UI/PowerPoleMk2_256.PowerPoleMk2_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5141,13 +5141,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/JumpingStilts/UI/IconDesc_SprintingStilts_64.IconDesc_SprintingStilts_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5175,13 +5175,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/UI/IconDesc_HighSpeedConnector_64.IconDesc_HighSpeedConnector_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5209,13 +5209,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ComputerSuper/UI/IconDesc_SuperComputer_64.IconDesc_SuperComputer_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5243,13 +5243,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerPoleMk3/UI/PowerPoleMk3_256.PowerPoleMk3_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         360.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5277,13 +5277,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/ThumbsUp_64.ThumbsUp_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -5297,13 +5297,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/CA_SplitterProgrammable/UI/ProgrammableSplitter_256.ProgrammableSplitter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5331,13 +5331,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/GeneratorGeoThermal/UI/GeoThermalPowerGenerator_256.GeoThermalPowerGenerator_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5370,13 +5370,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StreetLight.ResourceSink_StreetLight_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_LightTower.ResourceSink_LightTower_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPoles.ResourceSink_WallPowerPoles_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK2.ResourceSink_WallPowerPolesMK2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK3.ResourceSink_WallPowerPolesMK3_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/CeilingLight/UI/IconDesc_CeilingLight_256.IconDesc_CeilingLight_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5404,12 +5404,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CircuitBoard/UI/IconDesc_CircuitBoard_64.IconDesc_CircuitBoard_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -5422,6 +5416,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CircuitBoard/UI/IconDesc_CircuitBoard_64.IconDesc_CircuitBoard_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5449,13 +5449,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/Cup/UI/IconDesc_CoffeeCup_256.IconDesc_CoffeeCup_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5483,12 +5483,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ColorCartridge/UI/IconDesc_ColorCartridge_256.IconDesc_ColorCartridge_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -5501,6 +5495,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/FlowerPetals_RS/Research_FlowerPetals_3.Research_FlowerPetals_3_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ColorCartridge/UI/IconDesc_ColorCartridge_256.IconDesc_ColorCartridge_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5528,12 +5528,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Computer/UI/IconDesc_Computer_256.IconDesc_Computer_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -5546,6 +5540,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Computer/UI/IconDesc_Computer_256.IconDesc_Computer_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5573,13 +5573,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Cement/UI/IconDesc_Concrete_256.IconDesc_Concrete_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5607,13 +5607,13 @@ var (
 		MMenuPriority:           1.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveryWalls_Normal.ResourceSink_ConveryWalls_Normal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Wall/UI/Wall_Conveyor_x3_Grey_256.Wall_Conveyor_x3_Grey_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5641,13 +5641,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveryWalls_Metal.ResourceSink_ConveryWalls_Metal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Wall/UI/Wall_Conveyor_x3_Orange_256.Wall_Conveyor_x3_Orange_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5675,13 +5675,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveryWalls_Normal.ResourceSink_ConveryWalls_Normal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveryWalls_Metal.ResourceSink_ConveryWalls_Metal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_HyperTubeWallAttachements.ResourceSink_HyperTubeWallAttachements_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_PipelineWallAttachments.ResourceSink_PipelineWallAttachments_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPoles.ResourceSink_WallPowerPoles_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/ConveyorPoleWall/UI/ConveyorPole_Wall_256.ConveyorPole_Wall_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Buildable/Factory/ConveyorPoleWall/UI/ConveyorPole_Wall_256.ConveyorPole_Wall_256`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5709,12 +5709,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CopperSheet/UI/IconDesc_CopperSheet_256.IconDesc_CopperSheet_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/CopperSheet/UI/IconDesc_CopperSheet_64.IconDesc_CopperSheet_64`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -5727,6 +5721,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CopperSheet/UI/IconDesc_CopperSheet_256.IconDesc_CopperSheet_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `Texture2D /Game/FactoryGame/Resource/Parts/CopperSheet/UI/IconDesc_CopperSheet_64.IconDesc_CopperSheet_64`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5754,12 +5754,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/UI/IconDesc_CrystalOscillator_256.IconDesc_CrystalOscillator_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -5772,6 +5766,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_2.Research_Quartz_2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/UI/IconDesc_CrystalOscillator_256.IconDesc_CrystalOscillator_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5799,13 +5799,13 @@ var (
 		MMenuPriority:           4.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FactoryCart.ResourceSink_FactoryCart_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedRampPack.ResourceSink_InvertedRampPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DiagonalRamps.ResourceSink_DiagonalRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedCornerRamps.ResourceSink_InvertedCornerRamps_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=512.000000,Y=512.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Ramp/UI/QuarterPipe_01_512.QuarterPipe_01_512"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5833,12 +5833,6 @@ var (
 		MMenuPriority:           1.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FactoryCart.ResourceSink_FactoryCart_C"')`,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_256.Cyberwagon_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -5851,6 +5845,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CyberWagon_Unlock.ResourceSink_CyberWagon_Unlock_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_256.Cyberwagon_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5878,13 +5878,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_256.Cyberwagon_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(None)`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -5898,13 +5898,13 @@ var (
 		MMenuPriority:           2.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedCornerRamps.ResourceSink_InvertedCornerRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedRampPack.ResourceSink_InvertedRampPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=512.000000,Y=512.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Ramp/UI/TXUI_Foundation_Corner_8x2_512.TXUI_Foundation_Corner_8x2_512"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5932,13 +5932,13 @@ var (
 		MMenuPriority:           3.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DoorWalls_Normal.ResourceSink_DoorWalls_Normal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WindowedWalls.ResourceSink_WindowedWalls_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Wall/UI/Wall_Door_Center_Grey_256.Wall_Door_Center_Grey_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5966,13 +5966,13 @@ var (
 		MMenuPriority:           2.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DoorWalls_Metal.ResourceSink_DoorWalls_Metal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WindowedWalls.ResourceSink_WindowedWalls_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Wall/UI/Wall_Door_Center_Orange_256.Wall_Door_Center_Orange_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6000,12 +6000,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/FluidCanister/UI/IconDesc_EmptyCannister_256.IconDesc_EmptyCannister_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6018,6 +6012,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/FluidCanister/UI/IconDesc_EmptyCannister_256.IconDesc_EmptyCannister_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6045,12 +6045,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/UI/IconDesc_EncasedSteelBeam_256.IconDesc_EncasedSteelBeam_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/SteelPlateReinforced/UI/IconDesc_EncasedSteelBeam_64.IconDesc_EncasedSteelBeam_64`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6063,6 +6057,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/UI/IconDesc_EncasedSteelBeam_256.IconDesc_EncasedSteelBeam_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `Texture2D /Game/FactoryGame/Resource/Parts/SteelPlateReinforced/UI/IconDesc_EncasedSteelBeam_64.IconDesc_EncasedSteelBeam_64`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6090,12 +6090,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/NobeliskExplosive/UI/IconDesc_Explosive_256.IconDesc_Explosive_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6108,6 +6102,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2_1.Research_Sulfur_3_2_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/NobeliskExplosive/UI/IconDesc_Explosive_256.IconDesc_Explosive_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6135,12 +6135,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/IconDesc_Fabric_256.IconDesc_Fabric_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6153,6 +6147,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_2.Research_Mycelia_2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/IconDesc_Fabric_256.IconDesc_Fabric_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6180,13 +6180,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CyberWagon.ResourceSink_CyberWagon_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CurvedFoundationPack.ResourceSink_CurvedFoundationPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DiagonalRamps.ResourceSink_DiagonalRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Walkways.ResourceSink_Walkways_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/GolfCart/UI/IconDesc_GolfCart_256.IconDesc_GolfCart_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6214,13 +6214,13 @@ var (
 		MMenuPriority:           3.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Walkways.ResourceSink_Walkways_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Fence/UI/Fences_256.Fences_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6248,13 +6248,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/FlowerPetals_Final_64.FlowerPetals_Final_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -6268,13 +6268,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/ColorGun/UI/ColorGun_64.ColorGun_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6302,13 +6302,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ColorCartridge/UI/IconDesc_ColorCartridge_64.IconDesc_ColorCartridge_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6336,13 +6336,13 @@ var (
 		MMenuPriority:           6.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Pillars/UI/Pillar_Bottom_256.Pillar_Bottom_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6370,13 +6370,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedRampPack.ResourceSink_InvertedRampPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DiagonalRamps.ResourceSink_DiagonalRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedCornerRamps.ResourceSink_InvertedCornerRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Ramp/UI/Ramp_8x8x4_256.Ramp_8x8x4_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6404,13 +6404,13 @@ var (
 		MMenuPriority:           5.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoudationPillar.ResourceSink_FoudationPillar_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Walkways.ResourceSink_Walkways_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FactoryRailing.ResourceSink_FactoryRailing_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Foundation/UI/FrameworkFoundation_256.FrameworkFoundation_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6438,12 +6438,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Filter/UI/IconDesc_GasMaskFilter_256.IconDesc_GasMaskFilter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6456,6 +6450,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_6-4.Schematic_6-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Filter/UI/IconDesc_GasMaskFilter_256.IconDesc_GasMaskFilter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6483,12 +6483,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/GoldenCup/UI/IconDesc_CupGold_256.IconDesc_CupGold_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6500,6 +6494,12 @@ var (
 				MGamePhase: `EGP_FoodCourt`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/GoldenCup/UI/IconDesc_CupGold_256.IconDesc_CupGold_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6527,13 +6527,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/CrashSites/UI/HardDrive_64.HardDrive_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_HardDrive`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -6547,12 +6547,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Medkit/UI/Inhaler_256.Inhaler_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6565,6 +6559,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrgans_2.Research_AOrgans_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_4.Research_Nutrients_4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_5.Research_Mycelia_5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Medkit/UI/Inhaler_256.Inhaler_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6592,12 +6592,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HeatSink/UI/IconDesc_Heatsink_256.IconDesc_Heatsink_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6610,6 +6604,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HeatSink/UI/IconDesc_Heatsink_256.IconDesc_Heatsink_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6637,12 +6637,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/UI/IconDesc_ModularFrameHeavy_256.IconDesc_ModularFrameHeavy_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/ModularFrameHeavy/UI/IconDesc_ModularFrameHeavy_64.IconDesc_ModularFrameHeavy_64`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6655,6 +6649,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/UI/IconDesc_ModularFrameHeavy_256.IconDesc_ModularFrameHeavy_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `Texture2D /Game/FactoryGame/Resource/Parts/ModularFrameHeavy/UI/IconDesc_ModularFrameHeavy_64.IconDesc_ModularFrameHeavy_64`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6682,12 +6682,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/UI/IconDesc_HighSpeedConnector_256.IconDesc_HighSpeedConnector_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6700,6 +6694,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_5.Research_Caterium_5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/UI/IconDesc_HighSpeedConnector_256.IconDesc_HighSpeedConnector_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6727,13 +6727,13 @@ var (
 		MMenuPriority:           2.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_PipelineWallAttachments.ResourceSink_PipelineWallAttachments_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPoles.ResourceSink_WallPowerPoles_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/HyperTubeWallSupport/UI/IconDesc_HyperTube_WallHole_256.IconDesc_HyperTube_WallHole_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Buildable/Factory/HyperTubeWallSupport/UI/IconDesc_HyperTube_WallHole_256.IconDesc_HyperTube_WallHole_256`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6761,13 +6761,13 @@ var (
 		MMenuPriority:           3.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DiagonalRamps.ResourceSink_DiagonalRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedRampPack.ResourceSink_InvertedRampPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Ramp/UI/IconDesc_C_Inv_Ramp_8x4_01_256.IconDesc_C_Inv_Ramp_8x4_01_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6795,13 +6795,13 @@ var (
 		MMenuPriority:           1.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DiagonalRamps.ResourceSink_DiagonalRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedCornerRamps.ResourceSink_InvertedCornerRamps_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Ramp/UI/Ramp_8x4_Inverted_256.Ramp_8x4_Inverted_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6829,13 +6829,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Walkways.ResourceSink_Walkways_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Ladder/UI/IconDesc_Ladder_256.IconDesc_Ladder_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6863,13 +6863,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StreetLight.ResourceSink_StreetLight_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CeilingLight.ResourceSink_CeilingLight_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_LightTower.ResourceSink_LightTower_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/LightsControlPanel/UI/IconDesc_LightsControlPanel_256.IconDesc_LightsControlPanel_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6897,13 +6897,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StreetLight.ResourceSink_StreetLight_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CeilingLight.ResourceSink_CeilingLight_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DiagonalRamps.ResourceSink_DiagonalRamps_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/Floodlight/UI/IconDesc_FloodlightWall_256.IconDesc_FloodlightWall_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6931,12 +6931,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ModularFrame/UI/IconDesc_ModularFrame_256.IconDesc_ModularFrame_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/ModularFrame/UI/IconDesc_ModularFrame_64.IconDesc_ModularFrame_64`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6949,6 +6943,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ModularFrame/UI/IconDesc_ModularFrame_256.IconDesc_ModularFrame_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `Texture2D /Game/FactoryGame/Resource/Parts/ModularFrame/UI/IconDesc_ModularFrame_64.IconDesc_ModularFrame_64`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6976,12 +6976,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Motor/UI/IconDesc_Engine_256.IconDesc_Engine_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -6994,6 +6988,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Motor/UI/IconDesc_Engine_256.IconDesc_Engine_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7021,13 +7021,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/IconDesc_Mycelia_64.IconDesc_Mycelia_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7055,13 +7055,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GenericBiomass/UI/IconDesc_Fabric_64.IconDesc_Fabric_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7089,13 +7089,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Beacon/UI/Parachute_64.Parachute_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7123,13 +7123,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/InGame/-Shared/Mam_Key_64.Mam_Key_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -7143,13 +7143,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Medkit/UI/Inhaler_64.Inhaler_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7177,13 +7177,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/Berry/UI/Berry_64.Berry_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -7197,13 +7197,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/Nut/UI/Nut_64_new.Nut_64_new"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -7217,13 +7217,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/DesertShroom/UI/Mushroom_64.Mushroom_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -7237,13 +7237,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/InGame/-Shared/Mam_Key_64.Mam_Key_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -7257,13 +7257,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Medkit/UI/Inhaler_64.Inhaler_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7291,12 +7291,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Turbofuel/UI/IconDesc_LiquidBiofuel_256.IconDesc_LiquidBiofuel_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -7309,6 +7303,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Turbofuel/UI/IconDesc_LiquidBiofuel_256.IconDesc_LiquidBiofuel_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Biomass.SC_RSS_Biomass_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7336,12 +7336,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Fuel/UI/IconDesc_Fuel_256.IconDesc_Fuel_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -7354,6 +7348,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Fuel/UI/IconDesc_Fuel_256.IconDesc_Fuel_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7381,12 +7381,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Beacon/UI/Parachute_256.Parachute_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -7399,6 +7393,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_3.Research_Mycelia_3_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Beacon/UI/Parachute_256.Parachute_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7426,12 +7426,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/PetroleumCoke/UI/IconDesc_PetroleumCoke_256.IconDesc_PetroleumCoke_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -7444,6 +7438,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/PetroleumCoke/UI/IconDesc_PetroleumCoke_256.IconDesc_PetroleumCoke_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7471,13 +7471,13 @@ var (
 		MMenuPriority:           1.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_HyperTubeWallAttachements.ResourceSink_HyperTubeWallAttachements_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPoles.ResourceSink_WallPowerPoles_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PipelineSupportWallHole/UI/PipeSupportWallHole_256.PipeSupportWallHole_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Buildable/Factory/PipelineSupportWallHole/UI/PipeSupportWallHole_256.PipeSupportWallHole_256`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7505,12 +7505,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Plastic/UI/IconDesc_Plastic_256.IconDesc_Plastic_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -7523,6 +7517,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Plastic/UI/IconDesc_Plastic_256.IconDesc_Plastic_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7550,13 +7550,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/IronPlate/UI/IconDesc_IronPlates_256.IconDesc_IronPlates_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/IronPlate/UI/IconDesc_IronPlates_64.IconDesc_IronPlates_64`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7584,12 +7584,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/PolymerResin/UI/IconDesc_PolymerResin_256.IconDesc_PolymerResin_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -7602,6 +7596,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/PolymerResin/UI/IconDesc_PolymerResin_256.IconDesc_PolymerResin_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7629,13 +7629,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/Crystal/UI/PowerSlugGreen_64.PowerSlugGreen_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7663,13 +7663,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/Overclock_Icon.Overclock_Icon"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7696,13 +7696,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/Crystal/UI/PowerSlugGreen_64.PowerSlugGreen_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         120.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -7716,13 +7716,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/Crystal/UI/PowerSlugYellow_64.PowerSlugYellow_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7750,13 +7750,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Environment/Crystal/UI/PowerSlugPurple_64.PowerSlugPurple_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7784,13 +7784,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/UI/IconDesc_QuartzCrystal_64.IconDesc_QuartzCrystal_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7819,13 +7819,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/UI/IconDesc_QuartzResource_64.IconDesc_QuartzResource_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7853,13 +7853,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Silica/UI/IconDesc_Silica_64.IconDesc_Silica_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7887,13 +7887,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/UI/IconDesc_CrystalOscillator_64.IconDesc_CrystalOscillator_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7921,13 +7921,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/InGame/-Shared/Mam_Key_64.Mam_Key_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -7941,13 +7941,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Vehicle/Explorer/UI/Explorer_256.Explorer_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7975,13 +7975,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/Map_Icon.Map_Icon"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8008,13 +8008,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/RadioControlUnit/UI/IconDesc_RadioControlUnit_64.IconDesc_RadioControlUnit_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8042,13 +8042,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/RadarTower/UI/RadarTower_256.RadarTower_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8076,13 +8076,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Equipment/ObjectScanner/Icons/CrashSite_64.CrashSite_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -8096,12 +8096,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/UI/IconDesc_Quickwire_256.IconDesc_Quickwire_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -8114,6 +8108,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_2.Research_Caterium_2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/UI/IconDesc_Quickwire_256.IconDesc_Quickwire_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8141,12 +8141,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/IodineInfusedFilter/UI/IconDesc_HazmatFilter_256.IconDesc_HazmatFilter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -8159,6 +8153,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-3.Schematic_7-3_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/IodineInfusedFilter/UI/IconDesc_HazmatFilter_256.IconDesc_HazmatFilter_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/SchematicCategories/SC_Walls.SC_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8186,12 +8186,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/RadioControlUnit/UI/IconDesc_RadioControlUnit_256.IconDesc_RadioControlUnit_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -8204,6 +8198,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_3_3.Research_Quartz_3_3_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/RadioControlUnit/UI/IconDesc_RadioControlUnit_256.IconDesc_RadioControlUnit_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8231,13 +8231,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/UI/IconDesc_ReinforcedIronPlates_256.IconDesc_ReinforcedIronPlates_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/IronPlateReinforced/UI/IconDesc_ReinforcedIronPlates_64.IconDesc_ReinforcedIronPlates_64`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8265,13 +8265,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/IronRod/UI/IconDesc_IronRods_256.IconDesc_IronRods_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/IronRod/UI/IconDesc_IronRods_64.IconDesc_IronRods_64`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8299,12 +8299,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Rotor/UI/IconDesc_Rotor_256.IconDesc_Rotor_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -8317,6 +8311,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Rotor/UI/IconDesc_Rotor_256.IconDesc_Rotor_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8344,12 +8344,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Rubber/UI/IconDesc_Rubber_256.IconDesc_Rubber_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -8362,6 +8356,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Rubber/UI/IconDesc_Rubber_256.IconDesc_Rubber_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_OilProducts.SC_RSS_OilProducts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8389,13 +8389,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=32.000000,Y=32.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8423,13 +8423,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Structure.SchematicIcon_Structure"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         120.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8457,13 +8457,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Logistics.SchematicIcon_Logistics"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         240.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8494,13 +8494,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Equipment.SchematicIcon_Equipment"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               1,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8536,13 +8536,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         360.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8570,13 +8570,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Equipment.SchematicIcon_Equipment"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8608,13 +8608,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Structure.SchematicIcon_Structure"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         240.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8642,13 +8642,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8676,13 +8676,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8715,13 +8715,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Logistics.SchematicIcon_Logistics"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               2,
 		MTimeToComplete:         360.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8749,13 +8749,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Vehicle.SchematicIcon_Vehicle"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         240.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8787,13 +8787,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8821,13 +8821,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8855,13 +8855,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Equipment.SchematicIcon_Equipment"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8897,13 +8897,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Structure.SchematicIcon_Structure"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8931,13 +8931,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         720.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8974,13 +8974,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9008,13 +9008,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         720.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9042,13 +9042,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Logistics.SchematicIcon_Logistics"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               4,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9076,13 +9076,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Logistics.SchematicIcon_Logistics"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9114,13 +9114,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9148,13 +9148,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9187,13 +9187,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Equipment.SchematicIcon_Equipment"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9225,13 +9225,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Vehicle.SchematicIcon_Vehicle"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9259,13 +9259,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Equipment.SchematicIcon_Equipment"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               5,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9297,13 +9297,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Logistics.SchematicIcon_Logistics"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               6,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9331,13 +9331,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9374,13 +9374,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9408,13 +9408,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Logistics.SchematicIcon_Logistics"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         60.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9442,13 +9442,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Equipment.SchematicIcon_Equipment"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9480,13 +9480,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Vehicle.SchematicIcon_Vehicle"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9523,13 +9523,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9557,13 +9557,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9596,13 +9596,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9643,13 +9643,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9677,13 +9677,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Equipment.SchematicIcon_Equipment"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               7,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9715,13 +9715,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9749,13 +9749,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         1200.000000,
 		MType:                   `EST_Milestone`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9787,13 +9787,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Factory.SchematicIcon_Factory"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               8,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9821,13 +9821,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/IronScrew/UI/IconDesc_IronScrews_256.IconDesc_IronScrews_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/IronScrew/UI/IconDesc_IronScrews_64.IconDesc_IronScrews_64`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9855,12 +9855,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Silica/UI/IconDesc_Silica_256.IconDesc_Silica_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -9873,6 +9867,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_2.Research_Quartz_1_2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Silica/UI/IconDesc_Silica_256.IconDesc_Silica_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Minerals.SC_RSS_Minerals_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9900,13 +9900,13 @@ var (
 		MMenuPriority:           1.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Walkways.ResourceSink_Walkways_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Stair/UI/StairLeft_256.StairLeft_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9934,13 +9934,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=32.000000,Y=32.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9973,12 +9973,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Stator/UI/IconDesc_Stator_256.IconDesc_Stator_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -9991,6 +9985,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Stator/UI/IconDesc_Stator_256.IconDesc_Stator_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10018,13 +10018,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueSilverPioneer.ResourceSink_StatueSilverPioneer_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueGoldPioneer.ResourceSink_StatueGoldPioneer_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Decor/Statues/UI/Award_Statue_Character_Bronze_256.Award_Statue_Character_Bronze_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Pioneering.SC_RSS_Pioneering_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10052,13 +10052,13 @@ var (
 		MMenuPriority:           2.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueBronzePioneer.ResourceSink_StatueBronzePioneer_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueSilverPioneer.ResourceSink_StatueSilverPioneer_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Decor/Statues/UI/Award_Statue_Character_Gold_256.Award_Statue_Character_Gold_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Pioneering.SC_RSS_Pioneering_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10086,13 +10086,13 @@ var (
 		MMenuPriority:           6.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueGoldPioneer.ResourceSink_StatueGoldPioneer_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueLizardDoggo.ResourceSink_StatueLizardDoggo_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Decor/Statues/UI/Award_Statue_Nut_256.Award_Statue_Nut_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10120,13 +10120,13 @@ var (
 		MMenuPriority:           3.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueLizardDoggo.ResourceSink_StatueLizardDoggo_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueSpaceGiraffe.ResourceSink_StatueSpaceGiraffe_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Decor/Statues/UI/Award_Statue_Hog_256.Award_Statue_Hog_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10154,13 +10154,13 @@ var (
 		MMenuPriority:           4.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Statue_Hoggo.ResourceSink_Statue_Hoggo_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueSpaceGiraffe.ResourceSink_StatueSpaceGiraffe_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Decor/Statues/UI/Award_Statue_LizardDoggo_256.Award_Statue_LizardDoggo_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10188,13 +10188,13 @@ var (
 		MMenuPriority:           1.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueBronzePioneer.ResourceSink_StatueBronzePioneer_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueGoldPioneer.ResourceSink_StatueGoldPioneer_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Decor/Statues/UI/Award_Statue_Character_Silver_256.Award_Statue_Character_Silver_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Pioneering.SC_RSS_Pioneering_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10222,13 +10222,13 @@ var (
 		MMenuPriority:           5.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Statue_Hoggo.ResourceSink_Statue_Hoggo_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueLizardDoggo.ResourceSink_StatueLizardDoggo_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Decor/Statues/UI/Award_Statue_SpaceGiraffe_256.Award_Statue_SpaceGiraffe_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Massage-2ABb.SC_RSS_Massage-2ABb_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10256,12 +10256,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SteelPlate/UI/IconDesc_SteelBeam_256.IconDesc_SteelBeam_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/SteelPlate/UI/IconDesc_SteelBeam_64.IconDesc_SteelBeam_64`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -10274,6 +10268,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SteelPlate/UI/IconDesc_SteelBeam_256.IconDesc_SteelBeam_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `Texture2D /Game/FactoryGame/Resource/Parts/SteelPlate/UI/IconDesc_SteelBeam_64.IconDesc_SteelBeam_64`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10301,12 +10301,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SteelPipe/UI/IconDesc_SteelPipe_256.IconDesc_SteelPipe_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Resource/Parts/SteelPipe/UI/IconDesc_SteelPipe_64.IconDesc_SteelPipe_64`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -10319,6 +10313,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/SteelPipe/UI/IconDesc_SteelPipe_256.IconDesc_SteelPipe_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `Texture2D /Game/FactoryGame/Resource/Parts/SteelPipe/UI/IconDesc_SteelPipe_64.IconDesc_SteelPipe_64`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_StandardParts.SC_RSS_StandardParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10346,13 +10346,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_LightTower.ResourceSink_LightTower_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CeilingLight.ResourceSink_CeilingLight_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Walkways.ResourceSink_Walkways_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/StreetLight/UI/IconDesc_StreetLight_256.IconDesc_StreetLight_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10380,13 +10380,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/RawResources/Sulfur/UI/Sulfur_64.Sulfur_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10415,13 +10415,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/GunPowder/UI/IconDesc_Gunpowder_64.IconDesc_Gunpowder_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10449,13 +10449,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/InGame/-Shared/Mam_Key_64.Mam_Key_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -10469,13 +10469,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/NobeliskDetonator/UI/Detonator_64.Detonator_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -10489,13 +10489,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/NobeliskDetonator/UI/Detonator_64.Detonator_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10523,13 +10523,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/NobeliskExplosive/UI/IconDesc_Explosive_64.IconDesc_Explosive_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -10543,13 +10543,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/NobeliskExplosive/UI/IconDesc_Explosive_64.IconDesc_Explosive_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10577,13 +10577,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Rifle/UI/RifleMK1_64.RifleMK1_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -10597,13 +10597,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Equipment/Rifle/UI/RifleMK1_64.RifleMK1_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10631,13 +10631,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CartridgeStandard/UI/Rifle_Magazine_64.Rifle_Magazine_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks:                nil,
 	}
 
@@ -10651,13 +10651,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/CartridgeStandard/UI/Rifle_Magazine_64.Rifle_Magazine_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10685,13 +10685,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/ThumbsUp_64.ThumbsUp_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10719,13 +10719,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Interface/UI/Assets/Shared/ThumbsUp_64.ThumbsUp_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10753,12 +10753,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ComputerSuper/UI/IconDesc_SuperComputer_256.IconDesc_SuperComputer_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -10771,6 +10765,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_1.Research_Caterium_6_1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/ComputerSuper/UI/IconDesc_SuperComputer_256.IconDesc_SuperComputer_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Communications.SC_RSS_Communications_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10798,12 +10798,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/TurboMotor/UI/IconDesc_TurboMotor_256.IconDesc_TurboMotor_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -10816,6 +10810,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/TurboMotor/UI/IconDesc_TurboMotor_256.IconDesc_TurboMotor_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_IndustrialParts.SC_RSS_IndustrialParts_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10843,13 +10843,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_1.SchematicIcon_Hub_1"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Tutorial`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10881,12 +10881,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_1.SchematicIcon_Hub_1"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Tutorial`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -10899,6 +10893,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1.Schematic_Tutorial1_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_1.SchematicIcon_Hub_1"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Tutorial`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10931,12 +10931,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_2.SchematicIcon_Hub_2"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Tutorial`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -10949,6 +10943,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1_5.Schematic_Tutorial1_5_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_2.SchematicIcon_Hub_2"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Tutorial`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10981,12 +10981,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_3.SchematicIcon_Hub_3"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Tutorial`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -10999,6 +10993,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial2.Schematic_Tutorial2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_3.SchematicIcon_Hub_3"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Tutorial`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11030,12 +11030,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_4.SchematicIcon_Hub_4"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Tutorial`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -11048,6 +11042,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial3.Schematic_Tutorial3_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_4.SchematicIcon_Hub_4"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Tutorial`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11079,12 +11079,6 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_5.SchematicIcon_Hub_5"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          ``,
-		MTechTier:               0,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_Tutorial`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -11097,6 +11091,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial4.Schematic_Tutorial4_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/TradingPost/UI/SchematicIcons/SchematicIcon_Hub_5.SchematicIcon_Hub_5"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      ``,
+		MTechTier:           0,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_Tutorial`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11124,13 +11124,13 @@ var (
 		MMenuPriority:           2.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FactoryRailing.ResourceSink_FactoryRailing_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Walkway/UI/WalkwayStraight_256.WalkwayStraight_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11158,13 +11158,13 @@ var (
 		MMenuPriority:           3.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK2.ResourceSink_WallPowerPolesMK2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK3.ResourceSink_WallPowerPolesMK3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_PipelineWallAttachments.ResourceSink_PipelineWallAttachments_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_HyperTubeWallAttachements.ResourceSink_HyperTubeWallAttachements_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerPoleWall/UI/PowerPoleWall_MK1_256.PowerPoleWall_MK1_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11192,12 +11192,6 @@ var (
 		MMenuPriority:           4.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPoles.ResourceSink_WallPowerPoles_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK3.ResourceSink_WallPowerPolesMK3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_PipelineWallAttachments.ResourceSink_PipelineWallAttachments_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_HyperTubeWallAttachements.ResourceSink_HyperTubeWallAttachements_C"')`,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerPoleWall/UI/PowerPoleWall_MK2_256.PowerPoleWall_MK2_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -11210,6 +11204,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_2.Research_Caterium_4_2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerPoleWall/UI/PowerPoleWall_MK2_256.PowerPoleWall_MK2_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11237,12 +11237,6 @@ var (
 		MMenuPriority:           5.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPoles.ResourceSink_WallPowerPoles_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK2.ResourceSink_WallPowerPolesMK2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_PipelineWallAttachments.ResourceSink_PipelineWallAttachments_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_HyperTubeWallAttachements.ResourceSink_HyperTubeWallAttachements_C"')`,
-		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerPoleWall/UI/PowerPoleWall_MK3_256.PowerPoleWall_MK3_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
-		MSmallSchematicIcon:     `None`,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
-		MTechTier:               1,
-		MTimeToComplete:         0.000000,
-		MType:                   `EST_ResourceSink`,
 		MSchematicDependencies: []struct {
 			Class                              string
 			MGamePhase                         string
@@ -11255,6 +11249,12 @@ var (
 				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_2.Research_Caterium_6_2_C"')`,
 			},
 		},
+		MSchematicIcon:      `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Factory/PowerPoleWall/UI/PowerPoleWall_MK3_256.PowerPoleWall_MK3_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
+		MSmallSchematicIcon: `None`,
+		MSubCategories:      `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
+		MTechTier:           1,
+		MTimeToComplete:     0.000000,
+		MType:               `EST_ResourceSink`,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11282,13 +11282,13 @@ var (
 		MMenuPriority:           4.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DoorWalls_Normal.ResourceSink_DoorWalls_Normal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DoorWalls_Metal.ResourceSink_DoorWalls_Metal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C"')`,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=512.000000,Y=512.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Buildable/Building/Wall/UI/Wall_Window_8x4_01_512.Wall_Window_8x4_01_512"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Walls.SC_RSS_Walls_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11316,13 +11316,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         ``,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Resource/Parts/Wire/UI/IconDesc_Wire_256.IconDesc_Wire_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSinkShopCategories/SC_RSS_Electronics.SC_RSS_Electronics_C"')`,
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11350,13 +11350,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Gift_64.IconDesc_Gift_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Gift_64.IconDesc_Gift_64`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11384,13 +11384,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_CaneEquipment_64.IconDesc_CaneEquipment_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11418,13 +11418,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Buildings/UI/IconDesc_CandyCaneDecor_256.IconDesc_CandyCaneDecor_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11452,13 +11452,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_XmasBall_Red_64.IconDesc_XmasBall_Red_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11490,13 +11490,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Buildings/UI/IconDesc_Snowman_256.IconDesc_Snowman_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Events/Christmas/Buildings/UI/IconDesc_Snowman_256.IconDesc_Snowman_256`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11524,13 +11524,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_ChristmasTree_256.IconDesc_ChristmasTree_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11558,13 +11558,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Balls_64.IconDesc_Balls_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Balls_64.IconDesc_Balls_64`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11592,13 +11592,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_XmasLights_256.IconDesc_XmasLights_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11626,13 +11626,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=256.000000,Y=256.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Buildings/UI/IconDesc_SnowDispenser_256.IconDesc_SnowDispenser_256"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Events/Christmas/Buildings/UI/IconDesc_SnowDispenser_256.IconDesc_SnowDispenser_256`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11660,13 +11660,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Star_64.IconDesc_Star_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Star_64.IconDesc_Star_64`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11694,13 +11694,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Wreath_64.IconDesc_Wreath_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Wreath_64.IconDesc_Wreath_64`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11728,13 +11728,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_SnowballMittens_64.IconDesc_SnowballMittens_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `None`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11762,13 +11762,13 @@ var (
 		MMenuPriority:           0.000000,
 		MRelevantEvents:         `(EV_Christmas)`,
 		MRelevantShopSchematics: ``,
+		MSchematicDependencies:  nil,
 		MSchematicIcon:          `(ImageSize=(X=64.000000,Y=64.000000),Margin=(),TintColor=(SpecifiedColor=(R=1.000000,G=1.000000,B=1.000000,A=1.000000)),ResourceObject=Texture2D'"/Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Star_64.IconDesc_Star_64"',UVRegion=(Min=(X=0.000000,Y=0.000000),Max=(X=0.000000,Y=0.000000),bIsValid=0),DrawAs=Image)`,
 		MSmallSchematicIcon:     `Texture2D /Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_Star_64.IconDesc_Star_64`,
 		MSubCategories:          ``,
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
