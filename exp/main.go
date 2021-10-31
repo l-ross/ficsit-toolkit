@@ -1,10 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
-
-	"github.com/davecgh/go-spew/spew"
+	"sort"
+	"strings"
 
 	"github.com/l-ross/ficsit-toolkit/save"
 )
@@ -17,7 +18,7 @@ func main() {
 }
 
 func realMain() error {
-	f, err := os.Open("./Example.sav")
+	f, err := os.Open("./Simple.sav")
 	if err != nil {
 		return err
 	}
@@ -34,7 +35,19 @@ func realMain() error {
 	//	}
 	//}
 
-	spew.Dump(s.Header)
+	paths := make([]string, 0)
+
+	for _, e := range s.Entities {
+		if strings.HasPrefix(e.TypePath, "/Game/FactoryGame/Buildable") {
+			paths = append(paths, e.TypePath)
+		}
+	}
+
+	sort.Strings(paths)
+
+	for _, p := range paths {
+		fmt.Println(p)
+	}
 
 	return nil
 }

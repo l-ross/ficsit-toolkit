@@ -242,7 +242,7 @@ func (r *Resource) generate() error {
 	sortFields(r.StructDefs)
 
 	fileName := toSnakeCase(r.PkgName)
-	dirName := fmt.Sprintf("../../resource/%s", fileName)
+	dirName := fmt.Sprintf("../%s", fileName)
 	fileName = fmt.Sprintf("%s/%s.go", dirName, fileName)
 
 	err = recreateDir(dirName)
