@@ -51,7 +51,7 @@ func GetByClassName(className string) (*FGGasMask, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGGasMask with name %s", className)
+	return nil, fmt.Errorf("failed to find FGGasMask with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGGasMask{

@@ -167,7 +167,7 @@ func GetByClassName(className string) (*FGBuildableSplitterSmart, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableSplitterSmart with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableSplitterSmart with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableSplitterSmart{

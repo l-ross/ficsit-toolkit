@@ -219,7 +219,7 @@ func GetByClassName(className string) (*FGBuildableTrainPlatformCargo, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableTrainPlatformCargo with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableTrainPlatformCargo with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableTrainPlatformCargo{

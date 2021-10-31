@@ -168,7 +168,7 @@ func GetByClassName(className string) (*FGBuildableWalkway, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableWalkway with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableWalkway with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableWalkway{

@@ -114,7 +114,7 @@ func GetByClassName(className string) (*FGBuildableResourceSink, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableResourceSink with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableResourceSink with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableResourceSink{

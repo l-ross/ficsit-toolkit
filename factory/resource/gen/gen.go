@@ -88,6 +88,8 @@ type Resource struct {
 	// need to import it.
 	ImportResourcePkg bool `json:"-"`
 
+	HasFullName bool `json:"-"`
+
 	// As the classes are being parsed any fields where the value is an array are populated here.
 	// Once we have finished parsing all the classes we can then figure out the format of these fields.
 	// We need to wait until we have parsed all classes as the fields within the array may differ
@@ -106,6 +108,10 @@ type Class struct {
 	// The ClassName as taken from Docs.json
 	ClassName string
 
+	// The FullName as taken from Docs.json
+	// Not all classes have this field.
+	FullName string
+
 	// Name is derived from the ClassName and will be used as the variable name.
 	// e.g. ClassName `Desc_NuclearWaste_C` becomes `NuclearWaste`
 	Name string
@@ -115,6 +121,8 @@ type Class struct {
 
 	// The fields for this Class variable
 	Fields []*StructField
+
+	HasFullName bool `json:"-"`
 
 	// Set by Class.UnmarshalJSON.
 	// We initially read all fields of a class in as interface types.
@@ -135,6 +143,14 @@ func (c *Class) UnmarshalJSON(b []byte) error {
 	// Set ClassName
 	c.ClassName = c.rawFields["ClassName"].(string)
 	delete(c.rawFields, "ClassName")
+
+	if i, ok := c.rawFields["FullName"]; ok {
+		if s, ok := i.(string); ok {
+			c.FullName = s
+			delete(c.rawFields, "FullName")
+			c.HasFullName = true
+		}
+	}
 
 	// Set Name based on the ClassName
 	// We want to:
@@ -181,6 +197,10 @@ func (r *Resource) generate() error {
 
 	// For each Class parse all of its fields.
 	for _, c := range r.Classes {
+		if c.HasFullName {
+			r.HasFullName = true
+		}
+
 		fields, err := r.parseFields(c.rawFields)
 		if err != nil {
 			return err
@@ -517,14 +537,16 @@ import (
 )
 
 type {{.TypeName}} struct{
-	ClassName string
+	ClassName string	{{if .HasFullName}} 
+	FullName string {{end}}
 	{{range .StructDefs}}		{{.Name}} {{.Type}}
 {{end}}
 }
 
 var (
 	{{range .Classes}}	{{.Name}} = {{.ResourceTypeName}}{
-		ClassName: "{{.ClassName}}",
+		ClassName: "{{.ClassName}}", {{if .HasFullName}}
+		FullName: "{{.FullName}}", {{end}}
 		{{range .Fields}}		{{.Name}}: {{.Value}},
 		{{end}}
 	}
@@ -537,13 +559,28 @@ func GetByClassName(className string) (*{{.TypeName}}, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find {{.TypeName}} with name %s", className)
+	return nil, fmt.Errorf("failed to find {{.TypeName}} with class name %s", className)
 }
 
 var classNameToVar = map[string]*{{.TypeName}} {
 	{{range .Classes}}	"{{.ClassName}}": &{{.Name}},
 	{{end}}
 }
+
+{{if .HasFullName}}
+func GetByFullName(fullName string) (*{{.TypeName}}, error) {
+	if v, ok := fullNameToVar[fullName]; ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("failed to find {{.TypeName}} with full name %s", fullName)
+}
+
+var fullNameToVar = map[string]*{{.TypeName}} {
+	{{range .Classes}} "{{.FullName}}": &{{.Name}},
+	{{end}}
+}
+{{end}}
 
 `))
 

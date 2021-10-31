@@ -3150,7 +3150,7 @@ func GetByClassName(className string) (*FGBuildingDescriptor, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildingDescriptor with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildingDescriptor with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildingDescriptor{

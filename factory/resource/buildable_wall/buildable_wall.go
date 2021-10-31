@@ -594,7 +594,7 @@ func GetByClassName(className string) (*FGBuildableWall, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableWall with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableWall with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableWall{

@@ -81,7 +81,7 @@ func GetByClassName(className string) (*FGItemDescriptorNuclearFuel, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGItemDescriptorNuclearFuel with name %s", className)
+	return nil, fmt.Errorf("failed to find FGItemDescriptorNuclearFuel with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGItemDescriptorNuclearFuel{

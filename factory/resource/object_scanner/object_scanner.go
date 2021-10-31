@@ -61,7 +61,7 @@ func GetByClassName(className string) (*FGObjectScanner, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGObjectScanner with name %s", className)
+	return nil, fmt.Errorf("failed to find FGObjectScanner with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGObjectScanner{

@@ -79,7 +79,7 @@ func GetByClassName(className string) (*FGBuildableCircuitSwitch, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableCircuitSwitch with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableCircuitSwitch with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableCircuitSwitch{

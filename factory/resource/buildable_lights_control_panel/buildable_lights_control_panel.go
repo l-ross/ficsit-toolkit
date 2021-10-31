@@ -72,7 +72,7 @@ func GetByClassName(className string) (*FGBuildableLightsControlPanel, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableLightsControlPanel with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableLightsControlPanel with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableLightsControlPanel{

@@ -329,7 +329,7 @@ func GetByClassName(className string) (*FGBuildableGeneratorFuel, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableGeneratorFuel with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableGeneratorFuel with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableGeneratorFuel{

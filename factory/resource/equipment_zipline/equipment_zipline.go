@@ -53,7 +53,7 @@ func GetByClassName(className string) (*FGEquipmentZipline, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGEquipmentZipline with name %s", className)
+	return nil, fmt.Errorf("failed to find FGEquipmentZipline with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGEquipmentZipline{

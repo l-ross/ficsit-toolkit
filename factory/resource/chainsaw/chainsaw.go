@@ -61,7 +61,7 @@ func GetByClassName(className string) (*FGChainsaw, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGChainsaw with name %s", className)
+	return nil, fmt.Errorf("failed to find FGChainsaw with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGChainsaw{

@@ -295,7 +295,7 @@ func GetByClassName(className string) (*FGBuildablePowerPole, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePowerPole with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildablePowerPole with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildablePowerPole{

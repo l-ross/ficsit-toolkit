@@ -41,7 +41,7 @@ func GetByClassName(className string) (*FGPortableMinerDispenser, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGPortableMinerDispenser with name %s", className)
+	return nil, fmt.Errorf("failed to find FGPortableMinerDispenser with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGPortableMinerDispenser{

@@ -24,7 +24,7 @@ type FGRecipe struct {
 var (
 	AILimiter = FGRecipe{
 		ClassName:                         "Recipe_AILimiter_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_AILimiter.Recipe_AILimiter_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_AILimiter.Recipe_AILimiter_C",
 		MDisplayName:                      `AI Limiter`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -39,7 +39,7 @@ var (
 
 	AlternateAdheredIronPlate = FGRecipe{
 		ClassName:                         "Recipe_Alternate_AdheredIronPlate_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_AdheredIronPlate.Recipe_Alternate_AdheredIronPlate_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_AdheredIronPlate.Recipe_Alternate_AdheredIronPlate_C",
 		MDisplayName:                      `Alternate: Adhered Iron Plate`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -54,7 +54,7 @@ var (
 
 	AlternateAlcladCasing = FGRecipe{
 		ClassName:                         "Recipe_Alternate_AlcladCasing_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AlcladCasing.Recipe_Alternate_AlcladCasing_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AlcladCasing.Recipe_Alternate_AlcladCasing_C",
 		MDisplayName:                      `Alternate: Alclad Casing`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumIngot/Desc_AluminumIngot.Desc_AluminumIngot_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -69,7 +69,7 @@ var (
 
 	AlternateAutomatedMiner = FGRecipe{
 		ClassName:                         "Recipe_Alternate_AutomatedMiner_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AutomatedMiner.Recipe_Alternate_AutomatedMiner_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AutomatedMiner.Recipe_Alternate_AutomatedMiner_C",
 		MDisplayName:                      `Alternate: Automated Miner`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -84,7 +84,7 @@ var (
 
 	AlternateBeacon1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Beacon_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Beacon_1.Recipe_Alternate_Beacon_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Beacon_1.Recipe_Alternate_Beacon_1_C",
 		MDisplayName:                      `Alternate: Crystal Beacon`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=16),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -99,7 +99,7 @@ var (
 
 	AlternateBoltedFrame = FGRecipe{
 		ClassName:                         "Recipe_Alternate_BoltedFrame_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_BoltedFrame.Recipe_Alternate_BoltedFrame_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_BoltedFrame.Recipe_Alternate_BoltedFrame_C",
 		MDisplayName:                      `Alternate: Bolted Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=56))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -114,7 +114,7 @@ var (
 
 	AlternateCable1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Cable_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_1.Recipe_Alternate_Cable_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_1.Recipe_Alternate_Cable_1_C",
 		MDisplayName:                      `Alternate: Insulated Cable`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=9),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -129,7 +129,7 @@ var (
 
 	AlternateCable2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Cable_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_2.Recipe_Alternate_Cable_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_2.Recipe_Alternate_Cable_2_C",
 		MDisplayName:                      `Alternate: Quickwire Cable`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -144,7 +144,7 @@ var (
 
 	AlternateCircuitBoard1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CircuitBoard_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_1.Recipe_Alternate_CircuitBoard_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_1.Recipe_Alternate_CircuitBoard_1_C",
 		MDisplayName:                      `Alternate: Silicon Circuit Board`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=11),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Silica/Desc_Silica.Desc_Silica_C"',Amount=11))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -159,7 +159,7 @@ var (
 
 	AlternateCircuitBoard2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CircuitBoard_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_2.Recipe_Alternate_CircuitBoard_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_2.Recipe_Alternate_CircuitBoard_2_C",
 		MDisplayName:                      `Alternate: Caterium Circuit Board`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=30))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -174,7 +174,7 @@ var (
 
 	AlternateClassicBattery = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ClassicBattery_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ClassicBattery.Recipe_Alternate_ClassicBattery_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ClassicBattery.Recipe_Alternate_ClassicBattery_C",
 		MDisplayName:                      `Alternate: Classic Battery`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=7),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=12))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -189,7 +189,7 @@ var (
 
 	AlternateCoal1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Coal_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_1.Recipe_Alternate_Coal_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_1.Recipe_Alternate_Coal_1_C",
 		MDisplayName:                      `Alternate: Charcoal`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Wood.Desc_Wood_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -204,7 +204,7 @@ var (
 
 	AlternateCoal2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Coal_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_2.Recipe_Alternate_Coal_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_2.Recipe_Alternate_Coal_2_C",
 		MDisplayName:                      `Alternate: Biocoal`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_GenericBiomass.Desc_GenericBiomass_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -219,7 +219,7 @@ var (
 
 	AlternateCoatedCable = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CoatedCable_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedCable.Recipe_Alternate_CoatedCable_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedCable.Recipe_Alternate_CoatedCable_C",
 		MDisplayName:                      `Alternate: Coated Cable`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=2000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -234,7 +234,7 @@ var (
 
 	AlternateCoatedIronCanister = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CoatedIronCanister_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronCanister.Recipe_Alternate_CoatedIronCanister_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronCanister.Recipe_Alternate_CoatedIronCanister_C",
 		MDisplayName:                      `Alternate: Coated Iron Canister`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -249,7 +249,7 @@ var (
 
 	AlternateCoatedIronPlate = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CoatedIronPlate_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronPlate.Recipe_Alternate_CoatedIronPlate_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronPlate.Recipe_Alternate_CoatedIronPlate_C",
 		MDisplayName:                      `Alternate: Coated Iron Plate`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronIngot/Desc_IronIngot.Desc_IronIngot_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -264,7 +264,7 @@ var (
 
 	AlternateCokeSteelIngot = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CokeSteelIngot_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CokeSteelIngot.Recipe_Alternate_CokeSteelIngot_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CokeSteelIngot.Recipe_Alternate_CokeSteelIngot_C",
 		MDisplayName:                      `Alternate: Coke Steel Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PetroleumCoke/Desc_PetroleumCoke.Desc_PetroleumCoke_C"',Amount=15))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -279,7 +279,7 @@ var (
 
 	AlternateComputer1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Computer_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_1.Recipe_Alternate_Computer_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_1.Recipe_Alternate_Computer_1_C",
 		MDisplayName:                      `Alternate: Caterium Computer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=7),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=28),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=12))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -294,7 +294,7 @@ var (
 
 	AlternateComputer2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Computer_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_2.Recipe_Alternate_Computer_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_2.Recipe_Alternate_Computer_2_C",
 		MDisplayName:                      `Alternate: Crystal Computer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -309,7 +309,7 @@ var (
 
 	AlternateConcrete = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Concrete_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Concrete.Recipe_Alternate_Concrete_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Concrete.Recipe_Alternate_Concrete_C",
 		MDisplayName:                      `Alternate: Fine Concrete`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Silica/Desc_Silica.Desc_Silica_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"',Amount=12))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -324,7 +324,7 @@ var (
 
 	AlternateCoolingDevice = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CoolingDevice_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_CoolingDevice.Recipe_Alternate_CoolingDevice_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_CoolingDevice.Recipe_Alternate_CoolingDevice_C",
 		MDisplayName:                      `Alternate: Cooling Device`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlateReinforced/Desc_AluminumPlateReinforced.Desc_AluminumPlateReinforced_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',Amount=24000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -339,7 +339,7 @@ var (
 
 	AlternateCopperAlloyIngot = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CopperAlloyIngot_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperAlloyIngot.Recipe_Alternate_CopperAlloyIngot_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperAlloyIngot.Recipe_Alternate_CopperAlloyIngot_C",
 		MDisplayName:                      `Alternate: Copper Alloy Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -354,7 +354,7 @@ var (
 
 	AlternateCopperRotor = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CopperRotor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperRotor.Recipe_Alternate_CopperRotor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperRotor.Recipe_Alternate_CopperRotor_C",
 		MDisplayName:                      `Alternate: Copper Rotor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=52))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -369,7 +369,7 @@ var (
 
 	AlternateCrystalOscillator = FGRecipe{
 		ClassName:                         "Recipe_Alternate_CrystalOscillator_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CrystalOscillator.Recipe_Alternate_CrystalOscillator_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CrystalOscillator.Recipe_Alternate_CrystalOscillator_C",
 		MDisplayName:                      `Alternate: Insulated Crystal Oscillator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=7),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -384,7 +384,7 @@ var (
 
 	AlternateDilutedFuel = FGRecipe{
 		ClassName:                         "Recipe_Alternate_DilutedFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_DilutedFuel.Recipe_Alternate_DilutedFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_DilutedFuel.Recipe_Alternate_DilutedFuel_C",
 		MDisplayName:                      `Alternate: Diluted Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=5000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=10000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -399,7 +399,7 @@ var (
 
 	AlternateDilutedPackagedFuel = FGRecipe{
 		ClassName:                         "Recipe_Alternate_DilutedPackagedFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Recipe_Alternate_DilutedPackagedFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Recipe_Alternate_DilutedPackagedFuel_C",
 		MDisplayName:                      `Alternate: Diluted Packaged Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=1000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_PackagedWater.Desc_PackagedWater_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -414,7 +414,7 @@ var (
 
 	AlternateElectricMotor = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ElectricMotor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ElectricMotor.Recipe_Alternate_ElectricMotor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ElectricMotor.Recipe_Alternate_ElectricMotor_C",
 		MDisplayName:                      `Alternate: Electric Motor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -429,7 +429,7 @@ var (
 
 	AlternateElectroAluminumScrap = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ElectroAluminumScrap_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectroAluminumScrap.Recipe_Alternate_ElectroAluminumScrap_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectroAluminumScrap.Recipe_Alternate_ElectroAluminumScrap_C",
 		MDisplayName:                      `Alternate: Electrode - Aluminum Scrap`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Alumina/Desc_AluminaSolution.Desc_AluminaSolution_C"',Amount=12000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PetroleumCoke/Desc_PetroleumCoke.Desc_PetroleumCoke_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -444,7 +444,7 @@ var (
 
 	AlternateElectrodeCircuitBoard = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ElectrodeCircuitBoard_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectrodeCircuitBoard.Recipe_Alternate_ElectrodeCircuitBoard_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectrodeCircuitBoard.Recipe_Alternate_ElectrodeCircuitBoard_C",
 		MDisplayName:                      `Alternate: Electrode Circuit Board`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PetroleumCoke/Desc_PetroleumCoke.Desc_PetroleumCoke_C"',Amount=9))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -459,7 +459,7 @@ var (
 
 	AlternateElectromagneticControlRod1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ElectromagneticControlRod_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ElectromagneticControlRod_1.Recipe_Alternate_ElectromagneticControlRod_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ElectromagneticControlRod_1.Recipe_Alternate_ElectromagneticControlRod_1_C",
 		MDisplayName:                      `Alternate: Electromagnetic Connection Rod`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -474,7 +474,7 @@ var (
 
 	AlternateEncasedIndustrialBeam = FGRecipe{
 		ClassName:                         "Recipe_Alternate_EncasedIndustrialBeam_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EncasedIndustrialBeam.Recipe_Alternate_EncasedIndustrialBeam_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EncasedIndustrialBeam.Recipe_Alternate_EncasedIndustrialBeam_C",
 		MDisplayName:                      `Alternate: Encased Industrial Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=7),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -489,7 +489,7 @@ var (
 
 	AlternateEnrichedCoal = FGRecipe{
 		ClassName:                         "Recipe_Alternate_EnrichedCoal_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Recipe_Alternate_EnrichedCoal_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Recipe_Alternate_EnrichedCoal_C",
 		MDisplayName:                      `Alternate: Compacted Coal`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -504,7 +504,7 @@ var (
 
 	AlternateFertileUranium = FGRecipe{
 		ClassName:                         "Recipe_Alternate_FertileUranium_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_FertileUranium.Recipe_Alternate_FertileUranium_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_FertileUranium.Recipe_Alternate_FertileUranium_C",
 		MDisplayName:                      `Alternate: Fertile Uranium`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreUranium/Desc_OreUranium.Desc_OreUranium_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NuclearWaste/Desc_NuclearWaste.Desc_NuclearWaste_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NitricAcid/Desc_NitricAcid.Desc_NitricAcid_C"',Amount=3000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_SulfuricAcid.Desc_SulfuricAcid_C"',Amount=5000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -519,7 +519,7 @@ var (
 
 	AlternateFlexibleFramework = FGRecipe{
 		ClassName:                         "Recipe_Alternate_FlexibleFramework_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FlexibleFramework.Recipe_Alternate_FlexibleFramework_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FlexibleFramework.Recipe_Alternate_FlexibleFramework_C",
 		MDisplayName:                      `Alternate: Flexible Framework`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -534,7 +534,7 @@ var (
 
 	AlternateFusedWire = FGRecipe{
 		ClassName:                         "Recipe_Alternate_FusedWire_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FusedWire.Recipe_Alternate_FusedWire_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FusedWire.Recipe_Alternate_FusedWire_C",
 		MDisplayName:                      `Alternate: Fused Wire`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GoldIngot/Desc_GoldIngot.Desc_GoldIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -549,7 +549,7 @@ var (
 
 	AlternateGunpowder1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Gunpowder_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Gunpowder_1.Recipe_Alternate_Gunpowder_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Gunpowder_1.Recipe_Alternate_Gunpowder_1_C",
 		MDisplayName:                      `Alternate: Fine Black Powder`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CompactedCoal/Desc_CompactedCoal.Desc_CompactedCoal_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -564,7 +564,7 @@ var (
 
 	AlternateHeatFusedFrame = FGRecipe{
 		ClassName:                         "Recipe_Alternate_HeatFusedFrame_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_HeatFusedFrame.Recipe_Alternate_HeatFusedFrame_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_HeatFusedFrame.Recipe_Alternate_HeatFusedFrame_C",
 		MDisplayName:                      `Alternate: Heat-Fused Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumIngot/Desc_AluminumIngot.Desc_AluminumIngot_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NitricAcid/Desc_NitricAcid.Desc_NitricAcid_C"',Amount=8000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C"',Amount=10000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -579,7 +579,7 @@ var (
 
 	AlternateHeatSink1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_HeatSink_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HeatSink_1.Recipe_Alternate_HeatSink_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HeatSink_1.Recipe_Alternate_HeatSink_1_C",
 		MDisplayName:                      `Alternate: Heat Exchanger`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -594,7 +594,7 @@ var (
 
 	AlternateHeavyFlexibleFrame = FGRecipe{
 		ClassName:                         "Recipe_Alternate_HeavyFlexibleFrame_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyFlexibleFrame.Recipe_Alternate_HeavyFlexibleFrame_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyFlexibleFrame.Recipe_Alternate_HeavyFlexibleFrame_C",
 		MDisplayName:                      `Alternate: Heavy Flexible Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=104))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -609,7 +609,7 @@ var (
 
 	AlternateHeavyOilResidue = FGRecipe{
 		ClassName:                         "Recipe_Alternate_HeavyOilResidue_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyOilResidue.Recipe_Alternate_HeavyOilResidue_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyOilResidue.Recipe_Alternate_HeavyOilResidue_C",
 		MDisplayName:                      `Alternate: Heavy Oil Residue`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',Amount=3000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -624,7 +624,7 @@ var (
 
 	AlternateHighSpeedConnector = FGRecipe{
 		ClassName:                         "Recipe_Alternate_HighSpeedConnector_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HighSpeedConnector.Recipe_Alternate_HighSpeedConnector_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HighSpeedConnector.Recipe_Alternate_HighSpeedConnector_C",
 		MDisplayName:                      `Alternate: Silicon High-Speed Connector`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=60),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Silica/Desc_Silica.Desc_Silica_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -639,7 +639,7 @@ var (
 
 	AlternateHighSpeedWiring = FGRecipe{
 		ClassName:                         "Recipe_Alternate_HighSpeedWiring_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HighSpeedWiring.Recipe_Alternate_HighSpeedWiring_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HighSpeedWiring.Recipe_Alternate_HighSpeedWiring_C",
 		MDisplayName:                      `Alternate: Automated Speed Wiring`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=40),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -654,7 +654,7 @@ var (
 
 	AlternateIngotIron = FGRecipe{
 		ClassName:                         "Recipe_Alternate_IngotIron_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotIron.Recipe_Alternate_IngotIron_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotIron.Recipe_Alternate_IngotIron_C",
 		MDisplayName:                      `Alternate: Iron Alloy Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -669,7 +669,7 @@ var (
 
 	AlternateIngotSteel1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_IngotSteel_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_1.Recipe_Alternate_IngotSteel_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_1.Recipe_Alternate_IngotSteel_1_C",
 		MDisplayName:                      `Alternate: Solid Steel Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronIngot/Desc_IronIngot.Desc_IronIngot_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -684,7 +684,7 @@ var (
 
 	AlternateIngotSteel2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_IngotSteel_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_2.Recipe_Alternate_IngotSteel_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_2.Recipe_Alternate_IngotSteel_2_C",
 		MDisplayName:                      `Alternate: Compacted Steel Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CompactedCoal/Desc_CompactedCoal.Desc_CompactedCoal_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -699,7 +699,7 @@ var (
 
 	AlternateInstantPlutoniumCell = FGRecipe{
 		ClassName:                         "Recipe_Alternate_InstantPlutoniumCell_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantPlutoniumCell.Recipe_Alternate_InstantPlutoniumCell_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantPlutoniumCell.Recipe_Alternate_InstantPlutoniumCell_C",
 		MDisplayName:                      `Alternate: Instant Plutonium Cell`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Non-FissibleUranium/Desc_NonFissibleUranium.Desc_NonFissibleUranium_C"',Amount=150),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -714,7 +714,7 @@ var (
 
 	AlternateInstantScrap = FGRecipe{
 		ClassName:                         "Recipe_Alternate_InstantScrap_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantScrap.Recipe_Alternate_InstantScrap_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantScrap.Recipe_Alternate_InstantScrap_C",
 		MDisplayName:                      `Alternate: Instant Scrap`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreBauxite/Desc_OreBauxite.Desc_OreBauxite_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_SulfuricAcid.Desc_SulfuricAcid_C"',Amount=5000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=6000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -729,7 +729,7 @@ var (
 
 	AlternateModularFrame = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ModularFrame_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrame.Recipe_Alternate_ModularFrame_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrame.Recipe_Alternate_ModularFrame_C",
 		MDisplayName:                      `Alternate: Steeled Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -744,7 +744,7 @@ var (
 
 	AlternateModularFrameHeavy = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ModularFrameHeavy_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrameHeavy.Recipe_Alternate_ModularFrameHeavy_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrameHeavy.Recipe_Alternate_ModularFrameHeavy_C",
 		MDisplayName:                      `Alternate: Heavy Encased Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=36),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=22))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -759,7 +759,7 @@ var (
 
 	AlternateMotor1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Motor_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Motor_1.Recipe_Alternate_Motor_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Motor_1.Recipe_Alternate_Motor_1_C",
 		MDisplayName:                      `Alternate: Rigour Motor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -774,7 +774,7 @@ var (
 
 	AlternateNobelisk1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Nobelisk_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Nobelisk_1.Recipe_Alternate_Nobelisk_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Nobelisk_1.Recipe_Alternate_Nobelisk_1_C",
 		MDisplayName:                      `Alternate: Seismic Nobelisk`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -789,7 +789,7 @@ var (
 
 	AlternateNuclearFuelRod1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_NuclearFuelRod_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_NuclearFuelRod_1.Recipe_Alternate_NuclearFuelRod_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_NuclearFuelRod_1.Recipe_Alternate_NuclearFuelRod_1_C",
 		MDisplayName:                      `Alternate: Uranium Fuel Unit`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/UraniumCell/Desc_UraniumCell.Desc_UraniumCell_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -804,7 +804,7 @@ var (
 
 	AlternateOCSupercomputer = FGRecipe{
 		ClassName:                         "Recipe_Alternate_OCSupercomputer_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_OCSupercomputer.Recipe_Alternate_OCSupercomputer_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_OCSupercomputer.Recipe_Alternate_OCSupercomputer_C",
 		MDisplayName:                      `Alternate: OC Supercomputer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CoolingSystem/Desc_CoolingSystem.Desc_CoolingSystem_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -819,7 +819,7 @@ var (
 
 	AlternatePlastic1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Plastic_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Plastic_1.Recipe_Alternate_Plastic_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Plastic_1.Recipe_Alternate_Plastic_1_C",
 		MDisplayName:                      `Alternate: Recycled Plastic`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C"',Amount=6000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -834,7 +834,7 @@ var (
 
 	AlternatePlasticSmartPlating = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PlasticSmartPlating_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PlasticSmartPlating.Recipe_Alternate_PlasticSmartPlating_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PlasticSmartPlating.Recipe_Alternate_PlasticSmartPlating_C",
 		MDisplayName:                      `Alternate: Plastic Smart Plating`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -849,7 +849,7 @@ var (
 
 	AlternatePlutoniumFuelUnit = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PlutoniumFuelUnit_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_PlutoniumFuelUnit.Recipe_Alternate_PlutoniumFuelUnit_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_PlutoniumFuelUnit.Recipe_Alternate_PlutoniumFuelUnit_C",
 		MDisplayName:                      `Alternate: Plutonium Fuel Unit`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PlutoniumCell/Desc_PlutoniumCell.Desc_PlutoniumCell_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PressureConversionCube/Desc_PressureConversionCube.Desc_PressureConversionCube_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -864,7 +864,7 @@ var (
 
 	AlternatePolyesterFabric = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PolyesterFabric_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolyesterFabric.Recipe_Alternate_PolyesterFabric_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolyesterFabric.Recipe_Alternate_PolyesterFabric_C",
 		MDisplayName:                      `Alternate: Polyester Fabric`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PolymerResin/Desc_PolymerResin.Desc_PolymerResin_C"',Amount=16),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=10000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -879,7 +879,7 @@ var (
 
 	AlternatePolymerResin = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PolymerResin_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolymerResin.Recipe_Alternate_PolymerResin_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolymerResin.Recipe_Alternate_PolymerResin_C",
 		MDisplayName:                      `Alternate: Polymer Resin`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',Amount=6000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -894,7 +894,7 @@ var (
 
 	AlternatePureCateriumIngot = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PureCateriumIngot_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Recipe_Alternate_PureCateriumIngot_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Recipe_Alternate_PureCateriumIngot_C",
 		MDisplayName:                      `Alternate: Pure Caterium Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=2000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -909,7 +909,7 @@ var (
 
 	AlternatePureCopperIngot = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PureCopperIngot_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Recipe_Alternate_PureCopperIngot_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Recipe_Alternate_PureCopperIngot_C",
 		MDisplayName:                      `Alternate: Pure Copper Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=4000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -924,7 +924,7 @@ var (
 
 	AlternatePureIronIngot = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PureIronIngot_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Recipe_Alternate_PureIronIngot_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Recipe_Alternate_PureIronIngot_C",
 		MDisplayName:                      `Alternate: Pure Iron Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=7),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=4000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -939,7 +939,7 @@ var (
 
 	AlternatePureQuartzCrystal = FGRecipe{
 		ClassName:                         "Recipe_Alternate_PureQuartzCrystal_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Recipe_Alternate_PureQuartzCrystal_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Recipe_Alternate_PureQuartzCrystal_C",
 		MDisplayName:                      `Alternate: Pure Quartz Crystal`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=9),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=5000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -954,7 +954,7 @@ var (
 
 	AlternateQuickwire = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Quickwire_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Quickwire.Recipe_Alternate_Quickwire_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Quickwire.Recipe_Alternate_Quickwire_C",
 		MDisplayName:                      `Alternate: Fused Quickwire`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GoldIngot/Desc_GoldIngot.Desc_GoldIngot_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -969,7 +969,7 @@ var (
 
 	AlternateRadioControlSystem = FGRecipe{
 		ClassName:                         "Recipe_Alternate_RadioControlSystem_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_RadioControlSystem.Recipe_Alternate_RadioControlSystem_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_RadioControlSystem.Recipe_Alternate_RadioControlSystem_C",
 		MDisplayName:                      `Alternate: Radio Control System`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=60),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=30))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -984,7 +984,7 @@ var (
 
 	AlternateRadioControlUnit1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_RadioControlUnit_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_RadioControlUnit_1.Recipe_Alternate_RadioControlUnit_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_RadioControlUnit_1.Recipe_Alternate_RadioControlUnit_1_C",
 		MDisplayName:                      `Alternate: Radio Connection Unit`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlateReinforced/Desc_AluminumPlateReinforced.Desc_AluminumPlateReinforced_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=12))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -999,7 +999,7 @@ var (
 
 	AlternateRecycledRubber = FGRecipe{
 		ClassName:                         "Recipe_Alternate_RecycledRubber_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RecycledRubber.Recipe_Alternate_RecycledRubber_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RecycledRubber.Recipe_Alternate_RecycledRubber_C",
 		MDisplayName:                      `Alternate: Recycled Rubber`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C"',Amount=6000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1014,7 +1014,7 @@ var (
 
 	AlternateReinforcedIronPlate1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ReinforcedIronPlate_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_1.Recipe_Alternate_ReinforcedIronPlate_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_1.Recipe_Alternate_ReinforcedIronPlate_1_C",
 		MDisplayName:                      `Alternate: Bolted Iron Plate`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=18),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1029,7 +1029,7 @@ var (
 
 	AlternateReinforcedIronPlate2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_ReinforcedIronPlate_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_2.Recipe_Alternate_ReinforcedIronPlate_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_2.Recipe_Alternate_ReinforcedIronPlate_2_C",
 		MDisplayName:                      `Alternate: Stitched Iron Plate`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1044,7 +1044,7 @@ var (
 
 	AlternateRotor = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Rotor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Rotor.Recipe_Alternate_Rotor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Rotor.Recipe_Alternate_Rotor_C",
 		MDisplayName:                      `Alternate: Steel Rotor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1059,7 +1059,7 @@ var (
 
 	AlternateRubberConcrete = FGRecipe{
 		ClassName:                         "Recipe_Alternate_RubberConcrete_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RubberConcrete.Recipe_Alternate_RubberConcrete_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RubberConcrete.Recipe_Alternate_RubberConcrete_C",
 		MDisplayName:                      `Alternate: Rubber Concrete`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1074,7 +1074,7 @@ var (
 
 	AlternateScrew = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Screw_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw.Recipe_Alternate_Screw_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw.Recipe_Alternate_Screw_C",
 		MDisplayName:                      `Alternate: Cast Screw`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronIngot/Desc_IronIngot.Desc_IronIngot_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1089,7 +1089,7 @@ var (
 
 	AlternateScrew2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Screw_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw_2.Recipe_Alternate_Screw_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw_2.Recipe_Alternate_Screw_2_C",
 		MDisplayName:                      `Alternate: Steel Screw`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1104,7 +1104,7 @@ var (
 
 	AlternateSilica = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Silica_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Silica.Recipe_Alternate_Silica_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Silica.Recipe_Alternate_Silica_C",
 		MDisplayName:                      `Alternate: Cheap Silica`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1119,7 +1119,7 @@ var (
 
 	AlternateSloppyAlumina = FGRecipe{
 		ClassName:                         "Recipe_Alternate_SloppyAlumina_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SloppyAlumina.Recipe_Alternate_SloppyAlumina_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SloppyAlumina.Recipe_Alternate_SloppyAlumina_C",
 		MDisplayName:                      `Alternate: Sloppy Alumina`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreBauxite/Desc_OreBauxite.Desc_OreBauxite_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=10000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1134,7 +1134,7 @@ var (
 
 	AlternateStator = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Stator_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Stator.Recipe_Alternate_Stator_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Stator.Recipe_Alternate_Stator_C",
 		MDisplayName:                      `Alternate: Quickwire Stator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=15))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1149,7 +1149,7 @@ var (
 
 	AlternateSteamedCopperSheet = FGRecipe{
 		ClassName:                         "Recipe_Alternate_SteamedCopperSheet_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteamedCopperSheet.Recipe_Alternate_SteamedCopperSheet_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteamedCopperSheet.Recipe_Alternate_SteamedCopperSheet_C",
 		MDisplayName:                      `Alternate: Steamed Copper Sheet`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=3000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1164,7 +1164,7 @@ var (
 
 	AlternateSteelCanister = FGRecipe{
 		ClassName:                         "Recipe_Alternate_SteelCanister_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCanister.Recipe_Alternate_SteelCanister_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCanister.Recipe_Alternate_SteelCanister_C",
 		MDisplayName:                      `Alternate: Steel Canister`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelIngot/Desc_SteelIngot.Desc_SteelIngot_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1179,7 +1179,7 @@ var (
 
 	AlternateSteelCoatedPlate = FGRecipe{
 		ClassName:                         "Recipe_Alternate_SteelCoatedPlate_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCoatedPlate.Recipe_Alternate_SteelCoatedPlate_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCoatedPlate.Recipe_Alternate_SteelCoatedPlate_C",
 		MDisplayName:                      `Alternate: Steel Coated Plate`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelIngot/Desc_SteelIngot.Desc_SteelIngot_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1194,7 +1194,7 @@ var (
 
 	AlternateSteelRod = FGRecipe{
 		ClassName:                         "Recipe_Alternate_SteelRod_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelRod.Recipe_Alternate_SteelRod_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelRod.Recipe_Alternate_SteelRod_C",
 		MDisplayName:                      `Alternate: Steel Rod`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelIngot/Desc_SteelIngot.Desc_SteelIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1209,7 +1209,7 @@ var (
 
 	AlternateSuperStateComputer = FGRecipe{
 		ClassName:                         "Recipe_Alternate_SuperStateComputer_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SuperStateComputer.Recipe_Alternate_SuperStateComputer_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SuperStateComputer.Recipe_Alternate_SuperStateComputer_C",
 		MDisplayName:                      `Alternate: Super-State Computer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Battery/Desc_Battery.Desc_Battery_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=45))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1224,7 +1224,7 @@ var (
 
 	AlternateTurboBlendFuel = FGRecipe{
 		ClassName:                         "Recipe_Alternate_TurboBlendFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboBlendFuel.Recipe_Alternate_TurboBlendFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboBlendFuel.Recipe_Alternate_TurboBlendFuel_C",
 		MDisplayName:                      `Alternate: Turbo Blend Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=4000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PetroleumCoke/Desc_PetroleumCoke.Desc_PetroleumCoke_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1239,7 +1239,7 @@ var (
 
 	AlternateTurboHeavyFuel = FGRecipe{
 		ClassName:                         "Recipe_Alternate_TurboHeavyFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Recipe_Alternate_TurboHeavyFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Recipe_Alternate_TurboHeavyFuel_C",
 		MDisplayName:                      `Alternate: Turbo Heavy Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=5000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CompactedCoal/Desc_CompactedCoal.Desc_CompactedCoal_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1254,7 +1254,7 @@ var (
 
 	AlternateTurboMotor1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_TurboMotor_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_TurboMotor_1.Recipe_Alternate_TurboMotor_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_TurboMotor_1.Recipe_Alternate_TurboMotor_1_C",
 		MDisplayName:                      `Alternate: Turbo Electric Motor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=7),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=9),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=7))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1269,7 +1269,7 @@ var (
 
 	AlternateTurboPressureMotor = FGRecipe{
 		ClassName:                         "Recipe_Alternate_TurboPressureMotor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboPressureMotor.Recipe_Alternate_TurboPressureMotor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboPressureMotor.Recipe_Alternate_TurboPressureMotor_C",
 		MDisplayName:                      `Alternate: Turbo Pressure Motor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PressureConversionCube/Desc_PressureConversionCube.Desc_PressureConversionCube_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PackagedNitrogen/Desc_PackagedNitrogenGas.Desc_PackagedNitrogenGas_C"',Amount=24),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1284,7 +1284,7 @@ var (
 
 	AlternateTurbofuel = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Turbofuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Turbofuel.Recipe_Alternate_Turbofuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Turbofuel.Recipe_Alternate_Turbofuel_C",
 		MDisplayName:                      `Turbofuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C"',Amount=6000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CompactedCoal/Desc_CompactedCoal.Desc_CompactedCoal_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1299,7 +1299,7 @@ var (
 
 	AlternateUraniumCell1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_UraniumCell_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_UraniumCell_1.Recipe_Alternate_UraniumCell_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_UraniumCell_1.Recipe_Alternate_UraniumCell_1_C",
 		MDisplayName:                      `Alternate: Infused Uranium Cell`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreUranium/Desc_OreUranium.Desc_OreUranium_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Silica/Desc_Silica.Desc_Silica_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=15))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1314,7 +1314,7 @@ var (
 
 	AlternateWetConcrete = FGRecipe{
 		ClassName:                         "Recipe_Alternate_WetConcrete_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Recipe_Alternate_WetConcrete_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Recipe_Alternate_WetConcrete_C",
 		MDisplayName:                      `Alternate: Wet Concrete`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=5000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1329,7 +1329,7 @@ var (
 
 	AlternateWire1 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Wire_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_1.Recipe_Alternate_Wire_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_1.Recipe_Alternate_Wire_1_C",
 		MDisplayName:                      `Alternate: Iron Wire`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronIngot/Desc_IronIngot.Desc_IronIngot_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1344,7 +1344,7 @@ var (
 
 	AlternateWire2 = FGRecipe{
 		ClassName:                         "Recipe_Alternate_Wire_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_2.Recipe_Alternate_Wire_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_2.Recipe_Alternate_Wire_2_C",
 		MDisplayName:                      `Alternate: Caterium Wire`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GoldIngot/Desc_GoldIngot.Desc_GoldIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1359,7 +1359,7 @@ var (
 
 	AluminaSolution = FGRecipe{
 		ClassName:                         "Recipe_AluminaSolution_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminaSolution.Recipe_AluminaSolution_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminaSolution.Recipe_AluminaSolution_C",
 		MDisplayName:                      `Alumina Solution`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreBauxite/Desc_OreBauxite.Desc_OreBauxite_C"',Amount=12),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=18000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1374,7 +1374,7 @@ var (
 
 	AluminumCasing = FGRecipe{
 		ClassName:                         "Recipe_AluminumCasing_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumCasing.Recipe_AluminumCasing_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumCasing.Recipe_AluminumCasing_C",
 		MDisplayName:                      `Aluminum Casing`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumIngot/Desc_AluminumIngot.Desc_AluminumIngot_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -1389,7 +1389,7 @@ var (
 
 	AluminumScrap = FGRecipe{
 		ClassName:                         "Recipe_AluminumScrap_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminumScrap.Recipe_AluminumScrap_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminumScrap.Recipe_AluminumScrap_C",
 		MDisplayName:                      `Aluminum Scrap`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Alumina/Desc_AluminaSolution.Desc_AluminaSolution_C"',Amount=4000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1404,7 +1404,7 @@ var (
 
 	AluminumSheet = FGRecipe{
 		ClassName:                         "Recipe_AluminumSheet_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumSheet.Recipe_AluminumSheet_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumSheet.Recipe_AluminumSheet_C",
 		MDisplayName:                      `Alclad Aluminum Sheet`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumIngot/Desc_AluminumIngot.Desc_AluminumIngot_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -1419,7 +1419,7 @@ var (
 
 	AssemblerMk1 = FGRecipe{
 		ClassName:                         "Recipe_AssemblerMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_AssemblerMk1.Recipe_AssemblerMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_AssemblerMk1.Recipe_AssemblerMk1_C",
 		MDisplayName:                      `Assembler`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1434,7 +1434,7 @@ var (
 
 	Battery = FGRecipe{
 		ClassName:                         "Recipe_Battery_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Battery.Recipe_Battery_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Battery.Recipe_Battery_C",
 		MDisplayName:                      `Battery`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_SulfuricAcid.Desc_SulfuricAcid_C"',Amount=2500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Alumina/Desc_AluminaSolution.Desc_AluminaSolution_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1449,7 +1449,7 @@ var (
 
 	Beacon = FGRecipe{
 		ClassName:                         "Recipe_Beacon_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Beacon.Recipe_Beacon_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Beacon.Recipe_Beacon_C",
 		MDisplayName:                      `Beacon`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1464,7 +1464,7 @@ var (
 
 	Biofuel = FGRecipe{
 		ClassName:                         "Recipe_Biofuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biofuel.Recipe_Biofuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biofuel.Recipe_Biofuel_C",
 		MDisplayName:                      `Solid Biofuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_GenericBiomass.Desc_GenericBiomass_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    5.000000,
@@ -1479,7 +1479,7 @@ var (
 
 	BiomassAlienCarapace = FGRecipe{
 		ClassName:                         "Recipe_Biomass_AlienCarapace_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienCarapace.Recipe_Biomass_AlienCarapace_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienCarapace.Recipe_Biomass_AlienCarapace_C",
 		MDisplayName:                      `Biomass (Alien Carapace)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_HogParts.Desc_HogParts_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1494,7 +1494,7 @@ var (
 
 	BiomassAlienOrgans = FGRecipe{
 		ClassName:                         "Recipe_Biomass_AlienOrgans_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienOrgans.Recipe_Biomass_AlienOrgans_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienOrgans.Recipe_Biomass_AlienOrgans_C",
 		MDisplayName:                      `Biomass (Alien Organs)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_SpitterParts.Desc_SpitterParts_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1509,7 +1509,7 @@ var (
 
 	BiomassLeaves = FGRecipe{
 		ClassName:                         "Recipe_Biomass_Leaves_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Leaves.Recipe_Biomass_Leaves_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Leaves.Recipe_Biomass_Leaves_C",
 		MDisplayName:                      `Biomass (Leaves)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Leaves.Desc_Leaves_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    0.400000,
@@ -1524,7 +1524,7 @@ var (
 
 	BiomassMycelia = FGRecipe{
 		ClassName:                         "Recipe_Biomass_Mycelia_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Mycelia.Recipe_Biomass_Mycelia_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Mycelia.Recipe_Biomass_Mycelia_C",
 		MDisplayName:                      `Biomass (Mycelia)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    0.500000,
@@ -1539,7 +1539,7 @@ var (
 
 	BiomassWood = FGRecipe{
 		ClassName:                         "Recipe_Biomass_Wood_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Wood.Recipe_Biomass_Wood_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Wood.Recipe_Biomass_Wood_C",
 		MDisplayName:                      `Biomass (Wood)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Wood.Desc_Wood_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1554,7 +1554,7 @@ var (
 
 	BladeRunners = FGRecipe{
 		ClassName:                         "Recipe_BladeRunners_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_BladeRunners.Recipe_BladeRunners_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_BladeRunners.Recipe_BladeRunners_C",
 		MDisplayName:                      `Blade Runners`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1569,7 +1569,7 @@ var (
 
 	Blender = FGRecipe{
 		ClassName:                         "Recipe_Blender_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Blender.Recipe_Blender_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Blender.Recipe_Blender_C",
 		MDisplayName:                      `Blender`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1584,7 +1584,7 @@ var (
 
 	Cable = FGRecipe{
 		ClassName:                         "Recipe_Cable_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Cable.Recipe_Cable_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Cable.Recipe_Cable_C",
 		MDisplayName:                      `Cable`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1599,7 +1599,7 @@ var (
 
 	CandyCane = FGRecipe{
 		ClassName:                         "Recipe_CandyCane_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_CandyCane.Recipe_CandyCane_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_CandyCane.Recipe_CandyCane_C",
 		MDisplayName:                      `Candy Cane`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1614,7 +1614,7 @@ var (
 
 	CandyCaneBasher = FGRecipe{
 		ClassName:                         "Recipe_CandyCaneBasher_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_CandyCaneBasher.Recipe_CandyCaneBasher_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_CandyCaneBasher.Recipe_CandyCaneBasher_C",
 		MDisplayName:                      `Candy Cane Basher`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/ShockShank/BP_EquipmentDescriptorShockShank.BP_EquipmentDescriptorShockShank_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=15))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1629,7 +1629,7 @@ var (
 
 	CandyCaneDecor = FGRecipe{
 		ClassName:                         "Recipe_CandyCaneDecor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/CandyCaneDecor/Recipe_CandyCaneDecor.Recipe_CandyCaneDecor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/CandyCaneDecor/Recipe_CandyCaneDecor.Recipe_CandyCaneDecor_C",
 		MDisplayName:                      `Candy Cane`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1644,7 +1644,7 @@ var (
 
 	Cartridge = FGRecipe{
 		ClassName:                         "Recipe_Cartridge_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Cartridge.Recipe_Cartridge_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Cartridge.Recipe_Cartridge_C",
 		MDisplayName:                      `Rifle Cartridge`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1659,7 +1659,7 @@ var (
 
 	CeilingLight = FGRecipe{
 		ClassName:                         "Recipe_CeilingLight_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_CeilingLight.Recipe_CeilingLight_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_CeilingLight.Recipe_CeilingLight_C",
 		MDisplayName:                      `Ceiling Light`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=16),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1674,7 +1674,7 @@ var (
 
 	Chainsaw = FGRecipe{
 		ClassName:                         "Recipe_Chainsaw_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Chainsaw.Recipe_Chainsaw_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Chainsaw.Recipe_Chainsaw_C",
 		MDisplayName:                      `Chainsaw`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=160),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=15))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1689,7 +1689,7 @@ var (
 
 	CircuitBoard = FGRecipe{
 		ClassName:                         "Recipe_CircuitBoard_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_CircuitBoard.Recipe_CircuitBoard_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_CircuitBoard.Recipe_CircuitBoard_C",
 		MDisplayName:                      `Circuit Board`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.500000,
@@ -1704,7 +1704,7 @@ var (
 
 	Coal = FGRecipe{
 		ClassName:                         "Recipe_Coal_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Coal.Recipe_Coal_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Coal.Recipe_Coal_C",
 		MDisplayName:                      `Coal`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1719,7 +1719,7 @@ var (
 
 	ColorCartridge = FGRecipe{
 		ClassName:                         "Recipe_ColorCartridge_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorCartridge.Recipe_ColorCartridge_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorCartridge.Recipe_ColorCartridge_C",
 		MDisplayName:                      `Color Cartridge`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_FlowerPetals.Desc_FlowerPetals_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1734,7 +1734,7 @@ var (
 
 	ColorGun = FGRecipe{
 		ClassName:                         "Recipe_ColorGun_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorGun.Recipe_ColorGun_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorGun.Recipe_ColorGun_C",
 		MDisplayName:                      `Color Gun`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=80),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=40))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1749,7 +1749,7 @@ var (
 
 	Computer = FGRecipe{
 		ClassName:                         "Recipe_Computer_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Computer.Recipe_Computer_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Computer.Recipe_Computer_C",
 		MDisplayName:                      `Computer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=9),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=18),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=52))`,
 		MManualManufacturingMultiplier:    1.500000,
@@ -1764,7 +1764,7 @@ var (
 
 	ComputerSuper = FGRecipe{
 		ClassName:                         "Recipe_ComputerSuper_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ComputerSuper.Recipe_ComputerSuper_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ComputerSuper.Recipe_ComputerSuper_C",
 		MDisplayName:                      `Supercomputer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=28))`,
 		MManualManufacturingMultiplier:    1.500000,
@@ -1779,7 +1779,7 @@ var (
 
 	Concrete = FGRecipe{
 		ClassName:                         "Recipe_Concrete_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Concrete.Recipe_Concrete_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Concrete.Recipe_Concrete_C",
 		MDisplayName:                      `Concrete`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1794,7 +1794,7 @@ var (
 
 	ConstructorMk1 = FGRecipe{
 		ClassName:                         "Recipe_ConstructorMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConstructorMk1.Recipe_ConstructorMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConstructorMk1.Recipe_ConstructorMk1_C",
 		MDisplayName:                      `Constructor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1809,7 +1809,7 @@ var (
 
 	ConveyorAttachmentMerger = FGRecipe{
 		ClassName:                         "Recipe_ConveyorAttachmentMerger_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentMerger.Recipe_ConveyorAttachmentMerger_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentMerger.Recipe_ConveyorAttachmentMerger_C",
 		MDisplayName:                      `Conveyor Merger`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1824,7 +1824,7 @@ var (
 
 	ConveyorAttachmentSplitter = FGRecipe{
 		ClassName:                         "Recipe_ConveyorAttachmentSplitter_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitter.Recipe_ConveyorAttachmentSplitter_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitter.Recipe_ConveyorAttachmentSplitter_C",
 		MDisplayName:                      `Conveyor Splitter`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1839,7 +1839,7 @@ var (
 
 	ConveyorAttachmentSplitterProgrammable = FGRecipe{
 		ClassName:                         "Recipe_ConveyorAttachmentSplitterProgrammable_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterProgrammable.Recipe_ConveyorAttachmentSplitterProgrammable_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterProgrammable.Recipe_ConveyorAttachmentSplitterProgrammable_C",
 		MDisplayName:                      `Programmable Splitter`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1854,7 +1854,7 @@ var (
 
 	ConveyorAttachmentSplitterSmart = FGRecipe{
 		ClassName:                         "Recipe_ConveyorAttachmentSplitterSmart_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterSmart.Recipe_ConveyorAttachmentSplitterSmart_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterSmart.Recipe_ConveyorAttachmentSplitterSmart_C",
 		MDisplayName:                      `Smart Splitter`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1869,7 +1869,7 @@ var (
 
 	ConveyorBeltMk1 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorBeltMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk1.Recipe_ConveyorBeltMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk1.Recipe_ConveyorBeltMk1_C",
 		MDisplayName:                      `Conveyor Belt Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1884,7 +1884,7 @@ var (
 
 	ConveyorBeltMk2 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorBeltMk2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk2.Recipe_ConveyorBeltMk2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk2.Recipe_ConveyorBeltMk2_C",
 		MDisplayName:                      `Conveyor Belt Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1899,7 +1899,7 @@ var (
 
 	ConveyorBeltMk3 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorBeltMk3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk3.Recipe_ConveyorBeltMk3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk3.Recipe_ConveyorBeltMk3_C",
 		MDisplayName:                      `Conveyor Belt Mk.3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1914,7 +1914,7 @@ var (
 
 	ConveyorBeltMk4 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorBeltMk4_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk4.Recipe_ConveyorBeltMk4_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk4.Recipe_ConveyorBeltMk4_C",
 		MDisplayName:                      `Conveyor Belt Mk.4`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1929,7 +1929,7 @@ var (
 
 	ConveyorBeltMk5 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorBeltMk5_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk5.Recipe_ConveyorBeltMk5_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk5.Recipe_ConveyorBeltMk5_C",
 		MDisplayName:                      `Conveyor Belt Mk.5`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1944,7 +1944,7 @@ var (
 
 	ConveyorLiftMk1 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorLiftMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk1.Recipe_ConveyorLiftMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk1.Recipe_ConveyorLiftMk1_C",
 		MDisplayName:                      `Conveyor Lift Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1959,7 +1959,7 @@ var (
 
 	ConveyorLiftMk2 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorLiftMk2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk2.Recipe_ConveyorLiftMk2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk2.Recipe_ConveyorLiftMk2_C",
 		MDisplayName:                      `Conveyor Lift Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1974,7 +1974,7 @@ var (
 
 	ConveyorLiftMk3 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorLiftMk3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk3.Recipe_ConveyorLiftMk3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk3.Recipe_ConveyorLiftMk3_C",
 		MDisplayName:                      `Conveyor Lift Mk.3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -1989,7 +1989,7 @@ var (
 
 	ConveyorLiftMk4 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorLiftMk4_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk4.Recipe_ConveyorLiftMk4_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk4.Recipe_ConveyorLiftMk4_C",
 		MDisplayName:                      `Conveyor Lift Mk.4`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2004,7 +2004,7 @@ var (
 
 	ConveyorLiftMk5 = FGRecipe{
 		ClassName:                         "Recipe_ConveyorLiftMk5_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk5.Recipe_ConveyorLiftMk5_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk5.Recipe_ConveyorLiftMk5_C",
 		MDisplayName:                      `Conveyor Lift Mk.5`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2019,7 +2019,7 @@ var (
 
 	ConveyorPole = FGRecipe{
 		ClassName:                         "Recipe_ConveyorPole_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPole.Recipe_ConveyorPole_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPole.Recipe_ConveyorPole_C",
 		MDisplayName:                      `Conveyor Pole`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2034,7 +2034,7 @@ var (
 
 	ConveyorPoleStackable = FGRecipe{
 		ClassName:                         "Recipe_ConveyorPoleStackable_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleStackable.Recipe_ConveyorPoleStackable_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleStackable.Recipe_ConveyorPoleStackable_C",
 		MDisplayName:                      `Stackable Conveyor Pole`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2049,7 +2049,7 @@ var (
 
 	ConveyorPoleWall = FGRecipe{
 		ClassName:                         "Recipe_ConveyorPoleWall_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleWall.Recipe_ConveyorPoleWall_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleWall.Recipe_ConveyorPoleWall_C",
 		MDisplayName:                      `Conveyor Wall Mount`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2064,7 +2064,7 @@ var (
 
 	CoolingSystem = FGRecipe{
 		ClassName:                         "Recipe_CoolingSystem_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_CoolingSystem.Recipe_CoolingSystem_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_CoolingSystem.Recipe_CoolingSystem_C",
 		MDisplayName:                      `Cooling System`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlateReinforced/Desc_AluminumPlateReinforced.Desc_AluminumPlateReinforced_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=5000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',Amount=25000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2079,7 +2079,7 @@ var (
 
 	CopperDust = FGRecipe{
 		ClassName:                         "Recipe_CopperDust_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperDust.Recipe_CopperDust_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperDust.Recipe_CopperDust_C",
 		MDisplayName:                      `Copper Powder`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=30))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2094,7 +2094,7 @@ var (
 
 	CopperSheet = FGRecipe{
 		ClassName:                         "Recipe_CopperSheet_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperSheet.Recipe_CopperSheet_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperSheet.Recipe_CopperSheet_C",
 		MDisplayName:                      `Copper Sheet`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2109,7 +2109,7 @@ var (
 
 	CrudeOil = FGRecipe{
 		ClassName:                         "Recipe_CrudeOil_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_CrudeOil.Recipe_CrudeOil_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_CrudeOil.Recipe_CrudeOil_C",
 		MDisplayName:                      `Crude Oil`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2124,7 +2124,7 @@ var (
 
 	CrystalOscillator = FGRecipe{
 		ClassName:                         "Recipe_CrystalOscillator_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_CrystalOscillator.Recipe_CrystalOscillator_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_CrystalOscillator.Recipe_CrystalOscillator_C",
 		MDisplayName:                      `Crystal Oscillator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=36),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=28),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    0.300000,
@@ -2139,7 +2139,7 @@ var (
 
 	CyberWagon = FGRecipe{
 		ClassName:                         "Recipe_CyberWagon_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_CyberWagon.Recipe_CyberWagon_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_CyberWagon.Recipe_CyberWagon_C",
 		MDisplayName:                      `Cyber Wagon`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2154,7 +2154,7 @@ var (
 
 	DroneStation = FGRecipe{
 		ClassName:                         "Recipe_DroneStation_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneStation.Recipe_DroneStation_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneStation.Recipe_DroneStation_C",
 		MDisplayName:                      `Drone Port`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2169,7 +2169,7 @@ var (
 
 	DroneTransport = FGRecipe{
 		ClassName:                         "Recipe_DroneTransport_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneTransport.Recipe_DroneTransport_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneTransport.Recipe_DroneTransport_C",
 		MDisplayName:                      `Drone`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/PortableMiner/BP_ItemDescriptorPortableMiner.BP_ItemDescriptorPortableMiner_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2184,7 +2184,7 @@ var (
 
 	ElectromagneticControlRod = FGRecipe{
 		ClassName:                         "Recipe_ElectromagneticControlRod_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ElectromagneticControlRod.Recipe_ElectromagneticControlRod_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ElectromagneticControlRod.Recipe_ElectromagneticControlRod_C",
 		MDisplayName:                      `Electromagnetic Control Rod`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2199,7 +2199,7 @@ var (
 
 	EncasedIndustrialBeam = FGRecipe{
 		ClassName:                         "Recipe_EncasedIndustrialBeam_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_EncasedIndustrialBeam.Recipe_EncasedIndustrialBeam_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_EncasedIndustrialBeam.Recipe_EncasedIndustrialBeam_C",
 		MDisplayName:                      `Encased Industrial Beam`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2214,7 +2214,7 @@ var (
 
 	Explorer = FGRecipe{
 		ClassName:                         "Recipe_Explorer_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Explorer.Recipe_Explorer_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Explorer.Recipe_Explorer_C",
 		MDisplayName:                      `Explorer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2229,7 +2229,7 @@ var (
 
 	Fabric = FGRecipe{
 		ClassName:                         "Recipe_Fabric_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Fabric.Recipe_Fabric_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Fabric.Recipe_Fabric_C",
 		MDisplayName:                      `Fabric`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_GenericBiomass.Desc_GenericBiomass_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2244,7 +2244,7 @@ var (
 
 	FactoryCart = FGRecipe{
 		ClassName:                         "Recipe_FactoryCart_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_FactoryCart.Recipe_FactoryCart_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_FactoryCart.Recipe_FactoryCart_C",
 		MDisplayName:                      `Factory Cart™`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -2259,7 +2259,7 @@ var (
 
 	Fence01 = FGRecipe{
 		ClassName:                         "Recipe_Fence_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Fence/Recipe_Fence_01.Recipe_Fence_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Fence/Recipe_Fence_01.Recipe_Fence_01_C",
 		MDisplayName:                      `Fence`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2274,7 +2274,7 @@ var (
 
 	FilterGasMask = FGRecipe{
 		ClassName:                         "Recipe_FilterGasMask_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterGasMask.Recipe_FilterGasMask_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterGasMask.Recipe_FilterGasMask_C",
 		MDisplayName:                      `Gas Filter`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Fabric.Desc_Fabric_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2289,7 +2289,7 @@ var (
 
 	FilterHazmat = FGRecipe{
 		ClassName:                         "Recipe_FilterHazmat_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterHazmat.Recipe_FilterHazmat_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterHazmat.Recipe_FilterHazmat_C",
 		MDisplayName:                      `Iodine Infused Filter`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Filter/Desc_Filter.Desc_Filter_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2304,7 +2304,7 @@ var (
 
 	FloodlightPole = FGRecipe{
 		ClassName:                         "Recipe_FloodlightPole_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightPole.Recipe_FloodlightPole_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightPole.Recipe_FloodlightPole_C",
 		MDisplayName:                      `Flood Light Tower`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2319,7 +2319,7 @@ var (
 
 	FloodlightWall = FGRecipe{
 		ClassName:                         "Recipe_FloodlightWall_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightWall.Recipe_FloodlightWall_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightWall.Recipe_FloodlightWall_C",
 		MDisplayName:                      `Wall Mounted Flood Light`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2334,7 +2334,7 @@ var (
 
 	FluidCanister = FGRecipe{
 		ClassName:                         "Recipe_FluidCanister_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_FluidCanister.Recipe_FluidCanister_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_FluidCanister.Recipe_FluidCanister_C",
 		MDisplayName:                      `Empty Canister`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2349,7 +2349,7 @@ var (
 
 	Foundation8x101 = FGRecipe{
 		ClassName:                         "Recipe_Foundation_8x1_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x1_01.Recipe_Foundation_8x1_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x1_01.Recipe_Foundation_8x1_01_C",
 		MDisplayName:                      `Foundation 8m x 1m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2364,7 +2364,7 @@ var (
 
 	Foundation8x201 = FGRecipe{
 		ClassName:                         "Recipe_Foundation_8x2_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x2_01.Recipe_Foundation_8x2_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x2_01.Recipe_Foundation_8x2_01_C",
 		MDisplayName:                      `Foundation 8m x 2m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2379,7 +2379,7 @@ var (
 
 	Foundation8x401 = FGRecipe{
 		ClassName:                         "Recipe_Foundation_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x4_01.Recipe_Foundation_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x4_01.Recipe_Foundation_8x4_01_C",
 		MDisplayName:                      `Foundation 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2394,7 +2394,7 @@ var (
 
 	FoundationFrame01 = FGRecipe{
 		ClassName:                         "Recipe_Foundation_Frame_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_Frame_01.Recipe_Foundation_Frame_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_Frame_01.Recipe_Foundation_Frame_01_C",
 		MDisplayName:                      `Frame Foundation 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2409,7 +2409,7 @@ var (
 
 	FoundationGlass01 = FGRecipe{
 		ClassName:                         "Recipe_FoundationGlass_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_FoundationGlass_01.Recipe_FoundationGlass_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_FoundationGlass_01.Recipe_FoundationGlass_01_C",
 		MDisplayName:                      `Glass Foundation 8m x 1m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2424,7 +2424,7 @@ var (
 
 	FrackingExtractor = FGRecipe{
 		ClassName:                         "Recipe_FrackingExtractor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingExtractor.Recipe_FrackingExtractor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingExtractor.Recipe_FrackingExtractor_C",
 		MDisplayName:                      `Resource Well Extractor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2439,7 +2439,7 @@ var (
 
 	FrackingSmasher = FGRecipe{
 		ClassName:                         "Recipe_FrackingSmasher_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingSmasher.Recipe_FrackingSmasher_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingSmasher.Recipe_FrackingSmasher_C",
 		MDisplayName:                      `Resource Well Pressurizer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2454,7 +2454,7 @@ var (
 
 	FreightWagon = FGRecipe{
 		ClassName:                         "Recipe_FreightWagon_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_FreightWagon.Recipe_FreightWagon_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_FreightWagon.Recipe_FreightWagon_C",
 		MDisplayName:                      `Freight Car`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2469,7 +2469,7 @@ var (
 
 	Fuel = FGRecipe{
 		ClassName:                         "Recipe_Fuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Fuel.Recipe_Fuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Fuel.Recipe_Fuel_C",
 		MDisplayName:                      `Packaged Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2484,7 +2484,7 @@ var (
 
 	FusedModularFrame = FGRecipe{
 		ClassName:                         "Recipe_FusedModularFrame_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_FusedModularFrame.Recipe_FusedModularFrame_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_FusedModularFrame.Recipe_FusedModularFrame_C",
 		MDisplayName:                      `Fused Modular Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',Amount=25000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2499,7 +2499,7 @@ var (
 
 	GasTank = FGRecipe{
 		ClassName:                         "Recipe_GasTank_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_GasTank.Recipe_GasTank_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_GasTank.Recipe_GasTank_C",
 		MDisplayName:                      `Empty Fluid Tank`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumIngot/Desc_AluminumIngot.Desc_AluminumIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2514,7 +2514,7 @@ var (
 
 	Gasmask = FGRecipe{
 		ClassName:                         "Recipe_Gasmask_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gasmask.Recipe_Gasmask_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gasmask.Recipe_Gasmask_C",
 		MDisplayName:                      `Gas Mask`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Fabric.Desc_Fabric_C"',Amount=100))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2529,7 +2529,7 @@ var (
 
 	GeneratorBiomass = FGRecipe{
 		ClassName:                         "Recipe_GeneratorBiomass_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorBiomass.Recipe_GeneratorBiomass_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorBiomass.Recipe_GeneratorBiomass_C",
 		MDisplayName:                      `Biomass Burner`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=25))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2544,7 +2544,7 @@ var (
 
 	GeneratorCoal = FGRecipe{
 		ClassName:                         "Recipe_GeneratorCoal_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorCoal.Recipe_GeneratorCoal_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorCoal.Recipe_GeneratorCoal_C",
 		MDisplayName:                      `Coal Generator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=30))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2559,7 +2559,7 @@ var (
 
 	GeneratorFuel = FGRecipe{
 		ClassName:                         "Recipe_GeneratorFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorFuel.Recipe_GeneratorFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorFuel.Recipe_GeneratorFuel_C",
 		MDisplayName:                      `Fuel Generator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2574,7 +2574,7 @@ var (
 
 	GeneratorGeoThermal = FGRecipe{
 		ClassName:                         "Recipe_GeneratorGeoThermal_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorGeoThermal.Recipe_GeneratorGeoThermal_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorGeoThermal.Recipe_GeneratorGeoThermal_C",
 		MDisplayName:                      `Geothermal Generator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=16),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=16),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=40),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=80))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2589,7 +2589,7 @@ var (
 
 	GeneratorNuclear = FGRecipe{
 		ClassName:                         "Recipe_GeneratorNuclear_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorNuclear.Recipe_GeneratorNuclear_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorNuclear.Recipe_GeneratorNuclear_C",
 		MDisplayName:                      `Nuclear Power Plant`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=250),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=100))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2604,7 +2604,7 @@ var (
 
 	Gunpowder = FGRecipe{
 		ClassName:                         "Recipe_Gunpowder_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gunpowder.Recipe_Gunpowder_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gunpowder.Recipe_Gunpowder_C",
 		MDisplayName:                      `Black Powder`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    0.500000,
@@ -2619,7 +2619,7 @@ var (
 
 	HadronCollider = FGRecipe{
 		ClassName:                         "Recipe_HadronCollider_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HadronCollider.Recipe_HadronCollider_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HadronCollider.Recipe_HadronCollider_C",
 		MDisplayName:                      `Particle Accelerator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CoolingSystem/Desc_CoolingSystem.Desc_CoolingSystem_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameFused/Desc_ModularFrameFused.Desc_ModularFrameFused_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/MotorLightweight/Desc_MotorLightweight.Desc_MotorLightweight_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2634,7 +2634,7 @@ var (
 
 	HazmatSuit = FGRecipe{
 		ClassName:                         "Recipe_HazmatSuit_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_HazmatSuit.Recipe_HazmatSuit_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_HazmatSuit.Recipe_HazmatSuit_C",
 		MDisplayName:                      `Hazmat Suit`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Fabric.Desc_Fabric_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2649,7 +2649,7 @@ var (
 
 	HeatSink = FGRecipe{
 		ClassName:                         "Recipe_HeatSink_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_HeatSink.Recipe_HeatSink_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_HeatSink.Recipe_HeatSink_C",
 		MDisplayName:                      `Heat Sink`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.500000,
@@ -2664,7 +2664,7 @@ var (
 
 	HighSpeedConnector = FGRecipe{
 		ClassName:                         "Recipe_HighSpeedConnector_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_HighSpeedConnector.Recipe_HighSpeedConnector_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_HighSpeedConnector.Recipe_HighSpeedConnector_C",
 		MDisplayName:                      `High-Speed Connector`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=56),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2679,7 +2679,7 @@ var (
 
 	Hoverpack = FGRecipe{
 		ClassName:                         "Recipe_Hoverpack_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Hoverpack.Recipe_Hoverpack_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Hoverpack.Recipe_Hoverpack_C",
 		MDisplayName:                      `Hover Pack`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=40))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2694,7 +2694,7 @@ var (
 
 	HyperPoleStackable = FGRecipe{
 		ClassName:                         "Recipe_HyperPoleStackable_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperPoleStackable.Recipe_HyperPoleStackable_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperPoleStackable.Recipe_HyperPoleStackable_C",
 		MDisplayName:                      `Stackable Hyper Tube Support`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2709,7 +2709,7 @@ var (
 
 	HyperTubeWallHole = FGRecipe{
 		ClassName:                         "Recipe_HyperTubeWallHole_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallHole.Recipe_HyperTubeWallHole_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallHole.Recipe_HyperTubeWallHole_C",
 		MDisplayName:                      `Hyper Tube Wall Hole`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2724,7 +2724,7 @@ var (
 
 	HyperTubeWallSupport = FGRecipe{
 		ClassName:                         "Recipe_HyperTubeWallSupport_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallSupport.Recipe_HyperTubeWallSupport_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallSupport.Recipe_HyperTubeWallSupport_C",
 		MDisplayName:                      `Hyper Tube Wall Support`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2739,7 +2739,7 @@ var (
 
 	IndustrialTank = FGRecipe{
 		ClassName:                         "Recipe_IndustrialTank_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_IndustrialTank.Recipe_IndustrialTank_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_IndustrialTank.Recipe_IndustrialTank_C",
 		MDisplayName:                      `Industrial Fluid Buffer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=30),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2754,7 +2754,7 @@ var (
 
 	IngotAluminum = FGRecipe{
 		ClassName:                         "Recipe_IngotAluminum_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotAluminum.Recipe_IngotAluminum_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotAluminum.Recipe_IngotAluminum_C",
 		MDisplayName:                      `Aluminum Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumScrap/Desc_AluminumScrap.Desc_AluminumScrap_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Silica/Desc_Silica.Desc_Silica_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    3.000000,
@@ -2769,7 +2769,7 @@ var (
 
 	IngotCaterium = FGRecipe{
 		ClassName:                         "Recipe_IngotCaterium_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCaterium.Recipe_IngotCaterium_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCaterium.Recipe_IngotCaterium_C",
 		MDisplayName:                      `Caterium Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -2784,7 +2784,7 @@ var (
 
 	IngotCopper = FGRecipe{
 		ClassName:                         "Recipe_IngotCopper_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCopper.Recipe_IngotCopper_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCopper.Recipe_IngotCopper_C",
 		MDisplayName:                      `Copper Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    3.000000,
@@ -2799,7 +2799,7 @@ var (
 
 	IngotIron = FGRecipe{
 		ClassName:                         "Recipe_IngotIron_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotIron.Recipe_IngotIron_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotIron.Recipe_IngotIron_C",
 		MDisplayName:                      `Iron Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    3.000000,
@@ -2814,7 +2814,7 @@ var (
 
 	IngotSteel = FGRecipe{
 		ClassName:                         "Recipe_IngotSteel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotSteel.Recipe_IngotSteel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotSteel.Recipe_IngotSteel_C",
 		MDisplayName:                      `Steel Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    3.000000,
@@ -2829,7 +2829,7 @@ var (
 
 	IronPlate = FGRecipe{
 		ClassName:                         "Recipe_IronPlate_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronPlate.Recipe_IronPlate_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronPlate.Recipe_IronPlate_C",
 		MDisplayName:                      `Iron Plate`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronIngot/Desc_IronIngot.Desc_IronIngot_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2844,7 +2844,7 @@ var (
 
 	IronPlateReinforced = FGRecipe{
 		ClassName:                         "Recipe_IronPlateReinforced_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_IronPlateReinforced.Recipe_IronPlateReinforced_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_IronPlateReinforced.Recipe_IronPlateReinforced_C",
 		MDisplayName:                      `Reinforced Iron Plate`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=12))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2859,7 +2859,7 @@ var (
 
 	IronRod = FGRecipe{
 		ClassName:                         "Recipe_IronRod_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronRod.Recipe_IronRod_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronRod.Recipe_IronRod_C",
 		MDisplayName:                      `Iron Rod`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronIngot/Desc_IronIngot.Desc_IronIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    0.500000,
@@ -2874,7 +2874,7 @@ var (
 
 	JetPack = FGRecipe{
 		ClassName:                         "Recipe_JetPack_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_JetPack.Recipe_JetPack_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_JetPack.Recipe_JetPack_C",
 		MDisplayName:                      `Jetpack`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2889,7 +2889,7 @@ var (
 
 	JumpPad = FGRecipe{
 		ClassName:                         "Recipe_JumpPad_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPad.Recipe_JumpPad_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPad.Recipe_JumpPad_C",
 		MDisplayName:                      `Old Jump Pad`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2904,7 +2904,7 @@ var (
 
 	JumpPadAdjustable = FGRecipe{
 		ClassName:                         "Recipe_JumpPadAdjustable_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadAdjustable.Recipe_JumpPadAdjustable_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadAdjustable.Recipe_JumpPadAdjustable_C",
 		MDisplayName:                      `Jump Pad`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2919,7 +2919,7 @@ var (
 
 	JumpPadTilted = FGRecipe{
 		ClassName:                         "Recipe_JumpPadTilted_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadTilted.Recipe_JumpPadTilted_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadTilted.Recipe_JumpPadTilted_C",
 		MDisplayName:                      `Old Tilted Jump Pad`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2934,7 +2934,7 @@ var (
 
 	Ladder = FGRecipe{
 		ClassName:                         "Recipe_Ladder_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ladder/Recipe_Ladder.Recipe_Ladder_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ladder/Recipe_Ladder.Recipe_Ladder_C",
 		MDisplayName:                      `Ladder`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2949,7 +2949,7 @@ var (
 
 	LightsControlPanel = FGRecipe{
 		ClassName:                         "Recipe_LightsControlPanel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LightsControlPanel.Recipe_LightsControlPanel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LightsControlPanel.Recipe_LightsControlPanel_C",
 		MDisplayName:                      `Lights Control Panel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2964,7 +2964,7 @@ var (
 
 	Limestone = FGRecipe{
 		ClassName:                         "Recipe_Limestone_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Limestone.Recipe_Limestone_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Limestone.Recipe_Limestone_C",
 		MDisplayName:                      `Limestone`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2979,7 +2979,7 @@ var (
 
 	LiquidBiofuel = FGRecipe{
 		ClassName:                         "Recipe_LiquidBiofuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidBiofuel.Recipe_LiquidBiofuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidBiofuel.Recipe_LiquidBiofuel_C",
 		MDisplayName:                      `Liquid Biofuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/BioFuel/Desc_Biofuel.Desc_Biofuel_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=3000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -2994,7 +2994,7 @@ var (
 
 	LiquidFuel = FGRecipe{
 		ClassName:                         "Recipe_LiquidFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidFuel.Recipe_LiquidFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidFuel.Recipe_LiquidFuel_C",
 		MDisplayName:                      `Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',Amount=6000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3009,7 +3009,7 @@ var (
 
 	Locomotive = FGRecipe{
 		ClassName:                         "Recipe_Locomotive_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_Locomotive.Recipe_Locomotive_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_Locomotive.Recipe_Locomotive_C",
 		MDisplayName:                      `Electric Locomotive`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3024,7 +3024,7 @@ var (
 
 	LookoutTower = FGRecipe{
 		ClassName:                         "Recipe_LookoutTower_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LookoutTower.Recipe_LookoutTower_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LookoutTower.Recipe_LookoutTower_C",
 		MDisplayName:                      `Lookout Tower`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3039,7 +3039,7 @@ var (
 
 	Mam = FGRecipe{
 		ClassName:                         "Recipe_Mam_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Mam.Recipe_Mam_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Mam.Recipe_Mam_C",
 		MDisplayName:                      `MAM`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=45))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3054,7 +3054,7 @@ var (
 
 	ManufacturerMk1 = FGRecipe{
 		ClassName:                         "Recipe_ManufacturerMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ManufacturerMk1.Recipe_ManufacturerMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ManufacturerMk1.Recipe_ManufacturerMk1_C",
 		MDisplayName:                      `Manufacturer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3069,7 +3069,7 @@ var (
 
 	MedicinalInhaler = FGRecipe{
 		ClassName:                         "Recipe_MedicinalInhaler_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhaler.Recipe_MedicinalInhaler_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhaler.Recipe_MedicinalInhaler_C",
 		MDisplayName:                      `Nutritional Inhaler`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/DesertShroom/Desc_Shroom.Desc_Shroom_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Berry/Desc_Berry.Desc_Berry_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Nut/Desc_Nut.Desc_Nut_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3084,7 +3084,7 @@ var (
 
 	MedicinalInhalerAlienOrgans = FGRecipe{
 		ClassName:                         "Recipe_MedicinalInhalerAlienOrgans_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhalerAlienOrgans.Recipe_MedicinalInhalerAlienOrgans_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhalerAlienOrgans.Recipe_MedicinalInhalerAlienOrgans_C",
 		MDisplayName:                      `Medicinal Inhaler: Alien Organs`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_SpitterParts.Desc_SpitterParts_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3099,7 +3099,7 @@ var (
 
 	MinerMk1 = FGRecipe{
 		ClassName:                         "Recipe_MinerMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk1.Recipe_MinerMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk1.Recipe_MinerMk1_C",
 		MDisplayName:                      `Miner Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/PortableMiner/BP_ItemDescriptorPortableMiner.BP_ItemDescriptorPortableMiner_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3114,7 +3114,7 @@ var (
 
 	MinerMk2 = FGRecipe{
 		ClassName:                         "Recipe_MinerMk2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk2.Recipe_MinerMk2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk2.Recipe_MinerMk2_C",
 		MDisplayName:                      `Miner Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/PortableMiner/BP_ItemDescriptorPortableMiner.BP_ItemDescriptorPortableMiner_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3129,7 +3129,7 @@ var (
 
 	MinerMk3 = FGRecipe{
 		ClassName:                         "Recipe_MinerMk3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk3.Recipe_MinerMk3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk3.Recipe_MinerMk3_C",
 		MDisplayName:                      `Miner Mk.3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/PortableMiner/BP_ItemDescriptorPortableMiner.BP_ItemDescriptorPortableMiner_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameFused/Desc_ModularFrameFused.Desc_ModularFrameFused_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/MotorLightweight/Desc_MotorLightweight.Desc_MotorLightweight_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3144,7 +3144,7 @@ var (
 
 	ModularFrame = FGRecipe{
 		ClassName:                         "Recipe_ModularFrame_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ModularFrame.Recipe_ModularFrame_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ModularFrame.Recipe_ModularFrame_C",
 		MDisplayName:                      `Modular Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=12))`,
 		MManualManufacturingMultiplier:    0.500000,
@@ -3159,7 +3159,7 @@ var (
 
 	ModularFrameHeavy = FGRecipe{
 		ClassName:                         "Recipe_ModularFrameHeavy_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ModularFrameHeavy.Recipe_ModularFrameHeavy_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ModularFrameHeavy.Recipe_ModularFrameHeavy_C",
 		MDisplayName:                      `Heavy Modular Frame`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=100))`,
 		MManualManufacturingMultiplier:    0.600000,
@@ -3174,7 +3174,7 @@ var (
 
 	Motor = FGRecipe{
 		ClassName:                         "Recipe_Motor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Motor.Recipe_Motor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Motor.Recipe_Motor_C",
 		MDisplayName:                      `Motor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -3189,7 +3189,7 @@ var (
 
 	MotorTurbo = FGRecipe{
 		ClassName:                         "Recipe_MotorTurbo_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_MotorTurbo.Recipe_MotorTurbo_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_MotorTurbo.Recipe_MotorTurbo_C",
 		MDisplayName:                      `Turbo Motor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CoolingSystem/Desc_CoolingSystem.Desc_CoolingSystem_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=24))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -3204,7 +3204,7 @@ var (
 
 	NitricAcid = FGRecipe{
 		ClassName:                         "Recipe_NitricAcid_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NitricAcid.Recipe_NitricAcid_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NitricAcid.Recipe_NitricAcid_C",
 		MDisplayName:                      `Nitric Acid`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',Amount=12000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=3000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3219,7 +3219,7 @@ var (
 
 	Nobelisk = FGRecipe{
 		ClassName:                         "Recipe_Nobelisk_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Nobelisk.Recipe_Nobelisk_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Nobelisk.Recipe_Nobelisk_C",
 		MDisplayName:                      `Nobelisk`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3234,7 +3234,7 @@ var (
 
 	NobeliskDetonator = FGRecipe{
 		ClassName:                         "Recipe_NobeliskDetonator_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NobeliskDetonator.Recipe_NobeliskDetonator_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NobeliskDetonator.Recipe_NobeliskDetonator_C",
 		MDisplayName:                      `Nobelisk Detonator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/GemstoneScanner/BP_EquipmentDescriptorObjectScanner.BP_EquipmentDescriptorObjectScanner_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3249,7 +3249,7 @@ var (
 
 	NonFissileUranium = FGRecipe{
 		ClassName:                         "Recipe_NonFissileUranium_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NonFissileUranium.Recipe_NonFissileUranium_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NonFissileUranium.Recipe_NonFissileUranium_C",
 		MDisplayName:                      `Non-fissile Uranium`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NuclearWaste/Desc_NuclearWaste.Desc_NuclearWaste_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Silica/Desc_Silica.Desc_Silica_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NitricAcid/Desc_NitricAcid.Desc_NitricAcid_C"',Amount=6000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_SulfuricAcid.Desc_SulfuricAcid_C"',Amount=6000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3264,7 +3264,7 @@ var (
 
 	NuclearFuelRod = FGRecipe{
 		ClassName:                         "Recipe_NuclearFuelRod_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_NuclearFuelRod.Recipe_NuclearFuelRod_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_NuclearFuelRod.Recipe_NuclearFuelRod_C",
 		MDisplayName:                      `Uranium Fuel Rod`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/UraniumCell/Desc_UraniumCell.Desc_UraniumCell_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3279,7 +3279,7 @@ var (
 
 	NutritionalInhaler = FGRecipe{
 		ClassName:                         "Recipe_NutritionalInhaler_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NutritionalInhaler.Recipe_NutritionalInhaler_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NutritionalInhaler.Recipe_NutritionalInhaler_C",
 		MDisplayName:                      `Medicinal Inhaler`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/DesertShroom/Desc_Shroom.Desc_Shroom_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Berry/Desc_Berry.Desc_Berry_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Nut/Desc_Nut.Desc_Nut_C"',Amount=7))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3294,7 +3294,7 @@ var (
 
 	ObjectScanner = FGRecipe{
 		ClassName:                         "Recipe_ObjectScanner_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ObjectScanner.Recipe_ObjectScanner_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ObjectScanner.Recipe_ObjectScanner_C",
 		MDisplayName:                      `Object Scanner`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3309,7 +3309,7 @@ var (
 
 	OilPump = FGRecipe{
 		ClassName:                         "Recipe_OilPump_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilPump.Recipe_OilPump_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilPump.Recipe_OilPump_C",
 		MDisplayName:                      `Oil Extractor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=60))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3324,7 +3324,7 @@ var (
 
 	OilRefinery = FGRecipe{
 		ClassName:                         "Recipe_OilRefinery_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilRefinery.Recipe_OilRefinery_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilRefinery.Recipe_OilRefinery_C",
 		MDisplayName:                      `Refinery`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=30),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3339,7 +3339,7 @@ var (
 
 	OreBauxite = FGRecipe{
 		ClassName:                         "Recipe_OreBauxite_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreBauxite.Recipe_OreBauxite_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreBauxite.Recipe_OreBauxite_C",
 		MDisplayName:                      `Bauxite`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreBauxite/Desc_OreBauxite.Desc_OreBauxite_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3354,7 +3354,7 @@ var (
 
 	OreCaterium = FGRecipe{
 		ClassName:                         "Recipe_OreCaterium_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCaterium.Recipe_OreCaterium_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCaterium.Recipe_OreCaterium_C",
 		MDisplayName:                      `Caterium Ore`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3369,7 +3369,7 @@ var (
 
 	OreCopper = FGRecipe{
 		ClassName:                         "Recipe_OreCopper_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCopper.Recipe_OreCopper_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCopper.Recipe_OreCopper_C",
 		MDisplayName:                      `Copper Ore`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3384,7 +3384,7 @@ var (
 
 	OreIron = FGRecipe{
 		ClassName:                         "Recipe_OreIron_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreIron.Recipe_OreIron_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreIron.Recipe_OreIron_C",
 		MDisplayName:                      `Iron Ore`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3399,7 +3399,7 @@ var (
 
 	OreUranium = FGRecipe{
 		ClassName:                         "Recipe_OreUranium_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreUranium.Recipe_OreUranium_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreUranium.Recipe_OreUranium_C",
 		MDisplayName:                      `Uranium`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreUranium/Desc_OreUranium.Desc_OreUranium_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3414,7 +3414,7 @@ var (
 
 	PackagedAlumina = FGRecipe{
 		ClassName:                         "Recipe_PackagedAlumina_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedAlumina.Recipe_PackagedAlumina_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedAlumina.Recipe_PackagedAlumina_C",
 		MDisplayName:                      `Packaged Alumina Solution`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Alumina/Desc_AluminaSolution.Desc_AluminaSolution_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3429,7 +3429,7 @@ var (
 
 	PackagedBiofuel = FGRecipe{
 		ClassName:                         "Recipe_PackagedBiofuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedBiofuel.Recipe_PackagedBiofuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedBiofuel.Recipe_PackagedBiofuel_C",
 		MDisplayName:                      `Packaged Liquid Biofuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/BioFuel/Desc_LiquidBiofuel.Desc_LiquidBiofuel_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3444,7 +3444,7 @@ var (
 
 	PackagedCrudeOil = FGRecipe{
 		ClassName:                         "Recipe_PackagedCrudeOil_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedCrudeOil.Recipe_PackagedCrudeOil_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedCrudeOil.Recipe_PackagedCrudeOil_C",
 		MDisplayName:                      `Packaged Oil`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3459,7 +3459,7 @@ var (
 
 	PackagedNitricAcid = FGRecipe{
 		ClassName:                         "Recipe_PackagedNitricAcid_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitricAcid.Recipe_PackagedNitricAcid_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitricAcid.Recipe_PackagedNitricAcid_C",
 		MDisplayName:                      `Packaged Nitric Acid`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NitricAcid/Desc_NitricAcid.Desc_NitricAcid_C"',Amount=1000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GasTank/Desc_GasTank.Desc_GasTank_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3474,7 +3474,7 @@ var (
 
 	PackagedNitrogen = FGRecipe{
 		ClassName:                         "Recipe_PackagedNitrogen_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitrogen.Recipe_PackagedNitrogen_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitrogen.Recipe_PackagedNitrogen_C",
 		MDisplayName:                      `Packaged Nitrogen Gas`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',Amount=4000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GasTank/Desc_GasTank.Desc_GasTank_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3489,7 +3489,7 @@ var (
 
 	PackagedOilResidue = FGRecipe{
 		ClassName:                         "Recipe_PackagedOilResidue_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedOilResidue.Recipe_PackagedOilResidue_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedOilResidue.Recipe_PackagedOilResidue_C",
 		MDisplayName:                      `Packaged Heavy Oil Residue`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3504,7 +3504,7 @@ var (
 
 	PackagedSulfuricAcid = FGRecipe{
 		ClassName:                         "Recipe_PackagedSulfuricAcid_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedSulfuricAcid.Recipe_PackagedSulfuricAcid_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedSulfuricAcid.Recipe_PackagedSulfuricAcid_C",
 		MDisplayName:                      `Packaged Sulfuric Acid`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_SulfuricAcid.Desc_SulfuricAcid_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3519,7 +3519,7 @@ var (
 
 	PackagedTurboFuel = FGRecipe{
 		ClassName:                         "Recipe_PackagedTurboFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedTurboFuel.Recipe_PackagedTurboFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedTurboFuel.Recipe_PackagedTurboFuel_C",
 		MDisplayName:                      `Packaged Turbofuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Turbofuel/Desc_LiquidTurboFuel.Desc_LiquidTurboFuel_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3534,7 +3534,7 @@ var (
 
 	PackagedWater = FGRecipe{
 		ClassName:                         "Recipe_PackagedWater_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedWater.Recipe_PackagedWater_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedWater.Recipe_PackagedWater_C",
 		MDisplayName:                      `Packaged Water`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=2000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3549,7 +3549,7 @@ var (
 
 	Packager = FGRecipe{
 		ClassName:                         "Recipe_Packager_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Packager.Recipe_Packager_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Packager.Recipe_Packager_C",
 		MDisplayName:                      `Packager`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3564,7 +3564,7 @@ var (
 
 	Parachute = FGRecipe{
 		ClassName:                         "Recipe_Parachute_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Parachute.Recipe_Parachute_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Parachute.Recipe_Parachute_C",
 		MDisplayName:                      `Parachute`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Fabric.Desc_Fabric_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3579,7 +3579,7 @@ var (
 
 	PetroleumCoke = FGRecipe{
 		ClassName:                         "Recipe_PetroleumCoke_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Recipe_PetroleumCoke_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Recipe_PetroleumCoke_C",
 		MDisplayName:                      `Petroleum Coke`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=4000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3594,7 +3594,7 @@ var (
 
 	PillarBase = FGRecipe{
 		ClassName:                         "Recipe_PillarBase_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarBase.Recipe_PillarBase_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarBase.Recipe_PillarBase_C",
 		MDisplayName:                      `Pillar Base`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3609,7 +3609,7 @@ var (
 
 	PillarMiddle = FGRecipe{
 		ClassName:                         "Recipe_PillarMiddle_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarMiddle.Recipe_PillarMiddle_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarMiddle.Recipe_PillarMiddle_C",
 		MDisplayName:                      `Pillar Middle`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3624,7 +3624,7 @@ var (
 
 	PillarTop = FGRecipe{
 		ClassName:                         "Recipe_PillarTop_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarTop.Recipe_PillarTop_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarTop.Recipe_PillarTop_C",
 		MDisplayName:                      `Pillar Top`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3639,7 +3639,7 @@ var (
 
 	PipeHyper = FGRecipe{
 		ClassName:                         "Recipe_PipeHyper_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyper.Recipe_PipeHyper_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyper.Recipe_PipeHyper_C",
 		MDisplayName:                      `Hyper Tube`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3654,7 +3654,7 @@ var (
 
 	PipeHyperStart = FGRecipe{
 		ClassName:                         "Recipe_PipeHyperStart_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipe_PipeHyperStart.Recipe_PipeHyperStart_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipe_PipeHyperStart.Recipe_PipeHyperStart_C",
 		MDisplayName:                      `Hyper Tube Entrance`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3669,7 +3669,7 @@ var (
 
 	PipeHyperSupport = FGRecipe{
 		ClassName:                         "Recipe_PipeHyperSupport_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyperSupport.Recipe_PipeHyperSupport_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyperSupport.Recipe_PipeHyperSupport_C",
 		MDisplayName:                      `Hyper Tube Support`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3684,7 +3684,7 @@ var (
 
 	PipeStorageTank = FGRecipe{
 		ClassName:                         "Recipe_PipeStorageTank_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeStorageTank.Recipe_PipeStorageTank_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeStorageTank.Recipe_PipeStorageTank_C",
 		MDisplayName:                      `Fluid Buffer`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3699,7 +3699,7 @@ var (
 
 	PipeSupport = FGRecipe{
 		ClassName:                         "Recipe_PipeSupport_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupport.Recipe_PipeSupport_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupport.Recipe_PipeSupport_C",
 		MDisplayName:                      `Pipeline Support`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3714,7 +3714,7 @@ var (
 
 	PipeSupportStackable = FGRecipe{
 		ClassName:                         "Recipe_PipeSupportStackable_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportStackable.Recipe_PipeSupportStackable_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportStackable.Recipe_PipeSupportStackable_C",
 		MDisplayName:                      `Stackable Pipeline Support`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3729,7 +3729,7 @@ var (
 
 	PipeSupportWall = FGRecipe{
 		ClassName:                         "Recipe_PipeSupportWall_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWall.Recipe_PipeSupportWall_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWall.Recipe_PipeSupportWall_C",
 		MDisplayName:                      `Pipeline Wall Support`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3744,7 +3744,7 @@ var (
 
 	PipeSupportWallHole = FGRecipe{
 		ClassName:                         "Recipe_PipeSupportWallHole_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWallHole.Recipe_PipeSupportWallHole_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWallHole.Recipe_PipeSupportWallHole_C",
 		MDisplayName:                      `Pipeline Wall Hole`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3759,7 +3759,7 @@ var (
 
 	Pipeline = FGRecipe{
 		ClassName:                         "Recipe_Pipeline_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Pipeline.Recipe_Pipeline_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Pipeline.Recipe_Pipeline_C",
 		MDisplayName:                      `Pipeline Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3774,7 +3774,7 @@ var (
 
 	PipelineJunctionCross = FGRecipe{
 		ClassName:                         "Recipe_PipelineJunction_Cross_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineJunction_Cross.Recipe_PipelineJunction_Cross_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineJunction_Cross.Recipe_PipelineJunction_Cross_C",
 		MDisplayName:                      `Pipeline Junction Cross`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3789,7 +3789,7 @@ var (
 
 	PipelineMK2 = FGRecipe{
 		ClassName:                         "Recipe_PipelineMK2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineMK2.Recipe_PipelineMK2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineMK2.Recipe_PipelineMK2_C",
 		MDisplayName:                      `Pipeline Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3804,7 +3804,7 @@ var (
 
 	PipelinePump = FGRecipe{
 		ClassName:                         "Recipe_PipelinePump_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePump.Recipe_PipelinePump_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePump.Recipe_PipelinePump_C",
 		MDisplayName:                      `Pipeline Pump Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3819,7 +3819,7 @@ var (
 
 	PipelinePumpMK2 = FGRecipe{
 		ClassName:                         "Recipe_PipelinePumpMK2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePumpMK2.Recipe_PipelinePumpMK2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePumpMK2.Recipe_PipelinePumpMK2_C",
 		MDisplayName:                      `Pipeline Pump Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3834,7 +3834,7 @@ var (
 
 	Plastic = FGRecipe{
 		ClassName:                         "Recipe_Plastic_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Plastic.Recipe_Plastic_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Plastic.Recipe_Plastic_C",
 		MDisplayName:                      `Plastic`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',Amount=3000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3849,7 +3849,7 @@ var (
 
 	Plutonium = FGRecipe{
 		ClassName:                         "Recipe_Plutonium_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/HadronCollider/Recipe_Plutonium.Recipe_Plutonium_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/HadronCollider/Recipe_Plutonium.Recipe_Plutonium_C",
 		MDisplayName:                      `Plutonium Pellet`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Non-FissibleUranium/Desc_NonFissibleUranium.Desc_NonFissibleUranium_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NuclearWaste/Desc_NuclearWaste.Desc_NuclearWaste_C"',Amount=25))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3864,7 +3864,7 @@ var (
 
 	PlutoniumCell = FGRecipe{
 		ClassName:                         "Recipe_PlutoniumCell_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PlutoniumCell.Recipe_PlutoniumCell_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PlutoniumCell.Recipe_PlutoniumCell_C",
 		MDisplayName:                      `Encased Plutonium Cell`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PlutoniumPellet/Desc_PlutoniumPellet.Desc_PlutoniumPellet_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    0.500000,
@@ -3879,7 +3879,7 @@ var (
 
 	PlutoniumFuelRod = FGRecipe{
 		ClassName:                         "Recipe_PlutoniumFuelRod_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_PlutoniumFuelRod.Recipe_PlutoniumFuelRod_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_PlutoniumFuelRod.Recipe_PlutoniumFuelRod_C",
 		MDisplayName:                      `Plutonium Fuel Rod`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PlutoniumCell/Desc_PlutoniumCell.Desc_PlutoniumCell_C"',Amount=30),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=18),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlateReinforced/Desc_AluminumPlateReinforced.Desc_AluminumPlateReinforced_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3894,7 +3894,7 @@ var (
 
 	PortableMiner = FGRecipe{
 		ClassName:                         "Recipe_PortableMiner_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_PortableMiner.Recipe_PortableMiner_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_PortableMiner.Recipe_PortableMiner_C",
 		MDisplayName:                      `Portable Miner`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3909,7 +3909,7 @@ var (
 
 	PowerCrystalShard1 = FGRecipe{
 		ClassName:                         "Recipe_PowerCrystalShard_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_1.Recipe_PowerCrystalShard_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_1.Recipe_PowerCrystalShard_1_C",
 		MDisplayName:                      `Power Shard (1)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal.Desc_Crystal_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3924,7 +3924,7 @@ var (
 
 	PowerCrystalShard2 = FGRecipe{
 		ClassName:                         "Recipe_PowerCrystalShard_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_2.Recipe_PowerCrystalShard_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_2.Recipe_PowerCrystalShard_2_C",
 		MDisplayName:                      `Power Shard (2)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk2.Desc_Crystal_mk2_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3939,7 +3939,7 @@ var (
 
 	PowerCrystalShard3 = FGRecipe{
 		ClassName:                         "Recipe_PowerCrystalShard_3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_3.Recipe_PowerCrystalShard_3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_3.Recipe_PowerCrystalShard_3_C",
 		MDisplayName:                      `Power Shard (5)`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk3.Desc_Crystal_mk3_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3954,7 +3954,7 @@ var (
 
 	PowerLine = FGRecipe{
 		ClassName:                         "Recipe_PowerLine_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerLine.Recipe_PowerLine_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerLine.Recipe_PowerLine_C",
 		MDisplayName:                      `Power Line`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3969,7 +3969,7 @@ var (
 
 	PowerPoleMk1 = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk1.Recipe_PowerPoleMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk1.Recipe_PowerPoleMk1_C",
 		MDisplayName:                      `Power Pole Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3984,7 +3984,7 @@ var (
 
 	PowerPoleMk2 = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleMk2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk2.Recipe_PowerPoleMk2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk2.Recipe_PowerPoleMk2_C",
 		MDisplayName:                      `Power Pole Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -3999,7 +3999,7 @@ var (
 
 	PowerPoleMk3 = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleMk3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk3.Recipe_PowerPoleMk3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk3.Recipe_PowerPoleMk3_C",
 		MDisplayName:                      `Power Pole Mk.3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4014,7 +4014,7 @@ var (
 
 	PowerPoleWall = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleWall_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWall.Recipe_PowerPoleWall_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWall.Recipe_PowerPoleWall_C",
 		MDisplayName:                      `Wall Outlet Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4029,7 +4029,7 @@ var (
 
 	PowerPoleWallDouble = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleWallDouble_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDouble.Recipe_PowerPoleWallDouble_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDouble.Recipe_PowerPoleWallDouble_C",
 		MDisplayName:                      `Double Wall Outlet Mk.1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4044,7 +4044,7 @@ var (
 
 	PowerPoleWallDoubleMk2 = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleWallDoubleMk2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk2.Recipe_PowerPoleWallDoubleMk2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk2.Recipe_PowerPoleWallDoubleMk2_C",
 		MDisplayName:                      `Double Wall Outlet Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=16),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4059,7 +4059,7 @@ var (
 
 	PowerPoleWallDoubleMk3 = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleWallDoubleMk3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk3.Recipe_PowerPoleWallDoubleMk3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk3.Recipe_PowerPoleWallDoubleMk3_C",
 		MDisplayName:                      `Double Wall Outlet Mk.3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4074,7 +4074,7 @@ var (
 
 	PowerPoleWallMk2 = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleWallMk2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk2.Recipe_PowerPoleWallMk2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk2.Recipe_PowerPoleWallMk2_C",
 		MDisplayName:                      `Wall Outlet Mk.2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4089,7 +4089,7 @@ var (
 
 	PowerPoleWallMk3 = FGRecipe{
 		ClassName:                         "Recipe_PowerPoleWallMk3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk3.Recipe_PowerPoleWallMk3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk3.Recipe_PowerPoleWallMk3_C",
 		MDisplayName:                      `Wall Outlet Mk.3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4104,7 +4104,7 @@ var (
 
 	PowerStorageMk1 = FGRecipe{
 		ClassName:                         "Recipe_PowerStorageMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerStorageMk1.Recipe_PowerStorageMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerStorageMk1.Recipe_PowerStorageMk1_C",
 		MDisplayName:                      `Power Storage`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4119,7 +4119,7 @@ var (
 
 	PowerSwitch = FGRecipe{
 		ClassName:                         "Recipe_PowerSwitch_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerSwitch.Recipe_PowerSwitch_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerSwitch.Recipe_PowerSwitch_C",
 		MDisplayName:                      `Power Switch`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4134,7 +4134,7 @@ var (
 
 	PressureConversionCube = FGRecipe{
 		ClassName:                         "Recipe_PressureConversionCube_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PressureConversionCube.Recipe_PressureConversionCube_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PressureConversionCube.Recipe_PressureConversionCube_C",
 		MDisplayName:                      `Pressure Conversion Cube`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameFused/Desc_ModularFrameFused.Desc_ModularFrameFused_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -4149,7 +4149,7 @@ var (
 
 	PureAluminumIngot = FGRecipe{
 		ClassName:                         "Recipe_PureAluminumIngot_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_PureAluminumIngot.Recipe_PureAluminumIngot_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_PureAluminumIngot.Recipe_PureAluminumIngot_C",
 		MDisplayName:                      `Alternate: Pure Aluminum Ingot`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumScrap/Desc_AluminumScrap.Desc_AluminumScrap_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4164,7 +4164,7 @@ var (
 
 	QuarterPipe = FGRecipe{
 		ClassName:                         "Recipe_QuarterPipe_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe.Recipe_QuarterPipe_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe.Recipe_QuarterPipe_C",
 		MDisplayName:                      `Quarter Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4179,7 +4179,7 @@ var (
 
 	QuarterPipe02 = FGRecipe{
 		ClassName:                         "Recipe_QuarterPipe_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe_02.Recipe_QuarterPipe_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe_02.Recipe_QuarterPipe_02_C",
 		MDisplayName:                      `Inverted Quarter Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4194,7 +4194,7 @@ var (
 
 	QuarterPipeCorner01 = FGRecipe{
 		ClassName:                         "Recipe_QuarterPipeCorner_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_01.Recipe_QuarterPipeCorner_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_01.Recipe_QuarterPipeCorner_01_C",
 		MDisplayName:                      `Inner Corner Quarter Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4209,7 +4209,7 @@ var (
 
 	QuarterPipeCorner02 = FGRecipe{
 		ClassName:                         "Recipe_QuarterPipeCorner_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_02.Recipe_QuarterPipeCorner_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_02.Recipe_QuarterPipeCorner_02_C",
 		MDisplayName:                      `Inverted Inner Corner Quarter Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4224,7 +4224,7 @@ var (
 
 	QuarterPipeCorner03 = FGRecipe{
 		ClassName:                         "Recipe_QuarterPipeCorner_03_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_03.Recipe_QuarterPipeCorner_03_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_03.Recipe_QuarterPipeCorner_03_C",
 		MDisplayName:                      `Outer Corner Quarter Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4239,7 +4239,7 @@ var (
 
 	QuarterPipeCorner04 = FGRecipe{
 		ClassName:                         "Recipe_QuarterPipeCorner_04_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_04.Recipe_QuarterPipeCorner_04_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_04.Recipe_QuarterPipeCorner_04_C",
 		MDisplayName:                      `Inverted Outer Corner Quarter Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4254,7 +4254,7 @@ var (
 
 	QuartzCrystal = FGRecipe{
 		ClassName:                         "Recipe_QuartzCrystal_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_QuartzCrystal.Recipe_QuartzCrystal_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_QuartzCrystal.Recipe_QuartzCrystal_C",
 		MDisplayName:                      `Quartz Crystal`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -4269,7 +4269,7 @@ var (
 
 	Quickwire = FGRecipe{
 		ClassName:                         "Recipe_Quickwire_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Quickwire.Recipe_Quickwire_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Quickwire.Recipe_Quickwire_C",
 		MDisplayName:                      `Quickwire`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GoldIngot/Desc_GoldIngot.Desc_GoldIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -4284,7 +4284,7 @@ var (
 
 	RadarTower = FGRecipe{
 		ClassName:                         "Recipe_RadarTower_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RadarTower.Recipe_RadarTower_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RadarTower.Recipe_RadarTower_C",
 		MDisplayName:                      `Radar Tower`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=30),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=30),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=100))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4299,7 +4299,7 @@ var (
 
 	RadioControlUnit = FGRecipe{
 		ClassName:                         "Recipe_RadioControlUnit_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_RadioControlUnit.Recipe_RadioControlUnit_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_RadioControlUnit.Recipe_RadioControlUnit_C",
 		MDisplayName:                      `Radio Control Unit`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=32),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4314,7 +4314,7 @@ var (
 
 	RailroadTrack = FGRecipe{
 		ClassName:                         "Recipe_RailroadTrack_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RailroadTrack.Recipe_RailroadTrack_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RailroadTrack.Recipe_RailroadTrack_C",
 		MDisplayName:                      `Railway`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4329,7 +4329,7 @@ var (
 
 	Ramp8x101 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_8x1_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x1_01.Recipe_Ramp_8x1_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x1_01.Recipe_Ramp_8x1_01_C",
 		MDisplayName:                      `Ramp 8m x 1m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4344,7 +4344,7 @@ var (
 
 	Ramp8x201 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_8x2_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x2_01.Recipe_Ramp_8x2_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x2_01.Recipe_Ramp_8x2_01_C",
 		MDisplayName:                      `Ramp 8m x 2m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4359,7 +4359,7 @@ var (
 
 	Ramp8x401 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_01.Recipe_Ramp_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_01.Recipe_Ramp_8x4_01_C",
 		MDisplayName:                      `Ramp 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4374,7 +4374,7 @@ var (
 
 	Ramp8x4Inverted01 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_8x4_Inverted_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_Inverted_01.Recipe_Ramp_8x4_Inverted_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_Inverted_01.Recipe_Ramp_8x4_Inverted_01_C",
 		MDisplayName:                      `Inverted Ramp 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4389,7 +4389,7 @@ var (
 
 	Ramp8x8x8 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_8x8x8_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x8x8.Recipe_Ramp_8x8x8_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x8x8.Recipe_Ramp_8x8x8_C",
 		MDisplayName:                      `Double Ramp 8m x 8m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4404,7 +4404,7 @@ var (
 
 	RampDiagonal8x101 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_Diagonal_8x1_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_01.Recipe_Ramp_Diagonal_8x1_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_01.Recipe_Ramp_Diagonal_8x1_01_C",
 		MDisplayName:                      `Down Corner Ramp 8m x 1m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4419,7 +4419,7 @@ var (
 
 	RampDiagonal8x102 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_Diagonal_8x1_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_02.Recipe_Ramp_Diagonal_8x1_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_02.Recipe_Ramp_Diagonal_8x1_02_C",
 		MDisplayName:                      `Up Corner Ramp 8m x 1m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4434,7 +4434,7 @@ var (
 
 	RampDiagonal8x201 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_Diagonal_8x2_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_01.Recipe_Ramp_Diagonal_8x2_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_01.Recipe_Ramp_Diagonal_8x2_01_C",
 		MDisplayName:                      `Down Corner Ramp 8m x 2m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4449,7 +4449,7 @@ var (
 
 	RampDiagonal8x202 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_Diagonal_8x2_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_02.Recipe_Ramp_Diagonal_8x2_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_02.Recipe_Ramp_Diagonal_8x2_02_C",
 		MDisplayName:                      `Up Corner Ramp 8m x 2m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4464,7 +4464,7 @@ var (
 
 	RampDiagonal8x401 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_Diagonal_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_01.Recipe_Ramp_Diagonal_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_01.Recipe_Ramp_Diagonal_8x4_01_C",
 		MDisplayName:                      `Down Corner Ramp 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4479,7 +4479,7 @@ var (
 
 	RampDiagonal8x402 = FGRecipe{
 		ClassName:                         "Recipe_Ramp_Diagonal_8x4_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_02.Recipe_Ramp_Diagonal_8x4_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_02.Recipe_Ramp_Diagonal_8x4_02_C",
 		MDisplayName:                      `Up Corner Ramp 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4494,7 +4494,7 @@ var (
 
 	RampDouble = FGRecipe{
 		ClassName:                         "Recipe_RampDouble_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble.Recipe_RampDouble_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble.Recipe_RampDouble_C",
 		MDisplayName:                      `Double Ramp 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4509,7 +4509,7 @@ var (
 
 	RampDouble8x1 = FGRecipe{
 		ClassName:                         "Recipe_RampDouble_8x1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble_8x1.Recipe_RampDouble_8x1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble_8x1.Recipe_RampDouble_8x1_C",
 		MDisplayName:                      `Double Ramp 8m x 2m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4524,7 +4524,7 @@ var (
 
 	RampInverted8x1 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1.Recipe_RampInverted_8x1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1.Recipe_RampInverted_8x1_C",
 		MDisplayName:                      `Inverted Ramp 8m x 1m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4539,7 +4539,7 @@ var (
 
 	RampInverted8x1Corner01 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x1_Corner_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_01.Recipe_RampInverted_8x1_Corner_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_01.Recipe_RampInverted_8x1_Corner_01_C",
 		MDisplayName:                      `Up Corner 8m x 1m Inverted`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4554,7 +4554,7 @@ var (
 
 	RampInverted8x1Corner02 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x1_Corner_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_02.Recipe_RampInverted_8x1_Corner_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_02.Recipe_RampInverted_8x1_Corner_02_C",
 		MDisplayName:                      `Down Corner 8m x 1m Inverted`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4569,7 +4569,7 @@ var (
 
 	RampInverted8x201 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x2_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_01.Recipe_RampInverted_8x2_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_01.Recipe_RampInverted_8x2_01_C",
 		MDisplayName:                      `Inverted Ramp 8m x 2m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4584,7 +4584,7 @@ var (
 
 	RampInverted8x2Corner01 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x2_Corner_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_01.Recipe_RampInverted_8x2_Corner_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_01.Recipe_RampInverted_8x2_Corner_01_C",
 		MDisplayName:                      `Up Corner 8m x 2m Inverted`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4599,7 +4599,7 @@ var (
 
 	RampInverted8x2Corner02 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x2_Corner_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_02.Recipe_RampInverted_8x2_Corner_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_02.Recipe_RampInverted_8x2_Corner_02_C",
 		MDisplayName:                      `Down Corner 8m x 2m Inverted`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4614,7 +4614,7 @@ var (
 
 	RampInverted8x4Corner01 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x4_Corner_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_01.Recipe_RampInverted_8x4_Corner_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_01.Recipe_RampInverted_8x4_Corner_01_C",
 		MDisplayName:                      `Up Corner 8m x 4m Inverted`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4629,7 +4629,7 @@ var (
 
 	RampInverted8x4Corner02 = FGRecipe{
 		ClassName:                         "Recipe_RampInverted_8x4_Corner_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_02.Recipe_RampInverted_8x4_Corner_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_02.Recipe_RampInverted_8x4_Corner_02_C",
 		MDisplayName:                      `Down Corner 8m x 4m Inverted`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4644,7 +4644,7 @@ var (
 
 	RawQuartz = FGRecipe{
 		ClassName:                         "Recipe_RawQuartz_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_RawQuartz.Recipe_RawQuartz_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_RawQuartz.Recipe_RawQuartz_C",
 		MDisplayName:                      `Raw Quartz`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4659,7 +4659,7 @@ var (
 
 	RebarGun = FGRecipe{
 		ClassName:                         "Recipe_RebarGun_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_RebarGun.Recipe_RebarGun_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_RebarGun.Recipe_RebarGun_C",
 		MDisplayName:                      `Rebar Gun`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=16),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=100))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4674,7 +4674,7 @@ var (
 
 	ResidualFuel = FGRecipe{
 		ClassName:                         "Recipe_ResidualFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualFuel.Recipe_ResidualFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualFuel.Recipe_ResidualFuel_C",
 		MDisplayName:                      `Residual Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C"',Amount=6000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4689,7 +4689,7 @@ var (
 
 	ResidualPlastic = FGRecipe{
 		ClassName:                         "Recipe_ResidualPlastic_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Recipe_ResidualPlastic_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Recipe_ResidualPlastic_C",
 		MDisplayName:                      `Residual Plastic`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PolymerResin/Desc_PolymerResin.Desc_PolymerResin_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=2000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4704,7 +4704,7 @@ var (
 
 	ResidualRubber = FGRecipe{
 		ClassName:                         "Recipe_ResidualRubber_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualRubber.Recipe_ResidualRubber_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualRubber.Recipe_ResidualRubber_C",
 		MDisplayName:                      `Residual Rubber`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PolymerResin/Desc_PolymerResin.Desc_PolymerResin_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=4000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4719,7 +4719,7 @@ var (
 
 	ResourceSink = FGRecipe{
 		ClassName:                         "Recipe_ResourceSink_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSink.Recipe_ResourceSink_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSink.Recipe_ResourceSink_C",
 		MDisplayName:                      `AWESOME Sink`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=30),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=45))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4734,7 +4734,7 @@ var (
 
 	ResourceSinkShop = FGRecipe{
 		ClassName:                         "Recipe_ResourceSinkShop_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSinkShop.Recipe_ResourceSinkShop_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSinkShop.Recipe_ResourceSinkShop_C",
 		MDisplayName:                      `AWESOME Shop`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4749,7 +4749,7 @@ var (
 
 	Rotor = FGRecipe{
 		ClassName:                         "Recipe_Rotor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Rotor.Recipe_Rotor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Rotor.Recipe_Rotor_C",
 		MDisplayName:                      `Rotor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=25))`,
 		MManualManufacturingMultiplier:    0.800000,
@@ -4764,7 +4764,7 @@ var (
 
 	Rubber = FGRecipe{
 		ClassName:                         "Recipe_Rubber_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Rubber.Recipe_Rubber_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Rubber.Recipe_Rubber_C",
 		MDisplayName:                      `Rubber`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',Amount=3000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4779,7 +4779,7 @@ var (
 
 	Screw = FGRecipe{
 		ClassName:                         "Recipe_Screw_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Screw.Recipe_Screw_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Screw.Recipe_Screw_C",
 		MDisplayName:                      `Screw`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4794,7 +4794,7 @@ var (
 
 	Silica = FGRecipe{
 		ClassName:                         "Recipe_Silica_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Silica.Recipe_Silica_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Silica.Recipe_Silica_C",
 		MDisplayName:                      `Silica`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    2.000000,
@@ -4809,7 +4809,7 @@ var (
 
 	SmelterBasicMk1 = FGRecipe{
 		ClassName:                         "Recipe_SmelterBasicMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C",
 		MDisplayName:                      `Smelter`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4824,7 +4824,7 @@ var (
 
 	SmelterMk1 = FGRecipe{
 		ClassName:                         "Recipe_SmelterMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterMk1.Recipe_SmelterMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterMk1.Recipe_SmelterMk1_C",
 		MDisplayName:                      `Foundry`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4839,7 +4839,7 @@ var (
 
 	Snow = FGRecipe{
 		ClassName:                         "Recipe_Snow_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_Snow.Recipe_Snow_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_Snow.Recipe_Snow_C",
 		MDisplayName:                      `Actual Snow`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4854,7 +4854,7 @@ var (
 
 	SnowDispenser = FGRecipe{
 		ClassName:                         "Recipe_SnowDispenser_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowDispenser/Recipe_SnowDispenser.Recipe_SnowDispenser_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowDispenser/Recipe_SnowDispenser.Recipe_SnowDispenser_C",
 		MDisplayName:                      `FICSMAS Snow Dispenser`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Snow.Desc_Snow_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasWreath.Desc_XmasWreath_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4869,7 +4869,7 @@ var (
 
 	Snowball = FGRecipe{
 		ClassName:                         "Recipe_Snowball_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_Snowball.Recipe_Snowball_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_Snowball.Recipe_Snowball_C",
 		MDisplayName:                      `Snowball`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Snow.Desc_Snow_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4884,7 +4884,7 @@ var (
 
 	SnowballWeapon = FGRecipe{
 		ClassName:                         "Recipe_SnowballWeapon_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_SnowballWeapon.Recipe_SnowballWeapon_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_SnowballWeapon.Recipe_SnowballWeapon_C",
 		MDisplayName:                      `Snowball Pile`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Snow.Desc_Snow_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4899,7 +4899,7 @@ var (
 
 	Snowman = FGRecipe{
 		ClassName:                         "Recipe_Snowman_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowmanDecor/Recipe_Snowman.Recipe_Snowman_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowmanDecor/Recipe_Snowman.Recipe_Snowman_C",
 		MDisplayName:                      `Snowman`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Snow.Desc_Snow_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall1.Desc_XmasBall1_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall2.Desc_XmasBall2_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4914,7 +4914,7 @@ var (
 
 	SpaceElevator = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevator_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/TowTruck/Recipe_SpaceElevator.Recipe_SpaceElevator_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/TowTruck/Recipe_SpaceElevator.Recipe_SpaceElevator_C",
 		MDisplayName:                      `Space Elevator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=250),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=400),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=1500))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4929,7 +4929,7 @@ var (
 
 	SpaceElevatorPart1 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_1.Recipe_SpaceElevatorPart_1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_1.Recipe_SpaceElevatorPart_1_C",
 		MDisplayName:                      `Smart Plating`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4944,7 +4944,7 @@ var (
 
 	SpaceElevatorPart2 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_2.Recipe_SpaceElevatorPart_2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_2.Recipe_SpaceElevatorPart_2_C",
 		MDisplayName:                      `Versatile Framework`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=12))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4959,7 +4959,7 @@ var (
 
 	SpaceElevatorPart3 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_3.Recipe_SpaceElevatorPart_3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_3.Recipe_SpaceElevatorPart_3_C",
 		MDisplayName:                      `Automated Wiring`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4974,7 +4974,7 @@ var (
 
 	SpaceElevatorPart4 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_4_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_4.Recipe_SpaceElevatorPart_4_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_4.Recipe_SpaceElevatorPart_4_C",
 		MDisplayName:                      `Modular Engine`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SpaceElevatorParts/Desc_SpaceElevatorPart_1.Desc_SpaceElevatorPart_1_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -4989,7 +4989,7 @@ var (
 
 	SpaceElevatorPart5 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_5_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_5.Recipe_SpaceElevatorPart_5_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_5.Recipe_SpaceElevatorPart_5_C",
 		MDisplayName:                      `Adaptive Control Unit`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SpaceElevatorParts/Desc_SpaceElevatorPart_3.Desc_SpaceElevatorPart_3_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5004,7 +5004,7 @@ var (
 
 	SpaceElevatorPart6 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_6_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_6.Recipe_SpaceElevatorPart_6_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_6.Recipe_SpaceElevatorPart_6_C",
 		MDisplayName:                      `Magnetic Field Generator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SpaceElevatorParts/Desc_SpaceElevatorPart_2.Desc_SpaceElevatorPart_2_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Battery/Desc_Battery.Desc_Battery_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5019,7 +5019,7 @@ var (
 
 	SpaceElevatorPart7 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_7_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_7.Recipe_SpaceElevatorPart_7_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_7.Recipe_SpaceElevatorPart_7_C",
 		MDisplayName:                      `Assembly Director System`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SpaceElevatorParts/Desc_SpaceElevatorPart_5.Desc_SpaceElevatorPart_5_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5034,7 +5034,7 @@ var (
 
 	SpaceElevatorPart8 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_8_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_8.Recipe_SpaceElevatorPart_8_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_8.Recipe_SpaceElevatorPart_8_C",
 		MDisplayName:                      `Thermal Propulsion Rocket`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SpaceElevatorParts/Desc_SpaceElevatorPart_4.Desc_SpaceElevatorPart_4_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/MotorLightweight/Desc_MotorLightweight.Desc_MotorLightweight_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CoolingSystem/Desc_CoolingSystem.Desc_CoolingSystem_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameFused/Desc_ModularFrameFused.Desc_ModularFrameFused_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5049,7 +5049,7 @@ var (
 
 	SpaceElevatorPart9 = FGRecipe{
 		ClassName:                         "Recipe_SpaceElevatorPart_9_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_9.Recipe_SpaceElevatorPart_9_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_9.Recipe_SpaceElevatorPart_9_C",
 		MDisplayName:                      `Nuclear Pasta`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperDust/Desc_CopperDust.Desc_CopperDust_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PressureConversionCube/Desc_PressureConversionCube.Desc_PressureConversionCube_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5064,7 +5064,7 @@ var (
 
 	SpaceRifleMk1 = FGRecipe{
 		ClassName:                         "Recipe_SpaceRifleMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpaceRifleMk1.Recipe_SpaceRifleMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpaceRifleMk1.Recipe_SpaceRifleMk1_C",
 		MDisplayName:                      `Rifle`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=250))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5079,7 +5079,7 @@ var (
 
 	SpikedRebar = FGRecipe{
 		ClassName:                         "Recipe_SpikedRebar_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpikedRebar.Recipe_SpikedRebar_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpikedRebar.Recipe_SpikedRebar_C",
 		MDisplayName:                      `Spiked Rebar`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5094,7 +5094,7 @@ var (
 
 	Stair1b = FGRecipe{
 		ClassName:                         "Recipe_Stair_1b_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stair_1b.Recipe_Stair_1b_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stair_1b.Recipe_Stair_1b_C",
 		MDisplayName:                      `Stairs`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5109,7 +5109,7 @@ var (
 
 	StairsLeft01 = FGRecipe{
 		ClassName:                         "Recipe_Stairs_Left_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Left_01.Recipe_Stairs_Left_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Left_01.Recipe_Stairs_Left_01_C",
 		MDisplayName:                      `Stairs Left`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5124,7 +5124,7 @@ var (
 
 	StairsRight01 = FGRecipe{
 		ClassName:                         "Recipe_Stairs_Right_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Right_01.Recipe_Stairs_Right_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Right_01.Recipe_Stairs_Right_01_C",
 		MDisplayName:                      `Stairs Right`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5139,7 +5139,7 @@ var (
 
 	Stator = FGRecipe{
 		ClassName:                         "Recipe_Stator_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Stator.Recipe_Stator_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Stator.Recipe_Stator_C",
 		MDisplayName:                      `Stator`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=8))`,
 		MManualManufacturingMultiplier:    1.500000,
@@ -5154,7 +5154,7 @@ var (
 
 	SteelBeam = FGRecipe{
 		ClassName:                         "Recipe_SteelBeam_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelBeam.Recipe_SteelBeam_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelBeam.Recipe_SteelBeam_C",
 		MDisplayName:                      `Steel Beam`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelIngot/Desc_SteelIngot.Desc_SteelIngot_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5169,7 +5169,7 @@ var (
 
 	SteelPipe = FGRecipe{
 		ClassName:                         "Recipe_SteelPipe_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelPipe.Recipe_SteelPipe_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelPipe.Recipe_SteelPipe_C",
 		MDisplayName:                      `Steel Pipe`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelIngot/Desc_SteelIngot.Desc_SteelIngot_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5184,7 +5184,7 @@ var (
 
 	StorageContainerMk1 = FGRecipe{
 		ClassName:                         "Recipe_StorageContainerMk1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk1.Recipe_StorageContainerMk1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk1.Recipe_StorageContainerMk1_C",
 		MDisplayName:                      `Storage Container`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5199,7 +5199,7 @@ var (
 
 	StorageContainerMk2 = FGRecipe{
 		ClassName:                         "Recipe_StorageContainerMk2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk2.Recipe_StorageContainerMk2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk2.Recipe_StorageContainerMk2_C",
 		MDisplayName:                      `Industrial Storage Container`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5214,7 +5214,7 @@ var (
 
 	StoragePlayer = FGRecipe{
 		ClassName:                         "Recipe_StoragePlayer_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StoragePlayer.Recipe_StoragePlayer_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StoragePlayer.Recipe_StoragePlayer_C",
 		MDisplayName:                      `Personal Storage Box`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=6))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5229,7 +5229,7 @@ var (
 
 	StreetLight = FGRecipe{
 		ClassName:                         "Recipe_StreetLight_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StreetLight.Recipe_StreetLight_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StreetLight.Recipe_StreetLight_C",
 		MDisplayName:                      `Street Light`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5244,7 +5244,7 @@ var (
 
 	Sulfur = FGRecipe{
 		ClassName:                         "Recipe_Sulfur_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Sulfur.Recipe_Sulfur_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Sulfur.Recipe_Sulfur_C",
 		MDisplayName:                      `Sulfur`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5259,7 +5259,7 @@ var (
 
 	SulfuricAcid = FGRecipe{
 		ClassName:                         "Recipe_SulfuricAcid_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_SulfuricAcid.Recipe_SulfuricAcid_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_SulfuricAcid.Recipe_SulfuricAcid_C",
 		MDisplayName:                      `Sulfuric Acid`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',Amount=5000))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5274,7 +5274,7 @@ var (
 
 	Tractor = FGRecipe{
 		ClassName:                         "Recipe_Tractor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Tractor.Recipe_Tractor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Tractor.Recipe_Tractor_C",
 		MDisplayName:                      `Tractor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5289,7 +5289,7 @@ var (
 
 	TradingPost = FGRecipe{
 		ClassName:                         "Recipe_TradingPost_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TradingPost.Recipe_TradingPost_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TradingPost.Recipe_TradingPost_C",
 		MDisplayName:                      `The HUB`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HUBParts/Desc_HUBParts.Desc_HUBParts_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5304,7 +5304,7 @@ var (
 
 	TrainDockingStation = FGRecipe{
 		ClassName:                         "Recipe_TrainDockingStation_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStation.Recipe_TrainDockingStation_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStation.Recipe_TrainDockingStation_C",
 		MDisplayName:                      `Freight Platform`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5319,7 +5319,7 @@ var (
 
 	TrainDockingStationLiquid = FGRecipe{
 		ClassName:                         "Recipe_TrainDockingStationLiquid_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStationLiquid.Recipe_TrainDockingStationLiquid_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStationLiquid.Recipe_TrainDockingStationLiquid_C",
 		MDisplayName:                      `Fluid Freight Platform`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5334,7 +5334,7 @@ var (
 
 	TrainPlatformEmpty = FGRecipe{
 		ClassName:                         "Recipe_TrainPlatformEmpty_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainPlatformEmpty.Recipe_TrainPlatformEmpty_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainPlatformEmpty.Recipe_TrainPlatformEmpty_C",
 		MDisplayName:                      `Empty Platform`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5349,7 +5349,7 @@ var (
 
 	TrainStation = FGRecipe{
 		ClassName:                         "Recipe_TrainStation_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainStation.Recipe_TrainStation_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainStation.Recipe_TrainStation_C",
 		MDisplayName:                      `Train Station`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=25))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5364,7 +5364,7 @@ var (
 
 	TreeGiftProducer = FGRecipe{
 		ClassName:                         "Recipe_TreeGiftProducer_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_TreeGiftProducer.Recipe_TreeGiftProducer_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_TreeGiftProducer.Recipe_TreeGiftProducer_C",
 		MDisplayName:                      `FICSMAS Gift Tree`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBranch.Desc_XmasBranch_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall3.Desc_XmasBall3_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall4.Desc_XmasBall4_C"',Amount=20))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5379,7 +5379,7 @@ var (
 
 	Truck = FGRecipe{
 		ClassName:                         "Recipe_Truck_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Truck.Recipe_Truck_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Truck.Recipe_Truck_C",
 		MDisplayName:                      `Truck`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=8),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5394,7 +5394,7 @@ var (
 
 	TruckStation = FGRecipe{
 		ClassName:                         "Recipe_TruckStation_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TruckStation.Recipe_TruckStation_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TruckStation.Recipe_TruckStation_C",
 		MDisplayName:                      `Truck Station`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5409,7 +5409,7 @@ var (
 
 	UJellyLandingPad = FGRecipe{
 		ClassName:                         "Recipe_UJellyLandingPad_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_UJellyLandingPad.Recipe_UJellyLandingPad_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_UJellyLandingPad.Recipe_UJellyLandingPad_C",
 		MDisplayName:                      `U-Jelly Landing Pad`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_GenericBiomass.Desc_GenericBiomass_C"',Amount=200))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5424,7 +5424,7 @@ var (
 
 	UnpackageAlumina = FGRecipe{
 		ClassName:                         "Recipe_UnpackageAlumina_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageAlumina.Recipe_UnpackageAlumina_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageAlumina.Recipe_UnpackageAlumina_C",
 		MDisplayName:                      `Unpackage Alumina Solution`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Alumina/Desc_PackagedAlumina.Desc_PackagedAlumina_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5439,7 +5439,7 @@ var (
 
 	UnpackageBioFuel = FGRecipe{
 		ClassName:                         "Recipe_UnpackageBioFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageBioFuel.Recipe_UnpackageBioFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageBioFuel.Recipe_UnpackageBioFuel_C",
 		MDisplayName:                      `Unpackage Liquid Biofuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/BioFuel/Desc_PackagedBiofuel.Desc_PackagedBiofuel_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5454,7 +5454,7 @@ var (
 
 	UnpackageFuel = FGRecipe{
 		ClassName:                         "Recipe_UnpackageFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageFuel.Recipe_UnpackageFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageFuel.Recipe_UnpackageFuel_C",
 		MDisplayName:                      `Unpackage Fuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_Fuel.Desc_Fuel_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5469,7 +5469,7 @@ var (
 
 	UnpackageNitricAcid = FGRecipe{
 		ClassName:                         "Recipe_UnpackageNitricAcid_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitricAcid.Recipe_UnpackageNitricAcid_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitricAcid.Recipe_UnpackageNitricAcid_C",
 		MDisplayName:                      `Unpackage Nitric Acid`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NitricAcid/Desc_PackagedNitricAcid.Desc_PackagedNitricAcid_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5484,7 +5484,7 @@ var (
 
 	UnpackageNitrogen = FGRecipe{
 		ClassName:                         "Recipe_UnpackageNitrogen_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitrogen.Recipe_UnpackageNitrogen_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitrogen.Recipe_UnpackageNitrogen_C",
 		MDisplayName:                      `Unpackage Nitrogen Gas`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PackagedNitrogen/Desc_PackagedNitrogenGas.Desc_PackagedNitrogenGas_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5499,7 +5499,7 @@ var (
 
 	UnpackageOil = FGRecipe{
 		ClassName:                         "Recipe_UnpackageOil_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOil.Recipe_UnpackageOil_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOil.Recipe_UnpackageOil_C",
 		MDisplayName:                      `Unpackage Oil`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_PackagedOil.Desc_PackagedOil_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5514,7 +5514,7 @@ var (
 
 	UnpackageOilResidue = FGRecipe{
 		ClassName:                         "Recipe_UnpackageOilResidue_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOilResidue.Recipe_UnpackageOilResidue_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOilResidue.Recipe_UnpackageOilResidue_C",
 		MDisplayName:                      `Unpackage Heavy Oil Residue`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_PackagedOilResidue.Desc_PackagedOilResidue_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5529,7 +5529,7 @@ var (
 
 	UnpackageSulfuricAcid = FGRecipe{
 		ClassName:                         "Recipe_UnpackageSulfuricAcid_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageSulfuricAcid.Recipe_UnpackageSulfuricAcid_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageSulfuricAcid.Recipe_UnpackageSulfuricAcid_C",
 		MDisplayName:                      `Unpackage Sulfuric Acid`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_PackagedSulfuricAcid.Desc_PackagedSulfuricAcid_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5544,7 +5544,7 @@ var (
 
 	UnpackageTurboFuel = FGRecipe{
 		ClassName:                         "Recipe_UnpackageTurboFuel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageTurboFuel.Recipe_UnpackageTurboFuel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageTurboFuel.Recipe_UnpackageTurboFuel_C",
 		MDisplayName:                      `Unpackage Turbofuel`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Turbofuel/Desc_TurboFuel.Desc_TurboFuel_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5559,7 +5559,7 @@ var (
 
 	UnpackageWater = FGRecipe{
 		ClassName:                         "Recipe_UnpackageWater_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageWater.Recipe_UnpackageWater_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageWater.Recipe_UnpackageWater_C",
 		MDisplayName:                      `Unpackage Water`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_PackagedWater.Desc_PackagedWater_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5574,7 +5574,7 @@ var (
 
 	UraniumCell = FGRecipe{
 		ClassName:                         "Recipe_UraniumCell_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_UraniumCell.Recipe_UraniumCell_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_UraniumCell.Recipe_UraniumCell_C",
 		MDisplayName:                      `Encased Uranium Cell`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreUranium/Desc_OreUranium.Desc_OreUranium_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_SulfuricAcid.Desc_SulfuricAcid_C"',Amount=8000))`,
 		MManualManufacturingMultiplier:    0.500000,
@@ -5589,7 +5589,7 @@ var (
 
 	Valve = FGRecipe{
 		ClassName:                         "Recipe_Valve_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Valve.Recipe_Valve_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Valve.Recipe_Valve_C",
 		MDisplayName:                      `Valve`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5604,7 +5604,7 @@ var (
 
 	WalkwayCross = FGRecipe{
 		ClassName:                         "Recipe_Walkway_Cross_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Cross.Recipe_Walkway_Cross_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Cross.Recipe_Walkway_Cross_C",
 		MDisplayName:                      `Walkway Crossing`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5619,7 +5619,7 @@ var (
 
 	WalkwayRamp = FGRecipe{
 		ClassName:                         "Recipe_Walkway_Ramp_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Ramp.Recipe_Walkway_Ramp_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Ramp.Recipe_Walkway_Ramp_C",
 		MDisplayName:                      `Walkway Ramp`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5634,7 +5634,7 @@ var (
 
 	WalkwayStraight = FGRecipe{
 		ClassName:                         "Recipe_Walkway_Straight_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Straight.Recipe_Walkway_Straight_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Straight.Recipe_Walkway_Straight_C",
 		MDisplayName:                      `Walkway Straight`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5649,7 +5649,7 @@ var (
 
 	WalkwayT = FGRecipe{
 		ClassName:                         "Recipe_Walkway_T_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_T.Recipe_Walkway_T_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_T.Recipe_Walkway_T_C",
 		MDisplayName:                      `Walkway T-Crossing`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5664,7 +5664,7 @@ var (
 
 	WalkwayTurn = FGRecipe{
 		ClassName:                         "Recipe_Walkway_Turn_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Turn.Recipe_Walkway_Turn_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Turn.Recipe_Walkway_Turn_C",
 		MDisplayName:                      `Walkway Turn`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5679,7 +5679,7 @@ var (
 
 	Wall8x401 = FGRecipe{
 		ClassName:                         "Recipe_Wall_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_01.Recipe_Wall_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_01.Recipe_Wall_8x4_01_C",
 		MDisplayName:                      `Wall 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5694,7 +5694,7 @@ var (
 
 	Wall8x402 = FGRecipe{
 		ClassName:                         "Recipe_Wall_8x4_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_02.Recipe_Wall_8x4_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_02.Recipe_Wall_8x4_02_C",
 		MDisplayName:                      `Wall 8m x 4m`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5709,7 +5709,7 @@ var (
 
 	WallConveyor8x401 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01.Recipe_Wall_Conveyor_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01.Recipe_Wall_Conveyor_8x4_01_C",
 		MDisplayName:                      `Wall Conveyor x3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5724,7 +5724,7 @@ var (
 
 	WallConveyor8x401Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_01_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01_Steel.Recipe_Wall_Conveyor_8x4_01_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01_Steel.Recipe_Wall_Conveyor_8x4_01_Steel_C",
 		MDisplayName:                      `Wall Conveyor x3`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5739,7 +5739,7 @@ var (
 
 	WallConveyor8x402 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02.Recipe_Wall_Conveyor_8x4_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02.Recipe_Wall_Conveyor_8x4_02_C",
 		MDisplayName:                      `Wall Conveyor x2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5754,7 +5754,7 @@ var (
 
 	WallConveyor8x402Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_02_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02_Steel.Recipe_Wall_Conveyor_8x4_02_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02_Steel.Recipe_Wall_Conveyor_8x4_02_Steel_C",
 		MDisplayName:                      `Wall Conveyor x2`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5769,7 +5769,7 @@ var (
 
 	WallConveyor8x403 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_03_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03.Recipe_Wall_Conveyor_8x4_03_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03.Recipe_Wall_Conveyor_8x4_03_C",
 		MDisplayName:                      `Wall Conveyor x1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5784,7 +5784,7 @@ var (
 
 	WallConveyor8x403Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_03_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03_Steel.Recipe_Wall_Conveyor_8x4_03_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03_Steel.Recipe_Wall_Conveyor_8x4_03_Steel_C",
 		MDisplayName:                      `Wall Conveyor x1`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5799,7 +5799,7 @@ var (
 
 	WallConveyor8x404 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_04_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04.Recipe_Wall_Conveyor_8x4_04_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04.Recipe_Wall_Conveyor_8x4_04_C",
 		MDisplayName:                      `Wall Conveyor Perpendicular`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5814,7 +5814,7 @@ var (
 
 	WallConveyor8x404Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_04_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04_Steel.Recipe_Wall_Conveyor_8x4_04_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04_Steel.Recipe_Wall_Conveyor_8x4_04_Steel_C",
 		MDisplayName:                      `Wall Conveyor Perpendicular`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5829,7 +5829,7 @@ var (
 
 	WallDoor8x401 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Door_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01.Recipe_Wall_Door_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01.Recipe_Wall_Door_8x4_01_C",
 		MDisplayName:                      `Center Door Wall`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5844,7 +5844,7 @@ var (
 
 	WallDoor8x401Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Door_8x4_01_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01_Steel.Recipe_Wall_Door_8x4_01_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01_Steel.Recipe_Wall_Door_8x4_01_Steel_C",
 		MDisplayName:                      `Center Door Wall`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5859,7 +5859,7 @@ var (
 
 	WallDoor8x402 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Door_8x4_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02.Recipe_Wall_Door_8x4_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02.Recipe_Wall_Door_8x4_02_C",
 		MDisplayName:                      `Left Door Wall`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5874,7 +5874,7 @@ var (
 
 	WallDoor8x402Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Door_8x4_02_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02_Steel.Recipe_Wall_Door_8x4_02_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02_Steel.Recipe_Wall_Door_8x4_02_Steel_C",
 		MDisplayName:                      `Left Door Wall`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5889,7 +5889,7 @@ var (
 
 	WallDoor8x403 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Door_8x4_03_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03.Recipe_Wall_Door_8x4_03_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03.Recipe_Wall_Door_8x4_03_C",
 		MDisplayName:                      `Right Door Wall`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5904,7 +5904,7 @@ var (
 
 	WallDoor8x403Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Door_8x4_03_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03_Steel.Recipe_Wall_Door_8x4_03_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03_Steel.Recipe_Wall_Door_8x4_03_Steel_C",
 		MDisplayName:                      `Right Door Wall`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5919,7 +5919,7 @@ var (
 
 	WallGate8x401 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Gate_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Gate_8x4_01.Recipe_Wall_Gate_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Gate_8x4_01.Recipe_Wall_Gate_8x4_01_C",
 		MDisplayName:                      `Gate Wall`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5934,7 +5934,7 @@ var (
 
 	WallWindow8x401 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Window_8x4_01_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_01.Recipe_Wall_Window_8x4_01_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_01.Recipe_Wall_Window_8x4_01_C",
 		MDisplayName:                      `Single Window`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5949,7 +5949,7 @@ var (
 
 	WallWindow8x402 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Window_8x4_02_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_02.Recipe_Wall_Window_8x4_02_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_02.Recipe_Wall_Window_8x4_02_C",
 		MDisplayName:                      `Frame Window`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5964,7 +5964,7 @@ var (
 
 	WallWindow8x403 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Window_8x4_03_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03.Recipe_Wall_Window_8x4_03_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03.Recipe_Wall_Window_8x4_03_C",
 		MDisplayName:                      `Panel Window`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5979,7 +5979,7 @@ var (
 
 	WallWindow8x403Steel = FGRecipe{
 		ClassName:                         "Recipe_Wall_Window_8x4_03_Steel_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03_Steel.Recipe_Wall_Window_8x4_03_Steel_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03_Steel.Recipe_Wall_Window_8x4_03_Steel_C",
 		MDisplayName:                      `Panel Window`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -5994,7 +5994,7 @@ var (
 
 	WallWindow8x404 = FGRecipe{
 		ClassName:                         "Recipe_Wall_Window_8x4_04_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_04.Recipe_Wall_Window_8x4_04_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_04.Recipe_Wall_Window_8x4_04_C",
 		MDisplayName:                      `Reinforced Window`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6009,7 +6009,7 @@ var (
 
 	WaterPump = FGRecipe{
 		ClassName:                         "Recipe_WaterPump_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WaterPump.Recipe_WaterPump_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WaterPump.Recipe_WaterPump_C",
 		MDisplayName:                      `Water Extractor`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6024,7 +6024,7 @@ var (
 
 	Wire = FGRecipe{
 		ClassName:                         "Recipe_Wire_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Wire.Recipe_Wire_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Wire.Recipe_Wire_C",
 		MDisplayName:                      `Wire`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6039,7 +6039,7 @@ var (
 
 	WorkBench = FGRecipe{
 		ClassName:                         "Recipe_WorkBench_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WorkBench.Recipe_WorkBench_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WorkBench.Recipe_WorkBench_C",
 		MDisplayName:                      `Craft Bench`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6054,7 +6054,7 @@ var (
 
 	Workshop = FGRecipe{
 		ClassName:                         "Recipe_Workshop_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Workshop.Recipe_Workshop_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Workshop.Recipe_Workshop_C",
 		MDisplayName:                      `Equipment Workshop`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=6),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=4))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6069,7 +6069,7 @@ var (
 
 	WreathDecor = FGRecipe{
 		ClassName:                         "Recipe_WreathDecor_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/WreathDecor/Recipe_WreathDecor.Recipe_WreathDecor_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/WreathDecor/Recipe_WreathDecor.Recipe_WreathDecor_C",
 		MDisplayName:                      `FICSMAS Wreath`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasWreath.Desc_XmasWreath_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6084,7 +6084,7 @@ var (
 
 	XMassTree = FGRecipe{
 		ClassName:                         "Recipe_XMassTree_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Recipe_XMassTree.Recipe_XMassTree_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Recipe_XMassTree.Recipe_XMassTree_C",
 		MDisplayName:                      `Giant FICSMAS Tree`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBranch.Desc_XmasBranch_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=500))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6099,7 +6099,7 @@ var (
 
 	XenoBasher = FGRecipe{
 		ClassName:                         "Recipe_XenoBasher_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoBasher.Recipe_XenoBasher_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoBasher.Recipe_XenoBasher_C",
 		MDisplayName:                      `Xeno-Basher`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/ShockShank/BP_EquipmentDescriptorShockShank.BP_EquipmentDescriptorShockShank_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=500))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6114,7 +6114,7 @@ var (
 
 	XenoZapper = FGRecipe{
 		ClassName:                         "Recipe_XenoZapper_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoZapper.Recipe_XenoZapper_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoZapper.Recipe_XenoZapper_C",
 		MDisplayName:                      `Xeno-Zapper`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=15),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6129,7 +6129,7 @@ var (
 
 	XmasBall1 = FGRecipe{
 		ClassName:                         "Recipe_XmasBall1_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall1.Recipe_XmasBall1_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall1.Recipe_XmasBall1_C",
 		MDisplayName:                      `Red FICSMAS Ornament`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6144,7 +6144,7 @@ var (
 
 	XmasBall2 = FGRecipe{
 		ClassName:                         "Recipe_XmasBall2_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall2.Recipe_XmasBall2_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall2.Recipe_XmasBall2_C",
 		MDisplayName:                      `Blue FICSMAS Ornament`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6159,7 +6159,7 @@ var (
 
 	XmasBall3 = FGRecipe{
 		ClassName:                         "Recipe_XmasBall3_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall3.Recipe_XmasBall3_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall3.Recipe_XmasBall3_C",
 		MDisplayName:                      `Copper FICSMAS Ornament`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall1.Desc_XmasBall1_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperIngot/Desc_CopperIngot.Desc_CopperIngot_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6174,7 +6174,7 @@ var (
 
 	XmasBall4 = FGRecipe{
 		ClassName:                         "Recipe_XmasBall4_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall4.Recipe_XmasBall4_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall4.Recipe_XmasBall4_C",
 		MDisplayName:                      `Iron FICSMAS Ornament`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall2.Desc_XmasBall2_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronIngot/Desc_IronIngot.Desc_IronIngot_C"',Amount=3))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6189,7 +6189,7 @@ var (
 
 	XmasBallCluster = FGRecipe{
 		ClassName:                         "Recipe_XmasBallCluster_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBallCluster.Recipe_XmasBallCluster_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBallCluster.Recipe_XmasBallCluster_C",
 		MDisplayName:                      `FICSMAS Ornament Bundle`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall3.Desc_XmasBall3_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall4.Desc_XmasBall4_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6204,7 +6204,7 @@ var (
 
 	XmasBow = FGRecipe{
 		ClassName:                         "Recipe_XmasBow_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBow.Recipe_XmasBow_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBow.Recipe_XmasBow_C",
 		MDisplayName:                      `FICSMAS Bow`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=2))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6219,7 +6219,7 @@ var (
 
 	XmasBranch = FGRecipe{
 		ClassName:                         "Recipe_XmasBranch_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBranch.Recipe_XmasBranch_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBranch.Recipe_XmasBranch_C",
 		MDisplayName:                      `FICSMAS Tree Branch`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6234,7 +6234,7 @@ var (
 
 	XmasStar = FGRecipe{
 		ClassName:                         "Recipe_XmasStar_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasStar.Recipe_XmasStar_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasStar.Recipe_XmasStar_C",
 		MDisplayName:                      `FICSMAS Wonder Star`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasWreath.Desc_XmasWreath_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=50))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6249,7 +6249,7 @@ var (
 
 	XmasWreath = FGRecipe{
 		ClassName:                         "Recipe_XmasWreath_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasWreath.Recipe_XmasWreath_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasWreath.Recipe_XmasWreath_C",
 		MDisplayName:                      `FICSMAS Decoration`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBranch.Desc_XmasBranch_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBallCluster.Desc_XmasBallCluster_C"',Amount=5))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6264,7 +6264,7 @@ var (
 
 	ZipLine = FGRecipe{
 		ClassName:                         "Recipe_ZipLine_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ZipLine.Recipe_ZipLine_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ZipLine.Recipe_ZipLine_C",
 		MDisplayName:                      `Zipline`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/ShockShank/BP_EquipmentDescriptorShockShank.BP_EquipmentDescriptorShockShank_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=30),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=3),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=10))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6279,7 +6279,7 @@ var (
 
 	xmassLights = FGRecipe{
 		ClassName:                         "Recipe_xmassLights_C",
-		FullName:                          `BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/PowerLineLights/Recipe_xmassLights.Recipe_xmassLights_C`,
+		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/PowerLineLights/Recipe_xmassLights.Recipe_xmassLights_C",
 		MDisplayName:                      `FICSMAS Power Light`,
 		MIngredients:                      `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBallCluster.Desc_XmasBallCluster_C"',Amount=1))`,
 		MManualManufacturingMultiplier:    1.000000,
@@ -6298,7 +6298,7 @@ func GetByClassName(className string) (*FGRecipe, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGRecipe with name %s", className)
+	return nil, fmt.Errorf("failed to find FGRecipe with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGRecipe{
@@ -6720,4 +6720,433 @@ var classNameToVar = map[string]*FGRecipe{
 	"Recipe_XmasWreath_C":                             &XmasWreath,
 	"Recipe_ZipLine_C":                                &ZipLine,
 	"Recipe_xmassLights_C":                            &xmassLights,
+}
+
+func GetByFullName(fullName string) (*FGRecipe, error) {
+	if v, ok := fullNameToVar[fullName]; ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("failed to find FGRecipe with full name %s", fullName)
+}
+
+var fullNameToVar = map[string]*FGRecipe{
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_AILimiter.Recipe_AILimiter_C":                                                                      &AILimiter,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_AdheredIronPlate.Recipe_Alternate_AdheredIronPlate_C":                 &AlternateAdheredIronPlate,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AlcladCasing.Recipe_Alternate_AlcladCasing_C":                         &AlternateAlcladCasing,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AutomatedMiner.Recipe_Alternate_AutomatedMiner_C":                     &AlternateAutomatedMiner,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Beacon_1.Recipe_Alternate_Beacon_1_C":                                       &AlternateBeacon1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_BoltedFrame.Recipe_Alternate_BoltedFrame_C":                           &AlternateBoltedFrame,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_1.Recipe_Alternate_Cable_1_C":                                         &AlternateCable1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_2.Recipe_Alternate_Cable_2_C":                                         &AlternateCable2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_1.Recipe_Alternate_CircuitBoard_1_C":                           &AlternateCircuitBoard1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_2.Recipe_Alternate_CircuitBoard_2_C":                           &AlternateCircuitBoard2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ClassicBattery.Recipe_Alternate_ClassicBattery_C":                     &AlternateClassicBattery,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_1.Recipe_Alternate_Coal_1_C":                                           &AlternateCoal1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_2.Recipe_Alternate_Coal_2_C":                                           &AlternateCoal2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedCable.Recipe_Alternate_CoatedCable_C":                           &AlternateCoatedCable,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronCanister.Recipe_Alternate_CoatedIronCanister_C":             &AlternateCoatedIronCanister,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronPlate.Recipe_Alternate_CoatedIronPlate_C":                   &AlternateCoatedIronPlate,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CokeSteelIngot.Recipe_Alternate_CokeSteelIngot_C":                     &AlternateCokeSteelIngot,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_1.Recipe_Alternate_Computer_1_C":                                   &AlternateComputer1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_2.Recipe_Alternate_Computer_2_C":                                   &AlternateComputer2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Concrete.Recipe_Alternate_Concrete_C":                                       &AlternateConcrete,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_CoolingDevice.Recipe_Alternate_CoolingDevice_C":                       &AlternateCoolingDevice,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperAlloyIngot.Recipe_Alternate_CopperAlloyIngot_C":                 &AlternateCopperAlloyIngot,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperRotor.Recipe_Alternate_CopperRotor_C":                           &AlternateCopperRotor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CrystalOscillator.Recipe_Alternate_CrystalOscillator_C":                     &AlternateCrystalOscillator,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_DilutedFuel.Recipe_Alternate_DilutedFuel_C":                           &AlternateDilutedFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Recipe_Alternate_DilutedPackagedFuel_C":           &AlternateDilutedPackagedFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ElectricMotor.Recipe_Alternate_ElectricMotor_C":                       &AlternateElectricMotor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectroAluminumScrap.Recipe_Alternate_ElectroAluminumScrap_C":         &AlternateElectroAluminumScrap,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectrodeCircuitBoard.Recipe_Alternate_ElectrodeCircuitBoard_C":       &AlternateElectrodeCircuitBoard,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ElectromagneticControlRod_1.Recipe_Alternate_ElectromagneticControlRod_1_C": &AlternateElectromagneticControlRod1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EncasedIndustrialBeam.Recipe_Alternate_EncasedIndustrialBeam_C":             &AlternateEncasedIndustrialBeam,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Recipe_Alternate_EnrichedCoal_C":                               &AlternateEnrichedCoal,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_FertileUranium.Recipe_Alternate_FertileUranium_C":                     &AlternateFertileUranium,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FlexibleFramework.Recipe_Alternate_FlexibleFramework_C":               &AlternateFlexibleFramework,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FusedWire.Recipe_Alternate_FusedWire_C":                               &AlternateFusedWire,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Gunpowder_1.Recipe_Alternate_Gunpowder_1_C":                                 &AlternateGunpowder1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_HeatFusedFrame.Recipe_Alternate_HeatFusedFrame_C":                     &AlternateHeatFusedFrame,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HeatSink_1.Recipe_Alternate_HeatSink_1_C":                                   &AlternateHeatSink1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyFlexibleFrame.Recipe_Alternate_HeavyFlexibleFrame_C":             &AlternateHeavyFlexibleFrame,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyOilResidue.Recipe_Alternate_HeavyOilResidue_C":                   &AlternateHeavyOilResidue,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HighSpeedConnector.Recipe_Alternate_HighSpeedConnector_C":                   &AlternateHighSpeedConnector,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HighSpeedWiring.Recipe_Alternate_HighSpeedWiring_C":                   &AlternateHighSpeedWiring,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotIron.Recipe_Alternate_IngotIron_C":                                     &AlternateIngotIron,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_1.Recipe_Alternate_IngotSteel_1_C":                               &AlternateIngotSteel1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_2.Recipe_Alternate_IngotSteel_2_C":                               &AlternateIngotSteel2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantPlutoniumCell.Recipe_Alternate_InstantPlutoniumCell_C":         &AlternateInstantPlutoniumCell,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantScrap.Recipe_Alternate_InstantScrap_C":                         &AlternateInstantScrap,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrame.Recipe_Alternate_ModularFrame_C":                               &AlternateModularFrame,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrameHeavy.Recipe_Alternate_ModularFrameHeavy_C":                     &AlternateModularFrameHeavy,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Motor_1.Recipe_Alternate_Motor_1_C":                                         &AlternateMotor1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Nobelisk_1.Recipe_Alternate_Nobelisk_1_C":                                   &AlternateNobelisk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_NuclearFuelRod_1.Recipe_Alternate_NuclearFuelRod_1_C":                       &AlternateNuclearFuelRod1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_OCSupercomputer.Recipe_Alternate_OCSupercomputer_C":                   &AlternateOCSupercomputer,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Plastic_1.Recipe_Alternate_Plastic_1_C":                                     &AlternatePlastic1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PlasticSmartPlating.Recipe_Alternate_PlasticSmartPlating_C":           &AlternatePlasticSmartPlating,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_PlutoniumFuelUnit.Recipe_Alternate_PlutoniumFuelUnit_C":               &AlternatePlutoniumFuelUnit,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolyesterFabric.Recipe_Alternate_PolyesterFabric_C":                   &AlternatePolyesterFabric,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolymerResin.Recipe_Alternate_PolymerResin_C":                         &AlternatePolymerResin,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Recipe_Alternate_PureCateriumIngot_C":               &AlternatePureCateriumIngot,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Recipe_Alternate_PureCopperIngot_C":                   &AlternatePureCopperIngot,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Recipe_Alternate_PureIronIngot_C":                       &AlternatePureIronIngot,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Recipe_Alternate_PureQuartzCrystal_C":               &AlternatePureQuartzCrystal,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Quickwire.Recipe_Alternate_Quickwire_C":                                     &AlternateQuickwire,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_RadioControlSystem.Recipe_Alternate_RadioControlSystem_C":             &AlternateRadioControlSystem,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_RadioControlUnit_1.Recipe_Alternate_RadioControlUnit_1_C":                   &AlternateRadioControlUnit1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RecycledRubber.Recipe_Alternate_RecycledRubber_C":                     &AlternateRecycledRubber,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_1.Recipe_Alternate_ReinforcedIronPlate_1_C":             &AlternateReinforcedIronPlate1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_2.Recipe_Alternate_ReinforcedIronPlate_2_C":             &AlternateReinforcedIronPlate2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Rotor.Recipe_Alternate_Rotor_C":                                             &AlternateRotor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RubberConcrete.Recipe_Alternate_RubberConcrete_C":                     &AlternateRubberConcrete,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw.Recipe_Alternate_Screw_C":                                             &AlternateScrew,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw_2.Recipe_Alternate_Screw_2_C":                                         &AlternateScrew2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Silica.Recipe_Alternate_Silica_C":                                           &AlternateSilica,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SloppyAlumina.Recipe_Alternate_SloppyAlumina_C":                       &AlternateSloppyAlumina,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Stator.Recipe_Alternate_Stator_C":                                           &AlternateStator,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteamedCopperSheet.Recipe_Alternate_SteamedCopperSheet_C":             &AlternateSteamedCopperSheet,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCanister.Recipe_Alternate_SteelCanister_C":                       &AlternateSteelCanister,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCoatedPlate.Recipe_Alternate_SteelCoatedPlate_C":                 &AlternateSteelCoatedPlate,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelRod.Recipe_Alternate_SteelRod_C":                                 &AlternateSteelRod,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SuperStateComputer.Recipe_Alternate_SuperStateComputer_C":             &AlternateSuperStateComputer,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboBlendFuel.Recipe_Alternate_TurboBlendFuel_C":                     &AlternateTurboBlendFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Recipe_Alternate_TurboHeavyFuel_C":                     &AlternateTurboHeavyFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_TurboMotor_1.Recipe_Alternate_TurboMotor_1_C":                               &AlternateTurboMotor1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboPressureMotor.Recipe_Alternate_TurboPressureMotor_C":             &AlternateTurboPressureMotor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Turbofuel.Recipe_Alternate_Turbofuel_C":                                     &AlternateTurbofuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_UraniumCell_1.Recipe_Alternate_UraniumCell_1_C":                             &AlternateUraniumCell1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Recipe_Alternate_WetConcrete_C":                           &AlternateWetConcrete,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_1.Recipe_Alternate_Wire_1_C":                                           &AlternateWire1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_2.Recipe_Alternate_Wire_2_C":                                           &AlternateWire2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminaSolution.Recipe_AluminaSolution_C":                                                        &AluminaSolution,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumCasing.Recipe_AluminumCasing_C":                                                          &AluminumCasing,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminumScrap.Recipe_AluminumScrap_C":                                                            &AluminumScrap,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumSheet.Recipe_AluminumSheet_C":                                                            &AluminumSheet,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_AssemblerMk1.Recipe_AssemblerMk1_C":                                                                &AssemblerMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Battery.Recipe_Battery_C":                                                                       &Battery,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Beacon.Recipe_Beacon_C":                                                                            &Beacon,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biofuel.Recipe_Biofuel_C":                                                                        &Biofuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienCarapace.Recipe_Biomass_AlienCarapace_C":                                            &BiomassAlienCarapace,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienOrgans.Recipe_Biomass_AlienOrgans_C":                                                &BiomassAlienOrgans,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Leaves.Recipe_Biomass_Leaves_C":                                                          &BiomassLeaves,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Mycelia.Recipe_Biomass_Mycelia_C":                                                        &BiomassMycelia,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Wood.Recipe_Biomass_Wood_C":                                                              &BiomassWood,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_BladeRunners.Recipe_BladeRunners_C":                                                                &BladeRunners,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Blender.Recipe_Blender_C":                                                                          &Blender,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Cable.Recipe_Cable_C":                                                                            &Cable,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_CandyCane.Recipe_CandyCane_C":                                                                 &CandyCane,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_CandyCaneBasher.Recipe_CandyCaneBasher_C":                                                          &CandyCaneBasher,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/CandyCaneDecor/Recipe_CandyCaneDecor.Recipe_CandyCaneDecor_C":                                    &CandyCaneDecor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Cartridge.Recipe_Cartridge_C":                                                                      &Cartridge,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_CeilingLight.Recipe_CeilingLight_C":                                                                &CeilingLight,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Chainsaw.Recipe_Chainsaw_C":                                                                        &Chainsaw,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_CircuitBoard.Recipe_CircuitBoard_C":                                                                &CircuitBoard,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Coal.Recipe_Coal_C":                                                                             &Coal,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorCartridge.Recipe_ColorCartridge_C":                                                            &ColorCartridge,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorGun.Recipe_ColorGun_C":                                                                        &ColorGun,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Computer.Recipe_Computer_C":                                                                     &Computer,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ComputerSuper.Recipe_ComputerSuper_C":                                                           &ComputerSuper,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Concrete.Recipe_Concrete_C":                                                                      &Concrete,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConstructorMk1.Recipe_ConstructorMk1_C":                                                            &ConstructorMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentMerger.Recipe_ConveyorAttachmentMerger_C":                                        &ConveyorAttachmentMerger,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitter.Recipe_ConveyorAttachmentSplitter_C":                                    &ConveyorAttachmentSplitter,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterProgrammable.Recipe_ConveyorAttachmentSplitterProgrammable_C":            &ConveyorAttachmentSplitterProgrammable,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterSmart.Recipe_ConveyorAttachmentSplitterSmart_C":                          &ConveyorAttachmentSplitterSmart,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk1.Recipe_ConveyorBeltMk1_C":                                                          &ConveyorBeltMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk2.Recipe_ConveyorBeltMk2_C":                                                          &ConveyorBeltMk2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk3.Recipe_ConveyorBeltMk3_C":                                                          &ConveyorBeltMk3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk4.Recipe_ConveyorBeltMk4_C":                                                          &ConveyorBeltMk4,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk5.Recipe_ConveyorBeltMk5_C":                                                          &ConveyorBeltMk5,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk1.Recipe_ConveyorLiftMk1_C":                                                          &ConveyorLiftMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk2.Recipe_ConveyorLiftMk2_C":                                                          &ConveyorLiftMk2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk3.Recipe_ConveyorLiftMk3_C":                                                          &ConveyorLiftMk3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk4.Recipe_ConveyorLiftMk4_C":                                                          &ConveyorLiftMk4,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk5.Recipe_ConveyorLiftMk5_C":                                                          &ConveyorLiftMk5,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPole.Recipe_ConveyorPole_C":                                                                &ConveyorPole,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleStackable.Recipe_ConveyorPoleStackable_C":                                              &ConveyorPoleStackable,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleWall.Recipe_ConveyorPoleWall_C":                                                        &ConveyorPoleWall,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_CoolingSystem.Recipe_CoolingSystem_C":                                                                &CoolingSystem,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperDust.Recipe_CopperDust_C":                                                                  &CopperDust,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperSheet.Recipe_CopperSheet_C":                                                                &CopperSheet,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_CrudeOil.Recipe_CrudeOil_C":                                                                     &CrudeOil,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_CrystalOscillator.Recipe_CrystalOscillator_C":                                                   &CrystalOscillator,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_CyberWagon.Recipe_CyberWagon_C":                                                                      &CyberWagon,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneStation.Recipe_DroneStation_C":                                                                &DroneStation,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneTransport.Recipe_DroneTransport_C":                                                            &DroneTransport,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ElectromagneticControlRod.Recipe_ElectromagneticControlRod_C":                                      &ElectromagneticControlRod,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_EncasedIndustrialBeam.Recipe_EncasedIndustrialBeam_C":                                              &EncasedIndustrialBeam,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Explorer.Recipe_Explorer_C":                                                                          &Explorer,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Fabric.Recipe_Fabric_C":                                                                          &Fabric,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_FactoryCart.Recipe_FactoryCart_C":                                                                    &FactoryCart,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Fence/Recipe_Fence_01.Recipe_Fence_01_C":                                                                  &Fence01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterGasMask.Recipe_FilterGasMask_C":                                                              &FilterGasMask,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterHazmat.Recipe_FilterHazmat_C":                                                                &FilterHazmat,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightPole.Recipe_FloodlightPole_C":                                                            &FloodlightPole,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightWall.Recipe_FloodlightWall_C":                                                            &FloodlightWall,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_FluidCanister.Recipe_FluidCanister_C":                                                            &FluidCanister,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x1_01.Recipe_Foundation_8x1_01_C":                                          &Foundation8x101,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x2_01.Recipe_Foundation_8x2_01_C":                                          &Foundation8x201,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x4_01.Recipe_Foundation_8x4_01_C":                                          &Foundation8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_Frame_01.Recipe_Foundation_Frame_01_C":                                      &FoundationFrame01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_FoundationGlass_01.Recipe_FoundationGlass_01_C":                                        &FoundationGlass01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingExtractor.Recipe_FrackingExtractor_C":                                                      &FrackingExtractor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingSmasher.Recipe_FrackingSmasher_C":                                                          &FrackingSmasher,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_FreightWagon.Recipe_FreightWagon_C":                                                            &FreightWagon,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Fuel.Recipe_Fuel_C":                                                                              &Fuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_FusedModularFrame.Recipe_FusedModularFrame_C":                                                        &FusedModularFrame,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_GasTank.Recipe_GasTank_C":                                                                        &GasTank,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gasmask.Recipe_Gasmask_C":                                                                          &Gasmask,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorBiomass.Recipe_GeneratorBiomass_C":                                                        &GeneratorBiomass,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorCoal.Recipe_GeneratorCoal_C":                                                              &GeneratorCoal,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorFuel.Recipe_GeneratorFuel_C":                                                              &GeneratorFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorGeoThermal.Recipe_GeneratorGeoThermal_C":                                                  &GeneratorGeoThermal,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorNuclear.Recipe_GeneratorNuclear_C":                                                        &GeneratorNuclear,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gunpowder.Recipe_Gunpowder_C":                                                                      &Gunpowder,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HadronCollider.Recipe_HadronCollider_C":                                                            &HadronCollider,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_HazmatSuit.Recipe_HazmatSuit_C":                                                                    &HazmatSuit,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_HeatSink.Recipe_HeatSink_C":                                                                        &HeatSink,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_HighSpeedConnector.Recipe_HighSpeedConnector_C":                                                 &HighSpeedConnector,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Hoverpack.Recipe_Hoverpack_C":                                                                      &Hoverpack,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperPoleStackable.Recipe_HyperPoleStackable_C":                                                    &HyperPoleStackable,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallHole.Recipe_HyperTubeWallHole_C":                                                      &HyperTubeWallHole,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallSupport.Recipe_HyperTubeWallSupport_C":                                                &HyperTubeWallSupport,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_IndustrialTank.Recipe_IndustrialTank_C":                                                            &IndustrialTank,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotAluminum.Recipe_IngotAluminum_C":                                                                &IngotAluminum,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCaterium.Recipe_IngotCaterium_C":                                                                &IngotCaterium,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCopper.Recipe_IngotCopper_C":                                                                    &IngotCopper,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotIron.Recipe_IngotIron_C":                                                                        &IngotIron,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotSteel.Recipe_IngotSteel_C":                                                                      &IngotSteel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronPlate.Recipe_IronPlate_C":                                                                    &IronPlate,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_IronPlateReinforced.Recipe_IronPlateReinforced_C":                                                  &IronPlateReinforced,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronRod.Recipe_IronRod_C":                                                                        &IronRod,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_JetPack.Recipe_JetPack_C":                                                                          &JetPack,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPad.Recipe_JumpPad_C":                                                                          &JumpPad,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadAdjustable.Recipe_JumpPadAdjustable_C":                                                      &JumpPadAdjustable,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadTilted.Recipe_JumpPadTilted_C":                                                              &JumpPadTilted,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ladder/Recipe_Ladder.Recipe_Ladder_C":                                                                     &Ladder,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LightsControlPanel.Recipe_LightsControlPanel_C":                                                    &LightsControlPanel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Limestone.Recipe_Limestone_C":                                                                   &Limestone,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidBiofuel.Recipe_LiquidBiofuel_C":                                                            &LiquidBiofuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidFuel.Recipe_LiquidFuel_C":                                                                  &LiquidFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_Locomotive.Recipe_Locomotive_C":                                                                &Locomotive,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LookoutTower.Recipe_LookoutTower_C":                                                                &LookoutTower,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Mam.Recipe_Mam_C":                                                                                  &Mam,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ManufacturerMk1.Recipe_ManufacturerMk1_C":                                                          &ManufacturerMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhaler.Recipe_MedicinalInhaler_C":                                                        &MedicinalInhaler,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhalerAlienOrgans.Recipe_MedicinalInhalerAlienOrgans_C":                                  &MedicinalInhalerAlienOrgans,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk1.Recipe_MinerMk1_C":                                                                        &MinerMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk2.Recipe_MinerMk2_C":                                                                        &MinerMk2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk3.Recipe_MinerMk3_C":                                                                        &MinerMk3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ModularFrame.Recipe_ModularFrame_C":                                                                &ModularFrame,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ModularFrameHeavy.Recipe_ModularFrameHeavy_C":                                                   &ModularFrameHeavy,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Motor.Recipe_Motor_C":                                                                              &Motor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_MotorTurbo.Recipe_MotorTurbo_C":                                                                 &MotorTurbo,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NitricAcid.Recipe_NitricAcid_C":                                                                      &NitricAcid,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Nobelisk.Recipe_Nobelisk_C":                                                                        &Nobelisk,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NobeliskDetonator.Recipe_NobeliskDetonator_C":                                                      &NobeliskDetonator,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NonFissileUranium.Recipe_NonFissileUranium_C":                                                        &NonFissileUranium,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_NuclearFuelRod.Recipe_NuclearFuelRod_C":                                                          &NuclearFuelRod,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NutritionalInhaler.Recipe_NutritionalInhaler_C":                                                    &NutritionalInhaler,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ObjectScanner.Recipe_ObjectScanner_C":                                                              &ObjectScanner,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilPump.Recipe_OilPump_C":                                                                          &OilPump,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilRefinery.Recipe_OilRefinery_C":                                                                  &OilRefinery,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreBauxite.Recipe_OreBauxite_C":                                                                 &OreBauxite,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCaterium.Recipe_OreCaterium_C":                                                               &OreCaterium,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCopper.Recipe_OreCopper_C":                                                                   &OreCopper,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreIron.Recipe_OreIron_C":                                                                       &OreIron,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreUranium.Recipe_OreUranium_C":                                                                 &OreUranium,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedAlumina.Recipe_PackagedAlumina_C":                                                           &PackagedAlumina,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedBiofuel.Recipe_PackagedBiofuel_C":                                                        &PackagedBiofuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedCrudeOil.Recipe_PackagedCrudeOil_C":                                                      &PackagedCrudeOil,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitricAcid.Recipe_PackagedNitricAcid_C":                                                     &PackagedNitricAcid,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitrogen.Recipe_PackagedNitrogen_C":                                                         &PackagedNitrogen,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedOilResidue.Recipe_PackagedOilResidue_C":                                                  &PackagedOilResidue,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedSulfuricAcid.Recipe_PackagedSulfuricAcid_C":                                                 &PackagedSulfuricAcid,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedTurboFuel.Recipe_PackagedTurboFuel_C":                                                    &PackagedTurboFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedWater.Recipe_PackagedWater_C":                                                            &PackagedWater,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Packager.Recipe_Packager_C":                                                                        &Packager,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Parachute.Recipe_Parachute_C":                                                                      &Parachute,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Recipe_PetroleumCoke_C":                                                            &PetroleumCoke,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarBase.Recipe_PillarBase_C":                                                        &PillarBase,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarMiddle.Recipe_PillarMiddle_C":                                                    &PillarMiddle,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarTop.Recipe_PillarTop_C":                                                          &PillarTop,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyper.Recipe_PipeHyper_C":                                                                      &PipeHyper,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipe_PipeHyperStart.Recipe_PipeHyperStart_C":                                                                              &PipeHyperStart,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyperSupport.Recipe_PipeHyperSupport_C":                                                        &PipeHyperSupport,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeStorageTank.Recipe_PipeStorageTank_C":                                                          &PipeStorageTank,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupport.Recipe_PipeSupport_C":                                                                  &PipeSupport,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportStackable.Recipe_PipeSupportStackable_C":                                                &PipeSupportStackable,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWall.Recipe_PipeSupportWall_C":                                                          &PipeSupportWall,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWallHole.Recipe_PipeSupportWallHole_C":                                                  &PipeSupportWallHole,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Pipeline.Recipe_Pipeline_C":                                                                        &Pipeline,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineJunction_Cross.Recipe_PipelineJunction_Cross_C":                                            &PipelineJunctionCross,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineMK2.Recipe_PipelineMK2_C":                                                                  &PipelineMK2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePump.Recipe_PipelinePump_C":                                                                &PipelinePump,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePumpMK2.Recipe_PipelinePumpMK2_C":                                                          &PipelinePumpMK2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Plastic.Recipe_Plastic_C":                                                                        &Plastic,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/HadronCollider/Recipe_Plutonium.Recipe_Plutonium_C":                                                                 &Plutonium,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PlutoniumCell.Recipe_PlutoniumCell_C":                                                              &PlutoniumCell,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_PlutoniumFuelRod.Recipe_PlutoniumFuelRod_C":                                                     &PlutoniumFuelRod,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_PortableMiner.Recipe_PortableMiner_C":                                                              &PortableMiner,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_1.Recipe_PowerCrystalShard_1_C":                                                &PowerCrystalShard1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_2.Recipe_PowerCrystalShard_2_C":                                                &PowerCrystalShard2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_3.Recipe_PowerCrystalShard_3_C":                                                &PowerCrystalShard3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerLine.Recipe_PowerLine_C":                                                                      &PowerLine,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk1.Recipe_PowerPoleMk1_C":                                                                &PowerPoleMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk2.Recipe_PowerPoleMk2_C":                                                                &PowerPoleMk2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk3.Recipe_PowerPoleMk3_C":                                                                &PowerPoleMk3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWall.Recipe_PowerPoleWall_C":                                                              &PowerPoleWall,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDouble.Recipe_PowerPoleWallDouble_C":                                                  &PowerPoleWallDouble,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk2.Recipe_PowerPoleWallDoubleMk2_C":                                            &PowerPoleWallDoubleMk2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk3.Recipe_PowerPoleWallDoubleMk3_C":                                            &PowerPoleWallDoubleMk3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk2.Recipe_PowerPoleWallMk2_C":                                                        &PowerPoleWallMk2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk3.Recipe_PowerPoleWallMk3_C":                                                        &PowerPoleWallMk3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerStorageMk1.Recipe_PowerStorageMk1_C":                                                          &PowerStorageMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerSwitch.Recipe_PowerSwitch_C":                                                                  &PowerSwitch,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PressureConversionCube.Recipe_PressureConversionCube_C":                                            &PressureConversionCube,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_PureAluminumIngot.Recipe_PureAluminumIngot_C":                                   &PureAluminumIngot,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe.Recipe_QuarterPipe_C":                                                      &QuarterPipe,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe_02.Recipe_QuarterPipe_02_C":                                                &QuarterPipe02,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_01.Recipe_QuarterPipeCorner_01_C":                                    &QuarterPipeCorner01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_02.Recipe_QuarterPipeCorner_02_C":                                    &QuarterPipeCorner02,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_03.Recipe_QuarterPipeCorner_03_C":                                    &QuarterPipeCorner03,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_04.Recipe_QuarterPipeCorner_04_C":                                    &QuarterPipeCorner04,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_QuartzCrystal.Recipe_QuartzCrystal_C":                                                            &QuartzCrystal,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Quickwire.Recipe_Quickwire_C":                                                                    &Quickwire,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RadarTower.Recipe_RadarTower_C":                                                                    &RadarTower,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_RadioControlUnit.Recipe_RadioControlUnit_C":                                                     &RadioControlUnit,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RailroadTrack.Recipe_RailroadTrack_C":                                                              &RailroadTrack,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x1_01.Recipe_Ramp_8x1_01_C":                                                            &Ramp8x101,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x2_01.Recipe_Ramp_8x2_01_C":                                                            &Ramp8x201,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_01.Recipe_Ramp_8x4_01_C":                                                            &Ramp8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_Inverted_01.Recipe_Ramp_8x4_Inverted_01_C":                                          &Ramp8x4Inverted01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x8x8.Recipe_Ramp_8x8x8_C":                                                              &Ramp8x8x8,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_01.Recipe_Ramp_Diagonal_8x1_01_C":                                          &RampDiagonal8x101,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_02.Recipe_Ramp_Diagonal_8x1_02_C":                                          &RampDiagonal8x102,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_01.Recipe_Ramp_Diagonal_8x2_01_C":                                          &RampDiagonal8x201,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_02.Recipe_Ramp_Diagonal_8x2_02_C":                                          &RampDiagonal8x202,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_01.Recipe_Ramp_Diagonal_8x4_01_C":                                          &RampDiagonal8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_02.Recipe_Ramp_Diagonal_8x4_02_C":                                          &RampDiagonal8x402,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble.Recipe_RampDouble_C":                                                              &RampDouble,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble_8x1.Recipe_RampDouble_8x1_C":                                                      &RampDouble8x1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1.Recipe_RampInverted_8x1_C":                                                  &RampInverted8x1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_01.Recipe_RampInverted_8x1_Corner_01_C":                              &RampInverted8x1Corner01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_02.Recipe_RampInverted_8x1_Corner_02_C":                              &RampInverted8x1Corner02,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_01.Recipe_RampInverted_8x2_01_C":                                            &RampInverted8x201,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_01.Recipe_RampInverted_8x2_Corner_01_C":                              &RampInverted8x2Corner01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_02.Recipe_RampInverted_8x2_Corner_02_C":                              &RampInverted8x2Corner02,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_01.Recipe_RampInverted_8x4_Corner_01_C":                              &RampInverted8x4Corner01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_02.Recipe_RampInverted_8x4_Corner_02_C":                              &RampInverted8x4Corner02,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_RawQuartz.Recipe_RawQuartz_C":                                                                   &RawQuartz,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_RebarGun.Recipe_RebarGun_C":                                                                        &RebarGun,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualFuel.Recipe_ResidualFuel_C":                                                              &ResidualFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Recipe_ResidualPlastic_C":                                                        &ResidualPlastic,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualRubber.Recipe_ResidualRubber_C":                                                          &ResidualRubber,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSink.Recipe_ResourceSink_C":                                                                &ResourceSink,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSinkShop.Recipe_ResourceSinkShop_C":                                                        &ResourceSinkShop,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Rotor.Recipe_Rotor_C":                                                                              &Rotor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Rubber.Recipe_Rubber_C":                                                                          &Rubber,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Screw.Recipe_Screw_C":                                                                            &Screw,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Silica.Recipe_Silica_C":                                                                          &Silica,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C":                                                          &SmelterBasicMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterMk1.Recipe_SmelterMk1_C":                                                                    &SmelterMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_Snow.Recipe_Snow_C":                                                                           &Snow,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowDispenser/Recipe_SnowDispenser.Recipe_SnowDispenser_C":                                       &SnowDispenser,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_Snowball.Recipe_Snowball_C":                                                                          &Snowball,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_SnowballWeapon.Recipe_SnowballWeapon_C":                                                              &SnowballWeapon,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowmanDecor/Recipe_Snowman.Recipe_Snowman_C":                                                    &Snowman,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/TowTruck/Recipe_SpaceElevator.Recipe_SpaceElevator_C":                                                     &SpaceElevator,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_1.Recipe_SpaceElevatorPart_1_C":                                         &SpaceElevatorPart1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_2.Recipe_SpaceElevatorPart_2_C":                                         &SpaceElevatorPart2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_3.Recipe_SpaceElevatorPart_3_C":                                         &SpaceElevatorPart3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_4.Recipe_SpaceElevatorPart_4_C":                                         &SpaceElevatorPart4,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_5.Recipe_SpaceElevatorPart_5_C":                                         &SpaceElevatorPart5,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_6.Recipe_SpaceElevatorPart_6_C":                                         &SpaceElevatorPart6,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_7.Recipe_SpaceElevatorPart_7_C":                                         &SpaceElevatorPart7,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_8.Recipe_SpaceElevatorPart_8_C":                                         &SpaceElevatorPart8,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_9.Recipe_SpaceElevatorPart_9_C":                                         &SpaceElevatorPart9,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpaceRifleMk1.Recipe_SpaceRifleMk1_C":                                                              &SpaceRifleMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpikedRebar.Recipe_SpikedRebar_C":                                                                  &SpikedRebar,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stair_1b.Recipe_Stair_1b_C":                                                                 &Stair1b,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Left_01.Recipe_Stairs_Left_01_C":                                                     &StairsLeft01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Right_01.Recipe_Stairs_Right_01_C":                                                   &StairsRight01,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Stator.Recipe_Stator_C":                                                                            &Stator,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelBeam.Recipe_SteelBeam_C":                                                                    &SteelBeam,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelPipe.Recipe_SteelPipe_C":                                                                    &SteelPipe,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk1.Recipe_StorageContainerMk1_C":                                                  &StorageContainerMk1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk2.Recipe_StorageContainerMk2_C":                                                  &StorageContainerMk2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StoragePlayer.Recipe_StoragePlayer_C":                                                              &StoragePlayer,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StreetLight.Recipe_StreetLight_C":                                                                  &StreetLight,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Sulfur.Recipe_Sulfur_C":                                                                         &Sulfur,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_SulfuricAcid.Recipe_SulfuricAcid_C":                                                              &SulfuricAcid,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Tractor.Recipe_Tractor_C":                                                                            &Tractor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TradingPost.Recipe_TradingPost_C":                                                                  &TradingPost,
+	"BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStation.Recipe_TrainDockingStation_C":                                    &TrainDockingStation,
+	"BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStationLiquid.Recipe_TrainDockingStationLiquid_C":                        &TrainDockingStationLiquid,
+	"BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainPlatformEmpty.Recipe_TrainPlatformEmpty_C":                                      &TrainPlatformEmpty,
+	"BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainStation.Recipe_TrainStation_C":                                                  &TrainStation,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_TreeGiftProducer.Recipe_TreeGiftProducer_C":                                                          &TreeGiftProducer,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Truck.Recipe_Truck_C":                                                                                &Truck,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TruckStation.Recipe_TruckStation_C":                                                                &TruckStation,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_UJellyLandingPad.Recipe_UJellyLandingPad_C":                                                        &UJellyLandingPad,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageAlumina.Recipe_UnpackageAlumina_C":                                                         &UnpackageAlumina,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageBioFuel.Recipe_UnpackageBioFuel_C":                                                      &UnpackageBioFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageFuel.Recipe_UnpackageFuel_C":                                                            &UnpackageFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitricAcid.Recipe_UnpackageNitricAcid_C":                                                   &UnpackageNitricAcid,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitrogen.Recipe_UnpackageNitrogen_C":                                                       &UnpackageNitrogen,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOil.Recipe_UnpackageOil_C":                                                              &UnpackageOil,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOilResidue.Recipe_UnpackageOilResidue_C":                                                &UnpackageOilResidue,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageSulfuricAcid.Recipe_UnpackageSulfuricAcid_C":                                               &UnpackageSulfuricAcid,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageTurboFuel.Recipe_UnpackageTurboFuel_C":                                                  &UnpackageTurboFuel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageWater.Recipe_UnpackageWater_C":                                                          &UnpackageWater,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_UraniumCell.Recipe_UraniumCell_C":                                                                  &UraniumCell,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Valve.Recipe_Valve_C":                                                                              &Valve,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Cross.Recipe_Walkway_Cross_C":                                                     &WalkwayCross,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Ramp.Recipe_Walkway_Ramp_C":                                                       &WalkwayRamp,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Straight.Recipe_Walkway_Straight_C":                                               &WalkwayStraight,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_T.Recipe_Walkway_T_C":                                                             &WalkwayT,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Turn.Recipe_Walkway_Turn_C":                                                       &WalkwayTurn,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_01.Recipe_Wall_8x4_01_C":                                                            &Wall8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_02.Recipe_Wall_8x4_02_C":                                                            &Wall8x402,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01.Recipe_Wall_Conveyor_8x4_01_C":                                          &WallConveyor8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01_Steel.Recipe_Wall_Conveyor_8x4_01_Steel_C":                              &WallConveyor8x401Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02.Recipe_Wall_Conveyor_8x4_02_C":                                          &WallConveyor8x402,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02_Steel.Recipe_Wall_Conveyor_8x4_02_Steel_C":                              &WallConveyor8x402Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03.Recipe_Wall_Conveyor_8x4_03_C":                                          &WallConveyor8x403,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03_Steel.Recipe_Wall_Conveyor_8x4_03_Steel_C":                              &WallConveyor8x403Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04.Recipe_Wall_Conveyor_8x4_04_C":                                          &WallConveyor8x404,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04_Steel.Recipe_Wall_Conveyor_8x4_04_Steel_C":                              &WallConveyor8x404Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01.Recipe_Wall_Door_8x4_01_C":                                                  &WallDoor8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01_Steel.Recipe_Wall_Door_8x4_01_Steel_C":                                      &WallDoor8x401Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02.Recipe_Wall_Door_8x4_02_C":                                                  &WallDoor8x402,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02_Steel.Recipe_Wall_Door_8x4_02_Steel_C":                                      &WallDoor8x402Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03.Recipe_Wall_Door_8x4_03_C":                                                  &WallDoor8x403,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03_Steel.Recipe_Wall_Door_8x4_03_Steel_C":                                      &WallDoor8x403Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Gate_8x4_01.Recipe_Wall_Gate_8x4_01_C":                                                  &WallGate8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_01.Recipe_Wall_Window_8x4_01_C":                                              &WallWindow8x401,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_02.Recipe_Wall_Window_8x4_02_C":                                              &WallWindow8x402,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03.Recipe_Wall_Window_8x4_03_C":                                              &WallWindow8x403,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03_Steel.Recipe_Wall_Window_8x4_03_Steel_C":                                  &WallWindow8x403Steel,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_04.Recipe_Wall_Window_8x4_04_C":                                              &WallWindow8x404,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WaterPump.Recipe_WaterPump_C":                                                                      &WaterPump,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Wire.Recipe_Wire_C":                                                                              &Wire,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WorkBench.Recipe_WorkBench_C":                                                                      &WorkBench,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Workshop.Recipe_Workshop_C":                                                                        &Workshop,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/WreathDecor/Recipe_WreathDecor.Recipe_WreathDecor_C":                                             &WreathDecor,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Recipe_XMassTree.Recipe_XMassTree_C":                                                   &XMassTree,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoBasher.Recipe_XenoBasher_C":                                                                    &XenoBasher,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoZapper.Recipe_XenoZapper_C":                                                                    &XenoZapper,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall1.Recipe_XmasBall1_C":                                                                 &XmasBall1,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall2.Recipe_XmasBall2_C":                                                                 &XmasBall2,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall3.Recipe_XmasBall3_C":                                                                 &XmasBall3,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall4.Recipe_XmasBall4_C":                                                                 &XmasBall4,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBallCluster.Recipe_XmasBallCluster_C":                                                     &XmasBallCluster,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBow.Recipe_XmasBow_C":                                                                     &XmasBow,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBranch.Recipe_XmasBranch_C":                                                               &XmasBranch,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasStar.Recipe_XmasStar_C":                                                                   &XmasStar,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasWreath.Recipe_XmasWreath_C":                                                               &XmasWreath,
+	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ZipLine.Recipe_ZipLine_C":                                                                          &ZipLine,
+	"BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/PowerLineLights/Recipe_xmassLights.Recipe_xmassLights_C":                                         &xmassLights,
 }

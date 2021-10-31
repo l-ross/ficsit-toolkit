@@ -126,7 +126,7 @@ func GetByClassName(className string) (*FGBuildableGeneratorGeoThermal, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableGeneratorGeoThermal with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableGeneratorGeoThermal with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableGeneratorGeoThermal{

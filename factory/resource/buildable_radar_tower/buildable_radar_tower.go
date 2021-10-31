@@ -116,7 +116,7 @@ func GetByClassName(className string) (*FGBuildableRadarTower, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableRadarTower with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableRadarTower with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableRadarTower{

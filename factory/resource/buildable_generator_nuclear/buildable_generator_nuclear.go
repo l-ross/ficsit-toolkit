@@ -163,7 +163,7 @@ func GetByClassName(className string) (*FGBuildableGeneratorNuclear, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableGeneratorNuclear with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableGeneratorNuclear with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableGeneratorNuclear{

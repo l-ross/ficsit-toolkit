@@ -69,7 +69,7 @@ func GetByClassName(className string) (*FGJetPack, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGJetPack with name %s", className)
+	return nil, fmt.Errorf("failed to find FGJetPack with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGJetPack{

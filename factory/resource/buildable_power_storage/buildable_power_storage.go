@@ -121,7 +121,7 @@ func GetByClassName(className string) (*FGBuildablePowerStorage, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePowerStorage with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildablePowerStorage with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildablePowerStorage{

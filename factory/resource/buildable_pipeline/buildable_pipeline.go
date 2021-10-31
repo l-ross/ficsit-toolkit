@@ -131,7 +131,7 @@ func GetByClassName(className string) (*FGBuildablePipeline, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePipeline with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildablePipeline with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildablePipeline{

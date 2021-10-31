@@ -185,7 +185,7 @@ func GetByClassName(className string) (*FGConsumableDescriptor, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGConsumableDescriptor with name %s", className)
+	return nil, fmt.Errorf("failed to find FGConsumableDescriptor with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGConsumableDescriptor{

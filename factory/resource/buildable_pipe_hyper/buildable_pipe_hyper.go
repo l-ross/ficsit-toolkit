@@ -62,7 +62,7 @@ func GetByClassName(className string) (*FGBuildablePipeHyper, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePipeHyper with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildablePipeHyper with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildablePipeHyper{

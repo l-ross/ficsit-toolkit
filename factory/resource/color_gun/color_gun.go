@@ -63,7 +63,7 @@ func GetByClassName(className string) (*FGColorGun, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGColorGun with name %s", className)
+	return nil, fmt.Errorf("failed to find FGColorGun with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGColorGun{

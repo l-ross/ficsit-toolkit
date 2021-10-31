@@ -125,7 +125,7 @@ func GetByClassName(className string) (*FGBuildableFrackingActivator, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFrackingActivator with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableFrackingActivator with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableFrackingActivator{

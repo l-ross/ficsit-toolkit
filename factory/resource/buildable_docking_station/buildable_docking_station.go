@@ -114,7 +114,7 @@ func GetByClassName(className string) (*FGBuildableDockingStation, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableDockingStation with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableDockingStation with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableDockingStation{

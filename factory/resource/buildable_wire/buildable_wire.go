@@ -88,7 +88,7 @@ func GetByClassName(className string) (*FGBuildableWire, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableWire with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableWire with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableWire{

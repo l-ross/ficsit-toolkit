@@ -58,7 +58,7 @@ func GetByClassName(className string) (*FGBuildableSnowDispenser, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableSnowDispenser with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableSnowDispenser with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableSnowDispenser{

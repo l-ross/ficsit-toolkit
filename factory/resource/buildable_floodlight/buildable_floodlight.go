@@ -103,7 +103,7 @@ func GetByClassName(className string) (*FGBuildableFloodlight, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFloodlight with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableFloodlight with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableFloodlight{

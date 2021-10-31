@@ -1011,7 +1011,7 @@ func GetByClassName(className string) (*FGBuildableFoundation, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFoundation with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableFoundation with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableFoundation{

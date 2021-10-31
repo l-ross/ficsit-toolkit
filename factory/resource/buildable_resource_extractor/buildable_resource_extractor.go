@@ -302,7 +302,7 @@ func GetByClassName(className string) (*FGBuildableResourceExtractor, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableResourceExtractor with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableResourceExtractor with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableResourceExtractor{

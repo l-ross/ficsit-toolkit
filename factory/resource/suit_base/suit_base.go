@@ -53,7 +53,7 @@ func GetByClassName(className string) (*FGSuitBase, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGSuitBase with name %s", className)
+	return nil, fmt.Errorf("failed to find FGSuitBase with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGSuitBase{

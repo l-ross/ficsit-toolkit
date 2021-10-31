@@ -139,7 +139,7 @@ func GetByClassName(className string) (*FGBuildableJumppad, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableJumppad with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableJumppad with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableJumppad{

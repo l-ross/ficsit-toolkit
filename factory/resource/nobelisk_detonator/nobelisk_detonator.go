@@ -61,7 +61,7 @@ func GetByClassName(className string) (*FGNobeliskDetonator, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGNobeliskDetonator with name %s", className)
+	return nil, fmt.Errorf("failed to find FGNobeliskDetonator with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGNobeliskDetonator{

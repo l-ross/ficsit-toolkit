@@ -64,7 +64,7 @@ func GetByClassName(className string) (*FGBuildableRailroadTrack, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableRailroadTrack with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableRailroadTrack with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableRailroadTrack{

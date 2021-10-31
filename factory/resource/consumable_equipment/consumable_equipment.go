@@ -69,7 +69,7 @@ func GetByClassName(className string) (*FGConsumableEquipment, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGConsumableEquipment with name %s", className)
+	return nil, fmt.Errorf("failed to find FGConsumableEquipment with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGConsumableEquipment{

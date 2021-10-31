@@ -310,7 +310,7 @@ func GetByClassName(className string) (*FGItemDescriptorBiomass, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGItemDescriptorBiomass with name %s", className)
+	return nil, fmt.Errorf("failed to find FGItemDescriptorBiomass with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGItemDescriptorBiomass{

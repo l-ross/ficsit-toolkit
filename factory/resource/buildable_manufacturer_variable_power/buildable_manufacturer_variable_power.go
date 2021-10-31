@@ -139,7 +139,7 @@ func GetByClassName(className string) (*FGBuildableManufacturerVariablePower, er
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableManufacturerVariablePower with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableManufacturerVariablePower with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableManufacturerVariablePower{

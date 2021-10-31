@@ -181,7 +181,7 @@ func GetByClassName(className string) (*FGBuildableConveyorLift, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableConveyorLift with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableConveyorLift with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableConveyorLift{

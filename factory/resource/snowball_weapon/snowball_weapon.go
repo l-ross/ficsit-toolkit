@@ -61,7 +61,7 @@ func GetByClassName(className string) (*FGSnowballWeapon, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGSnowballWeapon with name %s", className)
+	return nil, fmt.Errorf("failed to find FGSnowballWeapon with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGSnowballWeapon{

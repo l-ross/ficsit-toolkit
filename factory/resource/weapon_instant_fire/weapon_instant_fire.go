@@ -57,7 +57,7 @@ func GetByClassName(className string) (*FGWeaponInstantFire, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGWeaponInstantFire with name %s", className)
+	return nil, fmt.Errorf("failed to find FGWeaponInstantFire with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGWeaponInstantFire{

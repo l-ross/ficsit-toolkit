@@ -327,7 +327,7 @@ func GetByClassName(className string) (*FGBuildableFactory, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFactory with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableFactory with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableFactory{

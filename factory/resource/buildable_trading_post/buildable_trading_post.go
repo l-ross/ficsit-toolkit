@@ -135,7 +135,7 @@ func GetByClassName(className string) (*FGBuildableTradingPost, error) {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableTradingPost with name %s", className)
+	return nil, fmt.Errorf("failed to find FGBuildableTradingPost with class name %s", className)
 }
 
 var classNameToVar = map[string]*FGBuildableTradingPost{
