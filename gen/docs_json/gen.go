@@ -43,19 +43,12 @@ func realMain() error {
 	r := transform.NewReader(f, unicode.UTF16(unicode.LittleEndian, unicode.ExpectBOM).NewDecoder().Transformer)
 
 	resources := make([]Resource, 0)
-
 	err = json.NewDecoder(r).Decode(&resources)
 	if err != nil {
 		return err
 	}
 
 	for _, r := range resources {
-		//if r.NativeClass != "Class'/Script/FactoryGame.FGSchematic'" {
-		//	continue
-		//}
-
-		fmt.Println(r.NativeClass)
-
 		err = r.generate()
 		if err != nil {
 			return err
@@ -66,16 +59,39 @@ func realMain() error {
 }
 
 type Resource struct {
+	// Fields that are populated by Docs.json
 	NativeClass string   `json:"NativeClass"`
 	Classes     []*Class `json:"Classes"`
 
-	TypeName     string `json:"-"`
-	PkgName      string
-	StructFields []StructField `json:"-'"`
-	structFields map[string]string
+	// TypeName is derived from NativeClass.
+	// e.g `Class'/Script/FactoryGame.FGItemDescriptor'` becomes `FGItemDescriptor`
+	TypeName string `json:"-"`
 
-	ImportResourcePkg bool
+	// PkgName is the name of the package this resource will be in.
+	// Derived from the TypeName.
+	// e.g. `FGItemDescriptor` becomes `item_descriptor`
+	PkgName string `json:"-"`
 
+	// StructDefs defines the names and types that will appear in the definition
+	// of the struct for this Resource type
+	StructDefs []*StructField `json:"-'"`
+
+	// Map defining the names of the fields that will appear in the struct and their types
+	// This is populated as we parse the classes within the resource and ensures that
+	// we don't end up with the same field in multiple classes but different types.
+	// Is used to populate StructDefs
+	// Key = name of field
+	// Value = type of field
+	structDef map[string]string
+
+	// If true then one of the Classes is using a type defined in the base resource package, so we
+	// need to import it.
+	ImportResourcePkg bool `json:"-"`
+
+	// As the classes are being parsed any fields where the value is an array are populated here.
+	// Once we have finished parsing all the classes we can then figure out the format of these fields.
+	// We need to wait until we have parsed all classes as the fields within the array may differ
+	// by class.
 	arrayFields map[string][]interface{}
 }
 
@@ -85,80 +101,126 @@ type StructField struct {
 	Value string
 }
 
+// Class is a class as defined with Docs.json
 type Class struct {
-	Name   string
-	Type   string
-	Fields []StructField
-
+	// The ClassName as taken from Docs.json
 	ClassName string
+
+	// Name is derived from the ClassName and will be used as the variable name.
+	// e.g. ClassName `Desc_NuclearWaste_C` becomes `NuclearWaste`
+	Name string
+
+	// The name of the resource type that the Class variable will be a type of.
+	ResourceTypeName string
+
+	// The fields for this Class variable
+	Fields []*StructField
+
+	// Set by Class.UnmarshalJSON.
+	// We initially read all fields of a class in as interface types.
 	rawFields map[string]interface{}
 }
 
-var lowerM = regexp.MustCompile(`^m`)
-
 var invalidChars = regexp.MustCompile(`[^a-zA-Z0-9_]`)
-
 var startDigit = regexp.MustCompile(`^\d`)
 
 func (c *Class) UnmarshalJSON(b []byte) error {
+	// Unmarshal all the fields
 	c.rawFields = make(map[string]interface{})
-
 	err := json.Unmarshal(b, &c.rawFields)
 	if err != nil {
 		return err
 	}
 
+	// Set ClassName
 	c.ClassName = c.rawFields["ClassName"].(string)
 	delete(c.rawFields, "ClassName")
 
+	// Set Name based on the ClassName
+	// We want to:
+	// - Remove the _C suffix
+	// - Ideally remove everything before the first underscore. However, we need to keep it
+	//   if this would result in the Name starting with a number as we would then have an invalid
+	//   variable name.
+	// - Replace hyphens with underscores.
 	s := strings.Split(c.ClassName, "_")
 	l := len(s)
 	c.Name = strings.Join(s[1:l-1], "")
 	if startDigit.MatchString(c.Name) {
+		// Name starts with a digit so add the first element back.
 		c.Name = strings.Join(s[0:l-1], "")
 	}
-
 	c.Name = strings.ReplaceAll(c.Name, "-", "_")
 
-	for n, v := range c.rawFields {
-		n2 := lowerM.ReplaceAllString(n, "M")
-		n2 = invalidChars.ReplaceAllString(n2, "")
+	for name, value := range c.rawFields {
+		// Make sure the first character is upper case so that
+		// the field is public in Go.
+		// Lots of the fields start 'm'
+		newName := firstCharUpper(name)
+		// Remove any characters that would not be valid in the field name in Go.
+		// Some fields contain '?'
+		newName = invalidChars.ReplaceAllString(newName, "")
 
-		if n2 != n {
-			c.rawFields[n2] = v
-			delete(c.rawFields, n)
+		// If the above has resulted in newName differing from name then update
+		// c.rawFields
+		if newName != name {
+			c.rawFields[newName] = value
+			delete(c.rawFields, name)
 		}
 	}
 
 	return nil
 }
 
-var fgRegexp = regexp.MustCompile(`^FG`)
-
 func (r *Resource) generate() error {
-	r.TypeName = strings.Split(r.NativeClass, ".")[1]
-	r.TypeName = strings.ReplaceAll(r.TypeName, "'", "")
-	r.PkgName = fgRegexp.ReplaceAllString(r.TypeName, "")
+	r.TypeName, r.PkgName = nativeClassToTypeNameAndPkgName(r.NativeClass)
 
-	r.structFields = make(map[string]string)
-	r.StructFields = make([]StructField, 0)
+	r.structDef = make(map[string]string)
+	r.StructDefs = make([]*StructField, 0)
 	r.arrayFields = make(map[string][]interface{})
 
+	// For each Class parse all of its fields.
 	for _, c := range r.Classes {
-		fields, err := r.determineFields(c.rawFields)
+		fields, err := r.parseFields(c.rawFields)
 		if err != nil {
 			return err
 		}
 
 		c.Fields = fields
-		c.Type = r.TypeName
+		c.ResourceTypeName = r.TypeName
 	}
 
-	err := r.determineArrayFields()
+	// If any of the classes contained fields with an array value
+	// then parse them and update the classes with the new fields.
+	//
+	// We have to parse the array fields for all classes at once
+	// to ensure the struct definition is correct as not all instances of
+	// an array may contain all fields.
+	//
+	// Example below shows the same field in 3 classes with different fields in each array item.
+	//
+	// "mUnlocks": [],
+	//
+	// "mUnlocks": [
+	// 	{
+	//		"Class": "BP_UnlockRecipe_C",
+	//		"mRecipes": "(BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Buildings/Recipe_Workshop.Recipe_Workshop_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Equipment/Recipe_PortableMiner.Recipe_PortableMiner_C\"')"
+	//	},
+	// ],
+	//
+	// "mUnlocks": [
+	//	{
+	//		"Class": "BP_UnlockScannableResource_C",
+	//		"mResourcesToAddToScanner": "(BlueprintGeneratedClass'\"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C\"')",
+	//		"mResourcePairsToAddToScanner": "((ResourceDescriptor=BlueprintGeneratedClass'\"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C\"'))"
+	//	}
+	// ],
+	err := r.parseArrayFields()
 	if err != nil {
 		return err
 	}
 
+	// Sort classes and their fields so that code gen is consistent.
 	sort.Slice(r.Classes, func(i, j int) bool {
 		if r.Classes[i].Name < r.Classes[j].Name {
 			return true
@@ -167,35 +229,23 @@ func (r *Resource) generate() error {
 	})
 
 	for _, c := range r.Classes {
-		sort.Slice(c.Fields, func(i, j int) bool {
-			if c.Fields[i].Name < c.Fields[j].Name {
-				return true
-			}
-			return false
-		})
+		sortFields(c.Fields)
 	}
 
-	for n, t := range r.structFields {
-		r.StructFields = append(r.StructFields, StructField{
+	// Create the struct definition for the resource type and sort the fields.
+	for n, t := range r.structDef {
+		r.StructDefs = append(r.StructDefs, &StructField{
 			Name: n,
 			Type: t,
 		})
 	}
-
-	sort.Slice(r.StructFields, func(i, j int) bool {
-		if r.StructFields[i].Name < r.StructFields[j].Name {
-			return true
-		}
-		return false
-	})
+	sortFields(r.StructDefs)
 
 	fileName := toSnakeCase(r.PkgName)
 	dirName := fmt.Sprintf("../../resource/%s", fileName)
 	fileName = fmt.Sprintf("%s/%s.go", dirName, fileName)
 
-	os.RemoveAll(dirName)
-
-	err = os.Mkdir(dirName, 0700)
+	err = recreateDir(dirName)
 	if err != nil {
 		return err
 	}
@@ -220,123 +270,45 @@ func (r *Resource) generate() error {
 	return nil
 }
 
-func (r *Resource) determineArrayFields() error {
-	for name, field := range r.arrayFields {
-		structTypes := make(map[string]string)
-		values := make([][][]*StructField, len(r.Classes))
+// Parse each field in v and return a StructField for each.
+func (r *Resource) parseFields(v map[string]interface{}) ([]*StructField, error) {
+	fields := make([]*StructField, 0)
 
-		for i, f := range field {
-			if f == nil {
-				continue
-			}
-			f2 := f.([]interface{})
-
-			arrayValues := make([][]*StructField, 0)
-			for _, f3 := range f2 {
-
-				f4 := f3.(map[string]interface{})
-
-				arrayValue := make([]*StructField, 0)
-
-				for k, v := range f4 {
-					sf, err := r.createStructField(k, v)
-					if err != nil {
-						return err
-					}
-
-					if t, ok := structTypes[sf.Name]; ok && t != sf.Type {
-						return fmt.Errorf("type mismatch in field %s with types %s and %s", sf.Name, sf.Type, t)
-					}
-
-					structTypes[sf.Name] = sf.Type
-
-					arrayValue = append(arrayValue, sf)
-				}
-
-				sort.Slice(arrayValue, func(i, j int) bool {
-					if arrayValue[i].Name < arrayValue[j].Name {
-						return true
-					}
-					return false
-				})
-
-				arrayValues = append(arrayValues, arrayValue)
-
-			}
-
-			values[i] = arrayValues
-		}
-
-		sortedTypes := make([]*StructField, 0)
-
-		for n, t := range structTypes {
-			sortedTypes = append(sortedTypes, &StructField{
-				Name: n,
-				Type: t,
-			})
-		}
-
-		sort.Slice(sortedTypes, func(i, j int) bool {
-			if sortedTypes[i].Name < sortedTypes[j].Name {
-				return true
-			}
-			return false
-		})
-
-		var b bytes.Buffer
-
-		err := structTpl.Execute(&b, sortedTypes)
+	for n, f := range v {
+		sf, err := r.createStructField(n, f)
 		if err != nil {
-			return err
+			return nil, err
 		}
 
-		r.structFields[name] = b.String()
-
-		a := array{
-			Fields: sortedTypes,
-		}
-
-		for i, v := range values {
-			if v == nil {
-				r.Classes[i].Fields = append(r.Classes[i].Fields, StructField{
-					Name:  name,
-					Value: "nil",
-				})
-				continue
+		// sf will be nil if the field was an array.
+		// We have to skip these here and deal with them later.
+		if sf != nil {
+			// Check that we are being consistent with the type of a field.
+			// e.g. If the field "TEST" was a float in one class but a string in another
+			// then something has gone wrong.
+			if storedType, ok := r.structDef[n]; ok && storedType != sf.Type {
+				return nil, fmt.Errorf("type mismatch in field %s with types %s and %s", n, sf.Type, storedType)
 			}
 
-			a.Values = v
-
-			var b bytes.Buffer
-
-			err := arrayStructValTpl.Execute(&b, a)
-			if err != nil {
-				return err
-			}
-
-			r.Classes[i].Fields = append(r.Classes[i].Fields, StructField{
-				Name:  name,
-				Value: b.String(),
-			})
-
+			r.structDef[n] = sf.Type
+			fields = append(fields, sf)
 		}
 	}
 
-	return nil
+	return fields, nil
 }
 
-type array struct {
-	Fields []*StructField
-	Values [][]*StructField
-}
+var floatRegexp = regexp.MustCompile(`^-?\d+\.\d+$`)
+var intRegexp = regexp.MustCompile(`^-?\d+$`)
 
 func (r *Resource) createStructField(k string, v interface{}) (*StructField, error) {
 	sf := &StructField{
-		Name: lowerM.ReplaceAllString(k, "M"),
+		Name: firstCharUpper(k),
 	}
 
 	switch v.(type) {
 	case string:
+		// Field is a string, based on its value figure out the correct type.
 		vString := v.(string)
 
 		switch {
@@ -374,6 +346,18 @@ func (r *Resource) createStructField(k string, v interface{}) (*StructField, err
 			sf.Type = "string"
 			sf.Value = fmt.Sprintf("`%s`", vString)
 		}
+	case []interface{}:
+		// Field is an array.
+		// Add to arrayFields so we can deal with it latter
+		arr := v.([]interface{})
+
+		if len(arr) == 0 {
+			r.arrayFields[k] = append(r.arrayFields[k], nil)
+		} else {
+			r.arrayFields[k] = append(r.arrayFields[k], arr)
+		}
+
+		return nil, nil
 	default:
 		return nil, fmt.Errorf("unsupported type in field %s", k)
 	}
@@ -381,89 +365,141 @@ func (r *Resource) createStructField(k string, v interface{}) (*StructField, err
 	return sf, nil
 }
 
-var floatRegexp = regexp.MustCompile(`^-?\d+\.\d+$`)
+func (r *Resource) parseArrayFields() error {
+	// Here be dragons 🐉 and crufty code.
 
-var intRegexp = regexp.MustCompile(`^-?\d+$`)
+	for name, field := range r.arrayFields {
+		// Keep track of the type of each field in the struct definition.
+		structTypes := make(map[string]string)
+		values := make([][][]*StructField, len(r.Classes))
 
-func (r *Resource) determineFields(v map[string]interface{}) ([]StructField, error) {
-	fields := make([]StructField, 0)
+		for i, f := range field {
+			if f == nil {
+				continue
+			}
 
-	i := 0
-	for n, f := range v {
-		sf := StructField{
-			Name: n,
-		}
+			// Example classArray:
+			//  [
+			//		{
+			//			"Class": "BP_UnlockRecipe_C",
+			//			"mRecipes": "(BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Buildings/Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerLine.Recipe_PowerLine_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Smelter/Recipe_IngotCopper.Recipe_IngotCopper_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Constructor/Recipe_Wire.Recipe_Wire_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Constructor/Recipe_Cable.Recipe_Cable_C\"')"
+			//		},
+			//		{
+			//			"Class": "BP_UnlockScannableResource_C",
+			//			"mResourcesToAddToScanner": "(BlueprintGeneratedClass'\"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C\"')",
+			//			"mResourcePairsToAddToScanner": "((ResourceDescriptor=BlueprintGeneratedClass'\"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C\"'))"
+			//		}
+			//	],
+			classArray := f.([]interface{})
 
-		switch f.(type) {
-		case string:
-			fStr := f.(string)
+			arrayValues := make([][]*StructField, 0)
+			for _, classArrayElement := range classArray {
+				// Example classArrayElement:
+				//		{
+				//			"Class": "BP_UnlockRecipe_C",
+				//			"mRecipes": "(BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Buildings/Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerLine.Recipe_PowerLine_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Smelter/Recipe_IngotCopper.Recipe_IngotCopper_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Constructor/Recipe_Wire.Recipe_Wire_C\"',BlueprintGeneratedClass'\"/Game/FactoryGame/Recipes/Constructor/Recipe_Cable.Recipe_Cable_C\"')"
+				//		},
 
-			switch {
-			case strings.ToUpper(fStr) == "TRUE":
-				sf.Type = "bool"
-				sf.Value = "true"
-			case strings.ToUpper(fStr) == "FALSE":
-				sf.Type = "bool"
-				sf.Value = "false"
-			case strings.HasPrefix(fStr, "SS_"):
-				r.ImportResourcePkg = true
-				sf.Type = "resource.StackSize"
+				// Example classArrayElementField:
+				// "Class": "BP_UnlockRecipe_C",
+				classArrayElementField := classArrayElement.(map[string]interface{})
 
-				v, ok := stackSize[fStr]
-				if !ok {
-					return nil, fmt.Errorf("failed to parse stack size value %s", fStr)
+				arrayValue := make([]*StructField, 0)
+
+				for k, v := range classArrayElementField {
+					sf, err := r.createStructField(k, v)
+					if err != nil {
+						return err
+					}
+
+					// Check that all fields with the same name have the same type.
+					if storedType, ok := structTypes[sf.Name]; ok && storedType != sf.Type {
+						return fmt.Errorf("type mismatch in field %s with types %s and %s", sf.Name, sf.Type, storedType)
+					}
+
+					structTypes[sf.Name] = sf.Type
+					arrayValue = append(arrayValue, sf)
 				}
-				sf.Value = v
-			case strings.HasPrefix(fStr, "RF_"):
-				r.ImportResourcePkg = true
-				sf.Type = "resource.Form"
 
-				v, ok := resourceForm[fStr]
-				if !ok {
-					return nil, fmt.Errorf("failed to parse resource form value %s", fStr)
-				}
-				sf.Value = v
-			case floatRegexp.MatchString(fStr):
-				sf.Type = "float64"
-				sf.Value = fStr
-			case intRegexp.MatchString(fStr):
-				sf.Type = "int"
-				sf.Value = fStr
-			default:
-				sf.Type = "string"
-				sf.Value = fmt.Sprintf("`%s`", fStr)
+				sort.Slice(arrayValue, func(i, j int) bool {
+					if arrayValue[i].Name < arrayValue[j].Name {
+						return true
+					}
+					return false
+				})
+
+				arrayValues = append(arrayValues, arrayValue)
+
 			}
 
-			if t2, ok := r.structFields[n]; ok && t2 != sf.Type {
-				return nil, fmt.Errorf("type mismatch in field %s with types %s and %s", n, sf.Type, t2)
-			}
-
-			r.structFields[n] = sf.Type
-
-		case []interface{}:
-			f2 := f.([]interface{})
-
-			if len(f2) == 0 {
-				r.arrayFields[n] = append(r.arrayFields[n], nil)
-			} else {
-				r.arrayFields[n] = append(r.arrayFields[n], f.([]interface{}))
-			}
-
-		default:
-			return nil, fmt.Errorf("unknown type of field %s", n)
+			values[i] = arrayValues
 		}
 
-		if sf.Type != "" {
-			fields = append(fields, sf)
+		sortedTypes := make([]*StructField, 0)
+
+		for n, t := range structTypes {
+			sortedTypes = append(sortedTypes, &StructField{
+				Name: n,
+				Type: t,
+			})
 		}
 
-		i++
+		sort.Slice(sortedTypes, func(i, j int) bool {
+			if sortedTypes[i].Name < sortedTypes[j].Name {
+				return true
+			}
+			return false
+		})
+
+		var b bytes.Buffer
+
+		err := arrayStructDef.Execute(&b, sortedTypes)
+		if err != nil {
+			return err
+		}
+
+		r.structDef[name] = b.String()
+
+		a := array{
+			Fields: sortedTypes,
+		}
+
+		for i, v := range values {
+			if v == nil {
+				r.Classes[i].Fields = append(r.Classes[i].Fields, &StructField{
+					Name:  name,
+					Value: "nil",
+				})
+				continue
+			}
+
+			a.Values = v
+
+			var b bytes.Buffer
+
+			err := arrayStructValTpl.Execute(&b, a)
+			if err != nil {
+				return err
+			}
+
+			r.Classes[i].Fields = append(r.Classes[i].Fields, &StructField{
+				Name:  name,
+				Value: b.String(),
+			})
+		}
 	}
 
-	return fields, nil
+	return nil
+}
+
+type array struct {
+	Fields []*StructField
+	Values [][]*StructField
 }
 
 var tpl = template.Must(template.New("resource").Parse(`
+// Code generated by ../../gen/docs_json. DO NOT EDIT.
+
 package {{.PkgName}}
 
 import (
@@ -474,12 +510,12 @@ import (
 
 type {{.TypeName}} struct{
 	ClassName string
-	{{range .StructFields}}		{{.Name}} {{.Type}}
+	{{range .StructDefs}}		{{.Name}} {{.Type}}
 {{end}}
 }
 
 var (
-	{{range .Classes}}	{{.Name}} = {{.Type}}{
+	{{range .Classes}}	{{.Name}} = {{.ResourceTypeName}}{
 		ClassName: "{{.ClassName}}",
 		{{range .Fields}}		{{.Name}}: {{.Value}},
 		{{end}}
@@ -503,7 +539,7 @@ var classNameToVar = map[string]*{{.TypeName}} {
 
 `))
 
-var structTpl = template.Must(template.New("ArrayStructDev").Parse(` []struct {
+var arrayStructDef = template.Must(template.New("ArrayStructDef").Parse(` []struct {
 	{{range .}} {{.Name}} {{.Type}}
 	{{end}}
 }
@@ -520,33 +556,3 @@ var arrayStructValTpl = template.Must(template.New("ArrayStructVal").Parse(`[]st
 	},
 	{{end}}
 }`))
-
-//{{range .Values}} {{.Name}}: {{.Value}},
-//	{{end}}
-
-var stackSize = map[string]string{
-	"SS_ONE":    "resource.One",
-	"SS_SMALL":  "resource.Small",
-	"SS_MEDIUM": "resource.Medium",
-	"SS_BIG":    "resource.Big",
-	"SS_HUGE":   "resource.Huge",
-	"SS_FLUID":  "resource.Fluid",
-}
-
-var resourceForm = map[string]string{
-	"RF_INVALID": "resource.Invalid",
-	"RF_SOLID":   "resource.Solid",
-	"RF_LIQUID":  "resource.Liquid",
-	"RF_GAS":     "resource.Gas",
-	"RF_HEAT":    "resource.Heat",
-}
-
-// Source: https://gist.github.com/stoewer/fbe273b711e6a06315d19552dd4d33e6
-var matchFirstCap = regexp.MustCompile("(.)([A-Z][a-z]+)")
-var matchAllCap = regexp.MustCompile("([a-z0-9])([A-Z])")
-
-func toSnakeCase(str string) string {
-	snake := matchFirstCap.ReplaceAllString(str, "${1}_${2}")
-	snake = matchAllCap.ReplaceAllString(snake, "${1}_${2}")
-	return strings.ToLower(snake)
-}
