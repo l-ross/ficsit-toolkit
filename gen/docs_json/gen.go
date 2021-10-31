@@ -1,5 +1,3 @@
-//go:build gen
-
 package main
 
 import (
@@ -182,8 +180,9 @@ func (r *Resource) generate() error {
 		return false
 	})
 
-	dirName := toSnakeCase(r.PkgName)
-	fileName := fmt.Sprintf("%s/%s.go", dirName, dirName)
+	fileName := toSnakeCase(r.PkgName)
+	dirName := fmt.Sprintf("../../resource/%s", fileName)
+	fileName = fmt.Sprintf("%s/%s.go", dirName, fileName)
 
 	os.RemoveAll(dirName)
 
@@ -244,6 +243,13 @@ func (r *Resource) determineArrayFields() error {
 
 					arrayValue = append(arrayValue, sf)
 				}
+
+				sort.Slice(arrayValue, func(i, j int) bool {
+					if arrayValue[i].Name < arrayValue[j].Name {
+						return true
+					}
+					return false
+				})
 
 				arrayValues = append(arrayValues, arrayValue)
 

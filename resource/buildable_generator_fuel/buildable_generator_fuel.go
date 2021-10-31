@@ -139,10 +139,10 @@ Resource consumption will automatically be lowered to meet power demands.`,
 			MSupplementalResourceClass string
 		}{
 			{
+				MByproduct:                 ``,
 				MByproductAmount:           ``,
 				MFuelClass:                 `FGItemDescriptorBiomass`,
 				MSupplementalResourceClass: ``,
-				MByproduct:                 ``,
 			},
 		},
 	}
@@ -213,22 +213,22 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 			MSupplementalResourceClass string
 		}{
 			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
 				MFuelClass:                 `Desc_Coal_C`,
 				MSupplementalResourceClass: `Desc_Water_C`,
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
 			},
 			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
 				MFuelClass:                 `Desc_CompactedCoal_C`,
 				MSupplementalResourceClass: `Desc_Water_C`,
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
 			},
 			{
+				MByproduct:                 ``,
 				MByproductAmount:           ``,
 				MFuelClass:                 `Desc_PetroleumCoke_C`,
 				MSupplementalResourceClass: `Desc_Water_C`,
-				MByproduct:                 ``,
 			},
 		},
 	}
@@ -301,22 +301,22 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 			MSupplementalResourceClass string
 		}{
 			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
 				MFuelClass:                 `Desc_LiquidFuel_C`,
 				MSupplementalResourceClass: ``,
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
 			},
 			{
+				MByproduct:                 ``,
+				MByproductAmount:           ``,
 				MFuelClass:                 `Desc_LiquidTurboFuel_C`,
 				MSupplementalResourceClass: ``,
-				MByproduct:                 ``,
-				MByproductAmount:           ``,
 			},
 			{
-				MSupplementalResourceClass: ``,
 				MByproduct:                 ``,
 				MByproductAmount:           ``,
 				MFuelClass:                 `Desc_LiquidBiofuel_C`,
+				MSupplementalResourceClass: ``,
 			},
 		},
 	}

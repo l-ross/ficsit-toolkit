@@ -56,8 +56,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	ACarapace1 = FGSchematic{
@@ -76,6 +76,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -91,7 +92,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienCarapace.Recipe_Biomass_AlienCarapace_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ACarapace2 = FGSchematic{
@@ -110,6 +110,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -125,7 +126,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_RebarGun.Recipe_RebarGun_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ACarapace21 = FGSchematic{
@@ -144,6 +144,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -159,7 +160,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_SpikedRebar.Recipe_SpikedRebar_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ACarapace3 = FGSchematic{
@@ -178,6 +178,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -193,7 +194,6 @@ var (
 				MNumArmEquipmentSlotsToUnlock: 1,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AILimiter = FGSchematic{
@@ -212,6 +212,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -225,18 +237,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
 			},
 		},
 	}
@@ -257,8 +257,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	AOrganisms2 = FGSchematic{
@@ -277,8 +277,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	AOrgans0 = FGSchematic{
@@ -297,8 +297,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	AOrgans1 = FGSchematic{
@@ -317,6 +317,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -332,7 +333,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienOrgans.Recipe_Biomass_AlienOrgans_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AOrgans2 = FGSchematic{
@@ -351,6 +351,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -366,7 +367,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhalerAlienOrgans.Recipe_MedicinalInhalerAlienOrgans_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AOrgans3 = FGSchematic{
@@ -385,6 +385,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -400,7 +401,6 @@ var (
 				MNumInventorySlotsToUnlock: 6,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AdvancedAmmoPack = FGSchematic{
@@ -419,6 +419,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_4_2_1.Research_Sulfur_4_2_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -432,18 +444,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CartridgeStandard/Desc_CartridgeStandard.Desc_CartridgeStandard_C"',Amount=25))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_4_2_1.Research_Sulfur_4_2_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -464,6 +464,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -477,18 +489,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -509,6 +509,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -522,18 +534,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_AdheredIronPlate.Recipe_Alternate_AdheredIronPlate_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -554,6 +554,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -567,18 +579,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AlcladCasing.Recipe_Alternate_AlcladCasing_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -599,6 +599,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -612,18 +624,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AutomatedMiner.Recipe_Alternate_AutomatedMiner_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -644,6 +644,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -655,20 +667,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Beacon_1.Recipe_Alternate_Beacon_1_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Beacon_1.Recipe_Alternate_Beacon_1_C"')`,
 			},
 		},
 	}
@@ -689,6 +689,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -702,18 +714,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_BoltedFrame.Recipe_Alternate_BoltedFrame_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -734,6 +734,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -747,18 +759,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_1.Recipe_Alternate_Cable_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -779,6 +779,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -792,18 +804,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_2.Recipe_Alternate_Cable_2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -824,6 +824,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -837,18 +849,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_1.Recipe_Alternate_CircuitBoard_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -869,6 +869,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -882,18 +894,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_2.Recipe_Alternate_CircuitBoard_2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -914,6 +914,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -927,18 +939,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ClassicBattery.Recipe_Alternate_ClassicBattery_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -959,6 +959,18 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -972,18 +984,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_1.Recipe_Alternate_Coal_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -1004,6 +1004,18 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1017,18 +1029,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_2.Recipe_Alternate_Coal_2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1049,6 +1049,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1062,18 +1074,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedCable.Recipe_Alternate_CoatedCable_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1094,6 +1094,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1107,18 +1119,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronCanister.Recipe_Alternate_CoatedIronCanister_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1139,6 +1139,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1152,18 +1164,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronPlate.Recipe_Alternate_CoatedIronPlate_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1184,6 +1184,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1197,18 +1209,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CokeSteelIngot.Recipe_Alternate_CokeSteelIngot_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1229,6 +1229,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1242,18 +1254,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_1.Recipe_Alternate_Computer_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1274,6 +1274,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1287,18 +1299,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_2.Recipe_Alternate_Computer_2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
 			},
 		},
 	}
@@ -1319,6 +1319,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1332,18 +1344,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Concrete.Recipe_Alternate_Concrete_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1364,6 +1364,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1377,18 +1389,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_CoolingDevice.Recipe_Alternate_CoolingDevice_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -1409,6 +1409,7 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1424,7 +1425,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperAlloyIngot.Recipe_Alternate_CopperAlloyIngot_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AlternateCopperRotor = FGSchematic{
@@ -1443,6 +1443,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1456,18 +1468,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperRotor.Recipe_Alternate_CopperRotor_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -1488,6 +1488,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_2.Research_Quartz_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_3.Research_Caterium_3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1501,18 +1513,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CrystalOscillator.Recipe_Alternate_CrystalOscillator_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_2.Research_Quartz_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_3.Research_Caterium_3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1533,6 +1533,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1546,18 +1558,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_DilutedFuel.Recipe_Alternate_DilutedFuel_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -1578,6 +1578,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1591,18 +1603,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Recipe_Alternate_DilutedPackagedFuel_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1623,6 +1623,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1636,18 +1648,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ElectricMotor.Recipe_Alternate_ElectricMotor_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1668,6 +1668,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1681,18 +1693,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectroAluminumScrap.Recipe_Alternate_ElectroAluminumScrap_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1713,6 +1713,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1724,20 +1736,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectrodeCircuitBoard.Recipe_Alternate_ElectrodeCircuitBoard_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectrodeCircuitBoard.Recipe_Alternate_ElectrodeCircuitBoard_C"')`,
 			},
 		},
 	}
@@ -1758,6 +1758,18 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1771,18 +1783,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ElectromagneticControlRod_1.Recipe_Alternate_ElectromagneticControlRod_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1803,6 +1803,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1816,18 +1828,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Recipe_Alternate_EnrichedCoal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_1.Recipe_Alternate_Coal_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_2.Recipe_Alternate_Coal_2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1848,6 +1848,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1861,18 +1873,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_FertileUranium.Recipe_Alternate_FertileUranium_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1893,6 +1893,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1906,18 +1918,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FlexibleFramework.Recipe_Alternate_FlexibleFramework_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1938,6 +1938,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1951,18 +1963,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FusedWire.Recipe_Alternate_FusedWire_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -1983,6 +1983,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -1996,18 +2008,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Gunpowder_1.Recipe_Alternate_Gunpowder_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
 			},
 		},
 	}
@@ -2028,6 +2028,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2041,18 +2053,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_HeatFusedFrame.Recipe_Alternate_HeatFusedFrame_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -2073,6 +2073,18 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2086,18 +2098,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HeatSink_1.Recipe_Alternate_HeatSink_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2118,6 +2118,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2131,18 +2143,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyFlexibleFrame.Recipe_Alternate_HeavyFlexibleFrame_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2163,6 +2163,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2176,18 +2188,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrameHeavy.Recipe_Alternate_ModularFrameHeavy_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
 			},
 		},
 	}
@@ -2208,6 +2208,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2221,18 +2233,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyOilResidue.Recipe_Alternate_HeavyOilResidue_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -2253,6 +2253,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_5.Research_Caterium_5_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2266,18 +2278,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HighSpeedConnector.Recipe_Alternate_HighSpeedConnector_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_5.Research_Caterium_5_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2298,6 +2298,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2311,18 +2323,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HighSpeedWiring.Recipe_Alternate_HighSpeedWiring_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2343,6 +2343,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2358,7 +2359,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotIron.Recipe_Alternate_IngotIron_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AlternateIngotSteel1 = FGSchematic{
@@ -2377,6 +2377,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2390,18 +2402,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_1.Recipe_Alternate_IngotSteel_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2422,6 +2422,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2435,18 +2447,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_2.Recipe_Alternate_IngotSteel_2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2467,6 +2467,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2480,18 +2492,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantPlutoniumCell.Recipe_Alternate_InstantPlutoniumCell_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2512,6 +2512,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2525,18 +2537,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantScrap.Recipe_Alternate_InstantScrap_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2557,6 +2557,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2572,7 +2573,6 @@ var (
 				MNumInventorySlotsToUnlock: 6,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AlternateInventorySlots2 = FGSchematic{
@@ -2591,6 +2591,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2604,18 +2616,6 @@ var (
 			{
 				Class:                      `BP_UnlockInventorySlot_C`,
 				MNumInventorySlotsToUnlock: 6,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2636,6 +2636,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2647,20 +2659,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrame.Recipe_Alternate_ModularFrame_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrame.Recipe_Alternate_ModularFrame_C"')`,
 			},
 		},
 	}
@@ -2681,6 +2681,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2694,18 +2706,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Motor_1.Recipe_Alternate_Motor_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2726,6 +2726,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2_1.Research_Sulfur_3_2_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2739,18 +2751,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Nobelisk_1.Recipe_Alternate_Nobelisk_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2_1.Research_Sulfur_3_2_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
 			},
 		},
 	}
@@ -2771,6 +2771,18 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2784,18 +2796,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_NuclearFuelRod_1.Recipe_Alternate_NuclearFuelRod_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2816,6 +2816,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2829,18 +2841,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_OCSupercomputer.Recipe_Alternate_OCSupercomputer_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"')`,
 			},
 		},
 	}
@@ -2861,6 +2861,18 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2874,18 +2886,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Plastic_1.Recipe_Alternate_Plastic_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2906,6 +2906,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2917,20 +2929,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PlasticSmartPlating.Recipe_Alternate_PlasticSmartPlating_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PlasticSmartPlating.Recipe_Alternate_PlasticSmartPlating_C"')`,
 			},
 		},
 	}
@@ -2951,6 +2951,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -2964,18 +2976,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_PlutoniumFuelUnit.Recipe_Alternate_PlutoniumFuelUnit_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -2996,6 +2996,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_2.Research_Mycelia_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3009,18 +3021,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolyesterFabric.Recipe_Alternate_PolyesterFabric_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_2.Research_Mycelia_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -3041,6 +3041,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3054,18 +3066,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolymerResin.Recipe_Alternate_PolymerResin_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3086,6 +3086,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3099,18 +3111,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_PureAluminumIngot.Recipe_PureAluminumIngot_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3131,6 +3131,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3144,18 +3156,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Recipe_Alternate_PureCateriumIngot_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3176,6 +3176,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3189,18 +3201,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Recipe_Alternate_PureCopperIngot_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3221,6 +3221,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3234,18 +3246,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Recipe_Alternate_PureIronIngot_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3266,6 +3266,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3279,18 +3291,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Recipe_Alternate_PureQuartzCrystal_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
 			},
 		},
 	}
@@ -3311,6 +3311,18 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3322,20 +3334,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Quickwire.Recipe_Alternate_Quickwire_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Quickwire.Recipe_Alternate_Quickwire_C"')`,
 			},
 		},
 	}
@@ -3356,6 +3356,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3369,18 +3381,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_RadioControlSystem.Recipe_Alternate_RadioControlSystem_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -3401,6 +3401,18 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3414,18 +3426,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_RadioControlUnit_1.Recipe_Alternate_RadioControlUnit_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3446,6 +3446,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3459,18 +3471,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RecycledRubber.Recipe_Alternate_RecycledRubber_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3491,6 +3491,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3506,7 +3507,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_1.Recipe_Alternate_ReinforcedIronPlate_1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AlternateReinforcedIronPlate2 = FGSchematic{
@@ -3525,6 +3525,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3540,7 +3541,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_2.Recipe_Alternate_ReinforcedIronPlate_2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AlternateReinforcedSteelPlate = FGSchematic{
@@ -3559,6 +3559,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3572,18 +3584,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EncasedIndustrialBeam.Recipe_Alternate_EncasedIndustrialBeam_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3604,6 +3604,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3617,18 +3629,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Rotor.Recipe_Alternate_Rotor_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -3649,6 +3649,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3662,18 +3674,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RubberConcrete.Recipe_Alternate_RubberConcrete_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3694,6 +3694,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3705,11 +3706,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw.Recipe_Alternate_Screw_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw.Recipe_Alternate_Screw_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AlternateScrew2 = FGSchematic{
@@ -3728,6 +3728,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3741,18 +3753,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw_2.Recipe_Alternate_Screw_2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3773,6 +3773,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_2.Research_Quartz_1_2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3786,18 +3798,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Silica.Recipe_Alternate_Silica_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_2.Research_Quartz_1_2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3818,6 +3818,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3829,20 +3841,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SloppyAlumina.Recipe_Alternate_SloppyAlumina_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SloppyAlumina.Recipe_Alternate_SloppyAlumina_C"')`,
 			},
 		},
 	}
@@ -3863,6 +3863,18 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3876,18 +3888,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Stator.Recipe_Alternate_Stator_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3908,6 +3908,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3921,18 +3933,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteamedCopperSheet.Recipe_Alternate_SteamedCopperSheet_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3953,6 +3953,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -3966,18 +3978,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCanister.Recipe_Alternate_SteelCanister_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -3998,6 +3998,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4011,18 +4023,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCoatedPlate.Recipe_Alternate_SteelCoatedPlate_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4043,6 +4043,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4056,18 +4068,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelRod.Recipe_Alternate_SteelRod_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4088,6 +4088,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4101,18 +4113,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SuperStateComputer.Recipe_Alternate_SuperStateComputer_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4133,6 +4133,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4146,18 +4158,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboBlendFuel.Recipe_Alternate_TurboBlendFuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedTurboFuel.Recipe_PackagedTurboFuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageTurboFuel.Recipe_UnpackageTurboFuel_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4178,6 +4178,18 @@ var (
 		MTechTier:               6,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4191,18 +4203,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Turbofuel.Recipe_Alternate_Turbofuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedTurboFuel.Recipe_PackagedTurboFuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageTurboFuel.Recipe_UnpackageTurboFuel_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4223,6 +4223,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4236,18 +4248,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Recipe_Alternate_TurboHeavyFuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedTurboFuel.Recipe_PackagedTurboFuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageTurboFuel.Recipe_UnpackageTurboFuel_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4268,6 +4268,18 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-4.Schematic_8-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4281,18 +4293,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_TurboMotor_1.Recipe_Alternate_TurboMotor_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-4.Schematic_8-4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4313,6 +4313,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4326,18 +4338,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboPressureMotor.Recipe_Alternate_TurboPressureMotor_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4358,6 +4358,18 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4371,18 +4383,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_UraniumCell_1.Recipe_Alternate_UraniumCell_1_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4403,6 +4403,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4414,20 +4426,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Recipe_Alternate_WetConcrete_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Recipe_Alternate_WetConcrete_C"')`,
 			},
 		},
 	}
@@ -4448,6 +4448,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4463,7 +4464,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_1.Recipe_Alternate_Wire_1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	AlternateWire2 = FGSchematic{
@@ -4482,6 +4482,18 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Alternate`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4493,20 +4505,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_2.Recipe_Alternate_Wire_2_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_2.Recipe_Alternate_Wire_2_C"')`,
 			},
 		},
 	}
@@ -4527,6 +4527,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_2_1.Research_ACarapace_2_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4540,18 +4552,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SpikedRebar/Desc_SpikedRebar.Desc_SpikedRebar_C"',Amount=25))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_2_1.Research_ACarapace_2_1_C"')`,
 			},
 		},
 	}
@@ -4572,6 +4572,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4585,18 +4597,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Battery/Desc_Battery.Desc_Battery_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
 			},
 		},
 	}
@@ -4617,6 +4617,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_1-3.Schematic_1-3_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4630,18 +4642,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=10))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_1-3.Schematic_1-3_C"')`,
 			},
 		},
 	}
@@ -4662,6 +4662,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-2.Schematic_2-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4675,18 +4687,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/BioFuel/Desc_Biofuel.Desc_Biofuel_C"',Amount=200))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-2.Schematic_2-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4707,6 +4707,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4722,7 +4723,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_GenericBiomass.Desc_GenericBiomass_C"',Amount=200))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	BlackPowder = FGSchematic{
@@ -4741,6 +4741,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_1.Research_Sulfur_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4754,18 +4766,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_1.Research_Sulfur_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -4786,6 +4786,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4801,7 +4802,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=100))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium0 = FGSchematic{
@@ -4820,6 +4820,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4832,11 +4833,10 @@ var (
 		}{
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium1 = FGSchematic{
@@ -4855,6 +4855,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4870,7 +4871,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Smelter/Recipe_IngotCaterium.Recipe_IngotCaterium_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium2 = FGSchematic{
@@ -4889,6 +4889,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4904,7 +4905,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Quickwire.Recipe_Quickwire_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium21 = FGSchematic{
@@ -4923,6 +4923,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4938,7 +4939,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_ZipLine.Recipe_ZipLine_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium3 = FGSchematic{
@@ -4957,8 +4957,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Caterium31 = FGSchematic{
@@ -4977,6 +4977,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         120.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -4992,7 +4993,6 @@ var (
 				MNumInventorySlotsToUnlock: 6,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium41 = FGSchematic{
@@ -5011,6 +5011,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5026,7 +5027,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_AILimiter.Recipe_AILimiter_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium411 = FGSchematic{
@@ -5045,6 +5045,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5056,11 +5057,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterSmart.Recipe_ConveyorAttachmentSplitterSmart_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterSmart.Recipe_ConveyorAttachmentSplitterSmart_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium412 = FGSchematic{
@@ -5079,6 +5079,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5090,11 +5091,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerSwitch.Recipe_PowerSwitch_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerSwitch.Recipe_PowerSwitch_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium42 = FGSchematic{
@@ -5113,6 +5113,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5124,11 +5125,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk2.Recipe_PowerPoleMk2_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk2.Recipe_PowerPoleMk2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium43 = FGSchematic{
@@ -5147,6 +5147,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5158,11 +5159,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_BladeRunners.Recipe_BladeRunners_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_BladeRunners.Recipe_BladeRunners_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium5 = FGSchematic{
@@ -5181,6 +5181,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5196,7 +5197,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_HighSpeedConnector.Recipe_HighSpeedConnector_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium61 = FGSchematic{
@@ -5215,6 +5215,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5230,7 +5231,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_ComputerSuper.Recipe_ComputerSuper_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium62 = FGSchematic{
@@ -5249,6 +5249,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         360.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5264,7 +5265,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk3.Recipe_PowerPoleMk3_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium63 = FGSchematic{
@@ -5283,8 +5283,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Caterium71 = FGSchematic{
@@ -5303,6 +5303,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5318,7 +5319,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterProgrammable.Recipe_ConveyorAttachmentSplitterProgrammable_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Caterium72 = FGSchematic{
@@ -5337,6 +5337,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5353,11 +5354,10 @@ var (
 			},
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Geyser/Desc_Geyser.Desc_Geyser_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Geyser/Desc_Geyser.Desc_Geyser_C"',ResourceNodeType=Geyser))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Geyser/Desc_Geyser.Desc_Geyser_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	CeilingLight = FGSchematic{
@@ -5376,6 +5376,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5391,7 +5392,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_CeilingLight.Recipe_CeilingLight_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	CircuitBoard = FGSchematic{
@@ -5410,6 +5410,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5423,18 +5435,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=200))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -5455,6 +5455,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5470,7 +5471,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Cup/BP_EquipmentDescriptorCup.BP_EquipmentDescriptorCup_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ColoredAmmoPack = FGSchematic{
@@ -5489,6 +5489,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/FlowerPetals_RS/Research_FlowerPetals_3.Research_FlowerPetals_3_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5502,18 +5514,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ColorCartridge/Desc_ColorCartridge.Desc_ColorCartridge_C"',Amount=50))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/FlowerPetals_RS/Research_FlowerPetals_3.Research_FlowerPetals_3_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -5534,6 +5534,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5547,18 +5559,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=50))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -5579,6 +5579,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5594,7 +5595,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=100))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ConveryWallsMetal = FGSchematic{
@@ -5613,6 +5613,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5624,11 +5625,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01_Steel.Recipe_Wall_Conveyor_8x4_01_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02_Steel.Recipe_Wall_Conveyor_8x4_02_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03_Steel.Recipe_Wall_Conveyor_8x4_03_Steel_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01_Steel.Recipe_Wall_Conveyor_8x4_01_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02_Steel.Recipe_Wall_Conveyor_8x4_02_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03_Steel.Recipe_Wall_Conveyor_8x4_03_Steel_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ConveryWallsNormal = FGSchematic{
@@ -5647,6 +5647,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5662,7 +5663,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01.Recipe_Wall_Conveyor_8x4_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02.Recipe_Wall_Conveyor_8x4_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03.Recipe_Wall_Conveyor_8x4_03_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ConveyorWallMount = FGSchematic{
@@ -5681,6 +5681,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5692,11 +5693,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleWall.Recipe_ConveyorPoleWall_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleWall.Recipe_ConveyorPoleWall_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	CopperSheet = FGSchematic{
@@ -5715,6 +5715,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5728,18 +5740,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -5760,6 +5760,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_2.Research_Quartz_2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5771,20 +5783,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=100))`,
 				Class:        `BP_UnlockGiveItem_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_2.Research_Quartz_2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=100))`,
 			},
 		},
 	}
@@ -5805,6 +5805,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5816,11 +5817,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe.Recipe_QuarterPipe_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe_02.Recipe_QuarterPipe_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_01.Recipe_QuarterPipeCorner_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_02.Recipe_QuarterPipeCorner_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_03.Recipe_QuarterPipeCorner_03_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_04.Recipe_QuarterPipeCorner_04_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe.Recipe_QuarterPipe_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe_02.Recipe_QuarterPipe_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_01.Recipe_QuarterPipeCorner_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_02.Recipe_QuarterPipeCorner_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_03.Recipe_QuarterPipeCorner_03_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_04.Recipe_QuarterPipeCorner_04_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	CyberWagon = FGSchematic{
@@ -5839,6 +5839,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CyberWagon_Unlock.ResourceSink_CyberWagon_Unlock_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5852,18 +5864,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Vehicle/Recipe_CyberWagon.Recipe_CyberWagon_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CyberWagon_Unlock.ResourceSink_CyberWagon_Unlock_C"')`,
 			},
 		},
 	}
@@ -5884,8 +5884,8 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	DiagonalRamps = FGSchematic{
@@ -5904,6 +5904,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5919,7 +5920,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_02.Recipe_Ramp_Diagonal_8x1_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_02.Recipe_Ramp_Diagonal_8x2_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_02.Recipe_Ramp_Diagonal_8x4_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_01.Recipe_Ramp_Diagonal_8x1_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_01.Recipe_Ramp_Diagonal_8x2_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_01.Recipe_Ramp_Diagonal_8x4_01_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	DoorWallsMetal = FGSchematic{
@@ -5938,6 +5938,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5953,7 +5954,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01_Steel.Recipe_Wall_Door_8x4_01_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02_Steel.Recipe_Wall_Door_8x4_02_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03_Steel.Recipe_Wall_Door_8x4_03_Steel_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	DoorWallsNormal = FGSchematic{
@@ -5972,6 +5972,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -5987,7 +5988,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01.Recipe_Wall_Door_8x4_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02.Recipe_Wall_Door_8x4_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03.Recipe_Wall_Door_8x4_03_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Gate_8x4_01.Recipe_Wall_Gate_8x4_01_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	EmptyCanister = FGSchematic{
@@ -6006,6 +6006,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6019,18 +6031,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -6051,6 +6051,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6064,18 +6076,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -6096,6 +6096,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2_1.Research_Sulfur_3_2_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6109,18 +6121,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NobeliskExplosive/Desc_NobeliskExplosive.Desc_NobeliskExplosive_C"',Amount=10))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2_1.Research_Sulfur_3_2_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -6141,6 +6141,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_2.Research_Mycelia_2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6154,18 +6166,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Fabric.Desc_Fabric_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_2.Research_Mycelia_2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -6186,6 +6186,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6201,7 +6202,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Vehicle/Recipe_FactoryCart.Recipe_FactoryCart_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	FactoryRailing = FGSchematic{
@@ -6220,6 +6220,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6235,7 +6236,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Fence/Recipe_Fence_01.Recipe_Fence_01_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	FlowerPetals1 = FGSchematic{
@@ -6254,8 +6254,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	FlowerPetals2 = FGSchematic{
@@ -6274,6 +6274,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6289,7 +6290,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_ColorGun.Recipe_ColorGun_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	FlowerPetals3 = FGSchematic{
@@ -6308,6 +6308,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6323,7 +6324,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_ColorCartridge.Recipe_ColorCartridge_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	FoudationPillar = FGSchematic{
@@ -6342,6 +6342,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6357,7 +6358,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarTop.Recipe_PillarTop_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarMiddle.Recipe_PillarMiddle_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarBase.Recipe_PillarBase_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	FoundationExpansionPack = FGSchematic{
@@ -6376,6 +6376,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6391,7 +6392,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble_8x1.Recipe_RampDouble_8x1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble.Recipe_RampDouble_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x8x8.Recipe_Ramp_8x8x8_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	FrameworkFoundations = FGSchematic{
@@ -6410,6 +6410,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6421,11 +6422,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_Frame_01.Recipe_Foundation_Frame_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_FoundationGlass_01.Recipe_FoundationGlass_01_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_Frame_01.Recipe_Foundation_Frame_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_FoundationGlass_01.Recipe_FoundationGlass_01_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	GasFilters = FGSchematic{
@@ -6444,6 +6444,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_6-4.Schematic_6-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6457,18 +6469,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Filter/Desc_Filter.Desc_Filter_C"',Amount=25))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_6-4.Schematic_6-4_C"')`,
 			},
 		},
 	}
@@ -6489,6 +6489,17 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:      `BP_GamePhaseReachedDependency_C`,
+				MGamePhase: `EGP_FoodCourt`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6502,17 +6513,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/GoldenCup/BP_EquipmentDescriptorCupGold.BP_EquipmentDescriptorCupGold_C"',Amount=1))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:      `BP_GamePhaseReachedDependency_C`,
-				MGamePhase: `EGP_FoodCourt`,
 			},
 		},
 	}
@@ -6533,8 +6533,8 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_HardDrive`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	HealthPack = FGSchematic{
@@ -6553,6 +6553,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrgans_2.Research_AOrgans_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_4.Research_Nutrients_4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_5.Research_Mycelia_5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6564,20 +6576,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Medkit/Desc_Medkit.Desc_Medkit_C"',Amount=5))`,
 				Class:        `BP_UnlockGiveItem_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrgans_2.Research_AOrgans_2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_4.Research_Nutrients_4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_5.Research_Mycelia_5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Medkit/Desc_Medkit.Desc_Medkit_C"',Amount=5))`,
 			},
 		},
 	}
@@ -6598,6 +6598,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6611,18 +6623,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlateReinforced/Desc_AluminumPlateReinforced.Desc_AluminumPlateReinforced_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
 			},
 		},
 	}
@@ -6643,6 +6643,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6656,18 +6668,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=50))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -6688,6 +6688,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_5.Research_Caterium_5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6701,18 +6713,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_5.Research_Caterium_5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -6733,6 +6733,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6748,7 +6749,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallSupport.Recipe_HyperTubeWallSupport_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallHole.Recipe_HyperTubeWallHole_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	InvertedCornerRamps = FGSchematic{
@@ -6767,6 +6767,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6782,7 +6783,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_01.Recipe_RampInverted_8x1_Corner_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_01.Recipe_RampInverted_8x2_Corner_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_01.Recipe_RampInverted_8x4_Corner_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_02.Recipe_RampInverted_8x1_Corner_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_02.Recipe_RampInverted_8x2_Corner_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_02.Recipe_RampInverted_8x4_Corner_02_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	InvertedRampPack = FGSchematic{
@@ -6801,6 +6801,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6812,11 +6813,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1.Recipe_RampInverted_8x1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_01.Recipe_RampInverted_8x2_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_Inverted_01.Recipe_Ramp_8x4_Inverted_01_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1.Recipe_RampInverted_8x1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_01.Recipe_RampInverted_8x2_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_Inverted_01.Recipe_Ramp_8x4_Inverted_01_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Ladders = FGSchematic{
@@ -6835,6 +6835,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6846,11 +6847,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ladder/Recipe_Ladder.Recipe_Ladder_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ladder/Recipe_Ladder.Recipe_Ladder_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	LightControlPanel = FGSchematic{
@@ -6869,6 +6869,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6884,7 +6885,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_LightsControlPanel.Recipe_LightsControlPanel_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	LightTower = FGSchematic{
@@ -6903,6 +6903,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6918,7 +6919,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightPole.Recipe_FloodlightPole_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightWall.Recipe_FloodlightWall_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	ModularFrame = FGSchematic{
@@ -6937,6 +6937,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6948,20 +6960,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=50))`,
 				Class:        `BP_UnlockGiveItem_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=50))`,
 			},
 		},
 	}
@@ -6982,6 +6982,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -6995,18 +7007,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=50))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
 			},
 		},
 	}
@@ -7027,6 +7027,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7042,7 +7043,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Mycelia.Recipe_Biomass_Mycelia_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Mycelia2 = FGSchematic{
@@ -7061,6 +7061,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7072,11 +7073,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Fabric.Recipe_Fabric_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Fabric.Recipe_Fabric_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Mycelia3 = FGSchematic{
@@ -7095,6 +7095,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7110,7 +7111,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_Parachute.Recipe_Parachute_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Mycelia4 = FGSchematic{
@@ -7129,8 +7129,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Mycelia5 = FGSchematic{
@@ -7149,6 +7149,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7164,7 +7165,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhaler.Recipe_MedicinalInhaler_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Nutrients0 = FGSchematic{
@@ -7183,8 +7183,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Nutrients1 = FGSchematic{
@@ -7203,8 +7203,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Nutrients2 = FGSchematic{
@@ -7223,8 +7223,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Nutrients3 = FGSchematic{
@@ -7243,8 +7243,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Nutrients4 = FGSchematic{
@@ -7263,6 +7263,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7278,7 +7279,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_NutritionalInhaler.Recipe_NutritionalInhaler_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	PackagedBiofuel = FGSchematic{
@@ -7297,6 +7297,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7308,20 +7320,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/BioFuel/Desc_PackagedBiofuel.Desc_PackagedBiofuel_C"',Amount=100))`,
 				Class:        `BP_UnlockGiveItem_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/BioFuel/Desc_PackagedBiofuel.Desc_PackagedBiofuel_C"',Amount=100))`,
 			},
 		},
 	}
@@ -7342,6 +7342,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7355,18 +7367,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_Fuel.Desc_Fuel_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -7387,6 +7387,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_3.Research_Mycelia_3_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7400,18 +7412,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/Desc_Parachute.Desc_Parachute_C"',Amount=10))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_3.Research_Mycelia_3_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -7432,6 +7432,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7445,18 +7457,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PetroleumCoke/Desc_PetroleumCoke.Desc_PetroleumCoke_C"',Amount=200))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -7477,6 +7477,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7488,11 +7489,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWall.Recipe_PipeSupportWall_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWallHole.Recipe_PipeSupportWallHole_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWall.Recipe_PipeSupportWall_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWallHole.Recipe_PipeSupportWallHole_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Plastic = FGSchematic{
@@ -7511,6 +7511,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7524,18 +7536,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -7556,6 +7556,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7571,7 +7572,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=100))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	PolymerResin = FGSchematic{
@@ -7590,6 +7590,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7603,18 +7615,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/PolymerResin/Desc_PolymerResin.Desc_PolymerResin_C"',Amount=200))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -7635,6 +7635,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7650,7 +7651,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_1.Recipe_PowerCrystalShard_1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	PowerSlugs2 = FGSchematic{
@@ -7669,6 +7669,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7683,7 +7684,6 @@ var (
 				Class: `BP_UnlockBuildOverclock_C`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	PowerSlugs3 = FGSchematic{
@@ -7702,8 +7702,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         120.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	PowerSlugs4 = FGSchematic{
@@ -7722,6 +7722,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7737,7 +7738,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_2.Recipe_PowerCrystalShard_2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	PowerSlugs5 = FGSchematic{
@@ -7756,6 +7756,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7771,7 +7772,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_3.Recipe_PowerCrystalShard_3_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz0 = FGSchematic{
@@ -7790,6 +7790,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7802,11 +7803,10 @@ var (
 		}{
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz11 = FGSchematic{
@@ -7825,6 +7825,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7840,7 +7841,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_QuartzCrystal.Recipe_QuartzCrystal_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz12 = FGSchematic{
@@ -7859,6 +7859,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7870,11 +7871,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Silica.Recipe_Silica_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Silica.Recipe_Silica_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz2 = FGSchematic{
@@ -7893,6 +7893,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7908,7 +7909,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_CrystalOscillator.Recipe_CrystalOscillator_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz3 = FGSchematic{
@@ -7927,8 +7927,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Quartz31 = FGSchematic{
@@ -7947,6 +7947,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7962,7 +7963,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Vehicle/Recipe_Explorer.Recipe_Explorer_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz32 = FGSchematic{
@@ -7981,6 +7981,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -7995,7 +7996,6 @@ var (
 				Class: `BP_UnlockMap_C`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz33 = FGSchematic{
@@ -8014,6 +8014,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8029,7 +8030,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_RadioControlUnit.Recipe_RadioControlUnit_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz4 = FGSchematic{
@@ -8048,6 +8048,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8059,11 +8060,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_RadarTower.Recipe_RadarTower_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_RadarTower.Recipe_RadarTower_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Quartz41 = FGSchematic{
@@ -8082,8 +8082,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Quickwire = FGSchematic{
@@ -8102,6 +8102,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_2.Research_Caterium_2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8115,18 +8127,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=500))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_2.Research_Caterium_2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -8147,6 +8147,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-3.Schematic_7-3_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8158,20 +8170,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IodineInfusedFilter/Desc_HazmatFilter.Desc_HazmatFilter_C"',Amount=10))`,
 				Class:        `BP_UnlockGiveItem_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-3.Schematic_7-3_C"')`,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IodineInfusedFilter/Desc_HazmatFilter.Desc_HazmatFilter_C"',Amount=10))`,
 			},
 		},
 	}
@@ -8192,6 +8192,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_3_3.Research_Quartz_3_3_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8203,20 +8215,8 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=50))`,
 				Class:        `BP_UnlockGiveItem_C`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_3_3.Research_Quartz_3_3_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=50))`,
 			},
 		},
 	}
@@ -8237,6 +8237,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8252,7 +8253,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=100))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Rod = FGSchematic{
@@ -8271,6 +8271,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8286,7 +8287,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=100))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Rotor = FGSchematic{
@@ -8305,6 +8305,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8318,18 +8330,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -8350,6 +8350,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8363,18 +8375,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -8395,6 +8395,7 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8410,7 +8411,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Fence/Recipe_Fence_01.Recipe_Fence_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stair_1b.Recipe_Stair_1b_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03.Recipe_Wall_Window_8x4_03_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03_Steel.Recipe_Wall_Window_8x4_03_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04.Recipe_Wall_Conveyor_8x4_04_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04_Steel.Recipe_Wall_Conveyor_8x4_04_Steel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_JumpPad.Recipe_JumpPad_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadTilted.Recipe_JumpPadTilted_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic1_1 = FGSchematic{
@@ -8429,6 +8429,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         120.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8444,7 +8445,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_LookoutTower.Recipe_LookoutTower_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x1_01.Recipe_Foundation_8x1_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x2_01.Recipe_Foundation_8x2_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x4_01.Recipe_Foundation_8x4_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x1_01.Recipe_Ramp_8x1_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x2_01.Recipe_Ramp_8x2_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_01.Recipe_Ramp_8x4_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_01.Recipe_Wall_8x4_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_02.Recipe_Wall_8x4_02_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic1_2 = FGSchematic{
@@ -8463,6 +8463,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         240.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8481,7 +8482,6 @@ var (
 				Class: `BP_UnlockBuildEfficiency_C`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic1_3 = FGSchematic{
@@ -8500,6 +8500,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8523,7 +8524,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic2_1 = FGSchematic{
@@ -8542,6 +8542,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         360.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8557,7 +8558,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_AssemblerMk1.Recipe_AssemblerMk1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_CopperSheet.Recipe_CopperSheet_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_Rotor.Recipe_Rotor_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_ModularFrame.Recipe_ModularFrame_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_1.Recipe_SpaceElevatorPart_1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic2_2 = FGSchematic{
@@ -8576,6 +8576,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8595,7 +8596,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic2_3 = FGSchematic{
@@ -8614,6 +8614,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         240.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8629,7 +8630,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadAdjustable.Recipe_JumpPadAdjustable_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_UJellyLandingPad.Recipe_UJellyLandingPad_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic2_5 = FGSchematic{
@@ -8648,6 +8648,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8663,7 +8664,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSink.Recipe_ResourceSink_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSinkShop.Recipe_ResourceSinkShop_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic3_1 = FGSchematic{
@@ -8682,6 +8682,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8698,11 +8699,10 @@ var (
 			},
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic3_2 = FGSchematic{
@@ -8721,6 +8721,7 @@ var (
 		MTechTier:               2,
 		MTimeToComplete:         360.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8736,7 +8737,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk2.Recipe_ConveyorBeltMk2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleStackable.Recipe_ConveyorPoleStackable_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk2.Recipe_ConveyorLiftMk2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic3_3 = FGSchematic{
@@ -8755,6 +8755,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         240.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8774,7 +8775,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic3_4 = FGSchematic{
@@ -8793,6 +8793,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8808,7 +8809,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_SmelterMk1.Recipe_SmelterMk1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Smelter/Recipe_IngotSteel.Recipe_IngotSteel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_SteelBeam.Recipe_SteelBeam_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_SteelPipe.Recipe_SteelPipe_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_2.Recipe_SpaceElevatorPart_2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic4_1 = FGSchematic{
@@ -8827,6 +8827,7 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8842,7 +8843,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk2.Recipe_MinerMk2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_EncasedIndustrialBeam.Recipe_EncasedIndustrialBeam_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_Stator.Recipe_Stator_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_Motor.Recipe_Motor_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_3.Recipe_SpaceElevatorPart_3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_ModularFrameHeavy.Recipe_ModularFrameHeavy_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic4_2 = FGSchematic{
@@ -8861,6 +8861,7 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8884,7 +8885,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic4_4 = FGSchematic{
@@ -8903,6 +8903,7 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8918,7 +8919,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipe_PipeHyperStart.Recipe_PipeHyperStart_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyper.Recipe_PipeHyper_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyperSupport.Recipe_PipeHyperSupport_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_HyperPoleStackable.Recipe_HyperPoleStackable_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic5_1 = FGSchematic{
@@ -8937,6 +8937,7 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         720.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8952,16 +8953,15 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_OilPump.Recipe_OilPump_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_OilRefinery.Recipe_OilRefinery_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_Valve.Recipe_Valve_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_Plastic.Recipe_Plastic_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_Rubber.Recipe_Rubber_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidFuel.Recipe_LiquidFuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Recipe_PetroleumCoke_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_CircuitBoard.Recipe_CircuitBoard_C"')`,
 			},
 			{
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"')`,
-				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"'))`,
 				Class:                        `BP_UnlockScannableResource_C`,
+				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"')`,
 			},
 			{
 				Class:       `BP_UnlockSchematic_C`,
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-1-1.Schematic_5-1-1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic5_1_1 = FGSchematic{
@@ -8980,6 +8980,7 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -8995,7 +8996,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Recipe_ResidualPlastic_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualRubber.Recipe_ResidualRubber_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualFuel.Recipe_ResidualFuel_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic5_2 = FGSchematic{
@@ -9014,6 +9014,7 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         720.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9025,11 +9026,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ManufacturerMk1.Recipe_ManufacturerMk1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Vehicle/Recipe_Truck.Recipe_Truck_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_Computer.Recipe_Computer_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_4.Recipe_SpaceElevatorPart_4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_5.Recipe_SpaceElevatorPart_5_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ManufacturerMk1.Recipe_ManufacturerMk1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Vehicle/Recipe_Truck.Recipe_Truck_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_Computer.Recipe_Computer_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_4.Recipe_SpaceElevatorPart_4_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_5.Recipe_SpaceElevatorPart_5_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic5_3 = FGSchematic{
@@ -9048,6 +9048,7 @@ var (
 		MTechTier:               4,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9063,7 +9064,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerStorageMk1.Recipe_PowerStorageMk1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk2.Recipe_StorageContainerMk2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk3.Recipe_ConveyorBeltMk3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk3.Recipe_ConveyorLiftMk3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportStackable.Recipe_PipeSupportStackable_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic5_4 = FGSchematic{
@@ -9082,6 +9082,7 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         480.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9101,7 +9102,6 @@ var (
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_5-4-1.Schematic_5-4-1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic5_4_1 = FGSchematic{
@@ -9120,6 +9120,7 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9135,7 +9136,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageWater.Recipe_UnpackageWater_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOil.Recipe_UnpackageOil_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageFuel.Recipe_UnpackageFuel_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOilResidue.Recipe_UnpackageOilResidue_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageBioFuel.Recipe_UnpackageBioFuel_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic6_1 = FGSchematic{
@@ -9154,6 +9154,7 @@ var (
 		MTechTier:               6,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9170,11 +9171,10 @@ var (
 			},
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic6_2 = FGSchematic{
@@ -9193,6 +9193,7 @@ var (
 		MTechTier:               6,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9212,7 +9213,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic6_3 = FGSchematic{
@@ -9231,6 +9231,7 @@ var (
 		MTechTier:               6,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9246,7 +9247,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Vehicle/Train/Recipe_Locomotive.Recipe_Locomotive_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Vehicle/Train/Recipe_FreightWagon.Recipe_FreightWagon_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_RailroadTrack.Recipe_RailroadTrack_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainStation.Recipe_TrainStation_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStation.Recipe_TrainDockingStation_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStationLiquid.Recipe_TrainDockingStationLiquid_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainPlatformEmpty.Recipe_TrainPlatformEmpty_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic6_4 = FGSchematic{
@@ -9265,6 +9265,7 @@ var (
 		MTechTier:               5,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9284,7 +9285,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic6_5 = FGSchematic{
@@ -9303,6 +9303,7 @@ var (
 		MTechTier:               6,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9318,7 +9319,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipelineMK2.Recipe_PipelineMK2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePumpMK2.Recipe_PipelinePumpMK2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic7_1 = FGSchematic{
@@ -9337,6 +9337,7 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         600.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9353,15 +9354,14 @@ var (
 			},
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreBauxite/Desc_OreBauxite.Desc_OreBauxite_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreBauxite/Desc_OreBauxite.Desc_OreBauxite_C"'),(ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreBauxite/Desc_OreBauxite.Desc_OreBauxite_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"')`,
 			},
 			{
 				Class:       `BP_UnlockSchematic_C`,
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-1-1.Schematic_7-1-1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic7_1_1 = FGSchematic{
@@ -9380,6 +9380,7 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9395,7 +9396,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Packager/Recipe_UnpackageAlumina.Recipe_UnpackageAlumina_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_QuartzCrystal.Recipe_QuartzCrystal_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_CrystalOscillator.Recipe_CrystalOscillator_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic7_2 = FGSchematic{
@@ -9414,6 +9414,7 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         60.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9425,11 +9426,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk5.Recipe_ConveyorBeltMk5_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk5.Recipe_ConveyorLiftMk5_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk5.Recipe_ConveyorBeltMk5_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk5.Recipe_ConveyorLiftMk5_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic7_3 = FGSchematic{
@@ -9448,6 +9448,7 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9467,7 +9468,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic7_4 = FGSchematic{
@@ -9486,6 +9486,7 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9498,19 +9499,18 @@ var (
 		}{
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     ``,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"'))`,
+				MResourcesToAddToScanner:     ``,
 			},
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/OilRefinery/Recipe_SulfuricAcid.Recipe_SulfuricAcid_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Packager/Recipe_PackagedSulfuricAcid.Recipe_PackagedSulfuricAcid_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_Battery.Recipe_Battery_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_ComputerSuper.Recipe_ComputerSuper_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_DroneTransport.Recipe_DroneTransport_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_DroneStation.Recipe_DroneStation_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_7.Recipe_SpaceElevatorPart_7_C"')`,
 			},
 			{
-				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4-1.Schematic_7-4-1_C"')`,
 				Class:       `BP_UnlockSchematic_C`,
+				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-4-1.Schematic_7-4-1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic7_4_1 = FGSchematic{
@@ -9529,6 +9529,7 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9544,7 +9545,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Packager/Recipe_UnpackageSulfuricAcid.Recipe_UnpackageSulfuricAcid_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_AILimiter.Recipe_AILimiter_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_HighSpeedConnector.Recipe_HighSpeedConnector_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic8_1 = FGSchematic{
@@ -9563,6 +9563,7 @@ var (
 		MTechTier:               8,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9574,16 +9575,15 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MResourcesToAddToScanner:     ``,
-				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreUranium/Desc_OreUranium.Desc_OreUranium_C"'))`,
 				Class:                        `BP_UnlockScannableResource_C`,
+				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreUranium/Desc_OreUranium.Desc_OreUranium_C"'))`,
+				MResourcesToAddToScanner:     ``,
 			},
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_UraniumCell.Recipe_UraniumCell_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Assembler/Recipe_ElectromagneticControlRod.Recipe_ElectromagneticControlRod_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_NuclearFuelRod.Recipe_NuclearFuelRod_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorNuclear.Recipe_GeneratorNuclear_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_6.Recipe_SpaceElevatorPart_6_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic8_2 = FGSchematic{
@@ -9602,6 +9602,7 @@ var (
 		MTechTier:               8,
 		MTimeToComplete:         900.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9618,8 +9619,8 @@ var (
 			},
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     ``,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"',ResourceNodeType=FrackingCore),(ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',ResourceNodeType=FrackingCore),(ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',ResourceNodeType=FrackingCore))`,
+				MResourcesToAddToScanner:     ``,
 			},
 			{
 				Class:    `BP_UnlockRecipe_C`,
@@ -9630,7 +9631,6 @@ var (
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-2-1.Schematic_8-2-1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic8_2_1 = FGSchematic{
@@ -9649,6 +9649,7 @@ var (
 		MTechTier:               8,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9664,7 +9665,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitrogen.Recipe_UnpackageNitrogen_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic8_3 = FGSchematic{
@@ -9683,6 +9683,7 @@ var (
 		MTechTier:               7,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9702,7 +9703,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic8_4 = FGSchematic{
@@ -9721,6 +9721,7 @@ var (
 		MTechTier:               8,
 		MTimeToComplete:         300.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9736,7 +9737,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Manufacturer/Recipe_MotorTurbo.Recipe_MotorTurbo_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk3.Recipe_MinerMk3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_8.Recipe_SpaceElevatorPart_8_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic8_5 = FGSchematic{
@@ -9755,6 +9755,7 @@ var (
 		MTechTier:               8,
 		MTimeToComplete:         1200.000000,
 		MType:                   `EST_Milestone`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9774,7 +9775,6 @@ var (
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_8-5-1.Schematic_8-5-1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Schematic8_5_1 = FGSchematic{
@@ -9793,6 +9793,7 @@ var (
 		MTechTier:               8,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9808,7 +9809,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitricAcid.Recipe_UnpackageNitricAcid_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Screw = FGSchematic{
@@ -9827,6 +9827,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9838,11 +9839,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=500))`,
 				Class:        `BP_UnlockGiveItem_C`,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=500))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Silica = FGSchematic{
@@ -9861,6 +9861,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_2.Research_Quartz_1_2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9874,18 +9886,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Silica/Desc_Silica.Desc_Silica_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_2.Research_Quartz_1_2_C"')`,
 			},
 		},
 	}
@@ -9906,6 +9906,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9917,11 +9918,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Left_01.Recipe_Stairs_Left_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Right_01.Recipe_Stairs_Right_01_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Left_01.Recipe_Stairs_Left_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Right_01.Recipe_Stairs_Right_01_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	StartingRecipes = FGSchematic{
@@ -9940,6 +9940,7 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Custom`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9956,11 +9957,10 @@ var (
 			},
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Stator = FGSchematic{
@@ -9979,6 +9979,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -9992,18 +10004,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C"')`,
 			},
 		},
 	}
@@ -10024,6 +10024,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10039,7 +10040,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Decoration/Desc_CharacterRunStatue.Desc_CharacterRunStatue_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	StatueGoldPioneer = FGSchematic{
@@ -10058,6 +10058,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10073,7 +10074,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Decoration/Desc_CharacterSpin_Statue.Desc_CharacterSpin_Statue_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	StatueGoldenNut = FGSchematic{
@@ -10092,6 +10092,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10107,7 +10108,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Decoration/Desc_GoldenNut_Statue.Desc_GoldenNut_Statue_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	StatueHoggo = FGSchematic{
@@ -10126,6 +10126,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10141,7 +10142,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Decoration/Desc_Hog_Statue.Desc_Hog_Statue_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	StatueLizardDoggo = FGSchematic{
@@ -10160,6 +10160,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10175,7 +10176,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Decoration/Desc_DoggoStatue.Desc_DoggoStatue_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	StatueSilverPioneer = FGSchematic{
@@ -10194,6 +10194,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10209,7 +10210,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Decoration/Desc_CharacterClap_Statue.Desc_CharacterClap_Statue_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	StatueSpaceGiraffe = FGSchematic{
@@ -10228,6 +10228,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10243,7 +10244,6 @@ var (
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Decoration/Desc_SpaceGiraffeStatue.Desc_SpaceGiraffeStatue_C"',Amount=1))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	SteelBeam = FGSchematic{
@@ -10262,6 +10262,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10275,18 +10287,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -10307,6 +10307,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10320,18 +10332,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=100))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
-				Class:                              `BP_SchematicPurchasedDependency_C`,
 			},
 		},
 	}
@@ -10352,6 +10352,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10363,11 +10364,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_StreetLight.Recipe_StreetLight_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_StreetLight.Recipe_StreetLight_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur0 = FGSchematic{
@@ -10386,6 +10386,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10398,11 +10399,10 @@ var (
 		}{
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"'))`,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur1 = FGSchematic{
@@ -10421,6 +10421,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10436,7 +10437,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_Gunpowder.Recipe_Gunpowder_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur2 = FGSchematic{
@@ -10455,8 +10455,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Sulfur3 = FGSchematic{
@@ -10475,8 +10475,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Sulfur31 = FGSchematic{
@@ -10495,6 +10495,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10510,7 +10511,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_NobeliskDetonator.Recipe_NobeliskDetonator_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur32 = FGSchematic{
@@ -10529,8 +10529,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Sulfur321 = FGSchematic{
@@ -10549,6 +10549,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10560,11 +10561,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_Nobelisk.Recipe_Nobelisk_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_Nobelisk.Recipe_Nobelisk_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur4 = FGSchematic{
@@ -10583,8 +10583,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Sulfur41 = FGSchematic{
@@ -10603,6 +10603,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10618,7 +10619,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_SpaceRifleMk1.Recipe_SpaceRifleMk1_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur42 = FGSchematic{
@@ -10637,8 +10637,8 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
-		MUnlocks:                nil,
 		MSchematicDependencies:  nil,
+		MUnlocks:                nil,
 	}
 
 	Sulfur421 = FGSchematic{
@@ -10657,6 +10657,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10672,7 +10673,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_Cartridge.Recipe_Cartridge_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur5 = FGSchematic{
@@ -10691,6 +10691,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10706,7 +10707,6 @@ var (
 				MNumArmEquipmentSlotsToUnlock: 1,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Sulfur6 = FGSchematic{
@@ -10725,6 +10725,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         180.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10740,7 +10741,6 @@ var (
 				MNumInventorySlotsToUnlock: 6,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	SuperComputer = FGSchematic{
@@ -10759,6 +10759,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_1.Research_Caterium_6_1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10772,18 +10784,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=50))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_1.Research_Caterium_6_1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -10804,6 +10804,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10817,18 +10829,6 @@ var (
 			{
 				Class:        `BP_UnlockGiveItem_C`,
 				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/MotorLightweight/Desc_MotorLightweight.Desc_MotorLightweight_C"',Amount=50))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -10849,6 +10849,7 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Tutorial`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10868,7 +10869,6 @@ var (
 				MNumInventorySlotsToUnlock: 3,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Tutorial15 = FGSchematic{
@@ -10887,6 +10887,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Tutorial`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1.Schematic_Tutorial1_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10902,21 +10914,9 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerLine.Recipe_PowerLine_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Smelter/Recipe_IngotCopper.Recipe_IngotCopper_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Wire.Recipe_Wire_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Cable.Recipe_Cable_C"')`,
 			},
 			{
-				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"'))`,
 				Class:                        `BP_UnlockScannableResource_C`,
+				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"'))`,
 				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreCopper/Desc_OreCopper.Desc_OreCopper_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1.Schematic_Tutorial1_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -10937,6 +10937,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Tutorial`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1_5.Schematic_Tutorial1_5_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -10953,20 +10965,8 @@ var (
 			},
 			{
 				Class:                        `BP_UnlockScannableResource_C`,
-				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"')`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"'))`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1_5.Schematic_Tutorial1_5_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
+				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Stone/Desc_Stone.Desc_Stone_C"')`,
 			},
 		},
 	}
@@ -10987,6 +10987,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Tutorial`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial2.Schematic_Tutorial2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11004,18 +11016,6 @@ var (
 			{
 				Class:                      `BP_UnlockInventorySlot_C`,
 				MNumInventorySlotsToUnlock: 3,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial2.Schematic_Tutorial2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -11036,6 +11036,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Tutorial`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial3.Schematic_Tutorial3_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11053,18 +11065,6 @@ var (
 			{
 				Class:                      `BP_UnlockInventorySlot_C`,
 				MNumInventorySlotsToUnlock: 3,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial3.Schematic_Tutorial3_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -11085,6 +11085,18 @@ var (
 		MTechTier:               0,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_Tutorial`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial4.Schematic_Tutorial4_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11098,18 +11110,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/TowTruck/Recipe_SpaceElevator.Recipe_SpaceElevator_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorBiomass.Recipe_GeneratorBiomass_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Wood.Recipe_Biomass_Wood_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Leaves.Recipe_Biomass_Leaves_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial4.Schematic_Tutorial4_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -11130,6 +11130,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11145,7 +11146,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Straight.Recipe_Walkway_Straight_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Ramp.Recipe_Walkway_Ramp_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Turn.Recipe_Walkway_Turn_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_T.Recipe_Walkway_T_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Cross.Recipe_Walkway_Cross_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	WallPowerPoles = FGSchematic{
@@ -11164,6 +11164,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11179,7 +11180,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWall.Recipe_PowerPoleWall_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDouble.Recipe_PowerPoleWallDouble_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	WallPowerPolesMK2 = FGSchematic{
@@ -11198,6 +11198,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_2.Research_Caterium_4_2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11211,18 +11223,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk2.Recipe_PowerPoleWallMk2_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk2.Recipe_PowerPoleWallDoubleMk2_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_2.Research_Caterium_4_2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -11243,6 +11243,18 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies: []struct {
+			Class                              string
+			MGamePhase                         string
+			MRequireAllSchematicsToBePurchased bool
+			MSchematics                        string
+		}{
+			{
+				Class:                              `BP_SchematicPurchasedDependency_C`,
+				MRequireAllSchematicsToBePurchased: true,
+				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_2.Research_Caterium_6_2_C"')`,
+			},
+		},
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11256,18 +11268,6 @@ var (
 			{
 				Class:    `BP_UnlockRecipe_C`,
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk3.Recipe_PowerPoleWallMk3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk3.Recipe_PowerPoleWallDoubleMk3_C"')`,
-			},
-		},
-		MSchematicDependencies: []struct {
-			Class                              string
-			MGamePhase                         string
-			MRequireAllSchematicsToBePurchased bool
-			MSchematics                        string
-		}{
-			{
-				Class:                              `BP_SchematicPurchasedDependency_C`,
-				MSchematics:                        `(BlueprintGeneratedClass'"/Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_2.Research_Caterium_6_2_C"')`,
-				MRequireAllSchematicsToBePurchased: true,
 			},
 		},
 	}
@@ -11288,6 +11288,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11303,7 +11304,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_01.Recipe_Wall_Window_8x4_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_02.Recipe_Wall_Window_8x4_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03.Recipe_Wall_Window_8x4_03_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_04.Recipe_Wall_Window_8x4_04_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	Wire = FGSchematic{
@@ -11322,6 +11322,7 @@ var (
 		MTechTier:               1,
 		MTimeToComplete:         0.000000,
 		MType:                   `EST_ResourceSink`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11333,11 +11334,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=500))`,
 				Class:        `BP_UnlockGiveItem_C`,
+				MItemsToGive: `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=500))`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas1 = FGSchematic{
@@ -11356,6 +11356,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11371,7 +11372,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Recipe_XMassTree.Recipe_XMassTree_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBranch.Recipe_XmasBranch_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas1_1 = FGSchematic{
@@ -11390,6 +11390,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11401,11 +11402,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_CandyCaneBasher.Recipe_CandyCaneBasher_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_CandyCane.Recipe_CandyCane_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Equipment/Recipe_CandyCaneBasher.Recipe_CandyCaneBasher_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_CandyCane.Recipe_CandyCane_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas1_2 = FGSchematic{
@@ -11424,6 +11424,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11439,7 +11440,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/CandyCaneDecor/Recipe_CandyCaneDecor.Recipe_CandyCaneDecor_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBow.Recipe_XmasBow_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas2 = FGSchematic{
@@ -11458,6 +11458,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11477,7 +11478,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall1.Recipe_XmasBall1_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall2.Recipe_XmasBall2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas2_1 = FGSchematic{
@@ -11496,6 +11496,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11511,7 +11512,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/SnowmanDecor/Recipe_Snowman.Recipe_Snowman_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_Snow.Recipe_Snow_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas2_2 = FGSchematic{
@@ -11530,6 +11530,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11545,7 +11546,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Holiday/Recipe_TreeGiftProducer.Recipe_TreeGiftProducer_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall3.Recipe_XmasBall3_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall4.Recipe_XmasBall4_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas3 = FGSchematic{
@@ -11564,6 +11564,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11579,7 +11580,6 @@ var (
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Schematic_XMassTree_T2.Schematic_XMassTree_T2_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas3_1 = FGSchematic{
@@ -11598,6 +11598,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11613,7 +11614,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/PowerLineLights/Recipe_xmassLights.Recipe_xmassLights_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBallCluster.Recipe_XmasBallCluster_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas3_2 = FGSchematic{
@@ -11632,6 +11632,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11643,11 +11644,10 @@ var (
 			MSchematics                   string
 		}{
 			{
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/SnowDispenser/Recipe_SnowDispenser.Recipe_SnowDispenser_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasWreath.Recipe_XmasWreath_C"')`,
 				Class:    `BP_UnlockRecipe_C`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/SnowDispenser/Recipe_SnowDispenser.Recipe_SnowDispenser_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasWreath.Recipe_XmasWreath_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas4 = FGSchematic{
@@ -11666,6 +11666,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11681,7 +11682,6 @@ var (
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Schematic_XMassTree_T3.Schematic_XMassTree_T3_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas4_1 = FGSchematic{
@@ -11700,6 +11700,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11715,7 +11716,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/WreathDecor/Recipe_WreathDecor.Recipe_WreathDecor_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasStar.Recipe_XmasStar_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas4_2 = FGSchematic{
@@ -11734,6 +11734,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11749,7 +11750,6 @@ var (
 				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Holiday/Recipe_SnowballWeapon.Recipe_SnowballWeapon_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Holiday/Recipe_Snowball.Recipe_Snowball_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 
 	XMas5 = FGSchematic{
@@ -11768,6 +11768,7 @@ var (
 		MTechTier:               3,
 		MTimeToComplete:         3.000000,
 		MType:                   `EST_MAM`,
+		MSchematicDependencies:  nil,
 		MUnlocks: []struct {
 			Class                         string
 			MItemsToGive                  string
@@ -11783,7 +11784,6 @@ var (
 				MSchematics: `(BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Schematic_XMassTree_T4.Schematic_XMassTree_T4_C"')`,
 			},
 		},
-		MSchematicDependencies: nil,
 	}
 )
 

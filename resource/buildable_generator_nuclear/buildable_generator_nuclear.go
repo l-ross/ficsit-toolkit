@@ -141,16 +141,16 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 			MSupplementalResourceClass string
 		}{
 			{
-				MFuelClass:                 `Desc_NuclearFuelRod_C`,
-				MSupplementalResourceClass: `Desc_Water_C`,
 				MByproduct:                 `Desc_NuclearWaste_C`,
 				MByproductAmount:           50,
+				MFuelClass:                 `Desc_NuclearFuelRod_C`,
+				MSupplementalResourceClass: `Desc_Water_C`,
 			},
 			{
-				MFuelClass:                 `Desc_PlutoniumFuelRod_C`,
-				MSupplementalResourceClass: `Desc_Water_C`,
 				MByproduct:                 `Desc_PlutoniumWaste_C`,
 				MByproductAmount:           10,
+				MFuelClass:                 `Desc_PlutoniumFuelRod_C`,
+				MSupplementalResourceClass: `Desc_Water_C`,
 			},
 		},
 	}
