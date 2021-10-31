@@ -9,6 +9,7 @@ import (
 )
 
 type FGJumpingStilts struct {
+	Name                   string
 	ClassName              string
 	MArmAnimation          string
 	MAttachSocket          string
@@ -23,6 +24,7 @@ type FGJumpingStilts struct {
 
 var (
 	JumpingStilts = FGJumpingStilts{
+		Name:                   "JumpingStilts",
 		ClassName:              "Equip_JumpingStilts_C",
 		MArmAnimation:          `AE_None`,
 		MAttachSocket:          `jumpingStilt_lSocket`,

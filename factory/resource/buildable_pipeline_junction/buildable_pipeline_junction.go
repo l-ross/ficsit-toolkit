@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildablePipelineJunction struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -56,6 +57,7 @@ type FGBuildablePipelineJunction struct {
 
 var (
 	PipelineJunctionCross = FGBuildablePipelineJunction{
+		Name:                                    "PipelineJunctionCross",
 		ClassName:                               "Build_PipelineJunction_Cross_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

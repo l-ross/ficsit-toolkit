@@ -9,6 +9,7 @@ import (
 )
 
 type FGPipeHyperStart struct {
+	Name                                                                           string
 	ClassName                                                                      string
 	AudioCounterTimer                                                              string
 	InterpolateEngineSound_InterpolateEngineAlpha_064FA8194B7224F6F187999413D1C8A6 float64
@@ -65,6 +66,7 @@ type FGPipeHyperStart struct {
 
 var (
 	PipeHyperStart = FGPipeHyperStart{
+		Name:              "PipeHyperStart",
 		ClassName:         "Build_PipeHyperStart_C",
 		AudioCounterTimer: `()`,
 		InterpolateEngineSound_InterpolateEngineAlpha_064FA8194B7224F6F187999413D1C8A6: 0.000000,

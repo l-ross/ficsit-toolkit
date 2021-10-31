@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildable struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -32,6 +33,7 @@ type FGBuildable struct {
 
 var (
 	ConveyorPoleWall = FGBuildable{
+		Name:                                    "ConveyorPoleWall",
 		ClassName:                               "Build_ConveyorPoleWall_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -55,6 +57,7 @@ Useful to route conveyor belts in a more controlled manner and over long distanc
 	}
 
 	HyperTubeWallHole = FGBuildable{
+		Name:                                    "HyperTubeWallHole",
 		ClassName:                               "Build_HyperTubeWallHole_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -77,6 +80,7 @@ Useful to route conveyor belts in a more controlled manner and over long distanc
 	}
 
 	HyperTubeWallSupport = FGBuildable{
+		Name:                                    "HyperTubeWallSupport",
 		ClassName:                               "Build_HyperTubeWallSupport_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -100,6 +104,7 @@ Supports for Hyper Tubes to allow for longer distances.`,
 	}
 
 	PipelineSupportWall = FGBuildable{
+		Name:                                    "PipelineSupportWall",
 		ClassName:                               "Build_PipelineSupportWall_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -123,6 +128,7 @@ Used to connect Pipelines over longer distances.`,
 	}
 
 	PipelineSupportWallHole = FGBuildable{
+		Name:                                    "PipelineSupportWallHole",
 		ClassName:                               "Build_PipelineSupportWallHole_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -145,6 +151,7 @@ Used to connect Pipelines over longer distances.`,
 	}
 
 	WorkBench = FGBuildable{
+		Name:                                    "WorkBench",
 		ClassName:                               "Build_WorkBench_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -169,6 +176,7 @@ These parts can then be used in construction of different factory buildings, veh
 	}
 
 	Workshop = FGBuildable{
+		Name:                                    "Workshop",
 		ClassName:                               "Build_Workshop_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -192,6 +200,7 @@ These parts can then be used in construction of different factory buildings, veh
 	}
 
 	WreathDecor = FGBuildable{
+		Name:                                    "WreathDecor",
 		ClassName:                               "Build_WreathDecor_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -214,6 +223,7 @@ These parts can then be used in construction of different factory buildings, veh
 	}
 
 	XmassTree = FGBuildable{
+		Name:                                    "XmassTree",
 		ClassName:                               "Build_XmassTree_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    true,

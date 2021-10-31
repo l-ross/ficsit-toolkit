@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableTradingPost struct {
+	Name                                    string
 	ClassName                               string
 	ABClass                                 string
 	MAddToSignificanceManager               bool
@@ -70,6 +71,7 @@ type FGBuildableTradingPost struct {
 
 var (
 	TradingPost = FGBuildableTradingPost{
+		Name:                                    "TradingPost",
 		ClassName:                               "Build_TradingPost_C",
 		ABClass:                                 `/Game/FactoryGame/Buildable/Factory/TradingPost/BPA_Tradingpost.BPA_Tradingpost_C`,
 		MAddToSignificanceManager:               true,

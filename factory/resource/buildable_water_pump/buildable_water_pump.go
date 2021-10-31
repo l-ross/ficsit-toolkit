@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableWaterPump struct {
+	Name                                                                       string
 	ClassName                                                                  string
 	HasLostSignificance                                                        bool
 	MAddToSignificanceManager                                                  bool
@@ -73,6 +74,7 @@ type FGBuildableWaterPump struct {
 
 var (
 	WaterPump = FGBuildableWaterPump{
+		Name:                                    "WaterPump",
 		ClassName:                               "Build_WaterPump_C",
 		HasLostSignificance:                     false,
 		MAddToSignificanceManager:               true,

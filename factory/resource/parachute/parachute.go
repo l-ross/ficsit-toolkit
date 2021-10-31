@@ -9,6 +9,7 @@ import (
 )
 
 type FGParachute struct {
+	Name                   string
 	ClassName              string
 	MArmAnimation          string
 	MAttachSocket          string
@@ -23,6 +24,7 @@ type FGParachute struct {
 
 var (
 	Parachute = FGParachute{
+		Name:                   "Parachute",
 		ClassName:              "Equip_Parachute_C",
 		MArmAnimation:          `AE_None`,
 		MAttachSocket:          `root`,

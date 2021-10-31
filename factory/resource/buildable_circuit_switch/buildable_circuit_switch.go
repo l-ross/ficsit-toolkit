@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableCircuitSwitch struct {
+	Name                                    string
 	ClassName                               string
 	BIsSignificant                          bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -40,6 +41,7 @@ type FGBuildableCircuitSwitch struct {
 
 var (
 	PowerSwitch = FGBuildableCircuitSwitch{
+		Name:                                    "PowerSwitch",
 		ClassName:                               "Build_PowerSwitch_C",
 		BIsSignificant:                          false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

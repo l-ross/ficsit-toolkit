@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildingDescriptor struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MBuildMenuPriority      float64
@@ -29,6 +30,7 @@ type FGBuildingDescriptor struct {
 
 var (
 	AssemblerMk1 = FGBuildingDescriptor{
+		Name:                    "AssemblerMk1",
 		ClassName:               "Desc_AssemblerMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -48,6 +50,7 @@ var (
 	}
 
 	Blender = FGBuildingDescriptor{
+		Name:                    "Blender",
 		ClassName:               "Desc_Blender_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      13.000000,
@@ -67,6 +70,7 @@ var (
 	}
 
 	CandyCaneDecor = FGBuildingDescriptor{
+		Name:                    "CandyCaneDecor",
 		ClassName:               "Desc_CandyCaneDecor_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -86,6 +90,7 @@ var (
 	}
 
 	CeilingLight = FGBuildingDescriptor{
+		Name:                    "CeilingLight",
 		ClassName:               "Desc_CeilingLight_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -105,6 +110,7 @@ var (
 	}
 
 	ConstructorMk1 = FGBuildingDescriptor{
+		Name:                    "ConstructorMk1",
 		ClassName:               "Desc_ConstructorMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -124,6 +130,7 @@ var (
 	}
 
 	ConveyorAttachmentMerger = FGBuildingDescriptor{
+		Name:                    "ConveyorAttachmentMerger",
 		ClassName:               "Desc_ConveyorAttachmentMerger_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -143,6 +150,7 @@ var (
 	}
 
 	ConveyorAttachmentSplitter = FGBuildingDescriptor{
+		Name:                    "ConveyorAttachmentSplitter",
 		ClassName:               "Desc_ConveyorAttachmentSplitter_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -162,6 +170,7 @@ var (
 	}
 
 	ConveyorAttachmentSplitterProgrammable = FGBuildingDescriptor{
+		Name:                    "ConveyorAttachmentSplitterProgrammable",
 		ClassName:               "Desc_ConveyorAttachmentSplitterProgrammable_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -181,6 +190,7 @@ var (
 	}
 
 	ConveyorAttachmentSplitterSmart = FGBuildingDescriptor{
+		Name:                    "ConveyorAttachmentSplitterSmart",
 		ClassName:               "Desc_ConveyorAttachmentSplitterSmart_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -200,6 +210,7 @@ var (
 	}
 
 	ConveyorBeltMk1 = FGBuildingDescriptor{
+		Name:                    "ConveyorBeltMk1",
 		ClassName:               "Desc_ConveyorBeltMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      31.000000,
@@ -219,6 +230,7 @@ var (
 	}
 
 	ConveyorBeltMk2 = FGBuildingDescriptor{
+		Name:                    "ConveyorBeltMk2",
 		ClassName:               "Desc_ConveyorBeltMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      32.000000,
@@ -238,6 +250,7 @@ var (
 	}
 
 	ConveyorBeltMk3 = FGBuildingDescriptor{
+		Name:                    "ConveyorBeltMk3",
 		ClassName:               "Desc_ConveyorBeltMk3_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      33.000000,
@@ -257,6 +270,7 @@ var (
 	}
 
 	ConveyorBeltMk4 = FGBuildingDescriptor{
+		Name:                    "ConveyorBeltMk4",
 		ClassName:               "Desc_ConveyorBeltMk4_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      34.000000,
@@ -276,6 +290,7 @@ var (
 	}
 
 	ConveyorBeltMk5 = FGBuildingDescriptor{
+		Name:                    "ConveyorBeltMk5",
 		ClassName:               "Desc_ConveyorBeltMk5_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      35.000000,
@@ -295,6 +310,7 @@ var (
 	}
 
 	ConveyorLiftMk1 = FGBuildingDescriptor{
+		Name:                    "ConveyorLiftMk1",
 		ClassName:               "Desc_ConveyorLiftMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -314,6 +330,7 @@ var (
 	}
 
 	ConveyorLiftMk2 = FGBuildingDescriptor{
+		Name:                    "ConveyorLiftMk2",
 		ClassName:               "Desc_ConveyorLiftMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -333,6 +350,7 @@ var (
 	}
 
 	ConveyorLiftMk3 = FGBuildingDescriptor{
+		Name:                    "ConveyorLiftMk3",
 		ClassName:               "Desc_ConveyorLiftMk3_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -352,6 +370,7 @@ var (
 	}
 
 	ConveyorLiftMk4 = FGBuildingDescriptor{
+		Name:                    "ConveyorLiftMk4",
 		ClassName:               "Desc_ConveyorLiftMk4_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -371,6 +390,7 @@ var (
 	}
 
 	ConveyorLiftMk5 = FGBuildingDescriptor{
+		Name:                    "ConveyorLiftMk5",
 		ClassName:               "Desc_ConveyorLiftMk5_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -390,6 +410,7 @@ var (
 	}
 
 	ConveyorPoleWall = FGBuildingDescriptor{
+		Name:                    "ConveyorPoleWall",
 		ClassName:               "Desc_ConveyorPoleWall_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      31.000000,
@@ -409,6 +430,7 @@ var (
 	}
 
 	DroneStation = FGBuildingDescriptor{
+		Name:                    "DroneStation",
 		ClassName:               "Desc_DroneStation_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -428,6 +450,7 @@ var (
 	}
 
 	Fence01 = FGBuildingDescriptor{
+		Name:                    "Fence01",
 		ClassName:               "Desc_Fence_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -447,6 +470,7 @@ var (
 	}
 
 	FloodlightPole = FGBuildingDescriptor{
+		Name:                    "FloodlightPole",
 		ClassName:               "Desc_FloodlightPole_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -466,6 +490,7 @@ var (
 	}
 
 	FloodlightWall = FGBuildingDescriptor{
+		Name:                    "FloodlightWall",
 		ClassName:               "Desc_FloodlightWall_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -485,6 +510,7 @@ var (
 	}
 
 	Foundation8x101 = FGBuildingDescriptor{
+		Name:                    "Foundation8x101",
 		ClassName:               "Desc_Foundation_8x1_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -504,6 +530,7 @@ var (
 	}
 
 	Foundation8x201 = FGBuildingDescriptor{
+		Name:                    "Foundation8x201",
 		ClassName:               "Desc_Foundation_8x2_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -523,6 +550,7 @@ var (
 	}
 
 	Foundation8x401 = FGBuildingDescriptor{
+		Name:                    "Foundation8x401",
 		ClassName:               "Desc_Foundation_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -542,6 +570,7 @@ var (
 	}
 
 	FoundationFrame01 = FGBuildingDescriptor{
+		Name:                    "FoundationFrame01",
 		ClassName:               "Desc_Foundation_Frame_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -561,6 +590,7 @@ var (
 	}
 
 	FoundationGlass01 = FGBuildingDescriptor{
+		Name:                    "FoundationGlass01",
 		ClassName:               "Desc_FoundationGlass_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -580,6 +610,7 @@ var (
 	}
 
 	FoundryMk1 = FGBuildingDescriptor{
+		Name:                    "FoundryMk1",
 		ClassName:               "Desc_FoundryMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      8.000000,
@@ -599,6 +630,7 @@ var (
 	}
 
 	FrackingExtractor = FGBuildingDescriptor{
+		Name:                    "FrackingExtractor",
 		ClassName:               "Desc_FrackingExtractor_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -618,6 +650,7 @@ var (
 	}
 
 	FrackingSmasher = FGBuildingDescriptor{
+		Name:                    "FrackingSmasher",
 		ClassName:               "Desc_FrackingSmasher_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -637,6 +670,7 @@ var (
 	}
 
 	GeneratorBiomass = FGBuildingDescriptor{
+		Name:                    "GeneratorBiomass",
 		ClassName:               "Desc_GeneratorBiomass_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -656,6 +690,7 @@ var (
 	}
 
 	GeneratorCoal = FGBuildingDescriptor{
+		Name:                    "GeneratorCoal",
 		ClassName:               "Desc_GeneratorCoal_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -675,6 +710,7 @@ var (
 	}
 
 	GeneratorFuel = FGBuildingDescriptor{
+		Name:                    "GeneratorFuel",
 		ClassName:               "Desc_GeneratorFuel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -694,6 +730,7 @@ var (
 	}
 
 	GeneratorGeoThermal = FGBuildingDescriptor{
+		Name:                    "GeneratorGeoThermal",
 		ClassName:               "Desc_GeneratorGeoThermal_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      7.000000,
@@ -713,6 +750,7 @@ var (
 	}
 
 	GeneratorNuclear = FGBuildingDescriptor{
+		Name:                    "GeneratorNuclear",
 		ClassName:               "Desc_GeneratorNuclear_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      8.000000,
@@ -732,6 +770,7 @@ var (
 	}
 
 	HadronCollider = FGBuildingDescriptor{
+		Name:                    "HadronCollider",
 		ClassName:               "Desc_HadronCollider_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      21.000000,
@@ -751,6 +790,7 @@ var (
 	}
 
 	HyperTubeWallHole = FGBuildingDescriptor{
+		Name:                    "HyperTubeWallHole",
 		ClassName:               "Desc_HyperTubeWallHole_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -770,6 +810,7 @@ var (
 	}
 
 	HyperTubeWallSupport = FGBuildingDescriptor{
+		Name:                    "HyperTubeWallSupport",
 		ClassName:               "Desc_HyperTubeWallSupport_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -789,6 +830,7 @@ var (
 	}
 
 	IndustrialTank = FGBuildingDescriptor{
+		Name:                    "IndustrialTank",
 		ClassName:               "Desc_IndustrialTank_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      65.000000,
@@ -808,6 +850,7 @@ var (
 	}
 
 	JumpPad = FGBuildingDescriptor{
+		Name:                    "JumpPad",
 		ClassName:               "Desc_JumpPad_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      64.000000,
@@ -827,6 +870,7 @@ var (
 	}
 
 	JumpPadAdjustable = FGBuildingDescriptor{
+		Name:                    "JumpPadAdjustable",
 		ClassName:               "Desc_JumpPadAdjustable_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      65.000000,
@@ -846,6 +890,7 @@ var (
 	}
 
 	JumpPadTilted = FGBuildingDescriptor{
+		Name:                    "JumpPadTilted",
 		ClassName:               "Desc_JumpPadTilted_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      65.000000,
@@ -865,6 +910,7 @@ var (
 	}
 
 	Ladder = FGBuildingDescriptor{
+		Name:                    "Ladder",
 		ClassName:               "Desc_Ladder_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -884,6 +930,7 @@ var (
 	}
 
 	LandingPad = FGBuildingDescriptor{
+		Name:                    "LandingPad",
 		ClassName:               "Desc_LandingPad_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      66.000000,
@@ -903,6 +950,7 @@ var (
 	}
 
 	LightsControlPanel = FGBuildingDescriptor{
+		Name:                    "LightsControlPanel",
 		ClassName:               "Desc_LightsControlPanel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      10.000000,
@@ -922,6 +970,7 @@ var (
 	}
 
 	LookoutTower = FGBuildingDescriptor{
+		Name:                    "LookoutTower",
 		ClassName:               "Desc_LookoutTower_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      0.000000,
@@ -941,6 +990,7 @@ var (
 	}
 
 	Mam = FGBuildingDescriptor{
+		Name:                    "Mam",
 		ClassName:               "Desc_Mam_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -960,6 +1010,7 @@ var (
 	}
 
 	ManufacturerMk1 = FGBuildingDescriptor{
+		Name:                    "ManufacturerMk1",
 		ClassName:               "Desc_ManufacturerMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -979,6 +1030,7 @@ var (
 	}
 
 	MinerMk1 = FGBuildingDescriptor{
+		Name:                    "MinerMk1",
 		ClassName:               "Desc_MinerMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -998,6 +1050,7 @@ var (
 	}
 
 	MinerMk2 = FGBuildingDescriptor{
+		Name:                    "MinerMk2",
 		ClassName:               "Desc_MinerMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -1017,6 +1070,7 @@ var (
 	}
 
 	MinerMk3 = FGBuildingDescriptor{
+		Name:                    "MinerMk3",
 		ClassName:               "Desc_MinerMk3_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -1036,6 +1090,7 @@ var (
 	}
 
 	OilPump = FGBuildingDescriptor{
+		Name:                    "OilPump",
 		ClassName:               "Desc_OilPump_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -1055,6 +1110,7 @@ var (
 	}
 
 	OilRefinery = FGBuildingDescriptor{
+		Name:                    "OilRefinery",
 		ClassName:               "Desc_OilRefinery_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      12.000000,
@@ -1074,6 +1130,7 @@ var (
 	}
 
 	Packager = FGBuildingDescriptor{
+		Name:                    "Packager",
 		ClassName:               "Desc_Packager_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      11.000000,
@@ -1093,6 +1150,7 @@ var (
 	}
 
 	PillarBase = FGBuildingDescriptor{
+		Name:                    "PillarBase",
 		ClassName:               "Desc_PillarBase_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -1112,6 +1170,7 @@ var (
 	}
 
 	PillarMiddle = FGBuildingDescriptor{
+		Name:                    "PillarMiddle",
 		ClassName:               "Desc_PillarMiddle_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      7.000000,
@@ -1131,6 +1190,7 @@ var (
 	}
 
 	PillarTop = FGBuildingDescriptor{
+		Name:                    "PillarTop",
 		ClassName:               "Desc_PillarTop_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      8.000000,
@@ -1150,6 +1210,7 @@ var (
 	}
 
 	PipeHyper = FGBuildingDescriptor{
+		Name:                    "PipeHyper",
 		ClassName:               "Desc_PipeHyper_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -1169,6 +1230,7 @@ var (
 	}
 
 	PipeHyperStart = FGBuildingDescriptor{
+		Name:                    "PipeHyperStart",
 		ClassName:               "Desc_PipeHyperStart_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -1188,6 +1250,7 @@ var (
 	}
 
 	PipeStorageTank = FGBuildingDescriptor{
+		Name:                    "PipeStorageTank",
 		ClassName:               "Desc_PipeStorageTank_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      64.000000,
@@ -1207,6 +1270,7 @@ var (
 	}
 
 	Pipeline = FGBuildingDescriptor{
+		Name:                    "Pipeline",
 		ClassName:               "Desc_Pipeline_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      0.000000,
@@ -1226,6 +1290,7 @@ var (
 	}
 
 	PipelineJunctionCross = FGBuildingDescriptor{
+		Name:                    "PipelineJunctionCross",
 		ClassName:               "Desc_PipelineJunction_Cross_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -1245,6 +1310,7 @@ var (
 	}
 
 	PipelineMK2 = FGBuildingDescriptor{
+		Name:                    "PipelineMK2",
 		ClassName:               "Desc_PipelineMK2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -1264,6 +1330,7 @@ var (
 	}
 
 	PipelinePump = FGBuildingDescriptor{
+		Name:                    "PipelinePump",
 		ClassName:               "Desc_PipelinePump_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -1283,6 +1350,7 @@ var (
 	}
 
 	PipelinePumpMk2 = FGBuildingDescriptor{
+		Name:                    "PipelinePumpMk2",
 		ClassName:               "Desc_PipelinePumpMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -1302,6 +1370,7 @@ var (
 	}
 
 	PipelineSupportWall = FGBuildingDescriptor{
+		Name:                    "PipelineSupportWall",
 		ClassName:               "Desc_PipelineSupportWall_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -1321,6 +1390,7 @@ var (
 	}
 
 	PipelineSupportWallHole = FGBuildingDescriptor{
+		Name:                    "PipelineSupportWallHole",
 		ClassName:               "Desc_PipelineSupportWallHole_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -1340,6 +1410,7 @@ var (
 	}
 
 	PowerLine = FGBuildingDescriptor{
+		Name:                    "PowerLine",
 		ClassName:               "Desc_PowerLine_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      0.000000,
@@ -1359,6 +1430,7 @@ var (
 	}
 
 	PowerPoleMk1 = FGBuildingDescriptor{
+		Name:                    "PowerPoleMk1",
 		ClassName:               "Desc_PowerPoleMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -1378,6 +1450,7 @@ var (
 	}
 
 	PowerPoleMk2 = FGBuildingDescriptor{
+		Name:                    "PowerPoleMk2",
 		ClassName:               "Desc_PowerPoleMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -1397,6 +1470,7 @@ var (
 	}
 
 	PowerPoleMk3 = FGBuildingDescriptor{
+		Name:                    "PowerPoleMk3",
 		ClassName:               "Desc_PowerPoleMk3_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -1416,6 +1490,7 @@ var (
 	}
 
 	PowerPoleWall = FGBuildingDescriptor{
+		Name:                    "PowerPoleWall",
 		ClassName:               "Desc_PowerPoleWall_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -1435,6 +1510,7 @@ var (
 	}
 
 	PowerPoleWallDouble = FGBuildingDescriptor{
+		Name:                    "PowerPoleWallDouble",
 		ClassName:               "Desc_PowerPoleWallDouble_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -1454,6 +1530,7 @@ var (
 	}
 
 	PowerPoleWallDoubleMk2 = FGBuildingDescriptor{
+		Name:                    "PowerPoleWallDoubleMk2",
 		ClassName:               "Desc_PowerPoleWallDoubleMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -1473,6 +1550,7 @@ var (
 	}
 
 	PowerPoleWallDoubleMk3 = FGBuildingDescriptor{
+		Name:                    "PowerPoleWallDoubleMk3",
 		ClassName:               "Desc_PowerPoleWallDoubleMk3_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -1492,6 +1570,7 @@ var (
 	}
 
 	PowerPoleWallMk2 = FGBuildingDescriptor{
+		Name:                    "PowerPoleWallMk2",
 		ClassName:               "Desc_PowerPoleWallMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -1511,6 +1590,7 @@ var (
 	}
 
 	PowerPoleWallMk3 = FGBuildingDescriptor{
+		Name:                    "PowerPoleWallMk3",
 		ClassName:               "Desc_PowerPoleWallMk3_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -1530,6 +1610,7 @@ var (
 	}
 
 	PowerStorageMk1 = FGBuildingDescriptor{
+		Name:                    "PowerStorageMk1",
 		ClassName:               "Desc_PowerStorageMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      10.000000,
@@ -1549,6 +1630,7 @@ var (
 	}
 
 	PowerSwitch = FGBuildingDescriptor{
+		Name:                    "PowerSwitch",
 		ClassName:               "Desc_PowerSwitch_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -1568,6 +1650,7 @@ var (
 	}
 
 	QuarterPipe = FGBuildingDescriptor{
+		Name:                    "QuarterPipe",
 		ClassName:               "Desc_QuarterPipe_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      72.000000,
@@ -1587,6 +1670,7 @@ var (
 	}
 
 	QuarterPipe02 = FGBuildingDescriptor{
+		Name:                    "QuarterPipe02",
 		ClassName:               "Desc_QuarterPipe_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      72.000000,
@@ -1606,6 +1690,7 @@ var (
 	}
 
 	QuarterPipeCorner01 = FGBuildingDescriptor{
+		Name:                    "QuarterPipeCorner01",
 		ClassName:               "Desc_QuarterPipeCorner_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      72.000000,
@@ -1625,6 +1710,7 @@ var (
 	}
 
 	QuarterPipeCorner02 = FGBuildingDescriptor{
+		Name:                    "QuarterPipeCorner02",
 		ClassName:               "Desc_QuarterPipeCorner_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      72.000000,
@@ -1644,6 +1730,7 @@ var (
 	}
 
 	QuarterPipeCorner03 = FGBuildingDescriptor{
+		Name:                    "QuarterPipeCorner03",
 		ClassName:               "Desc_QuarterPipeCorner_03_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      72.000000,
@@ -1663,6 +1750,7 @@ var (
 	}
 
 	QuarterPipeCorner04 = FGBuildingDescriptor{
+		Name:                    "QuarterPipeCorner04",
 		ClassName:               "Desc_QuarterPipeCorner_04_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      72.000000,
@@ -1682,6 +1770,7 @@ var (
 	}
 
 	RadarTower = FGBuildingDescriptor{
+		Name:                    "RadarTower",
 		ClassName:               "Desc_RadarTower_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      60.000000,
@@ -1701,6 +1790,7 @@ var (
 	}
 
 	RailroadTrack = FGBuildingDescriptor{
+		Name:                    "RailroadTrack",
 		ClassName:               "Desc_RailroadTrack_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      53.000000,
@@ -1720,6 +1810,7 @@ var (
 	}
 
 	Ramp8x101 = FGBuildingDescriptor{
+		Name:                    "Ramp8x101",
 		ClassName:               "Desc_Ramp_8x1_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1739,6 +1830,7 @@ var (
 	}
 
 	Ramp8x201 = FGBuildingDescriptor{
+		Name:                    "Ramp8x201",
 		ClassName:               "Desc_Ramp_8x2_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1758,6 +1850,7 @@ var (
 	}
 
 	Ramp8x401 = FGBuildingDescriptor{
+		Name:                    "Ramp8x401",
 		ClassName:               "Desc_Ramp_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1777,6 +1870,7 @@ var (
 	}
 
 	Ramp8x4Inverted01 = FGBuildingDescriptor{
+		Name:                    "Ramp8x4Inverted01",
 		ClassName:               "Desc_Ramp_8x4_Inverted_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -1796,6 +1890,7 @@ var (
 	}
 
 	Ramp8x8x8 = FGBuildingDescriptor{
+		Name:                    "Ramp8x8x8",
 		ClassName:               "Desc_Ramp_8x8x8_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1815,6 +1910,7 @@ var (
 	}
 
 	RampDiagonal8x101 = FGBuildingDescriptor{
+		Name:                    "RampDiagonal8x101",
 		ClassName:               "Desc_Ramp_Diagonal_8x1_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1834,6 +1930,7 @@ var (
 	}
 
 	RampDiagonal8x102 = FGBuildingDescriptor{
+		Name:                    "RampDiagonal8x102",
 		ClassName:               "Desc_Ramp_Diagonal_8x1_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1853,6 +1950,7 @@ var (
 	}
 
 	RampDiagonal8x201 = FGBuildingDescriptor{
+		Name:                    "RampDiagonal8x201",
 		ClassName:               "Desc_Ramp_Diagonal_8x2_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1872,6 +1970,7 @@ var (
 	}
 
 	RampDiagonal8x202 = FGBuildingDescriptor{
+		Name:                    "RampDiagonal8x202",
 		ClassName:               "Desc_Ramp_Diagonal_8x2_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1891,6 +1990,7 @@ var (
 	}
 
 	RampDiagonal8x401 = FGBuildingDescriptor{
+		Name:                    "RampDiagonal8x401",
 		ClassName:               "Desc_Ramp_Diagonal_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1910,6 +2010,7 @@ var (
 	}
 
 	RampDiagonal8x402 = FGBuildingDescriptor{
+		Name:                    "RampDiagonal8x402",
 		ClassName:               "Desc_Ramp_Diagonal_8x4_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1929,6 +2030,7 @@ var (
 	}
 
 	RampDouble = FGBuildingDescriptor{
+		Name:                    "RampDouble",
 		ClassName:               "Desc_RampDouble_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1948,6 +2050,7 @@ var (
 	}
 
 	RampDouble8x1 = FGBuildingDescriptor{
+		Name:                    "RampDouble8x1",
 		ClassName:               "Desc_RampDouble_8x1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      94.000000,
@@ -1967,6 +2070,7 @@ var (
 	}
 
 	RampInverted8x1 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x1",
 		ClassName:               "Desc_RampInverted_8x1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -1986,6 +2090,7 @@ var (
 	}
 
 	RampInverted8x1Corner01 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x1Corner01",
 		ClassName:               "Desc_RampInverted_8x1_Corner_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -2005,6 +2110,7 @@ var (
 	}
 
 	RampInverted8x1Corner02 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x1Corner02",
 		ClassName:               "Desc_RampInverted_8x1_Corner_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      7.000000,
@@ -2024,6 +2130,7 @@ var (
 	}
 
 	RampInverted8x201 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x201",
 		ClassName:               "Desc_RampInverted_8x2_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -2043,6 +2150,7 @@ var (
 	}
 
 	RampInverted8x2Corner01 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x2Corner01",
 		ClassName:               "Desc_RampInverted_8x2_Corner_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -2062,6 +2170,7 @@ var (
 	}
 
 	RampInverted8x2Corner02 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x2Corner02",
 		ClassName:               "Desc_RampInverted_8x2_Corner_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      8.000000,
@@ -2081,6 +2190,7 @@ var (
 	}
 
 	RampInverted8x4Corner01 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x4Corner01",
 		ClassName:               "Desc_RampInverted_8x4_Corner_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -2100,6 +2210,7 @@ var (
 	}
 
 	RampInverted8x4Corner02 = FGBuildingDescriptor{
+		Name:                    "RampInverted8x4Corner02",
 		ClassName:               "Desc_RampInverted_8x4_Corner_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      9.000000,
@@ -2119,6 +2230,7 @@ var (
 	}
 
 	ResourceSink = FGBuildingDescriptor{
+		Name:                    "ResourceSink",
 		ClassName:               "Desc_ResourceSink_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      36.000000,
@@ -2138,6 +2250,7 @@ var (
 	}
 
 	ResourceSinkShop = FGBuildingDescriptor{
+		Name:                    "ResourceSinkShop",
 		ClassName:               "Desc_ResourceSinkShop_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      40.000000,
@@ -2157,6 +2270,7 @@ var (
 	}
 
 	SmelterMk1 = FGBuildingDescriptor{
+		Name:                    "SmelterMk1",
 		ClassName:               "Desc_SmelterMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -2176,6 +2290,7 @@ var (
 	}
 
 	SnowDispenser = FGBuildingDescriptor{
+		Name:                    "SnowDispenser",
 		ClassName:               "Desc_SnowDispenser_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -2195,6 +2310,7 @@ var (
 	}
 
 	Snowman = FGBuildingDescriptor{
+		Name:                    "Snowman",
 		ClassName:               "Desc_Snowman_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -2214,6 +2330,7 @@ var (
 	}
 
 	SpaceElevator = FGBuildingDescriptor{
+		Name:                    "SpaceElevator",
 		ClassName:               "Desc_SpaceElevator_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      35.000000,
@@ -2233,6 +2350,7 @@ var (
 	}
 
 	Stair1b = FGBuildingDescriptor{
+		Name:                    "Stair1b",
 		ClassName:               "Desc_Stair_1b_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      97.000000,
@@ -2252,6 +2370,7 @@ var (
 	}
 
 	StairsLeft01 = FGBuildingDescriptor{
+		Name:                    "StairsLeft01",
 		ClassName:               "Desc_Stairs_Left_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -2271,6 +2390,7 @@ var (
 	}
 
 	StairsRight01 = FGBuildingDescriptor{
+		Name:                    "StairsRight01",
 		ClassName:               "Desc_Stairs_Right_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      7.000000,
@@ -2290,6 +2410,7 @@ var (
 	}
 
 	StorageContainerMk1 = FGBuildingDescriptor{
+		Name:                    "StorageContainerMk1",
 		ClassName:               "Desc_StorageContainerMk1_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      62.000000,
@@ -2309,6 +2430,7 @@ var (
 	}
 
 	StorageContainerMk2 = FGBuildingDescriptor{
+		Name:                    "StorageContainerMk2",
 		ClassName:               "Desc_StorageContainerMk2_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      63.000000,
@@ -2328,6 +2450,7 @@ var (
 	}
 
 	StoragePlayer = FGBuildingDescriptor{
+		Name:                    "StoragePlayer",
 		ClassName:               "Desc_StoragePlayer_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      61.000000,
@@ -2347,6 +2470,7 @@ var (
 	}
 
 	StreetLight = FGBuildingDescriptor{
+		Name:                    "StreetLight",
 		ClassName:               "Desc_StreetLight_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -2366,6 +2490,7 @@ var (
 	}
 
 	TradingPost = FGBuildingDescriptor{
+		Name:                    "TradingPost",
 		ClassName:               "Desc_TradingPost_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      0.000000,
@@ -2385,6 +2510,7 @@ var (
 	}
 
 	TrainDockingStation = FGBuildingDescriptor{
+		Name:                    "TrainDockingStation",
 		ClassName:               "Desc_TrainDockingStation_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      52.000000,
@@ -2404,6 +2530,7 @@ var (
 	}
 
 	TrainDockingStationLiquid = FGBuildingDescriptor{
+		Name:                    "TrainDockingStationLiquid",
 		ClassName:               "Desc_TrainDockingStationLiquid_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      52.000000,
@@ -2423,6 +2550,7 @@ var (
 	}
 
 	TrainPlatformEmpty = FGBuildingDescriptor{
+		Name:                    "TrainPlatformEmpty",
 		ClassName:               "Desc_TrainPlatformEmpty_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      52.000000,
@@ -2442,6 +2570,7 @@ var (
 	}
 
 	TrainStation = FGBuildingDescriptor{
+		Name:                    "TrainStation",
 		ClassName:               "Desc_TrainStation_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      51.000000,
@@ -2461,6 +2590,7 @@ var (
 	}
 
 	TreeGiftProducer = FGBuildingDescriptor{
+		Name:                    "TreeGiftProducer",
 		ClassName:               "Desc_TreeGiftProducer_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -2480,6 +2610,7 @@ var (
 	}
 
 	TruckStation = FGBuildingDescriptor{
+		Name:                    "TruckStation",
 		ClassName:               "Desc_TruckStation_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      0.000000,
@@ -2499,6 +2630,7 @@ var (
 	}
 
 	Valve = FGBuildingDescriptor{
+		Name:                    "Valve",
 		ClassName:               "Desc_Valve_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -2518,6 +2650,7 @@ var (
 	}
 
 	WalkwayCross = FGBuildingDescriptor{
+		Name:                    "WalkwayCross",
 		ClassName:               "Desc_WalkwayCross_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      102.000000,
@@ -2537,6 +2670,7 @@ var (
 	}
 
 	WalkwayRamp = FGBuildingDescriptor{
+		Name:                    "WalkwayRamp",
 		ClassName:               "Desc_WalkwayRamp_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      102.000000,
@@ -2556,6 +2690,7 @@ var (
 	}
 
 	WalkwayStraight = FGBuildingDescriptor{
+		Name:                    "WalkwayStraight",
 		ClassName:               "Desc_WalkwayStraight_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      99.000000,
@@ -2575,6 +2710,7 @@ var (
 	}
 
 	WalkwayT = FGBuildingDescriptor{
+		Name:                    "WalkwayT",
 		ClassName:               "Desc_WalkwayT_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      101.000000,
@@ -2594,6 +2730,7 @@ var (
 	}
 
 	WalkwayTurn = FGBuildingDescriptor{
+		Name:                    "WalkwayTurn",
 		ClassName:               "Desc_WalkwayTurn_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      100.000000,
@@ -2613,6 +2750,7 @@ var (
 	}
 
 	Wall8x401 = FGBuildingDescriptor{
+		Name:                    "Wall8x401",
 		ClassName:               "Desc_Wall_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2632,6 +2770,7 @@ var (
 	}
 
 	Wall8x402 = FGBuildingDescriptor{
+		Name:                    "Wall8x402",
 		ClassName:               "Desc_Wall_8x4_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2651,6 +2790,7 @@ var (
 	}
 
 	WallConveyor8x401 = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x401",
 		ClassName:               "Desc_Wall_Conveyor_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2670,6 +2810,7 @@ var (
 	}
 
 	WallConveyor8x401Steel = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x401Steel",
 		ClassName:               "Desc_Wall_Conveyor_8x4_01_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2689,6 +2830,7 @@ var (
 	}
 
 	WallConveyor8x402 = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x402",
 		ClassName:               "Desc_Wall_Conveyor_8x4_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2708,6 +2850,7 @@ var (
 	}
 
 	WallConveyor8x402Steel = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x402Steel",
 		ClassName:               "Desc_Wall_Conveyor_8x4_02_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2727,6 +2870,7 @@ var (
 	}
 
 	WallConveyor8x403 = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x403",
 		ClassName:               "Desc_Wall_Conveyor_8x4_03_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2746,6 +2890,7 @@ var (
 	}
 
 	WallConveyor8x403Steel = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x403Steel",
 		ClassName:               "Desc_Wall_Conveyor_8x4_03_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2765,6 +2910,7 @@ var (
 	}
 
 	WallConveyor8x404 = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x404",
 		ClassName:               "Desc_Wall_Conveyor_8x4_04_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2784,6 +2930,7 @@ var (
 	}
 
 	WallConveyor8x404Steel = FGBuildingDescriptor{
+		Name:                    "WallConveyor8x404Steel",
 		ClassName:               "Desc_Wall_Conveyor_8x4_04_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2803,6 +2950,7 @@ var (
 	}
 
 	WallDoor8x401 = FGBuildingDescriptor{
+		Name:                    "WallDoor8x401",
 		ClassName:               "Desc_Wall_Door_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -2822,6 +2970,7 @@ var (
 	}
 
 	WallDoor8x401Steel = FGBuildingDescriptor{
+		Name:                    "WallDoor8x401Steel",
 		ClassName:               "Desc_Wall_Door_8x4_01_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      5.000000,
@@ -2841,6 +2990,7 @@ var (
 	}
 
 	WallDoor8x402 = FGBuildingDescriptor{
+		Name:                    "WallDoor8x402",
 		ClassName:               "Desc_Wall_Door_8x4_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -2860,6 +3010,7 @@ var (
 	}
 
 	WallDoor8x402Steel = FGBuildingDescriptor{
+		Name:                    "WallDoor8x402Steel",
 		ClassName:               "Desc_Wall_Door_8x4_02_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -2879,6 +3030,7 @@ var (
 	}
 
 	WallDoor8x403 = FGBuildingDescriptor{
+		Name:                    "WallDoor8x403",
 		ClassName:               "Desc_Wall_Door_8x4_03_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -2898,6 +3050,7 @@ var (
 	}
 
 	WallDoor8x403Steel = FGBuildingDescriptor{
+		Name:                    "WallDoor8x403Steel",
 		ClassName:               "Desc_Wall_Door_8x4_03_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -2917,6 +3070,7 @@ var (
 	}
 
 	WallGate8x401 = FGBuildingDescriptor{
+		Name:                    "WallGate8x401",
 		ClassName:               "Desc_Wall_Gate_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2936,6 +3090,7 @@ var (
 	}
 
 	WallWindow8x401 = FGBuildingDescriptor{
+		Name:                    "WallWindow8x401",
 		ClassName:               "Desc_Wall_Window_8x4_01_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2955,6 +3110,7 @@ var (
 	}
 
 	WallWindow8x402 = FGBuildingDescriptor{
+		Name:                    "WallWindow8x402",
 		ClassName:               "Desc_Wall_Window_8x4_02_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2974,6 +3130,7 @@ var (
 	}
 
 	WallWindow8x403 = FGBuildingDescriptor{
+		Name:                    "WallWindow8x403",
 		ClassName:               "Desc_Wall_Window_8x4_03_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -2993,6 +3150,7 @@ var (
 	}
 
 	WallWindow8x403Steel = FGBuildingDescriptor{
+		Name:                    "WallWindow8x403Steel",
 		ClassName:               "Desc_Wall_Window_8x4_03_Steel_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -3012,6 +3170,7 @@ var (
 	}
 
 	WallWindow8x404 = FGBuildingDescriptor{
+		Name:                    "WallWindow8x404",
 		ClassName:               "Desc_Wall_Window_8x4_04_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      85.000000,
@@ -3031,6 +3190,7 @@ var (
 	}
 
 	WaterPump = FGBuildingDescriptor{
+		Name:                    "WaterPump",
 		ClassName:               "Desc_WaterPump_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -3050,6 +3210,7 @@ var (
 	}
 
 	WorkBench = FGBuildingDescriptor{
+		Name:                    "WorkBench",
 		ClassName:               "Desc_WorkBench_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -3069,6 +3230,7 @@ var (
 	}
 
 	Workshop = FGBuildingDescriptor{
+		Name:                    "Workshop",
 		ClassName:               "Desc_Workshop_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
@@ -3088,6 +3250,7 @@ var (
 	}
 
 	WreathDecor = FGBuildingDescriptor{
+		Name:                    "WreathDecor",
 		ClassName:               "Desc_WreathDecor_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -3107,6 +3270,7 @@ var (
 	}
 
 	XMassTree = FGBuildingDescriptor{
+		Name:                    "XMassTree",
 		ClassName:               "Desc_XMassTree_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      0.000000,
@@ -3126,6 +3290,7 @@ var (
 	}
 
 	xmassLights = FGBuildingDescriptor{
+		Name:                    "xmassLights",
 		ClassName:               "Desc_xmassLights_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,

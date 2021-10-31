@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableManufacturerVariablePower struct {
+	Name                                    string
 	ClassName                               string
 	IsPowered                               bool
 	MAddToSignificanceManager               bool
@@ -71,6 +72,7 @@ type FGBuildableManufacturerVariablePower struct {
 
 var (
 	HadronCollider = FGBuildableManufacturerVariablePower{
+		Name:                                    "HadronCollider",
 		ClassName:                               "Build_HadronCollider_C",
 		IsPowered:                               false,
 		MAddToSignificanceManager:               true,

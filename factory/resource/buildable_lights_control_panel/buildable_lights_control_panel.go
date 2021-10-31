@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableLightsControlPanel struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -36,6 +37,7 @@ type FGBuildableLightsControlPanel struct {
 
 var (
 	LightsControlPanel = FGBuildableLightsControlPanel{
+		Name:                                    "LightsControlPanel",
 		ClassName:                               "Build_LightsControlPanel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableManufacturer struct {
+	Name                                    string
 	ClassName                               string
 	CurrentPackagingMode                    string
 	IsPowered                               bool
@@ -71,6 +72,7 @@ type FGBuildableManufacturer struct {
 
 var (
 	AssemblerMk1 = FGBuildableManufacturer{
+		Name:                                    "AssemblerMk1",
 		ClassName:                               "Build_AssemblerMk1_C",
 		IsPowered:                               false,
 		MAddToSignificanceManager:               true,
@@ -122,6 +124,7 @@ Can be automated by feeding parts into it with a conveyor belt connected to the 
 	}
 
 	Blender = FGBuildableManufacturer{
+		Name:                                    "Blender",
 		ClassName:                               "Build_Blender_C",
 		IsPowered:                               false,
 		MAddToSignificanceManager:               true,
@@ -180,6 +183,7 @@ Contains both Conveyor Belt and Pipe inputs and outputs.`,
 	}
 
 	ConstructorMk1 = FGBuildableManufacturer{
+		Name:                                    "ConstructorMk1",
 		ClassName:                               "Build_ConstructorMk1_C",
 		IsPowered:                               false,
 		MAddToSignificanceManager:               true,
@@ -233,6 +237,7 @@ Can be automated by feeding parts into it with a conveyor belt connected to the 
 	}
 
 	FoundryMk1 = FGBuildableManufacturer{
+		Name:                                    "FoundryMk1",
 		ClassName:                               "Build_FoundryMk1_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -284,6 +289,7 @@ Can be automated by feeding ore into it with a conveyor belt connected to the in
 	}
 
 	ManufacturerMk1 = FGBuildableManufacturer{
+		Name:                                    "ManufacturerMk1",
 		ClassName:                               "Build_ManufacturerMk1_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -337,6 +343,7 @@ Can be automated by feeding parts into it with a conveyor belt connected to the 
 	}
 
 	OilRefinery = FGBuildableManufacturer{
+		Name:                                    "OilRefinery",
 		ClassName:                               "Build_OilRefinery_C",
 		IsPowered:                               false,
 		MAddToSignificanceManager:               true,
@@ -391,6 +398,7 @@ Contains both a Conveyor Belt and Pipe input and output, to allow for the automa
 	}
 
 	Packager = FGBuildableManufacturer{
+		Name:                                    "Packager",
 		ClassName:                               "Build_Packager_C",
 		CurrentPackagingMode:                    ``,
 		IsPowered:                               false,
@@ -447,6 +455,7 @@ Contains both a Conveyor Belt and Pipe input and output, to allow for the automa
 	}
 
 	SmelterMk1 = FGBuildableManufacturer{
+		Name:                                    "SmelterMk1",
 		ClassName:                               "Build_SmelterMk1_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

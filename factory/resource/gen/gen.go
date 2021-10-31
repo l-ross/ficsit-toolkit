@@ -537,6 +537,7 @@ import (
 )
 
 type {{.TypeName}} struct{
+	Name string
 	ClassName string	{{if .HasFullName}} 
 	FullName string {{end}}
 	{{range .StructDefs}}		{{.Name}} {{.Type}}
@@ -545,6 +546,7 @@ type {{.TypeName}} struct{
 
 var (
 	{{range .Classes}}	{{.Name}} = {{.ResourceTypeName}}{
+		Name: "{{.Name}}",
 		ClassName: "{{.ClassName}}", {{if .HasFullName}}
 		FullName: "{{.FullName}}", {{end}}
 		{{range .Fields}}		{{.Name}}: {{.Value}},

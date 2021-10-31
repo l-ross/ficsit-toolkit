@@ -9,6 +9,7 @@ import (
 )
 
 type FGJetPack struct {
+	Name                     string
 	ClassName                string
 	MArmAnimation            string
 	MAttachSocket            string
@@ -37,6 +38,7 @@ type FGJetPack struct {
 
 var (
 	JetPack = FGJetPack{
+		Name:                     "JetPack",
 		ClassName:                "Equip_JetPack_C",
 		MArmAnimation:            `AE_None`,
 		MAttachSocket:            `None`,

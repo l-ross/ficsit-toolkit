@@ -9,6 +9,7 @@ import (
 )
 
 type FGEquipmentZipline struct {
+	Name                       string
 	ClassName                  string
 	MArmAnimation              string
 	MAttachSocket              string
@@ -29,6 +30,7 @@ type FGEquipmentZipline struct {
 
 var (
 	Zipline = FGEquipmentZipline{
+		Name:                       "Zipline",
 		ClassName:                  "Equip_Zipline_C",
 		MArmAnimation:              `AE_Generic1Hand`,
 		MAttachSocket:              `hand_rSocket`,

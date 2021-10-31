@@ -9,6 +9,7 @@ import (
 )
 
 type FGItemDescriptorBiomass struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MCanBeDiscarded         bool
@@ -28,6 +29,7 @@ type FGItemDescriptorBiomass struct {
 
 var (
 	Biofuel = FGItemDescriptorBiomass{
+		Name:                    "Biofuel",
 		ClassName:               "Desc_Biofuel_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -46,6 +48,7 @@ var (
 	}
 
 	Fabric = FGItemDescriptorBiomass{
+		Name:                    "Fabric",
 		ClassName:               "Desc_Fabric_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -65,6 +68,7 @@ Flexible but durable fabric.`,
 	}
 
 	FlowerPetals = FGItemDescriptorBiomass{
+		Name:                    "FlowerPetals",
 		ClassName:               "Desc_FlowerPetals_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -84,6 +88,7 @@ Colorful native flower petals.`,
 	}
 
 	GenericBiomass = FGItemDescriptorBiomass{
+		Name:                    "GenericBiomass",
 		ClassName:               "Desc_GenericBiomass_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -104,6 +109,7 @@ Biomass is much more energy-efficient than raw biological matter.`,
 	}
 
 	HogParts = FGItemDescriptorBiomass{
+		Name:                    "HogParts",
 		ClassName:               "Desc_HogParts_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -122,6 +128,7 @@ Biomass is much more energy-efficient than raw biological matter.`,
 	}
 
 	Leaves = FGItemDescriptorBiomass{
+		Name:                    "Leaves",
 		ClassName:               "Desc_Leaves_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -141,6 +148,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	LiquidBiofuel = FGItemDescriptorBiomass{
+		Name:                    "LiquidBiofuel",
 		ClassName:               "Desc_LiquidBiofuel_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -159,6 +167,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	Mycelia = FGItemDescriptorBiomass{
+		Name:                    "Mycelia",
 		ClassName:               "Desc_Mycelia_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -178,6 +187,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	PackagedAlumina = FGItemDescriptorBiomass{
+		Name:                    "PackagedAlumina",
 		ClassName:               "Desc_PackagedAlumina_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -196,6 +206,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	PackagedBiofuel = FGItemDescriptorBiomass{
+		Name:                    "PackagedBiofuel",
 		ClassName:               "Desc_PackagedBiofuel_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -214,6 +225,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	PackagedNitricAcid = FGItemDescriptorBiomass{
+		Name:                    "PackagedNitricAcid",
 		ClassName:               "Desc_PackagedNitricAcid_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -232,6 +244,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	PackagedNitrogenGas = FGItemDescriptorBiomass{
+		Name:                    "PackagedNitrogenGas",
 		ClassName:               "Desc_PackagedNitrogenGas_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -250,6 +263,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	PackagedSulfuricAcid = FGItemDescriptorBiomass{
+		Name:                    "PackagedSulfuricAcid",
 		ClassName:               "Desc_PackagedSulfuricAcid_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -268,6 +282,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	SpitterParts = FGItemDescriptorBiomass{
+		Name:                    "SpitterParts",
 		ClassName:               "Desc_SpitterParts_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -286,6 +301,7 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 
 	Wood = FGItemDescriptorBiomass{
+		Name:                    "Wood",
 		ClassName:               "Desc_Wood_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,

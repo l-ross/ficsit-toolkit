@@ -9,6 +9,7 @@ import (
 )
 
 type FGGolfCartDispenser struct {
+	Name                   string
 	ClassName              string
 	MArmAnimation          string
 	MAttachSocket          string
@@ -22,6 +23,7 @@ type FGGolfCartDispenser struct {
 
 var (
 	GolfCartDispenser = FGGolfCartDispenser{
+		Name:                   "GolfCartDispenser",
 		ClassName:              "Equip_GolfCartDispenser_C",
 		MArmAnimation:          `AE_Generic2Hand`,
 		MAttachSocket:          `hand_rSocket`,

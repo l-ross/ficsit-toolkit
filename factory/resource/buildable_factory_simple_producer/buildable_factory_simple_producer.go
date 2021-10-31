@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableFactorySimpleProducer struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -54,6 +55,7 @@ type FGBuildableFactorySimpleProducer struct {
 
 var (
 	TreeGiftProducer = FGBuildableFactorySimpleProducer{
+		Name:                                    "TreeGiftProducer",
 		ClassName:                               "Build_TreeGiftProducer_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

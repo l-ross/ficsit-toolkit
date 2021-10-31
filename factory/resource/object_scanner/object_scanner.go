@@ -9,6 +9,7 @@ import (
 )
 
 type FGObjectScanner struct {
+	Name                         string
 	ClassName                    string
 	MArmAnimation                string
 	MAttachSocket                string
@@ -33,6 +34,7 @@ type FGObjectScanner struct {
 
 var (
 	ObjectScanner = FGObjectScanner{
+		Name:                         "ObjectScanner",
 		ClassName:                    "Equip_ObjectScanner_C",
 		MArmAnimation:                `AE_Generic1Hand`,
 		MAttachSocket:                `hand_rSocket`,

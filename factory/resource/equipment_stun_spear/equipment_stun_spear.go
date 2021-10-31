@@ -9,6 +9,7 @@ import (
 )
 
 type FGEquipmentStunSpear struct {
+	Name                      string
 	ClassName                 string
 	MArmAnimation             string
 	MAttachSocket             string
@@ -32,6 +33,7 @@ type FGEquipmentStunSpear struct {
 
 var (
 	CandyCaneBasher = FGEquipmentStunSpear{
+		Name:                      "CandyCaneBasher",
 		ClassName:                 "Equip_CandyCaneBasher_C",
 		MArmAnimation:             `AE_StunSpear`,
 		MAttachSocket:             `hand_rSocket`,
@@ -52,6 +54,7 @@ var (
 	}
 
 	ShockShank = FGEquipmentStunSpear{
+		Name:                      "ShockShank",
 		ClassName:                 "Equip_ShockShank_C",
 		MArmAnimation:             `AE_ShockShank`,
 		MAttachSocket:             `hand_rSocket`,
@@ -70,6 +73,7 @@ var (
 	}
 
 	StunSpear = FGEquipmentStunSpear{
+		Name:                      "StunSpear",
 		ClassName:                 "Equip_StunSpear_C",
 		MArmAnimation:             `AE_StunSpear`,
 		MAttachSocket:             `hand_rSocket`,

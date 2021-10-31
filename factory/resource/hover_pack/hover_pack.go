@@ -9,6 +9,7 @@ import (
 )
 
 type FGHoverPack struct {
+	Name                                     string
 	ClassName                                string
 	ConnectionLocationUpdatedDelegate        string
 	ConnectionStatusUpdatedDelegate          string
@@ -53,6 +54,7 @@ type FGHoverPack struct {
 
 var (
 	HoverPack = FGHoverPack{
+		Name:                                     "HoverPack",
 		ClassName:                                "Equip_HoverPack_C",
 		ConnectionLocationUpdatedDelegate:        `()`,
 		ConnectionStatusUpdatedDelegate:          `()`,

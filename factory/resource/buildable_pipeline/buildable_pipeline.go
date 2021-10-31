@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildablePipeline struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -46,6 +47,7 @@ type FGBuildablePipeline struct {
 
 var (
 	Pipeline = FGBuildablePipeline{
+		Name:                                    "Pipeline",
 		ClassName:                               "Build_Pipeline_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -86,6 +88,7 @@ Used to transport fluids.`,
 	}
 
 	PipelineMK2 = FGBuildablePipeline{
+		Name:                                    "PipelineMK2",
 		ClassName:                               "Build_PipelineMK2_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

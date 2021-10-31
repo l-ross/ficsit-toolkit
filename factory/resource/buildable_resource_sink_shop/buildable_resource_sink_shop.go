@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableResourceSinkShop struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -53,6 +54,7 @@ type FGBuildableResourceSinkShop struct {
 
 var (
 	ResourceSinkShop = FGBuildableResourceSinkShop{
+		Name:                                    "ResourceSinkShop",
 		ClassName:                               "Build_ResourceSinkShop_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

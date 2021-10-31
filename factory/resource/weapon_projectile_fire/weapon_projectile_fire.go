@@ -9,6 +9,7 @@ import (
 )
 
 type FGWeaponProjectileFire struct {
+	Name                   string
 	ClassName              string
 	MArmAnimation          string
 	MAttachSocket          string
@@ -30,6 +31,7 @@ type FGWeaponProjectileFire struct {
 
 var (
 	RebarGunProjectile = FGWeaponProjectileFire{
+		Name:                   "RebarGunProjectile",
 		ClassName:              "Equip_RebarGun_Projectile_C",
 		MArmAnimation:          `AE_RebarGun`,
 		MAttachSocket:          `hand_rSocket`,

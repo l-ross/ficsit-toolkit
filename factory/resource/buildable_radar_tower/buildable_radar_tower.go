@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableRadarTower struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -60,6 +61,7 @@ type FGBuildableRadarTower struct {
 
 var (
 	RadarTower = FGBuildableRadarTower{
+		Name:                                    "RadarTower",
 		ClassName:                               "Build_RadarTower_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableFactory struct {
+	Name                                    string
 	ClassName                               string
 	JumpForceCharacter                      float64
 	JumpForcePhysics                        float64
@@ -56,6 +57,7 @@ type FGBuildableFactory struct {
 
 var (
 	CandyCaneDecor = FGBuildableFactory{
+		Name:                                    "CandyCaneDecor",
 		ClassName:                               "Build_CandyCaneDecor_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -100,6 +102,7 @@ var (
 	}
 
 	JumpPad = FGBuildableFactory{
+		Name:                                    "JumpPad",
 		ClassName:                               "Build_JumpPad_C",
 		JumpForceCharacter:                      2500.000000,
 		JumpForcePhysics:                        200000.000000,
@@ -145,6 +148,7 @@ Make sure you land softly.`,
 	}
 
 	JumpPadTilted = FGBuildableFactory{
+		Name:                                    "JumpPadTilted",
 		ClassName:                               "Build_JumpPadTilted_C",
 		JumpForceCharacter:                      3000.000000,
 		JumpForcePhysics:                        0.000000,
@@ -190,6 +194,7 @@ Make sure you land softly.`,
 	}
 
 	LandingPad = FGBuildableFactory{
+		Name:                                    "LandingPad",
 		ClassName:                               "Build_LandingPad_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -235,6 +240,7 @@ Guarantees a safe landing.`,
 	}
 
 	LookoutTower = FGBuildableFactory{
+		Name:                                    "LookoutTower",
 		ClassName:                               "Build_LookoutTower_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -277,6 +283,7 @@ Guarantees a safe landing.`,
 	}
 
 	Snowman = FGBuildableFactory{
+		Name:                                    "Snowman",
 		ClassName:                               "Build_Snowman_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

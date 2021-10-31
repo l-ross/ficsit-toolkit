@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableJumppad struct {
+	Name                                    string
 	ClassName                               string
 	CharactersToLaunch                      string
 	ComponentsToLaunch                      string
@@ -71,6 +72,7 @@ type FGBuildableJumppad struct {
 
 var (
 	JumpPadAdjustable = FGBuildableJumppad{
+		Name:                                    "JumpPadAdjustable",
 		ClassName:                               "Build_JumpPadAdjustable_C",
 		CharactersToLaunch:                      ``,
 		ComponentsToLaunch:                      ``,

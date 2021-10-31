@@ -7,6 +7,7 @@ import (
 )
 
 type FGRecipe struct {
+	Name                              string
 	ClassName                         string
 	FullName                          string
 	MDisplayName                      string
@@ -23,6 +24,7 @@ type FGRecipe struct {
 
 var (
 	AILimiter = FGRecipe{
+		Name:                              "AILimiter",
 		ClassName:                         "Recipe_AILimiter_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_AILimiter.Recipe_AILimiter_C",
 		MDisplayName:                      `AI Limiter`,
@@ -38,6 +40,7 @@ var (
 	}
 
 	AlternateAdheredIronPlate = FGRecipe{
+		Name:                              "AlternateAdheredIronPlate",
 		ClassName:                         "Recipe_Alternate_AdheredIronPlate_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_AdheredIronPlate.Recipe_Alternate_AdheredIronPlate_C",
 		MDisplayName:                      `Alternate: Adhered Iron Plate`,
@@ -53,6 +56,7 @@ var (
 	}
 
 	AlternateAlcladCasing = FGRecipe{
+		Name:                              "AlternateAlcladCasing",
 		ClassName:                         "Recipe_Alternate_AlcladCasing_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AlcladCasing.Recipe_Alternate_AlcladCasing_C",
 		MDisplayName:                      `Alternate: Alclad Casing`,
@@ -68,6 +72,7 @@ var (
 	}
 
 	AlternateAutomatedMiner = FGRecipe{
+		Name:                              "AlternateAutomatedMiner",
 		ClassName:                         "Recipe_Alternate_AutomatedMiner_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AutomatedMiner.Recipe_Alternate_AutomatedMiner_C",
 		MDisplayName:                      `Alternate: Automated Miner`,
@@ -83,6 +88,7 @@ var (
 	}
 
 	AlternateBeacon1 = FGRecipe{
+		Name:                              "AlternateBeacon1",
 		ClassName:                         "Recipe_Alternate_Beacon_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Beacon_1.Recipe_Alternate_Beacon_1_C",
 		MDisplayName:                      `Alternate: Crystal Beacon`,
@@ -98,6 +104,7 @@ var (
 	}
 
 	AlternateBoltedFrame = FGRecipe{
+		Name:                              "AlternateBoltedFrame",
 		ClassName:                         "Recipe_Alternate_BoltedFrame_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_BoltedFrame.Recipe_Alternate_BoltedFrame_C",
 		MDisplayName:                      `Alternate: Bolted Frame`,
@@ -113,6 +120,7 @@ var (
 	}
 
 	AlternateCable1 = FGRecipe{
+		Name:                              "AlternateCable1",
 		ClassName:                         "Recipe_Alternate_Cable_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_1.Recipe_Alternate_Cable_1_C",
 		MDisplayName:                      `Alternate: Insulated Cable`,
@@ -128,6 +136,7 @@ var (
 	}
 
 	AlternateCable2 = FGRecipe{
+		Name:                              "AlternateCable2",
 		ClassName:                         "Recipe_Alternate_Cable_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Cable_2.Recipe_Alternate_Cable_2_C",
 		MDisplayName:                      `Alternate: Quickwire Cable`,
@@ -143,6 +152,7 @@ var (
 	}
 
 	AlternateCircuitBoard1 = FGRecipe{
+		Name:                              "AlternateCircuitBoard1",
 		ClassName:                         "Recipe_Alternate_CircuitBoard_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_1.Recipe_Alternate_CircuitBoard_1_C",
 		MDisplayName:                      `Alternate: Silicon Circuit Board`,
@@ -158,6 +168,7 @@ var (
 	}
 
 	AlternateCircuitBoard2 = FGRecipe{
+		Name:                              "AlternateCircuitBoard2",
 		ClassName:                         "Recipe_Alternate_CircuitBoard_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CircuitBoard_2.Recipe_Alternate_CircuitBoard_2_C",
 		MDisplayName:                      `Alternate: Caterium Circuit Board`,
@@ -173,6 +184,7 @@ var (
 	}
 
 	AlternateClassicBattery = FGRecipe{
+		Name:                              "AlternateClassicBattery",
 		ClassName:                         "Recipe_Alternate_ClassicBattery_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ClassicBattery.Recipe_Alternate_ClassicBattery_C",
 		MDisplayName:                      `Alternate: Classic Battery`,
@@ -188,6 +200,7 @@ var (
 	}
 
 	AlternateCoal1 = FGRecipe{
+		Name:                              "AlternateCoal1",
 		ClassName:                         "Recipe_Alternate_Coal_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_1.Recipe_Alternate_Coal_1_C",
 		MDisplayName:                      `Alternate: Charcoal`,
@@ -203,6 +216,7 @@ var (
 	}
 
 	AlternateCoal2 = FGRecipe{
+		Name:                              "AlternateCoal2",
 		ClassName:                         "Recipe_Alternate_Coal_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_2.Recipe_Alternate_Coal_2_C",
 		MDisplayName:                      `Alternate: Biocoal`,
@@ -218,6 +232,7 @@ var (
 	}
 
 	AlternateCoatedCable = FGRecipe{
+		Name:                              "AlternateCoatedCable",
 		ClassName:                         "Recipe_Alternate_CoatedCable_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedCable.Recipe_Alternate_CoatedCable_C",
 		MDisplayName:                      `Alternate: Coated Cable`,
@@ -233,6 +248,7 @@ var (
 	}
 
 	AlternateCoatedIronCanister = FGRecipe{
+		Name:                              "AlternateCoatedIronCanister",
 		ClassName:                         "Recipe_Alternate_CoatedIronCanister_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronCanister.Recipe_Alternate_CoatedIronCanister_C",
 		MDisplayName:                      `Alternate: Coated Iron Canister`,
@@ -248,6 +264,7 @@ var (
 	}
 
 	AlternateCoatedIronPlate = FGRecipe{
+		Name:                              "AlternateCoatedIronPlate",
 		ClassName:                         "Recipe_Alternate_CoatedIronPlate_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedIronPlate.Recipe_Alternate_CoatedIronPlate_C",
 		MDisplayName:                      `Alternate: Coated Iron Plate`,
@@ -263,6 +280,7 @@ var (
 	}
 
 	AlternateCokeSteelIngot = FGRecipe{
+		Name:                              "AlternateCokeSteelIngot",
 		ClassName:                         "Recipe_Alternate_CokeSteelIngot_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CokeSteelIngot.Recipe_Alternate_CokeSteelIngot_C",
 		MDisplayName:                      `Alternate: Coke Steel Ingot`,
@@ -278,6 +296,7 @@ var (
 	}
 
 	AlternateComputer1 = FGRecipe{
+		Name:                              "AlternateComputer1",
 		ClassName:                         "Recipe_Alternate_Computer_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_1.Recipe_Alternate_Computer_1_C",
 		MDisplayName:                      `Alternate: Caterium Computer`,
@@ -293,6 +312,7 @@ var (
 	}
 
 	AlternateComputer2 = FGRecipe{
+		Name:                              "AlternateComputer2",
 		ClassName:                         "Recipe_Alternate_Computer_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Computer_2.Recipe_Alternate_Computer_2_C",
 		MDisplayName:                      `Alternate: Crystal Computer`,
@@ -308,6 +328,7 @@ var (
 	}
 
 	AlternateConcrete = FGRecipe{
+		Name:                              "AlternateConcrete",
 		ClassName:                         "Recipe_Alternate_Concrete_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Concrete.Recipe_Alternate_Concrete_C",
 		MDisplayName:                      `Alternate: Fine Concrete`,
@@ -323,6 +344,7 @@ var (
 	}
 
 	AlternateCoolingDevice = FGRecipe{
+		Name:                              "AlternateCoolingDevice",
 		ClassName:                         "Recipe_Alternate_CoolingDevice_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_CoolingDevice.Recipe_Alternate_CoolingDevice_C",
 		MDisplayName:                      `Alternate: Cooling Device`,
@@ -338,6 +360,7 @@ var (
 	}
 
 	AlternateCopperAlloyIngot = FGRecipe{
+		Name:                              "AlternateCopperAlloyIngot",
 		ClassName:                         "Recipe_Alternate_CopperAlloyIngot_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperAlloyIngot.Recipe_Alternate_CopperAlloyIngot_C",
 		MDisplayName:                      `Alternate: Copper Alloy Ingot`,
@@ -353,6 +376,7 @@ var (
 	}
 
 	AlternateCopperRotor = FGRecipe{
+		Name:                              "AlternateCopperRotor",
 		ClassName:                         "Recipe_Alternate_CopperRotor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperRotor.Recipe_Alternate_CopperRotor_C",
 		MDisplayName:                      `Alternate: Copper Rotor`,
@@ -368,6 +392,7 @@ var (
 	}
 
 	AlternateCrystalOscillator = FGRecipe{
+		Name:                              "AlternateCrystalOscillator",
 		ClassName:                         "Recipe_Alternate_CrystalOscillator_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_CrystalOscillator.Recipe_Alternate_CrystalOscillator_C",
 		MDisplayName:                      `Alternate: Insulated Crystal Oscillator`,
@@ -383,6 +408,7 @@ var (
 	}
 
 	AlternateDilutedFuel = FGRecipe{
+		Name:                              "AlternateDilutedFuel",
 		ClassName:                         "Recipe_Alternate_DilutedFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_DilutedFuel.Recipe_Alternate_DilutedFuel_C",
 		MDisplayName:                      `Alternate: Diluted Fuel`,
@@ -398,6 +424,7 @@ var (
 	}
 
 	AlternateDilutedPackagedFuel = FGRecipe{
+		Name:                              "AlternateDilutedPackagedFuel",
 		ClassName:                         "Recipe_Alternate_DilutedPackagedFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Recipe_Alternate_DilutedPackagedFuel_C",
 		MDisplayName:                      `Alternate: Diluted Packaged Fuel`,
@@ -413,6 +440,7 @@ var (
 	}
 
 	AlternateElectricMotor = FGRecipe{
+		Name:                              "AlternateElectricMotor",
 		ClassName:                         "Recipe_Alternate_ElectricMotor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ElectricMotor.Recipe_Alternate_ElectricMotor_C",
 		MDisplayName:                      `Alternate: Electric Motor`,
@@ -428,6 +456,7 @@ var (
 	}
 
 	AlternateElectroAluminumScrap = FGRecipe{
+		Name:                              "AlternateElectroAluminumScrap",
 		ClassName:                         "Recipe_Alternate_ElectroAluminumScrap_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectroAluminumScrap.Recipe_Alternate_ElectroAluminumScrap_C",
 		MDisplayName:                      `Alternate: Electrode - Aluminum Scrap`,
@@ -443,6 +472,7 @@ var (
 	}
 
 	AlternateElectrodeCircuitBoard = FGRecipe{
+		Name:                              "AlternateElectrodeCircuitBoard",
 		ClassName:                         "Recipe_Alternate_ElectrodeCircuitBoard_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectrodeCircuitBoard.Recipe_Alternate_ElectrodeCircuitBoard_C",
 		MDisplayName:                      `Alternate: Electrode Circuit Board`,
@@ -458,6 +488,7 @@ var (
 	}
 
 	AlternateElectromagneticControlRod1 = FGRecipe{
+		Name:                              "AlternateElectromagneticControlRod1",
 		ClassName:                         "Recipe_Alternate_ElectromagneticControlRod_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ElectromagneticControlRod_1.Recipe_Alternate_ElectromagneticControlRod_1_C",
 		MDisplayName:                      `Alternate: Electromagnetic Connection Rod`,
@@ -473,6 +504,7 @@ var (
 	}
 
 	AlternateEncasedIndustrialBeam = FGRecipe{
+		Name:                              "AlternateEncasedIndustrialBeam",
 		ClassName:                         "Recipe_Alternate_EncasedIndustrialBeam_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EncasedIndustrialBeam.Recipe_Alternate_EncasedIndustrialBeam_C",
 		MDisplayName:                      `Alternate: Encased Industrial Pipe`,
@@ -488,6 +520,7 @@ var (
 	}
 
 	AlternateEnrichedCoal = FGRecipe{
+		Name:                              "AlternateEnrichedCoal",
 		ClassName:                         "Recipe_Alternate_EnrichedCoal_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Recipe_Alternate_EnrichedCoal_C",
 		MDisplayName:                      `Alternate: Compacted Coal`,
@@ -503,6 +536,7 @@ var (
 	}
 
 	AlternateFertileUranium = FGRecipe{
+		Name:                              "AlternateFertileUranium",
 		ClassName:                         "Recipe_Alternate_FertileUranium_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_FertileUranium.Recipe_Alternate_FertileUranium_C",
 		MDisplayName:                      `Alternate: Fertile Uranium`,
@@ -518,6 +552,7 @@ var (
 	}
 
 	AlternateFlexibleFramework = FGRecipe{
+		Name:                              "AlternateFlexibleFramework",
 		ClassName:                         "Recipe_Alternate_FlexibleFramework_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FlexibleFramework.Recipe_Alternate_FlexibleFramework_C",
 		MDisplayName:                      `Alternate: Flexible Framework`,
@@ -533,6 +568,7 @@ var (
 	}
 
 	AlternateFusedWire = FGRecipe{
+		Name:                              "AlternateFusedWire",
 		ClassName:                         "Recipe_Alternate_FusedWire_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_FusedWire.Recipe_Alternate_FusedWire_C",
 		MDisplayName:                      `Alternate: Fused Wire`,
@@ -548,6 +584,7 @@ var (
 	}
 
 	AlternateGunpowder1 = FGRecipe{
+		Name:                              "AlternateGunpowder1",
 		ClassName:                         "Recipe_Alternate_Gunpowder_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Gunpowder_1.Recipe_Alternate_Gunpowder_1_C",
 		MDisplayName:                      `Alternate: Fine Black Powder`,
@@ -563,6 +600,7 @@ var (
 	}
 
 	AlternateHeatFusedFrame = FGRecipe{
+		Name:                              "AlternateHeatFusedFrame",
 		ClassName:                         "Recipe_Alternate_HeatFusedFrame_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_HeatFusedFrame.Recipe_Alternate_HeatFusedFrame_C",
 		MDisplayName:                      `Alternate: Heat-Fused Frame`,
@@ -578,6 +616,7 @@ var (
 	}
 
 	AlternateHeatSink1 = FGRecipe{
+		Name:                              "AlternateHeatSink1",
 		ClassName:                         "Recipe_Alternate_HeatSink_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HeatSink_1.Recipe_Alternate_HeatSink_1_C",
 		MDisplayName:                      `Alternate: Heat Exchanger`,
@@ -593,6 +632,7 @@ var (
 	}
 
 	AlternateHeavyFlexibleFrame = FGRecipe{
+		Name:                              "AlternateHeavyFlexibleFrame",
 		ClassName:                         "Recipe_Alternate_HeavyFlexibleFrame_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyFlexibleFrame.Recipe_Alternate_HeavyFlexibleFrame_C",
 		MDisplayName:                      `Alternate: Heavy Flexible Frame`,
@@ -608,6 +648,7 @@ var (
 	}
 
 	AlternateHeavyOilResidue = FGRecipe{
+		Name:                              "AlternateHeavyOilResidue",
 		ClassName:                         "Recipe_Alternate_HeavyOilResidue_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyOilResidue.Recipe_Alternate_HeavyOilResidue_C",
 		MDisplayName:                      `Alternate: Heavy Oil Residue`,
@@ -623,6 +664,7 @@ var (
 	}
 
 	AlternateHighSpeedConnector = FGRecipe{
+		Name:                              "AlternateHighSpeedConnector",
 		ClassName:                         "Recipe_Alternate_HighSpeedConnector_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_HighSpeedConnector.Recipe_Alternate_HighSpeedConnector_C",
 		MDisplayName:                      `Alternate: Silicon High-Speed Connector`,
@@ -638,6 +680,7 @@ var (
 	}
 
 	AlternateHighSpeedWiring = FGRecipe{
+		Name:                              "AlternateHighSpeedWiring",
 		ClassName:                         "Recipe_Alternate_HighSpeedWiring_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HighSpeedWiring.Recipe_Alternate_HighSpeedWiring_C",
 		MDisplayName:                      `Alternate: Automated Speed Wiring`,
@@ -653,6 +696,7 @@ var (
 	}
 
 	AlternateIngotIron = FGRecipe{
+		Name:                              "AlternateIngotIron",
 		ClassName:                         "Recipe_Alternate_IngotIron_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotIron.Recipe_Alternate_IngotIron_C",
 		MDisplayName:                      `Alternate: Iron Alloy Ingot`,
@@ -668,6 +712,7 @@ var (
 	}
 
 	AlternateIngotSteel1 = FGRecipe{
+		Name:                              "AlternateIngotSteel1",
 		ClassName:                         "Recipe_Alternate_IngotSteel_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_1.Recipe_Alternate_IngotSteel_1_C",
 		MDisplayName:                      `Alternate: Solid Steel Ingot`,
@@ -683,6 +728,7 @@ var (
 	}
 
 	AlternateIngotSteel2 = FGRecipe{
+		Name:                              "AlternateIngotSteel2",
 		ClassName:                         "Recipe_Alternate_IngotSteel_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_2.Recipe_Alternate_IngotSteel_2_C",
 		MDisplayName:                      `Alternate: Compacted Steel Ingot`,
@@ -698,6 +744,7 @@ var (
 	}
 
 	AlternateInstantPlutoniumCell = FGRecipe{
+		Name:                              "AlternateInstantPlutoniumCell",
 		ClassName:                         "Recipe_Alternate_InstantPlutoniumCell_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantPlutoniumCell.Recipe_Alternate_InstantPlutoniumCell_C",
 		MDisplayName:                      `Alternate: Instant Plutonium Cell`,
@@ -713,6 +760,7 @@ var (
 	}
 
 	AlternateInstantScrap = FGRecipe{
+		Name:                              "AlternateInstantScrap",
 		ClassName:                         "Recipe_Alternate_InstantScrap_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_InstantScrap.Recipe_Alternate_InstantScrap_C",
 		MDisplayName:                      `Alternate: Instant Scrap`,
@@ -728,6 +776,7 @@ var (
 	}
 
 	AlternateModularFrame = FGRecipe{
+		Name:                              "AlternateModularFrame",
 		ClassName:                         "Recipe_Alternate_ModularFrame_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrame.Recipe_Alternate_ModularFrame_C",
 		MDisplayName:                      `Alternate: Steeled Frame`,
@@ -743,6 +792,7 @@ var (
 	}
 
 	AlternateModularFrameHeavy = FGRecipe{
+		Name:                              "AlternateModularFrameHeavy",
 		ClassName:                         "Recipe_Alternate_ModularFrameHeavy_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ModularFrameHeavy.Recipe_Alternate_ModularFrameHeavy_C",
 		MDisplayName:                      `Alternate: Heavy Encased Frame`,
@@ -758,6 +808,7 @@ var (
 	}
 
 	AlternateMotor1 = FGRecipe{
+		Name:                              "AlternateMotor1",
 		ClassName:                         "Recipe_Alternate_Motor_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Motor_1.Recipe_Alternate_Motor_1_C",
 		MDisplayName:                      `Alternate: Rigour Motor`,
@@ -773,6 +824,7 @@ var (
 	}
 
 	AlternateNobelisk1 = FGRecipe{
+		Name:                              "AlternateNobelisk1",
 		ClassName:                         "Recipe_Alternate_Nobelisk_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Nobelisk_1.Recipe_Alternate_Nobelisk_1_C",
 		MDisplayName:                      `Alternate: Seismic Nobelisk`,
@@ -788,6 +840,7 @@ var (
 	}
 
 	AlternateNuclearFuelRod1 = FGRecipe{
+		Name:                              "AlternateNuclearFuelRod1",
 		ClassName:                         "Recipe_Alternate_NuclearFuelRod_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_NuclearFuelRod_1.Recipe_Alternate_NuclearFuelRod_1_C",
 		MDisplayName:                      `Alternate: Uranium Fuel Unit`,
@@ -803,6 +856,7 @@ var (
 	}
 
 	AlternateOCSupercomputer = FGRecipe{
+		Name:                              "AlternateOCSupercomputer",
 		ClassName:                         "Recipe_Alternate_OCSupercomputer_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_OCSupercomputer.Recipe_Alternate_OCSupercomputer_C",
 		MDisplayName:                      `Alternate: OC Supercomputer`,
@@ -818,6 +872,7 @@ var (
 	}
 
 	AlternatePlastic1 = FGRecipe{
+		Name:                              "AlternatePlastic1",
 		ClassName:                         "Recipe_Alternate_Plastic_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Plastic_1.Recipe_Alternate_Plastic_1_C",
 		MDisplayName:                      `Alternate: Recycled Plastic`,
@@ -833,6 +888,7 @@ var (
 	}
 
 	AlternatePlasticSmartPlating = FGRecipe{
+		Name:                              "AlternatePlasticSmartPlating",
 		ClassName:                         "Recipe_Alternate_PlasticSmartPlating_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PlasticSmartPlating.Recipe_Alternate_PlasticSmartPlating_C",
 		MDisplayName:                      `Alternate: Plastic Smart Plating`,
@@ -848,6 +904,7 @@ var (
 	}
 
 	AlternatePlutoniumFuelUnit = FGRecipe{
+		Name:                              "AlternatePlutoniumFuelUnit",
 		ClassName:                         "Recipe_Alternate_PlutoniumFuelUnit_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_PlutoniumFuelUnit.Recipe_Alternate_PlutoniumFuelUnit_C",
 		MDisplayName:                      `Alternate: Plutonium Fuel Unit`,
@@ -863,6 +920,7 @@ var (
 	}
 
 	AlternatePolyesterFabric = FGRecipe{
+		Name:                              "AlternatePolyesterFabric",
 		ClassName:                         "Recipe_Alternate_PolyesterFabric_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolyesterFabric.Recipe_Alternate_PolyesterFabric_C",
 		MDisplayName:                      `Alternate: Polyester Fabric`,
@@ -878,6 +936,7 @@ var (
 	}
 
 	AlternatePolymerResin = FGRecipe{
+		Name:                              "AlternatePolymerResin",
 		ClassName:                         "Recipe_Alternate_PolymerResin_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolymerResin.Recipe_Alternate_PolymerResin_C",
 		MDisplayName:                      `Alternate: Polymer Resin`,
@@ -893,6 +952,7 @@ var (
 	}
 
 	AlternatePureCateriumIngot = FGRecipe{
+		Name:                              "AlternatePureCateriumIngot",
 		ClassName:                         "Recipe_Alternate_PureCateriumIngot_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Recipe_Alternate_PureCateriumIngot_C",
 		MDisplayName:                      `Alternate: Pure Caterium Ingot`,
@@ -908,6 +968,7 @@ var (
 	}
 
 	AlternatePureCopperIngot = FGRecipe{
+		Name:                              "AlternatePureCopperIngot",
 		ClassName:                         "Recipe_Alternate_PureCopperIngot_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Recipe_Alternate_PureCopperIngot_C",
 		MDisplayName:                      `Alternate: Pure Copper Ingot`,
@@ -923,6 +984,7 @@ var (
 	}
 
 	AlternatePureIronIngot = FGRecipe{
+		Name:                              "AlternatePureIronIngot",
 		ClassName:                         "Recipe_Alternate_PureIronIngot_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Recipe_Alternate_PureIronIngot_C",
 		MDisplayName:                      `Alternate: Pure Iron Ingot`,
@@ -938,6 +1000,7 @@ var (
 	}
 
 	AlternatePureQuartzCrystal = FGRecipe{
+		Name:                              "AlternatePureQuartzCrystal",
 		ClassName:                         "Recipe_Alternate_PureQuartzCrystal_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Recipe_Alternate_PureQuartzCrystal_C",
 		MDisplayName:                      `Alternate: Pure Quartz Crystal`,
@@ -953,6 +1016,7 @@ var (
 	}
 
 	AlternateQuickwire = FGRecipe{
+		Name:                              "AlternateQuickwire",
 		ClassName:                         "Recipe_Alternate_Quickwire_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Quickwire.Recipe_Alternate_Quickwire_C",
 		MDisplayName:                      `Alternate: Fused Quickwire`,
@@ -968,6 +1032,7 @@ var (
 	}
 
 	AlternateRadioControlSystem = FGRecipe{
+		Name:                              "AlternateRadioControlSystem",
 		ClassName:                         "Recipe_Alternate_RadioControlSystem_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_RadioControlSystem.Recipe_Alternate_RadioControlSystem_C",
 		MDisplayName:                      `Alternate: Radio Control System`,
@@ -983,6 +1048,7 @@ var (
 	}
 
 	AlternateRadioControlUnit1 = FGRecipe{
+		Name:                              "AlternateRadioControlUnit1",
 		ClassName:                         "Recipe_Alternate_RadioControlUnit_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_RadioControlUnit_1.Recipe_Alternate_RadioControlUnit_1_C",
 		MDisplayName:                      `Alternate: Radio Connection Unit`,
@@ -998,6 +1064,7 @@ var (
 	}
 
 	AlternateRecycledRubber = FGRecipe{
+		Name:                              "AlternateRecycledRubber",
 		ClassName:                         "Recipe_Alternate_RecycledRubber_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RecycledRubber.Recipe_Alternate_RecycledRubber_C",
 		MDisplayName:                      `Alternate: Recycled Rubber`,
@@ -1013,6 +1080,7 @@ var (
 	}
 
 	AlternateReinforcedIronPlate1 = FGRecipe{
+		Name:                              "AlternateReinforcedIronPlate1",
 		ClassName:                         "Recipe_Alternate_ReinforcedIronPlate_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_1.Recipe_Alternate_ReinforcedIronPlate_1_C",
 		MDisplayName:                      `Alternate: Bolted Iron Plate`,
@@ -1028,6 +1096,7 @@ var (
 	}
 
 	AlternateReinforcedIronPlate2 = FGRecipe{
+		Name:                              "AlternateReinforcedIronPlate2",
 		ClassName:                         "Recipe_Alternate_ReinforcedIronPlate_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_ReinforcedIronPlate_2.Recipe_Alternate_ReinforcedIronPlate_2_C",
 		MDisplayName:                      `Alternate: Stitched Iron Plate`,
@@ -1043,6 +1112,7 @@ var (
 	}
 
 	AlternateRotor = FGRecipe{
+		Name:                              "AlternateRotor",
 		ClassName:                         "Recipe_Alternate_Rotor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Rotor.Recipe_Alternate_Rotor_C",
 		MDisplayName:                      `Alternate: Steel Rotor`,
@@ -1058,6 +1128,7 @@ var (
 	}
 
 	AlternateRubberConcrete = FGRecipe{
+		Name:                              "AlternateRubberConcrete",
 		ClassName:                         "Recipe_Alternate_RubberConcrete_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_RubberConcrete.Recipe_Alternate_RubberConcrete_C",
 		MDisplayName:                      `Alternate: Rubber Concrete`,
@@ -1073,6 +1144,7 @@ var (
 	}
 
 	AlternateScrew = FGRecipe{
+		Name:                              "AlternateScrew",
 		ClassName:                         "Recipe_Alternate_Screw_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw.Recipe_Alternate_Screw_C",
 		MDisplayName:                      `Alternate: Cast Screw`,
@@ -1088,6 +1160,7 @@ var (
 	}
 
 	AlternateScrew2 = FGRecipe{
+		Name:                              "AlternateScrew2",
 		ClassName:                         "Recipe_Alternate_Screw_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Screw_2.Recipe_Alternate_Screw_2_C",
 		MDisplayName:                      `Alternate: Steel Screw`,
@@ -1103,6 +1176,7 @@ var (
 	}
 
 	AlternateSilica = FGRecipe{
+		Name:                              "AlternateSilica",
 		ClassName:                         "Recipe_Alternate_Silica_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Silica.Recipe_Alternate_Silica_C",
 		MDisplayName:                      `Alternate: Cheap Silica`,
@@ -1118,6 +1192,7 @@ var (
 	}
 
 	AlternateSloppyAlumina = FGRecipe{
+		Name:                              "AlternateSloppyAlumina",
 		ClassName:                         "Recipe_Alternate_SloppyAlumina_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SloppyAlumina.Recipe_Alternate_SloppyAlumina_C",
 		MDisplayName:                      `Alternate: Sloppy Alumina`,
@@ -1133,6 +1208,7 @@ var (
 	}
 
 	AlternateStator = FGRecipe{
+		Name:                              "AlternateStator",
 		ClassName:                         "Recipe_Alternate_Stator_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Stator.Recipe_Alternate_Stator_C",
 		MDisplayName:                      `Alternate: Quickwire Stator`,
@@ -1148,6 +1224,7 @@ var (
 	}
 
 	AlternateSteamedCopperSheet = FGRecipe{
+		Name:                              "AlternateSteamedCopperSheet",
 		ClassName:                         "Recipe_Alternate_SteamedCopperSheet_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteamedCopperSheet.Recipe_Alternate_SteamedCopperSheet_C",
 		MDisplayName:                      `Alternate: Steamed Copper Sheet`,
@@ -1163,6 +1240,7 @@ var (
 	}
 
 	AlternateSteelCanister = FGRecipe{
+		Name:                              "AlternateSteelCanister",
 		ClassName:                         "Recipe_Alternate_SteelCanister_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCanister.Recipe_Alternate_SteelCanister_C",
 		MDisplayName:                      `Alternate: Steel Canister`,
@@ -1178,6 +1256,7 @@ var (
 	}
 
 	AlternateSteelCoatedPlate = FGRecipe{
+		Name:                              "AlternateSteelCoatedPlate",
 		ClassName:                         "Recipe_Alternate_SteelCoatedPlate_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelCoatedPlate.Recipe_Alternate_SteelCoatedPlate_C",
 		MDisplayName:                      `Alternate: Steel Coated Plate`,
@@ -1193,6 +1272,7 @@ var (
 	}
 
 	AlternateSteelRod = FGRecipe{
+		Name:                              "AlternateSteelRod",
 		ClassName:                         "Recipe_Alternate_SteelRod_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_SteelRod.Recipe_Alternate_SteelRod_C",
 		MDisplayName:                      `Alternate: Steel Rod`,
@@ -1208,6 +1288,7 @@ var (
 	}
 
 	AlternateSuperStateComputer = FGRecipe{
+		Name:                              "AlternateSuperStateComputer",
 		ClassName:                         "Recipe_Alternate_SuperStateComputer_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_SuperStateComputer.Recipe_Alternate_SuperStateComputer_C",
 		MDisplayName:                      `Alternate: Super-State Computer`,
@@ -1223,6 +1304,7 @@ var (
 	}
 
 	AlternateTurboBlendFuel = FGRecipe{
+		Name:                              "AlternateTurboBlendFuel",
 		ClassName:                         "Recipe_Alternate_TurboBlendFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboBlendFuel.Recipe_Alternate_TurboBlendFuel_C",
 		MDisplayName:                      `Alternate: Turbo Blend Fuel`,
@@ -1238,6 +1320,7 @@ var (
 	}
 
 	AlternateTurboHeavyFuel = FGRecipe{
+		Name:                              "AlternateTurboHeavyFuel",
 		ClassName:                         "Recipe_Alternate_TurboHeavyFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Recipe_Alternate_TurboHeavyFuel_C",
 		MDisplayName:                      `Alternate: Turbo Heavy Fuel`,
@@ -1253,6 +1336,7 @@ var (
 	}
 
 	AlternateTurboMotor1 = FGRecipe{
+		Name:                              "AlternateTurboMotor1",
 		ClassName:                         "Recipe_Alternate_TurboMotor_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_TurboMotor_1.Recipe_Alternate_TurboMotor_1_C",
 		MDisplayName:                      `Alternate: Turbo Electric Motor`,
@@ -1268,6 +1352,7 @@ var (
 	}
 
 	AlternateTurboPressureMotor = FGRecipe{
+		Name:                              "AlternateTurboPressureMotor",
 		ClassName:                         "Recipe_Alternate_TurboPressureMotor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_TurboPressureMotor.Recipe_Alternate_TurboPressureMotor_C",
 		MDisplayName:                      `Alternate: Turbo Pressure Motor`,
@@ -1283,6 +1368,7 @@ var (
 	}
 
 	AlternateTurbofuel = FGRecipe{
+		Name:                              "AlternateTurbofuel",
 		ClassName:                         "Recipe_Alternate_Turbofuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Turbofuel.Recipe_Alternate_Turbofuel_C",
 		MDisplayName:                      `Turbofuel`,
@@ -1298,6 +1384,7 @@ var (
 	}
 
 	AlternateUraniumCell1 = FGRecipe{
+		Name:                              "AlternateUraniumCell1",
 		ClassName:                         "Recipe_Alternate_UraniumCell_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_UraniumCell_1.Recipe_Alternate_UraniumCell_1_C",
 		MDisplayName:                      `Alternate: Infused Uranium Cell`,
@@ -1313,6 +1400,7 @@ var (
 	}
 
 	AlternateWetConcrete = FGRecipe{
+		Name:                              "AlternateWetConcrete",
 		ClassName:                         "Recipe_Alternate_WetConcrete_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Recipe_Alternate_WetConcrete_C",
 		MDisplayName:                      `Alternate: Wet Concrete`,
@@ -1328,6 +1416,7 @@ var (
 	}
 
 	AlternateWire1 = FGRecipe{
+		Name:                              "AlternateWire1",
 		ClassName:                         "Recipe_Alternate_Wire_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_1.Recipe_Alternate_Wire_1_C",
 		MDisplayName:                      `Alternate: Iron Wire`,
@@ -1343,6 +1432,7 @@ var (
 	}
 
 	AlternateWire2 = FGRecipe{
+		Name:                              "AlternateWire2",
 		ClassName:                         "Recipe_Alternate_Wire_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Wire_2.Recipe_Alternate_Wire_2_C",
 		MDisplayName:                      `Alternate: Caterium Wire`,
@@ -1358,6 +1448,7 @@ var (
 	}
 
 	AluminaSolution = FGRecipe{
+		Name:                              "AluminaSolution",
 		ClassName:                         "Recipe_AluminaSolution_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminaSolution.Recipe_AluminaSolution_C",
 		MDisplayName:                      `Alumina Solution`,
@@ -1373,6 +1464,7 @@ var (
 	}
 
 	AluminumCasing = FGRecipe{
+		Name:                              "AluminumCasing",
 		ClassName:                         "Recipe_AluminumCasing_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumCasing.Recipe_AluminumCasing_C",
 		MDisplayName:                      `Aluminum Casing`,
@@ -1388,6 +1480,7 @@ var (
 	}
 
 	AluminumScrap = FGRecipe{
+		Name:                              "AluminumScrap",
 		ClassName:                         "Recipe_AluminumScrap_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminumScrap.Recipe_AluminumScrap_C",
 		MDisplayName:                      `Aluminum Scrap`,
@@ -1403,6 +1496,7 @@ var (
 	}
 
 	AluminumSheet = FGRecipe{
+		Name:                              "AluminumSheet",
 		ClassName:                         "Recipe_AluminumSheet_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_AluminumSheet.Recipe_AluminumSheet_C",
 		MDisplayName:                      `Alclad Aluminum Sheet`,
@@ -1418,6 +1512,7 @@ var (
 	}
 
 	AssemblerMk1 = FGRecipe{
+		Name:                              "AssemblerMk1",
 		ClassName:                         "Recipe_AssemblerMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_AssemblerMk1.Recipe_AssemblerMk1_C",
 		MDisplayName:                      `Assembler`,
@@ -1433,6 +1528,7 @@ var (
 	}
 
 	Battery = FGRecipe{
+		Name:                              "Battery",
 		ClassName:                         "Recipe_Battery_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Battery.Recipe_Battery_C",
 		MDisplayName:                      `Battery`,
@@ -1448,6 +1544,7 @@ var (
 	}
 
 	Beacon = FGRecipe{
+		Name:                              "Beacon",
 		ClassName:                         "Recipe_Beacon_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Beacon.Recipe_Beacon_C",
 		MDisplayName:                      `Beacon`,
@@ -1463,6 +1560,7 @@ var (
 	}
 
 	Biofuel = FGRecipe{
+		Name:                              "Biofuel",
 		ClassName:                         "Recipe_Biofuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biofuel.Recipe_Biofuel_C",
 		MDisplayName:                      `Solid Biofuel`,
@@ -1478,6 +1576,7 @@ var (
 	}
 
 	BiomassAlienCarapace = FGRecipe{
+		Name:                              "BiomassAlienCarapace",
 		ClassName:                         "Recipe_Biomass_AlienCarapace_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienCarapace.Recipe_Biomass_AlienCarapace_C",
 		MDisplayName:                      `Biomass (Alien Carapace)`,
@@ -1493,6 +1592,7 @@ var (
 	}
 
 	BiomassAlienOrgans = FGRecipe{
+		Name:                              "BiomassAlienOrgans",
 		ClassName:                         "Recipe_Biomass_AlienOrgans_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_AlienOrgans.Recipe_Biomass_AlienOrgans_C",
 		MDisplayName:                      `Biomass (Alien Organs)`,
@@ -1508,6 +1608,7 @@ var (
 	}
 
 	BiomassLeaves = FGRecipe{
+		Name:                              "BiomassLeaves",
 		ClassName:                         "Recipe_Biomass_Leaves_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Leaves.Recipe_Biomass_Leaves_C",
 		MDisplayName:                      `Biomass (Leaves)`,
@@ -1523,6 +1624,7 @@ var (
 	}
 
 	BiomassMycelia = FGRecipe{
+		Name:                              "BiomassMycelia",
 		ClassName:                         "Recipe_Biomass_Mycelia_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Mycelia.Recipe_Biomass_Mycelia_C",
 		MDisplayName:                      `Biomass (Mycelia)`,
@@ -1538,6 +1640,7 @@ var (
 	}
 
 	BiomassWood = FGRecipe{
+		Name:                              "BiomassWood",
 		ClassName:                         "Recipe_Biomass_Wood_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Biomass_Wood.Recipe_Biomass_Wood_C",
 		MDisplayName:                      `Biomass (Wood)`,
@@ -1553,6 +1656,7 @@ var (
 	}
 
 	BladeRunners = FGRecipe{
+		Name:                              "BladeRunners",
 		ClassName:                         "Recipe_BladeRunners_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_BladeRunners.Recipe_BladeRunners_C",
 		MDisplayName:                      `Blade Runners`,
@@ -1568,6 +1672,7 @@ var (
 	}
 
 	Blender = FGRecipe{
+		Name:                              "Blender",
 		ClassName:                         "Recipe_Blender_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Blender.Recipe_Blender_C",
 		MDisplayName:                      `Blender`,
@@ -1583,6 +1688,7 @@ var (
 	}
 
 	Cable = FGRecipe{
+		Name:                              "Cable",
 		ClassName:                         "Recipe_Cable_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Cable.Recipe_Cable_C",
 		MDisplayName:                      `Cable`,
@@ -1598,6 +1704,7 @@ var (
 	}
 
 	CandyCane = FGRecipe{
+		Name:                              "CandyCane",
 		ClassName:                         "Recipe_CandyCane_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_CandyCane.Recipe_CandyCane_C",
 		MDisplayName:                      `Candy Cane`,
@@ -1613,6 +1720,7 @@ var (
 	}
 
 	CandyCaneBasher = FGRecipe{
+		Name:                              "CandyCaneBasher",
 		ClassName:                         "Recipe_CandyCaneBasher_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_CandyCaneBasher.Recipe_CandyCaneBasher_C",
 		MDisplayName:                      `Candy Cane Basher`,
@@ -1628,6 +1736,7 @@ var (
 	}
 
 	CandyCaneDecor = FGRecipe{
+		Name:                              "CandyCaneDecor",
 		ClassName:                         "Recipe_CandyCaneDecor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/CandyCaneDecor/Recipe_CandyCaneDecor.Recipe_CandyCaneDecor_C",
 		MDisplayName:                      `Candy Cane`,
@@ -1643,6 +1752,7 @@ var (
 	}
 
 	Cartridge = FGRecipe{
+		Name:                              "Cartridge",
 		ClassName:                         "Recipe_Cartridge_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Cartridge.Recipe_Cartridge_C",
 		MDisplayName:                      `Rifle Cartridge`,
@@ -1658,6 +1768,7 @@ var (
 	}
 
 	CeilingLight = FGRecipe{
+		Name:                              "CeilingLight",
 		ClassName:                         "Recipe_CeilingLight_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_CeilingLight.Recipe_CeilingLight_C",
 		MDisplayName:                      `Ceiling Light`,
@@ -1673,6 +1784,7 @@ var (
 	}
 
 	Chainsaw = FGRecipe{
+		Name:                              "Chainsaw",
 		ClassName:                         "Recipe_Chainsaw_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Chainsaw.Recipe_Chainsaw_C",
 		MDisplayName:                      `Chainsaw`,
@@ -1688,6 +1800,7 @@ var (
 	}
 
 	CircuitBoard = FGRecipe{
+		Name:                              "CircuitBoard",
 		ClassName:                         "Recipe_CircuitBoard_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_CircuitBoard.Recipe_CircuitBoard_C",
 		MDisplayName:                      `Circuit Board`,
@@ -1703,6 +1816,7 @@ var (
 	}
 
 	Coal = FGRecipe{
+		Name:                              "Coal",
 		ClassName:                         "Recipe_Coal_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Coal.Recipe_Coal_C",
 		MDisplayName:                      `Coal`,
@@ -1718,6 +1832,7 @@ var (
 	}
 
 	ColorCartridge = FGRecipe{
+		Name:                              "ColorCartridge",
 		ClassName:                         "Recipe_ColorCartridge_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorCartridge.Recipe_ColorCartridge_C",
 		MDisplayName:                      `Color Cartridge`,
@@ -1733,6 +1848,7 @@ var (
 	}
 
 	ColorGun = FGRecipe{
+		Name:                              "ColorGun",
 		ClassName:                         "Recipe_ColorGun_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ColorGun.Recipe_ColorGun_C",
 		MDisplayName:                      `Color Gun`,
@@ -1748,6 +1864,7 @@ var (
 	}
 
 	Computer = FGRecipe{
+		Name:                              "Computer",
 		ClassName:                         "Recipe_Computer_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_Computer.Recipe_Computer_C",
 		MDisplayName:                      `Computer`,
@@ -1763,6 +1880,7 @@ var (
 	}
 
 	ComputerSuper = FGRecipe{
+		Name:                              "ComputerSuper",
 		ClassName:                         "Recipe_ComputerSuper_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ComputerSuper.Recipe_ComputerSuper_C",
 		MDisplayName:                      `Supercomputer`,
@@ -1778,6 +1896,7 @@ var (
 	}
 
 	Concrete = FGRecipe{
+		Name:                              "Concrete",
 		ClassName:                         "Recipe_Concrete_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Concrete.Recipe_Concrete_C",
 		MDisplayName:                      `Concrete`,
@@ -1793,6 +1912,7 @@ var (
 	}
 
 	ConstructorMk1 = FGRecipe{
+		Name:                              "ConstructorMk1",
 		ClassName:                         "Recipe_ConstructorMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConstructorMk1.Recipe_ConstructorMk1_C",
 		MDisplayName:                      `Constructor`,
@@ -1808,6 +1928,7 @@ var (
 	}
 
 	ConveyorAttachmentMerger = FGRecipe{
+		Name:                              "ConveyorAttachmentMerger",
 		ClassName:                         "Recipe_ConveyorAttachmentMerger_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentMerger.Recipe_ConveyorAttachmentMerger_C",
 		MDisplayName:                      `Conveyor Merger`,
@@ -1823,6 +1944,7 @@ var (
 	}
 
 	ConveyorAttachmentSplitter = FGRecipe{
+		Name:                              "ConveyorAttachmentSplitter",
 		ClassName:                         "Recipe_ConveyorAttachmentSplitter_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitter.Recipe_ConveyorAttachmentSplitter_C",
 		MDisplayName:                      `Conveyor Splitter`,
@@ -1838,6 +1960,7 @@ var (
 	}
 
 	ConveyorAttachmentSplitterProgrammable = FGRecipe{
+		Name:                              "ConveyorAttachmentSplitterProgrammable",
 		ClassName:                         "Recipe_ConveyorAttachmentSplitterProgrammable_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterProgrammable.Recipe_ConveyorAttachmentSplitterProgrammable_C",
 		MDisplayName:                      `Programmable Splitter`,
@@ -1853,6 +1976,7 @@ var (
 	}
 
 	ConveyorAttachmentSplitterSmart = FGRecipe{
+		Name:                              "ConveyorAttachmentSplitterSmart",
 		ClassName:                         "Recipe_ConveyorAttachmentSplitterSmart_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorAttachmentSplitterSmart.Recipe_ConveyorAttachmentSplitterSmart_C",
 		MDisplayName:                      `Smart Splitter`,
@@ -1868,6 +1992,7 @@ var (
 	}
 
 	ConveyorBeltMk1 = FGRecipe{
+		Name:                              "ConveyorBeltMk1",
 		ClassName:                         "Recipe_ConveyorBeltMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk1.Recipe_ConveyorBeltMk1_C",
 		MDisplayName:                      `Conveyor Belt Mk.1`,
@@ -1883,6 +2008,7 @@ var (
 	}
 
 	ConveyorBeltMk2 = FGRecipe{
+		Name:                              "ConveyorBeltMk2",
 		ClassName:                         "Recipe_ConveyorBeltMk2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk2.Recipe_ConveyorBeltMk2_C",
 		MDisplayName:                      `Conveyor Belt Mk.2`,
@@ -1898,6 +2024,7 @@ var (
 	}
 
 	ConveyorBeltMk3 = FGRecipe{
+		Name:                              "ConveyorBeltMk3",
 		ClassName:                         "Recipe_ConveyorBeltMk3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk3.Recipe_ConveyorBeltMk3_C",
 		MDisplayName:                      `Conveyor Belt Mk.3`,
@@ -1913,6 +2040,7 @@ var (
 	}
 
 	ConveyorBeltMk4 = FGRecipe{
+		Name:                              "ConveyorBeltMk4",
 		ClassName:                         "Recipe_ConveyorBeltMk4_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk4.Recipe_ConveyorBeltMk4_C",
 		MDisplayName:                      `Conveyor Belt Mk.4`,
@@ -1928,6 +2056,7 @@ var (
 	}
 
 	ConveyorBeltMk5 = FGRecipe{
+		Name:                              "ConveyorBeltMk5",
 		ClassName:                         "Recipe_ConveyorBeltMk5_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorBeltMk5.Recipe_ConveyorBeltMk5_C",
 		MDisplayName:                      `Conveyor Belt Mk.5`,
@@ -1943,6 +2072,7 @@ var (
 	}
 
 	ConveyorLiftMk1 = FGRecipe{
+		Name:                              "ConveyorLiftMk1",
 		ClassName:                         "Recipe_ConveyorLiftMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk1.Recipe_ConveyorLiftMk1_C",
 		MDisplayName:                      `Conveyor Lift Mk.1`,
@@ -1958,6 +2088,7 @@ var (
 	}
 
 	ConveyorLiftMk2 = FGRecipe{
+		Name:                              "ConveyorLiftMk2",
 		ClassName:                         "Recipe_ConveyorLiftMk2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk2.Recipe_ConveyorLiftMk2_C",
 		MDisplayName:                      `Conveyor Lift Mk.2`,
@@ -1973,6 +2104,7 @@ var (
 	}
 
 	ConveyorLiftMk3 = FGRecipe{
+		Name:                              "ConveyorLiftMk3",
 		ClassName:                         "Recipe_ConveyorLiftMk3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk3.Recipe_ConveyorLiftMk3_C",
 		MDisplayName:                      `Conveyor Lift Mk.3`,
@@ -1988,6 +2120,7 @@ var (
 	}
 
 	ConveyorLiftMk4 = FGRecipe{
+		Name:                              "ConveyorLiftMk4",
 		ClassName:                         "Recipe_ConveyorLiftMk4_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk4.Recipe_ConveyorLiftMk4_C",
 		MDisplayName:                      `Conveyor Lift Mk.4`,
@@ -2003,6 +2136,7 @@ var (
 	}
 
 	ConveyorLiftMk5 = FGRecipe{
+		Name:                              "ConveyorLiftMk5",
 		ClassName:                         "Recipe_ConveyorLiftMk5_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorLiftMk5.Recipe_ConveyorLiftMk5_C",
 		MDisplayName:                      `Conveyor Lift Mk.5`,
@@ -2018,6 +2152,7 @@ var (
 	}
 
 	ConveyorPole = FGRecipe{
+		Name:                              "ConveyorPole",
 		ClassName:                         "Recipe_ConveyorPole_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPole.Recipe_ConveyorPole_C",
 		MDisplayName:                      `Conveyor Pole`,
@@ -2033,6 +2168,7 @@ var (
 	}
 
 	ConveyorPoleStackable = FGRecipe{
+		Name:                              "ConveyorPoleStackable",
 		ClassName:                         "Recipe_ConveyorPoleStackable_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleStackable.Recipe_ConveyorPoleStackable_C",
 		MDisplayName:                      `Stackable Conveyor Pole`,
@@ -2048,6 +2184,7 @@ var (
 	}
 
 	ConveyorPoleWall = FGRecipe{
+		Name:                              "ConveyorPoleWall",
 		ClassName:                         "Recipe_ConveyorPoleWall_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ConveyorPoleWall.Recipe_ConveyorPoleWall_C",
 		MDisplayName:                      `Conveyor Wall Mount`,
@@ -2063,6 +2200,7 @@ var (
 	}
 
 	CoolingSystem = FGRecipe{
+		Name:                              "CoolingSystem",
 		ClassName:                         "Recipe_CoolingSystem_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_CoolingSystem.Recipe_CoolingSystem_C",
 		MDisplayName:                      `Cooling System`,
@@ -2078,6 +2216,7 @@ var (
 	}
 
 	CopperDust = FGRecipe{
+		Name:                              "CopperDust",
 		ClassName:                         "Recipe_CopperDust_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperDust.Recipe_CopperDust_C",
 		MDisplayName:                      `Copper Powder`,
@@ -2093,6 +2232,7 @@ var (
 	}
 
 	CopperSheet = FGRecipe{
+		Name:                              "CopperSheet",
 		ClassName:                         "Recipe_CopperSheet_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_CopperSheet.Recipe_CopperSheet_C",
 		MDisplayName:                      `Copper Sheet`,
@@ -2108,6 +2248,7 @@ var (
 	}
 
 	CrudeOil = FGRecipe{
+		Name:                              "CrudeOil",
 		ClassName:                         "Recipe_CrudeOil_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_CrudeOil.Recipe_CrudeOil_C",
 		MDisplayName:                      `Crude Oil`,
@@ -2123,6 +2264,7 @@ var (
 	}
 
 	CrystalOscillator = FGRecipe{
+		Name:                              "CrystalOscillator",
 		ClassName:                         "Recipe_CrystalOscillator_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_CrystalOscillator.Recipe_CrystalOscillator_C",
 		MDisplayName:                      `Crystal Oscillator`,
@@ -2138,6 +2280,7 @@ var (
 	}
 
 	CyberWagon = FGRecipe{
+		Name:                              "CyberWagon",
 		ClassName:                         "Recipe_CyberWagon_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_CyberWagon.Recipe_CyberWagon_C",
 		MDisplayName:                      `Cyber Wagon`,
@@ -2153,6 +2296,7 @@ var (
 	}
 
 	DroneStation = FGRecipe{
+		Name:                              "DroneStation",
 		ClassName:                         "Recipe_DroneStation_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneStation.Recipe_DroneStation_C",
 		MDisplayName:                      `Drone Port`,
@@ -2168,6 +2312,7 @@ var (
 	}
 
 	DroneTransport = FGRecipe{
+		Name:                              "DroneTransport",
 		ClassName:                         "Recipe_DroneTransport_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_DroneTransport.Recipe_DroneTransport_C",
 		MDisplayName:                      `Drone`,
@@ -2183,6 +2328,7 @@ var (
 	}
 
 	ElectromagneticControlRod = FGRecipe{
+		Name:                              "ElectromagneticControlRod",
 		ClassName:                         "Recipe_ElectromagneticControlRod_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ElectromagneticControlRod.Recipe_ElectromagneticControlRod_C",
 		MDisplayName:                      `Electromagnetic Control Rod`,
@@ -2198,6 +2344,7 @@ var (
 	}
 
 	EncasedIndustrialBeam = FGRecipe{
+		Name:                              "EncasedIndustrialBeam",
 		ClassName:                         "Recipe_EncasedIndustrialBeam_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_EncasedIndustrialBeam.Recipe_EncasedIndustrialBeam_C",
 		MDisplayName:                      `Encased Industrial Beam`,
@@ -2213,6 +2360,7 @@ var (
 	}
 
 	Explorer = FGRecipe{
+		Name:                              "Explorer",
 		ClassName:                         "Recipe_Explorer_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Explorer.Recipe_Explorer_C",
 		MDisplayName:                      `Explorer`,
@@ -2228,6 +2376,7 @@ var (
 	}
 
 	Fabric = FGRecipe{
+		Name:                              "Fabric",
 		ClassName:                         "Recipe_Fabric_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Fabric.Recipe_Fabric_C",
 		MDisplayName:                      `Fabric`,
@@ -2243,6 +2392,7 @@ var (
 	}
 
 	FactoryCart = FGRecipe{
+		Name:                              "FactoryCart",
 		ClassName:                         "Recipe_FactoryCart_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_FactoryCart.Recipe_FactoryCart_C",
 		MDisplayName:                      `Factory Cart™`,
@@ -2258,6 +2408,7 @@ var (
 	}
 
 	Fence01 = FGRecipe{
+		Name:                              "Fence01",
 		ClassName:                         "Recipe_Fence_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Fence/Recipe_Fence_01.Recipe_Fence_01_C",
 		MDisplayName:                      `Fence`,
@@ -2273,6 +2424,7 @@ var (
 	}
 
 	FilterGasMask = FGRecipe{
+		Name:                              "FilterGasMask",
 		ClassName:                         "Recipe_FilterGasMask_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterGasMask.Recipe_FilterGasMask_C",
 		MDisplayName:                      `Gas Filter`,
@@ -2288,6 +2440,7 @@ var (
 	}
 
 	FilterHazmat = FGRecipe{
+		Name:                              "FilterHazmat",
 		ClassName:                         "Recipe_FilterHazmat_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_FilterHazmat.Recipe_FilterHazmat_C",
 		MDisplayName:                      `Iodine Infused Filter`,
@@ -2303,6 +2456,7 @@ var (
 	}
 
 	FloodlightPole = FGRecipe{
+		Name:                              "FloodlightPole",
 		ClassName:                         "Recipe_FloodlightPole_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightPole.Recipe_FloodlightPole_C",
 		MDisplayName:                      `Flood Light Tower`,
@@ -2318,6 +2472,7 @@ var (
 	}
 
 	FloodlightWall = FGRecipe{
+		Name:                              "FloodlightWall",
 		ClassName:                         "Recipe_FloodlightWall_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FloodlightWall.Recipe_FloodlightWall_C",
 		MDisplayName:                      `Wall Mounted Flood Light`,
@@ -2333,6 +2488,7 @@ var (
 	}
 
 	FluidCanister = FGRecipe{
+		Name:                              "FluidCanister",
 		ClassName:                         "Recipe_FluidCanister_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_FluidCanister.Recipe_FluidCanister_C",
 		MDisplayName:                      `Empty Canister`,
@@ -2348,6 +2504,7 @@ var (
 	}
 
 	Foundation8x101 = FGRecipe{
+		Name:                              "Foundation8x101",
 		ClassName:                         "Recipe_Foundation_8x1_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x1_01.Recipe_Foundation_8x1_01_C",
 		MDisplayName:                      `Foundation 8m x 1m`,
@@ -2363,6 +2520,7 @@ var (
 	}
 
 	Foundation8x201 = FGRecipe{
+		Name:                              "Foundation8x201",
 		ClassName:                         "Recipe_Foundation_8x2_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x2_01.Recipe_Foundation_8x2_01_C",
 		MDisplayName:                      `Foundation 8m x 2m`,
@@ -2378,6 +2536,7 @@ var (
 	}
 
 	Foundation8x401 = FGRecipe{
+		Name:                              "Foundation8x401",
 		ClassName:                         "Recipe_Foundation_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_8x4_01.Recipe_Foundation_8x4_01_C",
 		MDisplayName:                      `Foundation 8m x 4m`,
@@ -2393,6 +2552,7 @@ var (
 	}
 
 	FoundationFrame01 = FGRecipe{
+		Name:                              "FoundationFrame01",
 		ClassName:                         "Recipe_Foundation_Frame_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_Foundation_Frame_01.Recipe_Foundation_Frame_01_C",
 		MDisplayName:                      `Frame Foundation 8m x 4m`,
@@ -2408,6 +2568,7 @@ var (
 	}
 
 	FoundationGlass01 = FGRecipe{
+		Name:                              "FoundationGlass01",
 		ClassName:                         "Recipe_FoundationGlass_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_FoundationGlass_01.Recipe_FoundationGlass_01_C",
 		MDisplayName:                      `Glass Foundation 8m x 1m`,
@@ -2423,6 +2584,7 @@ var (
 	}
 
 	FrackingExtractor = FGRecipe{
+		Name:                              "FrackingExtractor",
 		ClassName:                         "Recipe_FrackingExtractor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingExtractor.Recipe_FrackingExtractor_C",
 		MDisplayName:                      `Resource Well Extractor`,
@@ -2438,6 +2600,7 @@ var (
 	}
 
 	FrackingSmasher = FGRecipe{
+		Name:                              "FrackingSmasher",
 		ClassName:                         "Recipe_FrackingSmasher_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_FrackingSmasher.Recipe_FrackingSmasher_C",
 		MDisplayName:                      `Resource Well Pressurizer`,
@@ -2453,6 +2616,7 @@ var (
 	}
 
 	FreightWagon = FGRecipe{
+		Name:                              "FreightWagon",
 		ClassName:                         "Recipe_FreightWagon_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_FreightWagon.Recipe_FreightWagon_C",
 		MDisplayName:                      `Freight Car`,
@@ -2468,6 +2632,7 @@ var (
 	}
 
 	Fuel = FGRecipe{
+		Name:                              "Fuel",
 		ClassName:                         "Recipe_Fuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Fuel.Recipe_Fuel_C",
 		MDisplayName:                      `Packaged Fuel`,
@@ -2483,6 +2648,7 @@ var (
 	}
 
 	FusedModularFrame = FGRecipe{
+		Name:                              "FusedModularFrame",
 		ClassName:                         "Recipe_FusedModularFrame_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_FusedModularFrame.Recipe_FusedModularFrame_C",
 		MDisplayName:                      `Fused Modular Frame`,
@@ -2498,6 +2664,7 @@ var (
 	}
 
 	GasTank = FGRecipe{
+		Name:                              "GasTank",
 		ClassName:                         "Recipe_GasTank_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_GasTank.Recipe_GasTank_C",
 		MDisplayName:                      `Empty Fluid Tank`,
@@ -2513,6 +2680,7 @@ var (
 	}
 
 	Gasmask = FGRecipe{
+		Name:                              "Gasmask",
 		ClassName:                         "Recipe_Gasmask_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gasmask.Recipe_Gasmask_C",
 		MDisplayName:                      `Gas Mask`,
@@ -2528,6 +2696,7 @@ var (
 	}
 
 	GeneratorBiomass = FGRecipe{
+		Name:                              "GeneratorBiomass",
 		ClassName:                         "Recipe_GeneratorBiomass_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorBiomass.Recipe_GeneratorBiomass_C",
 		MDisplayName:                      `Biomass Burner`,
@@ -2543,6 +2712,7 @@ var (
 	}
 
 	GeneratorCoal = FGRecipe{
+		Name:                              "GeneratorCoal",
 		ClassName:                         "Recipe_GeneratorCoal_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorCoal.Recipe_GeneratorCoal_C",
 		MDisplayName:                      `Coal Generator`,
@@ -2558,6 +2728,7 @@ var (
 	}
 
 	GeneratorFuel = FGRecipe{
+		Name:                              "GeneratorFuel",
 		ClassName:                         "Recipe_GeneratorFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorFuel.Recipe_GeneratorFuel_C",
 		MDisplayName:                      `Fuel Generator`,
@@ -2573,6 +2744,7 @@ var (
 	}
 
 	GeneratorGeoThermal = FGRecipe{
+		Name:                              "GeneratorGeoThermal",
 		ClassName:                         "Recipe_GeneratorGeoThermal_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorGeoThermal.Recipe_GeneratorGeoThermal_C",
 		MDisplayName:                      `Geothermal Generator`,
@@ -2588,6 +2760,7 @@ var (
 	}
 
 	GeneratorNuclear = FGRecipe{
+		Name:                              "GeneratorNuclear",
 		ClassName:                         "Recipe_GeneratorNuclear_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_GeneratorNuclear.Recipe_GeneratorNuclear_C",
 		MDisplayName:                      `Nuclear Power Plant`,
@@ -2603,6 +2776,7 @@ var (
 	}
 
 	Gunpowder = FGRecipe{
+		Name:                              "Gunpowder",
 		ClassName:                         "Recipe_Gunpowder_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Gunpowder.Recipe_Gunpowder_C",
 		MDisplayName:                      `Black Powder`,
@@ -2618,6 +2792,7 @@ var (
 	}
 
 	HadronCollider = FGRecipe{
+		Name:                              "HadronCollider",
 		ClassName:                         "Recipe_HadronCollider_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HadronCollider.Recipe_HadronCollider_C",
 		MDisplayName:                      `Particle Accelerator`,
@@ -2633,6 +2808,7 @@ var (
 	}
 
 	HazmatSuit = FGRecipe{
+		Name:                              "HazmatSuit",
 		ClassName:                         "Recipe_HazmatSuit_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_HazmatSuit.Recipe_HazmatSuit_C",
 		MDisplayName:                      `Hazmat Suit`,
@@ -2648,6 +2824,7 @@ var (
 	}
 
 	HeatSink = FGRecipe{
+		Name:                              "HeatSink",
 		ClassName:                         "Recipe_HeatSink_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_HeatSink.Recipe_HeatSink_C",
 		MDisplayName:                      `Heat Sink`,
@@ -2663,6 +2840,7 @@ var (
 	}
 
 	HighSpeedConnector = FGRecipe{
+		Name:                              "HighSpeedConnector",
 		ClassName:                         "Recipe_HighSpeedConnector_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_HighSpeedConnector.Recipe_HighSpeedConnector_C",
 		MDisplayName:                      `High-Speed Connector`,
@@ -2678,6 +2856,7 @@ var (
 	}
 
 	Hoverpack = FGRecipe{
+		Name:                              "Hoverpack",
 		ClassName:                         "Recipe_Hoverpack_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Hoverpack.Recipe_Hoverpack_C",
 		MDisplayName:                      `Hover Pack`,
@@ -2693,6 +2872,7 @@ var (
 	}
 
 	HyperPoleStackable = FGRecipe{
+		Name:                              "HyperPoleStackable",
 		ClassName:                         "Recipe_HyperPoleStackable_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperPoleStackable.Recipe_HyperPoleStackable_C",
 		MDisplayName:                      `Stackable Hyper Tube Support`,
@@ -2708,6 +2888,7 @@ var (
 	}
 
 	HyperTubeWallHole = FGRecipe{
+		Name:                              "HyperTubeWallHole",
 		ClassName:                         "Recipe_HyperTubeWallHole_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallHole.Recipe_HyperTubeWallHole_C",
 		MDisplayName:                      `Hyper Tube Wall Hole`,
@@ -2723,6 +2904,7 @@ var (
 	}
 
 	HyperTubeWallSupport = FGRecipe{
+		Name:                              "HyperTubeWallSupport",
 		ClassName:                         "Recipe_HyperTubeWallSupport_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_HyperTubeWallSupport.Recipe_HyperTubeWallSupport_C",
 		MDisplayName:                      `Hyper Tube Wall Support`,
@@ -2738,6 +2920,7 @@ var (
 	}
 
 	IndustrialTank = FGRecipe{
+		Name:                              "IndustrialTank",
 		ClassName:                         "Recipe_IndustrialTank_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_IndustrialTank.Recipe_IndustrialTank_C",
 		MDisplayName:                      `Industrial Fluid Buffer`,
@@ -2753,6 +2936,7 @@ var (
 	}
 
 	IngotAluminum = FGRecipe{
+		Name:                              "IngotAluminum",
 		ClassName:                         "Recipe_IngotAluminum_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotAluminum.Recipe_IngotAluminum_C",
 		MDisplayName:                      `Aluminum Ingot`,
@@ -2768,6 +2952,7 @@ var (
 	}
 
 	IngotCaterium = FGRecipe{
+		Name:                              "IngotCaterium",
 		ClassName:                         "Recipe_IngotCaterium_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCaterium.Recipe_IngotCaterium_C",
 		MDisplayName:                      `Caterium Ingot`,
@@ -2783,6 +2968,7 @@ var (
 	}
 
 	IngotCopper = FGRecipe{
+		Name:                              "IngotCopper",
 		ClassName:                         "Recipe_IngotCopper_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotCopper.Recipe_IngotCopper_C",
 		MDisplayName:                      `Copper Ingot`,
@@ -2798,6 +2984,7 @@ var (
 	}
 
 	IngotIron = FGRecipe{
+		Name:                              "IngotIron",
 		ClassName:                         "Recipe_IngotIron_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotIron.Recipe_IngotIron_C",
 		MDisplayName:                      `Iron Ingot`,
@@ -2813,6 +3000,7 @@ var (
 	}
 
 	IngotSteel = FGRecipe{
+		Name:                              "IngotSteel",
 		ClassName:                         "Recipe_IngotSteel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Smelter/Recipe_IngotSteel.Recipe_IngotSteel_C",
 		MDisplayName:                      `Steel Ingot`,
@@ -2828,6 +3016,7 @@ var (
 	}
 
 	IronPlate = FGRecipe{
+		Name:                              "IronPlate",
 		ClassName:                         "Recipe_IronPlate_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronPlate.Recipe_IronPlate_C",
 		MDisplayName:                      `Iron Plate`,
@@ -2843,6 +3032,7 @@ var (
 	}
 
 	IronPlateReinforced = FGRecipe{
+		Name:                              "IronPlateReinforced",
 		ClassName:                         "Recipe_IronPlateReinforced_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_IronPlateReinforced.Recipe_IronPlateReinforced_C",
 		MDisplayName:                      `Reinforced Iron Plate`,
@@ -2858,6 +3048,7 @@ var (
 	}
 
 	IronRod = FGRecipe{
+		Name:                              "IronRod",
 		ClassName:                         "Recipe_IronRod_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_IronRod.Recipe_IronRod_C",
 		MDisplayName:                      `Iron Rod`,
@@ -2873,6 +3064,7 @@ var (
 	}
 
 	JetPack = FGRecipe{
+		Name:                              "JetPack",
 		ClassName:                         "Recipe_JetPack_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_JetPack.Recipe_JetPack_C",
 		MDisplayName:                      `Jetpack`,
@@ -2888,6 +3080,7 @@ var (
 	}
 
 	JumpPad = FGRecipe{
+		Name:                              "JumpPad",
 		ClassName:                         "Recipe_JumpPad_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPad.Recipe_JumpPad_C",
 		MDisplayName:                      `Old Jump Pad`,
@@ -2903,6 +3096,7 @@ var (
 	}
 
 	JumpPadAdjustable = FGRecipe{
+		Name:                              "JumpPadAdjustable",
 		ClassName:                         "Recipe_JumpPadAdjustable_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadAdjustable.Recipe_JumpPadAdjustable_C",
 		MDisplayName:                      `Jump Pad`,
@@ -2918,6 +3112,7 @@ var (
 	}
 
 	JumpPadTilted = FGRecipe{
+		Name:                              "JumpPadTilted",
 		ClassName:                         "Recipe_JumpPadTilted_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_JumpPadTilted.Recipe_JumpPadTilted_C",
 		MDisplayName:                      `Old Tilted Jump Pad`,
@@ -2933,6 +3128,7 @@ var (
 	}
 
 	Ladder = FGRecipe{
+		Name:                              "Ladder",
 		ClassName:                         "Recipe_Ladder_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ladder/Recipe_Ladder.Recipe_Ladder_C",
 		MDisplayName:                      `Ladder`,
@@ -2948,6 +3144,7 @@ var (
 	}
 
 	LightsControlPanel = FGRecipe{
+		Name:                              "LightsControlPanel",
 		ClassName:                         "Recipe_LightsControlPanel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LightsControlPanel.Recipe_LightsControlPanel_C",
 		MDisplayName:                      `Lights Control Panel`,
@@ -2963,6 +3160,7 @@ var (
 	}
 
 	Limestone = FGRecipe{
+		Name:                              "Limestone",
 		ClassName:                         "Recipe_Limestone_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Limestone.Recipe_Limestone_C",
 		MDisplayName:                      `Limestone`,
@@ -2978,6 +3176,7 @@ var (
 	}
 
 	LiquidBiofuel = FGRecipe{
+		Name:                              "LiquidBiofuel",
 		ClassName:                         "Recipe_LiquidBiofuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidBiofuel.Recipe_LiquidBiofuel_C",
 		MDisplayName:                      `Liquid Biofuel`,
@@ -2993,6 +3192,7 @@ var (
 	}
 
 	LiquidFuel = FGRecipe{
+		Name:                              "LiquidFuel",
 		ClassName:                         "Recipe_LiquidFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_LiquidFuel.Recipe_LiquidFuel_C",
 		MDisplayName:                      `Fuel`,
@@ -3008,6 +3208,7 @@ var (
 	}
 
 	Locomotive = FGRecipe{
+		Name:                              "Locomotive",
 		ClassName:                         "Recipe_Locomotive_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Train/Recipe_Locomotive.Recipe_Locomotive_C",
 		MDisplayName:                      `Electric Locomotive`,
@@ -3023,6 +3224,7 @@ var (
 	}
 
 	LookoutTower = FGRecipe{
+		Name:                              "LookoutTower",
 		ClassName:                         "Recipe_LookoutTower_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_LookoutTower.Recipe_LookoutTower_C",
 		MDisplayName:                      `Lookout Tower`,
@@ -3038,6 +3240,7 @@ var (
 	}
 
 	Mam = FGRecipe{
+		Name:                              "Mam",
 		ClassName:                         "Recipe_Mam_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Mam.Recipe_Mam_C",
 		MDisplayName:                      `MAM`,
@@ -3053,6 +3256,7 @@ var (
 	}
 
 	ManufacturerMk1 = FGRecipe{
+		Name:                              "ManufacturerMk1",
 		ClassName:                         "Recipe_ManufacturerMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ManufacturerMk1.Recipe_ManufacturerMk1_C",
 		MDisplayName:                      `Manufacturer`,
@@ -3068,6 +3272,7 @@ var (
 	}
 
 	MedicinalInhaler = FGRecipe{
+		Name:                              "MedicinalInhaler",
 		ClassName:                         "Recipe_MedicinalInhaler_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhaler.Recipe_MedicinalInhaler_C",
 		MDisplayName:                      `Nutritional Inhaler`,
@@ -3083,6 +3288,7 @@ var (
 	}
 
 	MedicinalInhalerAlienOrgans = FGRecipe{
+		Name:                              "MedicinalInhalerAlienOrgans",
 		ClassName:                         "Recipe_MedicinalInhalerAlienOrgans_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_MedicinalInhalerAlienOrgans.Recipe_MedicinalInhalerAlienOrgans_C",
 		MDisplayName:                      `Medicinal Inhaler: Alien Organs`,
@@ -3098,6 +3304,7 @@ var (
 	}
 
 	MinerMk1 = FGRecipe{
+		Name:                              "MinerMk1",
 		ClassName:                         "Recipe_MinerMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk1.Recipe_MinerMk1_C",
 		MDisplayName:                      `Miner Mk.1`,
@@ -3113,6 +3320,7 @@ var (
 	}
 
 	MinerMk2 = FGRecipe{
+		Name:                              "MinerMk2",
 		ClassName:                         "Recipe_MinerMk2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk2.Recipe_MinerMk2_C",
 		MDisplayName:                      `Miner Mk.2`,
@@ -3128,6 +3336,7 @@ var (
 	}
 
 	MinerMk3 = FGRecipe{
+		Name:                              "MinerMk3",
 		ClassName:                         "Recipe_MinerMk3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_MinerMk3.Recipe_MinerMk3_C",
 		MDisplayName:                      `Miner Mk.3`,
@@ -3143,6 +3352,7 @@ var (
 	}
 
 	ModularFrame = FGRecipe{
+		Name:                              "ModularFrame",
 		ClassName:                         "Recipe_ModularFrame_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_ModularFrame.Recipe_ModularFrame_C",
 		MDisplayName:                      `Modular Frame`,
@@ -3158,6 +3368,7 @@ var (
 	}
 
 	ModularFrameHeavy = FGRecipe{
+		Name:                              "ModularFrameHeavy",
 		ClassName:                         "Recipe_ModularFrameHeavy_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_ModularFrameHeavy.Recipe_ModularFrameHeavy_C",
 		MDisplayName:                      `Heavy Modular Frame`,
@@ -3173,6 +3384,7 @@ var (
 	}
 
 	Motor = FGRecipe{
+		Name:                              "Motor",
 		ClassName:                         "Recipe_Motor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Motor.Recipe_Motor_C",
 		MDisplayName:                      `Motor`,
@@ -3188,6 +3400,7 @@ var (
 	}
 
 	MotorTurbo = FGRecipe{
+		Name:                              "MotorTurbo",
 		ClassName:                         "Recipe_MotorTurbo_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_MotorTurbo.Recipe_MotorTurbo_C",
 		MDisplayName:                      `Turbo Motor`,
@@ -3203,6 +3416,7 @@ var (
 	}
 
 	NitricAcid = FGRecipe{
+		Name:                              "NitricAcid",
 		ClassName:                         "Recipe_NitricAcid_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NitricAcid.Recipe_NitricAcid_C",
 		MDisplayName:                      `Nitric Acid`,
@@ -3218,6 +3432,7 @@ var (
 	}
 
 	Nobelisk = FGRecipe{
+		Name:                              "Nobelisk",
 		ClassName:                         "Recipe_Nobelisk_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Nobelisk.Recipe_Nobelisk_C",
 		MDisplayName:                      `Nobelisk`,
@@ -3233,6 +3448,7 @@ var (
 	}
 
 	NobeliskDetonator = FGRecipe{
+		Name:                              "NobeliskDetonator",
 		ClassName:                         "Recipe_NobeliskDetonator_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NobeliskDetonator.Recipe_NobeliskDetonator_C",
 		MDisplayName:                      `Nobelisk Detonator`,
@@ -3248,6 +3464,7 @@ var (
 	}
 
 	NonFissileUranium = FGRecipe{
+		Name:                              "NonFissileUranium",
 		ClassName:                         "Recipe_NonFissileUranium_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Blender/Recipe_NonFissileUranium.Recipe_NonFissileUranium_C",
 		MDisplayName:                      `Non-fissile Uranium`,
@@ -3263,6 +3480,7 @@ var (
 	}
 
 	NuclearFuelRod = FGRecipe{
+		Name:                              "NuclearFuelRod",
 		ClassName:                         "Recipe_NuclearFuelRod_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_NuclearFuelRod.Recipe_NuclearFuelRod_C",
 		MDisplayName:                      `Uranium Fuel Rod`,
@@ -3278,6 +3496,7 @@ var (
 	}
 
 	NutritionalInhaler = FGRecipe{
+		Name:                              "NutritionalInhaler",
 		ClassName:                         "Recipe_NutritionalInhaler_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_NutritionalInhaler.Recipe_NutritionalInhaler_C",
 		MDisplayName:                      `Medicinal Inhaler`,
@@ -3293,6 +3512,7 @@ var (
 	}
 
 	ObjectScanner = FGRecipe{
+		Name:                              "ObjectScanner",
 		ClassName:                         "Recipe_ObjectScanner_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ObjectScanner.Recipe_ObjectScanner_C",
 		MDisplayName:                      `Object Scanner`,
@@ -3308,6 +3528,7 @@ var (
 	}
 
 	OilPump = FGRecipe{
+		Name:                              "OilPump",
 		ClassName:                         "Recipe_OilPump_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilPump.Recipe_OilPump_C",
 		MDisplayName:                      `Oil Extractor`,
@@ -3323,6 +3544,7 @@ var (
 	}
 
 	OilRefinery = FGRecipe{
+		Name:                              "OilRefinery",
 		ClassName:                         "Recipe_OilRefinery_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_OilRefinery.Recipe_OilRefinery_C",
 		MDisplayName:                      `Refinery`,
@@ -3338,6 +3560,7 @@ var (
 	}
 
 	OreBauxite = FGRecipe{
+		Name:                              "OreBauxite",
 		ClassName:                         "Recipe_OreBauxite_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreBauxite.Recipe_OreBauxite_C",
 		MDisplayName:                      `Bauxite`,
@@ -3353,6 +3576,7 @@ var (
 	}
 
 	OreCaterium = FGRecipe{
+		Name:                              "OreCaterium",
 		ClassName:                         "Recipe_OreCaterium_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCaterium.Recipe_OreCaterium_C",
 		MDisplayName:                      `Caterium Ore`,
@@ -3368,6 +3592,7 @@ var (
 	}
 
 	OreCopper = FGRecipe{
+		Name:                              "OreCopper",
 		ClassName:                         "Recipe_OreCopper_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreCopper.Recipe_OreCopper_C",
 		MDisplayName:                      `Copper Ore`,
@@ -3383,6 +3608,7 @@ var (
 	}
 
 	OreIron = FGRecipe{
+		Name:                              "OreIron",
 		ClassName:                         "Recipe_OreIron_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreIron.Recipe_OreIron_C",
 		MDisplayName:                      `Iron Ore`,
@@ -3398,6 +3624,7 @@ var (
 	}
 
 	OreUranium = FGRecipe{
+		Name:                              "OreUranium",
 		ClassName:                         "Recipe_OreUranium_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_OreUranium.Recipe_OreUranium_C",
 		MDisplayName:                      `Uranium`,
@@ -3413,6 +3640,7 @@ var (
 	}
 
 	PackagedAlumina = FGRecipe{
+		Name:                              "PackagedAlumina",
 		ClassName:                         "Recipe_PackagedAlumina_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedAlumina.Recipe_PackagedAlumina_C",
 		MDisplayName:                      `Packaged Alumina Solution`,
@@ -3428,6 +3656,7 @@ var (
 	}
 
 	PackagedBiofuel = FGRecipe{
+		Name:                              "PackagedBiofuel",
 		ClassName:                         "Recipe_PackagedBiofuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedBiofuel.Recipe_PackagedBiofuel_C",
 		MDisplayName:                      `Packaged Liquid Biofuel`,
@@ -3443,6 +3672,7 @@ var (
 	}
 
 	PackagedCrudeOil = FGRecipe{
+		Name:                              "PackagedCrudeOil",
 		ClassName:                         "Recipe_PackagedCrudeOil_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedCrudeOil.Recipe_PackagedCrudeOil_C",
 		MDisplayName:                      `Packaged Oil`,
@@ -3458,6 +3688,7 @@ var (
 	}
 
 	PackagedNitricAcid = FGRecipe{
+		Name:                              "PackagedNitricAcid",
 		ClassName:                         "Recipe_PackagedNitricAcid_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitricAcid.Recipe_PackagedNitricAcid_C",
 		MDisplayName:                      `Packaged Nitric Acid`,
@@ -3473,6 +3704,7 @@ var (
 	}
 
 	PackagedNitrogen = FGRecipe{
+		Name:                              "PackagedNitrogen",
 		ClassName:                         "Recipe_PackagedNitrogen_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedNitrogen.Recipe_PackagedNitrogen_C",
 		MDisplayName:                      `Packaged Nitrogen Gas`,
@@ -3488,6 +3720,7 @@ var (
 	}
 
 	PackagedOilResidue = FGRecipe{
+		Name:                              "PackagedOilResidue",
 		ClassName:                         "Recipe_PackagedOilResidue_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedOilResidue.Recipe_PackagedOilResidue_C",
 		MDisplayName:                      `Packaged Heavy Oil Residue`,
@@ -3503,6 +3736,7 @@ var (
 	}
 
 	PackagedSulfuricAcid = FGRecipe{
+		Name:                              "PackagedSulfuricAcid",
 		ClassName:                         "Recipe_PackagedSulfuricAcid_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_PackagedSulfuricAcid.Recipe_PackagedSulfuricAcid_C",
 		MDisplayName:                      `Packaged Sulfuric Acid`,
@@ -3518,6 +3752,7 @@ var (
 	}
 
 	PackagedTurboFuel = FGRecipe{
+		Name:                              "PackagedTurboFuel",
 		ClassName:                         "Recipe_PackagedTurboFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedTurboFuel.Recipe_PackagedTurboFuel_C",
 		MDisplayName:                      `Packaged Turbofuel`,
@@ -3533,6 +3768,7 @@ var (
 	}
 
 	PackagedWater = FGRecipe{
+		Name:                              "PackagedWater",
 		ClassName:                         "Recipe_PackagedWater_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PackagedWater.Recipe_PackagedWater_C",
 		MDisplayName:                      `Packaged Water`,
@@ -3548,6 +3784,7 @@ var (
 	}
 
 	Packager = FGRecipe{
+		Name:                              "Packager",
 		ClassName:                         "Recipe_Packager_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Packager.Recipe_Packager_C",
 		MDisplayName:                      `Packager`,
@@ -3563,6 +3800,7 @@ var (
 	}
 
 	Parachute = FGRecipe{
+		Name:                              "Parachute",
 		ClassName:                         "Recipe_Parachute_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_Parachute.Recipe_Parachute_C",
 		MDisplayName:                      `Parachute`,
@@ -3578,6 +3816,7 @@ var (
 	}
 
 	PetroleumCoke = FGRecipe{
+		Name:                              "PetroleumCoke",
 		ClassName:                         "Recipe_PetroleumCoke_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Recipe_PetroleumCoke_C",
 		MDisplayName:                      `Petroleum Coke`,
@@ -3593,6 +3832,7 @@ var (
 	}
 
 	PillarBase = FGRecipe{
+		Name:                              "PillarBase",
 		ClassName:                         "Recipe_PillarBase_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarBase.Recipe_PillarBase_C",
 		MDisplayName:                      `Pillar Base`,
@@ -3608,6 +3848,7 @@ var (
 	}
 
 	PillarMiddle = FGRecipe{
+		Name:                              "PillarMiddle",
 		ClassName:                         "Recipe_PillarMiddle_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarMiddle.Recipe_PillarMiddle_C",
 		MDisplayName:                      `Pillar Middle`,
@@ -3623,6 +3864,7 @@ var (
 	}
 
 	PillarTop = FGRecipe{
+		Name:                              "PillarTop",
 		ClassName:                         "Recipe_PillarTop_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_PillarTop.Recipe_PillarTop_C",
 		MDisplayName:                      `Pillar Top`,
@@ -3638,6 +3880,7 @@ var (
 	}
 
 	PipeHyper = FGRecipe{
+		Name:                              "PipeHyper",
 		ClassName:                         "Recipe_PipeHyper_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyper.Recipe_PipeHyper_C",
 		MDisplayName:                      `Hyper Tube`,
@@ -3653,6 +3896,7 @@ var (
 	}
 
 	PipeHyperStart = FGRecipe{
+		Name:                              "PipeHyperStart",
 		ClassName:                         "Recipe_PipeHyperStart_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipe_PipeHyperStart.Recipe_PipeHyperStart_C",
 		MDisplayName:                      `Hyper Tube Entrance`,
@@ -3668,6 +3912,7 @@ var (
 	}
 
 	PipeHyperSupport = FGRecipe{
+		Name:                              "PipeHyperSupport",
 		ClassName:                         "Recipe_PipeHyperSupport_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeHyperSupport.Recipe_PipeHyperSupport_C",
 		MDisplayName:                      `Hyper Tube Support`,
@@ -3683,6 +3928,7 @@ var (
 	}
 
 	PipeStorageTank = FGRecipe{
+		Name:                              "PipeStorageTank",
 		ClassName:                         "Recipe_PipeStorageTank_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeStorageTank.Recipe_PipeStorageTank_C",
 		MDisplayName:                      `Fluid Buffer`,
@@ -3698,6 +3944,7 @@ var (
 	}
 
 	PipeSupport = FGRecipe{
+		Name:                              "PipeSupport",
 		ClassName:                         "Recipe_PipeSupport_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupport.Recipe_PipeSupport_C",
 		MDisplayName:                      `Pipeline Support`,
@@ -3713,6 +3960,7 @@ var (
 	}
 
 	PipeSupportStackable = FGRecipe{
+		Name:                              "PipeSupportStackable",
 		ClassName:                         "Recipe_PipeSupportStackable_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportStackable.Recipe_PipeSupportStackable_C",
 		MDisplayName:                      `Stackable Pipeline Support`,
@@ -3728,6 +3976,7 @@ var (
 	}
 
 	PipeSupportWall = FGRecipe{
+		Name:                              "PipeSupportWall",
 		ClassName:                         "Recipe_PipeSupportWall_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWall.Recipe_PipeSupportWall_C",
 		MDisplayName:                      `Pipeline Wall Support`,
@@ -3743,6 +3992,7 @@ var (
 	}
 
 	PipeSupportWallHole = FGRecipe{
+		Name:                              "PipeSupportWallHole",
 		ClassName:                         "Recipe_PipeSupportWallHole_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipeSupportWallHole.Recipe_PipeSupportWallHole_C",
 		MDisplayName:                      `Pipeline Wall Hole`,
@@ -3758,6 +4008,7 @@ var (
 	}
 
 	Pipeline = FGRecipe{
+		Name:                              "Pipeline",
 		ClassName:                         "Recipe_Pipeline_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Pipeline.Recipe_Pipeline_C",
 		MDisplayName:                      `Pipeline Mk.1`,
@@ -3773,6 +4024,7 @@ var (
 	}
 
 	PipelineJunctionCross = FGRecipe{
+		Name:                              "PipelineJunctionCross",
 		ClassName:                         "Recipe_PipelineJunction_Cross_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineJunction_Cross.Recipe_PipelineJunction_Cross_C",
 		MDisplayName:                      `Pipeline Junction Cross`,
@@ -3788,6 +4040,7 @@ var (
 	}
 
 	PipelineMK2 = FGRecipe{
+		Name:                              "PipelineMK2",
 		ClassName:                         "Recipe_PipelineMK2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelineMK2.Recipe_PipelineMK2_C",
 		MDisplayName:                      `Pipeline Mk.2`,
@@ -3803,6 +4056,7 @@ var (
 	}
 
 	PipelinePump = FGRecipe{
+		Name:                              "PipelinePump",
 		ClassName:                         "Recipe_PipelinePump_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePump.Recipe_PipelinePump_C",
 		MDisplayName:                      `Pipeline Pump Mk.1`,
@@ -3818,6 +4072,7 @@ var (
 	}
 
 	PipelinePumpMK2 = FGRecipe{
+		Name:                              "PipelinePumpMK2",
 		ClassName:                         "Recipe_PipelinePumpMK2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PipelinePumpMK2.Recipe_PipelinePumpMK2_C",
 		MDisplayName:                      `Pipeline Pump Mk.2`,
@@ -3833,6 +4088,7 @@ var (
 	}
 
 	Plastic = FGRecipe{
+		Name:                              "Plastic",
 		ClassName:                         "Recipe_Plastic_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Plastic.Recipe_Plastic_C",
 		MDisplayName:                      `Plastic`,
@@ -3848,6 +4104,7 @@ var (
 	}
 
 	Plutonium = FGRecipe{
+		Name:                              "Plutonium",
 		ClassName:                         "Recipe_Plutonium_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/HadronCollider/Recipe_Plutonium.Recipe_Plutonium_C",
 		MDisplayName:                      `Plutonium Pellet`,
@@ -3863,6 +4120,7 @@ var (
 	}
 
 	PlutoniumCell = FGRecipe{
+		Name:                              "PlutoniumCell",
 		ClassName:                         "Recipe_PlutoniumCell_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PlutoniumCell.Recipe_PlutoniumCell_C",
 		MDisplayName:                      `Encased Plutonium Cell`,
@@ -3878,6 +4136,7 @@ var (
 	}
 
 	PlutoniumFuelRod = FGRecipe{
+		Name:                              "PlutoniumFuelRod",
 		ClassName:                         "Recipe_PlutoniumFuelRod_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_PlutoniumFuelRod.Recipe_PlutoniumFuelRod_C",
 		MDisplayName:                      `Plutonium Fuel Rod`,
@@ -3893,6 +4152,7 @@ var (
 	}
 
 	PortableMiner = FGRecipe{
+		Name:                              "PortableMiner",
 		ClassName:                         "Recipe_PortableMiner_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_PortableMiner.Recipe_PortableMiner_C",
 		MDisplayName:                      `Portable Miner`,
@@ -3908,6 +4168,7 @@ var (
 	}
 
 	PowerCrystalShard1 = FGRecipe{
+		Name:                              "PowerCrystalShard1",
 		ClassName:                         "Recipe_PowerCrystalShard_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_1.Recipe_PowerCrystalShard_1_C",
 		MDisplayName:                      `Power Shard (1)`,
@@ -3923,6 +4184,7 @@ var (
 	}
 
 	PowerCrystalShard2 = FGRecipe{
+		Name:                              "PowerCrystalShard2",
 		ClassName:                         "Recipe_PowerCrystalShard_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_2.Recipe_PowerCrystalShard_2_C",
 		MDisplayName:                      `Power Shard (2)`,
@@ -3938,6 +4200,7 @@ var (
 	}
 
 	PowerCrystalShard3 = FGRecipe{
+		Name:                              "PowerCrystalShard3",
 		ClassName:                         "Recipe_PowerCrystalShard_3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_PowerCrystalShard_3.Recipe_PowerCrystalShard_3_C",
 		MDisplayName:                      `Power Shard (5)`,
@@ -3953,6 +4216,7 @@ var (
 	}
 
 	PowerLine = FGRecipe{
+		Name:                              "PowerLine",
 		ClassName:                         "Recipe_PowerLine_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerLine.Recipe_PowerLine_C",
 		MDisplayName:                      `Power Line`,
@@ -3968,6 +4232,7 @@ var (
 	}
 
 	PowerPoleMk1 = FGRecipe{
+		Name:                              "PowerPoleMk1",
 		ClassName:                         "Recipe_PowerPoleMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk1.Recipe_PowerPoleMk1_C",
 		MDisplayName:                      `Power Pole Mk.1`,
@@ -3983,6 +4248,7 @@ var (
 	}
 
 	PowerPoleMk2 = FGRecipe{
+		Name:                              "PowerPoleMk2",
 		ClassName:                         "Recipe_PowerPoleMk2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk2.Recipe_PowerPoleMk2_C",
 		MDisplayName:                      `Power Pole Mk.2`,
@@ -3998,6 +4264,7 @@ var (
 	}
 
 	PowerPoleMk3 = FGRecipe{
+		Name:                              "PowerPoleMk3",
 		ClassName:                         "Recipe_PowerPoleMk3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleMk3.Recipe_PowerPoleMk3_C",
 		MDisplayName:                      `Power Pole Mk.3`,
@@ -4013,6 +4280,7 @@ var (
 	}
 
 	PowerPoleWall = FGRecipe{
+		Name:                              "PowerPoleWall",
 		ClassName:                         "Recipe_PowerPoleWall_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWall.Recipe_PowerPoleWall_C",
 		MDisplayName:                      `Wall Outlet Mk.1`,
@@ -4028,6 +4296,7 @@ var (
 	}
 
 	PowerPoleWallDouble = FGRecipe{
+		Name:                              "PowerPoleWallDouble",
 		ClassName:                         "Recipe_PowerPoleWallDouble_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDouble.Recipe_PowerPoleWallDouble_C",
 		MDisplayName:                      `Double Wall Outlet Mk.1`,
@@ -4043,6 +4312,7 @@ var (
 	}
 
 	PowerPoleWallDoubleMk2 = FGRecipe{
+		Name:                              "PowerPoleWallDoubleMk2",
 		ClassName:                         "Recipe_PowerPoleWallDoubleMk2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk2.Recipe_PowerPoleWallDoubleMk2_C",
 		MDisplayName:                      `Double Wall Outlet Mk.2`,
@@ -4058,6 +4328,7 @@ var (
 	}
 
 	PowerPoleWallDoubleMk3 = FGRecipe{
+		Name:                              "PowerPoleWallDoubleMk3",
 		ClassName:                         "Recipe_PowerPoleWallDoubleMk3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallDoubleMk3.Recipe_PowerPoleWallDoubleMk3_C",
 		MDisplayName:                      `Double Wall Outlet Mk.3`,
@@ -4073,6 +4344,7 @@ var (
 	}
 
 	PowerPoleWallMk2 = FGRecipe{
+		Name:                              "PowerPoleWallMk2",
 		ClassName:                         "Recipe_PowerPoleWallMk2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk2.Recipe_PowerPoleWallMk2_C",
 		MDisplayName:                      `Wall Outlet Mk.2`,
@@ -4088,6 +4360,7 @@ var (
 	}
 
 	PowerPoleWallMk3 = FGRecipe{
+		Name:                              "PowerPoleWallMk3",
 		ClassName:                         "Recipe_PowerPoleWallMk3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerPoleWallMk3.Recipe_PowerPoleWallMk3_C",
 		MDisplayName:                      `Wall Outlet Mk.3`,
@@ -4103,6 +4376,7 @@ var (
 	}
 
 	PowerStorageMk1 = FGRecipe{
+		Name:                              "PowerStorageMk1",
 		ClassName:                         "Recipe_PowerStorageMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerStorageMk1.Recipe_PowerStorageMk1_C",
 		MDisplayName:                      `Power Storage`,
@@ -4118,6 +4392,7 @@ var (
 	}
 
 	PowerSwitch = FGRecipe{
+		Name:                              "PowerSwitch",
 		ClassName:                         "Recipe_PowerSwitch_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_PowerSwitch.Recipe_PowerSwitch_C",
 		MDisplayName:                      `Power Switch`,
@@ -4133,6 +4408,7 @@ var (
 	}
 
 	PressureConversionCube = FGRecipe{
+		Name:                              "PressureConversionCube",
 		ClassName:                         "Recipe_PressureConversionCube_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_PressureConversionCube.Recipe_PressureConversionCube_C",
 		MDisplayName:                      `Pressure Conversion Cube`,
@@ -4148,6 +4424,7 @@ var (
 	}
 
 	PureAluminumIngot = FGRecipe{
+		Name:                              "PureAluminumIngot",
 		ClassName:                         "Recipe_PureAluminumIngot_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_PureAluminumIngot.Recipe_PureAluminumIngot_C",
 		MDisplayName:                      `Alternate: Pure Aluminum Ingot`,
@@ -4163,6 +4440,7 @@ var (
 	}
 
 	QuarterPipe = FGRecipe{
+		Name:                              "QuarterPipe",
 		ClassName:                         "Recipe_QuarterPipe_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe.Recipe_QuarterPipe_C",
 		MDisplayName:                      `Quarter Pipe`,
@@ -4178,6 +4456,7 @@ var (
 	}
 
 	QuarterPipe02 = FGRecipe{
+		Name:                              "QuarterPipe02",
 		ClassName:                         "Recipe_QuarterPipe_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipe_02.Recipe_QuarterPipe_02_C",
 		MDisplayName:                      `Inverted Quarter Pipe`,
@@ -4193,6 +4472,7 @@ var (
 	}
 
 	QuarterPipeCorner01 = FGRecipe{
+		Name:                              "QuarterPipeCorner01",
 		ClassName:                         "Recipe_QuarterPipeCorner_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_01.Recipe_QuarterPipeCorner_01_C",
 		MDisplayName:                      `Inner Corner Quarter Pipe`,
@@ -4208,6 +4488,7 @@ var (
 	}
 
 	QuarterPipeCorner02 = FGRecipe{
+		Name:                              "QuarterPipeCorner02",
 		ClassName:                         "Recipe_QuarterPipeCorner_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_02.Recipe_QuarterPipeCorner_02_C",
 		MDisplayName:                      `Inverted Inner Corner Quarter Pipe`,
@@ -4223,6 +4504,7 @@ var (
 	}
 
 	QuarterPipeCorner03 = FGRecipe{
+		Name:                              "QuarterPipeCorner03",
 		ClassName:                         "Recipe_QuarterPipeCorner_03_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_03.Recipe_QuarterPipeCorner_03_C",
 		MDisplayName:                      `Outer Corner Quarter Pipe`,
@@ -4238,6 +4520,7 @@ var (
 	}
 
 	QuarterPipeCorner04 = FGRecipe{
+		Name:                              "QuarterPipeCorner04",
 		ClassName:                         "Recipe_QuarterPipeCorner_04_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Foundations/Recipe_QuarterPipeCorner_04.Recipe_QuarterPipeCorner_04_C",
 		MDisplayName:                      `Inverted Outer Corner Quarter Pipe`,
@@ -4253,6 +4536,7 @@ var (
 	}
 
 	QuartzCrystal = FGRecipe{
+		Name:                              "QuartzCrystal",
 		ClassName:                         "Recipe_QuartzCrystal_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_QuartzCrystal.Recipe_QuartzCrystal_C",
 		MDisplayName:                      `Quartz Crystal`,
@@ -4268,6 +4552,7 @@ var (
 	}
 
 	Quickwire = FGRecipe{
+		Name:                              "Quickwire",
 		ClassName:                         "Recipe_Quickwire_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Quickwire.Recipe_Quickwire_C",
 		MDisplayName:                      `Quickwire`,
@@ -4283,6 +4568,7 @@ var (
 	}
 
 	RadarTower = FGRecipe{
+		Name:                              "RadarTower",
 		ClassName:                         "Recipe_RadarTower_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RadarTower.Recipe_RadarTower_C",
 		MDisplayName:                      `Radar Tower`,
@@ -4298,6 +4584,7 @@ var (
 	}
 
 	RadioControlUnit = FGRecipe{
+		Name:                              "RadioControlUnit",
 		ClassName:                         "Recipe_RadioControlUnit_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Manufacturer/Recipe_RadioControlUnit.Recipe_RadioControlUnit_C",
 		MDisplayName:                      `Radio Control Unit`,
@@ -4313,6 +4600,7 @@ var (
 	}
 
 	RailroadTrack = FGRecipe{
+		Name:                              "RailroadTrack",
 		ClassName:                         "Recipe_RailroadTrack_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_RailroadTrack.Recipe_RailroadTrack_C",
 		MDisplayName:                      `Railway`,
@@ -4328,6 +4616,7 @@ var (
 	}
 
 	Ramp8x101 = FGRecipe{
+		Name:                              "Ramp8x101",
 		ClassName:                         "Recipe_Ramp_8x1_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x1_01.Recipe_Ramp_8x1_01_C",
 		MDisplayName:                      `Ramp 8m x 1m`,
@@ -4343,6 +4632,7 @@ var (
 	}
 
 	Ramp8x201 = FGRecipe{
+		Name:                              "Ramp8x201",
 		ClassName:                         "Recipe_Ramp_8x2_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x2_01.Recipe_Ramp_8x2_01_C",
 		MDisplayName:                      `Ramp 8m x 2m`,
@@ -4358,6 +4648,7 @@ var (
 	}
 
 	Ramp8x401 = FGRecipe{
+		Name:                              "Ramp8x401",
 		ClassName:                         "Recipe_Ramp_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_01.Recipe_Ramp_8x4_01_C",
 		MDisplayName:                      `Ramp 8m x 4m`,
@@ -4373,6 +4664,7 @@ var (
 	}
 
 	Ramp8x4Inverted01 = FGRecipe{
+		Name:                              "Ramp8x4Inverted01",
 		ClassName:                         "Recipe_Ramp_8x4_Inverted_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x4_Inverted_01.Recipe_Ramp_8x4_Inverted_01_C",
 		MDisplayName:                      `Inverted Ramp 8m x 4m`,
@@ -4388,6 +4680,7 @@ var (
 	}
 
 	Ramp8x8x8 = FGRecipe{
+		Name:                              "Ramp8x8x8",
 		ClassName:                         "Recipe_Ramp_8x8x8_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_8x8x8.Recipe_Ramp_8x8x8_C",
 		MDisplayName:                      `Double Ramp 8m x 8m`,
@@ -4403,6 +4696,7 @@ var (
 	}
 
 	RampDiagonal8x101 = FGRecipe{
+		Name:                              "RampDiagonal8x101",
 		ClassName:                         "Recipe_Ramp_Diagonal_8x1_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_01.Recipe_Ramp_Diagonal_8x1_01_C",
 		MDisplayName:                      `Down Corner Ramp 8m x 1m`,
@@ -4418,6 +4712,7 @@ var (
 	}
 
 	RampDiagonal8x102 = FGRecipe{
+		Name:                              "RampDiagonal8x102",
 		ClassName:                         "Recipe_Ramp_Diagonal_8x1_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x1_02.Recipe_Ramp_Diagonal_8x1_02_C",
 		MDisplayName:                      `Up Corner Ramp 8m x 1m`,
@@ -4433,6 +4728,7 @@ var (
 	}
 
 	RampDiagonal8x201 = FGRecipe{
+		Name:                              "RampDiagonal8x201",
 		ClassName:                         "Recipe_Ramp_Diagonal_8x2_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_01.Recipe_Ramp_Diagonal_8x2_01_C",
 		MDisplayName:                      `Down Corner Ramp 8m x 2m`,
@@ -4448,6 +4744,7 @@ var (
 	}
 
 	RampDiagonal8x202 = FGRecipe{
+		Name:                              "RampDiagonal8x202",
 		ClassName:                         "Recipe_Ramp_Diagonal_8x2_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x2_02.Recipe_Ramp_Diagonal_8x2_02_C",
 		MDisplayName:                      `Up Corner Ramp 8m x 2m`,
@@ -4463,6 +4760,7 @@ var (
 	}
 
 	RampDiagonal8x401 = FGRecipe{
+		Name:                              "RampDiagonal8x401",
 		ClassName:                         "Recipe_Ramp_Diagonal_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_01.Recipe_Ramp_Diagonal_8x4_01_C",
 		MDisplayName:                      `Down Corner Ramp 8m x 4m`,
@@ -4478,6 +4776,7 @@ var (
 	}
 
 	RampDiagonal8x402 = FGRecipe{
+		Name:                              "RampDiagonal8x402",
 		ClassName:                         "Recipe_Ramp_Diagonal_8x4_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_Ramp_Diagonal_8x4_02.Recipe_Ramp_Diagonal_8x4_02_C",
 		MDisplayName:                      `Up Corner Ramp 8m x 4m`,
@@ -4493,6 +4792,7 @@ var (
 	}
 
 	RampDouble = FGRecipe{
+		Name:                              "RampDouble",
 		ClassName:                         "Recipe_RampDouble_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble.Recipe_RampDouble_C",
 		MDisplayName:                      `Double Ramp 8m x 4m`,
@@ -4508,6 +4808,7 @@ var (
 	}
 
 	RampDouble8x1 = FGRecipe{
+		Name:                              "RampDouble8x1",
 		ClassName:                         "Recipe_RampDouble_8x1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampDouble_8x1.Recipe_RampDouble_8x1_C",
 		MDisplayName:                      `Double Ramp 8m x 2m`,
@@ -4523,6 +4824,7 @@ var (
 	}
 
 	RampInverted8x1 = FGRecipe{
+		Name:                              "RampInverted8x1",
 		ClassName:                         "Recipe_RampInverted_8x1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1.Recipe_RampInverted_8x1_C",
 		MDisplayName:                      `Inverted Ramp 8m x 1m`,
@@ -4538,6 +4840,7 @@ var (
 	}
 
 	RampInverted8x1Corner01 = FGRecipe{
+		Name:                              "RampInverted8x1Corner01",
 		ClassName:                         "Recipe_RampInverted_8x1_Corner_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_01.Recipe_RampInverted_8x1_Corner_01_C",
 		MDisplayName:                      `Up Corner 8m x 1m Inverted`,
@@ -4553,6 +4856,7 @@ var (
 	}
 
 	RampInverted8x1Corner02 = FGRecipe{
+		Name:                              "RampInverted8x1Corner02",
 		ClassName:                         "Recipe_RampInverted_8x1_Corner_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x1_Corner_02.Recipe_RampInverted_8x1_Corner_02_C",
 		MDisplayName:                      `Down Corner 8m x 1m Inverted`,
@@ -4568,6 +4872,7 @@ var (
 	}
 
 	RampInverted8x201 = FGRecipe{
+		Name:                              "RampInverted8x201",
 		ClassName:                         "Recipe_RampInverted_8x2_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_01.Recipe_RampInverted_8x2_01_C",
 		MDisplayName:                      `Inverted Ramp 8m x 2m`,
@@ -4583,6 +4888,7 @@ var (
 	}
 
 	RampInverted8x2Corner01 = FGRecipe{
+		Name:                              "RampInverted8x2Corner01",
 		ClassName:                         "Recipe_RampInverted_8x2_Corner_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_01.Recipe_RampInverted_8x2_Corner_01_C",
 		MDisplayName:                      `Up Corner 8m x 2m Inverted`,
@@ -4598,6 +4904,7 @@ var (
 	}
 
 	RampInverted8x2Corner02 = FGRecipe{
+		Name:                              "RampInverted8x2Corner02",
 		ClassName:                         "Recipe_RampInverted_8x2_Corner_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x2_Corner_02.Recipe_RampInverted_8x2_Corner_02_C",
 		MDisplayName:                      `Down Corner 8m x 2m Inverted`,
@@ -4613,6 +4920,7 @@ var (
 	}
 
 	RampInverted8x4Corner01 = FGRecipe{
+		Name:                              "RampInverted8x4Corner01",
 		ClassName:                         "Recipe_RampInverted_8x4_Corner_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_01.Recipe_RampInverted_8x4_Corner_01_C",
 		MDisplayName:                      `Up Corner 8m x 4m Inverted`,
@@ -4628,6 +4936,7 @@ var (
 	}
 
 	RampInverted8x4Corner02 = FGRecipe{
+		Name:                              "RampInverted8x4Corner02",
 		ClassName:                         "Recipe_RampInverted_8x4_Corner_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Ramps/Recipe_RampInverted_8x4_Corner_02.Recipe_RampInverted_8x4_Corner_02_C",
 		MDisplayName:                      `Down Corner 8m x 4m Inverted`,
@@ -4643,6 +4952,7 @@ var (
 	}
 
 	RawQuartz = FGRecipe{
+		Name:                              "RawQuartz",
 		ClassName:                         "Recipe_RawQuartz_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_RawQuartz.Recipe_RawQuartz_C",
 		MDisplayName:                      `Raw Quartz`,
@@ -4658,6 +4968,7 @@ var (
 	}
 
 	RebarGun = FGRecipe{
+		Name:                              "RebarGun",
 		ClassName:                         "Recipe_RebarGun_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_RebarGun.Recipe_RebarGun_C",
 		MDisplayName:                      `Rebar Gun`,
@@ -4673,6 +4984,7 @@ var (
 	}
 
 	ResidualFuel = FGRecipe{
+		Name:                              "ResidualFuel",
 		ClassName:                         "Recipe_ResidualFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualFuel.Recipe_ResidualFuel_C",
 		MDisplayName:                      `Residual Fuel`,
@@ -4688,6 +5000,7 @@ var (
 	}
 
 	ResidualPlastic = FGRecipe{
+		Name:                              "ResidualPlastic",
 		ClassName:                         "Recipe_ResidualPlastic_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Recipe_ResidualPlastic_C",
 		MDisplayName:                      `Residual Plastic`,
@@ -4703,6 +5016,7 @@ var (
 	}
 
 	ResidualRubber = FGRecipe{
+		Name:                              "ResidualRubber",
 		ClassName:                         "Recipe_ResidualRubber_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualRubber.Recipe_ResidualRubber_C",
 		MDisplayName:                      `Residual Rubber`,
@@ -4718,6 +5032,7 @@ var (
 	}
 
 	ResourceSink = FGRecipe{
+		Name:                              "ResourceSink",
 		ClassName:                         "Recipe_ResourceSink_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSink.Recipe_ResourceSink_C",
 		MDisplayName:                      `AWESOME Sink`,
@@ -4733,6 +5048,7 @@ var (
 	}
 
 	ResourceSinkShop = FGRecipe{
+		Name:                              "ResourceSinkShop",
 		ClassName:                         "Recipe_ResourceSinkShop_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_ResourceSinkShop.Recipe_ResourceSinkShop_C",
 		MDisplayName:                      `AWESOME Shop`,
@@ -4748,6 +5064,7 @@ var (
 	}
 
 	Rotor = FGRecipe{
+		Name:                              "Rotor",
 		ClassName:                         "Recipe_Rotor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Rotor.Recipe_Rotor_C",
 		MDisplayName:                      `Rotor`,
@@ -4763,6 +5080,7 @@ var (
 	}
 
 	Rubber = FGRecipe{
+		Name:                              "Rubber",
 		ClassName:                         "Recipe_Rubber_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_Rubber.Recipe_Rubber_C",
 		MDisplayName:                      `Rubber`,
@@ -4778,6 +5096,7 @@ var (
 	}
 
 	Screw = FGRecipe{
+		Name:                              "Screw",
 		ClassName:                         "Recipe_Screw_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Screw.Recipe_Screw_C",
 		MDisplayName:                      `Screw`,
@@ -4793,6 +5112,7 @@ var (
 	}
 
 	Silica = FGRecipe{
+		Name:                              "Silica",
 		ClassName:                         "Recipe_Silica_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Silica.Recipe_Silica_C",
 		MDisplayName:                      `Silica`,
@@ -4808,6 +5128,7 @@ var (
 	}
 
 	SmelterBasicMk1 = FGRecipe{
+		Name:                              "SmelterBasicMk1",
 		ClassName:                         "Recipe_SmelterBasicMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterBasicMk1.Recipe_SmelterBasicMk1_C",
 		MDisplayName:                      `Smelter`,
@@ -4823,6 +5144,7 @@ var (
 	}
 
 	SmelterMk1 = FGRecipe{
+		Name:                              "SmelterMk1",
 		ClassName:                         "Recipe_SmelterMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_SmelterMk1.Recipe_SmelterMk1_C",
 		MDisplayName:                      `Foundry`,
@@ -4838,6 +5160,7 @@ var (
 	}
 
 	Snow = FGRecipe{
+		Name:                              "Snow",
 		ClassName:                         "Recipe_Snow_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_Snow.Recipe_Snow_C",
 		MDisplayName:                      `Actual Snow`,
@@ -4853,6 +5176,7 @@ var (
 	}
 
 	SnowDispenser = FGRecipe{
+		Name:                              "SnowDispenser",
 		ClassName:                         "Recipe_SnowDispenser_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowDispenser/Recipe_SnowDispenser.Recipe_SnowDispenser_C",
 		MDisplayName:                      `FICSMAS Snow Dispenser`,
@@ -4868,6 +5192,7 @@ var (
 	}
 
 	Snowball = FGRecipe{
+		Name:                              "Snowball",
 		ClassName:                         "Recipe_Snowball_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_Snowball.Recipe_Snowball_C",
 		MDisplayName:                      `Snowball`,
@@ -4883,6 +5208,7 @@ var (
 	}
 
 	SnowballWeapon = FGRecipe{
+		Name:                              "SnowballWeapon",
 		ClassName:                         "Recipe_SnowballWeapon_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_SnowballWeapon.Recipe_SnowballWeapon_C",
 		MDisplayName:                      `Snowball Pile`,
@@ -4898,6 +5224,7 @@ var (
 	}
 
 	Snowman = FGRecipe{
+		Name:                              "Snowman",
 		ClassName:                         "Recipe_Snowman_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/SnowmanDecor/Recipe_Snowman.Recipe_Snowman_C",
 		MDisplayName:                      `Snowman`,
@@ -4913,6 +5240,7 @@ var (
 	}
 
 	SpaceElevator = FGRecipe{
+		Name:                              "SpaceElevator",
 		ClassName:                         "Recipe_SpaceElevator_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/TowTruck/Recipe_SpaceElevator.Recipe_SpaceElevator_C",
 		MDisplayName:                      `Space Elevator`,
@@ -4928,6 +5256,7 @@ var (
 	}
 
 	SpaceElevatorPart1 = FGRecipe{
+		Name:                              "SpaceElevatorPart1",
 		ClassName:                         "Recipe_SpaceElevatorPart_1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_1.Recipe_SpaceElevatorPart_1_C",
 		MDisplayName:                      `Smart Plating`,
@@ -4943,6 +5272,7 @@ var (
 	}
 
 	SpaceElevatorPart2 = FGRecipe{
+		Name:                              "SpaceElevatorPart2",
 		ClassName:                         "Recipe_SpaceElevatorPart_2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_2.Recipe_SpaceElevatorPart_2_C",
 		MDisplayName:                      `Versatile Framework`,
@@ -4958,6 +5288,7 @@ var (
 	}
 
 	SpaceElevatorPart3 = FGRecipe{
+		Name:                              "SpaceElevatorPart3",
 		ClassName:                         "Recipe_SpaceElevatorPart_3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_3.Recipe_SpaceElevatorPart_3_C",
 		MDisplayName:                      `Automated Wiring`,
@@ -4973,6 +5304,7 @@ var (
 	}
 
 	SpaceElevatorPart4 = FGRecipe{
+		Name:                              "SpaceElevatorPart4",
 		ClassName:                         "Recipe_SpaceElevatorPart_4_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_4.Recipe_SpaceElevatorPart_4_C",
 		MDisplayName:                      `Modular Engine`,
@@ -4988,6 +5320,7 @@ var (
 	}
 
 	SpaceElevatorPart5 = FGRecipe{
+		Name:                              "SpaceElevatorPart5",
 		ClassName:                         "Recipe_SpaceElevatorPart_5_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_5.Recipe_SpaceElevatorPart_5_C",
 		MDisplayName:                      `Adaptive Control Unit`,
@@ -5003,6 +5336,7 @@ var (
 	}
 
 	SpaceElevatorPart6 = FGRecipe{
+		Name:                              "SpaceElevatorPart6",
 		ClassName:                         "Recipe_SpaceElevatorPart_6_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_6.Recipe_SpaceElevatorPart_6_C",
 		MDisplayName:                      `Magnetic Field Generator`,
@@ -5018,6 +5352,7 @@ var (
 	}
 
 	SpaceElevatorPart7 = FGRecipe{
+		Name:                              "SpaceElevatorPart7",
 		ClassName:                         "Recipe_SpaceElevatorPart_7_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_7.Recipe_SpaceElevatorPart_7_C",
 		MDisplayName:                      `Assembly Director System`,
@@ -5033,6 +5368,7 @@ var (
 	}
 
 	SpaceElevatorPart8 = FGRecipe{
+		Name:                              "SpaceElevatorPart8",
 		ClassName:                         "Recipe_SpaceElevatorPart_8_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_8.Recipe_SpaceElevatorPart_8_C",
 		MDisplayName:                      `Thermal Propulsion Rocket`,
@@ -5048,6 +5384,7 @@ var (
 	}
 
 	SpaceElevatorPart9 = FGRecipe{
+		Name:                              "SpaceElevatorPart9",
 		ClassName:                         "Recipe_SpaceElevatorPart_9_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_9.Recipe_SpaceElevatorPart_9_C",
 		MDisplayName:                      `Nuclear Pasta`,
@@ -5063,6 +5400,7 @@ var (
 	}
 
 	SpaceRifleMk1 = FGRecipe{
+		Name:                              "SpaceRifleMk1",
 		ClassName:                         "Recipe_SpaceRifleMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpaceRifleMk1.Recipe_SpaceRifleMk1_C",
 		MDisplayName:                      `Rifle`,
@@ -5078,6 +5416,7 @@ var (
 	}
 
 	SpikedRebar = FGRecipe{
+		Name:                              "SpikedRebar",
 		ClassName:                         "Recipe_SpikedRebar_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_SpikedRebar.Recipe_SpikedRebar_C",
 		MDisplayName:                      `Spiked Rebar`,
@@ -5093,6 +5432,7 @@ var (
 	}
 
 	Stair1b = FGRecipe{
+		Name:                              "Stair1b",
 		ClassName:                         "Recipe_Stair_1b_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stair_1b.Recipe_Stair_1b_C",
 		MDisplayName:                      `Stairs`,
@@ -5108,6 +5448,7 @@ var (
 	}
 
 	StairsLeft01 = FGRecipe{
+		Name:                              "StairsLeft01",
 		ClassName:                         "Recipe_Stairs_Left_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Left_01.Recipe_Stairs_Left_01_C",
 		MDisplayName:                      `Stairs Left`,
@@ -5123,6 +5464,7 @@ var (
 	}
 
 	StairsRight01 = FGRecipe{
+		Name:                              "StairsRight01",
 		ClassName:                         "Recipe_Stairs_Right_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Stairs/Recipe_Stairs_Right_01.Recipe_Stairs_Right_01_C",
 		MDisplayName:                      `Stairs Right`,
@@ -5138,6 +5480,7 @@ var (
 	}
 
 	Stator = FGRecipe{
+		Name:                              "Stator",
 		ClassName:                         "Recipe_Stator_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_Stator.Recipe_Stator_C",
 		MDisplayName:                      `Stator`,
@@ -5153,6 +5496,7 @@ var (
 	}
 
 	SteelBeam = FGRecipe{
+		Name:                              "SteelBeam",
 		ClassName:                         "Recipe_SteelBeam_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelBeam.Recipe_SteelBeam_C",
 		MDisplayName:                      `Steel Beam`,
@@ -5168,6 +5512,7 @@ var (
 	}
 
 	SteelPipe = FGRecipe{
+		Name:                              "SteelPipe",
 		ClassName:                         "Recipe_SteelPipe_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_SteelPipe.Recipe_SteelPipe_C",
 		MDisplayName:                      `Steel Pipe`,
@@ -5183,6 +5528,7 @@ var (
 	}
 
 	StorageContainerMk1 = FGRecipe{
+		Name:                              "StorageContainerMk1",
 		ClassName:                         "Recipe_StorageContainerMk1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk1.Recipe_StorageContainerMk1_C",
 		MDisplayName:                      `Storage Container`,
@@ -5198,6 +5544,7 @@ var (
 	}
 
 	StorageContainerMk2 = FGRecipe{
+		Name:                              "StorageContainerMk2",
 		ClassName:                         "Recipe_StorageContainerMk2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StorageContainerMk2.Recipe_StorageContainerMk2_C",
 		MDisplayName:                      `Industrial Storage Container`,
@@ -5213,6 +5560,7 @@ var (
 	}
 
 	StoragePlayer = FGRecipe{
+		Name:                              "StoragePlayer",
 		ClassName:                         "Recipe_StoragePlayer_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StoragePlayer.Recipe_StoragePlayer_C",
 		MDisplayName:                      `Personal Storage Box`,
@@ -5228,6 +5576,7 @@ var (
 	}
 
 	StreetLight = FGRecipe{
+		Name:                              "StreetLight",
 		ClassName:                         "Recipe_StreetLight_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_StreetLight.Recipe_StreetLight_C",
 		MDisplayName:                      `Street Light`,
@@ -5243,6 +5592,7 @@ var (
 	}
 
 	Sulfur = FGRecipe{
+		Name:                              "Sulfur",
 		ClassName:                         "Recipe_Sulfur_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/RawResources/Recipe_Sulfur.Recipe_Sulfur_C",
 		MDisplayName:                      `Sulfur`,
@@ -5258,6 +5608,7 @@ var (
 	}
 
 	SulfuricAcid = FGRecipe{
+		Name:                              "SulfuricAcid",
 		ClassName:                         "Recipe_SulfuricAcid_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_SulfuricAcid.Recipe_SulfuricAcid_C",
 		MDisplayName:                      `Sulfuric Acid`,
@@ -5273,6 +5624,7 @@ var (
 	}
 
 	Tractor = FGRecipe{
+		Name:                              "Tractor",
 		ClassName:                         "Recipe_Tractor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Tractor.Recipe_Tractor_C",
 		MDisplayName:                      `Tractor`,
@@ -5288,6 +5640,7 @@ var (
 	}
 
 	TradingPost = FGRecipe{
+		Name:                              "TradingPost",
 		ClassName:                         "Recipe_TradingPost_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TradingPost.Recipe_TradingPost_C",
 		MDisplayName:                      `The HUB`,
@@ -5303,6 +5656,7 @@ var (
 	}
 
 	TrainDockingStation = FGRecipe{
+		Name:                              "TrainDockingStation",
 		ClassName:                         "Recipe_TrainDockingStation_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStation.Recipe_TrainDockingStation_C",
 		MDisplayName:                      `Freight Platform`,
@@ -5318,6 +5672,7 @@ var (
 	}
 
 	TrainDockingStationLiquid = FGRecipe{
+		Name:                              "TrainDockingStationLiquid",
 		ClassName:                         "Recipe_TrainDockingStationLiquid_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainDockingStationLiquid.Recipe_TrainDockingStationLiquid_C",
 		MDisplayName:                      `Fluid Freight Platform`,
@@ -5333,6 +5688,7 @@ var (
 	}
 
 	TrainPlatformEmpty = FGRecipe{
+		Name:                              "TrainPlatformEmpty",
 		ClassName:                         "Recipe_TrainPlatformEmpty_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainPlatformEmpty.Recipe_TrainPlatformEmpty_C",
 		MDisplayName:                      `Empty Platform`,
@@ -5348,6 +5704,7 @@ var (
 	}
 
 	TrainStation = FGRecipe{
+		Name:                              "TrainStation",
 		ClassName:                         "Recipe_TrainStation_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Buildable/Factory/Train/Station/Recipe_TrainStation.Recipe_TrainStation_C",
 		MDisplayName:                      `Train Station`,
@@ -5363,6 +5720,7 @@ var (
 	}
 
 	TreeGiftProducer = FGRecipe{
+		Name:                              "TreeGiftProducer",
 		ClassName:                         "Recipe_TreeGiftProducer_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Holiday/Recipe_TreeGiftProducer.Recipe_TreeGiftProducer_C",
 		MDisplayName:                      `FICSMAS Gift Tree`,
@@ -5378,6 +5736,7 @@ var (
 	}
 
 	Truck = FGRecipe{
+		Name:                              "Truck",
 		ClassName:                         "Recipe_Truck_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Vehicle/Recipe_Truck.Recipe_Truck_C",
 		MDisplayName:                      `Truck`,
@@ -5393,6 +5752,7 @@ var (
 	}
 
 	TruckStation = FGRecipe{
+		Name:                              "TruckStation",
 		ClassName:                         "Recipe_TruckStation_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_TruckStation.Recipe_TruckStation_C",
 		MDisplayName:                      `Truck Station`,
@@ -5408,6 +5768,7 @@ var (
 	}
 
 	UJellyLandingPad = FGRecipe{
+		Name:                              "UJellyLandingPad",
 		ClassName:                         "Recipe_UJellyLandingPad_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_UJellyLandingPad.Recipe_UJellyLandingPad_C",
 		MDisplayName:                      `U-Jelly Landing Pad`,
@@ -5423,6 +5784,7 @@ var (
 	}
 
 	UnpackageAlumina = FGRecipe{
+		Name:                              "UnpackageAlumina",
 		ClassName:                         "Recipe_UnpackageAlumina_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageAlumina.Recipe_UnpackageAlumina_C",
 		MDisplayName:                      `Unpackage Alumina Solution`,
@@ -5438,6 +5800,7 @@ var (
 	}
 
 	UnpackageBioFuel = FGRecipe{
+		Name:                              "UnpackageBioFuel",
 		ClassName:                         "Recipe_UnpackageBioFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageBioFuel.Recipe_UnpackageBioFuel_C",
 		MDisplayName:                      `Unpackage Liquid Biofuel`,
@@ -5453,6 +5816,7 @@ var (
 	}
 
 	UnpackageFuel = FGRecipe{
+		Name:                              "UnpackageFuel",
 		ClassName:                         "Recipe_UnpackageFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageFuel.Recipe_UnpackageFuel_C",
 		MDisplayName:                      `Unpackage Fuel`,
@@ -5468,6 +5832,7 @@ var (
 	}
 
 	UnpackageNitricAcid = FGRecipe{
+		Name:                              "UnpackageNitricAcid",
 		ClassName:                         "Recipe_UnpackageNitricAcid_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitricAcid.Recipe_UnpackageNitricAcid_C",
 		MDisplayName:                      `Unpackage Nitric Acid`,
@@ -5483,6 +5848,7 @@ var (
 	}
 
 	UnpackageNitrogen = FGRecipe{
+		Name:                              "UnpackageNitrogen",
 		ClassName:                         "Recipe_UnpackageNitrogen_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageNitrogen.Recipe_UnpackageNitrogen_C",
 		MDisplayName:                      `Unpackage Nitrogen Gas`,
@@ -5498,6 +5864,7 @@ var (
 	}
 
 	UnpackageOil = FGRecipe{
+		Name:                              "UnpackageOil",
 		ClassName:                         "Recipe_UnpackageOil_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOil.Recipe_UnpackageOil_C",
 		MDisplayName:                      `Unpackage Oil`,
@@ -5513,6 +5880,7 @@ var (
 	}
 
 	UnpackageOilResidue = FGRecipe{
+		Name:                              "UnpackageOilResidue",
 		ClassName:                         "Recipe_UnpackageOilResidue_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOilResidue.Recipe_UnpackageOilResidue_C",
 		MDisplayName:                      `Unpackage Heavy Oil Residue`,
@@ -5528,6 +5896,7 @@ var (
 	}
 
 	UnpackageSulfuricAcid = FGRecipe{
+		Name:                              "UnpackageSulfuricAcid",
 		ClassName:                         "Recipe_UnpackageSulfuricAcid_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Packager/Recipe_UnpackageSulfuricAcid.Recipe_UnpackageSulfuricAcid_C",
 		MDisplayName:                      `Unpackage Sulfuric Acid`,
@@ -5543,6 +5912,7 @@ var (
 	}
 
 	UnpackageTurboFuel = FGRecipe{
+		Name:                              "UnpackageTurboFuel",
 		ClassName:                         "Recipe_UnpackageTurboFuel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageTurboFuel.Recipe_UnpackageTurboFuel_C",
 		MDisplayName:                      `Unpackage Turbofuel`,
@@ -5558,6 +5928,7 @@ var (
 	}
 
 	UnpackageWater = FGRecipe{
+		Name:                              "UnpackageWater",
 		ClassName:                         "Recipe_UnpackageWater_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageWater.Recipe_UnpackageWater_C",
 		MDisplayName:                      `Unpackage Water`,
@@ -5573,6 +5944,7 @@ var (
 	}
 
 	UraniumCell = FGRecipe{
+		Name:                              "UraniumCell",
 		ClassName:                         "Recipe_UraniumCell_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_UraniumCell.Recipe_UraniumCell_C",
 		MDisplayName:                      `Encased Uranium Cell`,
@@ -5588,6 +5960,7 @@ var (
 	}
 
 	Valve = FGRecipe{
+		Name:                              "Valve",
 		ClassName:                         "Recipe_Valve_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Valve.Recipe_Valve_C",
 		MDisplayName:                      `Valve`,
@@ -5603,6 +5976,7 @@ var (
 	}
 
 	WalkwayCross = FGRecipe{
+		Name:                              "WalkwayCross",
 		ClassName:                         "Recipe_Walkway_Cross_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Cross.Recipe_Walkway_Cross_C",
 		MDisplayName:                      `Walkway Crossing`,
@@ -5618,6 +5992,7 @@ var (
 	}
 
 	WalkwayRamp = FGRecipe{
+		Name:                              "WalkwayRamp",
 		ClassName:                         "Recipe_Walkway_Ramp_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Ramp.Recipe_Walkway_Ramp_C",
 		MDisplayName:                      `Walkway Ramp`,
@@ -5633,6 +6008,7 @@ var (
 	}
 
 	WalkwayStraight = FGRecipe{
+		Name:                              "WalkwayStraight",
 		ClassName:                         "Recipe_Walkway_Straight_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Straight.Recipe_Walkway_Straight_C",
 		MDisplayName:                      `Walkway Straight`,
@@ -5648,6 +6024,7 @@ var (
 	}
 
 	WalkwayT = FGRecipe{
+		Name:                              "WalkwayT",
 		ClassName:                         "Recipe_Walkway_T_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_T.Recipe_Walkway_T_C",
 		MDisplayName:                      `Walkway T-Crossing`,
@@ -5663,6 +6040,7 @@ var (
 	}
 
 	WalkwayTurn = FGRecipe{
+		Name:                              "WalkwayTurn",
 		ClassName:                         "Recipe_Walkway_Turn_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walkways/Recipe_Walkway_Turn.Recipe_Walkway_Turn_C",
 		MDisplayName:                      `Walkway Turn`,
@@ -5678,6 +6056,7 @@ var (
 	}
 
 	Wall8x401 = FGRecipe{
+		Name:                              "Wall8x401",
 		ClassName:                         "Recipe_Wall_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_01.Recipe_Wall_8x4_01_C",
 		MDisplayName:                      `Wall 8m x 4m`,
@@ -5693,6 +6072,7 @@ var (
 	}
 
 	Wall8x402 = FGRecipe{
+		Name:                              "Wall8x402",
 		ClassName:                         "Recipe_Wall_8x4_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_8x4_02.Recipe_Wall_8x4_02_C",
 		MDisplayName:                      `Wall 8m x 4m`,
@@ -5708,6 +6088,7 @@ var (
 	}
 
 	WallConveyor8x401 = FGRecipe{
+		Name:                              "WallConveyor8x401",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01.Recipe_Wall_Conveyor_8x4_01_C",
 		MDisplayName:                      `Wall Conveyor x3`,
@@ -5723,6 +6104,7 @@ var (
 	}
 
 	WallConveyor8x401Steel = FGRecipe{
+		Name:                              "WallConveyor8x401Steel",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_01_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_01_Steel.Recipe_Wall_Conveyor_8x4_01_Steel_C",
 		MDisplayName:                      `Wall Conveyor x3`,
@@ -5738,6 +6120,7 @@ var (
 	}
 
 	WallConveyor8x402 = FGRecipe{
+		Name:                              "WallConveyor8x402",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02.Recipe_Wall_Conveyor_8x4_02_C",
 		MDisplayName:                      `Wall Conveyor x2`,
@@ -5753,6 +6136,7 @@ var (
 	}
 
 	WallConveyor8x402Steel = FGRecipe{
+		Name:                              "WallConveyor8x402Steel",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_02_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_02_Steel.Recipe_Wall_Conveyor_8x4_02_Steel_C",
 		MDisplayName:                      `Wall Conveyor x2`,
@@ -5768,6 +6152,7 @@ var (
 	}
 
 	WallConveyor8x403 = FGRecipe{
+		Name:                              "WallConveyor8x403",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_03_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03.Recipe_Wall_Conveyor_8x4_03_C",
 		MDisplayName:                      `Wall Conveyor x1`,
@@ -5783,6 +6168,7 @@ var (
 	}
 
 	WallConveyor8x403Steel = FGRecipe{
+		Name:                              "WallConveyor8x403Steel",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_03_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_03_Steel.Recipe_Wall_Conveyor_8x4_03_Steel_C",
 		MDisplayName:                      `Wall Conveyor x1`,
@@ -5798,6 +6184,7 @@ var (
 	}
 
 	WallConveyor8x404 = FGRecipe{
+		Name:                              "WallConveyor8x404",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_04_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04.Recipe_Wall_Conveyor_8x4_04_C",
 		MDisplayName:                      `Wall Conveyor Perpendicular`,
@@ -5813,6 +6200,7 @@ var (
 	}
 
 	WallConveyor8x404Steel = FGRecipe{
+		Name:                              "WallConveyor8x404Steel",
 		ClassName:                         "Recipe_Wall_Conveyor_8x4_04_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Conveyor_8x4_04_Steel.Recipe_Wall_Conveyor_8x4_04_Steel_C",
 		MDisplayName:                      `Wall Conveyor Perpendicular`,
@@ -5828,6 +6216,7 @@ var (
 	}
 
 	WallDoor8x401 = FGRecipe{
+		Name:                              "WallDoor8x401",
 		ClassName:                         "Recipe_Wall_Door_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01.Recipe_Wall_Door_8x4_01_C",
 		MDisplayName:                      `Center Door Wall`,
@@ -5843,6 +6232,7 @@ var (
 	}
 
 	WallDoor8x401Steel = FGRecipe{
+		Name:                              "WallDoor8x401Steel",
 		ClassName:                         "Recipe_Wall_Door_8x4_01_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_01_Steel.Recipe_Wall_Door_8x4_01_Steel_C",
 		MDisplayName:                      `Center Door Wall`,
@@ -5858,6 +6248,7 @@ var (
 	}
 
 	WallDoor8x402 = FGRecipe{
+		Name:                              "WallDoor8x402",
 		ClassName:                         "Recipe_Wall_Door_8x4_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02.Recipe_Wall_Door_8x4_02_C",
 		MDisplayName:                      `Left Door Wall`,
@@ -5873,6 +6264,7 @@ var (
 	}
 
 	WallDoor8x402Steel = FGRecipe{
+		Name:                              "WallDoor8x402Steel",
 		ClassName:                         "Recipe_Wall_Door_8x4_02_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_02_Steel.Recipe_Wall_Door_8x4_02_Steel_C",
 		MDisplayName:                      `Left Door Wall`,
@@ -5888,6 +6280,7 @@ var (
 	}
 
 	WallDoor8x403 = FGRecipe{
+		Name:                              "WallDoor8x403",
 		ClassName:                         "Recipe_Wall_Door_8x4_03_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03.Recipe_Wall_Door_8x4_03_C",
 		MDisplayName:                      `Right Door Wall`,
@@ -5903,6 +6296,7 @@ var (
 	}
 
 	WallDoor8x403Steel = FGRecipe{
+		Name:                              "WallDoor8x403Steel",
 		ClassName:                         "Recipe_Wall_Door_8x4_03_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Door_8x4_03_Steel.Recipe_Wall_Door_8x4_03_Steel_C",
 		MDisplayName:                      `Right Door Wall`,
@@ -5918,6 +6312,7 @@ var (
 	}
 
 	WallGate8x401 = FGRecipe{
+		Name:                              "WallGate8x401",
 		ClassName:                         "Recipe_Wall_Gate_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Gate_8x4_01.Recipe_Wall_Gate_8x4_01_C",
 		MDisplayName:                      `Gate Wall`,
@@ -5933,6 +6328,7 @@ var (
 	}
 
 	WallWindow8x401 = FGRecipe{
+		Name:                              "WallWindow8x401",
 		ClassName:                         "Recipe_Wall_Window_8x4_01_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_01.Recipe_Wall_Window_8x4_01_C",
 		MDisplayName:                      `Single Window`,
@@ -5948,6 +6344,7 @@ var (
 	}
 
 	WallWindow8x402 = FGRecipe{
+		Name:                              "WallWindow8x402",
 		ClassName:                         "Recipe_Wall_Window_8x4_02_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_02.Recipe_Wall_Window_8x4_02_C",
 		MDisplayName:                      `Frame Window`,
@@ -5963,6 +6360,7 @@ var (
 	}
 
 	WallWindow8x403 = FGRecipe{
+		Name:                              "WallWindow8x403",
 		ClassName:                         "Recipe_Wall_Window_8x4_03_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03.Recipe_Wall_Window_8x4_03_C",
 		MDisplayName:                      `Panel Window`,
@@ -5978,6 +6376,7 @@ var (
 	}
 
 	WallWindow8x403Steel = FGRecipe{
+		Name:                              "WallWindow8x403Steel",
 		ClassName:                         "Recipe_Wall_Window_8x4_03_Steel_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_03_Steel.Recipe_Wall_Window_8x4_03_Steel_C",
 		MDisplayName:                      `Panel Window`,
@@ -5993,6 +6392,7 @@ var (
 	}
 
 	WallWindow8x404 = FGRecipe{
+		Name:                              "WallWindow8x404",
 		ClassName:                         "Recipe_Wall_Window_8x4_04_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Walls/Recipe_Wall_Window_8x4_04.Recipe_Wall_Window_8x4_04_C",
 		MDisplayName:                      `Reinforced Window`,
@@ -6008,6 +6408,7 @@ var (
 	}
 
 	WaterPump = FGRecipe{
+		Name:                              "WaterPump",
 		ClassName:                         "Recipe_WaterPump_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WaterPump.Recipe_WaterPump_C",
 		MDisplayName:                      `Water Extractor`,
@@ -6023,6 +6424,7 @@ var (
 	}
 
 	Wire = FGRecipe{
+		Name:                              "Wire",
 		ClassName:                         "Recipe_Wire_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Constructor/Recipe_Wire.Recipe_Wire_C",
 		MDisplayName:                      `Wire`,
@@ -6038,6 +6440,7 @@ var (
 	}
 
 	WorkBench = FGRecipe{
+		Name:                              "WorkBench",
 		ClassName:                         "Recipe_WorkBench_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_WorkBench.Recipe_WorkBench_C",
 		MDisplayName:                      `Craft Bench`,
@@ -6053,6 +6456,7 @@ var (
 	}
 
 	Workshop = FGRecipe{
+		Name:                              "Workshop",
 		ClassName:                         "Recipe_Workshop_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Buildings/Recipe_Workshop.Recipe_Workshop_C",
 		MDisplayName:                      `Equipment Workshop`,
@@ -6068,6 +6472,7 @@ var (
 	}
 
 	WreathDecor = FGRecipe{
+		Name:                              "WreathDecor",
 		ClassName:                         "Recipe_WreathDecor_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/WreathDecor/Recipe_WreathDecor.Recipe_WreathDecor_C",
 		MDisplayName:                      `FICSMAS Wreath`,
@@ -6083,6 +6488,7 @@ var (
 	}
 
 	XMassTree = FGRecipe{
+		Name:                              "XMassTree",
 		ClassName:                         "Recipe_XMassTree_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/TreeDecor/Recipe_XMassTree.Recipe_XMassTree_C",
 		MDisplayName:                      `Giant FICSMAS Tree`,
@@ -6098,6 +6504,7 @@ var (
 	}
 
 	XenoBasher = FGRecipe{
+		Name:                              "XenoBasher",
 		ClassName:                         "Recipe_XenoBasher_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoBasher.Recipe_XenoBasher_C",
 		MDisplayName:                      `Xeno-Basher`,
@@ -6113,6 +6520,7 @@ var (
 	}
 
 	XenoZapper = FGRecipe{
+		Name:                              "XenoZapper",
 		ClassName:                         "Recipe_XenoZapper_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_XenoZapper.Recipe_XenoZapper_C",
 		MDisplayName:                      `Xeno-Zapper`,
@@ -6128,6 +6536,7 @@ var (
 	}
 
 	XmasBall1 = FGRecipe{
+		Name:                              "XmasBall1",
 		ClassName:                         "Recipe_XmasBall1_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall1.Recipe_XmasBall1_C",
 		MDisplayName:                      `Red FICSMAS Ornament`,
@@ -6143,6 +6552,7 @@ var (
 	}
 
 	XmasBall2 = FGRecipe{
+		Name:                              "XmasBall2",
 		ClassName:                         "Recipe_XmasBall2_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall2.Recipe_XmasBall2_C",
 		MDisplayName:                      `Blue FICSMAS Ornament`,
@@ -6158,6 +6568,7 @@ var (
 	}
 
 	XmasBall3 = FGRecipe{
+		Name:                              "XmasBall3",
 		ClassName:                         "Recipe_XmasBall3_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall3.Recipe_XmasBall3_C",
 		MDisplayName:                      `Copper FICSMAS Ornament`,
@@ -6173,6 +6584,7 @@ var (
 	}
 
 	XmasBall4 = FGRecipe{
+		Name:                              "XmasBall4",
 		ClassName:                         "Recipe_XmasBall4_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBall4.Recipe_XmasBall4_C",
 		MDisplayName:                      `Iron FICSMAS Ornament`,
@@ -6188,6 +6600,7 @@ var (
 	}
 
 	XmasBallCluster = FGRecipe{
+		Name:                              "XmasBallCluster",
 		ClassName:                         "Recipe_XmasBallCluster_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBallCluster.Recipe_XmasBallCluster_C",
 		MDisplayName:                      `FICSMAS Ornament Bundle`,
@@ -6203,6 +6616,7 @@ var (
 	}
 
 	XmasBow = FGRecipe{
+		Name:                              "XmasBow",
 		ClassName:                         "Recipe_XmasBow_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBow.Recipe_XmasBow_C",
 		MDisplayName:                      `FICSMAS Bow`,
@@ -6218,6 +6632,7 @@ var (
 	}
 
 	XmasBranch = FGRecipe{
+		Name:                              "XmasBranch",
 		ClassName:                         "Recipe_XmasBranch_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasBranch.Recipe_XmasBranch_C",
 		MDisplayName:                      `FICSMAS Tree Branch`,
@@ -6233,6 +6648,7 @@ var (
 	}
 
 	XmasStar = FGRecipe{
+		Name:                              "XmasStar",
 		ClassName:                         "Recipe_XmasStar_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasStar.Recipe_XmasStar_C",
 		MDisplayName:                      `FICSMAS Wonder Star`,
@@ -6248,6 +6664,7 @@ var (
 	}
 
 	XmasWreath = FGRecipe{
+		Name:                              "XmasWreath",
 		ClassName:                         "Recipe_XmasWreath_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Parts/Recipe_XmasWreath.Recipe_XmasWreath_C",
 		MDisplayName:                      `FICSMAS Decoration`,
@@ -6263,6 +6680,7 @@ var (
 	}
 
 	ZipLine = FGRecipe{
+		Name:                              "ZipLine",
 		ClassName:                         "Recipe_ZipLine_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Recipes/Equipment/Recipe_ZipLine.Recipe_ZipLine_C",
 		MDisplayName:                      `Zipline`,
@@ -6278,6 +6696,7 @@ var (
 	}
 
 	xmassLights = FGRecipe{
+		Name:                              "xmassLights",
 		ClassName:                         "Recipe_xmassLights_C",
 		FullName:                          "BlueprintGeneratedClass /Game/FactoryGame/Events/Christmas/Buildings/PowerLineLights/Recipe_xmassLights.Recipe_xmassLights_C",
 		MDisplayName:                      `FICSMAS Power Light`,

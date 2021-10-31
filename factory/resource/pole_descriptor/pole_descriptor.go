@@ -9,6 +9,7 @@ import (
 )
 
 type FGPoleDescriptor struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MBuildMenuPriority      float64
@@ -29,6 +30,7 @@ type FGPoleDescriptor struct {
 
 var (
 	ConveyorPole = FGPoleDescriptor{
+		Name:                    "ConveyorPole",
 		ClassName:               "Desc_ConveyorPole_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      30.000000,
@@ -48,6 +50,7 @@ var (
 	}
 
 	ConveyorPoleStackable = FGPoleDescriptor{
+		Name:                    "ConveyorPoleStackable",
 		ClassName:               "Desc_ConveyorPoleStackable_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      30.000000,
@@ -67,6 +70,7 @@ var (
 	}
 
 	HyperPoleStackable = FGPoleDescriptor{
+		Name:                    "HyperPoleStackable",
 		ClassName:               "Desc_HyperPoleStackable_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      10.000000,
@@ -86,6 +90,7 @@ var (
 	}
 
 	PipeHyperSupport = FGPoleDescriptor{
+		Name:                    "PipeHyperSupport",
 		ClassName:               "Desc_PipeHyperSupport_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -105,6 +110,7 @@ var (
 	}
 
 	PipeSupportStackable = FGPoleDescriptor{
+		Name:                    "PipeSupportStackable",
 		ClassName:               "Desc_PipeSupportStackable_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -124,6 +130,7 @@ var (
 	}
 
 	PipelineSupport = FGPoleDescriptor{
+		Name:                    "PipelineSupport",
 		ClassName:               "Desc_PipelineSupport_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,

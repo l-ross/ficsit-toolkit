@@ -9,6 +9,7 @@ import (
 )
 
 type FGColorGun struct {
+	Name                              string
 	ClassName                         string
 	MArmAnimation                     string
 	MAttachSocket                     string
@@ -34,6 +35,7 @@ type FGColorGun struct {
 
 var (
 	ColorGun = FGColorGun{
+		Name:                              "ColorGun",
 		ClassName:                         "Equip_ColorGun_C",
 		MArmAnimation:                     `AE_ColorGun`,
 		MAttachSocket:                     `hand_rSocket`,

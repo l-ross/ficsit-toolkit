@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableAttachmentSplitter struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -55,6 +56,7 @@ type FGBuildableAttachmentSplitter struct {
 
 var (
 	ConveyorAttachmentSplitter = FGBuildableAttachmentSplitter{
+		Name:                                    "ConveyorAttachmentSplitter",
 		ClassName:                               "Build_ConveyorAttachmentSplitter_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildablePowerPole struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -35,6 +36,7 @@ type FGBuildablePowerPole struct {
 
 var (
 	PowerPoleMk1 = FGBuildablePowerPole{
+		Name:                                    "PowerPoleMk1",
 		ClassName:                               "Build_PowerPoleMk1_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -62,6 +64,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleMk2 = FGBuildablePowerPole{
+		Name:                                    "PowerPoleMk2",
 		ClassName:                               "Build_PowerPoleMk2_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -89,6 +92,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleMk3 = FGBuildablePowerPole{
+		Name:                                    "PowerPoleMk3",
 		ClassName:                               "Build_PowerPoleMk3_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -116,6 +120,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleWall = FGBuildablePowerPole{
+		Name:                                    "PowerPoleWall",
 		ClassName:                               "Build_PowerPoleWall_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -145,6 +150,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleWallDouble = FGBuildablePowerPole{
+		Name:                                    "PowerPoleWallDouble",
 		ClassName:                               "Build_PowerPoleWallDouble_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -174,6 +180,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleWallDoubleMk2 = FGBuildablePowerPole{
+		Name:                                    "PowerPoleWallDoubleMk2",
 		ClassName:                               "Build_PowerPoleWallDouble_Mk2_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -203,6 +210,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleWallDoubleMk3 = FGBuildablePowerPole{
+		Name:                                    "PowerPoleWallDoubleMk3",
 		ClassName:                               "Build_PowerPoleWallDouble_Mk3_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -232,6 +240,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleWallMk2 = FGBuildablePowerPole{
+		Name:                                    "PowerPoleWallMk2",
 		ClassName:                               "Build_PowerPoleWall_Mk2_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -261,6 +270,7 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 
 	PowerPoleWallMk3 = FGBuildablePowerPole{
+		Name:                                    "PowerPoleWallMk3",
 		ClassName:                               "Build_PowerPoleWall_Mk3_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

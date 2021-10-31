@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableTrainPlatformEmpty struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -57,6 +58,7 @@ type FGBuildableTrainPlatformEmpty struct {
 
 var (
 	TrainPlatformEmpty = FGBuildableTrainPlatformEmpty{
+		Name:                                    "TrainPlatformEmpty",
 		ClassName:                               "Build_TrainPlatformEmpty_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

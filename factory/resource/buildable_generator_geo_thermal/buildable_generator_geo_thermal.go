@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableGeneratorGeoThermal struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -62,6 +63,7 @@ type FGBuildableGeneratorGeoThermal struct {
 
 var (
 	GeneratorGeoThermal = FGBuildableGeneratorGeoThermal{
+		Name:                                    "GeneratorGeoThermal",
 		ClassName:                               "Build_GeneratorGeoThermal_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

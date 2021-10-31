@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableMAM struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -33,6 +34,7 @@ type FGBuildableMAM struct {
 
 var (
 	Mam = FGBuildableMAM{
+		Name:                                    "Mam",
 		ClassName:                               "Build_Mam_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

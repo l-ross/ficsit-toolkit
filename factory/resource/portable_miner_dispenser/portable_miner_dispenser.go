@@ -9,6 +9,7 @@ import (
 )
 
 type FGPortableMinerDispenser struct {
+	Name                   string
 	ClassName              string
 	MAllowedResourceForms  string
 	MArmAnimation          string
@@ -23,6 +24,7 @@ type FGPortableMinerDispenser struct {
 
 var (
 	PortableMinerDispenser = FGPortableMinerDispenser{
+		Name:                   "PortableMinerDispenser",
 		ClassName:              "Equip_PortableMinerDispenser_C",
 		MAllowedResourceForms:  `(RF_SOLID)`,
 		MArmAnimation:          `AE_Generic2Hand`,

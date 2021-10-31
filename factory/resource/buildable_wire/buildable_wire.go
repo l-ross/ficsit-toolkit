@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableWire struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -33,6 +34,7 @@ type FGBuildableWire struct {
 
 var (
 	PowerLine = FGBuildableWire{
+		Name:                                    "PowerLine",
 		ClassName:                               "Build_PowerLine_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -58,6 +60,7 @@ var (
 	}
 
 	XmassLightsLine = FGBuildableWire{
+		Name:                                    "XmassLightsLine",
 		ClassName:                               "Build_XmassLightsLine_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

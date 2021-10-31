@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableGeneratorFuel struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -77,6 +78,7 @@ type FGBuildableGeneratorFuel struct {
 
 var (
 	GeneratorBiomass = FGBuildableGeneratorFuel{
+		Name:                                    "GeneratorBiomass",
 		ClassName:                               "Build_GeneratorBiomass_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -150,6 +152,7 @@ Resource consumption will automatically be lowered to meet power demands.`,
 	}
 
 	GeneratorCoal = FGBuildableGeneratorFuel{
+		Name:                                    "GeneratorCoal",
 		ClassName:                               "Build_GeneratorCoal_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -236,6 +239,7 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 	}
 
 	GeneratorFuel = FGBuildableGeneratorFuel{
+		Name:                                    "GeneratorFuel",
 		ClassName:                               "Build_GeneratorFuel_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

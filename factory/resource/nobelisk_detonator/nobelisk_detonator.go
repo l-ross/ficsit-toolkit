@@ -9,6 +9,7 @@ import (
 )
 
 type FGNobeliskDetonator struct {
+	Name                    string
 	ClassName               string
 	MArmAnimation           string
 	MAttachSocket           string
@@ -33,6 +34,7 @@ type FGNobeliskDetonator struct {
 
 var (
 	NobeliskDetonator = FGNobeliskDetonator{
+		Name:                    "NobeliskDetonator",
 		ClassName:               "Equip_NobeliskDetonator_C",
 		MArmAnimation:           `AE_Nobelisk`,
 		MAttachSocket:           `hand_lSocket`,

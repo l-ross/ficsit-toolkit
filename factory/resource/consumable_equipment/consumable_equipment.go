@@ -9,6 +9,7 @@ import (
 )
 
 type FGConsumableEquipment struct {
+	Name                   string
 	ClassName              string
 	MAnimData              string
 	MArmAnimation          string
@@ -25,6 +26,7 @@ type FGConsumableEquipment struct {
 
 var (
 	Beacon = FGConsumableEquipment{
+		Name:                   "Beacon",
 		ClassName:              "Equip_Beacon_C",
 		MArmAnimation:          `AE_Generic1Hand`,
 		MAttachSocket:          `hand_rSocket`,
@@ -36,6 +38,7 @@ var (
 	}
 
 	ConsumeableEquipment = FGConsumableEquipment{
+		Name:                   "ConsumeableEquipment",
 		ClassName:              "BP_ConsumeableEquipment_C",
 		MArmAnimation:          `AE_Generic1Hand`,
 		MAttachSocket:          `hand_rSocket`,
@@ -49,6 +52,7 @@ var (
 	}
 
 	MedKit = FGConsumableEquipment{
+		Name:                   "MedKit",
 		ClassName:              "Equip_MedKit_C",
 		MAnimData:              `((Montage_7_2E66F6A948A8606E71185682EA2AC4EC=AnimMontage'"/Game/FactoryGame/Character/Player/Animation/FirstPerson/MedkitUse_01_Montage.MedkitUse_01_Montage"',CameraAnim_8_AA01C2B248FF438D6C2816B2FA94F1BD=CameraAnim'"/Game/FactoryGame/Character/Player/CameraShake/MedkitUse_01_CameraAnim.MedkitUse_01_CameraAnim"'),(Montage_7_2E66F6A948A8606E71185682EA2AC4EC=AnimMontage'"/Game/FactoryGame/Character/Player/Animation/FirstPerson/MedkitUse_02_Montage.MedkitUse_02_Montage"',CameraAnim_8_AA01C2B248FF438D6C2816B2FA94F1BD=CameraAnim'"/Game/FactoryGame/Character/Player/CameraShake/MedkitUse_02_CameraAnim.MedkitUse_02_CameraAnim"'),(Montage_7_2E66F6A948A8606E71185682EA2AC4EC=AnimMontage'"/Game/FactoryGame/Character/Player/Animation/FirstPerson/MedkitUse_03_Montage.MedkitUse_03_Montage"',CameraAnim_8_AA01C2B248FF438D6C2816B2FA94F1BD=CameraAnim'"/Game/FactoryGame/Character/Player/CameraShake/MedkitUse_03_CameraAnim.MedkitUse_03_CameraAnim"'))`,
 		MArmAnimation:          `AE_Generic1Hand`,

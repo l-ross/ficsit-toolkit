@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableFrackingExtractor struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -62,6 +63,7 @@ type FGBuildableFrackingExtractor struct {
 
 var (
 	FrackingExtractor = FGBuildableFrackingExtractor{
+		Name:                                    "FrackingExtractor",
 		ClassName:                               "Build_FrackingExtractor_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

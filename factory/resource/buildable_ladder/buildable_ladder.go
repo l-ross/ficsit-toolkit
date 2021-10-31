@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableLadder struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -35,6 +36,7 @@ type FGBuildableLadder struct {
 
 var (
 	Ladder = FGBuildableLadder{
+		Name:                                    "Ladder",
 		ClassName:                               "Build_Ladder_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

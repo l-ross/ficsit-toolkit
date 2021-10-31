@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableFoundation struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -35,6 +36,7 @@ type FGBuildableFoundation struct {
 
 var (
 	Foundation8x101 = FGBuildableFoundation{
+		Name:                                    "Foundation8x101",
 		ClassName:                               "Build_Foundation_8x1_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -63,6 +65,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	Foundation8x201 = FGBuildableFoundation{
+		Name:                                    "Foundation8x201",
 		ClassName:                               "Build_Foundation_8x2_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -91,6 +94,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	Foundation8x401 = FGBuildableFoundation{
+		Name:                                    "Foundation8x401",
 		ClassName:                               "Build_Foundation_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -119,6 +123,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	FoundationFrame01 = FGBuildableFoundation{
+		Name:                                    "FoundationFrame01",
 		ClassName:                               "Build_Foundation_Frame_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -147,6 +152,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	FoundationGlass01 = FGBuildableFoundation{
+		Name:                                    "FoundationGlass01",
 		ClassName:                               "Build_FoundationGlass_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -175,6 +181,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	PillarBase = FGBuildableFoundation{
+		Name:                                    "PillarBase",
 		ClassName:                               "Build_PillarBase_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -203,6 +210,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	PillarMiddle = FGBuildableFoundation{
+		Name:                                    "PillarMiddle",
 		ClassName:                               "Build_PillarMiddle_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -231,6 +239,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	PillarTop = FGBuildableFoundation{
+		Name:                                    "PillarTop",
 		ClassName:                               "Build_PillarTop_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -259,6 +268,7 @@ Buildings on top of the foundation are adjusted to a grid, to make it easier to 
 	}
 
 	QuarterPipe = FGBuildableFoundation{
+		Name:                                    "QuarterPipe",
 		ClassName:                               "Build_QuarterPipe_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -287,6 +297,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	QuarterPipe02 = FGBuildableFoundation{
+		Name:                                    "QuarterPipe02",
 		ClassName:                               "Build_QuarterPipe_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -315,6 +326,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	QuarterPipeCorner01 = FGBuildableFoundation{
+		Name:                                    "QuarterPipeCorner01",
 		ClassName:                               "Build_QuarterPipeCorner_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -343,6 +355,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	QuarterPipeCorner02 = FGBuildableFoundation{
+		Name:                                    "QuarterPipeCorner02",
 		ClassName:                               "Build_QuarterPipeCorner_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -371,6 +384,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	QuarterPipeCorner03 = FGBuildableFoundation{
+		Name:                                    "QuarterPipeCorner03",
 		ClassName:                               "Build_QuarterPipeCorner_03_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -399,6 +413,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	QuarterPipeCorner04 = FGBuildableFoundation{
+		Name:                                    "QuarterPipeCorner04",
 		ClassName:                               "Build_QuarterPipeCorner_04_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -427,6 +442,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	Ramp8x101 = FGBuildableFoundation{
+		Name:                                    "Ramp8x101",
 		ClassName:                               "Build_Ramp_8x1_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -454,6 +470,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	Ramp8x201 = FGBuildableFoundation{
+		Name:                                    "Ramp8x201",
 		ClassName:                               "Build_Ramp_8x2_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -481,6 +498,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	Ramp8x401 = FGBuildableFoundation{
+		Name:                                    "Ramp8x401",
 		ClassName:                               "Build_Ramp_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -508,6 +526,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	Ramp8x4Inverted01 = FGBuildableFoundation{
+		Name:                                    "Ramp8x4Inverted01",
 		ClassName:                               "Build_Ramp_8x4_Inverted_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -535,6 +554,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	Ramp8x8x8 = FGBuildableFoundation{
+		Name:                                    "Ramp8x8x8",
 		ClassName:                               "Build_Ramp_8x8x8_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -562,6 +582,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	RampDiagonal8x101 = FGBuildableFoundation{
+		Name:                                    "RampDiagonal8x101",
 		ClassName:                               "Build_Ramp_Diagonal_8x1_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -590,6 +611,7 @@ Height: 1 m`,
 	}
 
 	RampDiagonal8x102 = FGBuildableFoundation{
+		Name:                                    "RampDiagonal8x102",
 		ClassName:                               "Build_Ramp_Diagonal_8x1_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -618,6 +640,7 @@ Height: 1 m`,
 	}
 
 	RampDiagonal8x201 = FGBuildableFoundation{
+		Name:                                    "RampDiagonal8x201",
 		ClassName:                               "Build_Ramp_Diagonal_8x2_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -646,6 +669,7 @@ Height: 2 m`,
 	}
 
 	RampDiagonal8x202 = FGBuildableFoundation{
+		Name:                                    "RampDiagonal8x202",
 		ClassName:                               "Build_Ramp_Diagonal_8x2_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -674,6 +698,7 @@ Height: 2 m`,
 	}
 
 	RampDiagonal8x401 = FGBuildableFoundation{
+		Name:                                    "RampDiagonal8x401",
 		ClassName:                               "Build_Ramp_Diagonal_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -702,6 +727,7 @@ Height: 4 m`,
 	}
 
 	RampDiagonal8x402 = FGBuildableFoundation{
+		Name:                                    "RampDiagonal8x402",
 		ClassName:                               "Build_Ramp_Diagonal_8x4_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -730,6 +756,7 @@ Height: 4 m`,
 	}
 
 	RampDouble = FGBuildableFoundation{
+		Name:                                    "RampDouble",
 		ClassName:                               "Build_RampDouble_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -757,6 +784,7 @@ Height: 4 m`,
 	}
 
 	RampDouble8x1 = FGBuildableFoundation{
+		Name:                                    "RampDouble8x1",
 		ClassName:                               "Build_RampDouble_8x1_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -784,6 +812,7 @@ Height: 4 m`,
 	}
 
 	RampInverted8x1 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x1",
 		ClassName:                               "Build_RampInverted_8x1_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -811,6 +840,7 @@ Height: 4 m`,
 	}
 
 	RampInverted8x1Corner01 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x1Corner01",
 		ClassName:                               "Build_RampInverted_8x1_Corner_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -839,6 +869,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	RampInverted8x1Corner02 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x1Corner02",
 		ClassName:                               "Build_RampInverted_8x1_Corner_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -867,6 +898,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	RampInverted8x201 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x201",
 		ClassName:                               "Build_RampInverted_8x2_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -894,6 +926,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	RampInverted8x2Corner01 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x2Corner01",
 		ClassName:                               "Build_RampInverted_8x2_Corner_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -922,6 +955,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	RampInverted8x2Corner02 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x2Corner02",
 		ClassName:                               "Build_RampInverted_8x2_Corner_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -950,6 +984,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	RampInverted8x4Corner01 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x4Corner01",
 		ClassName:                               "Build_RampInverted_8x4_Corner_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -978,6 +1013,7 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 
 	RampInverted8x4Corner02 = FGBuildableFoundation{
+		Name:                                    "RampInverted8x4Corner02",
 		ClassName:                               "Build_RampInverted_8x4_Corner_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,

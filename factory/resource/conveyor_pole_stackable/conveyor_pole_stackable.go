@@ -7,6 +7,7 @@ import (
 )
 
 type FGConveyorPoleStackable struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -34,6 +35,7 @@ type FGConveyorPoleStackable struct {
 
 var (
 	ConveyorPoleStackable = FGConveyorPoleStackable{
+		Name:                                    "ConveyorPoleStackable",
 		ClassName:                               "Build_ConveyorPoleStackable_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

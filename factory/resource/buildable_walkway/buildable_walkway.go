@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableWalkway struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -33,6 +34,7 @@ type FGBuildableWalkway struct {
 
 var (
 	WalkwayCross = FGBuildableWalkway{
+		Name:                                    "WalkwayCross",
 		ClassName:                               "Build_WalkwayCross_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -59,6 +61,7 @@ Specifically made for humans to walk on.`,
 	}
 
 	WalkwayRamp = FGBuildableWalkway{
+		Name:                                    "WalkwayRamp",
 		ClassName:                               "Build_WalkwayRamp_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -85,6 +88,7 @@ Specifically made for humans to walk on.`,
 	}
 
 	WalkwayStraight = FGBuildableWalkway{
+		Name:                                    "WalkwayStraight",
 		ClassName:                               "Build_WalkwayStraight_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -111,6 +115,7 @@ Specifically made for humans to walk on.`,
 	}
 
 	WalkwayT = FGBuildableWalkway{
+		Name:                                    "WalkwayT",
 		ClassName:                               "Build_WalkwayT_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -137,6 +142,7 @@ Specifically made for humans to walk on.`,
 	}
 
 	WalkwayTrun = FGBuildableWalkway{
+		Name:                                    "WalkwayTrun",
 		ClassName:                               "Build_WalkwayTrun_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

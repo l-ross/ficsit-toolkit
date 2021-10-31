@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableResourceExtractor struct {
+	Name                                    string
 	ClassName                               string
 	CanPlayAfterStartUpStopped              bool
 	MAddToSignificanceManager               bool
@@ -69,6 +70,7 @@ type FGBuildableResourceExtractor struct {
 
 var (
 	MinerMk1 = FGBuildableResourceExtractor{
+		Name:                                    "MinerMk1",
 		ClassName:                               "Build_MinerMk1_C",
 		CanPlayAfterStartUpStopped:              false,
 		MAddToSignificanceManager:               true,
@@ -125,6 +127,7 @@ The extraction rate is modified depending on resource node purity. Outputs all e
 	}
 
 	MinerMk2 = FGBuildableResourceExtractor{
+		Name:                                    "MinerMk2",
 		ClassName:                               "Build_MinerMk2_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -181,6 +184,7 @@ The extraction rate is modified depending on resource node purity. Outputs all e
 	}
 
 	MinerMk3 = FGBuildableResourceExtractor{
+		Name:                                    "MinerMk3",
 		ClassName:                               "Build_MinerMk3_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -241,6 +245,7 @@ The extraction rate is modified depending on resource node purity. Outputs all e
 	}
 
 	OilPump = FGBuildableResourceExtractor{
+		Name:                                    "OilPump",
 		ClassName:                               "Build_OilPump_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

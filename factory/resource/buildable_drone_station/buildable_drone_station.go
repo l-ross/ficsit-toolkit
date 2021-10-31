@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableDroneStation struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -77,6 +78,7 @@ type FGBuildableDroneStation struct {
 
 var (
 	DroneStation = FGBuildableDroneStation{
+		Name:                                    "DroneStation",
 		ClassName:                               "Build_DroneStation_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

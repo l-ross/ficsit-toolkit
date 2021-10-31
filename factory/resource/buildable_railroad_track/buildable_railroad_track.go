@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableRailroadTrack struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -33,6 +34,7 @@ type FGBuildableRailroadTrack struct {
 
 var (
 	RailroadTrack = FGBuildableRailroadTrack{
+		Name:                                    "RailroadTrack",
 		ClassName:                               "Build_RailroadTrack_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

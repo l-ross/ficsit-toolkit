@@ -9,6 +9,7 @@ import (
 )
 
 type FGEquipmentDescriptor struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MCanBeDiscarded         bool
@@ -28,6 +29,7 @@ type FGEquipmentDescriptor struct {
 
 var (
 	Chainsaw = FGEquipmentDescriptor{
+		Name:                    "Chainsaw",
 		ClassName:               "Desc_Chainsaw_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -49,6 +51,7 @@ Used to clear an area of flora that is too difficult to remove by hand.`,
 	}
 
 	EqDescZipLine = FGEquipmentDescriptor{
+		Name:                    "EqDescZipLine",
 		ClassName:               "BP_EqDescZipLine_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -70,6 +73,7 @@ Activate the Zipline and aim at a nearby Power Line to connect to it.`,
 	}
 
 	EquipmentDescriptorCandyCane = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorCandyCane",
 		ClassName:               "BP_EquipmentDescriptorCandyCane_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -90,6 +94,7 @@ Heavy delicious self defense weapon for melee range.`,
 	}
 
 	EquipmentDescriptorColorGun = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorColorGun",
 		ClassName:               "BP_EquipmentDescriptorColorGun_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -111,6 +116,7 @@ Paints factory buildings and vehicles. The color can be adjusted prior to painti
 	}
 
 	EquipmentDescriptorGasmask = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorGasmask",
 		ClassName:               "BP_EquipmentDescriptorGasmask_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -131,6 +137,7 @@ Allows you to breathe normally in poison gas. Consumes Gas Filters from your inv
 	}
 
 	EquipmentDescriptorHazmatSuit = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorHazmatSuit",
 		ClassName:               "BP_EquipmentDescriptorHazmatSuit_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -152,6 +159,7 @@ Consumes Iodine Infused Filters from your inventory when you are in radioactive 
 	}
 
 	EquipmentDescriptorHoverPack = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorHoverPack",
 		ClassName:               "BP_EquipmentDescriptorHoverPack_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -176,6 +184,7 @@ Disable Hoverpack: Double tap descend input while hovering.`,
 	}
 
 	EquipmentDescriptorJetPack = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorJetPack",
 		ClassName:               "BP_EquipmentDescriptorJetPack_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -196,6 +205,7 @@ Allows you to move more freely in the air. Consumes Fuel when used and refills w
 	}
 
 	EquipmentDescriptorJumpingStilts = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorJumpingStilts",
 		ClassName:               "BP_EquipmentDescriptorJumpingStilts_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -217,6 +227,7 @@ Also dampens the impact of landing.`,
 	}
 
 	EquipmentDescriptorNobeliskDetonator = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorNobeliskDetonator",
 		ClassName:               "BP_EquipmentDescriptorNobeliskDetonator_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -238,6 +249,7 @@ Used to blow up cracked boulders, rocks and invasive vegetation.`,
 	}
 
 	EquipmentDescriptorObjectScanner = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorObjectScanner",
 		ClassName:               "BP_EquipmentDescriptorObjectScanner_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -258,6 +270,7 @@ Scans the area for a set item. Beeps at a rate proportional to proximity and dir
 	}
 
 	EquipmentDescriptorRifle = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorRifle",
 		ClassName:               "BP_EquipmentDescriptorRifle_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -279,6 +292,7 @@ Rapid fire weapon for self-defense. Has a mag size of 10.`,
 	}
 
 	EquipmentDescriptorShockShank = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorShockShank",
 		ClassName:               "BP_EquipmentDescriptorShockShank_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -299,6 +313,7 @@ Standard issue electroshock self defense weapon for melee range.`,
 	}
 
 	EquipmentDescriptorSnowballMittens = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorSnowballMittens",
 		ClassName:               "BP_EquipmentDescriptorSnowballMittens_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -320,6 +335,7 @@ Ammo: Snowball
 	}
 
 	EquipmentDescriptorStunSpear = FGEquipmentDescriptor{
+		Name:                    "EquipmentDescriptorStunSpear",
 		ClassName:               "BP_EquipmentDescriptorStunSpear_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -340,6 +356,7 @@ Heavy electroshock self defense weapon for melee range.`,
 	}
 
 	GolfCart = FGEquipmentDescriptor{
+		Name:                    "GolfCart",
 		ClassName:               "Desc_GolfCart_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -359,6 +376,7 @@ Now with special - FICSIT Foundation only - Grip Wheels, for an even smoother an
 	}
 
 	ItemDescriptorPortableMiner = FGEquipmentDescriptor{
+		Name:                    "ItemDescriptorPortableMiner",
 		ClassName:               "BP_ItemDescriptorPortableMiner_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -379,6 +397,7 @@ Can be set up on a resource node to automatically extract the resource. Very lim
 	}
 
 	RebarGunProjectile = FGEquipmentDescriptor{
+		Name:                    "RebarGunProjectile",
 		ClassName:               "Desc_RebarGunProjectile_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildablePipeReservoir struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -57,6 +58,7 @@ type FGBuildablePipeReservoir struct {
 
 var (
 	IndustrialTank = FGBuildablePipeReservoir{
+		Name:                                    "IndustrialTank",
 		ClassName:                               "Build_IndustrialTank_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -105,6 +107,7 @@ Has an input and output for pipes.`,
 	}
 
 	PipeStorageTank = FGBuildablePipeReservoir{
+		Name:                                    "PipeStorageTank",
 		ClassName:                               "Build_PipeStorageTank_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

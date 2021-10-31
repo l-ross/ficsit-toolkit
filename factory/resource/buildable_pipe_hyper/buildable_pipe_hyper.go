@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildablePipeHyper struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -32,6 +33,7 @@ type FGBuildablePipeHyper struct {
 
 var (
 	PipeHyper = FGBuildablePipeHyper{
+		Name:                                    "PipeHyper",
 		ClassName:                               "Build_PipeHyper_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

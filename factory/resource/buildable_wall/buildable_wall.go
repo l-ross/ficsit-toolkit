@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableWall struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -32,6 +33,7 @@ type FGBuildableWall struct {
 
 var (
 	Fence01 = FGBuildableWall{
+		Name:                                    "Fence01",
 		ClassName:                               "Build_Fence_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -56,6 +58,7 @@ var (
 	}
 
 	Wall8x401 = FGBuildableWall{
+		Name:                                    "Wall8x401",
 		ClassName:                               "Build_Wall_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -81,6 +84,7 @@ Useful for building multi-floor structures.`,
 	}
 
 	Wall8x402 = FGBuildableWall{
+		Name:                                    "Wall8x402",
 		ClassName:                               "Build_Wall_8x4_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -106,6 +110,7 @@ Useful for building multi-floor structures.`,
 	}
 
 	WallConveyor8x401 = FGBuildableWall{
+		Name:                                    "WallConveyor8x401",
 		ClassName:                               "Build_Wall_Conveyor_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -132,6 +137,7 @@ Height: 4 m`,
 	}
 
 	WallConveyor8x401Steel = FGBuildableWall{
+		Name:                                    "WallConveyor8x401Steel",
 		ClassName:                               "Build_Wall_Conveyor_8x4_01_Steel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -158,6 +164,7 @@ Height: 4 m`,
 	}
 
 	WallConveyor8x402 = FGBuildableWall{
+		Name:                                    "WallConveyor8x402",
 		ClassName:                               "Build_Wall_Conveyor_8x4_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -184,6 +191,7 @@ Height: 4 m`,
 	}
 
 	WallConveyor8x402Steel = FGBuildableWall{
+		Name:                                    "WallConveyor8x402Steel",
 		ClassName:                               "Build_Wall_Conveyor_8x4_02_Steel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -210,6 +218,7 @@ Height: 4 m`,
 	}
 
 	WallConveyor8x403 = FGBuildableWall{
+		Name:                                    "WallConveyor8x403",
 		ClassName:                               "Build_Wall_Conveyor_8x4_03_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -236,6 +245,7 @@ Height: 4 m`,
 	}
 
 	WallConveyor8x403Steel = FGBuildableWall{
+		Name:                                    "WallConveyor8x403Steel",
 		ClassName:                               "Build_Wall_Conveyor_8x4_03_Steel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -262,6 +272,7 @@ Height: 4 m`,
 	}
 
 	WallConveyor8x404 = FGBuildableWall{
+		Name:                                    "WallConveyor8x404",
 		ClassName:                               "Build_Wall_Conveyor_8x4_04_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -288,6 +299,7 @@ Height: 4 m`,
 	}
 
 	WallConveyor8x404Steel = FGBuildableWall{
+		Name:                                    "WallConveyor8x404Steel",
 		ClassName:                               "Build_Wall_Conveyor_8x4_04_Steel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -314,6 +326,7 @@ Height: 4 m`,
 	}
 
 	WallDoor8x401 = FGBuildableWall{
+		Name:                                    "WallDoor8x401",
 		ClassName:                               "Build_Wall_Door_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -339,6 +352,7 @@ The door allows Pioneers to pass through the wall.`,
 	}
 
 	WallDoor8x401Steel = FGBuildableWall{
+		Name:                                    "WallDoor8x401Steel",
 		ClassName:                               "Build_Wall_Door_8x4_01_Steel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -364,6 +378,7 @@ The door allows Pioneers to pass through the wall.`,
 	}
 
 	WallDoor8x402 = FGBuildableWall{
+		Name:                                    "WallDoor8x402",
 		ClassName:                               "Build_Wall_Door_8x4_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -389,6 +404,7 @@ The door allows Pioneers to pass through the wall.`,
 	}
 
 	WallDoor8x402Steel = FGBuildableWall{
+		Name:                                    "WallDoor8x402Steel",
 		ClassName:                               "Build_Wall_Door_8x4_02_Steel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -414,6 +430,7 @@ The door allows Pioneers to pass through the wall.`,
 	}
 
 	WallDoor8x403 = FGBuildableWall{
+		Name:                                    "WallDoor8x403",
 		ClassName:                               "Build_Wall_Door_8x4_03_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -439,6 +456,7 @@ The door allows Pioneers to pass through the wall.`,
 	}
 
 	WallDoor8x403Steel = FGBuildableWall{
+		Name:                                    "WallDoor8x403Steel",
 		ClassName:                               "Build_Wall_Door_8x4_03_Steel_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -464,6 +482,7 @@ The door allows Pioneers to pass through the wall.`,
 	}
 
 	WallGate8x401 = FGBuildableWall{
+		Name:                                    "WallGate8x401",
 		ClassName:                               "Build_Wall_Gate_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -489,6 +508,7 @@ The gate allows Pioneers to pass through the wall.`,
 	}
 
 	WallWindow8x401 = FGBuildableWall{
+		Name:                                    "WallWindow8x401",
 		ClassName:                               "Build_Wall_Window_8x4_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -514,6 +534,7 @@ The windows allow Pioneers to see through the wall.`,
 	}
 
 	WallWindow8x402 = FGBuildableWall{
+		Name:                                    "WallWindow8x402",
 		ClassName:                               "Build_Wall_Window_8x4_02_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -539,6 +560,7 @@ The windows allow Pioneers to see through the wall.`,
 	}
 
 	WallWindow8x403 = FGBuildableWall{
+		Name:                                    "WallWindow8x403",
 		ClassName:                               "Build_Wall_Window_8x4_03_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -564,6 +586,7 @@ The windows allow Pioneers to see through the wall.`,
 	}
 
 	WallWindow8x404 = FGBuildableWall{
+		Name:                                    "WallWindow8x404",
 		ClassName:                               "Build_Wall_Window_8x4_04_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

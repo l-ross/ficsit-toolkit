@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableFloodlight struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -36,6 +37,7 @@ type FGBuildableFloodlight struct {
 
 var (
 	FloodlightPole = FGBuildableFloodlight{
+		Name:                                    "FloodlightPole",
 		ClassName:                               "Build_FloodlightPole_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -67,6 +69,7 @@ Allows up to two Power Line connections.`,
 	}
 
 	FloodlightWall = FGBuildableFloodlight{
+		Name:                                    "FloodlightWall",
 		ClassName:                               "Build_FloodlightWall_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableGeneratorNuclear struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -76,6 +77,7 @@ type FGBuildableGeneratorNuclear struct {
 
 var (
 	GeneratorNuclear = FGBuildableGeneratorNuclear{
+		Name:                                    "GeneratorNuclear",
 		ClassName:                               "Build_GeneratorNuclear_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

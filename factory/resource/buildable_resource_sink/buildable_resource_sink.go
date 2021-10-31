@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableResourceSink struct {
+	Name                                    string
 	ClassName                               string
 	EnableTickEngine                        bool
 	EnableTickGrinder                       bool
@@ -59,6 +60,7 @@ type FGBuildableResourceSink struct {
 
 var (
 	ResourceSink = FGBuildableResourceSink{
+		Name:                                    "ResourceSink",
 		ClassName:                               "Build_ResourceSink_C",
 		EnableTickEngine:                        false,
 		EnableTickGrinder:                       false,

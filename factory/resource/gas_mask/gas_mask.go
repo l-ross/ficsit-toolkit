@@ -9,6 +9,7 @@ import (
 )
 
 type FGGasMask struct {
+	Name                   string
 	ClassName              string
 	MArmAnimation          string
 	MAttachSocket          string
@@ -28,6 +29,7 @@ type FGGasMask struct {
 
 var (
 	GasMask = FGGasMask{
+		Name:                   "GasMask",
 		ClassName:              "Equip_GasMask_C",
 		MArmAnimation:          `AE_None`,
 		MAttachSocket:          `helmetSocket`,

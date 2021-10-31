@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableSpaceElevator struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -53,6 +54,7 @@ type FGBuildableSpaceElevator struct {
 
 var (
 	SpaceElevator = FGBuildableSpaceElevator{
+		Name:                                    "SpaceElevator",
 		ClassName:                               "Build_SpaceElevator_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

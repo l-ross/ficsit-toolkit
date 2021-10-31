@@ -9,6 +9,7 @@ import (
 )
 
 type FGSchematic struct {
+	Name                    string
 	ClassName               string
 	FullName                string
 	MCost                   string
@@ -45,6 +46,7 @@ type FGSchematic struct {
 
 var (
 	ACarapace0 = FGSchematic{
+		Name:                    "ACarapace0",
 		ClassName:               "Research_ACarapace_0_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_0.Research_ACarapace_0_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_HogParts.Desc_HogParts_C"',Amount=1))`,
@@ -65,6 +67,7 @@ var (
 	}
 
 	ACarapace1 = FGSchematic{
+		Name:                    "ACarapace1",
 		ClassName:               "Research_ACarapace_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_1.Research_ACarapace_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_HogParts.Desc_HogParts_C"',Amount=10))`,
@@ -99,6 +102,7 @@ var (
 	}
 
 	ACarapace2 = FGSchematic{
+		Name:                    "ACarapace2",
 		ClassName:               "Research_ACarapace_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_2.Research_ACarapace_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=500))`,
@@ -133,6 +137,7 @@ var (
 	}
 
 	ACarapace21 = FGSchematic{
+		Name:                    "ACarapace21",
 		ClassName:               "Research_ACarapace_2_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_2_1.Research_ACarapace_2_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=200))`,
@@ -167,6 +172,7 @@ var (
 	}
 
 	ACarapace3 = FGSchematic{
+		Name:                    "ACarapace3",
 		ClassName:               "Research_ACarapace_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_3.Research_ACarapace_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_HogParts.Desc_HogParts_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=1000))`,
@@ -201,6 +207,7 @@ var (
 	}
 
 	AILimiter = FGSchematic{
+		Name:                    "AILimiter",
 		ClassName:               "ResourceSink_AILimiter_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_AILimiter.ResourceSink_AILimiter_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -246,6 +253,7 @@ var (
 	}
 
 	AOrganisms1 = FGSchematic{
+		Name:                    "AOrganisms1",
 		ClassName:               "Research_AOrganisms_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrganisms_1.Research_AOrganisms_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/GemstoneScanner/BP_EquipmentDescriptorObjectScanner.BP_EquipmentDescriptorObjectScanner_C"',Amount=1))`,
@@ -266,6 +274,7 @@ var (
 	}
 
 	AOrganisms2 = FGSchematic{
+		Name:                    "AOrganisms2",
 		ClassName:               "Research_AOrganisms_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrganisms_2.Research_AOrganisms_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_SpitterParts.Desc_SpitterParts_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_HogParts.Desc_HogParts_C"',Amount=5))`,
@@ -286,6 +295,7 @@ var (
 	}
 
 	AOrgans0 = FGSchematic{
+		Name:                    "AOrgans0",
 		ClassName:               "Research_AOrgans_0_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrgans_0.Research_AOrgans_0_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_SpitterParts.Desc_SpitterParts_C"',Amount=1))`,
@@ -306,6 +316,7 @@ var (
 	}
 
 	AOrgans1 = FGSchematic{
+		Name:                    "AOrgans1",
 		ClassName:               "Research_AOrgans_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrgans_1.Research_AOrgans_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_SpitterParts.Desc_SpitterParts_C"',Amount=3))`,
@@ -340,6 +351,7 @@ var (
 	}
 
 	AOrgans2 = FGSchematic{
+		Name:                    "AOrgans2",
 		ClassName:               "Research_AOrgans_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrgans_2.Research_AOrgans_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_SpitterParts.Desc_SpitterParts_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=100))`,
@@ -374,6 +386,7 @@ var (
 	}
 
 	AOrgans3 = FGSchematic{
+		Name:                    "AOrgans3",
 		ClassName:               "Research_AOrgans_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_AOrgans_3.Research_AOrgans_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AnimalParts/Desc_SpitterParts.Desc_SpitterParts_C"',Amount=5),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=2000))`,
@@ -408,6 +421,7 @@ var (
 	}
 
 	AdvancedAmmoPack = FGSchematic{
+		Name:                    "AdvancedAmmoPack",
 		ClassName:               "ResourceSink_AdvancedAmmoPack_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_AdvancedAmmoPack.ResourceSink_AdvancedAmmoPack_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -453,6 +467,7 @@ var (
 	}
 
 	AlcladSheet = FGSchematic{
+		Name:                    "AlcladSheet",
 		ClassName:               "ResourceSink_AlcladSheet_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier7/ResourceSink_AlcladSheet.ResourceSink_AlcladSheet_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -498,6 +513,7 @@ var (
 	}
 
 	AlternateAdheredIronPlate = FGSchematic{
+		Name:                    "AlternateAdheredIronPlate",
 		ClassName:               "Schematic_Alternate_AdheredIronPlate_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_AdheredIronPlate.Schematic_Alternate_AdheredIronPlate_C",
 		MCost:                   ``,
@@ -543,6 +559,7 @@ var (
 	}
 
 	AlternateAlcladCasing = FGSchematic{
+		Name:                    "AlternateAlcladCasing",
 		ClassName:               "Schematic_Alternate_AlcladCasing_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_AlcladCasing.Schematic_Alternate_AlcladCasing_C",
 		MCost:                   ``,
@@ -588,6 +605,7 @@ var (
 	}
 
 	AlternateAutomatedMiner = FGSchematic{
+		Name:                    "AlternateAutomatedMiner",
 		ClassName:               "Schematic_Alternate_AutomatedMiner_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_AutomatedMiner.Schematic_Alternate_AutomatedMiner_C",
 		MCost:                   ``,
@@ -633,6 +651,7 @@ var (
 	}
 
 	AlternateBeacon1 = FGSchematic{
+		Name:                    "AlternateBeacon1",
 		ClassName:               "Schematic_Alternate_Beacon1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Beacon1.Schematic_Alternate_Beacon1_C",
 		MCost:                   ``,
@@ -678,6 +697,7 @@ var (
 	}
 
 	AlternateBoltedFrame = FGSchematic{
+		Name:                    "AlternateBoltedFrame",
 		ClassName:               "Schematic_Alternate_BoltedFrame_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_BoltedFrame.Schematic_Alternate_BoltedFrame_C",
 		MCost:                   ``,
@@ -723,6 +743,7 @@ var (
 	}
 
 	AlternateCable1 = FGSchematic{
+		Name:                    "AlternateCable1",
 		ClassName:               "Schematic_Alternate_Cable1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Cable1.Schematic_Alternate_Cable1_C",
 		MCost:                   ``,
@@ -768,6 +789,7 @@ var (
 	}
 
 	AlternateCable2 = FGSchematic{
+		Name:                    "AlternateCable2",
 		ClassName:               "Schematic_Alternate_Cable2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Cable2.Schematic_Alternate_Cable2_C",
 		MCost:                   ``,
@@ -813,6 +835,7 @@ var (
 	}
 
 	AlternateCircuitBoard1 = FGSchematic{
+		Name:                    "AlternateCircuitBoard1",
 		ClassName:               "Schematic_Alternate_CircuitBoard1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_CircuitBoard1.Schematic_Alternate_CircuitBoard1_C",
 		MCost:                   ``,
@@ -858,6 +881,7 @@ var (
 	}
 
 	AlternateCircuitBoard2 = FGSchematic{
+		Name:                    "AlternateCircuitBoard2",
 		ClassName:               "Schematic_Alternate_CircuitBoard2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_CircuitBoard2.Schematic_Alternate_CircuitBoard2_C",
 		MCost:                   ``,
@@ -903,6 +927,7 @@ var (
 	}
 
 	AlternateClassicBattery = FGSchematic{
+		Name:                    "AlternateClassicBattery",
 		ClassName:               "Schematic_Alternate_ClassicBattery_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_ClassicBattery.Schematic_Alternate_ClassicBattery_C",
 		MCost:                   ``,
@@ -948,6 +973,7 @@ var (
 	}
 
 	AlternateCoal1 = FGSchematic{
+		Name:                    "AlternateCoal1",
 		ClassName:               "Schematic_Alternate_Coal1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Coal1.Schematic_Alternate_Coal1_C",
 		MCost:                   ``,
@@ -993,6 +1019,7 @@ var (
 	}
 
 	AlternateCoal2 = FGSchematic{
+		Name:                    "AlternateCoal2",
 		ClassName:               "Schematic_Alternate_Coal2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Coal2.Schematic_Alternate_Coal2_C",
 		MCost:                   ``,
@@ -1038,6 +1065,7 @@ var (
 	}
 
 	AlternateCoatedCable = FGSchematic{
+		Name:                    "AlternateCoatedCable",
 		ClassName:               "Schematic_Alternate_CoatedCable_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_CoatedCable.Schematic_Alternate_CoatedCable_C",
 		MCost:                   ``,
@@ -1083,6 +1111,7 @@ var (
 	}
 
 	AlternateCoatedIronCanister = FGSchematic{
+		Name:                    "AlternateCoatedIronCanister",
 		ClassName:               "Schematic_Alternate_CoatedIronCanister_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_CoatedIronCanister.Schematic_Alternate_CoatedIronCanister_C",
 		MCost:                   ``,
@@ -1128,6 +1157,7 @@ var (
 	}
 
 	AlternateCoatedIronPlate = FGSchematic{
+		Name:                    "AlternateCoatedIronPlate",
 		ClassName:               "Schematic_Alternate_CoatedIronPlate_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_CoatedIronPlate.Schematic_Alternate_CoatedIronPlate_C",
 		MCost:                   ``,
@@ -1173,6 +1203,7 @@ var (
 	}
 
 	AlternateCokeSteelIngot = FGSchematic{
+		Name:                    "AlternateCokeSteelIngot",
 		ClassName:               "Schematic_Alternate_CokeSteelIngot_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_CokeSteelIngot.Schematic_Alternate_CokeSteelIngot_C",
 		MCost:                   ``,
@@ -1218,6 +1249,7 @@ var (
 	}
 
 	AlternateComputer1 = FGSchematic{
+		Name:                    "AlternateComputer1",
 		ClassName:               "Schematic_Alternate_Computer1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Computer1.Schematic_Alternate_Computer1_C",
 		MCost:                   ``,
@@ -1263,6 +1295,7 @@ var (
 	}
 
 	AlternateComputer2 = FGSchematic{
+		Name:                    "AlternateComputer2",
 		ClassName:               "Schematic_Alternate_Computer2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Computer2.Schematic_Alternate_Computer2_C",
 		MCost:                   ``,
@@ -1308,6 +1341,7 @@ var (
 	}
 
 	AlternateConcrete = FGSchematic{
+		Name:                    "AlternateConcrete",
 		ClassName:               "Schematic_Alternate_Concrete_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Concrete.Schematic_Alternate_Concrete_C",
 		MCost:                   ``,
@@ -1353,6 +1387,7 @@ var (
 	}
 
 	AlternateCoolingDevice = FGSchematic{
+		Name:                    "AlternateCoolingDevice",
 		ClassName:               "Schematic_Alternate_CoolingDevice_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_CoolingDevice.Schematic_Alternate_CoolingDevice_C",
 		MCost:                   ``,
@@ -1398,6 +1433,7 @@ var (
 	}
 
 	AlternateCopperAlloyIngot = FGSchematic{
+		Name:                    "AlternateCopperAlloyIngot",
 		ClassName:               "Schematic_Alternate_CopperAlloyIngot_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_CopperAlloyIngot.Schematic_Alternate_CopperAlloyIngot_C",
 		MCost:                   ``,
@@ -1432,6 +1468,7 @@ var (
 	}
 
 	AlternateCopperRotor = FGSchematic{
+		Name:                    "AlternateCopperRotor",
 		ClassName:               "Schematic_Alternate_CopperRotor_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_CopperRotor.Schematic_Alternate_CopperRotor_C",
 		MCost:                   ``,
@@ -1477,6 +1514,7 @@ var (
 	}
 
 	AlternateCrystalOscillator = FGSchematic{
+		Name:                    "AlternateCrystalOscillator",
 		ClassName:               "Schematic_Alternate_CrystalOscillator_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_CrystalOscillator.Schematic_Alternate_CrystalOscillator_C",
 		MCost:                   ``,
@@ -1522,6 +1560,7 @@ var (
 	}
 
 	AlternateDilutedFuel = FGSchematic{
+		Name:                    "AlternateDilutedFuel",
 		ClassName:               "Schematic_Alternate_DilutedFuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_DilutedFuel.Schematic_Alternate_DilutedFuel_C",
 		MCost:                   ``,
@@ -1567,6 +1606,7 @@ var (
 	}
 
 	AlternateDilutedPackagedFuel = FGSchematic{
+		Name:                    "AlternateDilutedPackagedFuel",
 		ClassName:               "Schematic_Alternate_DilutedPackagedFuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_DilutedPackagedFuel.Schematic_Alternate_DilutedPackagedFuel_C",
 		MCost:                   ``,
@@ -1612,6 +1652,7 @@ var (
 	}
 
 	AlternateElectricMotor = FGSchematic{
+		Name:                    "AlternateElectricMotor",
 		ClassName:               "Schematic_Alternate_ElectricMotor_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_ElectricMotor.Schematic_Alternate_ElectricMotor_C",
 		MCost:                   ``,
@@ -1657,6 +1698,7 @@ var (
 	}
 
 	AlternateElectroAluminumScrap = FGSchematic{
+		Name:                    "AlternateElectroAluminumScrap",
 		ClassName:               "Schematic_Alternate_ElectroAluminumScrap_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_ElectroAluminumScrap.Schematic_Alternate_ElectroAluminumScrap_C",
 		MCost:                   ``,
@@ -1702,6 +1744,7 @@ var (
 	}
 
 	AlternateElectrodeCircuitBoard = FGSchematic{
+		Name:                    "AlternateElectrodeCircuitBoard",
 		ClassName:               "Schematic_Alternate_ElectrodeCircuitBoard_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_ElectrodeCircuitBoard.Schematic_Alternate_ElectrodeCircuitBoard_C",
 		MCost:                   ``,
@@ -1747,6 +1790,7 @@ var (
 	}
 
 	AlternateElectromagneticControlRod1 = FGSchematic{
+		Name:                    "AlternateElectromagneticControlRod1",
 		ClassName:               "Schematic_Alternate_ElectromagneticControlRod1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_ElectromagneticControlRod1.Schematic_Alternate_ElectromagneticControlRod1_C",
 		MCost:                   ``,
@@ -1792,6 +1836,7 @@ var (
 	}
 
 	AlternateEnrichedCoal = FGSchematic{
+		Name:                    "AlternateEnrichedCoal",
 		ClassName:               "Schematic_Alternate_EnrichedCoal_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_EnrichedCoal.Schematic_Alternate_EnrichedCoal_C",
 		MCost:                   ``,
@@ -1837,6 +1882,7 @@ var (
 	}
 
 	AlternateFertileUranium = FGSchematic{
+		Name:                    "AlternateFertileUranium",
 		ClassName:               "Schematic_Alternate_FertileUranium_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_FertileUranium.Schematic_Alternate_FertileUranium_C",
 		MCost:                   ``,
@@ -1882,6 +1928,7 @@ var (
 	}
 
 	AlternateFlexibleFramework = FGSchematic{
+		Name:                    "AlternateFlexibleFramework",
 		ClassName:               "Schematic_Alternate_FlexibleFramework_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_FlexibleFramework.Schematic_Alternate_FlexibleFramework_C",
 		MCost:                   ``,
@@ -1927,6 +1974,7 @@ var (
 	}
 
 	AlternateFusedWire = FGSchematic{
+		Name:                    "AlternateFusedWire",
 		ClassName:               "Schematic_Alternate_FusedWire_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_FusedWire.Schematic_Alternate_FusedWire_C",
 		MCost:                   ``,
@@ -1972,6 +2020,7 @@ var (
 	}
 
 	AlternateGunpowder1 = FGSchematic{
+		Name:                    "AlternateGunpowder1",
 		ClassName:               "Schematic_Alternate_Gunpowder1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Gunpowder1.Schematic_Alternate_Gunpowder1_C",
 		MCost:                   ``,
@@ -2017,6 +2066,7 @@ var (
 	}
 
 	AlternateHeatFusedFrame = FGSchematic{
+		Name:                    "AlternateHeatFusedFrame",
 		ClassName:               "Schematic_Alternate_HeatFusedFrame_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_HeatFusedFrame.Schematic_Alternate_HeatFusedFrame_C",
 		MCost:                   ``,
@@ -2062,6 +2112,7 @@ var (
 	}
 
 	AlternateHeatSink1 = FGSchematic{
+		Name:                    "AlternateHeatSink1",
 		ClassName:               "Schematic_Alternate_HeatSink1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_HeatSink1.Schematic_Alternate_HeatSink1_C",
 		MCost:                   ``,
@@ -2107,6 +2158,7 @@ var (
 	}
 
 	AlternateHeavyFlexibleFrame = FGSchematic{
+		Name:                    "AlternateHeavyFlexibleFrame",
 		ClassName:               "Schematic_Alternate_HeavyFlexibleFrame_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_HeavyFlexibleFrame.Schematic_Alternate_HeavyFlexibleFrame_C",
 		MCost:                   ``,
@@ -2152,6 +2204,7 @@ var (
 	}
 
 	AlternateHeavyModularFrame = FGSchematic{
+		Name:                    "AlternateHeavyModularFrame",
 		ClassName:               "Schematic_Alternate_HeavyModularFrame_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_HeavyModularFrame.Schematic_Alternate_HeavyModularFrame_C",
 		MCost:                   ``,
@@ -2197,6 +2250,7 @@ var (
 	}
 
 	AlternateHeavyOilResidue = FGSchematic{
+		Name:                    "AlternateHeavyOilResidue",
 		ClassName:               "Schematic_Alternate_HeavyOilResidue_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_HeavyOilResidue.Schematic_Alternate_HeavyOilResidue_C",
 		MCost:                   ``,
@@ -2242,6 +2296,7 @@ var (
 	}
 
 	AlternateHighSpeedConnector = FGSchematic{
+		Name:                    "AlternateHighSpeedConnector",
 		ClassName:               "Schematic_Alternate_HighSpeedConnector_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_HighSpeedConnector.Schematic_Alternate_HighSpeedConnector_C",
 		MCost:                   ``,
@@ -2287,6 +2342,7 @@ var (
 	}
 
 	AlternateHighSpeedWiring = FGSchematic{
+		Name:                    "AlternateHighSpeedWiring",
 		ClassName:               "Schematic_Alternate_HighSpeedWiring_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_HighSpeedWiring.Schematic_Alternate_HighSpeedWiring_C",
 		MCost:                   ``,
@@ -2332,6 +2388,7 @@ var (
 	}
 
 	AlternateIngotIron = FGSchematic{
+		Name:                    "AlternateIngotIron",
 		ClassName:               "Schematic_Alternate_IngotIron_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_IngotIron.Schematic_Alternate_IngotIron_C",
 		MCost:                   ``,
@@ -2366,6 +2423,7 @@ var (
 	}
 
 	AlternateIngotSteel1 = FGSchematic{
+		Name:                    "AlternateIngotSteel1",
 		ClassName:               "Schematic_Alternate_IngotSteel1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_IngotSteel1.Schematic_Alternate_IngotSteel1_C",
 		MCost:                   ``,
@@ -2411,6 +2469,7 @@ var (
 	}
 
 	AlternateIngotSteel2 = FGSchematic{
+		Name:                    "AlternateIngotSteel2",
 		ClassName:               "Schematic_Alternate_IngotSteel2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_IngotSteel2.Schematic_Alternate_IngotSteel2_C",
 		MCost:                   ``,
@@ -2456,6 +2515,7 @@ var (
 	}
 
 	AlternateInstantPlutoniumCell = FGSchematic{
+		Name:                    "AlternateInstantPlutoniumCell",
 		ClassName:               "Schematic_Alternate_InstantPlutoniumCell_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_InstantPlutoniumCell.Schematic_Alternate_InstantPlutoniumCell_C",
 		MCost:                   ``,
@@ -2501,6 +2561,7 @@ var (
 	}
 
 	AlternateInstantScrap = FGSchematic{
+		Name:                    "AlternateInstantScrap",
 		ClassName:               "Schematic_Alternate_InstantScrap_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_InstantScrap.Schematic_Alternate_InstantScrap_C",
 		MCost:                   ``,
@@ -2546,6 +2607,7 @@ var (
 	}
 
 	AlternateInventorySlots1 = FGSchematic{
+		Name:                    "AlternateInventorySlots1",
 		ClassName:               "Schematic_Alternate_InventorySlots1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Upgrades/Schematic_Alternate_InventorySlots1.Schematic_Alternate_InventorySlots1_C",
 		MCost:                   ``,
@@ -2580,6 +2642,7 @@ var (
 	}
 
 	AlternateInventorySlots2 = FGSchematic{
+		Name:                    "AlternateInventorySlots2",
 		ClassName:               "Schematic_Alternate_InventorySlots2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Upgrades/Schematic_Alternate_InventorySlots2.Schematic_Alternate_InventorySlots2_C",
 		MCost:                   ``,
@@ -2625,6 +2688,7 @@ var (
 	}
 
 	AlternateModularFrame = FGSchematic{
+		Name:                    "AlternateModularFrame",
 		ClassName:               "Schematic_Alternate_ModularFrame_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_ModularFrame.Schematic_Alternate_ModularFrame_C",
 		MCost:                   ``,
@@ -2670,6 +2734,7 @@ var (
 	}
 
 	AlternateMotor1 = FGSchematic{
+		Name:                    "AlternateMotor1",
 		ClassName:               "Schematic_Alternate_Motor1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Motor1.Schematic_Alternate_Motor1_C",
 		MCost:                   ``,
@@ -2715,6 +2780,7 @@ var (
 	}
 
 	AlternateNobelisk1 = FGSchematic{
+		Name:                    "AlternateNobelisk1",
 		ClassName:               "Schematic_Alternate_Nobelisk1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Nobelisk1.Schematic_Alternate_Nobelisk1_C",
 		MCost:                   ``,
@@ -2760,6 +2826,7 @@ var (
 	}
 
 	AlternateNuclearFuelRod1 = FGSchematic{
+		Name:                    "AlternateNuclearFuelRod1",
 		ClassName:               "Schematic_Alternate_NuclearFuelRod1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_NuclearFuelRod1.Schematic_Alternate_NuclearFuelRod1_C",
 		MCost:                   ``,
@@ -2805,6 +2872,7 @@ var (
 	}
 
 	AlternateOCSupercomputer = FGSchematic{
+		Name:                    "AlternateOCSupercomputer",
 		ClassName:               "Schematic_Alternate_OCSupercomputer_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_OCSupercomputer.Schematic_Alternate_OCSupercomputer_C",
 		MCost:                   ``,
@@ -2850,6 +2918,7 @@ var (
 	}
 
 	AlternatePlastic1 = FGSchematic{
+		Name:                    "AlternatePlastic1",
 		ClassName:               "Schematic_Alternate_Plastic1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Plastic1.Schematic_Alternate_Plastic1_C",
 		MCost:                   ``,
@@ -2895,6 +2964,7 @@ var (
 	}
 
 	AlternatePlasticSmartPlating = FGSchematic{
+		Name:                    "AlternatePlasticSmartPlating",
 		ClassName:               "Schematic_Alternate_PlasticSmartPlating_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PlasticSmartPlating.Schematic_Alternate_PlasticSmartPlating_C",
 		MCost:                   ``,
@@ -2940,6 +3010,7 @@ var (
 	}
 
 	AlternatePlutoniumFuelUnit = FGSchematic{
+		Name:                    "AlternatePlutoniumFuelUnit",
 		ClassName:               "Schematic_Alternate_PlutoniumFuelUnit_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_PlutoniumFuelUnit.Schematic_Alternate_PlutoniumFuelUnit_C",
 		MCost:                   ``,
@@ -2985,6 +3056,7 @@ var (
 	}
 
 	AlternatePolyesterFabric = FGSchematic{
+		Name:                    "AlternatePolyesterFabric",
 		ClassName:               "Schematic_Alternate_PolyesterFabric_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PolyesterFabric.Schematic_Alternate_PolyesterFabric_C",
 		MCost:                   ``,
@@ -3030,6 +3102,7 @@ var (
 	}
 
 	AlternatePolymerResin = FGSchematic{
+		Name:                    "AlternatePolymerResin",
 		ClassName:               "Schematic_Alternate_PolymerResin_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PolymerResin.Schematic_Alternate_PolymerResin_C",
 		MCost:                   ``,
@@ -3075,6 +3148,7 @@ var (
 	}
 
 	AlternatePureAluminumIngot = FGSchematic{
+		Name:                    "AlternatePureAluminumIngot",
 		ClassName:               "Schematic_Alternate_PureAluminumIngot_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PureAluminumIngot.Schematic_Alternate_PureAluminumIngot_C",
 		MCost:                   ``,
@@ -3120,6 +3194,7 @@ var (
 	}
 
 	AlternatePureCateriumIngot = FGSchematic{
+		Name:                    "AlternatePureCateriumIngot",
 		ClassName:               "Schematic_Alternate_PureCateriumIngot_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PureCateriumIngot.Schematic_Alternate_PureCateriumIngot_C",
 		MCost:                   ``,
@@ -3165,6 +3240,7 @@ var (
 	}
 
 	AlternatePureCopperIngot = FGSchematic{
+		Name:                    "AlternatePureCopperIngot",
 		ClassName:               "Schematic_Alternate_PureCopperIngot_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PureCopperIngot.Schematic_Alternate_PureCopperIngot_C",
 		MCost:                   ``,
@@ -3210,6 +3286,7 @@ var (
 	}
 
 	AlternatePureIronIngot = FGSchematic{
+		Name:                    "AlternatePureIronIngot",
 		ClassName:               "Schematic_Alternate_PureIronIngot_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PureIronIngot.Schematic_Alternate_PureIronIngot_C",
 		MCost:                   ``,
@@ -3255,6 +3332,7 @@ var (
 	}
 
 	AlternatePureQuartzCrystal = FGSchematic{
+		Name:                    "AlternatePureQuartzCrystal",
 		ClassName:               "Schematic_Alternate_PureQuartzCrystal_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_PureQuartzCrystal.Schematic_Alternate_PureQuartzCrystal_C",
 		MCost:                   ``,
@@ -3300,6 +3378,7 @@ var (
 	}
 
 	AlternateQuickwire = FGSchematic{
+		Name:                    "AlternateQuickwire",
 		ClassName:               "Schematic_Alternate_Quickwire_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Quickwire.Schematic_Alternate_Quickwire_C",
 		MCost:                   ``,
@@ -3345,6 +3424,7 @@ var (
 	}
 
 	AlternateRadioControlSystem = FGSchematic{
+		Name:                    "AlternateRadioControlSystem",
 		ClassName:               "Schematic_Alternate_RadioControlSystem_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_RadioControlSystem.Schematic_Alternate_RadioControlSystem_C",
 		MCost:                   ``,
@@ -3390,6 +3470,7 @@ var (
 	}
 
 	AlternateRadioControlUnit1 = FGSchematic{
+		Name:                    "AlternateRadioControlUnit1",
 		ClassName:               "Schematic_Alternate_RadioControlUnit1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_RadioControlUnit1.Schematic_Alternate_RadioControlUnit1_C",
 		MCost:                   ``,
@@ -3435,6 +3516,7 @@ var (
 	}
 
 	AlternateRecycledRubber = FGSchematic{
+		Name:                    "AlternateRecycledRubber",
 		ClassName:               "Schematic_Alternate_RecycledRubber_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_RecycledRubber.Schematic_Alternate_RecycledRubber_C",
 		MCost:                   ``,
@@ -3480,6 +3562,7 @@ var (
 	}
 
 	AlternateReinforcedIronPlate1 = FGSchematic{
+		Name:                    "AlternateReinforcedIronPlate1",
 		ClassName:               "Schematic_Alternate_ReinforcedIronPlate1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_ReinforcedIronPlate1.Schematic_Alternate_ReinforcedIronPlate1_C",
 		MCost:                   ``,
@@ -3514,6 +3597,7 @@ var (
 	}
 
 	AlternateReinforcedIronPlate2 = FGSchematic{
+		Name:                    "AlternateReinforcedIronPlate2",
 		ClassName:               "Schematic_Alternate_ReinforcedIronPlate2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_ReinforcedIronPlate2.Schematic_Alternate_ReinforcedIronPlate2_C",
 		MCost:                   ``,
@@ -3548,6 +3632,7 @@ var (
 	}
 
 	AlternateReinforcedSteelPlate = FGSchematic{
+		Name:                    "AlternateReinforcedSteelPlate",
 		ClassName:               "Schematic_Alternate_ReinforcedSteelPlate_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_ReinforcedSteelPlate.Schematic_Alternate_ReinforcedSteelPlate_C",
 		MCost:                   ``,
@@ -3593,6 +3678,7 @@ var (
 	}
 
 	AlternateRotor = FGSchematic{
+		Name:                    "AlternateRotor",
 		ClassName:               "Schematic_Alternate_Rotor_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Rotor.Schematic_Alternate_Rotor_C",
 		MCost:                   ``,
@@ -3638,6 +3724,7 @@ var (
 	}
 
 	AlternateRubberConcrete = FGSchematic{
+		Name:                    "AlternateRubberConcrete",
 		ClassName:               "Schematic_Alternate_RubberConcrete_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_RubberConcrete.Schematic_Alternate_RubberConcrete_C",
 		MCost:                   ``,
@@ -3683,6 +3770,7 @@ var (
 	}
 
 	AlternateScrew = FGSchematic{
+		Name:                    "AlternateScrew",
 		ClassName:               "Schematic_Alternate_Screw_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Screw.Schematic_Alternate_Screw_C",
 		MCost:                   ``,
@@ -3717,6 +3805,7 @@ var (
 	}
 
 	AlternateScrew2 = FGSchematic{
+		Name:                    "AlternateScrew2",
 		ClassName:               "Schematic_Alternate_Screw2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Screw2.Schematic_Alternate_Screw2_C",
 		MCost:                   ``,
@@ -3762,6 +3851,7 @@ var (
 	}
 
 	AlternateSilica = FGSchematic{
+		Name:                    "AlternateSilica",
 		ClassName:               "Schematic_Alternate_Silica_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Silica.Schematic_Alternate_Silica_C",
 		MCost:                   ``,
@@ -3807,6 +3897,7 @@ var (
 	}
 
 	AlternateSloppyAlumina = FGSchematic{
+		Name:                    "AlternateSloppyAlumina",
 		ClassName:               "Schematic_Alternate_SloppyAlumina_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_SloppyAlumina.Schematic_Alternate_SloppyAlumina_C",
 		MCost:                   ``,
@@ -3852,6 +3943,7 @@ var (
 	}
 
 	AlternateStator = FGSchematic{
+		Name:                    "AlternateStator",
 		ClassName:               "Schematic_Alternate_Stator_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Stator.Schematic_Alternate_Stator_C",
 		MCost:                   ``,
@@ -3897,6 +3989,7 @@ var (
 	}
 
 	AlternateSteamedCopperSheet = FGSchematic{
+		Name:                    "AlternateSteamedCopperSheet",
 		ClassName:               "Schematic_Alternate_SteamedCopperSheet_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_SteamedCopperSheet.Schematic_Alternate_SteamedCopperSheet_C",
 		MCost:                   ``,
@@ -3942,6 +4035,7 @@ var (
 	}
 
 	AlternateSteelCanister = FGSchematic{
+		Name:                    "AlternateSteelCanister",
 		ClassName:               "Schematic_Alternate_SteelCanister_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_SteelCanister.Schematic_Alternate_SteelCanister_C",
 		MCost:                   ``,
@@ -3987,6 +4081,7 @@ var (
 	}
 
 	AlternateSteelCoatedPlate = FGSchematic{
+		Name:                    "AlternateSteelCoatedPlate",
 		ClassName:               "Schematic_Alternate_SteelCoatedPlate_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_SteelCoatedPlate.Schematic_Alternate_SteelCoatedPlate_C",
 		MCost:                   ``,
@@ -4032,6 +4127,7 @@ var (
 	}
 
 	AlternateSteelRod = FGSchematic{
+		Name:                    "AlternateSteelRod",
 		ClassName:               "Schematic_Alternate_SteelRod_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_SteelRod.Schematic_Alternate_SteelRod_C",
 		MCost:                   ``,
@@ -4077,6 +4173,7 @@ var (
 	}
 
 	AlternateSuperStateComputer = FGSchematic{
+		Name:                    "AlternateSuperStateComputer",
 		ClassName:               "Schematic_Alternate_SuperStateComputer_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_SuperStateComputer.Schematic_Alternate_SuperStateComputer_C",
 		MCost:                   ``,
@@ -4122,6 +4219,7 @@ var (
 	}
 
 	AlternateTurboBlendFuel = FGSchematic{
+		Name:                    "AlternateTurboBlendFuel",
 		ClassName:               "Schematic_Alternate_TurboBlendFuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_TurboBlendFuel.Schematic_Alternate_TurboBlendFuel_C",
 		MCost:                   ``,
@@ -4167,6 +4265,7 @@ var (
 	}
 
 	AlternateTurboFuel = FGSchematic{
+		Name:                    "AlternateTurboFuel",
 		ClassName:               "Schematic_Alternate_TurboFuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_TurboFuel.Schematic_Alternate_TurboFuel_C",
 		MCost:                   ``,
@@ -4212,6 +4311,7 @@ var (
 	}
 
 	AlternateTurboHeavyFuel = FGSchematic{
+		Name:                    "AlternateTurboHeavyFuel",
 		ClassName:               "Schematic_Alternate_TurboHeavyFuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_TurboHeavyFuel.Schematic_Alternate_TurboHeavyFuel_C",
 		MCost:                   ``,
@@ -4257,6 +4357,7 @@ var (
 	}
 
 	AlternateTurboMotor1 = FGSchematic{
+		Name:                    "AlternateTurboMotor1",
 		ClassName:               "Schematic_Alternate_TurboMotor1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_TurboMotor1.Schematic_Alternate_TurboMotor1_C",
 		MCost:                   ``,
@@ -4302,6 +4403,7 @@ var (
 	}
 
 	AlternateTurboPressureMotor = FGSchematic{
+		Name:                    "AlternateTurboPressureMotor",
 		ClassName:               "Schematic_Alternate_TurboPressureMotor_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update4/Schematic_Alternate_TurboPressureMotor.Schematic_Alternate_TurboPressureMotor_C",
 		MCost:                   ``,
@@ -4347,6 +4449,7 @@ var (
 	}
 
 	AlternateUraniumCell1 = FGSchematic{
+		Name:                    "AlternateUraniumCell1",
 		ClassName:               "Schematic_Alternate_UraniumCell1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_UraniumCell1.Schematic_Alternate_UraniumCell1_C",
 		MCost:                   ``,
@@ -4392,6 +4495,7 @@ var (
 	}
 
 	AlternateWetConcrete = FGSchematic{
+		Name:                    "AlternateWetConcrete",
 		ClassName:               "Schematic_Alternate_WetConcrete_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/New_Update3/Schematic_Alternate_WetConcrete.Schematic_Alternate_WetConcrete_C",
 		MCost:                   ``,
@@ -4437,6 +4541,7 @@ var (
 	}
 
 	AlternateWire1 = FGSchematic{
+		Name:                    "AlternateWire1",
 		ClassName:               "Schematic_Alternate_Wire1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Wire1.Schematic_Alternate_Wire1_C",
 		MCost:                   ``,
@@ -4471,6 +4576,7 @@ var (
 	}
 
 	AlternateWire2 = FGSchematic{
+		Name:                    "AlternateWire2",
 		ClassName:               "Schematic_Alternate_Wire2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Alternate/Parts/Schematic_Alternate_Wire2.Schematic_Alternate_Wire2_C",
 		MCost:                   ``,
@@ -4516,6 +4622,7 @@ var (
 	}
 
 	AmmoPack = FGSchematic{
+		Name:                    "AmmoPack",
 		ClassName:               "ResourceSink_AmmoPack_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_AmmoPack.ResourceSink_AmmoPack_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -4561,6 +4668,7 @@ var (
 	}
 
 	Battery = FGSchematic{
+		Name:                    "Battery",
 		ClassName:               "ResourceSink_Battery_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier7/ResourceSink_Battery.ResourceSink_Battery_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=5))`,
@@ -4606,6 +4714,7 @@ var (
 	}
 
 	Beacons = FGSchematic{
+		Name:                    "Beacons",
 		ClassName:               "ResourceSink_Beacons_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_Beacons.ResourceSink_Beacons_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -4651,6 +4760,7 @@ var (
 	}
 
 	Biofuel = FGSchematic{
+		Name:                    "Biofuel",
 		ClassName:               "ResourceSink_Biofuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_Biofuel.ResourceSink_Biofuel_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -4696,6 +4806,7 @@ var (
 	}
 
 	Biomass = FGSchematic{
+		Name:                    "Biomass",
 		ClassName:               "ResourceSink_Biomass_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier1/ResourceSink_Biomass.ResourceSink_Biomass_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -4730,6 +4841,7 @@ var (
 	}
 
 	BlackPowder = FGSchematic{
+		Name:                    "BlackPowder",
 		ClassName:               "ResourceSink_BlackPowder_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier3/ResourceSink_BlackPowder.ResourceSink_BlackPowder_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -4775,6 +4887,7 @@ var (
 	}
 
 	Cable = FGSchematic{
+		Name:                    "Cable",
 		ClassName:               "ResourceSink_Cable_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier1/ResourceSink_Cable.ResourceSink_Cable_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -4809,6 +4922,7 @@ var (
 	}
 
 	Caterium0 = FGSchematic{
+		Name:                    "Caterium0",
 		ClassName:               "Research_Caterium_0_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_0.Research_Caterium_0_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"',Amount=10))`,
@@ -4844,6 +4958,7 @@ var (
 	}
 
 	Caterium1 = FGSchematic{
+		Name:                    "Caterium1",
 		ClassName:               "Research_Caterium_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_1.Research_Caterium_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreGold/Desc_OreGold.Desc_OreGold_C"',Amount=50))`,
@@ -4878,6 +4993,7 @@ var (
 	}
 
 	Caterium2 = FGSchematic{
+		Name:                    "Caterium2",
 		ClassName:               "Research_Caterium_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_2.Research_Caterium_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GoldIngot/Desc_GoldIngot.Desc_GoldIngot_C"',Amount=50))`,
@@ -4912,6 +5028,7 @@ var (
 	}
 
 	Caterium21 = FGSchematic{
+		Name:                    "Caterium21",
 		ClassName:               "Research_Caterium_2_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_2_1.Research_Caterium_2_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50))`,
@@ -4946,6 +5063,7 @@ var (
 	}
 
 	Caterium3 = FGSchematic{
+		Name:                    "Caterium3",
 		ClassName:               "Research_Caterium_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_3.Research_Caterium_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=100))`,
@@ -4966,6 +5084,7 @@ var (
 	}
 
 	Caterium31 = FGSchematic{
+		Name:                    "Caterium31",
 		ClassName:               "Research_Caterium_3_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_3_1.Research_Caterium_3_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GoldIngot/Desc_GoldIngot.Desc_GoldIngot_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=50))`,
@@ -5000,6 +5119,7 @@ var (
 	}
 
 	Caterium41 = FGSchematic{
+		Name:                    "Caterium41",
 		ClassName:               "Research_Caterium_4_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1.Research_Caterium_4_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=50))`,
@@ -5034,6 +5154,7 @@ var (
 	}
 
 	Caterium411 = FGSchematic{
+		Name:                    "Caterium411",
 		ClassName:               "Research_Caterium_4_1_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1_1.Research_Caterium_4_1_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=50))`,
@@ -5068,6 +5189,7 @@ var (
 	}
 
 	Caterium412 = FGSchematic{
+		Name:                    "Caterium412",
 		ClassName:               "Research_Caterium_4_1_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_1_2.Research_Caterium_4_1_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=50))`,
@@ -5102,6 +5224,7 @@ var (
 	}
 
 	Caterium42 = FGSchematic{
+		Name:                    "Caterium42",
 		ClassName:               "Research_Caterium_4_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_2.Research_Caterium_4_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=300))`,
@@ -5136,6 +5259,7 @@ var (
 	}
 
 	Caterium43 = FGSchematic{
+		Name:                    "Caterium43",
 		ClassName:               "Research_Caterium_4_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_4_3.Research_Caterium_4_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=10))`,
@@ -5170,6 +5294,7 @@ var (
 	}
 
 	Caterium5 = FGSchematic{
+		Name:                    "Caterium5",
 		ClassName:               "Research_Caterium_5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_5.Research_Caterium_5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=50))`,
@@ -5204,6 +5329,7 @@ var (
 	}
 
 	Caterium61 = FGSchematic{
+		Name:                    "Caterium61",
 		ClassName:               "Research_Caterium_6_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_1.Research_Caterium_6_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoardHighSpeed/Desc_CircuitBoardHighSpeed.Desc_CircuitBoardHighSpeed_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=50))`,
@@ -5238,6 +5364,7 @@ var (
 	}
 
 	Caterium62 = FGSchematic{
+		Name:                    "Caterium62",
 		ClassName:               "Research_Caterium_6_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_2.Research_Caterium_6_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=200))`,
@@ -5272,6 +5399,7 @@ var (
 	}
 
 	Caterium63 = FGSchematic{
+		Name:                    "Caterium63",
 		ClassName:               "Research_Caterium_6_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_6_3.Research_Caterium_6_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedConnector/Desc_HighSpeedConnector.Desc_HighSpeedConnector_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=50))`,
@@ -5292,6 +5420,7 @@ var (
 	}
 
 	Caterium71 = FGSchematic{
+		Name:                    "Caterium71",
 		ClassName:               "Research_Caterium_7_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_7_1.Research_Caterium_7_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=50))`,
@@ -5326,6 +5455,7 @@ var (
 	}
 
 	Caterium72 = FGSchematic{
+		Name:                    "Caterium72",
 		ClassName:               "Research_Caterium_7_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Caterium_RS/Research_Caterium_7_2.Research_Caterium_7_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=300))`,
@@ -5365,6 +5495,7 @@ var (
 	}
 
 	CeilingLight = FGSchematic{
+		Name:                    "CeilingLight",
 		ClassName:               "ResourceSink_CeilingLight_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CeilingLight.ResourceSink_CeilingLight_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -5399,6 +5530,7 @@ var (
 	}
 
 	CircuitBoard = FGSchematic{
+		Name:                    "CircuitBoard",
 		ClassName:               "ResourceSink_CircuitBoard_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_CircuitBoard.ResourceSink_CircuitBoard_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -5444,6 +5576,7 @@ var (
 	}
 
 	CoffeeCup = FGSchematic{
+		Name:                    "CoffeeCup",
 		ClassName:               "ResourceSink_CoffeeCup_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_CoffeeCup.ResourceSink_CoffeeCup_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -5478,6 +5611,7 @@ var (
 	}
 
 	ColoredAmmoPack = FGSchematic{
+		Name:                    "ColoredAmmoPack",
 		ClassName:               "ResourceSink_ColoredAmmoPack_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_ColoredAmmoPack.ResourceSink_ColoredAmmoPack_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -5523,6 +5657,7 @@ var (
 	}
 
 	Computer = FGSchematic{
+		Name:                    "Computer",
 		ClassName:               "ResourceSink_Computer_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier6/ResourceSink_Computer.ResourceSink_Computer_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=6))`,
@@ -5568,6 +5703,7 @@ var (
 	}
 
 	Concrete = FGSchematic{
+		Name:                    "Concrete",
 		ClassName:               "ResourceSink_Concrete_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier1/ResourceSink_Concrete.ResourceSink_Concrete_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -5602,6 +5738,7 @@ var (
 	}
 
 	ConveryWallsMetal = FGSchematic{
+		Name:                    "ConveryWallsMetal",
 		ClassName:               "ResourceSink_ConveryWalls_Metal_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveryWalls_Metal.ResourceSink_ConveryWalls_Metal_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=7))`,
@@ -5636,6 +5773,7 @@ var (
 	}
 
 	ConveryWallsNormal = FGSchematic{
+		Name:                    "ConveryWallsNormal",
 		ClassName:               "ResourceSink_ConveryWalls_Normal_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveryWalls_Normal.ResourceSink_ConveryWalls_Normal_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=5))`,
@@ -5670,6 +5808,7 @@ var (
 	}
 
 	ConveyorWallMount = FGSchematic{
+		Name:                    "ConveyorWallMount",
 		ClassName:               "ResourceSink_ConveyorWallMount_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_ConveyorWallMount.ResourceSink_ConveyorWallMount_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -5704,6 +5843,7 @@ var (
 	}
 
 	CopperSheet = FGSchematic{
+		Name:                    "CopperSheet",
 		ClassName:               "ResourceSink_CopperSheet_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_CopperSheet.ResourceSink_CopperSheet_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -5749,6 +5889,7 @@ var (
 	}
 
 	CrystalOscillator = FGSchematic{
+		Name:                    "CrystalOscillator",
 		ClassName:               "ResourceSink_CrystalOscillator_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_CrystalOscillator.ResourceSink_CrystalOscillator_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=4))`,
@@ -5794,6 +5935,7 @@ var (
 	}
 
 	CurvedFoundationPack = FGSchematic{
+		Name:                    "CurvedFoundationPack",
 		ClassName:               "ResourceSink_CurvedFoundationPack_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CurvedFoundationPack.ResourceSink_CurvedFoundationPack_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=8))`,
@@ -5828,6 +5970,7 @@ var (
 	}
 
 	CyberWagon = FGSchematic{
+		Name:                    "CyberWagon",
 		ClassName:               "ResourceSink_CyberWagon_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CyberWagon.ResourceSink_CyberWagon_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=20))`,
@@ -5873,6 +6016,7 @@ var (
 	}
 
 	CyberWagonUnlock = FGSchematic{
+		Name:                    "CyberWagonUnlock",
 		ClassName:               "ResourceSink_CyberWagon_Unlock_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_CyberWagon_Unlock.ResourceSink_CyberWagon_Unlock_C",
 		MCost:                   ``,
@@ -5893,6 +6037,7 @@ var (
 	}
 
 	DiagonalRamps = FGSchematic{
+		Name:                    "DiagonalRamps",
 		ClassName:               "ResourceSink_DiagonalRamps_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DiagonalRamps.ResourceSink_DiagonalRamps_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=6))`,
@@ -5927,6 +6072,7 @@ var (
 	}
 
 	DoorWallsMetal = FGSchematic{
+		Name:                    "DoorWallsMetal",
 		ClassName:               "ResourceSink_DoorWalls_Metal_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DoorWalls_Metal.ResourceSink_DoorWalls_Metal_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=4))`,
@@ -5961,6 +6107,7 @@ var (
 	}
 
 	DoorWallsNormal = FGSchematic{
+		Name:                    "DoorWallsNormal",
 		ClassName:               "ResourceSink_DoorWalls_Normal_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_DoorWalls_Normal.ResourceSink_DoorWalls_Normal_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -5995,6 +6142,7 @@ var (
 	}
 
 	EmptyCanister = FGSchematic{
+		Name:                    "EmptyCanister",
 		ClassName:               "ResourceSink_EmptyCanister_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_EmptyCanister.ResourceSink_EmptyCanister_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -6040,6 +6188,7 @@ var (
 	}
 
 	EncasedIndustrialBeam = FGSchematic{
+		Name:                    "EncasedIndustrialBeam",
 		ClassName:               "ResourceSink_EncasedIndustrialBeam_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier4/ResourceSink_EncasedIndustrialBeam.ResourceSink_EncasedIndustrialBeam_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -6085,6 +6234,7 @@ var (
 	}
 
 	Explosives = FGSchematic{
+		Name:                    "Explosives",
 		ClassName:               "ResourceSink_Explosives_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_Explosives.ResourceSink_Explosives_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -6130,6 +6280,7 @@ var (
 	}
 
 	Fabric = FGSchematic{
+		Name:                    "Fabric",
 		ClassName:               "ResourceSink_Fabric_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_Fabric.ResourceSink_Fabric_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -6175,6 +6326,7 @@ var (
 	}
 
 	FactoryCart = FGSchematic{
+		Name:                    "FactoryCart",
 		ClassName:               "ResourceSink_FactoryCart_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FactoryCart.ResourceSink_FactoryCart_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=10))`,
@@ -6209,6 +6361,7 @@ var (
 	}
 
 	FactoryRailing = FGSchematic{
+		Name:                    "FactoryRailing",
 		ClassName:               "ResourceSink_FactoryRailing_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FactoryRailing.ResourceSink_FactoryRailing_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -6243,6 +6396,7 @@ var (
 	}
 
 	FlowerPetals1 = FGSchematic{
+		Name:                    "FlowerPetals1",
 		ClassName:               "Research_FlowerPetals_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/FlowerPetals_RS/Research_FlowerPetals_1.Research_FlowerPetals_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_FlowerPetals.Desc_FlowerPetals_C"',Amount=10))`,
@@ -6263,6 +6417,7 @@ var (
 	}
 
 	FlowerPetals2 = FGSchematic{
+		Name:                    "FlowerPetals2",
 		ClassName:               "Research_FlowerPetals_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/FlowerPetals_RS/Research_FlowerPetals_2.Research_FlowerPetals_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=250),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=250))`,
@@ -6297,6 +6452,7 @@ var (
 	}
 
 	FlowerPetals3 = FGSchematic{
+		Name:                    "FlowerPetals3",
 		ClassName:               "Research_FlowerPetals_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/FlowerPetals_RS/Research_FlowerPetals_3.Research_FlowerPetals_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_FlowerPetals.Desc_FlowerPetals_C"',Amount=100))`,
@@ -6331,6 +6487,7 @@ var (
 	}
 
 	FoudationPillar = FGSchematic{
+		Name:                    "FoudationPillar",
 		ClassName:               "ResourceSink_FoudationPillar_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoudationPillar.ResourceSink_FoudationPillar_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -6365,6 +6522,7 @@ var (
 	}
 
 	FoundationExpansionPack = FGSchematic{
+		Name:                    "FoundationExpansionPack",
 		ClassName:               "ResourceSink_FoundationExpansionPack_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FoundationExpansionPack.ResourceSink_FoundationExpansionPack_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -6399,6 +6557,7 @@ var (
 	}
 
 	FrameworkFoundations = FGSchematic{
+		Name:                    "FrameworkFoundations",
 		ClassName:               "ResourceSink_FrameworkFoundations_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_FrameworkFoundations.ResourceSink_FrameworkFoundations_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -6433,6 +6592,7 @@ var (
 	}
 
 	GasFilters = FGSchematic{
+		Name:                    "GasFilters",
 		ClassName:               "ResourceSink_GasFilters_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_GasFilters.ResourceSink_GasFilters_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -6478,6 +6638,7 @@ var (
 	}
 
 	GoldenCup = FGSchematic{
+		Name:                    "GoldenCup",
 		ClassName:               "ResourceSink_GoldenCup_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_GoldenCup.ResourceSink_GoldenCup_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -6522,6 +6683,7 @@ var (
 	}
 
 	HardDrive0 = FGSchematic{
+		Name:                    "HardDrive0",
 		ClassName:               "Research_HardDrive_0_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/HardDrive_RS/Research_HardDrive_0.Research_HardDrive_0_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/CrashSites/Desc_HardDrive.Desc_HardDrive_C"',Amount=1))`,
@@ -6542,6 +6704,7 @@ var (
 	}
 
 	HealthPack = FGSchematic{
+		Name:                    "HealthPack",
 		ClassName:               "ResourceSink_HealthPack_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_HealthPack.ResourceSink_HealthPack_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -6587,6 +6750,7 @@ var (
 	}
 
 	HeatSink = FGSchematic{
+		Name:                    "HeatSink",
 		ClassName:               "ResourceSink_HeatSink_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier7/ResourceSink_HeatSink.ResourceSink_HeatSink_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -6632,6 +6796,7 @@ var (
 	}
 
 	HeavyModularFrame = FGSchematic{
+		Name:                    "HeavyModularFrame",
 		ClassName:               "ResourceSink_HeavyModularFrame_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier6/ResourceSink_HeavyModularFrame.ResourceSink_HeavyModularFrame_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=6))`,
@@ -6677,6 +6842,7 @@ var (
 	}
 
 	HighSpeedConnector = FGSchematic{
+		Name:                    "HighSpeedConnector",
 		ClassName:               "ResourceSink_HighSpeedConnector_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_HighSpeedConnector.ResourceSink_HighSpeedConnector_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=4))`,
@@ -6722,6 +6888,7 @@ var (
 	}
 
 	HyperTubeWallAttachements = FGSchematic{
+		Name:                    "HyperTubeWallAttachements",
 		ClassName:               "ResourceSink_HyperTubeWallAttachements_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_HyperTubeWallAttachements.ResourceSink_HyperTubeWallAttachements_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -6756,6 +6923,7 @@ var (
 	}
 
 	InvertedCornerRamps = FGSchematic{
+		Name:                    "InvertedCornerRamps",
 		ClassName:               "ResourceSink_InvertedCornerRamps_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedCornerRamps.ResourceSink_InvertedCornerRamps_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=5))`,
@@ -6790,6 +6958,7 @@ var (
 	}
 
 	InvertedRampPack = FGSchematic{
+		Name:                    "InvertedRampPack",
 		ClassName:               "ResourceSink_InvertedRampPack_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_InvertedRampPack.ResourceSink_InvertedRampPack_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -6824,6 +6993,7 @@ var (
 	}
 
 	Ladders = FGSchematic{
+		Name:                    "Ladders",
 		ClassName:               "ResourceSink_Ladders_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Ladders.ResourceSink_Ladders_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=4))`,
@@ -6858,6 +7028,7 @@ var (
 	}
 
 	LightControlPanel = FGSchematic{
+		Name:                    "LightControlPanel",
 		ClassName:               "ResourceSink_LightControlPanel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_LightControlPanel.ResourceSink_LightControlPanel_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -6892,6 +7063,7 @@ var (
 	}
 
 	LightTower = FGSchematic{
+		Name:                    "LightTower",
 		ClassName:               "ResourceSink_LightTower_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_LightTower.ResourceSink_LightTower_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=5))`,
@@ -6926,6 +7098,7 @@ var (
 	}
 
 	ModularFrame = FGSchematic{
+		Name:                    "ModularFrame",
 		ClassName:               "ResourceSink_ModularFrame_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_ModularFrame.ResourceSink_ModularFrame_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=4))`,
@@ -6971,6 +7144,7 @@ var (
 	}
 
 	Motor = FGSchematic{
+		Name:                    "Motor",
 		ClassName:               "ResourceSink_Motor_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_Motor.ResourceSink_Motor_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=5))`,
@@ -7016,6 +7190,7 @@ var (
 	}
 
 	Mycelia1 = FGSchematic{
+		Name:                    "Mycelia1",
 		ClassName:               "Research_Mycelia_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_1.Research_Mycelia_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=5))`,
@@ -7050,6 +7225,7 @@ var (
 	}
 
 	Mycelia2 = FGSchematic{
+		Name:                    "Mycelia2",
 		ClassName:               "Research_Mycelia_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_2.Research_Mycelia_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_GenericBiomass.Desc_GenericBiomass_C"',Amount=100))`,
@@ -7084,6 +7260,7 @@ var (
 	}
 
 	Mycelia3 = FGSchematic{
+		Name:                    "Mycelia3",
 		ClassName:               "Research_Mycelia_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_3.Research_Mycelia_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Fabric.Desc_Fabric_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50))`,
@@ -7118,6 +7295,7 @@ var (
 	}
 
 	Mycelia4 = FGSchematic{
+		Name:                    "Mycelia4",
 		ClassName:               "Research_Mycelia_4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_4.Research_Mycelia_4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/DesertShroom/Desc_Shroom.Desc_Shroom_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Berry/Desc_Berry.Desc_Berry_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Nut/Desc_Nut.Desc_Nut_C"',Amount=3))`,
@@ -7138,6 +7316,7 @@ var (
 	}
 
 	Mycelia5 = FGSchematic{
+		Name:                    "Mycelia5",
 		ClassName:               "Research_Mycelia_5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Mycelia_RS/Research_Mycelia_5.Research_Mycelia_5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Mycelia.Desc_Mycelia_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=25))`,
@@ -7172,6 +7351,7 @@ var (
 	}
 
 	Nutrients0 = FGSchematic{
+		Name:                    "Nutrients0",
 		ClassName:               "Research_Nutrients_0_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_0.Research_Nutrients_0_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Berry/Desc_Berry.Desc_Berry_C"',Amount=2))`,
@@ -7192,6 +7372,7 @@ var (
 	}
 
 	Nutrients1 = FGSchematic{
+		Name:                    "Nutrients1",
 		ClassName:               "Research_Nutrients_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_1.Research_Nutrients_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Nut/Desc_Nut.Desc_Nut_C"',Amount=5))`,
@@ -7212,6 +7393,7 @@ var (
 	}
 
 	Nutrients2 = FGSchematic{
+		Name:                    "Nutrients2",
 		ClassName:               "Research_Nutrients_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_2.Research_Nutrients_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/DesertShroom/Desc_Shroom.Desc_Shroom_C"',Amount=1))`,
@@ -7232,6 +7414,7 @@ var (
 	}
 
 	Nutrients3 = FGSchematic{
+		Name:                    "Nutrients3",
 		ClassName:               "Research_Nutrients_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_3.Research_Nutrients_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Stator/Desc_Stator.Desc_Stator_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=500))`,
@@ -7252,6 +7435,7 @@ var (
 	}
 
 	Nutrients4 = FGSchematic{
+		Name:                    "Nutrients4",
 		ClassName:               "Research_Nutrients_4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Nutrients_RS/Research_Nutrients_4.Research_Nutrients_4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/DesertShroom/Desc_Shroom.Desc_Shroom_C"',Amount=2),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Berry/Desc_Berry.Desc_Berry_C"',Amount=4),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Nut/Desc_Nut.Desc_Nut_C"',Amount=10))`,
@@ -7286,6 +7470,7 @@ var (
 	}
 
 	PackagedBiofuel = FGSchematic{
+		Name:                    "PackagedBiofuel",
 		ClassName:               "ResourceSink_PackagedBiofuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier6/ResourceSink_PackagedBiofuel.ResourceSink_PackagedBiofuel_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -7331,6 +7516,7 @@ var (
 	}
 
 	PackagedFuel = FGSchematic{
+		Name:                    "PackagedFuel",
 		ClassName:               "ResourceSink_PackagedFuel_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier6/ResourceSink_PackagedFuel.ResourceSink_PackagedFuel_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -7376,6 +7562,7 @@ var (
 	}
 
 	Parachutes = FGSchematic{
+		Name:                    "Parachutes",
 		ClassName:               "ResourceSink_Parachutes_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_Parachutes.ResourceSink_Parachutes_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -7421,6 +7608,7 @@ var (
 	}
 
 	PetroleumCoke = FGSchematic{
+		Name:                    "PetroleumCoke",
 		ClassName:               "ResourceSink_PetroleumCoke_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_PetroleumCoke.ResourceSink_PetroleumCoke_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -7466,6 +7654,7 @@ var (
 	}
 
 	PipelineWallAttachments = FGSchematic{
+		Name:                    "PipelineWallAttachments",
 		ClassName:               "ResourceSink_PipelineWallAttachments_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_PipelineWallAttachments.ResourceSink_PipelineWallAttachments_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -7500,6 +7689,7 @@ var (
 	}
 
 	Plastic = FGSchematic{
+		Name:                    "Plastic",
 		ClassName:               "ResourceSink_Plastic_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_Plastic.ResourceSink_Plastic_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -7545,6 +7735,7 @@ var (
 	}
 
 	Plate = FGSchematic{
+		Name:                    "Plate",
 		ClassName:               "ResourceSink_Plate_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier1/ResourceSink_Plate.ResourceSink_Plate_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -7579,6 +7770,7 @@ var (
 	}
 
 	PolymerResin = FGSchematic{
+		Name:                    "PolymerResin",
 		ClassName:               "ResourceSink_PolymerResin_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier6/ResourceSink_PolymerResin.ResourceSink_PolymerResin_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -7624,6 +7816,7 @@ var (
 	}
 
 	PowerSlugs1 = FGSchematic{
+		Name:                    "PowerSlugs1",
 		ClassName:               "Research_PowerSlugs_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/PowerSlugs_RS/Research_PowerSlugs_1.Research_PowerSlugs_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal.Desc_Crystal_C"',Amount=1))`,
@@ -7658,6 +7851,7 @@ var (
 	}
 
 	PowerSlugs2 = FGSchematic{
+		Name:                    "PowerSlugs2",
 		ClassName:               "Research_PowerSlugs_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/PowerSlugs_RS/Research_PowerSlugs_2.Research_PowerSlugs_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=50))`,
@@ -7691,6 +7885,7 @@ var (
 	}
 
 	PowerSlugs3 = FGSchematic{
+		Name:                    "PowerSlugs3",
 		ClassName:               "Research_PowerSlugs_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/PowerSlugs_RS/Research_PowerSlugs_3.Research_PowerSlugs_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50))`,
@@ -7711,6 +7906,7 @@ var (
 	}
 
 	PowerSlugs4 = FGSchematic{
+		Name:                    "PowerSlugs4",
 		ClassName:               "Research_PowerSlugs_4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/PowerSlugs_RS/Research_PowerSlugs_4.Research_PowerSlugs_4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk2.Desc_Crystal_mk2_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=100))`,
@@ -7745,6 +7941,7 @@ var (
 	}
 
 	PowerSlugs5 = FGSchematic{
+		Name:                    "PowerSlugs5",
 		ClassName:               "Research_PowerSlugs_5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/PowerSlugs_RS/Research_PowerSlugs_5.Research_PowerSlugs_5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk3.Desc_Crystal_mk3_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=200))`,
@@ -7779,6 +7976,7 @@ var (
 	}
 
 	Quartz0 = FGSchematic{
+		Name:                    "Quartz0",
 		ClassName:               "Research_Quartz_0_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_0.Research_Quartz_0_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=10))`,
@@ -7814,6 +8012,7 @@ var (
 	}
 
 	Quartz11 = FGSchematic{
+		Name:                    "Quartz11",
 		ClassName:               "Research_Quartz_1_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_1.Research_Quartz_1_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=20))`,
@@ -7848,6 +8047,7 @@ var (
 	}
 
 	Quartz12 = FGSchematic{
+		Name:                    "Quartz12",
 		ClassName:               "Research_Quartz_1_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_1_2.Research_Quartz_1_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/RawQuartz/Desc_RawQuartz.Desc_RawQuartz_C"',Amount=20))`,
@@ -7882,6 +8082,7 @@ var (
 	}
 
 	Quartz2 = FGSchematic{
+		Name:                    "Quartz2",
 		ClassName:               "Research_Quartz_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_2.Research_Quartz_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/QuartzCrystal/Desc_QuartzCrystal.Desc_QuartzCrystal_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=50))`,
@@ -7916,6 +8117,7 @@ var (
 	}
 
 	Quartz3 = FGSchematic{
+		Name:                    "Quartz3",
 		ClassName:               "Research_Quartz_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_3.Research_Quartz_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=5))`,
@@ -7936,6 +8138,7 @@ var (
 	}
 
 	Quartz31 = FGSchematic{
+		Name:                    "Quartz31",
 		ClassName:               "Research_Quartz_3_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_3_1.Research_Quartz_3_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=100))`,
@@ -7970,6 +8173,7 @@ var (
 	}
 
 	Quartz32 = FGSchematic{
+		Name:                    "Quartz32",
 		ClassName:               "Research_Quartz_3_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_3_2.Research_Quartz_3_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=10))`,
@@ -8003,6 +8207,7 @@ var (
 	}
 
 	Quartz33 = FGSchematic{
+		Name:                    "Quartz33",
 		ClassName:               "Research_Quartz_3_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_3_3.Research_Quartz_3_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=200))`,
@@ -8037,6 +8242,7 @@ var (
 	}
 
 	Quartz4 = FGSchematic{
+		Name:                    "Quartz4",
 		ClassName:               "Research_Quartz_4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_4.Research_Quartz_4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=15))`,
@@ -8071,6 +8277,7 @@ var (
 	}
 
 	Quartz41 = FGSchematic{
+		Name:                    "Quartz41",
 		ClassName:               "Research_Quartz_4_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Quartz_RS/Research_Quartz_4_1.Research_Quartz_4_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CrystalOscillator/Desc_CrystalOscillator.Desc_CrystalOscillator_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=10))`,
@@ -8091,6 +8298,7 @@ var (
 	}
 
 	Quickwire = FGSchematic{
+		Name:                    "Quickwire",
 		ClassName:               "ResourceSink_Quickwire_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_Quickwire.ResourceSink_Quickwire_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -8136,6 +8344,7 @@ var (
 	}
 
 	RadiationFilters = FGSchematic{
+		Name:                    "RadiationFilters",
 		ClassName:               "ResourceSink_RadiationFilters_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Equipment/ResourceSink_RadiationFilters.ResourceSink_RadiationFilters_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -8181,6 +8390,7 @@ var (
 	}
 
 	RadioControlUnit = FGSchematic{
+		Name:                    "RadioControlUnit",
 		ClassName:               "ResourceSink_RadioControlUnit_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier7/ResourceSink_RadioControlUnit.ResourceSink_RadioControlUnit_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=7))`,
@@ -8226,6 +8436,7 @@ var (
 	}
 
 	ReinforcedIronPlate = FGSchematic{
+		Name:                    "ReinforcedIronPlate",
 		ClassName:               "ResourceSink_ReinforcedIronPlate_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_ReinforcedIronPlate.ResourceSink_ReinforcedIronPlate_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -8260,6 +8471,7 @@ var (
 	}
 
 	Rod = FGSchematic{
+		Name:                    "Rod",
 		ClassName:               "ResourceSink_Rod_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier1/ResourceSink_Rod.ResourceSink_Rod_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -8294,6 +8506,7 @@ var (
 	}
 
 	Rotor = FGSchematic{
+		Name:                    "Rotor",
 		ClassName:               "ResourceSink_Rotor_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier2/ResourceSink_Rotor.ResourceSink_Rotor_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -8339,6 +8552,7 @@ var (
 	}
 
 	Rubber = FGSchematic{
+		Name:                    "Rubber",
 		ClassName:               "ResourceSink_Rubber_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier5/ResourceSink_Rubber.ResourceSink_Rubber_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -8384,6 +8598,7 @@ var (
 	}
 
 	SaveCompatibility = FGSchematic{
+		Name:                    "SaveCompatibility",
 		ClassName:               "Schematic_SaveCompatibility_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Schematic_SaveCompatibility.Schematic_SaveCompatibility_C",
 		MCost:                   ``,
@@ -8418,6 +8633,7 @@ var (
 	}
 
 	Schematic1_1 = FGSchematic{
+		Name:                    "Schematic1_1",
 		ClassName:               "Schematic_1-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_1-1.Schematic_1-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=100))`,
@@ -8452,6 +8668,7 @@ var (
 	}
 
 	Schematic1_2 = FGSchematic{
+		Name:                    "Schematic1_2",
 		ClassName:               "Schematic_1-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_1-2.Schematic_1-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=150),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=150),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=300))`,
@@ -8489,6 +8706,7 @@ var (
 	}
 
 	Schematic1_3 = FGSchematic{
+		Name:                    "Schematic1_3",
 		ClassName:               "Schematic_1-3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_1-3.Schematic_1-3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=300),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=300),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=100))`,
@@ -8531,6 +8749,7 @@ var (
 	}
 
 	Schematic2_1 = FGSchematic{
+		Name:                    "Schematic2_1",
 		ClassName:               "Schematic_2-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_2-1.Schematic_2-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=300))`,
@@ -8565,6 +8784,7 @@ var (
 	}
 
 	Schematic2_2 = FGSchematic{
+		Name:                    "Schematic2_2",
 		ClassName:               "Schematic_2-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_2-2.Schematic_2-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=100))`,
@@ -8603,6 +8823,7 @@ var (
 	}
 
 	Schematic2_3 = FGSchematic{
+		Name:                    "Schematic2_3",
 		ClassName:               "Schematic_2-3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_2-3.Schematic_2-3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=300),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=150))`,
@@ -8637,6 +8858,7 @@ var (
 	}
 
 	Schematic2_5 = FGSchematic{
+		Name:                    "Schematic2_5",
 		ClassName:               "Schematic_2-5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_2-5.Schematic_2-5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=400),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=200))`,
@@ -8671,6 +8893,7 @@ var (
 	}
 
 	Schematic3_1 = FGSchematic{
+		Name:                    "Schematic3_1",
 		ClassName:               "Schematic_3-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_3-1.Schematic_3-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=150),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=300))`,
@@ -8710,6 +8933,7 @@ var (
 	}
 
 	Schematic3_2 = FGSchematic{
+		Name:                    "Schematic3_2",
 		ClassName:               "Schematic_3-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_3-2.Schematic_3-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=300),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=300))`,
@@ -8744,6 +8968,7 @@ var (
 	}
 
 	Schematic3_3 = FGSchematic{
+		Name:                    "Schematic3_3",
 		ClassName:               "Schematic_3-3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_3-3.Schematic_3-3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=400))`,
@@ -8782,6 +9007,7 @@ var (
 	}
 
 	Schematic3_4 = FGSchematic{
+		Name:                    "Schematic3_4",
 		ClassName:               "Schematic_3-4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_3-4.Schematic_3-4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrame/Desc_ModularFrame.Desc_ModularFrame_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=150),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=300),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=1000))`,
@@ -8816,6 +9042,7 @@ var (
 	}
 
 	Schematic4_1 = FGSchematic{
+		Name:                    "Schematic4_1",
 		ClassName:               "Schematic_4-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_4-1.Schematic_4-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=1500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=300))`,
@@ -8850,6 +9077,7 @@ var (
 	}
 
 	Schematic4_2 = FGSchematic{
+		Name:                    "Schematic4_2",
 		ClassName:               "Schematic_4-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_4-2.Schematic_4-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rotor/Desc_Rotor.Desc_Rotor_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=1500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=200))`,
@@ -8892,6 +9120,7 @@ var (
 	}
 
 	Schematic4_4 = FGSchematic{
+		Name:                    "Schematic4_4",
 		ClassName:               "Schematic_4-4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_4-4.Schematic_4-4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=300),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=300),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=50))`,
@@ -8926,6 +9155,7 @@ var (
 	}
 
 	Schematic5_1 = FGSchematic{
+		Name:                    "Schematic5_1",
 		ClassName:               "Schematic_5-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_5-1.Schematic_5-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=500))`,
@@ -8969,6 +9199,7 @@ var (
 	}
 
 	Schematic5_1_1 = FGSchematic{
+		Name:                    "Schematic5_1_1",
 		ClassName:               "Schematic_5-1-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_5-1-1.Schematic_5-1-1_C",
 		MCost:                   ``,
@@ -9003,6 +9234,7 @@ var (
 	}
 
 	Schematic5_2 = FGSchematic{
+		Name:                    "Schematic5_2",
 		ClassName:               "Schematic_5-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_5-2.Schematic_5-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=1000))`,
@@ -9037,6 +9269,7 @@ var (
 	}
 
 	Schematic5_3 = FGSchematic{
+		Name:                    "Schematic5_3",
 		ClassName:               "Schematic_5-3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_5-3.Schematic_5-3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=500))`,
@@ -9071,6 +9304,7 @@ var (
 	}
 
 	Schematic5_4 = FGSchematic{
+		Name:                    "Schematic5_4",
 		ClassName:               "Schematic_5-4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_5-4.Schematic_5-4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=25),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=3000))`,
@@ -9109,6 +9343,7 @@ var (
 	}
 
 	Schematic5_4_1 = FGSchematic{
+		Name:                    "Schematic5_4_1",
 		ClassName:               "Schematic_5-4-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_5-4-1.Schematic_5-4-1_C",
 		MCost:                   ``,
@@ -9143,6 +9378,7 @@ var (
 	}
 
 	Schematic6_1 = FGSchematic{
+		Name:                    "Schematic6_1",
 		ClassName:               "Schematic_6-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_6-1.Schematic_6-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=400))`,
@@ -9182,6 +9418,7 @@ var (
 	}
 
 	Schematic6_2 = FGSchematic{
+		Name:                    "Schematic6_2",
 		ClassName:               "Schematic_6-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_6-2.Schematic_6-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Fuel/Desc_Fuel.Desc_Fuel_C"',Amount=50))`,
@@ -9220,6 +9457,7 @@ var (
 	}
 
 	Schematic6_3 = FGSchematic{
+		Name:                    "Schematic6_3",
 		ClassName:               "Schematic_6-3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_6-3.Schematic_6-3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=600))`,
@@ -9254,6 +9492,7 @@ var (
 	}
 
 	Schematic6_4 = FGSchematic{
+		Name:                    "Schematic6_4",
 		ClassName:               "Schematic_6-4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_6-4.Schematic_6-4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_Fabric.Desc_Fabric_C"',Amount=50))`,
@@ -9292,6 +9531,7 @@ var (
 	}
 
 	Schematic6_5 = FGSchematic{
+		Name:                    "Schematic6_5",
 		ClassName:               "Schematic_6-5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_6-5.Schematic_6-5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CopperSheet/Desc_CopperSheet.Desc_CopperSheet_C"',Amount=1000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Plastic/Desc_Plastic.Desc_Plastic_C"',Amount=400),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=400),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=50))`,
@@ -9326,6 +9566,7 @@ var (
 	}
 
 	Schematic7_1 = FGSchematic{
+		Name:                    "Schematic7_1",
 		ClassName:               "Schematic_7-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_7-1.Schematic_7-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=500))`,
@@ -9369,6 +9610,7 @@ var (
 	}
 
 	Schematic7_1_1 = FGSchematic{
+		Name:                    "Schematic7_1_1",
 		ClassName:               "Schematic_7-1-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_7-1-1.Schematic_7-1-1_C",
 		MCost:                   ``,
@@ -9403,6 +9645,7 @@ var (
 	}
 
 	Schematic7_2 = FGSchematic{
+		Name:                    "Schematic7_2",
 		ClassName:               "Schematic_7-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_7-2.Schematic_7-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlateReinforced/Desc_IronPlateReinforced.Desc_IronPlateReinforced_C"',Amount=300))`,
@@ -9437,6 +9680,7 @@ var (
 	}
 
 	Schematic7_3 = FGSchematic{
+		Name:                    "Schematic7_3",
 		ClassName:               "Schematic_7-3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_7-3.Schematic_7-3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/HighSpeedWire/Desc_HighSpeedWire.Desc_HighSpeedWire_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Filter/Desc_Filter.Desc_Filter_C"',Amount=50))`,
@@ -9475,6 +9719,7 @@ var (
 	}
 
 	Schematic7_4 = FGSchematic{
+		Name:                    "Schematic7_4",
 		ClassName:               "Schematic_7-4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_7-4.Schematic_7-4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=300))`,
@@ -9518,6 +9763,7 @@ var (
 	}
 
 	Schematic7_4_1 = FGSchematic{
+		Name:                    "Schematic7_4_1",
 		ClassName:               "Schematic_7-4-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_7-4-1.Schematic_7-4-1_C",
 		MCost:                   ``,
@@ -9552,6 +9798,7 @@ var (
 	}
 
 	Schematic8_1 = FGSchematic{
+		Name:                    "Schematic8_1",
 		ClassName:               "Schematic_8-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_8-1.Schematic_8-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=1000),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=2000))`,
@@ -9591,6 +9838,7 @@ var (
 	}
 
 	Schematic8_2 = FGSchematic{
+		Name:                    "Schematic8_2",
 		ClassName:               "Schematic_8-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_8-2.Schematic_8-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameLightweight/Desc_ModularFrameLightweight.Desc_ModularFrameLightweight_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=3000))`,
@@ -9638,6 +9886,7 @@ var (
 	}
 
 	Schematic8_2_1 = FGSchematic{
+		Name:                    "Schematic8_2_1",
 		ClassName:               "Schematic_8-2-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_8-2-1.Schematic_8-2-1_C",
 		MCost:                   ``,
@@ -9672,6 +9921,7 @@ var (
 	}
 
 	Schematic8_3 = FGSchematic{
+		Name:                    "Schematic8_3",
 		ClassName:               "Schematic_8-3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_8-3.Schematic_8-3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Motor/Desc_Motor.Desc_Motor_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Computer/Desc_Computer.Desc_Computer_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/AluminumPlate/Desc_AluminumPlate.Desc_AluminumPlate_C"',Amount=200))`,
@@ -9710,6 +9960,7 @@ var (
 	}
 
 	Schematic8_4 = FGSchematic{
+		Name:                    "Schematic8_4",
 		ClassName:               "Schematic_8-4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_8-4.Schematic_8-4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameFused/Desc_ModularFrameFused.Desc_ModularFrameFused_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ComputerSuper/Desc_ComputerSuper.Desc_ComputerSuper_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=1000))`,
@@ -9744,6 +9995,7 @@ var (
 	}
 
 	Schematic8_5 = FGSchematic{
+		Name:                    "Schematic8_5",
 		ClassName:               "Schematic_8-5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_8-5.Schematic_8-5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ElectromagneticControlRod/Desc_ElectromagneticControlRod.Desc_ElectromagneticControlRod_C"',Amount=400),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CoolingSystem/Desc_CoolingSystem.Desc_CoolingSystem_C"',Amount=400),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameFused/Desc_ModularFrameFused.Desc_ModularFrameFused_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/MotorLightweight/Desc_MotorLightweight.Desc_MotorLightweight_C"',Amount=100))`,
@@ -9782,6 +10034,7 @@ var (
 	}
 
 	Schematic8_5_1 = FGSchematic{
+		Name:                    "Schematic8_5_1",
 		ClassName:               "Schematic_8-5-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Progression/Schematic_8-5-1.Schematic_8-5-1_C",
 		MCost:                   ``,
@@ -9816,6 +10069,7 @@ var (
 	}
 
 	Screw = FGSchematic{
+		Name:                    "Screw",
 		ClassName:               "ResourceSink_Screw_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier1/ResourceSink_Screw.ResourceSink_Screw_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -9850,6 +10104,7 @@ var (
 	}
 
 	Silica = FGSchematic{
+		Name:                    "Silica",
 		ClassName:               "ResourceSink_Silica_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier7/ResourceSink_Silica.ResourceSink_Silica_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -9895,6 +10150,7 @@ var (
 	}
 
 	Stairs = FGSchematic{
+		Name:                    "Stairs",
 		ClassName:               "ResourceSink_Stairs_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Stairs.ResourceSink_Stairs_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=2))`,
@@ -9929,6 +10185,7 @@ var (
 	}
 
 	StartingRecipes = FGSchematic{
+		Name:                    "StartingRecipes",
 		ClassName:               "Schematic_StartingRecipes_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Schematic_StartingRecipes.Schematic_StartingRecipes_C",
 		MCost:                   ``,
@@ -9968,6 +10225,7 @@ var (
 	}
 
 	Stator = FGSchematic{
+		Name:                    "Stator",
 		ClassName:               "ResourceSink_Stator_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier4/ResourceSink_Stator.ResourceSink_Stator_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=3))`,
@@ -10013,6 +10271,7 @@ var (
 	}
 
 	StatueBronzePioneer = FGSchematic{
+		Name:                    "StatueBronzePioneer",
 		ClassName:               "ResourceSink_StatueBronzePioneer_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueBronzePioneer.ResourceSink_StatueBronzePioneer_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=25))`,
@@ -10047,6 +10306,7 @@ var (
 	}
 
 	StatueGoldPioneer = FGSchematic{
+		Name:                    "StatueGoldPioneer",
 		ClassName:               "ResourceSink_StatueGoldPioneer_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueGoldPioneer.ResourceSink_StatueGoldPioneer_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=150))`,
@@ -10081,6 +10341,7 @@ var (
 	}
 
 	StatueGoldenNut = FGSchematic{
+		Name:                    "StatueGoldenNut",
 		ClassName:               "ResourceSink_StatueGoldenNut_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueGoldenNut.ResourceSink_StatueGoldenNut_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1000))`,
@@ -10115,6 +10376,7 @@ var (
 	}
 
 	StatueHoggo = FGSchematic{
+		Name:                    "StatueHoggo",
 		ClassName:               "ResourceSink_Statue_Hoggo_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Statue_Hoggo.ResourceSink_Statue_Hoggo_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=50))`,
@@ -10149,6 +10411,7 @@ var (
 	}
 
 	StatueLizardDoggo = FGSchematic{
+		Name:                    "StatueLizardDoggo",
 		ClassName:               "ResourceSink_StatueLizardDoggo_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueLizardDoggo.ResourceSink_StatueLizardDoggo_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=100))`,
@@ -10183,6 +10446,7 @@ var (
 	}
 
 	StatueSilverPioneer = FGSchematic{
+		Name:                    "StatueSilverPioneer",
 		ClassName:               "ResourceSink_StatueSilverPioneer_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueSilverPioneer.ResourceSink_StatueSilverPioneer_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=50))`,
@@ -10217,6 +10481,7 @@ var (
 	}
 
 	StatueSpaceGiraffe = FGSchematic{
+		Name:                    "StatueSpaceGiraffe",
 		ClassName:               "ResourceSink_StatueSpaceGiraffe_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StatueSpaceGiraffe.ResourceSink_StatueSpaceGiraffe_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=200))`,
@@ -10251,6 +10516,7 @@ var (
 	}
 
 	SteelBeam = FGSchematic{
+		Name:                    "SteelBeam",
 		ClassName:               "ResourceSink_SteelBeam_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier3/ResourceSink_SteelBeam.ResourceSink_SteelBeam_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -10296,6 +10562,7 @@ var (
 	}
 
 	SteelPipe = FGSchematic{
+		Name:                    "SteelPipe",
 		ClassName:               "ResourceSink_SteelPipe_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier3/ResourceSink_SteelPipe.ResourceSink_SteelPipe_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -10341,6 +10608,7 @@ var (
 	}
 
 	StreetLight = FGSchematic{
+		Name:                    "StreetLight",
 		ClassName:               "ResourceSink_StreetLight_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_StreetLight.ResourceSink_StreetLight_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -10375,6 +10643,7 @@ var (
 	}
 
 	Sulfur0 = FGSchematic{
+		Name:                    "Sulfur0",
 		ClassName:               "Research_Sulfur_0_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_0.Research_Sulfur_0_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=10))`,
@@ -10410,6 +10679,7 @@ var (
 	}
 
 	Sulfur1 = FGSchematic{
+		Name:                    "Sulfur1",
 		ClassName:               "Research_Sulfur_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_1.Research_Sulfur_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Sulfur/Desc_Sulfur.Desc_Sulfur_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C"',Amount=25))`,
@@ -10444,6 +10714,7 @@ var (
 	}
 
 	Sulfur2 = FGSchematic{
+		Name:                    "Sulfur2",
 		ClassName:               "Research_Sulfur_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_2.Research_Sulfur_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=50))`,
@@ -10464,6 +10735,7 @@ var (
 	}
 
 	Sulfur3 = FGSchematic{
+		Name:                    "Sulfur3",
 		ClassName:               "Research_Sulfur_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3.Research_Sulfur_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/GemstoneScanner/BP_EquipmentDescriptorObjectScanner.BP_EquipmentDescriptorObjectScanner_C"',Amount=5))`,
@@ -10484,6 +10756,7 @@ var (
 	}
 
 	Sulfur31 = FGSchematic{
+		Name:                    "Sulfur31",
 		ClassName:               "Research_Sulfur_3_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_1.Research_Sulfur_3_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/GemstoneScanner/BP_EquipmentDescriptorObjectScanner.BP_EquipmentDescriptorObjectScanner_C"',Amount=5))`,
@@ -10518,6 +10791,7 @@ var (
 	}
 
 	Sulfur32 = FGSchematic{
+		Name:                    "Sulfur32",
 		ClassName:               "Research_Sulfur_3_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2.Research_Sulfur_3_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=50))`,
@@ -10538,6 +10812,7 @@ var (
 	}
 
 	Sulfur321 = FGSchematic{
+		Name:                    "Sulfur321",
 		ClassName:               "Research_Sulfur_3_2_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_3_2_1.Research_Sulfur_3_2_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=100))`,
@@ -10572,6 +10847,7 @@ var (
 	}
 
 	Sulfur4 = FGSchematic{
+		Name:                    "Sulfur4",
 		ClassName:               "Research_Sulfur_4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_4.Research_Sulfur_4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronScrew/Desc_IronScrew.Desc_IronScrew_C"',Amount=250))`,
@@ -10592,6 +10868,7 @@ var (
 	}
 
 	Sulfur41 = FGSchematic{
+		Name:                    "Sulfur41",
 		ClassName:               "Research_Sulfur_4_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_4_1.Research_Sulfur_4_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/CircuitBoard/Desc_CircuitBoard.Desc_CircuitBoard_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C"',Amount=5))`,
@@ -10626,6 +10903,7 @@ var (
 	}
 
 	Sulfur42 = FGSchematic{
+		Name:                    "Sulfur42",
 		ClassName:               "Research_Sulfur_4_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_4_2.Research_Sulfur_4_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C"',Amount=5))`,
@@ -10646,6 +10924,7 @@ var (
 	}
 
 	Sulfur421 = FGSchematic{
+		Name:                    "Sulfur421",
 		ClassName:               "Research_Sulfur_4_2_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_4_2_1.Research_Sulfur_4_2_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPipe/Desc_SteelPipe.Desc_SteelPipe_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Rubber/Desc_Rubber.Desc_Rubber_C"',Amount=200))`,
@@ -10680,6 +10959,7 @@ var (
 	}
 
 	Sulfur5 = FGSchematic{
+		Name:                    "Sulfur5",
 		ClassName:               "Research_Sulfur_5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_5.Research_Sulfur_5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlateReinforced/Desc_SteelPlateReinforced.Desc_SteelPlateReinforced_C"',Amount=50))`,
@@ -10714,6 +10994,7 @@ var (
 	}
 
 	Sulfur6 = FGSchematic{
+		Name:                    "Sulfur6",
 		ClassName:               "Research_Sulfur_6_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/Sulfur_RS/Research_Sulfur_6.Research_Sulfur_6_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/GunPowder/Desc_Gunpowder.Desc_Gunpowder_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SteelPlate/Desc_SteelPlate.Desc_SteelPlate_C"',Amount=100))`,
@@ -10748,6 +11029,7 @@ var (
 	}
 
 	SuperComputer = FGSchematic{
+		Name:                    "SuperComputer",
 		ClassName:               "ResourceSink_SuperComputer_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier7/ResourceSink_SuperComputer.ResourceSink_SuperComputer_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=8))`,
@@ -10793,6 +11075,7 @@ var (
 	}
 
 	TurboMotor = FGSchematic{
+		Name:                    "TurboMotor",
 		ClassName:               "ResourceSink_TurboMotor_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier7/ResourceSink_TurboMotor.ResourceSink_TurboMotor_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=8))`,
@@ -10838,6 +11121,7 @@ var (
 	}
 
 	Tutorial1 = FGSchematic{
+		Name:                    "Tutorial1",
 		ClassName:               "Schematic_Tutorial1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1.Schematic_Tutorial1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=10))`,
@@ -10876,6 +11160,7 @@ var (
 	}
 
 	Tutorial15 = FGSchematic{
+		Name:                    "Tutorial15",
 		ClassName:               "Schematic_Tutorial1_5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial1_5.Schematic_Tutorial1_5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=10))`,
@@ -10926,6 +11211,7 @@ var (
 	}
 
 	Tutorial2 = FGSchematic{
+		Name:                    "Tutorial2",
 		ClassName:               "Schematic_Tutorial2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial2.Schematic_Tutorial2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=20))`,
@@ -10976,6 +11262,7 @@ var (
 	}
 
 	Tutorial3 = FGSchematic{
+		Name:                    "Tutorial3",
 		ClassName:               "Schematic_Tutorial3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial3.Schematic_Tutorial3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=75),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=10))`,
@@ -11025,6 +11312,7 @@ var (
 	}
 
 	Tutorial4 = FGSchematic{
+		Name:                    "Tutorial4",
 		ClassName:               "Schematic_Tutorial4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial4.Schematic_Tutorial4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=75),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=20))`,
@@ -11074,6 +11362,7 @@ var (
 	}
 
 	Tutorial5 = FGSchematic{
+		Name:                    "Tutorial5",
 		ClassName:               "Schematic_Tutorial5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Tutorial/Schematic_Tutorial5.Schematic_Tutorial5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/Cement/Desc_Cement.Desc_Cement_C"',Amount=50))`,
@@ -11119,6 +11408,7 @@ var (
 	}
 
 	Walkways = FGSchematic{
+		Name:                    "Walkways",
 		ClassName:               "ResourceSink_Walkways_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_Walkways.ResourceSink_Walkways_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=6))`,
@@ -11153,6 +11443,7 @@ var (
 	}
 
 	WallPowerPoles = FGSchematic{
+		Name:                    "WallPowerPoles",
 		ClassName:               "ResourceSink_WallPowerPoles_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPoles.ResourceSink_WallPowerPoles_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=4))`,
@@ -11187,6 +11478,7 @@ var (
 	}
 
 	WallPowerPolesMK2 = FGSchematic{
+		Name:                    "WallPowerPolesMK2",
 		ClassName:               "ResourceSink_WallPowerPolesMK2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK2.ResourceSink_WallPowerPolesMK2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=5))`,
@@ -11232,6 +11524,7 @@ var (
 	}
 
 	WallPowerPolesMK3 = FGSchematic{
+		Name:                    "WallPowerPolesMK3",
 		ClassName:               "ResourceSink_WallPowerPolesMK3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WallPowerPolesMK3.ResourceSink_WallPowerPolesMK3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=6))`,
@@ -11277,6 +11570,7 @@ var (
 	}
 
 	WindowedWalls = FGSchematic{
+		Name:                    "WindowedWalls",
 		ClassName:               "ResourceSink_WindowedWalls_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/ResourceSink_WindowedWalls.ResourceSink_WindowedWalls_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=9))`,
@@ -11311,6 +11605,7 @@ var (
 	}
 
 	Wire = FGSchematic{
+		Name:                    "Wire",
 		ClassName:               "ResourceSink_Wire_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/ResourceSink/Parts/Tier1/ResourceSink_Wire.ResourceSink_Wire_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/ResourceSinkCoupon/Desc_ResourceSinkCoupon.Desc_ResourceSinkCoupon_C"',Amount=1))`,
@@ -11345,6 +11640,7 @@ var (
 	}
 
 	XMas1 = FGSchematic{
+		Name:                    "XMas1",
 		ClassName:               "Research_XMas_1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_1.Research_XMas_1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Gift.Desc_Gift_C"',Amount=100))`,
@@ -11379,6 +11675,7 @@ var (
 	}
 
 	XMas1_1 = FGSchematic{
+		Name:                    "XMas1_1",
 		ClassName:               "Research_XMas_1-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_1-1.Research_XMas_1-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBranch.Desc_XmasBranch_C"',Amount=50))`,
@@ -11413,6 +11710,7 @@ var (
 	}
 
 	XMas1_2 = FGSchematic{
+		Name:                    "XMas1_2",
 		ClassName:               "Research_XMas_1-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_1-2.Research_XMas_1-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=10))`,
@@ -11447,6 +11745,7 @@ var (
 	}
 
 	XMas2 = FGSchematic{
+		Name:                    "XMas2",
 		ClassName:               "Research_XMas_2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_2.Research_XMas_2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall1.Desc_XmasBall1_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=20),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=30))`,
@@ -11485,6 +11784,7 @@ var (
 	}
 
 	XMas2_1 = FGSchematic{
+		Name:                    "XMas2_1",
 		ClassName:               "Research_XMas_2-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_2-1.Research_XMas_2-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=50))`,
@@ -11519,6 +11819,7 @@ var (
 	}
 
 	XMas2_2 = FGSchematic{
+		Name:                    "XMas2_2",
 		ClassName:               "Research_XMas_2-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_2-2.Research_XMas_2-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall1.Desc_XmasBall1_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall2.Desc_XmasBall2_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBranch.Desc_XmasBranch_C"',Amount=50))`,
@@ -11553,6 +11854,7 @@ var (
 	}
 
 	XMas3 = FGSchematic{
+		Name:                    "XMas3",
 		ClassName:               "Research_XMas_3_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_3.Research_XMas_3_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBallCluster.Desc_XmasBallCluster_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall3.Desc_XmasBall3_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall4.Desc_XmasBall4_C"',Amount=200))`,
@@ -11587,6 +11889,7 @@ var (
 	}
 
 	XMas3_1 = FGSchematic{
+		Name:                    "XMas3_1",
 		ClassName:               "Research_XMas_3-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_3-1.Research_XMas_3-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall1.Desc_XmasBall1_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall2.Desc_XmasBall2_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall3.Desc_XmasBall3_C"',Amount=50),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBall4.Desc_XmasBall4_C"',Amount=50))`,
@@ -11621,6 +11924,7 @@ var (
 	}
 
 	XMas3_2 = FGSchematic{
+		Name:                    "XMas3_2",
 		ClassName:               "Research_XMas_3-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_3-2.Research_XMas_3-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBallCluster.Desc_XmasBallCluster_C"',Amount=10),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Snow.Desc_Snow_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBranch.Desc_XmasBranch_C"',Amount=500))`,
@@ -11655,6 +11959,7 @@ var (
 	}
 
 	XMas4 = FGSchematic{
+		Name:                    "XMas4",
 		ClassName:               "Research_XMas_4_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_4.Research_XMas_4_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasStar.Desc_XmasStar_C"',Amount=1),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasWreath.Desc_XmasWreath_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBallCluster.Desc_XmasBallCluster_C"',Amount=400))`,
@@ -11689,6 +11994,7 @@ var (
 	}
 
 	XMas4_1 = FGSchematic{
+		Name:                    "XMas4_1",
 		ClassName:               "Research_XMas_4-1_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_4-1.Research_XMas_4-1_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasWreath.Desc_XmasWreath_C"',Amount=100),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBallCluster.Desc_XmasBallCluster_C"',Amount=200),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=500))`,
@@ -11723,6 +12029,7 @@ var (
 	}
 
 	XMas4_2 = FGSchematic{
+		Name:                    "XMas4_2",
 		ClassName:               "Research_XMas_4-2_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_4-2.Research_XMas_4-2_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_Snow.Desc_Snow_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_CandyCane.Desc_CandyCane_C"',Amount=500),(ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasBow.Desc_XmasBow_C"',Amount=500))`,
@@ -11757,6 +12064,7 @@ var (
 	}
 
 	XMas5 = FGSchematic{
+		Name:                    "XMas5",
 		ClassName:               "Research_XMas_5_C",
 		FullName:                "BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/XMas_RS/Research_XMas_5.Research_XMas_5_C",
 		MCost:                   `((ItemClass=BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Parts/Desc_XmasStar.Desc_XmasStar_C"',Amount=500))`,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGItemDescriptor struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MCanBeDiscarded         bool
@@ -28,6 +29,7 @@ type FGItemDescriptor struct {
 
 var (
 	AluminaSolution = FGItemDescriptor{
+		Name:                    "AluminaSolution",
 		ClassName:               "Desc_AluminaSolution_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -46,6 +48,7 @@ var (
 	}
 
 	AluminumCasing = FGItemDescriptor{
+		Name:                    "AluminumCasing",
 		ClassName:               "Desc_AluminumCasing_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -64,6 +67,7 @@ var (
 	}
 
 	AluminumIngot = FGItemDescriptor{
+		Name:                    "AluminumIngot",
 		ClassName:               "Desc_AluminumIngot_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -83,6 +87,7 @@ Used to produce specialized aluminum-based parts.`,
 	}
 
 	AluminumPlate = FGItemDescriptor{
+		Name:                    "AluminumPlate",
 		ClassName:               "Desc_AluminumPlate_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -101,6 +106,7 @@ Used to produce specialized aluminum-based parts.`,
 	}
 
 	AluminumPlateReinforced = FGItemDescriptor{
+		Name:                    "AluminumPlateReinforced",
 		ClassName:               "Desc_AluminumPlateReinforced_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -119,6 +125,7 @@ Used to produce specialized aluminum-based parts.`,
 	}
 
 	AluminumScrap = FGItemDescriptor{
+		Name:                    "AluminumScrap",
 		ClassName:               "Desc_AluminumScrap_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -137,6 +144,7 @@ Used to produce specialized aluminum-based parts.`,
 	}
 
 	Battery = FGItemDescriptor{
+		Name:                    "Battery",
 		ClassName:               "Desc_Battery_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -155,6 +163,7 @@ Used to produce specialized aluminum-based parts.`,
 	}
 
 	Cable = FGItemDescriptor{
+		Name:                    "Cable",
 		ClassName:               "Desc_Cable_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -174,6 +183,7 @@ Primarily used to build power lines.`,
 	}
 
 	CandyCane = FGItemDescriptor{
+		Name:                    "CandyCane",
 		ClassName:               "Desc_CandyCane_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -193,6 +203,7 @@ Primarily used to build power lines.`,
 	}
 
 	CartridgeStandard = FGItemDescriptor{
+		Name:                    "CartridgeStandard",
 		ClassName:               "Desc_CartridgeStandard_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -211,6 +222,7 @@ Primarily used to build power lines.`,
 	}
 
 	Cement = FGItemDescriptor{
+		Name:                    "Cement",
 		ClassName:               "Desc_Cement_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -230,6 +242,7 @@ Good for stable foundations.`,
 	}
 
 	CircuitBoard = FGItemDescriptor{
+		Name:                    "CircuitBoard",
 		ClassName:               "Desc_CircuitBoard_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -248,6 +261,7 @@ Good for stable foundations.`,
 	}
 
 	CircuitBoardHighSpeed = FGItemDescriptor{
+		Name:                    "CircuitBoardHighSpeed",
 		ClassName:               "Desc_CircuitBoardHighSpeed_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -266,6 +280,7 @@ Good for stable foundations.`,
 	}
 
 	ColorCartridge = FGItemDescriptor{
+		Name:                    "ColorCartridge",
 		ClassName:               "Desc_ColorCartridge_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -285,6 +300,7 @@ Necessary to change the color of factory buildings and vehicles.`,
 	}
 
 	CompactedCoal = FGItemDescriptor{
+		Name:                    "CompactedCoal",
 		ClassName:               "Desc_CompactedCoal_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -303,6 +319,7 @@ Necessary to change the color of factory buildings and vehicles.`,
 	}
 
 	Computer = FGItemDescriptor{
+		Name:                    "Computer",
 		ClassName:               "Desc_Computer_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -321,6 +338,7 @@ Necessary to change the color of factory buildings and vehicles.`,
 	}
 
 	ComputerSuper = FGItemDescriptor{
+		Name:                    "ComputerSuper",
 		ClassName:               "Desc_ComputerSuper_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -339,6 +357,7 @@ Necessary to change the color of factory buildings and vehicles.`,
 	}
 
 	CoolingSystem = FGItemDescriptor{
+		Name:                    "CoolingSystem",
 		ClassName:               "Desc_CoolingSystem_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -357,6 +376,7 @@ Necessary to change the color of factory buildings and vehicles.`,
 	}
 
 	CopperDust = FGItemDescriptor{
+		Name:                    "CopperDust",
 		ClassName:               "Desc_CopperDust_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -376,6 +396,7 @@ The high natural density of Copper, combined with the granularity of the powder,
 	}
 
 	CopperIngot = FGItemDescriptor{
+		Name:                    "CopperIngot",
 		ClassName:               "Desc_CopperIngot_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -395,6 +416,7 @@ Crafted into the most basic parts.`,
 	}
 
 	CopperSheet = FGItemDescriptor{
+		Name:                    "CopperSheet",
 		ClassName:               "Desc_CopperSheet_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -414,6 +436,7 @@ Primarily used for pipelines due to its high corrosion resistance.`,
 	}
 
 	Crystal = FGItemDescriptor{
+		Name:                    "Crystal",
 		ClassName:               "Desc_Crystal_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -432,6 +455,7 @@ Primarily used for pipelines due to its high corrosion resistance.`,
 	}
 
 	CrystalOscillator = FGItemDescriptor{
+		Name:                    "CrystalOscillator",
 		ClassName:               "Desc_CrystalOscillator_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -450,6 +474,7 @@ Primarily used for pipelines due to its high corrosion resistance.`,
 	}
 
 	CrystalShard = FGItemDescriptor{
+		Name:                    "CrystalShard",
 		ClassName:               "Desc_CrystalShard_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -469,6 +494,7 @@ It radiates a strange power.`,
 	}
 
 	Crystalmk2 = FGItemDescriptor{
+		Name:                    "Crystalmk2",
 		ClassName:               "Desc_Crystal_mk2_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -487,6 +513,7 @@ It radiates a strange power.`,
 	}
 
 	Crystalmk3 = FGItemDescriptor{
+		Name:                    "Crystalmk3",
 		ClassName:               "Desc_Crystal_mk3_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -505,6 +532,7 @@ It radiates a strange power.`,
 	}
 
 	ElectromagneticControlRod = FGItemDescriptor{
+		Name:                    "ElectromagneticControlRod",
 		ClassName:               "Desc_ElectromagneticControlRod_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -523,6 +551,7 @@ It radiates a strange power.`,
 	}
 
 	Filter = FGItemDescriptor{
+		Name:                    "Filter",
 		ClassName:               "Desc_Filter_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -541,6 +570,7 @@ It radiates a strange power.`,
 	}
 
 	FluidCanister = FGItemDescriptor{
+		Name:                    "FluidCanister",
 		ClassName:               "Desc_FluidCanister_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -559,6 +589,7 @@ It radiates a strange power.`,
 	}
 
 	Fuel = FGItemDescriptor{
+		Name:                    "Fuel",
 		ClassName:               "Desc_Fuel_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -577,6 +608,7 @@ It radiates a strange power.`,
 	}
 
 	GasTank = FGItemDescriptor{
+		Name:                    "GasTank",
 		ClassName:               "Desc_GasTank_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -595,6 +627,7 @@ It radiates a strange power.`,
 	}
 
 	Gift = FGItemDescriptor{
+		Name:                    "Gift",
 		ClassName:               "Desc_Gift_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -615,6 +648,7 @@ It radiates a strange power.`,
 	}
 
 	GoldIngot = FGItemDescriptor{
+		Name:                    "GoldIngot",
 		ClassName:               "Desc_GoldIngot_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -633,6 +667,7 @@ It radiates a strange power.`,
 	}
 
 	Gunpowder = FGItemDescriptor{
+		Name:                    "Gunpowder",
 		ClassName:               "Desc_Gunpowder_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -651,6 +686,7 @@ It radiates a strange power.`,
 	}
 
 	HUBParts = FGItemDescriptor{
+		Name:                    "HUBParts",
 		ClassName:               "Desc_HUBParts_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -669,6 +705,7 @@ It radiates a strange power.`,
 	}
 
 	HazmatFilter = FGItemDescriptor{
+		Name:                    "HazmatFilter",
 		ClassName:               "Desc_HazmatFilter_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -687,6 +724,7 @@ It radiates a strange power.`,
 	}
 
 	HeavyOilResidue = FGItemDescriptor{
+		Name:                    "HeavyOilResidue",
 		ClassName:               "Desc_HeavyOilResidue_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -705,6 +743,7 @@ It radiates a strange power.`,
 	}
 
 	HighSpeedConnector = FGItemDescriptor{
+		Name:                    "HighSpeedConnector",
 		ClassName:               "Desc_HighSpeedConnector_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -723,6 +762,7 @@ It radiates a strange power.`,
 	}
 
 	HighSpeedWire = FGItemDescriptor{
+		Name:                    "HighSpeedWire",
 		ClassName:               "Desc_HighSpeedWire_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -741,6 +781,7 @@ It radiates a strange power.`,
 	}
 
 	IronIngot = FGItemDescriptor{
+		Name:                    "IronIngot",
 		ClassName:               "Desc_IronIngot_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -760,6 +801,7 @@ Crafted into the most basic parts.`,
 	}
 
 	IronPlate = FGItemDescriptor{
+		Name:                    "IronPlate",
 		ClassName:               "Desc_IronPlate_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -779,6 +821,7 @@ One of the most basic parts.`,
 	}
 
 	IronPlateReinforced = FGItemDescriptor{
+		Name:                    "IronPlateReinforced",
 		ClassName:               "Desc_IronPlateReinforced_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -798,6 +841,7 @@ A sturdier and more durable Iron Plate.`,
 	}
 
 	IronRod = FGItemDescriptor{
+		Name:                    "IronRod",
 		ClassName:               "Desc_IronRod_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -817,6 +861,7 @@ One of the most basic parts.`,
 	}
 
 	IronScrew = FGItemDescriptor{
+		Name:                    "IronScrew",
 		ClassName:               "Desc_IronScrew_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -836,6 +881,7 @@ One of the most basic parts.`,
 	}
 
 	LiquidFuel = FGItemDescriptor{
+		Name:                    "LiquidFuel",
 		ClassName:               "Desc_LiquidFuel_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -854,6 +900,7 @@ One of the most basic parts.`,
 	}
 
 	LiquidTurboFuel = FGItemDescriptor{
+		Name:                    "LiquidTurboFuel",
 		ClassName:               "Desc_LiquidTurboFuel_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -872,6 +919,7 @@ One of the most basic parts.`,
 	}
 
 	ModularFrame = FGItemDescriptor{
+		Name:                    "ModularFrame",
 		ClassName:               "Desc_ModularFrame_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -891,6 +939,7 @@ Multi-purpose building block.`,
 	}
 
 	ModularFrameFused = FGItemDescriptor{
+		Name:                    "ModularFrameFused",
 		ClassName:               "Desc_ModularFrameFused_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -909,6 +958,7 @@ Multi-purpose building block.`,
 	}
 
 	ModularFrameHeavy = FGItemDescriptor{
+		Name:                    "ModularFrameHeavy",
 		ClassName:               "Desc_ModularFrameHeavy_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -927,6 +977,7 @@ Multi-purpose building block.`,
 	}
 
 	ModularFrameLightweight = FGItemDescriptor{
+		Name:                    "ModularFrameLightweight",
 		ClassName:               "Desc_ModularFrameLightweight_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -945,6 +996,7 @@ Multi-purpose building block.`,
 	}
 
 	Motor = FGItemDescriptor{
+		Name:                    "Motor",
 		ClassName:               "Desc_Motor_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -963,6 +1015,7 @@ Multi-purpose building block.`,
 	}
 
 	MotorLightweight = FGItemDescriptor{
+		Name:                    "MotorLightweight",
 		ClassName:               "Desc_MotorLightweight_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -981,6 +1034,7 @@ Multi-purpose building block.`,
 	}
 
 	NitricAcid = FGItemDescriptor{
+		Name:                    "NitricAcid",
 		ClassName:               "Desc_NitricAcid_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -999,6 +1053,7 @@ Multi-purpose building block.`,
 	}
 
 	NobeliskExplosive = FGItemDescriptor{
+		Name:                    "NobeliskExplosive",
 		ClassName:               "Desc_NobeliskExplosive_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1017,6 +1072,7 @@ Multi-purpose building block.`,
 	}
 
 	NonFissibleUranium = FGItemDescriptor{
+		Name:                    "NonFissibleUranium",
 		ClassName:               "Desc_NonFissibleUranium_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -1037,6 +1093,7 @@ Caution: Mildly Radioactive.`,
 	}
 
 	NuclearWaste = FGItemDescriptor{
+		Name:                    "NuclearWaste",
 		ClassName:               "Desc_NuclearWaste_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -1058,6 +1115,7 @@ Caution: HIGHLY Radioactive.`,
 	}
 
 	PackagedOil = FGItemDescriptor{
+		Name:                    "PackagedOil",
 		ClassName:               "Desc_PackagedOil_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1076,6 +1134,7 @@ Caution: HIGHLY Radioactive.`,
 	}
 
 	PackagedOilResidue = FGItemDescriptor{
+		Name:                    "PackagedOilResidue",
 		ClassName:               "Desc_PackagedOilResidue_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1094,6 +1153,7 @@ Caution: HIGHLY Radioactive.`,
 	}
 
 	PackagedWater = FGItemDescriptor{
+		Name:                    "PackagedWater",
 		ClassName:               "Desc_PackagedWater_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1112,6 +1172,7 @@ Caution: HIGHLY Radioactive.`,
 	}
 
 	PetroleumCoke = FGItemDescriptor{
+		Name:                    "PetroleumCoke",
 		ClassName:               "Desc_PetroleumCoke_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1132,6 +1193,7 @@ Used as a less efficient coal replacement or for aluminum refinement.`,
 	}
 
 	Plastic = FGItemDescriptor{
+		Name:                    "Plastic",
 		ClassName:               "Desc_Plastic_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1150,6 +1212,7 @@ Used as a less efficient coal replacement or for aluminum refinement.`,
 	}
 
 	PlutoniumCell = FGItemDescriptor{
+		Name:                    "PlutoniumCell",
 		ClassName:               "Desc_PlutoniumCell_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -1171,6 +1234,7 @@ Caution: Moderately Radioactive.`,
 	}
 
 	PlutoniumPellet = FGItemDescriptor{
+		Name:                    "PlutoniumPellet",
 		ClassName:               "Desc_PlutoniumPellet_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         false,
@@ -1193,6 +1257,7 @@ Caution: Moderately Radioactive.`,
 	}
 
 	PolymerResin = FGItemDescriptor{
+		Name:                    "PolymerResin",
 		ClassName:               "Desc_PolymerResin_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1212,6 +1277,7 @@ A by-product of oil refinement into fuel. Commonly used to manufacture plastics.
 	}
 
 	PressureConversionCube = FGItemDescriptor{
+		Name:                    "PressureConversionCube",
 		ClassName:               "Desc_PressureConversionCube_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1230,6 +1296,7 @@ A by-product of oil refinement into fuel. Commonly used to manufacture plastics.
 	}
 
 	QuartzCrystal = FGItemDescriptor{
+		Name:                    "QuartzCrystal",
 		ClassName:               "Desc_QuartzCrystal_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1248,6 +1315,7 @@ A by-product of oil refinement into fuel. Commonly used to manufacture plastics.
 	}
 
 	Rotor = FGItemDescriptor{
+		Name:                    "Rotor",
 		ClassName:               "Desc_Rotor_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1267,6 +1335,7 @@ The moving parts of a motor.`,
 	}
 
 	Rubber = FGItemDescriptor{
+		Name:                    "Rubber",
 		ClassName:               "Desc_Rubber_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1285,6 +1354,7 @@ The moving parts of a motor.`,
 	}
 
 	Silica = FGItemDescriptor{
+		Name:                    "Silica",
 		ClassName:               "Desc_Silica_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1303,6 +1373,7 @@ The moving parts of a motor.`,
 	}
 
 	Snow = FGItemDescriptor{
+		Name:                    "Snow",
 		ClassName:               "Desc_Snow_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1321,6 +1392,7 @@ The moving parts of a motor.`,
 	}
 
 	SnowballProjectile = FGItemDescriptor{
+		Name:                    "SnowballProjectile",
 		ClassName:               "Desc_SnowballProjectile_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1339,6 +1411,7 @@ The moving parts of a motor.`,
 	}
 
 	SpaceElevatorPart1 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart1",
 		ClassName:               "Desc_SpaceElevatorPart_1_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1357,6 +1430,7 @@ The moving parts of a motor.`,
 	}
 
 	SpaceElevatorPart2 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart2",
 		ClassName:               "Desc_SpaceElevatorPart_2_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1375,6 +1449,7 @@ The moving parts of a motor.`,
 	}
 
 	SpaceElevatorPart3 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart3",
 		ClassName:               "Desc_SpaceElevatorPart_3_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1393,6 +1468,7 @@ The moving parts of a motor.`,
 	}
 
 	SpaceElevatorPart4 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart4",
 		ClassName:               "Desc_SpaceElevatorPart_4_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1411,6 +1487,7 @@ The moving parts of a motor.`,
 	}
 
 	SpaceElevatorPart5 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart5",
 		ClassName:               "Desc_SpaceElevatorPart_5_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1429,6 +1506,7 @@ The moving parts of a motor.`,
 	}
 
 	SpaceElevatorPart6 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart6",
 		ClassName:               "Desc_SpaceElevatorPart_6_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1449,6 +1527,7 @@ These modular generators use superconducting magnets and vast amounts of electri
 	}
 
 	SpaceElevatorPart7 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart7",
 		ClassName:               "Desc_SpaceElevatorPart_7_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1469,6 +1548,7 @@ This extremely fast and precise computing system is specifically designed to dir
 	}
 
 	SpaceElevatorPart8 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart8",
 		ClassName:               "Desc_SpaceElevatorPart_8_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1489,6 +1569,7 @@ Uses extreme heat to produce the high pressure plasma required to get Project As
 	}
 
 	SpaceElevatorPart9 = FGItemDescriptor{
+		Name:                    "SpaceElevatorPart9",
 		ClassName:               "Desc_SpaceElevatorPart_9_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1510,6 +1591,7 @@ Nuclear Pasta is extremely dense degenerate matter, formed when extreme pressure
 	}
 
 	SpikedRebar = FGItemDescriptor{
+		Name:                    "SpikedRebar",
 		ClassName:               "Desc_SpikedRebar_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1528,6 +1610,7 @@ Nuclear Pasta is extremely dense degenerate matter, formed when extreme pressure
 	}
 
 	Stator = FGItemDescriptor{
+		Name:                    "Stator",
 		ClassName:               "Desc_Stator_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1547,6 +1630,7 @@ The static parts of a motor.`,
 	}
 
 	SteelIngot = FGItemDescriptor{
+		Name:                    "SteelIngot",
 		ClassName:               "Desc_SteelIngot_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1565,6 +1649,7 @@ The static parts of a motor.`,
 	}
 
 	SteelPipe = FGItemDescriptor{
+		Name:                    "SteelPipe",
 		ClassName:               "Desc_SteelPipe_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1583,6 +1668,7 @@ The static parts of a motor.`,
 	}
 
 	SteelPlate = FGItemDescriptor{
+		Name:                    "SteelPlate",
 		ClassName:               "Desc_SteelPlate_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1601,6 +1687,7 @@ The static parts of a motor.`,
 	}
 
 	SteelPlateReinforced = FGItemDescriptor{
+		Name:                    "SteelPlateReinforced",
 		ClassName:               "Desc_SteelPlateReinforced_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1620,6 +1707,7 @@ Mostly used as a stable basis for constructing buildings.`,
 	}
 
 	SulfuricAcid = FGItemDescriptor{
+		Name:                    "SulfuricAcid",
 		ClassName:               "Desc_SulfuricAcid_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1638,6 +1726,7 @@ Mostly used as a stable basis for constructing buildings.`,
 	}
 
 	TurboFuel = FGItemDescriptor{
+		Name:                    "TurboFuel",
 		ClassName:               "Desc_TurboFuel_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1656,6 +1745,7 @@ Mostly used as a stable basis for constructing buildings.`,
 	}
 
 	UraniumCell = FGItemDescriptor{
+		Name:                    "UraniumCell",
 		ClassName:               "Desc_UraniumCell_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1677,6 +1767,7 @@ Caution: Mildly Radioactive.`,
 	}
 
 	Wire = FGItemDescriptor{
+		Name:                    "Wire",
 		ClassName:               "Desc_Wire_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1696,6 +1787,7 @@ One of the most basic parts.`,
 	}
 
 	XmasBall1 = FGItemDescriptor{
+		Name:                    "XmasBall1",
 		ClassName:               "Desc_XmasBall1_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1714,6 +1806,7 @@ One of the most basic parts.`,
 	}
 
 	XmasBall2 = FGItemDescriptor{
+		Name:                    "XmasBall2",
 		ClassName:               "Desc_XmasBall2_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1732,6 +1825,7 @@ One of the most basic parts.`,
 	}
 
 	XmasBall3 = FGItemDescriptor{
+		Name:                    "XmasBall3",
 		ClassName:               "Desc_XmasBall3_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1750,6 +1844,7 @@ One of the most basic parts.`,
 	}
 
 	XmasBall4 = FGItemDescriptor{
+		Name:                    "XmasBall4",
 		ClassName:               "Desc_XmasBall4_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1768,6 +1863,7 @@ One of the most basic parts.`,
 	}
 
 	XmasBallCluster = FGItemDescriptor{
+		Name:                    "XmasBallCluster",
 		ClassName:               "Desc_XmasBallCluster_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1786,6 +1882,7 @@ One of the most basic parts.`,
 	}
 
 	XmasBow = FGItemDescriptor{
+		Name:                    "XmasBow",
 		ClassName:               "Desc_XmasBow_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1804,6 +1901,7 @@ One of the most basic parts.`,
 	}
 
 	XmasBranch = FGItemDescriptor{
+		Name:                    "XmasBranch",
 		ClassName:               "Desc_XmasBranch_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1822,6 +1920,7 @@ One of the most basic parts.`,
 	}
 
 	XmasStar = FGItemDescriptor{
+		Name:                    "XmasStar",
 		ClassName:               "Desc_XmasStar_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -1840,6 +1939,7 @@ One of the most basic parts.`,
 	}
 
 	XmasWreath = FGItemDescriptor{
+		Name:                    "XmasWreath",
 		ClassName:               "Desc_XmasWreath_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,

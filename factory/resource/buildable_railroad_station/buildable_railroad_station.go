@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableRailroadStation struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -59,6 +60,7 @@ type FGBuildableRailroadStation struct {
 
 var (
 	TrainStation = FGBuildableRailroadStation{
+		Name:                                    "TrainStation",
 		ClassName:                               "Build_TrainStation_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

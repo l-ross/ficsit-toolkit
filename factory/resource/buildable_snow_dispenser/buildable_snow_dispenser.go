@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableSnowDispenser struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -30,6 +31,7 @@ type FGBuildableSnowDispenser struct {
 
 var (
 	SnowDispenser = FGBuildableSnowDispenser{
+		Name:                                    "SnowDispenser",
 		ClassName:                               "Build_SnowDispenser_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

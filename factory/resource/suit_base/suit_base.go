@@ -9,6 +9,7 @@ import (
 )
 
 type FGSuitBase struct {
+	Name                   string
 	ClassName              string
 	MArmAnimation          string
 	MAttachSocket          string
@@ -29,6 +30,7 @@ type FGSuitBase struct {
 
 var (
 	HazmatSuit = FGSuitBase{
+		Name:                   "HazmatSuit",
 		ClassName:              "Equip_HazmatSuit_C",
 		MArmAnimation:          `AE_None`,
 		MAttachSocket:          `None`,

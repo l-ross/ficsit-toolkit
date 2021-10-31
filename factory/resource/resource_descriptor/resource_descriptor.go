@@ -9,6 +9,7 @@ import (
 )
 
 type FGResourceDescriptor struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MCanBeDiscarded         bool
@@ -32,6 +33,7 @@ type FGResourceDescriptor struct {
 
 var (
 	Coal = FGResourceDescriptor{
+		Name:                    "Coal",
 		ClassName:               "Desc_Coal_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -54,6 +56,7 @@ var (
 	}
 
 	LiquidOil = FGResourceDescriptor{
+		Name:                    "LiquidOil",
 		ClassName:               "Desc_LiquidOil_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -76,6 +79,7 @@ var (
 	}
 
 	NitrogenGas = FGResourceDescriptor{
+		Name:                    "NitrogenGas",
 		ClassName:               "Desc_NitrogenGas_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -98,6 +102,7 @@ var (
 	}
 
 	OreBauxite = FGResourceDescriptor{
+		Name:                    "OreBauxite",
 		ClassName:               "Desc_OreBauxite_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -120,6 +125,7 @@ var (
 	}
 
 	OreCopper = FGResourceDescriptor{
+		Name:                    "OreCopper",
 		ClassName:               "Desc_OreCopper_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -143,6 +149,7 @@ Basic resource mainly used for electricity.`,
 	}
 
 	OreGold = FGResourceDescriptor{
+		Name:                    "OreGold",
 		ClassName:               "Desc_OreGold_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -165,6 +172,7 @@ Basic resource mainly used for electricity.`,
 	}
 
 	OreIron = FGResourceDescriptor{
+		Name:                    "OreIron",
 		ClassName:               "Desc_OreIron_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -188,6 +196,7 @@ The most essential basic resource.`,
 	}
 
 	OreUranium = FGResourceDescriptor{
+		Name:                    "OreUranium",
 		ClassName:               "Desc_OreUranium_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -213,6 +222,7 @@ Caution: Moderately Radioactive.`,
 	}
 
 	RawQuartz = FGResourceDescriptor{
+		Name:                    "RawQuartz",
 		ClassName:               "Desc_RawQuartz_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -235,6 +245,7 @@ Caution: Moderately Radioactive.`,
 	}
 
 	Stone = FGResourceDescriptor{
+		Name:                    "Stone",
 		ClassName:               "Desc_Stone_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -258,6 +269,7 @@ Basic resource mainly used for stable foundations.`,
 	}
 
 	Sulfur = FGResourceDescriptor{
+		Name:                    "Sulfur",
 		ClassName:               "Desc_Sulfur_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -280,6 +292,7 @@ Basic resource mainly used for stable foundations.`,
 	}
 
 	Water = FGResourceDescriptor{
+		Name:                    "Water",
 		ClassName:               "Desc_Water_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,

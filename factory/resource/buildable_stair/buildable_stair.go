@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableStair struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -35,6 +36,7 @@ type FGBuildableStair struct {
 
 var (
 	Stair1b = FGBuildableStair{
+		Name:                                    "Stair1b",
 		ClassName:                               "Build_Stair_1b_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -63,6 +65,7 @@ Height: 4 m`,
 	}
 
 	StairsLeft01 = FGBuildableStair{
+		Name:                                    "StairsLeft01",
 		ClassName:                               "Build_Stairs_Left_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -91,6 +94,7 @@ Makes it easier to get to other floors of your structures.`,
 	}
 
 	StairsRight01 = FGBuildableStair{
+		Name:                                    "StairsRight01",
 		ClassName:                               "Build_Stairs_Right_01_C",
 		MAllowCleranceSeparationEvenIfStackedOn: true,
 		MBlockSharingMaterialInstanceMapping:    false,

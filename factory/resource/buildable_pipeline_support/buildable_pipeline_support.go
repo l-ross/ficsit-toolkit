@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildablePipelineSupport struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -35,6 +36,7 @@ type FGBuildablePipelineSupport struct {
 
 var (
 	HyperPoleStackable = FGBuildablePipelineSupport{
+		Name:                                    "HyperPoleStackable",
 		ClassName:                               "Build_HyperPoleStackable_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -62,6 +64,7 @@ var (
 	}
 
 	PipeHyperSupport = FGBuildablePipelineSupport{
+		Name:                                    "PipeHyperSupport",
 		ClassName:                               "Build_PipeHyperSupport_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -89,6 +92,7 @@ var (
 	}
 
 	PipeSupportStackable = FGBuildablePipelineSupport{
+		Name:                                    "PipeSupportStackable",
 		ClassName:                               "Build_PipeSupportStackable_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -116,6 +120,7 @@ var (
 	}
 
 	PipelineSupport = FGBuildablePipelineSupport{
+		Name:                                    "PipelineSupport",
 		ClassName:                               "Build_PipelineSupport_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

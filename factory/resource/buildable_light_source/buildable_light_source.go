@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableLightSource struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -35,6 +36,7 @@ type FGBuildableLightSource struct {
 
 var (
 	CeilingLight = FGBuildableLightSource{
+		Name:                                    "CeilingLight",
 		ClassName:                               "Build_CeilingLight_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -65,6 +67,7 @@ Allows up to two Power Line connections.`,
 	}
 
 	StreetLight = FGBuildableLightSource{
+		Name:                                    "StreetLight",
 		ClassName:                               "Build_StreetLight_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildablePipelinePump struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -71,6 +72,7 @@ type FGBuildablePipelinePump struct {
 
 var (
 	PipelinePump = FGBuildablePipelinePump{
+		Name:                                    "PipelinePump",
 		ClassName:                               "Build_PipelinePump_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -136,6 +138,7 @@ NOTE: Head Lift does not stack, so space between Pumps is recommended.`,
 	}
 
 	PipelinePumpMk2 = FGBuildablePipelinePump{
+		Name:                                    "PipelinePumpMk2",
 		ClassName:                               "Build_PipelinePumpMk2_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -202,6 +205,7 @@ NOTE: Head Lift does not stack, so space between Pumps is recommended.`,
 	}
 
 	Valve = FGBuildablePipelinePump{
+		Name:                                    "Valve",
 		ClassName:                               "Build_Valve_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

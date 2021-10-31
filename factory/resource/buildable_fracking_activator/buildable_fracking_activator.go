@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableFrackingActivator struct {
+	Name                                    string
 	ClassName                               string
 	ConnectedExtractorCountChangedDelegate  string
 	CurrentPotentialChangedDelegate         string
@@ -64,6 +65,7 @@ type FGBuildableFrackingActivator struct {
 
 var (
 	FrackingSmasher = FGBuildableFrackingActivator{
+		Name:                                    "FrackingSmasher",
 		ClassName:                               "Build_FrackingSmasher_C",
 		ConnectedExtractorCountChangedDelegate:  `()`,
 		CurrentPotentialChangedDelegate:         `()`,

@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildableConveyorLift struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -36,6 +37,7 @@ type FGBuildableConveyorLift struct {
 
 var (
 	ConveyorLiftMk1 = FGBuildableConveyorLift{
+		Name:                                    "ConveyorLiftMk1",
 		ClassName:                               "Build_ConveyorLiftMk1_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -64,6 +66,7 @@ var (
 	}
 
 	ConveyorLiftMk2 = FGBuildableConveyorLift{
+		Name:                                    "ConveyorLiftMk2",
 		ClassName:                               "Build_ConveyorLiftMk2_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -92,6 +95,7 @@ var (
 	}
 
 	ConveyorLiftMk3 = FGBuildableConveyorLift{
+		Name:                                    "ConveyorLiftMk3",
 		ClassName:                               "Build_ConveyorLiftMk3_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -120,6 +124,7 @@ var (
 	}
 
 	ConveyorLiftMk4 = FGBuildableConveyorLift{
+		Name:                                    "ConveyorLiftMk4",
 		ClassName:                               "Build_ConveyorLiftMk4_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,
@@ -148,6 +153,7 @@ var (
 	}
 
 	ConveyorLiftMk5 = FGBuildableConveyorLift{
+		Name:                                    "ConveyorLiftMk5",
 		ClassName:                               "Build_ConveyorLiftMk5_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

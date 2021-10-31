@@ -9,6 +9,7 @@ import (
 )
 
 type FGConsumableDescriptor struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MCanBeDiscarded         bool
@@ -32,6 +33,7 @@ type FGConsumableDescriptor struct {
 
 var (
 	Berry = FGConsumableDescriptor{
+		Name:                    "Berry",
 		ClassName:               "Desc_Berry_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -57,6 +59,7 @@ Can be eaten to restore one health segment.`,
 	}
 
 	EquipmentDescriptorBeacon = FGConsumableDescriptor{
+		Name:                    "EquipmentDescriptorBeacon",
 		ClassName:               "BP_EquipmentDescriptorBeacon_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -81,6 +84,7 @@ Used to mark areas of interest. Displayed on your compass with the color and nam
 	}
 
 	Medkit = FGConsumableDescriptor{
+		Name:                    "Medkit",
 		ClassName:               "Desc_Medkit_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -106,6 +110,7 @@ Can be inhaled to fully restore health.`,
 	}
 
 	Nut = FGConsumableDescriptor{
+		Name:                    "Nut",
 		ClassName:               "Desc_Nut_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -131,6 +136,7 @@ Can be eaten to restore half a health segment.`,
 	}
 
 	Parachute = FGConsumableDescriptor{
+		Name:                    "Parachute",
 		ClassName:               "Desc_Parachute_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,
@@ -155,6 +161,7 @@ Slows down your fall when activated in mid-air.`,
 	}
 
 	Shroom = FGConsumableDescriptor{
+		Name:                    "Shroom",
 		ClassName:               "Desc_Shroom_C",
 		MAbbreviatedDisplayName: ``,
 		MCanBeDiscarded:         true,

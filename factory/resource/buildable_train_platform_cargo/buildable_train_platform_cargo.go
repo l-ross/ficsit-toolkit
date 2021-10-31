@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableTrainPlatformCargo struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -76,6 +77,7 @@ type FGBuildableTrainPlatformCargo struct {
 
 var (
 	TrainDockingStation = FGBuildableTrainPlatformCargo{
+		Name:                                    "TrainDockingStation",
 		ClassName:                               "Build_TrainDockingStation_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -145,6 +147,7 @@ Needs to be connected to a powered Railway to function.`,
 	}
 
 	TrainDockingStationLiquid = FGBuildableTrainPlatformCargo{
+		Name:                                    "TrainDockingStationLiquid",
 		ClassName:                               "Build_TrainDockingStationLiquid_C",
 		MAddToSignificanceManager:               true,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

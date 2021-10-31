@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableStorage struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -55,6 +56,7 @@ type FGBuildableStorage struct {
 
 var (
 	StorageContainerMk1 = FGBuildableStorage{
+		Name:                                    "StorageContainerMk1",
 		ClassName:                               "Build_StorageContainerMk1_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -101,6 +103,7 @@ Has an input and output for conveyor belts.`,
 	}
 
 	StorageContainerMk2 = FGBuildableStorage{
+		Name:                                    "StorageContainerMk2",
 		ClassName:                               "Build_StorageContainerMk2_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -147,6 +150,7 @@ Has two inputs and outputs for conveyor belts.`,
 	}
 
 	StoragePlayer = FGBuildableStorage{
+		Name:                                    "StoragePlayer",
 		ClassName:                               "Build_StoragePlayer_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

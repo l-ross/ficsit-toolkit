@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildablePowerStorage struct {
+	Name                                    string
 	ClassName                               string
 	MActivationEventID                      int
 	MAddToSignificanceManager               bool
@@ -61,6 +62,7 @@ type FGBuildablePowerStorage struct {
 
 var (
 	PowerStorageMk1 = FGBuildablePowerStorage{
+		Name:                                    "PowerStorageMk1",
 		ClassName:                               "Build_PowerStorageMk1_C",
 		MActivationEventID:                      0,
 		MAddToSignificanceManager:               true,

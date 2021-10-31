@@ -9,6 +9,7 @@ import (
 )
 
 type FGVehicleDescriptor struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MBuildMenuPriority      float64
@@ -32,6 +33,7 @@ type FGVehicleDescriptor struct {
 
 var (
 	CyberWagon = FGVehicleDescriptor{
+		Name:                    "CyberWagon",
 		ClassName:               "Desc_CyberWagon_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
@@ -53,6 +55,7 @@ var (
 	}
 
 	DroneTransport = FGVehicleDescriptor{
+		Name:                    "DroneTransport",
 		ClassName:               "Desc_DroneTransport_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
@@ -73,6 +76,7 @@ var (
 	}
 
 	Explorer = FGVehicleDescriptor{
+		Name:                    "Explorer",
 		ClassName:               "Desc_Explorer_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
@@ -94,6 +98,7 @@ var (
 	}
 
 	FreightWagon = FGVehicleDescriptor{
+		Name:                    "FreightWagon",
 		ClassName:               "Desc_FreightWagon_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      50.000000,
@@ -114,6 +119,7 @@ var (
 	}
 
 	Locomotive = FGVehicleDescriptor{
+		Name:                    "Locomotive",
 		ClassName:               "Desc_Locomotive_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      49.000000,
@@ -134,6 +140,7 @@ var (
 	}
 
 	Tractor = FGVehicleDescriptor{
+		Name:                    "Tractor",
 		ClassName:               "Desc_Tractor_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
@@ -155,6 +162,7 @@ var (
 	}
 
 	Truck = FGVehicleDescriptor{
+		Name:                    "Truck",
 		ClassName:               "Desc_Truck_C",
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,

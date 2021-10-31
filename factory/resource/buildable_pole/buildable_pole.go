@@ -7,6 +7,7 @@ import (
 )
 
 type FGBuildablePole struct {
+	Name                                    string
 	ClassName                               string
 	MAllowCleranceSeparationEvenIfStackedOn bool
 	MBlockSharingMaterialInstanceMapping    bool
@@ -34,6 +35,7 @@ type FGBuildablePole struct {
 
 var (
 	ConveyorPole = FGBuildablePole{
+		Name:                                    "ConveyorPole",
 		ClassName:                               "Build_ConveyorPole_C",
 		MAllowCleranceSeparationEvenIfStackedOn: false,
 		MBlockSharingMaterialInstanceMapping:    false,

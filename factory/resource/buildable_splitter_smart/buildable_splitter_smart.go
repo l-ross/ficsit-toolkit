@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableSplitterSmart struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -60,6 +61,7 @@ type FGBuildableSplitterSmart struct {
 
 var (
 	ConveyorAttachmentSplitterProgrammable = FGBuildableSplitterSmart{
+		Name:                                    "ConveyorAttachmentSplitterProgrammable",
 		ClassName:                               "Build_ConveyorAttachmentSplitterProgrammable_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,
@@ -111,6 +113,7 @@ You can set rules for each output to decide exactly where each part should go.`,
 	}
 
 	ConveyorAttachmentSplitterSmart = FGBuildableSplitterSmart{
+		Name:                                    "ConveyorAttachmentSplitterSmart",
 		ClassName:                               "Build_ConveyorAttachmentSplitterSmart_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

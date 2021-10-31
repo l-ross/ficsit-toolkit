@@ -9,6 +9,7 @@ import (
 )
 
 type FGChainsaw struct {
+	Name                        string
 	ClassName                   string
 	MArmAnimation               string
 	MAttachSocket               string
@@ -33,6 +34,7 @@ type FGChainsaw struct {
 
 var (
 	Chainsaw = FGChainsaw{
+		Name:                        "Chainsaw",
 		ClassName:                   "Equip_Chainsaw_C",
 		MArmAnimation:               `AE_ChainSaw`,
 		MAttachSocket:               `hand_lSocket`,

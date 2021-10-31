@@ -9,6 +9,7 @@ import (
 )
 
 type FGSnowballWeapon struct {
+	Name                    string
 	ClassName               string
 	MArmAnimation           string
 	MAttachSocket           string
@@ -33,6 +34,7 @@ type FGSnowballWeapon struct {
 
 var (
 	SnowballWeaponMittens = FGSnowballWeapon{
+		Name:                    "SnowballWeaponMittens",
 		ClassName:               "Equip_SnowballWeaponMittens_C",
 		MArmAnimation:           `AE_Generic1Hand`,
 		MAttachSocket:           `hand_lSocket`,

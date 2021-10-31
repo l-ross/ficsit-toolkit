@@ -9,6 +9,7 @@ import (
 )
 
 type FGBuildableAttachmentMerger struct {
+	Name                                    string
 	ClassName                               string
 	MAddToSignificanceManager               bool
 	MAllowCleranceSeparationEvenIfStackedOn bool
@@ -54,6 +55,7 @@ type FGBuildableAttachmentMerger struct {
 
 var (
 	ConveyorAttachmentMerger = FGBuildableAttachmentMerger{
+		Name:                                    "ConveyorAttachmentMerger",
 		ClassName:                               "Build_ConveyorAttachmentMerger_C",
 		MAddToSignificanceManager:               false,
 		MAllowCleranceSeparationEvenIfStackedOn: false,

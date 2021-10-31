@@ -9,6 +9,7 @@ import (
 )
 
 type FGWeaponInstantFire struct {
+	Name                   string
 	ClassName              string
 	Fire                   string
 	MArmAnimation          string
@@ -31,6 +32,7 @@ type FGWeaponInstantFire struct {
 
 var (
 	Rifle = FGWeaponInstantFire{
+		Name:                   "Rifle",
 		ClassName:              "Equip_Rifle_C",
 		Fire:                   `()`,
 		MArmAnimation:          `AE_Rifle`,

@@ -9,6 +9,7 @@ import (
 )
 
 type FGItemDescriptorNuclearFuel struct {
+	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MAmountOfWaste          int
@@ -30,6 +31,7 @@ type FGItemDescriptorNuclearFuel struct {
 
 var (
 	NuclearFuelRod = FGItemDescriptorNuclearFuel{
+		Name:                    "NuclearFuelRod",
 		ClassName:               "Desc_NuclearFuelRod_C",
 		MAbbreviatedDisplayName: ``,
 		MAmountOfWaste:          50,
@@ -53,6 +55,7 @@ Caution: Moderately Radioactive.`,
 	}
 
 	PlutoniumFuelRod = FGItemDescriptorNuclearFuel{
+		Name:                    "PlutoniumFuelRod",
 		ClassName:               "Desc_PlutoniumFuelRod_C",
 		MAbbreviatedDisplayName: ``,
 		MAmountOfWaste:          10,
