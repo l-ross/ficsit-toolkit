@@ -7142,6 +7142,8 @@ var classNameToVar = map[string]*FGRecipe{
 }
 
 func GetByFullName(fullName string) (*FGRecipe, error) {
+	fullName = fmt.Sprintf("BlueprintGeneratedClass %s", fullName)
+
 	if v, ok := fullNameToVar[fullName]; ok {
 		return v, nil
 	}

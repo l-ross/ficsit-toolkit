@@ -130,7 +130,6 @@ type Class struct {
 }
 
 var invalidChars = regexp.MustCompile(`[^a-zA-Z0-9_]`)
-var startDigit = regexp.MustCompile(`^\d`)
 
 func (c *Class) UnmarshalJSON(b []byte) error {
 	// Unmarshal all the fields
@@ -152,21 +151,7 @@ func (c *Class) UnmarshalJSON(b []byte) error {
 		}
 	}
 
-	// Set Name based on the ClassName
-	// We want to:
-	// - Remove the _C suffix
-	// - Ideally remove everything before the first underscore. However, we need to keep it
-	//   if this would result in the Name starting with a number as we would then have an invalid
-	//   variable name.
-	// - Replace hyphens with underscores.
-	s := strings.Split(c.ClassName, "_")
-	l := len(s)
-	c.Name = strings.Join(s[1:l-1], "")
-	if startDigit.MatchString(c.Name) {
-		// Name starts with a digit so add the first element back.
-		c.Name = strings.Join(s[0:l-1], "")
-	}
-	c.Name = strings.ReplaceAll(c.Name, "-", "_")
+	c.Name = createNameFromClassName(c.ClassName)
 
 	for name, value := range c.rawFields {
 		// Make sure the first character is upper case so that
@@ -347,34 +332,6 @@ func (r *Resource) createStructField(k string, v interface{}) (*StructField, err
 
 			sf.Value = value
 			sf.Type = t
-
-		//case strings.HasPrefix(vString, "SS_"):
-		//	r.ImportResourcePkg = true
-		//	sf.Type = "resource.StackSize"
-		//
-		//	v, ok := stackSize[vString]
-		//	if !ok {
-		//		return nil, fmt.Errorf("failed to parse stack size value %s", vString)
-		//	}
-		//	sf.Value = v
-		//case strings.HasPrefix(vString, "RF_"):
-		//	r.ImportResourcePkg = true
-		//	sf.Type = "resource.Form"
-		//
-		//	v, ok := resourceForm[vString]
-		//	if !ok {
-		//		return nil, fmt.Errorf("failed to parse resource form value %s", vString)
-		//	}
-		//	sf.Value = v
-		//case strings.HasPrefix(vString, "EST_"):
-		//	r.ImportResourcePkg = true
-		//	sf.Type = "resource.SchematicType"
-		//
-		//	v, ok := schematicType[vString]
-		//	if !ok {
-		//		return nil, fmt.Errorf("failed to parse schematic type value %s", vString)
-		//	}
-		//	sf.Value = v
 		case floatRegexp.MatchString(vString):
 			sf.Type = "float64"
 			sf.Value = vString
@@ -571,6 +528,8 @@ var classNameToVar = map[string]*{{.TypeName}} {
 
 {{if .HasFullName}}
 func GetByFullName(fullName string) (*{{.TypeName}}, error) {
+	fullName = fmt.Sprintf("BlueprintGeneratedClass %s", fullName)
+
 	if v, ok := fullNameToVar[fullName]; ok {
 		return v, nil
 	}

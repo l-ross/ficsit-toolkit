@@ -1,5 +1,10 @@
 package resource
 
+type Amount struct {
+	ClassName string
+	Amount    int
+}
+
 type StackSize int
 
 const (

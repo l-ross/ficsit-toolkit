@@ -9,6 +9,29 @@ import (
 	u "unicode"
 )
 
+var startDigit = regexp.MustCompile(`^\d`)
+
+func createNameFromClassName(className string) string {
+	// Create Name based on the ClassName
+	// We want to:
+	// - Remove the _C suffix
+	// - Ideally remove everything before the first underscore. However, we need to keep it
+	//   if this would result in the Name starting with a number as we would then have an invalid
+	//   variable name.
+	// - Replace hyphens with underscores.
+
+	s := strings.Split(className, "_")
+	l := len(s)
+	name := strings.Join(s[1:l-1], "")
+	if startDigit.MatchString(name) {
+		// Name starts with a digit so add the first element back.
+		name = strings.Join(s[0:l-1], "")
+	}
+	name = strings.ReplaceAll(name, "-", "_")
+
+	return name
+}
+
 var fgRegexp = regexp.MustCompile(`^FG`)
 
 func nativeClassToTypeNameAndPkgName(s string) (string, string) {

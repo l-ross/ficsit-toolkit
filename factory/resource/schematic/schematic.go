@@ -12418,6 +12418,8 @@ var classNameToVar = map[string]*FGSchematic{
 }
 
 func GetByFullName(fullName string) (*FGSchematic, error) {
+	fullName = fmt.Sprintf("BlueprintGeneratedClass %s", fullName)
+
 	if v, ok := fullNameToVar[fullName]; ok {
 		return v, nil
 	}
