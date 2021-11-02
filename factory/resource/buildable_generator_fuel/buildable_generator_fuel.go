@@ -328,16 +328,16 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableGeneratorFuel, error) {
+func GetByClassName(className string) (FGBuildableGeneratorFuel, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableGeneratorFuel with class name %s", className)
+	return FGBuildableGeneratorFuel{}, fmt.Errorf("failed to find FGBuildableGeneratorFuel with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableGeneratorFuel{
-	"Build_GeneratorBiomass_C": &GeneratorBiomass,
-	"Build_GeneratorCoal_C":    &GeneratorCoal,
-	"Build_GeneratorFuel_C":    &GeneratorFuel,
+var classNameToVar = map[string]FGBuildableGeneratorFuel{
+	"Build_GeneratorBiomass_C": GeneratorBiomass,
+	"Build_GeneratorCoal_C":    GeneratorCoal,
+	"Build_GeneratorFuel_C":    GeneratorFuel,
 }

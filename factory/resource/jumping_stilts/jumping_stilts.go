@@ -38,14 +38,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGJumpingStilts, error) {
+func GetByClassName(className string) (FGJumpingStilts, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGJumpingStilts with class name %s", className)
+	return FGJumpingStilts{}, fmt.Errorf("failed to find FGJumpingStilts with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGJumpingStilts{
-	"Equip_JumpingStilts_C": &JumpingStilts,
+var classNameToVar = map[string]FGJumpingStilts{
+	"Equip_JumpingStilts_C": JumpingStilts,
 }

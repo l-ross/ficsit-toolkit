@@ -101,15 +101,15 @@ Allows up to two Power Line connections.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableFloodlight, error) {
+func GetByClassName(className string) (FGBuildableFloodlight, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFloodlight with class name %s", className)
+	return FGBuildableFloodlight{}, fmt.Errorf("failed to find FGBuildableFloodlight with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableFloodlight{
-	"Build_FloodlightPole_C": &FloodlightPole,
-	"Build_FloodlightWall_C": &FloodlightWall,
+var classNameToVar = map[string]FGBuildableFloodlight{
+	"Build_FloodlightPole_C": FloodlightPole,
+	"Build_FloodlightWall_C": FloodlightWall,
 }

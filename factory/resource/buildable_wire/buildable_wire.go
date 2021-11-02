@@ -86,15 +86,15 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableWire, error) {
+func GetByClassName(className string) (FGBuildableWire, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableWire with class name %s", className)
+	return FGBuildableWire{}, fmt.Errorf("failed to find FGBuildableWire with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableWire{
-	"Build_PowerLine_C":       &PowerLine,
-	"Build_XmassLightsLine_C": &XmassLightsLine,
+var classNameToVar = map[string]FGBuildableWire{
+	"Build_PowerLine_C":       PowerLine,
+	"Build_XmassLightsLine_C": XmassLightsLine,
 }

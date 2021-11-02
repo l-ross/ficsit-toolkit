@@ -132,14 +132,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableTradingPost, error) {
+func GetByClassName(className string) (FGBuildableTradingPost, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableTradingPost with class name %s", className)
+	return FGBuildableTradingPost{}, fmt.Errorf("failed to find FGBuildableTradingPost with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableTradingPost{
-	"Build_TradingPost_C": &TradingPost,
+var classNameToVar = map[string]FGBuildableTradingPost{
+	"Build_TradingPost_C": TradingPost,
 }

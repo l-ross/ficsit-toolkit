@@ -123,16 +123,16 @@ Makes it easier to get to other floors of your structures.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableStair, error) {
+func GetByClassName(className string) (FGBuildableStair, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableStair with class name %s", className)
+	return FGBuildableStair{}, fmt.Errorf("failed to find FGBuildableStair with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableStair{
-	"Build_Stair_1b_C":        &Stair1b,
-	"Build_Stairs_Left_01_C":  &StairsLeft01,
-	"Build_Stairs_Right_01_C": &StairsRight01,
+var classNameToVar = map[string]FGBuildableStair{
+	"Build_Stair_1b_C":        Stair1b,
+	"Build_Stairs_Left_01_C":  StairsLeft01,
+	"Build_Stairs_Right_01_C": StairsRight01,
 }

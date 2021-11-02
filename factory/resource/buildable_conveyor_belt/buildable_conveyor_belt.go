@@ -176,18 +176,18 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableConveyorBelt, error) {
+func GetByClassName(className string) (FGBuildableConveyorBelt, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableConveyorBelt with class name %s", className)
+	return FGBuildableConveyorBelt{}, fmt.Errorf("failed to find FGBuildableConveyorBelt with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableConveyorBelt{
-	"Build_ConveyorBeltMk1_C": &ConveyorBeltMk1,
-	"Build_ConveyorBeltMk2_C": &ConveyorBeltMk2,
-	"Build_ConveyorBeltMk3_C": &ConveyorBeltMk3,
-	"Build_ConveyorBeltMk4_C": &ConveyorBeltMk4,
-	"Build_ConveyorBeltMk5_C": &ConveyorBeltMk5,
+var classNameToVar = map[string]FGBuildableConveyorBelt{
+	"Build_ConveyorBeltMk1_C": ConveyorBeltMk1,
+	"Build_ConveyorBeltMk2_C": ConveyorBeltMk2,
+	"Build_ConveyorBeltMk3_C": ConveyorBeltMk3,
+	"Build_ConveyorBeltMk4_C": ConveyorBeltMk4,
+	"Build_ConveyorBeltMk5_C": ConveyorBeltMk5,
 }

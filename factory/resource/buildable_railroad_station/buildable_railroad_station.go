@@ -111,14 +111,14 @@ You can connect power to the train station to power up the trains on the railway
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableRailroadStation, error) {
+func GetByClassName(className string) (FGBuildableRailroadStation, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableRailroadStation with class name %s", className)
+	return FGBuildableRailroadStation{}, fmt.Errorf("failed to find FGBuildableRailroadStation with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableRailroadStation{
-	"Build_TrainStation_C": &TrainStation,
+var classNameToVar = map[string]FGBuildableRailroadStation{
+	"Build_TrainStation_C": TrainStation,
 }

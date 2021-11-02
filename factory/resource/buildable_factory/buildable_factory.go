@@ -329,19 +329,19 @@ You will finally have a friend!
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableFactory, error) {
+func GetByClassName(className string) (FGBuildableFactory, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFactory with class name %s", className)
+	return FGBuildableFactory{}, fmt.Errorf("failed to find FGBuildableFactory with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableFactory{
-	"Build_CandyCaneDecor_C": &CandyCaneDecor,
-	"Build_JumpPad_C":        &JumpPad,
-	"Build_JumpPadTilted_C":  &JumpPadTilted,
-	"Build_LandingPad_C":     &LandingPad,
-	"Build_LookoutTower_C":   &LookoutTower,
-	"Build_Snowman_C":        &Snowman,
+var classNameToVar = map[string]FGBuildableFactory{
+	"Build_CandyCaneDecor_C": CandyCaneDecor,
+	"Build_JumpPad_C":        JumpPad,
+	"Build_JumpPadTilted_C":  JumpPadTilted,
+	"Build_LandingPad_C":     LandingPad,
+	"Build_LookoutTower_C":   LookoutTower,
+	"Build_Snowman_C":        Snowman,
 }

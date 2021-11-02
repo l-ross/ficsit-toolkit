@@ -122,14 +122,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGPipeHyperStart, error) {
+func GetByClassName(className string) (FGPipeHyperStart, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGPipeHyperStart with class name %s", className)
+	return FGPipeHyperStart{}, fmt.Errorf("failed to find FGPipeHyperStart with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGPipeHyperStart{
-	"Build_PipeHyperStart_C": &PipeHyperStart,
+var classNameToVar = map[string]FGPipeHyperStart{
+	"Build_PipeHyperStart_C": PipeHyperStart,
 }

@@ -247,22 +247,22 @@ These parts can then be used in construction of different factory buildings, veh
 	}
 )
 
-func GetByClassName(className string) (*FGBuildable, error) {
+func GetByClassName(className string) (FGBuildable, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildable with class name %s", className)
+	return FGBuildable{}, fmt.Errorf("failed to find FGBuildable with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildable{
-	"Build_ConveyorPoleWall_C":        &ConveyorPoleWall,
-	"Build_HyperTubeWallHole_C":       &HyperTubeWallHole,
-	"Build_HyperTubeWallSupport_C":    &HyperTubeWallSupport,
-	"Build_PipelineSupportWall_C":     &PipelineSupportWall,
-	"Build_PipelineSupportWallHole_C": &PipelineSupportWallHole,
-	"Build_WorkBench_C":               &WorkBench,
-	"Build_Workshop_C":                &Workshop,
-	"Build_WreathDecor_C":             &WreathDecor,
-	"Build_XmassTree_C":               &XmassTree,
+var classNameToVar = map[string]FGBuildable{
+	"Build_ConveyorPoleWall_C":        ConveyorPoleWall,
+	"Build_HyperTubeWallHole_C":       HyperTubeWallHole,
+	"Build_HyperTubeWallSupport_C":    HyperTubeWallSupport,
+	"Build_PipelineSupportWall_C":     PipelineSupportWall,
+	"Build_PipelineSupportWallHole_C": PipelineSupportWallHole,
+	"Build_WorkBench_C":               WorkBench,
+	"Build_Workshop_C":                Workshop,
+	"Build_WreathDecor_C":             WreathDecor,
+	"Build_XmassTree_C":               XmassTree,
 }

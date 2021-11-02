@@ -217,15 +217,15 @@ Needs to be connected to a powered Railway to function.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableTrainPlatformCargo, error) {
+func GetByClassName(className string) (FGBuildableTrainPlatformCargo, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableTrainPlatformCargo with class name %s", className)
+	return FGBuildableTrainPlatformCargo{}, fmt.Errorf("failed to find FGBuildableTrainPlatformCargo with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableTrainPlatformCargo{
-	"Build_TrainDockingStation_C":       &TrainDockingStation,
-	"Build_TrainDockingStationLiquid_C": &TrainDockingStationLiquid,
+var classNameToVar = map[string]FGBuildableTrainPlatformCargo{
+	"Build_TrainDockingStation_C":       TrainDockingStation,
+	"Build_TrainDockingStationLiquid_C": TrainDockingStationLiquid,
 }

@@ -64,14 +64,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableLadder, error) {
+func GetByClassName(className string) (FGBuildableLadder, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableLadder with class name %s", className)
+	return FGBuildableLadder{}, fmt.Errorf("failed to find FGBuildableLadder with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableLadder{
-	"Build_Ladder_C": &Ladder,
+var classNameToVar = map[string]FGBuildableLadder{
+	"Build_Ladder_C": Ladder,
 }

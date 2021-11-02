@@ -160,14 +160,14 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableGeneratorNuclear, error) {
+func GetByClassName(className string) (FGBuildableGeneratorNuclear, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableGeneratorNuclear with class name %s", className)
+	return FGBuildableGeneratorNuclear{}, fmt.Errorf("failed to find FGBuildableGeneratorNuclear with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableGeneratorNuclear{
-	"Build_GeneratorNuclear_C": &GeneratorNuclear,
+var classNameToVar = map[string]FGBuildableGeneratorNuclear{
+	"Build_GeneratorNuclear_C": GeneratorNuclear,
 }

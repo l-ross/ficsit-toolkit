@@ -315,25 +315,25 @@ Basic resource mainly used for stable foundations.`,
 	}
 )
 
-func GetByClassName(className string) (*FGResourceDescriptor, error) {
+func GetByClassName(className string) (FGResourceDescriptor, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGResourceDescriptor with class name %s", className)
+	return FGResourceDescriptor{}, fmt.Errorf("failed to find FGResourceDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGResourceDescriptor{
-	"Desc_Coal_C":        &Coal,
-	"Desc_LiquidOil_C":   &LiquidOil,
-	"Desc_NitrogenGas_C": &NitrogenGas,
-	"Desc_OreBauxite_C":  &OreBauxite,
-	"Desc_OreCopper_C":   &OreCopper,
-	"Desc_OreGold_C":     &OreGold,
-	"Desc_OreIron_C":     &OreIron,
-	"Desc_OreUranium_C":  &OreUranium,
-	"Desc_RawQuartz_C":   &RawQuartz,
-	"Desc_Stone_C":       &Stone,
-	"Desc_Sulfur_C":      &Sulfur,
-	"Desc_Water_C":       &Water,
+var classNameToVar = map[string]FGResourceDescriptor{
+	"Desc_Coal_C":        Coal,
+	"Desc_LiquidOil_C":   LiquidOil,
+	"Desc_NitrogenGas_C": NitrogenGas,
+	"Desc_OreBauxite_C":  OreBauxite,
+	"Desc_OreCopper_C":   OreCopper,
+	"Desc_OreGold_C":     OreGold,
+	"Desc_OreIron_C":     OreIron,
+	"Desc_OreUranium_C":  OreUranium,
+	"Desc_RawQuartz_C":   RawQuartz,
+	"Desc_Stone_C":       Stone,
+	"Desc_Sulfur_C":      Sulfur,
+	"Desc_Water_C":       Water,
 }

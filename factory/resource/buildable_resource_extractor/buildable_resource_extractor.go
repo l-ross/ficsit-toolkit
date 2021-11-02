@@ -302,17 +302,17 @@ Can be built on an Oil Node to extract Crude Oil. Extraction rates depend on nod
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableResourceExtractor, error) {
+func GetByClassName(className string) (FGBuildableResourceExtractor, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableResourceExtractor with class name %s", className)
+	return FGBuildableResourceExtractor{}, fmt.Errorf("failed to find FGBuildableResourceExtractor with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableResourceExtractor{
-	"Build_MinerMk1_C": &MinerMk1,
-	"Build_MinerMk2_C": &MinerMk2,
-	"Build_MinerMk3_C": &MinerMk3,
-	"Build_OilPump_C":  &OilPump,
+var classNameToVar = map[string]FGBuildableResourceExtractor{
+	"Build_MinerMk1_C": MinerMk1,
+	"Build_MinerMk2_C": MinerMk2,
+	"Build_MinerMk3_C": MinerMk3,
+	"Build_OilPump_C":  OilPump,
 }

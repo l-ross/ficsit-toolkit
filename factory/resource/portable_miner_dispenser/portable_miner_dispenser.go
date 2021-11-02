@@ -38,14 +38,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGPortableMinerDispenser, error) {
+func GetByClassName(className string) (FGPortableMinerDispenser, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGPortableMinerDispenser with class name %s", className)
+	return FGPortableMinerDispenser{}, fmt.Errorf("failed to find FGPortableMinerDispenser with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGPortableMinerDispenser{
-	"Equip_PortableMinerDispenser_C": &PortableMinerDispenser,
+var classNameToVar = map[string]FGPortableMinerDispenser{
+	"Equip_PortableMinerDispenser_C": PortableMinerDispenser,
 }

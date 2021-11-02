@@ -58,14 +58,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGSnowballWeapon, error) {
+func GetByClassName(className string) (FGSnowballWeapon, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGSnowballWeapon with class name %s", className)
+	return FGSnowballWeapon{}, fmt.Errorf("failed to find FGSnowballWeapon with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGSnowballWeapon{
-	"Equip_SnowballWeaponMittens_C": &SnowballWeaponMittens,
+var classNameToVar = map[string]FGSnowballWeapon{
+	"Equip_SnowballWeaponMittens_C": SnowballWeaponMittens,
 }

@@ -150,19 +150,19 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGPoleDescriptor, error) {
+func GetByClassName(className string) (FGPoleDescriptor, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGPoleDescriptor with class name %s", className)
+	return FGPoleDescriptor{}, fmt.Errorf("failed to find FGPoleDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGPoleDescriptor{
-	"Desc_ConveyorPole_C":          &ConveyorPole,
-	"Desc_ConveyorPoleStackable_C": &ConveyorPoleStackable,
-	"Desc_HyperPoleStackable_C":    &HyperPoleStackable,
-	"Desc_PipeHyperSupport_C":      &PipeHyperSupport,
-	"Desc_PipeSupportStackable_C":  &PipeSupportStackable,
-	"Desc_PipelineSupport_C":       &PipelineSupport,
+var classNameToVar = map[string]FGPoleDescriptor{
+	"Desc_ConveyorPole_C":          ConveyorPole,
+	"Desc_ConveyorPoleStackable_C": ConveyorPoleStackable,
+	"Desc_HyperPoleStackable_C":    HyperPoleStackable,
+	"Desc_PipeHyperSupport_C":      PipeHyperSupport,
+	"Desc_PipeSupportStackable_C":  PipeSupportStackable,
+	"Desc_PipelineSupport_C":       PipelineSupport,
 }

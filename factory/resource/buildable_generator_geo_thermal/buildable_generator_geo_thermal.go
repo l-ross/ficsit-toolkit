@@ -123,14 +123,14 @@ Pure 200-600 MW (400 MW average)`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableGeneratorGeoThermal, error) {
+func GetByClassName(className string) (FGBuildableGeneratorGeoThermal, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableGeneratorGeoThermal with class name %s", className)
+	return FGBuildableGeneratorGeoThermal{}, fmt.Errorf("failed to find FGBuildableGeneratorGeoThermal with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableGeneratorGeoThermal{
-	"Build_GeneratorGeoThermal_C": &GeneratorGeoThermal,
+var classNameToVar = map[string]FGBuildableGeneratorGeoThermal{
+	"Build_GeneratorGeoThermal_C": GeneratorGeoThermal,
 }

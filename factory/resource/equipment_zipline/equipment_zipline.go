@@ -50,14 +50,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGEquipmentZipline, error) {
+func GetByClassName(className string) (FGEquipmentZipline, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGEquipmentZipline with class name %s", className)
+	return FGEquipmentZipline{}, fmt.Errorf("failed to find FGEquipmentZipline with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGEquipmentZipline{
-	"Equip_Zipline_C": &Zipline,
+var classNameToVar = map[string]FGEquipmentZipline{
+	"Equip_Zipline_C": Zipline,
 }

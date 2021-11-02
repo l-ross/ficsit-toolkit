@@ -101,14 +101,14 @@ Produces 15 Gifts per minute.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableFactorySimpleProducer, error) {
+func GetByClassName(className string) (FGBuildableFactorySimpleProducer, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFactorySimpleProducer with class name %s", className)
+	return FGBuildableFactorySimpleProducer{}, fmt.Errorf("failed to find FGBuildableFactorySimpleProducer with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableFactorySimpleProducer{
-	"Build_TreeGiftProducer_C": &TreeGiftProducer,
+var classNameToVar = map[string]FGBuildableFactorySimpleProducer{
+	"Build_TreeGiftProducer_C": TreeGiftProducer,
 }

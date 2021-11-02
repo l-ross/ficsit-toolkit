@@ -136,14 +136,14 @@ Caution: Be sure to land safely!`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableJumppad, error) {
+func GetByClassName(className string) (FGBuildableJumppad, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableJumppad with class name %s", className)
+	return FGBuildableJumppad{}, fmt.Errorf("failed to find FGBuildableJumppad with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableJumppad{
-	"Build_JumpPadAdjustable_C": &JumpPadAdjustable,
+var classNameToVar = map[string]FGBuildableJumppad{
+	"Build_JumpPadAdjustable_C": JumpPadAdjustable,
 }

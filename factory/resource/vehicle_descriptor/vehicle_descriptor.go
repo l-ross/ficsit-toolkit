@@ -184,20 +184,20 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGVehicleDescriptor, error) {
+func GetByClassName(className string) (FGVehicleDescriptor, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGVehicleDescriptor with class name %s", className)
+	return FGVehicleDescriptor{}, fmt.Errorf("failed to find FGVehicleDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGVehicleDescriptor{
-	"Desc_CyberWagon_C":     &CyberWagon,
-	"Desc_DroneTransport_C": &DroneTransport,
-	"Desc_Explorer_C":       &Explorer,
-	"Desc_FreightWagon_C":   &FreightWagon,
-	"Desc_Locomotive_C":     &Locomotive,
-	"Desc_Tractor_C":        &Tractor,
-	"Desc_Truck_C":          &Truck,
+var classNameToVar = map[string]FGVehicleDescriptor{
+	"Desc_CyberWagon_C":     CyberWagon,
+	"Desc_DroneTransport_C": DroneTransport,
+	"Desc_Explorer_C":       Explorer,
+	"Desc_FreightWagon_C":   FreightWagon,
+	"Desc_Locomotive_C":     Locomotive,
+	"Desc_Tractor_C":        Tractor,
+	"Desc_Truck_C":          Truck,
 }

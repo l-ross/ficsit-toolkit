@@ -79,15 +79,15 @@ Caution: HIGHLY Radioactive.`,
 	}
 )
 
-func GetByClassName(className string) (*FGItemDescriptorNuclearFuel, error) {
+func GetByClassName(className string) (FGItemDescriptorNuclearFuel, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGItemDescriptorNuclearFuel with class name %s", className)
+	return FGItemDescriptorNuclearFuel{}, fmt.Errorf("failed to find FGItemDescriptorNuclearFuel with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGItemDescriptorNuclearFuel{
-	"Desc_NuclearFuelRod_C":   &NuclearFuelRod,
-	"Desc_PlutoniumFuelRod_C": &PlutoniumFuelRod,
+var classNameToVar = map[string]FGItemDescriptorNuclearFuel{
+	"Desc_NuclearFuelRod_C":   NuclearFuelRod,
+	"Desc_PlutoniumFuelRod_C": PlutoniumFuelRod,
 }

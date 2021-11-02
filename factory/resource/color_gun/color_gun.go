@@ -60,14 +60,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGColorGun, error) {
+func GetByClassName(className string) (FGColorGun, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGColorGun with class name %s", className)
+	return FGColorGun{}, fmt.Errorf("failed to find FGColorGun with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGColorGun{
-	"Equip_ColorGun_C": &ColorGun,
+var classNameToVar = map[string]FGColorGun{
+	"Equip_ColorGun_C": ColorGun,
 }

@@ -113,14 +113,14 @@ Placing the tower higher up increases the maximum area revealed.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableRadarTower, error) {
+func GetByClassName(className string) (FGBuildableRadarTower, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableRadarTower with class name %s", className)
+	return FGBuildableRadarTower{}, fmt.Errorf("failed to find FGBuildableRadarTower with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableRadarTower{
-	"Build_RadarTower_C": &RadarTower,
+var classNameToVar = map[string]FGBuildableRadarTower{
+	"Build_RadarTower_C": RadarTower,
 }

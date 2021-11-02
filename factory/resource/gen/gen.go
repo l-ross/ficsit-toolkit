@@ -513,32 +513,32 @@ var (
 	{{end}}
 )
 
-func GetByClassName(className string) (*{{.TypeName}}, error) {
+func GetByClassName(className string) ({{.TypeName}}, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find {{.TypeName}} with class name %s", className)
+	return {{.TypeName}}{}, fmt.Errorf("failed to find {{.TypeName}} with class name %s", className)
 }
 
-var classNameToVar = map[string]*{{.TypeName}} {
-	{{range .Classes}}	"{{.ClassName}}": &{{.Name}},
+var classNameToVar = map[string]{{.TypeName}} {
+	{{range .Classes}}	"{{.ClassName}}": {{.Name}},
 	{{end}}
 }
 
 {{if .HasFullName}}
-func GetByFullName(fullName string) (*{{.TypeName}}, error) {
+func GetByFullName(fullName string) ({{.TypeName}}, error) {
 	fullName = fmt.Sprintf("BlueprintGeneratedClass %s", fullName)
 
 	if v, ok := fullNameToVar[fullName]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find {{.TypeName}} with full name %s", fullName)
+	return {{.TypeName}}{}, fmt.Errorf("failed to find {{.TypeName}} with full name %s", fullName)
 }
 
-var fullNameToVar = map[string]*{{.TypeName}} {
-	{{range .Classes}} "{{.FullName}}": &{{.Name}},
+var fullNameToVar = map[string]{{.TypeName}} {
+	{{range .Classes}} "{{.FullName}}": {{.Name}},
 	{{end}}
 }
 {{end}}

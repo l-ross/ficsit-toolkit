@@ -100,14 +100,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableAttachmentMerger, error) {
+func GetByClassName(className string) (FGBuildableAttachmentMerger, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableAttachmentMerger with class name %s", className)
+	return FGBuildableAttachmentMerger{}, fmt.Errorf("failed to find FGBuildableAttachmentMerger with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableAttachmentMerger{
-	"Build_ConveyorAttachmentMerger_C": &ConveyorAttachmentMerger,
+var classNameToVar = map[string]FGBuildableAttachmentMerger{
+	"Build_ConveyorAttachmentMerger_C": ConveyorAttachmentMerger,
 }

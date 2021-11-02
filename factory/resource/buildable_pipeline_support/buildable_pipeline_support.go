@@ -149,17 +149,17 @@ Useful to route pipelines in a more controlled manner and over long distances.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildablePipelineSupport, error) {
+func GetByClassName(className string) (FGBuildablePipelineSupport, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePipelineSupport with class name %s", className)
+	return FGBuildablePipelineSupport{}, fmt.Errorf("failed to find FGBuildablePipelineSupport with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildablePipelineSupport{
-	"Build_HyperPoleStackable_C":   &HyperPoleStackable,
-	"Build_PipeHyperSupport_C":     &PipeHyperSupport,
-	"Build_PipeSupportStackable_C": &PipeSupportStackable,
-	"Build_PipelineSupport_C":      &PipelineSupport,
+var classNameToVar = map[string]FGBuildablePipelineSupport{
+	"Build_HyperPoleStackable_C":   HyperPoleStackable,
+	"Build_PipeHyperSupport_C":     PipeHyperSupport,
+	"Build_PipeSupportStackable_C": PipeSupportStackable,
+	"Build_PipelineSupport_C":      PipelineSupport,
 }

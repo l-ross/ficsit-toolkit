@@ -266,16 +266,16 @@ NOTE: Has an in- and output direction.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildablePipelinePump, error) {
+func GetByClassName(className string) (FGBuildablePipelinePump, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePipelinePump with class name %s", className)
+	return FGBuildablePipelinePump{}, fmt.Errorf("failed to find FGBuildablePipelinePump with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildablePipelinePump{
-	"Build_PipelinePump_C":    &PipelinePump,
-	"Build_PipelinePumpMk2_C": &PipelinePumpMk2,
-	"Build_Valve_C":           &Valve,
+var classNameToVar = map[string]FGBuildablePipelinePump{
+	"Build_PipelinePump_C":    PipelinePump,
+	"Build_PipelinePumpMk2_C": PipelinePumpMk2,
+	"Build_Valve_C":           Valve,
 }

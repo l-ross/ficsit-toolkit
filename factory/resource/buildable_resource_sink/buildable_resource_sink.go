@@ -111,14 +111,14 @@ Participating pioneers will be compensated with Coupons to be spend at the AWESO
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableResourceSink, error) {
+func GetByClassName(className string) (FGBuildableResourceSink, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableResourceSink with class name %s", className)
+	return FGBuildableResourceSink{}, fmt.Errorf("failed to find FGBuildableResourceSink with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableResourceSink{
-	"Build_ResourceSink_C": &ResourceSink,
+var classNameToVar = map[string]FGBuildableResourceSink{
+	"Build_ResourceSink_C": ResourceSink,
 }

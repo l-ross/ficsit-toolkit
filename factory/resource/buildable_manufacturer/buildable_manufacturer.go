@@ -507,21 +507,21 @@ Can be automated by feeding ore into it with a conveyor belt connected to the in
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableManufacturer, error) {
+func GetByClassName(className string) (FGBuildableManufacturer, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableManufacturer with class name %s", className)
+	return FGBuildableManufacturer{}, fmt.Errorf("failed to find FGBuildableManufacturer with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableManufacturer{
-	"Build_AssemblerMk1_C":    &AssemblerMk1,
-	"Build_Blender_C":         &Blender,
-	"Build_ConstructorMk1_C":  &ConstructorMk1,
-	"Build_FoundryMk1_C":      &FoundryMk1,
-	"Build_ManufacturerMk1_C": &ManufacturerMk1,
-	"Build_OilRefinery_C":     &OilRefinery,
-	"Build_Packager_C":        &Packager,
-	"Build_SmelterMk1_C":      &SmelterMk1,
+var classNameToVar = map[string]FGBuildableManufacturer{
+	"Build_AssemblerMk1_C":    AssemblerMk1,
+	"Build_Blender_C":         Blender,
+	"Build_ConstructorMk1_C":  ConstructorMk1,
+	"Build_FoundryMk1_C":      FoundryMk1,
+	"Build_ManufacturerMk1_C": ManufacturerMk1,
+	"Build_OilRefinery_C":     OilRefinery,
+	"Build_Packager_C":        Packager,
+	"Build_SmelterMk1_C":      SmelterMk1,
 }

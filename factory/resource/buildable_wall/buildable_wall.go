@@ -612,35 +612,35 @@ The windows allow Pioneers to see through the wall.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableWall, error) {
+func GetByClassName(className string) (FGBuildableWall, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableWall with class name %s", className)
+	return FGBuildableWall{}, fmt.Errorf("failed to find FGBuildableWall with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableWall{
-	"Build_Fence_01_C":                   &Fence01,
-	"Build_Wall_8x4_01_C":                &Wall8x401,
-	"Build_Wall_8x4_02_C":                &Wall8x402,
-	"Build_Wall_Conveyor_8x4_01_C":       &WallConveyor8x401,
-	"Build_Wall_Conveyor_8x4_01_Steel_C": &WallConveyor8x401Steel,
-	"Build_Wall_Conveyor_8x4_02_C":       &WallConveyor8x402,
-	"Build_Wall_Conveyor_8x4_02_Steel_C": &WallConveyor8x402Steel,
-	"Build_Wall_Conveyor_8x4_03_C":       &WallConveyor8x403,
-	"Build_Wall_Conveyor_8x4_03_Steel_C": &WallConveyor8x403Steel,
-	"Build_Wall_Conveyor_8x4_04_C":       &WallConveyor8x404,
-	"Build_Wall_Conveyor_8x4_04_Steel_C": &WallConveyor8x404Steel,
-	"Build_Wall_Door_8x4_01_C":           &WallDoor8x401,
-	"Build_Wall_Door_8x4_01_Steel_C":     &WallDoor8x401Steel,
-	"Build_Wall_Door_8x4_02_C":           &WallDoor8x402,
-	"Build_Wall_Door_8x4_02_Steel_C":     &WallDoor8x402Steel,
-	"Build_Wall_Door_8x4_03_C":           &WallDoor8x403,
-	"Build_Wall_Door_8x4_03_Steel_C":     &WallDoor8x403Steel,
-	"Build_Wall_Gate_8x4_01_C":           &WallGate8x401,
-	"Build_Wall_Window_8x4_01_C":         &WallWindow8x401,
-	"Build_Wall_Window_8x4_02_C":         &WallWindow8x402,
-	"Build_Wall_Window_8x4_03_C":         &WallWindow8x403,
-	"Build_Wall_Window_8x4_04_C":         &WallWindow8x404,
+var classNameToVar = map[string]FGBuildableWall{
+	"Build_Fence_01_C":                   Fence01,
+	"Build_Wall_8x4_01_C":                Wall8x401,
+	"Build_Wall_8x4_02_C":                Wall8x402,
+	"Build_Wall_Conveyor_8x4_01_C":       WallConveyor8x401,
+	"Build_Wall_Conveyor_8x4_01_Steel_C": WallConveyor8x401Steel,
+	"Build_Wall_Conveyor_8x4_02_C":       WallConveyor8x402,
+	"Build_Wall_Conveyor_8x4_02_Steel_C": WallConveyor8x402Steel,
+	"Build_Wall_Conveyor_8x4_03_C":       WallConveyor8x403,
+	"Build_Wall_Conveyor_8x4_03_Steel_C": WallConveyor8x403Steel,
+	"Build_Wall_Conveyor_8x4_04_C":       WallConveyor8x404,
+	"Build_Wall_Conveyor_8x4_04_Steel_C": WallConveyor8x404Steel,
+	"Build_Wall_Door_8x4_01_C":           WallDoor8x401,
+	"Build_Wall_Door_8x4_01_Steel_C":     WallDoor8x401Steel,
+	"Build_Wall_Door_8x4_02_C":           WallDoor8x402,
+	"Build_Wall_Door_8x4_02_Steel_C":     WallDoor8x402Steel,
+	"Build_Wall_Door_8x4_03_C":           WallDoor8x403,
+	"Build_Wall_Door_8x4_03_Steel_C":     WallDoor8x403Steel,
+	"Build_Wall_Gate_8x4_01_C":           WallGate8x401,
+	"Build_Wall_Window_8x4_01_C":         WallWindow8x401,
+	"Build_Wall_Window_8x4_02_C":         WallWindow8x402,
+	"Build_Wall_Window_8x4_03_C":         WallWindow8x403,
+	"Build_Wall_Window_8x4_04_C":         WallWindow8x404,
 }

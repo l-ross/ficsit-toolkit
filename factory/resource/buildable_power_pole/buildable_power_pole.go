@@ -300,22 +300,22 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 	}
 )
 
-func GetByClassName(className string) (*FGBuildablePowerPole, error) {
+func GetByClassName(className string) (FGBuildablePowerPole, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePowerPole with class name %s", className)
+	return FGBuildablePowerPole{}, fmt.Errorf("failed to find FGBuildablePowerPole with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildablePowerPole{
-	"Build_PowerPoleMk1_C":            &PowerPoleMk1,
-	"Build_PowerPoleMk2_C":            &PowerPoleMk2,
-	"Build_PowerPoleMk3_C":            &PowerPoleMk3,
-	"Build_PowerPoleWall_C":           &PowerPoleWall,
-	"Build_PowerPoleWallDouble_C":     &PowerPoleWallDouble,
-	"Build_PowerPoleWallDouble_Mk2_C": &PowerPoleWallDoubleMk2,
-	"Build_PowerPoleWallDouble_Mk3_C": &PowerPoleWallDoubleMk3,
-	"Build_PowerPoleWall_Mk2_C":       &PowerPoleWallMk2,
-	"Build_PowerPoleWall_Mk3_C":       &PowerPoleWallMk3,
+var classNameToVar = map[string]FGBuildablePowerPole{
+	"Build_PowerPoleMk1_C":            PowerPoleMk1,
+	"Build_PowerPoleMk2_C":            PowerPoleMk2,
+	"Build_PowerPoleMk3_C":            PowerPoleMk3,
+	"Build_PowerPoleWall_C":           PowerPoleWall,
+	"Build_PowerPoleWallDouble_C":     PowerPoleWallDouble,
+	"Build_PowerPoleWallDouble_Mk2_C": PowerPoleWallDoubleMk2,
+	"Build_PowerPoleWallDouble_Mk3_C": PowerPoleWallDoubleMk3,
+	"Build_PowerPoleWall_Mk2_C":       PowerPoleWallMk2,
+	"Build_PowerPoleWall_Mk3_C":       PowerPoleWallMk3,
 }

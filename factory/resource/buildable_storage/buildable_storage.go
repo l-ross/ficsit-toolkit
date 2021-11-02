@@ -196,16 +196,16 @@ Has two inputs and outputs for conveyor belts.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableStorage, error) {
+func GetByClassName(className string) (FGBuildableStorage, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableStorage with class name %s", className)
+	return FGBuildableStorage{}, fmt.Errorf("failed to find FGBuildableStorage with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableStorage{
-	"Build_StorageContainerMk1_C": &StorageContainerMk1,
-	"Build_StorageContainerMk2_C": &StorageContainerMk2,
-	"Build_StoragePlayer_C":       &StoragePlayer,
+var classNameToVar = map[string]FGBuildableStorage{
+	"Build_StorageContainerMk1_C": StorageContainerMk1,
+	"Build_StorageContainerMk2_C": StorageContainerMk2,
+	"Build_StoragePlayer_C":       StoragePlayer,
 }

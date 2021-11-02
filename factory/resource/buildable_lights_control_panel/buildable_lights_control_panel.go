@@ -69,14 +69,14 @@ Controls all Lights connected to the Power Grid attached to the 'Light Power Con
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableLightsControlPanel, error) {
+func GetByClassName(className string) (FGBuildableLightsControlPanel, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableLightsControlPanel with class name %s", className)
+	return FGBuildableLightsControlPanel{}, fmt.Errorf("failed to find FGBuildableLightsControlPanel with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableLightsControlPanel{
-	"Build_LightsControlPanel_C": &LightsControlPanel,
+var classNameToVar = map[string]FGBuildableLightsControlPanel{
+	"Build_LightsControlPanel_C": LightsControlPanel,
 }

@@ -1042,48 +1042,48 @@ Still utilizes the standard foundation building grid for improved building place
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableFoundation, error) {
+func GetByClassName(className string) (FGBuildableFoundation, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFoundation with class name %s", className)
+	return FGBuildableFoundation{}, fmt.Errorf("failed to find FGBuildableFoundation with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableFoundation{
-	"Build_Foundation_8x1_01_C":          &Foundation8x101,
-	"Build_Foundation_8x2_01_C":          &Foundation8x201,
-	"Build_Foundation_8x4_01_C":          &Foundation8x401,
-	"Build_Foundation_Frame_01_C":        &FoundationFrame01,
-	"Build_FoundationGlass_01_C":         &FoundationGlass01,
-	"Build_PillarBase_C":                 &PillarBase,
-	"Build_PillarMiddle_C":               &PillarMiddle,
-	"Build_PillarTop_C":                  &PillarTop,
-	"Build_QuarterPipe_C":                &QuarterPipe,
-	"Build_QuarterPipe_02_C":             &QuarterPipe02,
-	"Build_QuarterPipeCorner_01_C":       &QuarterPipeCorner01,
-	"Build_QuarterPipeCorner_02_C":       &QuarterPipeCorner02,
-	"Build_QuarterPipeCorner_03_C":       &QuarterPipeCorner03,
-	"Build_QuarterPipeCorner_04_C":       &QuarterPipeCorner04,
-	"Build_Ramp_8x1_01_C":                &Ramp8x101,
-	"Build_Ramp_8x2_01_C":                &Ramp8x201,
-	"Build_Ramp_8x4_01_C":                &Ramp8x401,
-	"Build_Ramp_8x4_Inverted_01_C":       &Ramp8x4Inverted01,
-	"Build_Ramp_8x8x8_C":                 &Ramp8x8x8,
-	"Build_Ramp_Diagonal_8x1_01_C":       &RampDiagonal8x101,
-	"Build_Ramp_Diagonal_8x1_02_C":       &RampDiagonal8x102,
-	"Build_Ramp_Diagonal_8x2_01_C":       &RampDiagonal8x201,
-	"Build_Ramp_Diagonal_8x2_02_C":       &RampDiagonal8x202,
-	"Build_Ramp_Diagonal_8x4_01_C":       &RampDiagonal8x401,
-	"Build_Ramp_Diagonal_8x4_02_C":       &RampDiagonal8x402,
-	"Build_RampDouble_C":                 &RampDouble,
-	"Build_RampDouble_8x1_C":             &RampDouble8x1,
-	"Build_RampInverted_8x1_C":           &RampInverted8x1,
-	"Build_RampInverted_8x1_Corner_01_C": &RampInverted8x1Corner01,
-	"Build_RampInverted_8x1_Corner_02_C": &RampInverted8x1Corner02,
-	"Build_RampInverted_8x2_01_C":        &RampInverted8x201,
-	"Build_RampInverted_8x2_Corner_01_C": &RampInverted8x2Corner01,
-	"Build_RampInverted_8x2_Corner_02_C": &RampInverted8x2Corner02,
-	"Build_RampInverted_8x4_Corner_01_C": &RampInverted8x4Corner01,
-	"Build_RampInverted_8x4_Corner_02_C": &RampInverted8x4Corner02,
+var classNameToVar = map[string]FGBuildableFoundation{
+	"Build_Foundation_8x1_01_C":          Foundation8x101,
+	"Build_Foundation_8x2_01_C":          Foundation8x201,
+	"Build_Foundation_8x4_01_C":          Foundation8x401,
+	"Build_Foundation_Frame_01_C":        FoundationFrame01,
+	"Build_FoundationGlass_01_C":         FoundationGlass01,
+	"Build_PillarBase_C":                 PillarBase,
+	"Build_PillarMiddle_C":               PillarMiddle,
+	"Build_PillarTop_C":                  PillarTop,
+	"Build_QuarterPipe_C":                QuarterPipe,
+	"Build_QuarterPipe_02_C":             QuarterPipe02,
+	"Build_QuarterPipeCorner_01_C":       QuarterPipeCorner01,
+	"Build_QuarterPipeCorner_02_C":       QuarterPipeCorner02,
+	"Build_QuarterPipeCorner_03_C":       QuarterPipeCorner03,
+	"Build_QuarterPipeCorner_04_C":       QuarterPipeCorner04,
+	"Build_Ramp_8x1_01_C":                Ramp8x101,
+	"Build_Ramp_8x2_01_C":                Ramp8x201,
+	"Build_Ramp_8x4_01_C":                Ramp8x401,
+	"Build_Ramp_8x4_Inverted_01_C":       Ramp8x4Inverted01,
+	"Build_Ramp_8x8x8_C":                 Ramp8x8x8,
+	"Build_Ramp_Diagonal_8x1_01_C":       RampDiagonal8x101,
+	"Build_Ramp_Diagonal_8x1_02_C":       RampDiagonal8x102,
+	"Build_Ramp_Diagonal_8x2_01_C":       RampDiagonal8x201,
+	"Build_Ramp_Diagonal_8x2_02_C":       RampDiagonal8x202,
+	"Build_Ramp_Diagonal_8x4_01_C":       RampDiagonal8x401,
+	"Build_Ramp_Diagonal_8x4_02_C":       RampDiagonal8x402,
+	"Build_RampDouble_C":                 RampDouble,
+	"Build_RampDouble_8x1_C":             RampDouble8x1,
+	"Build_RampInverted_8x1_C":           RampInverted8x1,
+	"Build_RampInverted_8x1_Corner_01_C": RampInverted8x1Corner01,
+	"Build_RampInverted_8x1_Corner_02_C": RampInverted8x1Corner02,
+	"Build_RampInverted_8x2_01_C":        RampInverted8x201,
+	"Build_RampInverted_8x2_Corner_01_C": RampInverted8x2Corner01,
+	"Build_RampInverted_8x2_Corner_02_C": RampInverted8x2Corner02,
+	"Build_RampInverted_8x4_Corner_01_C": RampInverted8x4Corner01,
+	"Build_RampInverted_8x4_Corner_02_C": RampInverted8x4Corner02,
 }

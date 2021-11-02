@@ -76,14 +76,14 @@ Note the location of the A and B connection.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableCircuitSwitch, error) {
+func GetByClassName(className string) (FGBuildableCircuitSwitch, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableCircuitSwitch with class name %s", className)
+	return FGBuildableCircuitSwitch{}, fmt.Errorf("failed to find FGBuildableCircuitSwitch with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableCircuitSwitch{
-	"Build_PowerSwitch_C": &PowerSwitch,
+var classNameToVar = map[string]FGBuildableCircuitSwitch{
+	"Build_PowerSwitch_C": PowerSwitch,
 }

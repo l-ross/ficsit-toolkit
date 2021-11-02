@@ -104,14 +104,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGBuildablePipelineJunction, error) {
+func GetByClassName(className string) (FGBuildablePipelineJunction, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePipelineJunction with class name %s", className)
+	return FGBuildablePipelineJunction{}, fmt.Errorf("failed to find FGBuildablePipelineJunction with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildablePipelineJunction{
-	"Build_PipelineJunction_Cross_C": &PipelineJunctionCross,
+var classNameToVar = map[string]FGBuildablePipelineJunction{
+	"Build_PipelineJunction_Cross_C": PipelineJunctionCross,
 }

@@ -98,14 +98,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGHoverPack, error) {
+func GetByClassName(className string) (FGHoverPack, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGHoverPack with class name %s", className)
+	return FGHoverPack{}, fmt.Errorf("failed to find FGHoverPack with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGHoverPack{
-	"Equip_HoverPack_C": &HoverPack,
+var classNameToVar = map[string]FGHoverPack{
+	"Equip_HoverPack_C": HoverPack,
 }

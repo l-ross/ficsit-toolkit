@@ -62,14 +62,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGConveyorPoleStackable, error) {
+func GetByClassName(className string) (FGConveyorPoleStackable, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGConveyorPoleStackable with class name %s", className)
+	return FGConveyorPoleStackable{}, fmt.Errorf("failed to find FGConveyorPoleStackable with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGConveyorPoleStackable{
-	"Build_ConveyorPoleStackable_C": &ConveyorPoleStackable,
+var classNameToVar = map[string]FGConveyorPoleStackable{
+	"Build_ConveyorPoleStackable_C": ConveyorPoleStackable,
 }

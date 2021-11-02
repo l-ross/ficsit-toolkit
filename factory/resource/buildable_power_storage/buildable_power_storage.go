@@ -118,14 +118,14 @@ Can be connected to a Power Grid to store excess power production. The stored po
 	}
 )
 
-func GetByClassName(className string) (*FGBuildablePowerStorage, error) {
+func GetByClassName(className string) (FGBuildablePowerStorage, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePowerStorage with class name %s", className)
+	return FGBuildablePowerStorage{}, fmt.Errorf("failed to find FGBuildablePowerStorage with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildablePowerStorage{
-	"Build_PowerStorageMk1_C": &PowerStorageMk1,
+var classNameToVar = map[string]FGBuildablePowerStorage{
+	"Build_PowerStorageMk1_C": PowerStorageMk1,
 }

@@ -101,14 +101,14 @@ For those employees going the extra kilometer we have set aside special bonus mi
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableResourceSinkShop, error) {
+func GetByClassName(className string) (FGBuildableResourceSinkShop, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableResourceSinkShop with class name %s", className)
+	return FGBuildableResourceSinkShop{}, fmt.Errorf("failed to find FGBuildableResourceSinkShop with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableResourceSinkShop{
-	"Build_ResourceSinkShop_C": &ResourceSinkShop,
+var classNameToVar = map[string]FGBuildableResourceSinkShop{
+	"Build_ResourceSinkShop_C": ResourceSinkShop,
 }

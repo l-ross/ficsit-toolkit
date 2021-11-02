@@ -136,14 +136,14 @@ Warning: Power usage is extremely high, unstable, and varies per recipe.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableManufacturerVariablePower, error) {
+func GetByClassName(className string) (FGBuildableManufacturerVariablePower, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableManufacturerVariablePower with class name %s", className)
+	return FGBuildableManufacturerVariablePower{}, fmt.Errorf("failed to find FGBuildableManufacturerVariablePower with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableManufacturerVariablePower{
-	"Build_HadronCollider_C": &HadronCollider,
+var classNameToVar = map[string]FGBuildableManufacturerVariablePower{
+	"Build_HadronCollider_C": HadronCollider,
 }

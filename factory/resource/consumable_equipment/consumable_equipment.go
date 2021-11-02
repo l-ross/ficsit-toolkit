@@ -68,16 +68,16 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGConsumableEquipment, error) {
+func GetByClassName(className string) (FGConsumableEquipment, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGConsumableEquipment with class name %s", className)
+	return FGConsumableEquipment{}, fmt.Errorf("failed to find FGConsumableEquipment with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGConsumableEquipment{
-	"Equip_Beacon_C":            &Beacon,
-	"BP_ConsumeableEquipment_C": &ConsumeableEquipment,
-	"Equip_MedKit_C":            &MedKit,
+var classNameToVar = map[string]FGConsumableEquipment{
+	"Equip_Beacon_C":            Beacon,
+	"BP_ConsumeableEquipment_C": ConsumeableEquipment,
+	"Equip_MedKit_C":            MedKit,
 }

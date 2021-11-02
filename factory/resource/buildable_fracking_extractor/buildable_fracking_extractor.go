@@ -120,14 +120,14 @@ Can be placed on the activated sub-nodes of a Resource Well to collect the press
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableFrackingExtractor, error) {
+func GetByClassName(className string) (FGBuildableFrackingExtractor, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFrackingExtractor with class name %s", className)
+	return FGBuildableFrackingExtractor{}, fmt.Errorf("failed to find FGBuildableFrackingExtractor with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableFrackingExtractor{
-	"Build_FrackingExtractor_C": &FrackingExtractor,
+var classNameToVar = map[string]FGBuildableFrackingExtractor{
+	"Build_FrackingExtractor_C": FrackingExtractor,
 }

@@ -165,15 +165,15 @@ You can set a rule for each output to decide exactly what part should go there.`
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableSplitterSmart, error) {
+func GetByClassName(className string) (FGBuildableSplitterSmart, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableSplitterSmart with class name %s", className)
+	return FGBuildableSplitterSmart{}, fmt.Errorf("failed to find FGBuildableSplitterSmart with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableSplitterSmart{
-	"Build_ConveyorAttachmentSplitterProgrammable_C": &ConveyorAttachmentSplitterProgrammable,
-	"Build_ConveyorAttachmentSplitterSmart_C":        &ConveyorAttachmentSplitterSmart,
+var classNameToVar = map[string]FGBuildableSplitterSmart{
+	"Build_ConveyorAttachmentSplitterProgrammable_C": ConveyorAttachmentSplitterProgrammable,
+	"Build_ConveyorAttachmentSplitterSmart_C":        ConveyorAttachmentSplitterSmart,
 }

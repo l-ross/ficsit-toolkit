@@ -122,14 +122,14 @@ Requires Power. Overclocking increases the output potential of the entire Resour
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableFrackingActivator, error) {
+func GetByClassName(className string) (FGBuildableFrackingActivator, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableFrackingActivator with class name %s", className)
+	return FGBuildableFrackingActivator{}, fmt.Errorf("failed to find FGBuildableFrackingActivator with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableFrackingActivator{
-	"Build_FrackingSmasher_C": &FrackingSmasher,
+var classNameToVar = map[string]FGBuildableFrackingActivator{
+	"Build_FrackingSmasher_C": FrackingSmasher,
 }

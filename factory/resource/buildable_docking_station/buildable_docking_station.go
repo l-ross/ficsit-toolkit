@@ -111,14 +111,14 @@ Always refuels vehicles if it has access to a matching fuel type.
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableDockingStation, error) {
+func GetByClassName(className string) (FGBuildableDockingStation, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableDockingStation with class name %s", className)
+	return FGBuildableDockingStation{}, fmt.Errorf("failed to find FGBuildableDockingStation with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableDockingStation{
-	"Build_TruckStation_C": &TruckStation,
+var classNameToVar = map[string]FGBuildableDockingStation{
+	"Build_TruckStation_C": TruckStation,
 }

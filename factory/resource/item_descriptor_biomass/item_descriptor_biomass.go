@@ -321,28 +321,28 @@ Biomass Burners and vehicles can use it for power.`,
 	}
 )
 
-func GetByClassName(className string) (*FGItemDescriptorBiomass, error) {
+func GetByClassName(className string) (FGItemDescriptorBiomass, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGItemDescriptorBiomass with class name %s", className)
+	return FGItemDescriptorBiomass{}, fmt.Errorf("failed to find FGItemDescriptorBiomass with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGItemDescriptorBiomass{
-	"Desc_Biofuel_C":              &Biofuel,
-	"Desc_Fabric_C":               &Fabric,
-	"Desc_FlowerPetals_C":         &FlowerPetals,
-	"Desc_GenericBiomass_C":       &GenericBiomass,
-	"Desc_HogParts_C":             &HogParts,
-	"Desc_Leaves_C":               &Leaves,
-	"Desc_LiquidBiofuel_C":        &LiquidBiofuel,
-	"Desc_Mycelia_C":              &Mycelia,
-	"Desc_PackagedAlumina_C":      &PackagedAlumina,
-	"Desc_PackagedBiofuel_C":      &PackagedBiofuel,
-	"Desc_PackagedNitricAcid_C":   &PackagedNitricAcid,
-	"Desc_PackagedNitrogenGas_C":  &PackagedNitrogenGas,
-	"Desc_PackagedSulfuricAcid_C": &PackagedSulfuricAcid,
-	"Desc_SpitterParts_C":         &SpitterParts,
-	"Desc_Wood_C":                 &Wood,
+var classNameToVar = map[string]FGItemDescriptorBiomass{
+	"Desc_Biofuel_C":              Biofuel,
+	"Desc_Fabric_C":               Fabric,
+	"Desc_FlowerPetals_C":         FlowerPetals,
+	"Desc_GenericBiomass_C":       GenericBiomass,
+	"Desc_HogParts_C":             HogParts,
+	"Desc_Leaves_C":               Leaves,
+	"Desc_LiquidBiofuel_C":        LiquidBiofuel,
+	"Desc_Mycelia_C":              Mycelia,
+	"Desc_PackagedAlumina_C":      PackagedAlumina,
+	"Desc_PackagedBiofuel_C":      PackagedBiofuel,
+	"Desc_PackagedNitricAcid_C":   PackagedNitricAcid,
+	"Desc_PackagedNitrogenGas_C":  PackagedNitrogenGas,
+	"Desc_PackagedSulfuricAcid_C": PackagedSulfuricAcid,
+	"Desc_SpitterParts_C":         SpitterParts,
+	"Desc_Wood_C":                 Wood,
 }

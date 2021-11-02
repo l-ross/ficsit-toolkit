@@ -61,14 +61,14 @@ Has a wide turn angle so make sure to plan it out properly.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableRailroadTrack, error) {
+func GetByClassName(className string) (FGBuildableRailroadTrack, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableRailroadTrack with class name %s", className)
+	return FGBuildableRailroadTrack{}, fmt.Errorf("failed to find FGBuildableRailroadTrack with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableRailroadTrack{
-	"Build_RailroadTrack_C": &RailroadTrack,
+var classNameToVar = map[string]FGBuildableRailroadTrack{
+	"Build_RailroadTrack_C": RailroadTrack,
 }

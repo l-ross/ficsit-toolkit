@@ -58,14 +58,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGObjectScanner, error) {
+func GetByClassName(className string) (FGObjectScanner, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGObjectScanner with class name %s", className)
+	return FGObjectScanner{}, fmt.Errorf("failed to find FGObjectScanner with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGObjectScanner{
-	"Equip_ObjectScanner_C": &ObjectScanner,
+var classNameToVar = map[string]FGObjectScanner{
+	"Equip_ObjectScanner_C": ObjectScanner,
 }

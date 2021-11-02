@@ -156,15 +156,15 @@ Has an in and output for pipes.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildablePipeReservoir, error) {
+func GetByClassName(className string) (FGBuildablePipeReservoir, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePipeReservoir with class name %s", className)
+	return FGBuildablePipeReservoir{}, fmt.Errorf("failed to find FGBuildablePipeReservoir with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildablePipeReservoir{
-	"Build_IndustrialTank_C":  &IndustrialTank,
-	"Build_PipeStorageTank_C": &PipeStorageTank,
+var classNameToVar = map[string]FGBuildablePipeReservoir{
+	"Build_IndustrialTank_C":  IndustrialTank,
+	"Build_PipeStorageTank_C": PipeStorageTank,
 }

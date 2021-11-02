@@ -98,15 +98,15 @@ Allows up to two Power Line connections.`,
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableLightSource, error) {
+func GetByClassName(className string) (FGBuildableLightSource, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableLightSource with class name %s", className)
+	return FGBuildableLightSource{}, fmt.Errorf("failed to find FGBuildableLightSource with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableLightSource{
-	"Build_CeilingLight_C": &CeilingLight,
-	"Build_StreetLight_C":  &StreetLight,
+var classNameToVar = map[string]FGBuildableLightSource{
+	"Build_CeilingLight_C": CeilingLight,
+	"Build_StreetLight_C":  StreetLight,
 }

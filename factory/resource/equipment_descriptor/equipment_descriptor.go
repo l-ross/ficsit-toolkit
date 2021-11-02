@@ -419,31 +419,31 @@ Improvised ranged weapon for self defense. Has to be reloaded after each use.`,
 	}
 )
 
-func GetByClassName(className string) (*FGEquipmentDescriptor, error) {
+func GetByClassName(className string) (FGEquipmentDescriptor, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGEquipmentDescriptor with class name %s", className)
+	return FGEquipmentDescriptor{}, fmt.Errorf("failed to find FGEquipmentDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGEquipmentDescriptor{
-	"Desc_Chainsaw_C":                           &Chainsaw,
-	"BP_EqDescZipLine_C":                        &EqDescZipLine,
-	"BP_EquipmentDescriptorCandyCane_C":         &EquipmentDescriptorCandyCane,
-	"BP_EquipmentDescriptorColorGun_C":          &EquipmentDescriptorColorGun,
-	"BP_EquipmentDescriptorGasmask_C":           &EquipmentDescriptorGasmask,
-	"BP_EquipmentDescriptorHazmatSuit_C":        &EquipmentDescriptorHazmatSuit,
-	"BP_EquipmentDescriptorHoverPack_C":         &EquipmentDescriptorHoverPack,
-	"BP_EquipmentDescriptorJetPack_C":           &EquipmentDescriptorJetPack,
-	"BP_EquipmentDescriptorJumpingStilts_C":     &EquipmentDescriptorJumpingStilts,
-	"BP_EquipmentDescriptorNobeliskDetonator_C": &EquipmentDescriptorNobeliskDetonator,
-	"BP_EquipmentDescriptorObjectScanner_C":     &EquipmentDescriptorObjectScanner,
-	"BP_EquipmentDescriptorRifle_C":             &EquipmentDescriptorRifle,
-	"BP_EquipmentDescriptorShockShank_C":        &EquipmentDescriptorShockShank,
-	"BP_EquipmentDescriptorSnowballMittens_C":   &EquipmentDescriptorSnowballMittens,
-	"BP_EquipmentDescriptorStunSpear_C":         &EquipmentDescriptorStunSpear,
-	"Desc_GolfCart_C":                           &GolfCart,
-	"BP_ItemDescriptorPortableMiner_C":          &ItemDescriptorPortableMiner,
-	"Desc_RebarGunProjectile_C":                 &RebarGunProjectile,
+var classNameToVar = map[string]FGEquipmentDescriptor{
+	"Desc_Chainsaw_C":                           Chainsaw,
+	"BP_EqDescZipLine_C":                        EqDescZipLine,
+	"BP_EquipmentDescriptorCandyCane_C":         EquipmentDescriptorCandyCane,
+	"BP_EquipmentDescriptorColorGun_C":          EquipmentDescriptorColorGun,
+	"BP_EquipmentDescriptorGasmask_C":           EquipmentDescriptorGasmask,
+	"BP_EquipmentDescriptorHazmatSuit_C":        EquipmentDescriptorHazmatSuit,
+	"BP_EquipmentDescriptorHoverPack_C":         EquipmentDescriptorHoverPack,
+	"BP_EquipmentDescriptorJetPack_C":           EquipmentDescriptorJetPack,
+	"BP_EquipmentDescriptorJumpingStilts_C":     EquipmentDescriptorJumpingStilts,
+	"BP_EquipmentDescriptorNobeliskDetonator_C": EquipmentDescriptorNobeliskDetonator,
+	"BP_EquipmentDescriptorObjectScanner_C":     EquipmentDescriptorObjectScanner,
+	"BP_EquipmentDescriptorRifle_C":             EquipmentDescriptorRifle,
+	"BP_EquipmentDescriptorShockShank_C":        EquipmentDescriptorShockShank,
+	"BP_EquipmentDescriptorSnowballMittens_C":   EquipmentDescriptorSnowballMittens,
+	"BP_EquipmentDescriptorStunSpear_C":         EquipmentDescriptorStunSpear,
+	"Desc_GolfCart_C":                           GolfCart,
+	"BP_ItemDescriptorPortableMiner_C":          ItemDescriptorPortableMiner,
+	"Desc_RebarGunProjectile_C":                 RebarGunProjectile,
 }

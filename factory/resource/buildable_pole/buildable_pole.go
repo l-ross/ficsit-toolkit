@@ -63,14 +63,14 @@ Useful to route conveyor belts in a more controlled manner and over long distanc
 	}
 )
 
-func GetByClassName(className string) (*FGBuildablePole, error) {
+func GetByClassName(className string) (FGBuildablePole, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildablePole with class name %s", className)
+	return FGBuildablePole{}, fmt.Errorf("failed to find FGBuildablePole with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildablePole{
-	"Build_ConveyorPole_C": &ConveyorPole,
+var classNameToVar = map[string]FGBuildablePole{
+	"Build_ConveyorPole_C": ConveyorPole,
 }

@@ -66,14 +66,14 @@ var (
 	}
 )
 
-func GetByClassName(className string) (*FGJetPack, error) {
+func GetByClassName(className string) (FGJetPack, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGJetPack with class name %s", className)
+	return FGJetPack{}, fmt.Errorf("failed to find FGJetPack with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGJetPack{
-	"Equip_JetPack_C": &JetPack,
+var classNameToVar = map[string]FGJetPack{
+	"Equip_JetPack_C": JetPack,
 }

@@ -149,14 +149,14 @@ The Drone Port interface provides delivery details and allows management of Port
 	}
 )
 
-func GetByClassName(className string) (*FGBuildableDroneStation, error) {
+func GetByClassName(className string) (FGBuildableDroneStation, error) {
 	if v, ok := classNameToVar[className]; ok {
 		return v, nil
 	}
 
-	return nil, fmt.Errorf("failed to find FGBuildableDroneStation with class name %s", className)
+	return FGBuildableDroneStation{}, fmt.Errorf("failed to find FGBuildableDroneStation with class name %s", className)
 }
 
-var classNameToVar = map[string]*FGBuildableDroneStation{
-	"Build_DroneStation_C": &DroneStation,
+var classNameToVar = map[string]FGBuildableDroneStation{
+	"Build_DroneStation_C": DroneStation,
 }
