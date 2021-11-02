@@ -1237,7 +1237,7 @@ func (v *StructPropertyValue) parse(p *parser, inner bool) error {
 	case QuatStructType:
 		v.Value = &QuatStruct{}
 	case RailroadTrackPositionStructType:
-		panic("TODO RailroadTrackPositionStructType")
+		v.Value = &RailroadTrackPosition{}
 	case VectorStructType:
 		v.Value = &VectorStruct{}
 	case Vector2DStructType:
@@ -1286,14 +1286,44 @@ func (v *StructPropertyValue) serialize(s *serializer, inner bool) (int32, error
 
 // TODO: TextProperty
 
-type TextPropertyValue struct{}
+type TextPropertyValue struct {
+	String string
+}
 
 func newTextPropertyValue() PropertyValue {
 	return &TextPropertyValue{}
 }
 
+// TODO: Improve this to handle the other types. This is just good enough for the save file I'm using.
 func (v *TextPropertyValue) parse(p *parser, inner bool) error {
-	panic("implement me")
+	err := p.nextByteIsNull()
+	if err != nil {
+		return err
+	}
+
+	_, err = p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	_, err = p.readByte()
+	if err != nil {
+		return err
+	}
+
+	_, err = p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	s, err := p.readString()
+	if err != nil {
+		return err
+	}
+
+	v.String = s
+
+	return nil
 }
 
 func (v *TextPropertyValue) serialize(s *serializer, inner bool) (int32, error) {

@@ -7,8 +7,9 @@ import (
 
 // ParseHeader will only parse the header of the save file and return it.
 func ParseHeader(r io.Reader) (*Header, error) {
-	p := &parser{
-		r: r,
+	p, err := newParser(r)
+	if err != nil {
+		return nil, err
 	}
 
 	return p.parseHeader()

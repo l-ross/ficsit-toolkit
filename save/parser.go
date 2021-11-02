@@ -17,9 +17,7 @@ type parser struct {
 	body *slicewriteseek.SliceWriteSeeker
 }
 
-// Parse will parse the entire file and return a Save object that contains
-// the entire data structure of the file.
-func Parse(r io.Reader) (*Save, error) {
+func newParser(r io.Reader) (*parser, error) {
 	p := &parser{
 		r: r,
 	}
@@ -32,6 +30,17 @@ func Parse(r io.Reader) (*Save, error) {
 	p.body = &slicewriteseek.SliceWriteSeeker{
 		Buffer: data,
 		Index:  0,
+	}
+
+	return p, nil
+}
+
+// Parse will parse the entire file and return a Save object that contains
+// the entire data structure of the file.
+func Parse(r io.Reader) (*Save, error) {
+	p, err := newParser(r)
+	if err != nil {
+		return nil, err
 	}
 
 	h, err := p.parseHeader()
@@ -61,6 +70,25 @@ func Parse(r io.Reader) (*Save, error) {
 	}
 
 	return s, nil
+}
+
+func DumpBody(r io.Reader) ([]byte, error) {
+	p, err := newParser(r)
+	if err != nil {
+		return nil, err
+	}
+
+	_, err = p.parseHeader()
+	if err != nil {
+		return nil, err
+	}
+
+	body, err := p.decompressBody()
+	if err != nil {
+		return nil, err
+	}
+
+	return body.Buffer, nil
 }
 
 func (p *parser) parseBody(s *Save) error {

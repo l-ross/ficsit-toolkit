@@ -340,6 +340,69 @@ func (v *LinearColor) serialize(s *serializer) (int32, error) {
 }
 
 //
+// RailroadTrackPosition
+//
+
+type RailroadTrackPosition struct {
+	LevelName string  `json:"levelName"`
+	PathName  string  `json:"pathName"`
+	Offset    float32 `json:"offset"`
+	Forward   float32 `json:"forward"`
+}
+
+func (v *RailroadTrackPosition) parse(p *parser) error {
+	var err error
+
+	v.LevelName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	v.PathName, err = p.readString()
+	if err != nil {
+		return err
+	}
+
+	v.Offset, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	v.Forward, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (v *RailroadTrackPosition) serialize(s *serializer) (int32, error) {
+	m := s.measure()
+
+	err := s.writeString(v.LevelName)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeString(v.PathName)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeFloat32(v.Offset)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeFloat32(v.Forward)
+	if err != nil {
+		return 0, err
+	}
+
+	return m(), nil
+}
+
+//
 // QuatStruct
 //
 
