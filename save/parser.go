@@ -10,32 +10,20 @@ import (
 
 var debug = false
 
-type Parser struct {
+type parser struct {
 	r io.Reader
 
 	// Body of the save file.
 	body *slicewriteseek.SliceWriteSeeker
-
-	parserOptions
 }
 
-func NewParser(r io.Reader, opts ...ParserOption) (*Parser, error) {
-	p := &Parser{
+// Parse will parse the entire file and return a Save object that contains
+// the entire data structure of the file.
+func Parse(r io.Reader) (*Save, error) {
+	p := &parser{
 		r: r,
 	}
 
-	for _, opt := range opts {
-		if opt != nil {
-			if err := opt(&p.parserOptions); err != nil {
-				return nil, err
-			}
-		}
-	}
-
-	return p, nil
-}
-
-func (p *Parser) Parse() (*Save, error) {
 	data, err := ioutil.ReadAll(p.r)
 	if err != nil {
 		return nil, err
@@ -75,7 +63,7 @@ func (p *Parser) Parse() (*Save, error) {
 	return s, nil
 }
 
-func (p *Parser) parseBody(s *Save) error {
+func (p *parser) parseBody(s *Save) error {
 	bodyLen, err := p.readInt32()
 	if err != nil {
 		return err
@@ -129,7 +117,7 @@ func (p *Parser) parseBody(s *Save) error {
 	return nil
 }
 
-func (p *Parser) parseObjects(s *Save) error {
+func (p *parser) parseObjects(s *Save) error {
 	var err error
 	s.objectCount, err = p.readInt32()
 	if err != nil {
@@ -177,7 +165,7 @@ func (p *Parser) parseObjects(s *Save) error {
 	return nil
 }
 
-func (p *Parser) parseCollectedObjects(s *Save) error {
+func (p *parser) parseCollectedObjects(s *Save) error {
 	collectedObjectCount, err := p.readInt32()
 	if err != nil {
 		return err

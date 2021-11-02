@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func createTestParser(t *testing.T, filepath string) *Parser {
+func createTestParser(t *testing.T, filepath string) *parser {
 	data, err := ioutil.ReadFile(filepath)
 	require.NoError(t, err)
 
-	p := &Parser{
+	p := &parser{
 		body: &slicewriteseek.SliceWriteSeeker{
 			Buffer: data,
 		},
@@ -23,17 +23,17 @@ func createTestParser(t *testing.T, filepath string) *Parser {
 	return p
 }
 
-func createTestSerializer() *Serializer {
-	return &Serializer{
+func createTestSerializer() *serializer {
+	return &serializer{
 		body: slicewriteseek.New(),
 	}
 }
 
-func assertBuffersEqual(t *testing.T, p *Parser, s *Serializer) {
+func assertBuffersEqual(t *testing.T, p *parser, s *serializer) {
 	assert.Equal(t, p.body.Buffer, s.body.Buffer)
 }
 
-func assertAllBufferRead(t *testing.T, p *Parser) {
+func assertAllBufferRead(t *testing.T, p *parser) {
 	assert.Equal(t,
 		p.body.Index,
 		int64(len(p.body.Buffer)),

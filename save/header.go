@@ -7,9 +7,8 @@ import (
 
 // ParseHeader will only parse the header of the save file and return it.
 func ParseHeader(r io.Reader) (*Header, error) {
-	p, err := NewParser(r)
-	if err != nil {
-		return nil, err
+	p := &parser{
+		r: r,
 	}
 
 	return p.parseHeader()
@@ -30,7 +29,7 @@ type Header struct {
 	ModFlags            int32  `json:"modFlags"`
 }
 
-func (p *Parser) parseHeader() (*Header, error) {
+func (p *parser) parseHeader() (*Header, error) {
 	h := &Header{}
 
 	var err error
@@ -105,7 +104,7 @@ func (p *Parser) parseHeader() (*Header, error) {
 	return h, nil
 }
 
-func (s *Serializer) serializeHeader(h *Header) error {
+func (s *serializer) serializeHeader(h *Header) error {
 	err := s.writeInt32(h.HeaderVersion)
 	if err != nil {
 		return err

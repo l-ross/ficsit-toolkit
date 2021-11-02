@@ -15,7 +15,7 @@ const (
 	packageFileTag   = int64(2653586369)
 )
 
-func (p *Parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
+func (p *parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
 	chunks := make([]byte, 0)
 
 	for {
@@ -50,7 +50,7 @@ type chunkHeader struct {
 	uncompressedLength int64
 }
 
-func (p *Parser) readChunkHeader() (*chunkHeader, error) {
+func (p *parser) readChunkHeader() (*chunkHeader, error) {
 	ch := &chunkHeader{}
 
 	var err error
@@ -90,7 +90,7 @@ func (p *Parser) readChunkHeader() (*chunkHeader, error) {
 }
 
 // readChunk will read the next chunk and return the decompressed data.
-func (p *Parser) readChunk(ch *chunkHeader) ([]byte, error) {
+func (p *parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	compressed := make([]byte, ch.compressedLength)
 
 	read, err := p.body.Read(compressed)
@@ -118,7 +118,7 @@ func (p *Parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	return uncompressed, nil
 }
 
-func (s *Serializer) compressBody(b []byte) error {
+func (s *serializer) compressBody(b []byte) error {
 	done := false
 
 	for !done {
@@ -165,7 +165,7 @@ func (s *Serializer) compressBody(b []byte) error {
 	return nil
 }
 
-func (s *Serializer) writeChunkHeader(ch *chunkHeader) error {
+func (s *serializer) writeChunkHeader(ch *chunkHeader) error {
 	err := s.writeInt64(ch.packageFileTag)
 	if err != nil {
 		return err

@@ -6,35 +6,18 @@ import (
 	"github.com/ViRb3/slicewriteseek"
 )
 
-type Serializer struct {
+type serializer struct {
 	w io.Writer
 
 	// Body of the save file.
 	body *slicewriteseek.SliceWriteSeeker
-
-	serializerOptions
 }
 
-func NewSerializer(w io.Writer, opts ...SerializerOption) (*Serializer, error) {
-	s := &Serializer{
-		body: &slicewriteseek.SliceWriteSeeker{
-			Buffer: make([]byte, 0),
-			Index:  0,
-		},
+func Serialize(w io.Writer, save *Save) error {
+	s := &serializer{
+		w: w,
 	}
 
-	for _, opt := range opts {
-		if opt != nil {
-			if err := opt(&s.serializerOptions); err != nil {
-				return nil, err
-			}
-		}
-	}
-
-	return s, nil
-}
-
-func (s *Serializer) Serialize(save *Save) error {
 	// Serialize the uncompressed body.
 	err := s.serializeBody(save)
 	if err != nil {
@@ -66,7 +49,7 @@ func (s *Serializer) Serialize(save *Save) error {
 	return nil
 }
 
-func (s *Serializer) serializeBody(save *Save) error {
+func (s *serializer) serializeBody(save *Save) error {
 	// Write placeholder length.
 	err := s.writeInt32(0)
 	if err != nil {
@@ -98,7 +81,7 @@ func (s *Serializer) serializeBody(save *Save) error {
 	return nil
 }
 
-func (s *Serializer) serializeObjects(save *Save) error {
+func (s *serializer) serializeObjects(save *Save) error {
 	objectCount := len(save.Components) + len(save.Entities)
 	err := s.writeInt32(int32(objectCount))
 	if err != nil {
@@ -132,7 +115,7 @@ func (s *Serializer) serializeObjects(save *Save) error {
 	return nil
 }
 
-func (s *Serializer) serializeObjectData(save *Save) error {
+func (s *serializer) serializeObjectData(save *Save) error {
 	objectCount := len(save.Components) + len(save.Entities)
 	err := s.writeInt32(int32(objectCount))
 	if err != nil {
@@ -156,7 +139,7 @@ func (s *Serializer) serializeObjectData(save *Save) error {
 	return nil
 }
 
-func (s *Serializer) serializeCollectedObjects(save *Save) error {
+func (s *serializer) serializeCollectedObjects(save *Save) error {
 	err := s.writeInt32(int32(len(save.CollectedObjects)))
 	if err != nil {
 		return err

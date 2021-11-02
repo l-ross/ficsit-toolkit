@@ -11,7 +11,7 @@ type Component struct {
 	objectData    []byte
 }
 
-func (c *Component) parse(p *Parser) error {
+func (c *Component) parse(p *parser) error {
 	var err error
 	c.TypePath, err = p.readString()
 	if err != nil {
@@ -36,7 +36,7 @@ func (c *Component) parse(p *Parser) error {
 	return nil
 }
 
-func (c *Component) parseData(p *Parser) error {
+func (c *Component) parseData(p *parser) error {
 	// Data length
 	dataSize, err := p.readInt32()
 	if err != nil {
@@ -63,7 +63,7 @@ func (c *Component) parseData(p *Parser) error {
 	return nil
 }
 
-func (c *Component) serialize(s *Serializer) error {
+func (c *Component) serialize(s *serializer) error {
 	err := s.writeString(c.TypePath)
 	if err != nil {
 		return err
@@ -87,7 +87,7 @@ func (c *Component) serialize(s *Serializer) error {
 	return nil
 }
 
-func (c *Component) serializeData(s *Serializer) error {
+func (c *Component) serializeData(s *serializer) error {
 	// Write placeholder length
 	lenPos := s.body.Index
 	err := s.writeInt32(0)

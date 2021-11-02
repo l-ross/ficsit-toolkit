@@ -19,7 +19,7 @@ type Entity struct {
 	objectData    []byte
 }
 
-func (e *Entity) parse(p *Parser) error {
+func (e *Entity) parse(p *parser) error {
 	var err error
 	e.TypePath, err = p.readString()
 	if err != nil {
@@ -64,7 +64,7 @@ func (e *Entity) parse(p *Parser) error {
 	return nil
 }
 
-func (e *Entity) parseData(p *Parser) error {
+func (e *Entity) parseData(p *parser) error {
 	dataSize, err := p.readInt32()
 	if err != nil {
 		return err
@@ -136,7 +136,7 @@ func (e *Entity) parseData(p *Parser) error {
 	return nil
 }
 
-func (e *Entity) serialize(s *Serializer) error {
+func (e *Entity) serialize(s *serializer) error {
 	err := s.writeString(e.TypePath)
 	if err != nil {
 		return err
@@ -180,7 +180,7 @@ func (e *Entity) serialize(s *Serializer) error {
 	return nil
 }
 
-func (e *Entity) serializeData(s *Serializer) error {
+func (e *Entity) serializeData(s *serializer) error {
 	// Write placeholder length
 	lenPos := s.body.Index
 	err := s.writeInt32(0)

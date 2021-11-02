@@ -24,9 +24,9 @@ type Extra struct {
 }
 
 type ExtraValue interface {
-	parse(p *Parser) error
+	parse(p *parser) error
 
-	serialize(s *Serializer) error
+	serialize(s *serializer) error
 }
 
 func getExtra(c string) func(l int32) *Extra {
@@ -89,7 +89,7 @@ func (e *Extra) getCircuitSubsystem() (*CircuitSubsystemExtra, error) {
 	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
-func (e *CircuitSubsystemExtra) parse(p *Parser) error {
+func (e *CircuitSubsystemExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -121,7 +121,7 @@ func (e *CircuitSubsystemExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *CircuitSubsystemExtra) serialize(s *Serializer) error {
+func (e *CircuitSubsystemExtra) serialize(s *serializer) error {
 	err := s.writeInt32(int32(len(e.Circuits)))
 	if err != nil {
 		return err
@@ -177,7 +177,7 @@ func (e *Extra) getConveyorBelt() (*ConveyorBeltExtra, error) {
 	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
-func (e *ConveyorBeltExtra) parse(p *Parser) error {
+func (e *ConveyorBeltExtra) parse(p *parser) error {
 	itemCount, err := p.readInt32()
 	if err != nil {
 		return err
@@ -220,7 +220,7 @@ func (e *ConveyorBeltExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *ConveyorBeltExtra) serialize(s *Serializer) error {
+func (e *ConveyorBeltExtra) serialize(s *serializer) error {
 	err := s.writeInt32(int32(len(e.Items)))
 	if err != nil {
 		return err
@@ -272,7 +272,7 @@ func newGameMode(_ int32) *Extra {
 	}
 }
 
-func (e *GameModeExtra) parse(p *Parser) error {
+func (e *GameModeExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -295,7 +295,7 @@ func (e *GameModeExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *GameModeExtra) serialize(s *Serializer) error {
+func (e *GameModeExtra) serialize(s *serializer) error {
 	err := s.writeInt32(int32(len(e.Objects)))
 	if err != nil {
 		return err
@@ -331,7 +331,7 @@ func newGameState(_ int32) *Extra {
 	}
 }
 
-func (e *GameStateExtra) parse(p *Parser) error {
+func (e *GameStateExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
 		return err
@@ -356,7 +356,7 @@ func (e *GameStateExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *GameStateExtra) serialize(s *Serializer) error {
+func (e *GameStateExtra) serialize(s *serializer) error {
 	err := s.writeInt32(int32(len(e.Objects)))
 	if err != nil {
 		return err
@@ -396,7 +396,7 @@ func newPlayerState(l int32) *Extra {
 	}
 }
 
-func (e *PlayerStateExtra) parse(p *Parser) error {
+func (e *PlayerStateExtra) parse(p *parser) error {
 	var err error
 	e.Data, err = p.readBytes(e.len)
 	if err != nil {
@@ -406,7 +406,7 @@ func (e *PlayerStateExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *PlayerStateExtra) serialize(s *Serializer) error {
+func (e *PlayerStateExtra) serialize(s *serializer) error {
 	return s.writeBytes(e.Data)
 }
 
@@ -428,7 +428,7 @@ func newPowerLine(_ int32) *Extra {
 	}
 }
 
-func (e *PowerLineExtra) parse(p *Parser) error {
+func (e *PowerLineExtra) parse(p *parser) error {
 	var err error
 	e.SourceLevelName, err = p.readString()
 	if err != nil {
@@ -453,7 +453,7 @@ func (e *PowerLineExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *PowerLineExtra) serialize(s *Serializer) error {
+func (e *PowerLineExtra) serialize(s *serializer) error {
 	err := s.writeString(e.SourceLevelName)
 	if err != nil {
 		return err
@@ -495,7 +495,7 @@ func newTrainExtra(_ int32) *Extra {
 	}
 }
 
-func (e *TrainExtra) parse(p *Parser) error {
+func (e *TrainExtra) parse(p *parser) error {
 	// UNKNOWN_DATA
 	_, err := p.readInt32()
 	if err != nil {
@@ -525,7 +525,7 @@ func (e *TrainExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *TrainExtra) serialize(s *Serializer) error {
+func (e *TrainExtra) serialize(s *serializer) error {
 	err := s.writeInt32(0)
 	if err != nil {
 		return err
@@ -573,7 +573,7 @@ func newUnknownExtra(l int32) *Extra {
 	}
 }
 
-func (e *UnknownExtra) parse(p *Parser) error {
+func (e *UnknownExtra) parse(p *parser) error {
 	var err error
 	e.Data, err = p.readBytes(e.len)
 	if err != nil {
@@ -583,6 +583,6 @@ func (e *UnknownExtra) parse(p *Parser) error {
 	return nil
 }
 
-func (e *UnknownExtra) serialize(s *Serializer) error {
+func (e *UnknownExtra) serialize(s *serializer) error {
 	return s.writeBytes(e.Data)
 }

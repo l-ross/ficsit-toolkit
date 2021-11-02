@@ -10,49 +10,49 @@ import (
 // Read
 //
 
-func (p *Parser) readInt8() (int8, error) {
+func (p *parser) readInt8() (int8, error) {
 	var v int8
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readInt32() (int32, error) {
+func (p *parser) readInt32() (int32, error) {
 	var v int32
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readInt32Array(l int) ([]int32, error) {
+func (p *parser) readInt32Array(l int) ([]int32, error) {
 	v := make([]int32, l)
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readInt64() (int64, error) {
+func (p *parser) readInt64() (int64, error) {
 	var v int64
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readFloat32() (float32, error) {
+func (p *parser) readFloat32() (float32, error) {
 	var v float32
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readFloat64() (float64, error) {
+func (p *parser) readFloat64() (float64, error) {
 	var v float64
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readFloat32Array(l int) ([]float32, error) {
+func (p *parser) readFloat32Array(l int) ([]float32, error) {
 	v := make([]float32, l)
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readByte() (byte, error) {
+func (p *parser) readByte() (byte, error) {
 	v, err := p.readBytes(1)
 	if err != nil {
 		return 0, err
@@ -60,13 +60,13 @@ func (p *Parser) readByte() (byte, error) {
 	return v[0], nil
 }
 
-func (p *Parser) readBytes(l int32) ([]byte, error) {
+func (p *parser) readBytes(l int32) ([]byte, error) {
 	v := make([]byte, l)
 	err := binary.Read(p.body, binary.LittleEndian, &v)
 	return v, err
 }
 
-func (p *Parser) readString() (string, error) {
+func (p *parser) readString() (string, error) {
 	l, err := p.readInt32()
 	if err != nil {
 		return "", err
@@ -90,7 +90,7 @@ func (p *Parser) readString() (string, error) {
 	return string(v), nil
 }
 
-func (p *Parser) readBool() (bool, error) {
+func (p *parser) readBool() (bool, error) {
 	b, err := p.readByte()
 	if err != nil {
 		return false, nil
@@ -102,7 +102,7 @@ func (p *Parser) readBool() (bool, error) {
 	return true, nil
 }
 
-func (p *Parser) nextByteIsNull() error {
+func (p *parser) nextByteIsNull() error {
 	b, err := p.readByte()
 	if err != nil {
 		return err
@@ -114,7 +114,7 @@ func (p *Parser) nextByteIsNull() error {
 	return nil
 }
 
-func (p *Parser) skipBytes(l int64) error {
+func (p *parser) skipBytes(l int64) error {
 	_, err := p.body.Seek(l, io.SeekCurrent)
 	return err
 }
@@ -123,7 +123,7 @@ func (p *Parser) skipBytes(l int64) error {
 // chunk prepended.
 // Resets p.body back to where the function started reading from.
 // Useful when debugging a data chunk.
-func (p *Parser) debugReadDataChunk(l int32) ([]byte, error) {
+func (p *parser) debugReadDataChunk(l int32) ([]byte, error) {
 	pos := p.body.Index
 
 	b := make([]byte, 4)
@@ -147,7 +147,7 @@ func (p *Parser) debugReadDataChunk(l int32) ([]byte, error) {
 
 // measure returns a function that will return the difference between the index when measure was
 // called and when the returned function was called.
-func (p *Parser) measure() func() int32 {
+func (p *parser) measure() func() int32 {
 	startPos := p.body.Index
 	return func() int32 {
 		return int32(p.body.Index - startPos)
@@ -158,56 +158,56 @@ func (p *Parser) measure() func() int32 {
 // Write
 //
 
-func (s *Serializer) writeByte(b byte) error {
+func (s *serializer) writeByte(b byte) error {
 	_, err := s.body.Write([]byte{b})
 	return err
 }
 
-func (s *Serializer) writeBytes(b []byte) error {
+func (s *serializer) writeBytes(b []byte) error {
 	_, err := s.body.Write(b)
 	return err
 }
 
-func (s *Serializer) writeInt8(i int8) error {
+func (s *serializer) writeInt8(i int8) error {
 	return binary.Write(s.body, binary.LittleEndian, i)
 }
 
-func (s *Serializer) writeInt32(i int32) error {
+func (s *serializer) writeInt32(i int32) error {
 	return binary.Write(s.body, binary.LittleEndian, i)
 }
 
-func (s *Serializer) writeInt32Array(i []int32) error {
+func (s *serializer) writeInt32Array(i []int32) error {
 	return binary.Write(s.body, binary.LittleEndian, i)
 }
 
-func (s *Serializer) writeInt64(i int64) error {
+func (s *serializer) writeInt64(i int64) error {
 	return binary.Write(s.body, binary.LittleEndian, i)
 }
 
-func (s *Serializer) writeFloat32(f float32) error {
+func (s *serializer) writeFloat32(f float32) error {
 	return binary.Write(s.body, binary.LittleEndian, f)
 }
 
-func (s *Serializer) writeFloat32Array(f []float32) error {
+func (s *serializer) writeFloat32Array(f []float32) error {
 	return binary.Write(s.body, binary.LittleEndian, f)
 }
 
-func (s *Serializer) writeFloat64(f float64) error {
+func (s *serializer) writeFloat64(f float64) error {
 	return binary.Write(s.body, binary.LittleEndian, f)
 }
 
-func (s *Serializer) writeBool(b bool) error {
+func (s *serializer) writeBool(b bool) error {
 	if b {
 		return binary.Write(s.body, binary.LittleEndian, byte(0x01))
 	}
 	return binary.Write(s.body, binary.LittleEndian, byte(0x00))
 }
 
-func (s *Serializer) writeNull() error {
+func (s *serializer) writeNull() error {
 	return binary.Write(s.body, binary.LittleEndian, byte(0x00))
 }
 
-func (s *Serializer) writeNulls(len int32) error {
+func (s *serializer) writeNulls(len int32) error {
 	for i := int32(0); i < len; i++ {
 		err := s.writeNull()
 		if err != nil {
@@ -218,7 +218,7 @@ func (s *Serializer) writeNulls(len int32) error {
 	return nil
 }
 
-func (s *Serializer) writeString(str string) error {
+func (s *serializer) writeString(str string) error {
 	if len(str) == 0 {
 		return s.writeInt32(0)
 	}
@@ -234,13 +234,13 @@ func (s *Serializer) writeString(str string) error {
 	return binary.Write(s.body, binary.LittleEndian, []byte(str))
 }
 
-func (s *Serializer) writeNoneProp() error {
+func (s *serializer) writeNoneProp() error {
 	return s.writeString("None")
 }
 
 // writeLen writes the int32 at the specified index.
 // Resets its position to its original location after writing.
-func (s *Serializer) writeLen(i int32, idx int64) error {
+func (s *serializer) writeLen(i int32, idx int64) error {
 	currentPos := s.body.Index
 
 	_, err := s.body.Seek(idx, io.SeekStart)
@@ -263,7 +263,7 @@ func (s *Serializer) writeLen(i int32, idx int64) error {
 
 // measure returns a function that will return the difference between the index when measure was
 // called and when the returned function was called.
-func (s *Serializer) measure() func() int32 {
+func (s *serializer) measure() func() int32 {
 	startPos := s.body.Index
 	return func() int32 {
 		return int32(s.body.Index - startPos)

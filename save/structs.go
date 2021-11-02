@@ -37,7 +37,7 @@ func (v *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *ArbitraryStruct) parse(p *Parser) error {
+func (v *ArbitraryStruct) parse(p *parser) error {
 	for {
 		prop, err := p.parseProperty()
 		if err != nil {
@@ -53,7 +53,7 @@ func (v *ArbitraryStruct) parse(p *Parser) error {
 	return nil
 }
 
-func (v *ArbitraryStruct) serialize(s *Serializer) (int32, error) {
+func (v *ArbitraryStruct) serialize(s *serializer) (int32, error) {
 	m := s.measure()
 
 	err := s.serializeProperties(v.Properties)
@@ -82,7 +82,7 @@ func (v *StructPropertyValue) GetBoxStruct() (*BoxStruct, error) {
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *BoxStruct) parse(p *Parser) error {
+func (v *BoxStruct) parse(p *parser) error {
 	var err error
 	v.Min, err = p.readFloat32Array(3)
 	if err != nil {
@@ -103,7 +103,7 @@ func (v *BoxStruct) parse(p *Parser) error {
 	return nil
 }
 
-func (v *BoxStruct) serialize(s *Serializer) (int32, error) {
+func (v *BoxStruct) serialize(s *serializer) (int32, error) {
 	m := s.measure()
 
 	err := s.writeFloat32Array(v.Min)
@@ -130,7 +130,7 @@ func (v *BoxStruct) serialize(s *Serializer) (int32, error) {
 
 type FluidBoxStruct float32
 
-func (v *FluidBoxStruct) parse(p *Parser) error {
+func (v *FluidBoxStruct) parse(p *parser) error {
 	f, err := p.readFloat32()
 	if err != nil {
 		return err
@@ -141,7 +141,7 @@ func (v *FluidBoxStruct) parse(p *Parser) error {
 	return nil
 }
 
-func (v *FluidBoxStruct) serialize(s *Serializer) (int32, error) {
+func (v *FluidBoxStruct) serialize(s *serializer) (int32, error) {
 	return 4, s.writeFloat32(float32(*v))
 }
 
@@ -164,7 +164,7 @@ func (v *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, er
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *InventoryItemStruct) parse(p *Parser) error {
+func (v *InventoryItemStruct) parse(p *parser) error {
 	// UNKNOWN_DATA
 	_, err := p.readInt32()
 	if err != nil {
@@ -222,7 +222,7 @@ func (v *InventoryItemStruct) parse(p *Parser) error {
 	return nil
 }
 
-func (v *InventoryItemStruct) serialize(s *Serializer) (int32, error) {
+func (v *InventoryItemStruct) serialize(s *serializer) (int32, error) {
 	m := s.measure()
 
 	// UNKNOWN_DATA
@@ -290,7 +290,7 @@ type LinearColor struct {
 	A float32
 }
 
-func (v *LinearColor) parse(p *Parser) error {
+func (v *LinearColor) parse(p *parser) error {
 	var err error
 	v.R, err = p.readFloat32()
 	if err != nil {
@@ -315,7 +315,7 @@ func (v *LinearColor) parse(p *Parser) error {
 	return nil
 }
 
-func (v *LinearColor) serialize(s *Serializer) (int32, error) {
+func (v *LinearColor) serialize(s *serializer) (int32, error) {
 	err := s.writeFloat32(v.R)
 	if err != nil {
 		return 0, err
@@ -350,7 +350,7 @@ type QuatStruct struct {
 	W float32
 }
 
-func (v *QuatStruct) parse(p *Parser) error {
+func (v *QuatStruct) parse(p *parser) error {
 	var err error
 	v.X, err = p.readFloat32()
 	if err != nil {
@@ -375,7 +375,7 @@ func (v *QuatStruct) parse(p *Parser) error {
 	return nil
 }
 
-func (v *QuatStruct) serialize(s *Serializer) (int32, error) {
+func (v *QuatStruct) serialize(s *serializer) (int32, error) {
 	err := s.writeFloat32(v.X)
 	if err != nil {
 		return 0, err
@@ -409,7 +409,7 @@ type VectorStruct struct {
 	Z float32
 }
 
-func (v *VectorStruct) parse(p *Parser) error {
+func (v *VectorStruct) parse(p *parser) error {
 	var err error
 	v.X, err = p.readFloat32()
 	if err != nil {
@@ -429,7 +429,7 @@ func (v *VectorStruct) parse(p *Parser) error {
 	return nil
 }
 
-func (v *VectorStruct) serialize(s *Serializer) (int32, error) {
+func (v *VectorStruct) serialize(s *serializer) (int32, error) {
 	err := s.writeFloat32(v.X)
 	if err != nil {
 		return 0, err

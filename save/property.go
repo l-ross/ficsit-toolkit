@@ -35,7 +35,7 @@ type PropertyValue interface {
 	//
 	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
-	parse(p *Parser, inner bool) error
+	parse(p *parser, inner bool) error
 
 	// serialize the property value and return the length of the property data.
 	// Some PropertyValue implementations always return a zero length as they aren't
@@ -43,10 +43,10 @@ type PropertyValue interface {
 	//
 	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
-	serialize(s *Serializer, inner bool) (int32, error)
+	serialize(s *serializer, inner bool) (int32, error)
 }
 
-func (p *Parser) parseProperties() ([]*Property, error) {
+func (p *parser) parseProperties() ([]*Property, error) {
 	props := make([]*Property, 0)
 
 	for {
@@ -65,7 +65,7 @@ func (p *Parser) parseProperties() ([]*Property, error) {
 	return props, nil
 }
 
-func (p *Parser) parseProperty() (*Property, error) {
+func (p *parser) parseProperty() (*Property, error) {
 	var err error
 	prop := &Property{}
 
@@ -146,7 +146,7 @@ func (p *Parser) parseProperty() (*Property, error) {
 	return prop, nil
 }
 
-func (s *Serializer) serializeProperties(props []*Property) error {
+func (s *serializer) serializeProperties(props []*Property) error {
 	for _, prop := range props {
 		err := s.serializeProperty(prop)
 		if err != nil {
@@ -162,7 +162,7 @@ func (s *Serializer) serializeProperties(props []*Property) error {
 	return nil
 }
 
-func (s *Serializer) serializeProperty(prop *Property) error {
+func (s *serializer) serializeProperty(prop *Property) error {
 	err := s.writeString(prop.Name)
 	if err != nil {
 		return err
