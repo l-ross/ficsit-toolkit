@@ -174,6 +174,8 @@ func (c *Class) UnmarshalJSON(b []byte) error {
 }
 
 func (r *Resource) generate() error {
+	fmt.Printf("Generating %s\n", r.NativeClass)
+
 	r.TypeName, r.PkgName = nativeClassToTypeNameAndPkgName(r.NativeClass)
 
 	r.structDef = make(map[string]string)
