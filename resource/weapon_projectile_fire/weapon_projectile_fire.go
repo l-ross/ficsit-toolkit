@@ -5,7 +5,7 @@ package WeaponProjectileFire
 import (
 	"fmt"
 
-	"github.com/l-ross/ficsit-toolkit/factory/resource"
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGWeaponProjectileFire struct {

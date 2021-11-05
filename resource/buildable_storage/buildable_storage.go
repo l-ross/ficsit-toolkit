@@ -5,7 +5,7 @@ package BuildableStorage
 import (
 	"fmt"
 
-	"github.com/l-ross/ficsit-toolkit/factory/resource"
+	"github.com/l-ross/ficsit-toolkit/resource"
 )
 
 type FGBuildableStorage struct {
