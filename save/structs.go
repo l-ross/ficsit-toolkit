@@ -290,6 +290,14 @@ type LinearColor struct {
 	A float32
 }
 
+func (v *StructPropertyValue) GetLinearColor() (*LinearColor, error) {
+	if v, ok := v.Value.(*LinearColor); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
+
 func (v *LinearColor) parse(p *parser) error {
 	var err error
 	v.R, err = p.readFloat32()
