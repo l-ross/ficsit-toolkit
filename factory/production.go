@@ -2,7 +2,6 @@ package factory
 
 import (
 	"fmt"
-	"regexp"
 	"strings"
 	"time"
 
@@ -12,37 +11,56 @@ import (
 	"github.com/l-ross/ficsit-toolkit/save"
 )
 
-type Production struct {
-	PowerConsumption              float32
-	CurrentRecipe                 *Recipe.FGRecipe
-	InputInventory                []InventoryStack
-	OutputInventory               []InventoryStack
-	IsProducing                   bool
-	TimeSinceStartOrStopProducing time.Duration
-
-	Inputs  []*Connection
-	Outputs []*Connection
-
-	*Building
+type Production interface {
+	PowerConsumption() float32
+	CurrentRecipe() *Recipe.FGRecipe
+	InputInventory() []InventoryStack
+	OutputInventory() []InventoryStack
+	IsProducing() bool
+	TimeSinceStartOrStopProducing() time.Duration
 }
 
-type InventoryStack struct {
-	Item     ItemDescriptor.FGItemDescriptor
-	Quantity int
+type production struct {
+	powerConsumption              float32
+	currentRecipe                 *Recipe.FGRecipe
+	inputInventory                []InventoryStack
+	outputInventory               []InventoryStack
+	isProducing                   bool
+	timeSinceStartOrStopProducing time.Duration
 }
 
-func (f *Factory) loadProduction(e *save.Entity, s *save.Save) (*Production, error) {
-	b, err := f.loadBuilding(e, s)
-	if err != nil {
-		return nil, err
-	}
+func (p *production) PowerConsumption() float32 {
+	return p.powerConsumption
+}
 
-	p := &Production{
-		Building: b,
-	}
+// CurrentRecipe returns the currently assigned recipe for this production machine.
+// Returns nil if the machine has no recipe assigned.
+func (p *production) CurrentRecipe() *Recipe.FGRecipe {
+	return p.currentRecipe
+}
 
-	for _, prop := range e.Properties {
+func (p *production) InputInventory() []InventoryStack {
+	return p.inputInventory
+}
+
+func (p *production) OutputInventory() []InventoryStack {
+	return p.outputInventory
+}
+
+func (p *production) IsProducing() bool {
+	return p.isProducing
+}
+
+func (p *production) TimeSinceStartOrStopProducing() time.Duration {
+	return p.timeSinceStartOrStopProducing
+}
+
+func (f *Factory) loadProduction(b *building, s *save.Save) (*production, error) {
+	p := &production{}
+
+	for _, prop := range b.entity.Properties {
 		var err error
+
 		switch prop.Name {
 		case "mInputInventory":
 			err = p.setInputInventory(prop, s)
@@ -63,18 +81,29 @@ func (f *Factory) loadProduction(e *save.Entity, s *save.Save) (*Production, err
 		}
 	}
 
-	err = p.setInputs(e, s)
+	err := p.setInputs(b.entity, s)
 	if err != nil {
 		return nil, fmt.Errorf("failed to set inputs: %w", err)
+	}
+
+	outputNodes := f.conveyorGraph.From(b.node.ID())
+	for outputNodes.Next() {
+		n := outputNodes.Node()
+		fmt.Println(n.ID())
+		// Wind forward until we get something that is not a Conveyor
+	}
+
+	inputNodes := f.conveyorGraph.To(b.node.ID())
+	for inputNodes.Next() {
+		n := inputNodes.Node()
+		fmt.Println(n.ID())
+		// Wind back until we get something that is not a Conveyor
 	}
 
 	return p, nil
 }
 
-// Case-insensitive as sometimes 'Input' is spelt 'InPut'.
-var inputRegexp = regexp.MustCompile(`(?i)Input\d$`)
-
-func (p *Production) setInputs(e *save.Entity, s *save.Save) error {
+func (p *production) setInputs(e *save.Entity, s *save.Save) error {
 	inputs := getObjectsThatMatch(e.References, inputRegexp)
 	if len(inputs) == 0 {
 		return nil
@@ -83,24 +112,24 @@ func (p *Production) setInputs(e *save.Entity, s *save.Save) error {
 	return nil
 }
 
-func (p *Production) setInputInventory(prop *save.Property, s *save.Save) error {
+func (p *production) setInputInventory(prop *save.Property, s *save.Save) error {
 	stacks, err := getInventoryStacks(prop, s)
 	if err != nil {
 		return err
 	}
 
-	p.InputInventory = stacks
+	p.inputInventory = stacks
 
 	return nil
 }
 
-func (p *Production) setOutputInventory(prop *save.Property, s *save.Save) error {
+func (p *production) setOutputInventory(prop *save.Property, s *save.Save) error {
 	stacks, err := getInventoryStacks(prop, s)
 	if err != nil {
 		return err
 	}
 
-	p.OutputInventory = stacks
+	p.outputInventory = stacks
 
 	return nil
 }
@@ -131,47 +160,57 @@ func getInventoryStacks(prop *save.Property, s *save.Save) ([]InventoryStack, er
 		return nil, err
 	}
 
-	structProp := getValueFromStructProperty("InventoryStack", structProps)
-	if structProp == nil {
+	stackProps := getValuesFromStructProperty("InventoryStack", structProps)
+	if len(structProps) == 0 {
 		return nil, fmt.Errorf("failed to find InventoryStack")
 	}
 
-	as, err := structProp.GetArbitraryStruct()
-	if err != nil {
-		return nil, err
+	stacks := make([]InventoryStack, 0)
+
+	for _, p := range stackProps {
+		as, err := p.GetArbitraryStruct()
+		if err != nil {
+			return nil, err
+		}
+
+		itemProp, err := getPropFromArray("Item", as.Properties)
+		if err != nil {
+			return nil, err
+		}
+
+		itemStruct, err := itemProp.GetStructValue()
+		if err != nil {
+			return nil, err
+		}
+
+		iiStruct, err := itemStruct.GetInventoryItemStruct()
+		if err != nil {
+			return nil, err
+		}
+
+		if iiStruct.ItemName == "" {
+			continue
+		}
+
+		className := strings.Split(iiStruct.ItemName, ".")[1]
+
+		i, err := ItemDescriptor.GetByClassName(className)
+		if err != nil {
+			return nil, err
+		}
+
+		is := InventoryStack{
+			Item:     i,
+			Quantity: int(iiStruct.NumItems),
+		}
+
+		stacks = append(stacks, is)
 	}
 
-	itemProp, err := getPropFromArray("Item", as.Properties)
-	if err != nil {
-		return nil, err
-	}
-
-	itemStruct, err := itemProp.GetStructValue()
-	if err != nil {
-		return nil, err
-	}
-
-	iiStruct, err := itemStruct.GetInventoryItemStruct()
-	if err != nil {
-		return nil, err
-	}
-
-	className := strings.Split(iiStruct.ItemName, ".")[1]
-
-	i, err := ItemDescriptor.GetByClassName(className)
-	if err != nil {
-		return nil, err
-	}
-
-	is := InventoryStack{
-		Item:     i,
-		Quantity: int(iiStruct.NumItems),
-	}
-
-	return []InventoryStack{is}, nil
+	return stacks, nil
 }
 
-func (p *Production) setPowerInfo(prop *save.Property, s *save.Save) error {
+func (p *production) setPowerInfo(prop *save.Property, s *save.Save) error {
 	obj, err := prop.GetObjectValue()
 	if err != nil {
 		return err
@@ -192,12 +231,12 @@ func (p *Production) setPowerInfo(prop *save.Property, s *save.Save) error {
 		return err
 	}
 
-	p.PowerConsumption = f
+	p.powerConsumption = f
 
 	return nil
 }
 
-func (p *Production) setRecipe(prop *save.Property) error {
+func (p *production) setRecipe(prop *save.Property) error {
 	obj, err := prop.GetObjectValue()
 	if err != nil {
 		return err
@@ -208,18 +247,18 @@ func (p *Production) setRecipe(prop *save.Property) error {
 		return err
 	}
 
-	p.CurrentRecipe = &recipe
+	p.currentRecipe = &recipe
 
 	return nil
 }
 
-func (p *Production) setIsProducing(prop *save.Property) error {
+func (p *production) setIsProducing(prop *save.Property) error {
 	b, err := prop.GetBoolValue()
 	if err != nil {
 		return err
 	}
 
-	p.IsProducing = b
+	p.isProducing = b
 
 	return nil
 }
@@ -236,13 +275,3 @@ func (p *Production) setIsProducing(prop *save.Property) error {
 	Output
 	Belts []Conveyor // Organised output to input
 */
-
-type Connection struct {
-	Input  Connectable
-	Output Connectable
-	Belts  []Conveyor
-}
-
-type Connectable interface {
-	Type() string
-}

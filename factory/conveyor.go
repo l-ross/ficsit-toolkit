@@ -3,19 +3,15 @@ package factory
 import (
 	"strings"
 
+	"gonum.org/v1/gonum/graph"
+
 	"gonum.org/v1/gonum/graph/simple"
 
 	"github.com/l-ross/ficsit-toolkit/save"
 )
 
-//type Input interface {
-//	Forward() Input
-//	Terminates() bool
-//	Type() string
-//}
-
 type Conveyor struct {
-	*Building
+	*building
 }
 
 func (f *Factory) LoadConveyor(e *save.Entity, s *save.Save) (*Conveyor, error) {
@@ -25,30 +21,18 @@ func (f *Factory) LoadConveyor(e *save.Entity, s *save.Save) (*Conveyor, error) 
 	}
 
 	c := &Conveyor{
-		Building: b,
+		building: b,
 	}
+
+	f.buildings[c.node.ID()] = c
 
 	return c, nil
 }
 
-//func (c *Conveyor) Forward() Input {
-//	// All Inputs:
-//	//
-//	// Conveyor belt
-//	// Production input
-//	// Storage input
-//	// Splitter
-//	// Merger
-//
-//	return nil
-//}
-
-func (c *Conveyor) Backward() {}
-
-func (f *Factory) LoadConnection(c *save.Component) error {
+func (f *Factory) LoadConnection(c *save.Component) (graph.Edge, error) {
 	n1, err := getID(c.InstanceName)
 	if err != nil {
-		return err
+		return nil, err
 	}
 	var n2 int64
 
@@ -65,7 +49,7 @@ func (f *Factory) LoadConnection(c *save.Component) error {
 		case "mDirection":
 			e, err := prop.GetEnumPropertyValue()
 			if err != nil {
-				return err
+				return nil, err
 			}
 			if strings.Contains(e.Value, "FCD_INPUT") {
 				// If the direction is input then our assumption about direction is wrong.
@@ -74,23 +58,29 @@ func (f *Factory) LoadConnection(c *save.Component) error {
 		case "mConnectedComponent":
 			o, err := prop.GetObjectValue()
 			if err != nil {
-				return err
+				return nil, err
 			}
 			n2, err = getID(o.PathName)
 			if err != nil {
-				return err
+				return nil, err
 			}
 		}
 	}
 
-	if n2 != 0 {
-		// Set edge based on direction.
-		if n1ToN2 {
-			f.g.SetEdge(f.g.NewEdge(simple.Node(n1), simple.Node(n2)))
-		} else {
-			f.g.SetEdge(f.g.NewEdge(simple.Node(n2), simple.Node(n1)))
-		}
+	if n2 == 0 {
+		return nil, nil
 	}
 
-	return nil
+	var e graph.Edge
+
+	// Create edge based on direction.
+	if n1ToN2 {
+		e = f.conveyorGraph.NewEdge(simple.Node(n1), simple.Node(n2))
+	} else {
+		e = f.conveyorGraph.NewEdge(simple.Node(n2), simple.Node(n1))
+	}
+
+	f.conveyorGraph.SetEdge(e)
+
+	return e, nil
 }
