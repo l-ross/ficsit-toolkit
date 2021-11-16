@@ -3,36 +3,55 @@ package factory
 import (
 	"strings"
 
-	"gonum.org/v1/gonum/graph"
+	BuildableConveyorLift "github.com/l-ross/ficsit-toolkit/resource/buildable_conveyor_lift"
 
-	"gonum.org/v1/gonum/graph/simple"
+	BuildableConveyorBelt "github.com/l-ross/ficsit-toolkit/resource/buildable_conveyor_belt"
 
 	"github.com/l-ross/ficsit-toolkit/save"
+	"gonum.org/v1/gonum/graph"
+	"gonum.org/v1/gonum/graph/simple"
 )
 
-type Conveyor struct {
+type ConveyorBelt struct {
+	tier           int
+	BeltDescriptor BuildableConveyorBelt.FGBuildableConveyorBelt
 	*building
 }
 
-func (f *Factory) LoadConveyor(e *save.Entity, s *save.Save) (*Conveyor, error) {
-	b, err := f.loadBuilding(e, s)
-	if err != nil {
-		return nil, err
-	}
+func (c *ConveyorBelt) Tier() int {
+	return c.tier
+}
 
-	c := &Conveyor{
+type ConveyorLift struct {
+	Tier           int
+	LiftDescriptor BuildableConveyorLift.FGBuildableConveyorLift
+	*building
+}
+
+type Conveyor interface {
+	Tier() int
+}
+
+func (f *Factory) loadConveyorBelt(b *building, s *save.Save) (Building, error) {
+	c := &ConveyorBelt{
 		building: b,
 	}
-
-	f.buildings[c.node.ID()] = c
 
 	return c, nil
 }
 
-func (f *Factory) LoadConnection(c *save.Component) (graph.Edge, error) {
+//func (f *Factory) loadConveyor(b *building, s *save.Save) (Building, error) {
+//	c := &Conveyor{
+//		building: b,
+//	}
+//
+//	return c, nil
+//}
+
+func (f *Factory) loadConveyorConnection(c *save.Component) error {
 	n1, err := getID(c.InstanceName)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	var n2 int64
 
@@ -49,7 +68,7 @@ func (f *Factory) LoadConnection(c *save.Component) (graph.Edge, error) {
 		case "mDirection":
 			e, err := prop.GetEnumPropertyValue()
 			if err != nil {
-				return nil, err
+				return err
 			}
 			if strings.Contains(e.Value, "FCD_INPUT") {
 				// If the direction is input then our assumption about direction is wrong.
@@ -58,17 +77,17 @@ func (f *Factory) LoadConnection(c *save.Component) (graph.Edge, error) {
 		case "mConnectedComponent":
 			o, err := prop.GetObjectValue()
 			if err != nil {
-				return nil, err
+				return err
 			}
 			n2, err = getID(o.PathName)
 			if err != nil {
-				return nil, err
+				return err
 			}
 		}
 	}
 
 	if n2 == 0 {
-		return nil, nil
+		return nil
 	}
 
 	var e graph.Edge
@@ -82,5 +101,5 @@ func (f *Factory) LoadConnection(c *save.Component) (graph.Edge, error) {
 
 	f.conveyorGraph.SetEdge(e)
 
-	return e, nil
+	return nil
 }

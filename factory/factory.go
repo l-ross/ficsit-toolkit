@@ -2,25 +2,23 @@ package factory
 
 import (
 	"io"
-
-	"gonum.org/v1/gonum/graph"
-
-	"gonum.org/v1/gonum/graph/simple"
+	"strings"
 
 	"github.com/l-ross/ficsit-toolkit/save"
+	"gonum.org/v1/gonum/graph/simple"
 )
 
 type Factory struct {
 	s *save.Save
 
 	conveyorGraph *simple.DirectedGraph
-	buildings     map[int64]Building
+	Buildings     map[int64]Building
 
-	mergers           []*Merger
-	splitters         []*Splitter
-	constructors      []*Constructor
-	conveyors         []*Conveyor
-	storageContainers []*StorageContainer
+	Mergers           map[int64]*Merger
+	Splitters         map[int64]*Splitter
+	Constructors      map[int64]*Constructor
+	Conveyors         map[int64]*Conveyor
+	StorageContainers map[int64]*StorageContainer
 }
 
 func Load(r io.Reader) (*Factory, error) {
@@ -32,85 +30,60 @@ func Load(r io.Reader) (*Factory, error) {
 	f := &Factory{
 		s:             s,
 		conveyorGraph: simple.NewDirectedGraph(),
-		buildings:     make(map[int64]Building),
+		Buildings:     make(map[int64]Building),
+		Constructors:  make(map[int64]*Constructor),
 	}
 
-	//for _, c := range s.Components {
-	//	switch c.TypePath {
-	//	case "/Script/FactoryGame.FGFactoryConnectionComponent":
-	//		err := f.LoadConnection(c)
-	//		if err != nil {
-	//			return nil, err
-	//		}
-	//	}
-	//}
-
+	// Load all buildings
 	for _, e := range s.Entities {
-		switch e.TypePath {
-		case "/Game/FactoryGame/Buildable/Factory/CA_Merger/Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C":
-			m, err := f.LoadMerger(e, s)
+		if isBuilding(e) {
+			b, err := f.loadBuilding(e, s)
 			if err != nil {
 				return nil, err
 			}
-			f.mergers = append(f.mergers, m)
-		case "/Game/FactoryGame/Buildable/Factory/CA_Splitter/Build_ConveyorAttachmentSplitter.Build_ConveyorAttachmentSplitter_C":
-			spl, err := f.LoadSplitter(e, s)
-			if err != nil {
-				return nil, err
-			}
-			f.splitters = append(f.splitters, spl)
-		case "/Game/FactoryGame/Buildable/Factory/StorageContainerMk2/Build_StorageContainerMk2.Build_StorageContainerMk2_C":
-			st, err := f.LoadStorageContainer(e, s)
-			if err != nil {
-				return nil, err
-			}
-			f.storageContainers = append(f.storageContainers, st)
-		case "/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C":
-			c, err := f.LoadConstructor(e, s)
-			if err != nil {
-				return nil, err
-			}
-			f.constructors = append(f.constructors, c)
-		case "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk1/Build_ConveyorBeltMk1.Build_ConveyorBeltMk1_C",
-			"/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk2/Build_ConveyorBeltMk2.Build_ConveyorBeltMk2_C":
-			c, err := f.LoadConveyor(e, s)
-			if err != nil {
-				return nil, err
-			}
-			f.conveyors = append(f.conveyors, c)
+
+			f.Buildings[b.ID()] = b
 		}
 	}
 
-	//for _, b := range f.buildings {
-	//	err := f.setInputs(b, s)
-	//	if err != nil {
-	//		return nil, err
-	//	}
-	//}
+	// Load all connections
+	for _, c := range s.Components {
+		switch c.TypePath {
+		case "/Script/FactoryGame.FGFactoryConnectionComponent":
+			err := f.loadConveyorConnection(c)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
 
-	//for _, c := range f.splitters {
-	//	next := f.next(c.node)
-	//	spew.Dump(next)
-	//}
+	// Prioritised loading of all buildings
+	for _, loaders := range prioritisedLoading {
+		for _, b := range f.Buildings {
+			if loader, ok := loaders[b.TypePath()]; ok {
+				b2, err := loader(f, b.(*building), s)
+				if err != nil {
+					return nil, err
+				}
+
+				f.Buildings[b2.ID()] = b2
+			}
+		}
+	}
 
 	return f, nil
 }
 
-func (f *Factory) next(n graph.Node) Building {
-	nodes := f.conveyorGraph.From(n.ID())
-	if !nodes.Next() {
-		return nil
+func isBuilding(e *save.Entity) bool {
+	if e.ParentObjectName != "Persistent_Level:PersistentLevel.BuildableSubsystem" {
+		return false
 	}
 
-	node := nodes.Node()
-	b := f.buildings[node.ID()]
-	switch b.(type) {
-	case nil:
-		return nil
-	case *Conveyor:
-		// TODO: Stop possible infinite loop
-		return f.next(b.Node())
+	if !strings.HasPrefix(e.TypePath, "/Game/FactoryGame/Buildable/Factory/") {
+		// We don't want to load things like foundations which start
+		// "/Game/FactoryGame/Buildable/Building/"
+		return false
 	}
 
-	return b
+	return true
 }

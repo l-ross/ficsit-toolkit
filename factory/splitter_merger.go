@@ -7,12 +7,7 @@ type Splitter struct {
 	*storage
 }
 
-func (f *Factory) LoadSplitter(e *save.Entity, s *save.Save) (*Splitter, error) {
-	b, err := f.loadBuilding(e, s)
-	if err != nil {
-		return nil, err
-	}
-
+func (f *Factory) LoadSplitter(b *building, s *save.Save) (Building, error) {
 	st, err := f.loadStorage(b, s)
 	if err != nil {
 		return nil, err
@@ -23,8 +18,6 @@ func (f *Factory) LoadSplitter(e *save.Entity, s *save.Save) (*Splitter, error) 
 		storage:  st,
 	}
 
-	f.buildings[spl.node.ID()] = spl
-
 	return spl, nil
 }
 
@@ -33,12 +26,7 @@ type Merger struct {
 	*storage
 }
 
-func (f *Factory) LoadMerger(e *save.Entity, s *save.Save) (*Merger, error) {
-	b, err := f.loadBuilding(e, s)
-	if err != nil {
-		return nil, err
-	}
-
+func (f *Factory) LoadMerger(b *building, s *save.Save) (Building, error) {
 	st, err := f.loadStorage(b, s)
 	if err != nil {
 		return nil, err
@@ -48,8 +36,6 @@ func (f *Factory) LoadMerger(e *save.Entity, s *save.Save) (*Merger, error) {
 		building: b,
 		storage:  st,
 	}
-
-	f.buildings[m.node.ID()] = m
 
 	return m, nil
 }

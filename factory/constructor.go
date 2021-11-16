@@ -1,23 +1,19 @@
 package factory
 
 import (
+	BuildingDescriptor "github.com/l-ross/ficsit-toolkit/resource/building_descriptor"
 	"github.com/l-ross/ficsit-toolkit/save"
 )
 
 type Constructor struct {
 	*production
 	*building
-	//Output *Connection
-	//Input  *Connection
 	*input
 	*output
 }
 
-func (f *Factory) LoadConstructor(e *save.Entity, s *save.Save) (*Constructor, error) {
-	b, err := f.loadBuilding(e, s)
-	if err != nil {
-		return nil, err
-	}
+func (f *Factory) loadConstructor(b *building, s *save.Save) (Building, error) {
+	b.descriptor = BuildingDescriptor.ConstructorMk1
 
 	p, err := f.loadProduction(b, s)
 	if err != nil {
@@ -29,7 +25,7 @@ func (f *Factory) LoadConstructor(e *save.Entity, s *save.Save) (*Constructor, e
 		return nil, err
 	}
 
-	o, err := f.loadOutput(b)
+	o, err := f.loadOutput(b, s)
 	if err != nil {
 		return nil, err
 	}
@@ -41,12 +37,7 @@ func (f *Factory) LoadConstructor(e *save.Entity, s *save.Save) (*Constructor, e
 		output:     o,
 	}
 
-	f.buildings[c.node.ID()] = c
+	f.Constructors[b.ID()] = c
 
-	return c, nil
-}
-
-type Connection struct {
-	Connected     Building
-	ConveyorBelts []Conveyor
+	return c, err
 }

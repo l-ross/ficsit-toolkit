@@ -13,12 +13,7 @@ type StorageContainer struct {
 	*storage
 }
 
-func (f *Factory) LoadStorageContainer(e *save.Entity, save *save.Save) (*StorageContainer, error) {
-	b, err := f.loadBuilding(e, save)
-	if err != nil {
-		return nil, err
-	}
-
+func (f *Factory) LoadStorageContainer(b *building, save *save.Save) (Building, error) {
 	st, err := f.loadStorage(b, save)
 	if err != nil {
 		return nil, err
@@ -28,8 +23,6 @@ func (f *Factory) LoadStorageContainer(e *save.Entity, save *save.Save) (*Storag
 		building: b,
 		storage:  st,
 	}
-
-	f.buildings[s.node.ID()] = b
 
 	return s, nil
 }

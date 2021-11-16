@@ -6,74 +6,92 @@ import (
 	"strconv"
 	"time"
 
+	BuildingDescriptor "github.com/l-ross/ficsit-toolkit/resource/building_descriptor"
+
+	"gonum.org/v1/gonum/graph/simple"
+
 	Recipe "github.com/l-ross/ficsit-toolkit/resource/recipe"
 	"github.com/l-ross/ficsit-toolkit/save"
-	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/simple"
 )
 
 type Building interface {
 	BuildTimestamp() time.Duration
-	BuiltWithRecipe() Recipe.FGRecipe
+	Recipe() Recipe.FGRecipe
 	PrimaryColor() save.LinearColor
 	SecondaryColor() save.LinearColor
 	Entity() save.Entity
-	Node() graph.Node
+	ID() int64
+	TypePath() string
 }
 
 type building struct {
-	entity *save.Entity
-
+	id              int64
+	descriptor      BuildingDescriptor.FGBuildingDescriptor
+	typePath        string
+	entity          *save.Entity
 	buildTimestamp  time.Duration
 	builtWithRecipe Recipe.FGRecipe
 	primaryColor    save.LinearColor
 	secondaryColor  save.LinearColor
-
-	inputs  []graph.Edge
-	outputs []graph.Edge
-
-	node graph.Node
 }
 
-func (b *building) Node() graph.Node {
-	return b.node
+// TypePath returns the type path for this building.
+func (b *building) TypePath() string {
+	return b.typePath
 }
 
+// Descriptor returns the descriptor for this building based on the data provided in
+// the satisfactory Docs.json that ships with the game.
+func (b *building) Descriptor() BuildingDescriptor.FGBuildingDescriptor {
+	return b.descriptor
+}
+
+// ID returns the unique identifier for this building
+func (b *building) ID() int64 {
+	return b.id
+}
+
+// Entity returns the entity from the save file for this building.
 func (b *building) Entity() save.Entity {
 	return *b.entity
 }
 
+// BuildTimestamp returns the duration between when the game started and when the building
+// was constructed.
 func (b *building) BuildTimestamp() time.Duration {
 	return b.buildTimestamp
 }
 
-func (b *building) BuiltWithRecipe() Recipe.FGRecipe {
+// Recipe returns the recipe for constructing this building.
+func (b *building) Recipe() Recipe.FGRecipe {
 	return b.builtWithRecipe
 }
 
+// PrimaryColor returns the RGBA of the buildings primary color.
 func (b *building) PrimaryColor() save.LinearColor {
 	return b.primaryColor
 }
 
+// SecondaryColor returns the RGBA of the buildings secondary color.
 func (b *building) SecondaryColor() save.LinearColor {
 	return b.secondaryColor
 }
 
-func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (*building, error) {
+func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
 	id, err := getID(e.InstanceName)
 	if err != nil {
 		return nil, err
 	}
 
 	b := &building{
-		entity: e,
-		node:   simple.Node(id),
+		id:       id,
+		typePath: e.TypePath,
+		entity:   e,
 	}
 
-	// Add node if it hasn't already been added.
-	if f.conveyorGraph.Node(id) == nil {
-		f.conveyorGraph.AddNode(b.node)
-	}
+	// TODO: This will currently add things that don't have conveyor inputs / outputs
+	//  to the conveyorGraph e.g. Power poles.
+	f.conveyorGraph.AddNode(simple.Node(id))
 
 	for _, prop := range e.Properties {
 		var err error
@@ -84,7 +102,7 @@ func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (*building, error) 
 		case "mSecondaryColor":
 			err = b.setSecondaryColor(prop)
 		case "mBuiltWithRecipe":
-			err = b.setBuiltWithRecipe(prop)
+			err = b.setRecipe(prop)
 		case "mBuildTimeStamp":
 			err = b.setTimestamp(prop, s)
 		}
@@ -92,16 +110,6 @@ func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (*building, error) 
 		if err != nil {
 			return nil, fmt.Errorf("failed to handle prop %q: %w", prop.Name, err)
 		}
-	}
-
-	err = f.setInputs(b, s)
-	if err != nil {
-		return nil, err
-	}
-
-	err = f.setOutputs(b, s)
-	if err != nil {
-		return nil, err
 	}
 
 	return b, nil
@@ -139,7 +147,7 @@ func (b *building) setTimestamp(p *save.Property, s *save.Save) error {
 	return nil
 }
 
-func (b *building) setBuiltWithRecipe(p *save.Property) error {
+func (b *building) setRecipe(p *save.Property) error {
 	o, err := p.GetObjectValue()
 	if err != nil {
 		return err
@@ -189,44 +197,4 @@ func (b *building) getLinearColor(p *save.Property) (*save.LinearColor, error) {
 	}
 
 	return l, err
-}
-
-// Case-insensitive as sometimes 'Input' is spelt 'InPut'.
-var inputRegexp = regexp.MustCompile(`(?i)(Input\d|ConveyorAny0)$`)
-var outputRegexp = regexp.MustCompile(`(?i)(Output\d|ConveyorAny1)$`)
-
-func (f *Factory) setInputs(b *building, s *save.Save) error {
-	inputs := getObjectsThatMatch(b.entity.References, inputRegexp)
-	for _, i := range inputs {
-		c := s.Components[i]
-		e, err := f.LoadConnection(c)
-		if err != nil {
-			return err
-		}
-		b.inputs = append(b.inputs, e)
-	}
-	return nil
-}
-
-func (f *Factory) setOutputs(b *building, s *save.Save) error {
-	outputs := getObjectsThatMatch(b.entity.References, outputRegexp)
-	for _, o := range outputs {
-		c := s.Components[o]
-		e, err := f.LoadConnection(c)
-		if err != nil {
-			return err
-		}
-		b.outputs = append(b.outputs, e)
-	}
-	return nil
-}
-
-func (f *Factory) createConnection(e graph.Edge) (*Connection, error) {
-	b := f.next(e.From())
-
-	c := &Connection{
-		Connected: b,
-	}
-
-	return c, nil
 }

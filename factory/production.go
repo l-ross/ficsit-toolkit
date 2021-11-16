@@ -86,19 +86,19 @@ func (f *Factory) loadProduction(b *building, s *save.Save) (*production, error)
 		return nil, fmt.Errorf("failed to set inputs: %w", err)
 	}
 
-	outputNodes := f.conveyorGraph.From(b.node.ID())
-	for outputNodes.Next() {
-		n := outputNodes.Node()
-		fmt.Println(n.ID())
-		// Wind forward until we get something that is not a Conveyor
-	}
-
-	inputNodes := f.conveyorGraph.To(b.node.ID())
-	for inputNodes.Next() {
-		n := inputNodes.Node()
-		fmt.Println(n.ID())
-		// Wind back until we get something that is not a Conveyor
-	}
+	//outputNodes := f.conveyorGraph.From(b.node.ID())
+	//for outputNodes.Next() {
+	//	n := outputNodes.Node()
+	//	fmt.Println(n.ID())
+	//	// Wind forward until we get something that is not a Conveyor
+	//}
+	//
+	//inputNodes := f.conveyorGraph.To(b.node.ID())
+	//for inputNodes.Next() {
+	//	n := inputNodes.Node()
+	//	fmt.Println(n.ID())
+	//	// Wind back until we get something that is not a Conveyor
+	//}
 
 	return p, nil
 }
