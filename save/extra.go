@@ -81,7 +81,7 @@ func newCircuitSubsystem(_ int32) *Extra {
 	}
 }
 
-func (e *Extra) getCircuitSubsystem() (*CircuitSubsystemExtra, error) {
+func (e *Extra) GetCircuitSubsystem() (*CircuitSubsystemExtra, error) {
 	if v, ok := e.Value.(*CircuitSubsystemExtra); ok {
 		return v, nil
 	}
@@ -169,7 +169,7 @@ func newConveyorBelt(_ int32) *Extra {
 	}
 }
 
-func (e *Extra) getConveyorBelt() (*ConveyorBeltExtra, error) {
+func (e *Extra) GetConveyorBelt() (*ConveyorBeltExtra, error) {
 	if v, ok := e.Value.(*ConveyorBeltExtra); ok {
 		return v, nil
 	}
@@ -272,6 +272,14 @@ func newGameMode(_ int32) *Extra {
 	}
 }
 
+func (e *Extra) GetGameModeExtra() (*GameModeExtra, error) {
+	if v, ok := e.Value.(*GameModeExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
+}
+
 func (e *GameModeExtra) parse(p *parser) error {
 	count, err := p.readInt32()
 	if err != nil {
@@ -329,6 +337,14 @@ func newGameState(_ int32) *Extra {
 		Type:  GameStateExtraType,
 		Value: &GameStateExtra{},
 	}
+}
+
+func (e *Extra) GetGameStateExtra() (*GameStateExtra, error) {
+	if v, ok := e.Value.(*GameStateExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
 func (e *GameStateExtra) parse(p *parser) error {
@@ -396,6 +412,14 @@ func newPlayerState(l int32) *Extra {
 	}
 }
 
+func (e *Extra) GetPlayerStateExtra() (*PlayerStateExtra, error) {
+	if v, ok := e.Value.(*PlayerStateExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
+}
+
 func (e *PlayerStateExtra) parse(p *parser) error {
 	var err error
 	e.Data, err = p.readBytes(e.len)
@@ -426,6 +450,14 @@ func newPowerLine(_ int32) *Extra {
 		Type:  PowerLineExtraType,
 		Value: &PowerLineExtra{},
 	}
+}
+
+func (e *Extra) GetPowerLineExtra() (*PowerLineExtra, error) {
+	if v, ok := e.Value.(*PowerLineExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
 func (e *PowerLineExtra) parse(p *parser) error {
@@ -493,6 +525,14 @@ func newTrainExtra(_ int32) *Extra {
 		Type:  TrainExtraType,
 		Value: &TrainExtra{},
 	}
+}
+
+func (e *Extra) GetTrainExtra() (*TrainExtra, error) {
+	if v, ok := e.Value.(*TrainExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
 func (e *TrainExtra) parse(p *parser) error {
@@ -571,6 +611,14 @@ func newUnknownExtra(l int32) *Extra {
 			len: l,
 		},
 	}
+}
+
+func (e *Extra) GetUnknownExtra() (*UnknownExtra, error) {
+	if v, ok := e.Value.(*UnknownExtra); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
 }
 
 func (e *UnknownExtra) parse(p *parser) error {

@@ -22,7 +22,7 @@ func TestExtra(t *testing.T) {
 			testData: "testdata/extra/circuit_subsystem.dat",
 			typePath: "/Game/FactoryGame/-Shared/Blueprint/BP_CircuitSubsystem.BP_CircuitSubsystem_C",
 			assertValue: func(t *testing.T, e *Extra) {
-				c, err := e.getCircuitSubsystem()
+				c, err := e.GetCircuitSubsystem()
 				require.NoError(t, err)
 				assert.Len(t, c.Circuits, 1)
 			},
@@ -32,7 +32,7 @@ func TestExtra(t *testing.T) {
 			testData: "testdata/extra/conveyor_belt.dat",
 			typePath: "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk1/Build_ConveyorBeltMk1.Build_ConveyorBeltMk1_C",
 			assertValue: func(t *testing.T, e *Extra) {
-				c, err := e.getConveyorBelt()
+				c, err := e.GetConveyorBelt()
 				require.NoError(t, err)
 				assert.Len(t, c.Items, 4)
 			},
