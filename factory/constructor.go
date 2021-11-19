@@ -37,7 +37,7 @@ func (f *Factory) loadConstructor(b *building, s *save.Save) (Building, error) {
 		output:     o,
 	}
 
-	f.Constructors[b.ID()] = c
+	f.Production[b.ID()] = c
 
 	return c, err
 }

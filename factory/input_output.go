@@ -1,6 +1,7 @@
 package factory
 
 import (
+	"fmt"
 	"regexp"
 
 	"gonum.org/v1/gonum/graph"
@@ -8,8 +9,15 @@ import (
 	"github.com/l-ross/ficsit-toolkit/save"
 )
 
+// Connection details what a buildings input or output is connected to.
 type Connection struct {
-	Connected     Building
+	// Connected is the non-conveyor belt Building that this input or output
+	// is connected to.
+	//
+	// Will be nil if there is no terminating Building.
+	Connected Building
+	// ConveyorBelts contains all the Conveyor objects in order from the input or output to
+	// the Connected Building.
 	ConveyorBelts []Conveyor
 }
 
@@ -24,40 +32,19 @@ type input struct {
 }
 
 func (f *Factory) loadInput(b *building, s *save.Save) (*input, error) {
-	// TODO: Error if we find multiple inputs
-
 	i := &input{}
 
-	for _, ref := range b.entity.References {
-		if inputRegexp.MatchString(ref.PathName) {
-			c := s.Components[ref.PathName]
-			if c == nil {
-				return nil, nil
-			}
-
-			conn, err := getPropFromArray("mConnectedComponent", c.Properties)
-			if err != nil {
-				return nil, err
-			}
-
-			obj, err := conn.GetObjectValue()
-			if err != nil {
-				return nil, err
-			}
-
-			id, err := getID(obj.PathName)
-			if err != nil {
-				return nil, err
-			}
-
-			i.c = f.next(&Connection{}, id, f.conveyorGraph.To)
-		}
+	var err error
+	i.c, err = f.getConnection(b, s, f.conveyorGraph.To)
+	if err != nil {
+		return nil, fmt.Errorf("failed to load input: %w", err)
 	}
 
 	return i, nil
 }
 
-// GetInput returns the
+// GetInput returns the Connection for this input.
+// If the input is not connected to anything then nil will be returned.
 func (i *input) GetInput() *Connection {
 	return i.c
 }
@@ -75,6 +62,24 @@ type output struct {
 func (f *Factory) loadOutput(b *building, s *save.Save) (*output, error) {
 	o := &output{}
 
+	var err error
+	o.c, err = f.getConnection(b, s, f.conveyorGraph.From)
+	if err != nil {
+		return nil, fmt.Errorf("failed to load output: %w", err)
+	}
+
+	return o, nil
+}
+
+// GetOutput returns the Connection for this output.
+// If the output is not connected to anything then nil will be returned.
+func (o *output) GetOutput() *Connection {
+	return o.c
+}
+
+func (f *Factory) getConnection(b *building, s *save.Save, direction func(int64) graph.Nodes) (*Connection, error) {
+	conn := &Connection{}
+
 	for _, ref := range b.entity.References {
 		if outputRegexp.MatchString(ref.PathName) {
 			c := s.Components[ref.PathName]
@@ -82,12 +87,12 @@ func (f *Factory) loadOutput(b *building, s *save.Save) (*output, error) {
 				return nil, nil
 			}
 
-			conn, err := getPropFromArray("mConnectedComponent", c.Properties)
+			connProp, err := getPropFromArray("mConnectedComponent", c.Properties)
 			if err != nil {
 				return nil, err
 			}
 
-			obj, err := conn.GetObjectValue()
+			obj, err := connProp.GetObjectValue()
 			if err != nil {
 				return nil, err
 			}
@@ -97,15 +102,15 @@ func (f *Factory) loadOutput(b *building, s *save.Save) (*output, error) {
 				return nil, err
 			}
 
-			o.c = f.next(&Connection{}, id, f.conveyorGraph.From)
+			conn = f.next(conn, id, direction)
 		}
 	}
 
-	return o, nil
-}
+	if len(conn.ConveyorBelts) == 0 {
+		return nil, nil
+	}
 
-func (o *output) GetOutput() *Connection {
-	return o.c
+	return conn, nil
 }
 
 func (f *Factory) next(c *Connection, n int64, direction func(int64) graph.Nodes) *Connection {

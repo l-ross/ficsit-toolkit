@@ -3,34 +3,14 @@ package factory
 import (
 	"fmt"
 
-	BuildableStorage "github.com/l-ross/ficsit-toolkit/resource/buildable_storage"
 	"github.com/l-ross/ficsit-toolkit/save"
 )
-
-type StorageContainer struct {
-	Docs BuildableStorage.FGBuildableStorage
-	*building
-	*storage
-}
-
-func (f *Factory) LoadStorageContainer(b *building, save *save.Save) (Building, error) {
-	st, err := f.loadStorage(b, save)
-	if err != nil {
-		return nil, err
-	}
-
-	s := &StorageContainer{
-		building: b,
-		storage:  st,
-	}
-
-	return s, nil
-}
 
 type storage struct {
 	inventory []InventoryStack
 }
 
+// Inventory returns the contents of this building.
 func (s *storage) Inventory() []InventoryStack {
 	return s.inventory
 }

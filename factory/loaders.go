@@ -1,18 +1,35 @@
 package factory
 
-import "github.com/l-ross/ficsit-toolkit/save"
+import (
+	"github.com/l-ross/ficsit-toolkit/factory/typepath"
+	"github.com/l-ross/ficsit-toolkit/save"
+)
 
 type loader func(f *Factory, b *building, s *save.Save) (Building, error)
 
-var prioritisedLoading = []map[string]loader{
+// When loading we need to ensure that some buildings are loaded before others.
+// e.g. When loading a constructor we want to ensure that all conveyor belts and lifts
+// have been loaded first so that when loading the constructor's inputs and outputs
+// we can find the first non conveyor building the constructor is connected to.
+var prioritizedLoading = []map[typepath.TypePath]loader{
+	// Load belts
 	{
-		"/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk1/Build_ConveyorBeltMk1.Build_ConveyorBeltMk1_C": (*Factory).loadConveyorBelt,
-		"/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk2/Build_ConveyorBeltMk2.Build_ConveyorBeltMk2_C": (*Factory).loadConveyorBelt,
+		typepath.ConveyorBeltMk1: (*Factory).loadConveyorBelt,
+		typepath.ConveyorBeltMk2: (*Factory).loadConveyorBelt,
+		typepath.ConveyorBeltMk3: (*Factory).loadConveyorBelt,
+		typepath.ConveyorBeltMk4: (*Factory).loadConveyorBelt,
+		typepath.ConveyorBeltMk5: (*Factory).loadConveyorBelt,
+		typepath.ConveyorLiftMk1: (*Factory).loadConveyorLift,
+		typepath.ConveyorLiftMk2: (*Factory).loadConveyorLift,
+		typepath.ConveyorLiftMk3: (*Factory).loadConveyorLift,
+		typepath.ConveyorLiftMk4: (*Factory).loadConveyorLift,
+		typepath.ConveyorLiftMk5: (*Factory).loadConveyorLift,
 	},
+	// Load everything else
 	{
-		"/Game/FactoryGame/Buildable/Factory/CA_Merger/Build_ConveyorAttachmentMerger.Build_ConveyorAttachmentMerger_C":       (*Factory).LoadSplitter,
-		"/Game/FactoryGame/Buildable/Factory/CA_Splitter/Build_ConveyorAttachmentSplitter.Build_ConveyorAttachmentSplitter_C": (*Factory).LoadMerger,
-		"/Game/FactoryGame/Buildable/Factory/StorageContainerMk2/Build_StorageContainerMk2.Build_StorageContainerMk2_C":       (*Factory).LoadStorageContainer,
-		"/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C":                      (*Factory).loadConstructor,
+		typepath.Splitter:            (*Factory).loadSplitter,
+		typepath.Merger:              (*Factory).loadMerger,
+		typepath.StorageContainerMk2: (*Factory).loadStorageContainer,
+		typepath.Constructor:         (*Factory).loadConstructor,
 	},
 }

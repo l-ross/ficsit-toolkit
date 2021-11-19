@@ -2,15 +2,15 @@ package factory
 
 import (
 	"fmt"
-	"strings"
 	"time"
 
-	ItemDescriptor "github.com/l-ross/ficsit-toolkit/resource/item_descriptor"
 	Recipe "github.com/l-ross/ficsit-toolkit/resource/recipe"
 
 	"github.com/l-ross/ficsit-toolkit/save"
 )
 
+// Production is implemented by all Satisfactory production buildings.
+// e.g. Constructor and Assembler
 type Production interface {
 	PowerConsumption() float32
 	CurrentRecipe() *Recipe.FGRecipe
@@ -29,6 +29,7 @@ type production struct {
 	timeSinceStartOrStopProducing time.Duration
 }
 
+// PowerConsumption returns the power consumption of this building.
 func (p *production) PowerConsumption() float32 {
 	return p.powerConsumption
 }
@@ -39,18 +40,23 @@ func (p *production) CurrentRecipe() *Recipe.FGRecipe {
 	return p.currentRecipe
 }
 
+// InputInventory returns the input inventory of this building.
 func (p *production) InputInventory() []InventoryStack {
 	return p.inputInventory
 }
 
+// OutputInventory returns the output inventory of this building.
 func (p *production) OutputInventory() []InventoryStack {
 	return p.outputInventory
 }
 
+// IsProducing returns true if this building is currently producing.
 func (p *production) IsProducing() bool {
 	return p.isProducing
 }
 
+// TimeSinceStartOrStopProducing returns the amount of time that has elapsed
+// since the building started or stopped producing.
 func (p *production) TimeSinceStartOrStopProducing() time.Duration {
 	return p.timeSinceStartOrStopProducing
 }
@@ -73,7 +79,7 @@ func (f *Factory) loadProduction(b *building, s *save.Save) (*production, error)
 		case "mIsProducing":
 			err = p.setIsProducing(prop)
 		case "mTimeSinceStartStopProducing":
-			// TODO
+			err = p.setTimeSinceStartOrStopProducing(prop)
 		}
 
 		if err != nil {
@@ -81,35 +87,9 @@ func (f *Factory) loadProduction(b *building, s *save.Save) (*production, error)
 		}
 	}
 
-	err := p.setInputs(b.entity, s)
-	if err != nil {
-		return nil, fmt.Errorf("failed to set inputs: %w", err)
-	}
-
-	//outputNodes := f.conveyorGraph.From(b.node.ID())
-	//for outputNodes.Next() {
-	//	n := outputNodes.Node()
-	//	fmt.Println(n.ID())
-	//	// Wind forward until we get something that is not a Conveyor
-	//}
-	//
-	//inputNodes := f.conveyorGraph.To(b.node.ID())
-	//for inputNodes.Next() {
-	//	n := inputNodes.Node()
-	//	fmt.Println(n.ID())
-	//	// Wind back until we get something that is not a Conveyor
-	//}
+	// TODO: Check all properties have been loaded.
 
 	return p, nil
-}
-
-func (p *production) setInputs(e *save.Entity, s *save.Save) error {
-	inputs := getObjectsThatMatch(e.References, inputRegexp)
-	if len(inputs) == 0 {
-		return nil
-	}
-
-	return nil
 }
 
 func (p *production) setInputInventory(prop *save.Property, s *save.Save) error {
@@ -192,9 +172,7 @@ func getInventoryStacks(prop *save.Property, s *save.Save) ([]InventoryStack, er
 			continue
 		}
 
-		className := strings.Split(iiStruct.ItemName, ".")[1]
-
-		i, err := ItemDescriptor.GetByClassName(className)
+		i, err := getItemDescriptorByName(iiStruct.ItemName)
 		if err != nil {
 			return nil, err
 		}
@@ -263,15 +241,13 @@ func (p *production) setIsProducing(prop *save.Property) error {
 	return nil
 }
 
-/*
-	Connector
-	- Input
-	- Output
-*/
+func (p *production) setTimeSinceStartOrStopProducing(prop *save.Property) error {
+	f, err := prop.GetFloatValue()
+	if err != nil {
+		return err
+	}
 
-/*
-	Connection
-	Input
-	Output
-	Belts []Conveyor // Organised output to input
-*/
+	p.timeSinceStartOrStopProducing = time.Duration(f * timeMultiplier)
+
+	return nil
+}

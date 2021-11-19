@@ -7,7 +7,7 @@ type Splitter struct {
 	*storage
 }
 
-func (f *Factory) LoadSplitter(b *building, s *save.Save) (Building, error) {
+func (f *Factory) loadSplitter(b *building, s *save.Save) (Building, error) {
 	st, err := f.loadStorage(b, s)
 	if err != nil {
 		return nil, err
@@ -18,6 +18,8 @@ func (f *Factory) LoadSplitter(b *building, s *save.Save) (Building, error) {
 		storage:  st,
 	}
 
+	f.Splitters[b.id] = spl
+
 	return spl, nil
 }
 
@@ -26,7 +28,7 @@ type Merger struct {
 	*storage
 }
 
-func (f *Factory) LoadMerger(b *building, s *save.Save) (Building, error) {
+func (f *Factory) loadMerger(b *building, s *save.Save) (Building, error) {
 	st, err := f.loadStorage(b, s)
 	if err != nil {
 		return nil, err
@@ -36,6 +38,8 @@ func (f *Factory) LoadMerger(b *building, s *save.Save) (Building, error) {
 		building: b,
 		storage:  st,
 	}
+
+	f.Mergers[b.id] = m
 
 	return m, nil
 }

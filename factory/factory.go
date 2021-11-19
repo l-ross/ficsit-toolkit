@@ -2,25 +2,29 @@ package factory
 
 import (
 	"io"
-	"strings"
+
+	"github.com/l-ross/ficsit-toolkit/factory/typepath"
 
 	"github.com/l-ross/ficsit-toolkit/save"
 	"gonum.org/v1/gonum/graph/simple"
 )
 
+const (
+	timeMultiplier = 1_000_000_000
+)
+
 type Factory struct {
-	s *save.Save
-
-	conveyorGraph *simple.DirectedGraph
-	Buildings     map[int64]Building
-
+	s                 *save.Save
+	conveyorGraph     *simple.DirectedGraph
+	Buildings         map[int64]Building
 	Mergers           map[int64]*Merger
 	Splitters         map[int64]*Splitter
-	Constructors      map[int64]*Constructor
-	Conveyors         map[int64]*Conveyor
 	StorageContainers map[int64]*StorageContainer
+	Conveyors         map[int64]Conveyor
+	Production        map[int64]Production
 }
 
+// Load the provided Satisfactory save file.
 func Load(r io.Reader) (*Factory, error) {
 	s, err := save.Parse(r)
 	if err != nil {
@@ -31,7 +35,12 @@ func Load(r io.Reader) (*Factory, error) {
 		s:             s,
 		conveyorGraph: simple.NewDirectedGraph(),
 		Buildings:     make(map[int64]Building),
-		Constructors:  make(map[int64]*Constructor),
+		Production:    make(map[int64]Production),
+		Conveyors:     make(map[int64]Conveyor),
+
+		Mergers:           make(map[int64]*Merger),
+		Splitters:         make(map[int64]*Splitter),
+		StorageContainers: make(map[int64]*StorageContainer),
 	}
 
 	// Load all buildings
@@ -58,7 +67,7 @@ func Load(r io.Reader) (*Factory, error) {
 	}
 
 	// Prioritised loading of all buildings
-	for _, loaders := range prioritisedLoading {
+	for _, loaders := range prioritizedLoading {
 		for _, b := range f.Buildings {
 			if loader, ok := loaders[b.TypePath()]; ok {
 				b2, err := loader(f, b.(*building), s)
@@ -79,10 +88,11 @@ func isBuilding(e *save.Entity) bool {
 		return false
 	}
 
-	if !strings.HasPrefix(e.TypePath, "/Game/FactoryGame/Buildable/Factory/") {
-		// We don't want to load things like foundations which start
-		// "/Game/FactoryGame/Buildable/Building/"
-		return false
+	// Check if the type path exists in our prioritizedLoading.
+	for _, loaders := range prioritizedLoading {
+		if _, ok := loaders[typepath.TypePath(e.TypePath)]; ok {
+			return true
+		}
 	}
 
 	return true

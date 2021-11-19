@@ -6,6 +6,8 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/l-ross/ficsit-toolkit/factory/typepath"
+
 	BuildingDescriptor "github.com/l-ross/ficsit-toolkit/resource/building_descriptor"
 
 	"gonum.org/v1/gonum/graph/simple"
@@ -14,6 +16,7 @@ import (
 	"github.com/l-ross/ficsit-toolkit/save"
 )
 
+// Building is implemented by all Satisfactory buildings
 type Building interface {
 	BuildTimestamp() time.Duration
 	Recipe() Recipe.FGRecipe
@@ -21,13 +24,13 @@ type Building interface {
 	SecondaryColor() save.LinearColor
 	Entity() save.Entity
 	ID() int64
-	TypePath() string
+	TypePath() typepath.TypePath
 }
 
 type building struct {
 	id              int64
 	descriptor      BuildingDescriptor.FGBuildingDescriptor
-	typePath        string
+	typePath        typepath.TypePath
 	entity          *save.Entity
 	buildTimestamp  time.Duration
 	builtWithRecipe Recipe.FGRecipe
@@ -36,7 +39,7 @@ type building struct {
 }
 
 // TypePath returns the type path for this building.
-func (b *building) TypePath() string {
+func (b *building) TypePath() typepath.TypePath {
 	return b.typePath
 }
 
@@ -85,7 +88,7 @@ func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
 
 	b := &building{
 		id:       id,
-		typePath: e.TypePath,
+		typePath: typepath.TypePath(e.TypePath),
 		entity:   e,
 	}
 
@@ -111,6 +114,8 @@ func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
 			return nil, fmt.Errorf("failed to handle prop %q: %w", prop.Name, err)
 		}
 	}
+
+	// TODO: Check all properties have been loaded.
 
 	return b, nil
 }
@@ -139,8 +144,8 @@ func (b *building) setTimestamp(p *save.Property, s *save.Save) error {
 
 	// Timestamp is stored as a negative value, add it to the playtime
 	// to get the time when the building was constructed.
-	playTime := time.Duration(int64(s.Header.PlayTime) * 1_000_000_000)
-	t := time.Duration(f * 1_000_000_000)
+	playTime := time.Duration(int64(s.Header.PlayTime) * timeMultiplier)
+	t := time.Duration(f * timeMultiplier)
 
 	b.buildTimestamp = t + playTime
 

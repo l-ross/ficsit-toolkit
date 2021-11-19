@@ -38,6 +38,22 @@ func getValuesFromStructProperty(name string, s []*save.StructPropertyValue) []*
 	return values
 }
 
+func getItemDescriptorByName(name string) (ItemDescriptor.FGItemDescriptor, error) {
+	split := strings.Split(name, ".")
+	if len(split) != 2 {
+		return ItemDescriptor.FGItemDescriptor{}, fmt.Errorf("failed to split item name %q to get class name", name)
+	}
+
+	className := split[1]
+
+	i, err := ItemDescriptor.GetByClassName(className)
+	if err != nil {
+		return ItemDescriptor.FGItemDescriptor{}, err
+	}
+
+	return i, nil
+}
+
 func getObjectsThatMatch(refs []*save.ObjectReference, re *regexp.Regexp) []string {
 	matches := make([]string, 0)
 
