@@ -24,7 +24,8 @@ func TestExtra(t *testing.T) {
 			assertValue: func(t *testing.T, e *Extra) {
 				c, err := e.GetCircuitSubsystem()
 				require.NoError(t, err)
-				assert.Len(t, c.Circuits, 1)
+				require.Len(t, c.Circuits, 1)
+				assert.Equal(t, "Persistent_Level:PersistentLevel.CircuitSubsystem.FGPowerCircuit_2147247253", c.Circuits[0].PathName)
 			},
 		},
 		{
@@ -34,7 +35,48 @@ func TestExtra(t *testing.T) {
 			assertValue: func(t *testing.T, e *Extra) {
 				c, err := e.GetConveyorBelt()
 				require.NoError(t, err)
-				assert.Len(t, c.Items, 4)
+				require.Len(t, c.Items, 4)
+				assert.Equal(t, "/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C", c.Items[0].ResourceName)
+			},
+		},
+		{
+			name:     "GameState",
+			testData: "testdata/extra/game_state.dat",
+			typePath: "/Game/FactoryGame/-Shared/Blueprint/BP_GameState.BP_GameState_C",
+			assertValue: func(t *testing.T, e *Extra) {
+				g, err := e.GetGameStateExtra()
+				require.NoError(t, err)
+				require.Len(t, g.Objects, 1)
+				assert.Equal(t, "Persistent_Level:PersistentLevel.BP_PlayerState_C_2147479729", g.Objects[0].PathName)
+			},
+		},
+		{
+			name:     "PlayerState",
+			testData: "testdata/extra/player_state.dat",
+			typePath: "/Game/FactoryGame/Character/Player/BP_PlayerState.BP_PlayerState_C",
+			assertValue: func(t *testing.T, e *Extra) {
+				_, err := e.GetPlayerStateExtra()
+				require.NoError(t, err)
+			},
+		},
+		{
+			name:     "PowerLine",
+			testData: "testdata/extra/power_line.dat",
+			typePath: "/Game/FactoryGame/Buildable/Factory/PowerLine/Build_PowerLine.Build_PowerLine_C",
+			assertValue: func(t *testing.T, e *Extra) {
+				p, err := e.GetPowerLineExtra()
+				require.NoError(t, err)
+				assert.Equal(t, "Persistent_Level:PersistentLevel.Build_PowerPoleMk1_C_2147403233.PowerConnection", p.SourcePathName)
+			},
+		},
+		{
+			name:     "Train",
+			testData: "testdata/extra/train.dat",
+			typePath: "/Game/FactoryGame/Buildable/Vehicle/Train/Wagon/BP_FreightWagon.BP_FreightWagon_C",
+			assertValue: func(t *testing.T, e *Extra) {
+				tr, err := e.GetTrainExtra()
+				require.NoError(t, err)
+				assert.Equal(t, "Persistent_Level:PersistentLevel.BP_Locomotive_C_2147390965", tr.PreviousPathName)
 			},
 		},
 		{
