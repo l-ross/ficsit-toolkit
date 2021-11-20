@@ -37,6 +37,17 @@ func TestExtra(t *testing.T) {
 				assert.Len(t, c.Items, 4)
 			},
 		},
+		{
+			name:     "Vehicle",
+			testData: "testdata/extra/vehicle.dat",
+			typePath: "/Game/FactoryGame/Buildable/Vehicle/Tractor/BP_Tractor.BP_Tractor_C",
+			assertValue: func(t *testing.T, e *Extra) {
+				v, err := e.GetVehicle()
+				require.NoError(t, err)
+				require.Len(t, v.Data, 1)
+				assert.Equal(t, "Root", v.Data[0].Name)
+			},
+		},
 	}
 
 	for _, tt := range tests {

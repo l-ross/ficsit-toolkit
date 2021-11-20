@@ -1284,8 +1284,6 @@ func (v *StructPropertyValue) serialize(s *serializer, inner bool) (int32, error
 // TextProperty
 //
 
-// TODO: TextProperty
-
 type TextPropertyValue struct {
 	String string
 }

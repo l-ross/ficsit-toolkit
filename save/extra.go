@@ -6,7 +6,6 @@ import (
 
 type ExtraType string
 
-// TODO: Vehicle
 const (
 	CircuitSubsystemExtraType ExtraType = "CircuitSubsystem"
 	ConveyorBeltExtraType     ExtraType = "ConveyorBelt"
@@ -16,6 +15,7 @@ const (
 	PowerLineExtraType        ExtraType = "PowerLine"
 	TrainExtraType            ExtraType = "Train"
 	UnknownExtraType          ExtraType = "Unknown"
+	VehicleExtraType          ExtraType = "Vehicle"
 )
 
 type Extra struct {
@@ -56,6 +56,13 @@ func getExtra(c string) func(l int32) *Extra {
 	case "/Game/FactoryGame/Buildable/Vehicle/Train/Wagon/BP_FreightWagon.BP_FreightWagon_C",
 		"/Game/FactoryGame/Buildable/Vehicle/Train/Locomotive/BP_Locomotive.BP_Locomotive_C":
 		return newTrainExtra
+	case "/Game/FactoryGame/Buildable/Vehicle/Tractor/BP_Tractor.BP_Tractor_C",
+		"/Game/FactoryGame/Buildable/Vehicle/Truck/BP_Truck.BP_Truck_C",
+		"/Game/FactoryGame/Buildable/Vehicle/Explorer/BP_Explorer.BP_Explorer_C",
+		"/Game/FactoryGame/Buildable/Vehicle/Cyberwagon/Testa_BP_WB.Testa_BP_WB_C",
+		"/Game/FactoryGame/Buildable/Vehicle/Golfcart/BP_Golfcart.BP_Golfcart_C",
+		"/Game/FactoryGame/Buildable/Factory/DroneStation/BP_DroneTransport.BP_DroneTransport_C":
+		return newVehicle
 	}
 	return newUnknownExtra
 }
@@ -595,7 +602,7 @@ func (e *TrainExtra) serialize(s *serializer) error {
 }
 
 //
-// UnknownExtra
+// Unknown
 //
 
 type UnknownExtra struct {
@@ -633,4 +640,79 @@ func (e *UnknownExtra) parse(p *parser) error {
 
 func (e *UnknownExtra) serialize(s *serializer) error {
 	return s.writeBytes(e.Data)
+}
+
+//
+// Vehicle
+//
+
+type Vehicle struct {
+	Data []VehicleData
+}
+
+type VehicleData struct {
+	Name string
+	Data []byte
+}
+
+func newVehicle(_ int32) *Extra {
+	return &Extra{
+		Type:  VehicleExtraType,
+		Value: &Vehicle{},
+	}
+}
+
+func (e *Extra) GetVehicle() (*Vehicle, error) {
+	if v, ok := e.Value.(*Vehicle); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong extra type: %s", e.Type)
+}
+
+func (e *Vehicle) parse(p *parser) error {
+	objCount, err := p.readInt32()
+	if err != nil {
+		return err
+	}
+
+	for x := int32(0); x < objCount; x++ {
+		name, err := p.readString()
+		if err != nil {
+			return err
+		}
+
+		data, err := p.readBytes(53)
+		if err != nil {
+			return err
+		}
+
+		e.Data = append(e.Data, VehicleData{
+			Name: name,
+			Data: data,
+		})
+	}
+
+	return nil
+}
+
+func (e *Vehicle) serialize(s *serializer) error {
+	err := s.writeInt32(int32(len(e.Data)))
+	if err != nil {
+		return err
+	}
+
+	for _, d := range e.Data {
+		err := s.writeString(d.Name)
+		if err != nil {
+			return err
+		}
+
+		err = s.writeBytes(d.Data)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
