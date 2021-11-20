@@ -23,6 +23,11 @@ func TestHeader(t *testing.T) {
 	assert.Equal(t, "Luke", h.SessionName)
 	assert.Equal(t, int32(152331), h.BuildVersion)
 
+	// Get MapOptions
+	opts := h.GetMapOptions()
+	require.NotNil(t, opts)
+	assert.Equal(t, "Northern Forest", opts["startloc"])
+
 	// Serialize header
 	s := createTestSerializer()
 	err = s.serializeHeader(h)

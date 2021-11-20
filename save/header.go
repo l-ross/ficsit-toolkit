@@ -3,6 +3,7 @@ package save
 import (
 	"fmt"
 	"io"
+	"strings"
 )
 
 // ParseHeader will only parse the header of the save file and return it.
@@ -40,7 +41,6 @@ func (p *parser) parseHeader() (*Header, error) {
 		return nil, err
 	}
 
-	// TODO: Better version handling.
 	if h.HeaderVersion != 8 {
 		return nil, fmt.Errorf("only support save header version 8, got %d", h.HeaderVersion)
 	}
@@ -60,7 +60,6 @@ func (p *parser) parseHeader() (*Header, error) {
 		return nil, err
 	}
 
-	// TODO: Add Get method to return map[string]string
 	h.MapOptions, err = p.readString()
 	if err != nil {
 		return nil, err
@@ -167,4 +166,29 @@ func (s *serializer) serializeHeader(h *Header) error {
 	}
 
 	return nil
+}
+
+// GetMapOptions returns the Header.MapOptions as a map.
+func (h *Header) GetMapOptions() map[string]string {
+	mapOpts := make(map[string]string)
+
+	opts := strings.Split(h.MapOptions, "?")
+
+	for _, opt := range opts {
+		if opt == "" {
+			continue
+		}
+
+		optSlice := strings.Split(opt, "=")
+		if len(optSlice) != 2 {
+			continue
+		}
+
+		key := optSlice[0]
+		value := optSlice[1]
+
+		mapOpts[key] = value
+	}
+
+	return mapOpts
 }

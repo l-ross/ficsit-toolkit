@@ -120,7 +120,6 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 			return err
 		}
 
-		// UNKNOWN_DATA
 		v.StructBytes, err = p.readBytes(8)
 		if err != nil {
 			return err
@@ -131,7 +130,6 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 			return err
 		}
 
-		// GUID
 		v.StructGUID, err = p.readInt32Array(4)
 		if err != nil {
 			return err

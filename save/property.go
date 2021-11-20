@@ -132,7 +132,6 @@ func (p *parser) parseProperty() (*Property, error) {
 	case TextPropertyType:
 		newPropValue = newTextPropertyValue
 	default:
-		// TODO: Possibly have a UnknownPropertyType where we just store the value as a byte slice.
 		return nil, fmt.Errorf("unknown property type %s", propType)
 	}
 
