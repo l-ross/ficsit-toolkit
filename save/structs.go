@@ -124,7 +124,7 @@ func (v *BoxStruct) serialize(s *serializer) (int32, error) {
 }
 
 //
-// Color
+// ColorStruct
 //
 
 type ColorStruct struct {
@@ -194,7 +194,41 @@ func (v *ColorStruct) serialize(s *serializer) (int32, error) {
 }
 
 //
-// FluidBox
+// DateTimeStruct
+//
+
+type DateTimeStruct int64
+
+func (v *StructPropertyValue) GetDateTimeStruct() (*DateTimeStruct, error) {
+	if v, ok := v.Value.(*DateTimeStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
+
+func (v *DateTimeStruct) parse(p *parser) error {
+	i, err := p.readInt64()
+	if err != nil {
+		return err
+	}
+
+	*v = DateTimeStruct(i)
+
+	return nil
+}
+
+func (v *DateTimeStruct) serialize(s *serializer) (int32, error) {
+	err := s.writeInt64(int64(*v))
+	if err != nil {
+		return 0, err
+	}
+
+	return 8, nil
+}
+
+//
+// FluidBoxStruct
 //
 
 type FluidBoxStruct float32
@@ -215,7 +249,33 @@ func (v *FluidBoxStruct) serialize(s *serializer) (int32, error) {
 }
 
 //
-// InventoryItem
+// GUIDStruct
+//
+
+type GUIDStruct []byte
+
+func (v *GUIDStruct) parse(p *parser) error {
+	b, err := p.readBytes(16)
+	if err != nil {
+		return err
+	}
+
+	*v = b
+
+	return nil
+}
+
+func (v *GUIDStruct) serialize(s *serializer) (int32, error) {
+	err := s.writeBytes(*v)
+	if err != nil {
+		return 0, err
+	}
+
+	return 16, nil
+}
+
+//
+// InventoryItemStruct
 //
 
 type InventoryItemStruct struct {
@@ -349,25 +409,25 @@ func (v *InventoryItemStruct) serialize(s *serializer) (int32, error) {
 }
 
 //
-// LinearColor
+// LinearColorStruct
 //
 
-type LinearColor struct {
+type LinearColorStruct struct {
 	R float32
 	G float32
 	B float32
 	A float32
 }
 
-func (v *StructPropertyValue) GetLinearColor() (*LinearColor, error) {
-	if v, ok := v.Value.(*LinearColor); ok {
+func (v *StructPropertyValue) GetLinearColor() (*LinearColorStruct, error) {
+	if v, ok := v.Value.(*LinearColorStruct); ok {
 		return v, nil
 	}
 
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *LinearColor) parse(p *parser) error {
+func (v *LinearColorStruct) parse(p *parser) error {
 	var err error
 	v.R, err = p.readFloat32()
 	if err != nil {
@@ -392,7 +452,7 @@ func (v *LinearColor) parse(p *parser) error {
 	return nil
 }
 
-func (v *LinearColor) serialize(s *serializer) (int32, error) {
+func (v *LinearColorStruct) serialize(s *serializer) (int32, error) {
 	err := s.writeFloat32(v.R)
 	if err != nil {
 		return 0, err
@@ -417,17 +477,17 @@ func (v *LinearColor) serialize(s *serializer) (int32, error) {
 }
 
 //
-// RailroadTrackPosition
+// RailroadTrackPositionStruct
 //
 
-type RailroadTrackPosition struct {
+type RailroadTrackPositionStruct struct {
 	LevelName string  `json:"levelName"`
 	PathName  string  `json:"pathName"`
 	Offset    float32 `json:"offset"`
 	Forward   float32 `json:"forward"`
 }
 
-func (v *RailroadTrackPosition) parse(p *parser) error {
+func (v *RailroadTrackPositionStruct) parse(p *parser) error {
 	var err error
 
 	v.LevelName, err = p.readString()
@@ -453,7 +513,7 @@ func (v *RailroadTrackPosition) parse(p *parser) error {
 	return nil
 }
 
-func (v *RailroadTrackPosition) serialize(s *serializer) (int32, error) {
+func (v *RailroadTrackPositionStruct) serialize(s *serializer) (int32, error) {
 	m := s.measure()
 
 	err := s.writeString(v.LevelName)
@@ -581,6 +641,44 @@ func (v *VectorStruct) serialize(s *serializer) (int32, error) {
 	}
 
 	err = s.writeFloat32(v.Z)
+	if err != nil {
+		return 0, err
+	}
+
+	return 12, nil
+}
+
+//
+// Vector2DStruct
+//
+
+type Vector2DStruct struct {
+	X float32
+	Y float32
+}
+
+func (v *Vector2DStruct) parse(p *parser) error {
+	var err error
+	v.X, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	v.Y, err = p.readFloat32()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (v *Vector2DStruct) serialize(s *serializer) (int32, error) {
+	err := s.writeFloat32(v.X)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeFloat32(v.Y)
 	if err != nil {
 		return 0, err
 	}

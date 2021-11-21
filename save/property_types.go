@@ -1222,24 +1222,25 @@ func (v *StructPropertyValue) parse(p *parser, inner bool) error {
 	case ColorStructType:
 		v.Value = &ColorStruct{}
 	case DateTimeStructType:
-		panic("TODO DateTimeStructType")
+		ds := DateTimeStruct(0)
+		v.Value = &ds
 	case FluidBoxStructType:
 		s := FluidBoxStruct(0)
 		v.Value = &s
 	case GUIDStructType:
-		panic("TODO GUIDStructType")
+		v.Value = &GUIDStruct{}
 	case InventoryItemStructType:
 		v.Value = &InventoryItemStruct{}
 	case LinearColorStructType:
-		v.Value = &LinearColor{}
+		v.Value = &LinearColorStruct{}
 	case QuatStructType:
 		v.Value = &QuatStruct{}
 	case RailroadTrackPositionStructType:
-		v.Value = &RailroadTrackPosition{}
+		v.Value = &RailroadTrackPositionStruct{}
 	case VectorStructType:
 		v.Value = &VectorStruct{}
 	case Vector2DStructType:
-		panic("TODO Vector2DStructType")
+		v.Value = &Vector2DStruct{}
 	default:
 		v.Value = &ArbitraryStruct{}
 	}
