@@ -217,7 +217,7 @@ func (e *Entity) serializeData(s *serializer) error {
 		}
 	}
 
-	err = s.serializeProperties(e.Properties)
+	err = serializeProperties(e.Properties, s.Data)
 	if err != nil {
 		return err
 	}

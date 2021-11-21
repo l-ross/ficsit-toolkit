@@ -72,7 +72,7 @@ func TestStructs(t *testing.T) {
 
 			// Serialize struct
 			s := createTestSerializer()
-			err = s.serializeProperties(props)
+			err = serializeProperties(props, s.Data)
 			require.NoError(t, err)
 
 			// Verify serialization is correct

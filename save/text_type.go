@@ -1,6 +1,10 @@
 package save
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/save/data"
+)
 
 type TextType byte
 
@@ -10,9 +14,9 @@ const (
 )
 
 type TextValue interface {
-	parse(p *parser) error
+	parse(d *data.Data) error
 
-	serialize(s *serializer) error
+	serialize(d *data.Data) error
 }
 
 func getText(t TextType) func() TextValue {
@@ -36,15 +40,15 @@ func (t *TextPropertyValue) GetNoneText() (*NoneText, error) {
 	return nil, fmt.Errorf("wrong text type: %v", t.Type)
 }
 
-func (t *NoneText) parse(p *parser) error {
+func (t *NoneText) parse(d *data.Data) error {
 	var err error
-	t.CultureInvariantString, err = p.ReadInt32()
+	t.CultureInvariantString, err = d.ReadInt32()
 	if err != nil {
 		return err
 	}
 
 	// TODO: Switch on above?
-	t.String, err = p.ReadString()
+	t.String, err = d.ReadString()
 	if err != nil {
 		return err
 	}
@@ -52,14 +56,14 @@ func (t *NoneText) parse(p *parser) error {
 	return nil
 }
 
-func (t *NoneText) serialize(s *serializer) error {
-	err := s.WriteInt32(t.CultureInvariantString)
+func (t *NoneText) serialize(d *data.Data) error {
+	err := d.WriteInt32(t.CultureInvariantString)
 	if err != nil {
 		return err
 	}
 
 	// TODO: Switch on above?
-	err = s.WriteString(t.String)
+	err = d.WriteString(t.String)
 	if err != nil {
 		return err
 	}
@@ -85,19 +89,19 @@ func (t *TextPropertyValue) GetBaseText() (*BaseText, error) {
 	return nil, fmt.Errorf("wrong text type: %v", t.Type)
 }
 
-func (t *BaseText) parse(p *parser) error {
+func (t *BaseText) parse(d *data.Data) error {
 	var err error
-	t.Namespace, err = p.ReadString()
+	t.Namespace, err = d.ReadString()
 	if err != nil {
 		return err
 	}
 
-	t.Key, err = p.ReadString()
+	t.Key, err = d.ReadString()
 	if err != nil {
 		return err
 	}
 
-	t.Value, err = p.ReadString()
+	t.Value, err = d.ReadString()
 	if err != nil {
 		return err
 	}
@@ -105,18 +109,18 @@ func (t *BaseText) parse(p *parser) error {
 	return nil
 }
 
-func (t *BaseText) serialize(s *serializer) error {
-	err := s.WriteString(t.Namespace)
+func (t *BaseText) serialize(d *data.Data) error {
+	err := d.WriteString(t.Namespace)
 	if err != nil {
 		return err
 	}
 
-	err = s.WriteString(t.Key)
+	err = d.WriteString(t.Key)
 	if err != nil {
 		return err
 	}
 
-	err = s.WriteString(t.Value)
+	err = d.WriteString(t.Value)
 	if err != nil {
 		return err
 	}

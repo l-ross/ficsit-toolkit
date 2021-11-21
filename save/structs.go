@@ -1,6 +1,10 @@
 package save
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/save/data"
+)
 
 type StructType string
 
@@ -37,9 +41,9 @@ func (v *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *ArbitraryStruct) parse(p *parser) error {
+func (v *ArbitraryStruct) parse(d *data.Data) error {
 	for {
-		prop, err := p.parseProperty()
+		prop, err := parseProperty(d)
 		if err != nil {
 			return err
 		}
@@ -53,10 +57,10 @@ func (v *ArbitraryStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *ArbitraryStruct) serialize(s *serializer) (int32, error) {
-	m := s.Measure()
+func (v *ArbitraryStruct) serialize(d *data.Data) (int32, error) {
+	m := d.Measure()
 
-	err := s.serializeProperties(v.Properties)
+	err := serializeProperties(v.Properties, d)
 	if err != nil {
 		return 0, err
 	}
@@ -82,19 +86,19 @@ func (v *StructPropertyValue) GetBoxStruct() (*BoxStruct, error) {
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *BoxStruct) parse(p *parser) error {
+func (v *BoxStruct) parse(d *data.Data) error {
 	var err error
-	v.Min, err = p.ReadFloat32Array(3)
+	v.Min, err = d.ReadFloat32Array(3)
 	if err != nil {
 		return err
 	}
 
-	v.Max, err = p.ReadFloat32Array(3)
+	v.Max, err = d.ReadFloat32Array(3)
 	if err != nil {
 		return err
 	}
 
-	v.IsValid, err = p.ReadBool()
+	v.IsValid, err = d.ReadBool()
 	if err != nil {
 		return err
 	}
@@ -102,20 +106,20 @@ func (v *BoxStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *BoxStruct) serialize(s *serializer) (int32, error) {
-	m := s.Measure()
+func (v *BoxStruct) serialize(d *data.Data) (int32, error) {
+	m := d.Measure()
 
-	err := s.WriteFloat32Array(v.Min)
+	err := d.WriteFloat32Array(v.Min)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32Array(v.Max)
+	err = d.WriteFloat32Array(v.Max)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteBool(v.IsValid)
+	err = d.WriteBool(v.IsValid)
 	if err != nil {
 		return 0, err
 	}
@@ -142,24 +146,24 @@ func (v *StructPropertyValue) GetColorStruct() (*ColorStruct, error) {
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *ColorStruct) parse(p *parser) error {
+func (v *ColorStruct) parse(d *data.Data) error {
 	var err error
-	v.B, err = p.ReadByte()
+	v.B, err = d.ReadByte()
 	if err != nil {
 		return err
 	}
 
-	v.G, err = p.ReadByte()
+	v.G, err = d.ReadByte()
 	if err != nil {
 		return err
 	}
 
-	v.R, err = p.ReadByte()
+	v.R, err = d.ReadByte()
 	if err != nil {
 		return err
 	}
 
-	v.A, err = p.ReadByte()
+	v.A, err = d.ReadByte()
 	if err != nil {
 		return err
 	}
@@ -167,25 +171,25 @@ func (v *ColorStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *ColorStruct) serialize(s *serializer) (int32, error) {
-	m := s.Measure()
+func (v *ColorStruct) serialize(d *data.Data) (int32, error) {
+	m := d.Measure()
 
-	err := s.WriteByte(v.B)
+	err := d.WriteByte(v.B)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteByte(v.G)
+	err = d.WriteByte(v.G)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteByte(v.R)
+	err = d.WriteByte(v.R)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteByte(v.A)
+	err = d.WriteByte(v.A)
 	if err != nil {
 		return 0, err
 	}
@@ -207,8 +211,8 @@ func (v *StructPropertyValue) GetDateTimeStruct() (*DateTimeStruct, error) {
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *DateTimeStruct) parse(p *parser) error {
-	i, err := p.ReadInt64()
+func (v *DateTimeStruct) parse(d *data.Data) error {
+	i, err := d.ReadInt64()
 	if err != nil {
 		return err
 	}
@@ -218,8 +222,8 @@ func (v *DateTimeStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *DateTimeStruct) serialize(s *serializer) (int32, error) {
-	err := s.WriteInt64(int64(*v))
+func (v *DateTimeStruct) serialize(d *data.Data) (int32, error) {
+	err := d.WriteInt64(int64(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -233,8 +237,8 @@ func (v *DateTimeStruct) serialize(s *serializer) (int32, error) {
 
 type FluidBoxStruct float32
 
-func (v *FluidBoxStruct) parse(p *parser) error {
-	f, err := p.ReadFloat32()
+func (v *FluidBoxStruct) parse(d *data.Data) error {
+	f, err := d.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -244,8 +248,8 @@ func (v *FluidBoxStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *FluidBoxStruct) serialize(s *serializer) (int32, error) {
-	return 4, s.WriteFloat32(float32(*v))
+func (v *FluidBoxStruct) serialize(d *data.Data) (int32, error) {
+	return 4, d.WriteFloat32(float32(*v))
 }
 
 //
@@ -254,8 +258,8 @@ func (v *FluidBoxStruct) serialize(s *serializer) (int32, error) {
 
 type GUIDStruct []byte
 
-func (v *GUIDStruct) parse(p *parser) error {
-	b, err := p.ReadBytes(16)
+func (v *GUIDStruct) parse(d *data.Data) error {
+	b, err := d.ReadBytes(16)
 	if err != nil {
 		return err
 	}
@@ -265,8 +269,8 @@ func (v *GUIDStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *GUIDStruct) serialize(s *serializer) (int32, error) {
-	err := s.WriteBytes(*v)
+func (v *GUIDStruct) serialize(d *data.Data) (int32, error) {
+	err := d.WriteBytes(*v)
 	if err != nil {
 		return 0, err
 	}
@@ -293,29 +297,29 @@ func (v *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, er
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *InventoryItemStruct) parse(p *parser) error {
+func (v *InventoryItemStruct) parse(d *data.Data) error {
 	// UNKNOWN_DATA
-	_, err := p.ReadInt32()
+	_, err := d.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	v.ItemName, err = p.ReadString()
+	v.ItemName, err = d.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.LevelName, err = p.ReadString()
+	v.LevelName, err = d.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = p.ReadString()
+	v.PathName, err = d.ReadString()
 	if err != nil {
 		return err
 	}
 
-	propName, err := p.ReadString()
+	propName, err := d.ReadString()
 	if err != nil {
 		return err
 	}
@@ -323,7 +327,7 @@ func (v *InventoryItemStruct) parse(p *parser) error {
 		return fmt.Errorf("found item property that was not NumItems %q", propName)
 	}
 
-	propType, err := p.ReadString()
+	propType, err := d.ReadString()
 	if err != nil {
 		return err
 	}
@@ -332,18 +336,18 @@ func (v *InventoryItemStruct) parse(p *parser) error {
 	}
 
 	// Value length. Presuamble always 4.
-	_, err = p.ReadInt32()
+	_, err = d.ReadInt32()
 	if err != nil {
 		return err
 	}
 
 	// UNKNOWN_DATA
-	_, err = p.ReadBytes(5)
+	_, err = d.ReadBytes(5)
 	if err != nil {
 		return err
 	}
 
-	v.NumItems, err = p.ReadInt32()
+	v.NumItems, err = d.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -351,26 +355,26 @@ func (v *InventoryItemStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *InventoryItemStruct) serialize(s *serializer) (int32, error) {
-	m := s.Measure()
+func (v *InventoryItemStruct) serialize(d *data.Data) (int32, error) {
+	m := d.Measure()
 
 	// UNKNOWN_DATA
-	err := s.WriteInt32(0)
+	err := d.WriteInt32(0)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteString(v.ItemName)
+	err = d.WriteString(v.ItemName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteString(v.LevelName)
+	err = d.WriteString(v.LevelName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteString(v.PathName)
+	err = d.WriteString(v.PathName)
 	if err != nil {
 		return 0, err
 	}
@@ -378,29 +382,29 @@ func (v *InventoryItemStruct) serialize(s *serializer) (int32, error) {
 	// Data after this is not included in the size.
 	l := m()
 
-	err = s.WriteString("NumItems")
+	err = d.WriteString("NumItems")
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteString("IntProperty")
+	err = d.WriteString("IntProperty")
 	if err != nil {
 		return 0, err
 	}
 
 	// Value length.
-	err = s.WriteInt32(4)
+	err = d.WriteInt32(4)
 	if err != nil {
 		return 0, err
 	}
 
 	// UNKNOWN_DATA
-	err = s.WriteNulls(5)
+	err = d.WriteNulls(5)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteInt32(v.NumItems)
+	err = d.WriteInt32(v.NumItems)
 	if err != nil {
 		return 0, err
 	}
@@ -427,24 +431,24 @@ func (v *StructPropertyValue) GetLinearColor() (*LinearColorStruct, error) {
 	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
-func (v *LinearColorStruct) parse(p *parser) error {
+func (v *LinearColorStruct) parse(d *data.Data) error {
 	var err error
-	v.R, err = p.ReadFloat32()
+	v.R, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.G, err = p.ReadFloat32()
+	v.G, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.B, err = p.ReadFloat32()
+	v.B, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.A, err = p.ReadFloat32()
+	v.A, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -452,23 +456,23 @@ func (v *LinearColorStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *LinearColorStruct) serialize(s *serializer) (int32, error) {
-	err := s.WriteFloat32(v.R)
+func (v *LinearColorStruct) serialize(d *data.Data) (int32, error) {
+	err := d.WriteFloat32(v.R)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.G)
+	err = d.WriteFloat32(v.G)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.B)
+	err = d.WriteFloat32(v.B)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.A)
+	err = d.WriteFloat32(v.A)
 	if err != nil {
 		return 0, err
 	}
@@ -487,25 +491,25 @@ type RailroadTrackPositionStruct struct {
 	Forward   float32 `json:"forward"`
 }
 
-func (v *RailroadTrackPositionStruct) parse(p *parser) error {
+func (v *RailroadTrackPositionStruct) parse(d *data.Data) error {
 	var err error
 
-	v.LevelName, err = p.ReadString()
+	v.LevelName, err = d.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = p.ReadString()
+	v.PathName, err = d.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.Offset, err = p.ReadFloat32()
+	v.Offset, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Forward, err = p.ReadFloat32()
+	v.Forward, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -513,25 +517,25 @@ func (v *RailroadTrackPositionStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *RailroadTrackPositionStruct) serialize(s *serializer) (int32, error) {
-	m := s.Measure()
+func (v *RailroadTrackPositionStruct) serialize(d *data.Data) (int32, error) {
+	m := d.Measure()
 
-	err := s.WriteString(v.LevelName)
+	err := d.WriteString(v.LevelName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteString(v.PathName)
+	err = d.WriteString(v.PathName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.Offset)
+	err = d.WriteFloat32(v.Offset)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.Forward)
+	err = d.WriteFloat32(v.Forward)
 	if err != nil {
 		return 0, err
 	}
@@ -550,24 +554,24 @@ type QuatStruct struct {
 	W float32
 }
 
-func (v *QuatStruct) parse(p *parser) error {
+func (v *QuatStruct) parse(d *data.Data) error {
 	var err error
-	v.X, err = p.ReadFloat32()
+	v.X, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Y, err = p.ReadFloat32()
+	v.Y, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Z, err = p.ReadFloat32()
+	v.Z, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.W, err = p.ReadFloat32()
+	v.W, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -575,23 +579,23 @@ func (v *QuatStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *QuatStruct) serialize(s *serializer) (int32, error) {
-	err := s.WriteFloat32(v.X)
+func (v *QuatStruct) serialize(d *data.Data) (int32, error) {
+	err := d.WriteFloat32(v.X)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.Y)
+	err = d.WriteFloat32(v.Y)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.Z)
+	err = d.WriteFloat32(v.Z)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.W)
+	err = d.WriteFloat32(v.W)
 	if err != nil {
 		return 0, err
 	}
@@ -609,19 +613,19 @@ type VectorStruct struct {
 	Z float32
 }
 
-func (v *VectorStruct) parse(p *parser) error {
+func (v *VectorStruct) parse(d *data.Data) error {
 	var err error
-	v.X, err = p.ReadFloat32()
+	v.X, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Y, err = p.ReadFloat32()
+	v.Y, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Z, err = p.ReadFloat32()
+	v.Z, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -629,18 +633,18 @@ func (v *VectorStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *VectorStruct) serialize(s *serializer) (int32, error) {
-	err := s.WriteFloat32(v.X)
+func (v *VectorStruct) serialize(d *data.Data) (int32, error) {
+	err := d.WriteFloat32(v.X)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.Y)
+	err = d.WriteFloat32(v.Y)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.Z)
+	err = d.WriteFloat32(v.Z)
 	if err != nil {
 		return 0, err
 	}
@@ -657,14 +661,14 @@ type Vector2DStruct struct {
 	Y float32
 }
 
-func (v *Vector2DStruct) parse(p *parser) error {
+func (v *Vector2DStruct) parse(d *data.Data) error {
 	var err error
-	v.X, err = p.ReadFloat32()
+	v.X, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Y, err = p.ReadFloat32()
+	v.Y, err = d.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -672,13 +676,13 @@ func (v *Vector2DStruct) parse(p *parser) error {
 	return nil
 }
 
-func (v *Vector2DStruct) serialize(s *serializer) (int32, error) {
-	err := s.WriteFloat32(v.X)
+func (v *Vector2DStruct) serialize(d *data.Data) (int32, error) {
+	err := d.WriteFloat32(v.X)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.WriteFloat32(v.Y)
+	err = d.WriteFloat32(v.Y)
 	if err != nil {
 		return 0, err
 	}

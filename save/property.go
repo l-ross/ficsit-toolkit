@@ -1,6 +1,10 @@
 package save
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/l-ross/ficsit-toolkit/save/data"
+)
 
 type Property struct {
 	Name          string       `json:"name"`
@@ -35,7 +39,7 @@ type PropertyValue interface {
 	//
 	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
-	parse(p *parser, inner bool) error
+	parse(p *data.Data, inner bool) error
 
 	// serialize the property value and return the length of the property data.
 	// Some PropertyValue implementations always return a zero length as they aren't
@@ -43,14 +47,14 @@ type PropertyValue interface {
 	//
 	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
 	// In some cases this can change the format of the property value.
-	serialize(s *serializer, inner bool) (int32, error)
+	serialize(s *data.Data, inner bool) (int32, error)
 }
 
 func (p *parser) parseProperties() ([]*Property, error) {
 	props := make([]*Property, 0)
 
 	for {
-		prop, err := p.parseProperty()
+		prop, err := parseProperty(p.Data)
 		if err != nil {
 			return nil, err
 		}
@@ -65,11 +69,11 @@ func (p *parser) parseProperties() ([]*Property, error) {
 	return props, nil
 }
 
-func (p *parser) parseProperty() (*Property, error) {
+func parseProperty(d *data.Data) (*Property, error) {
 	var err error
 	prop := &Property{}
 
-	prop.Name, err = p.ReadString()
+	prop.Name, err = d.ReadString()
 	if err != nil {
 		return nil, err
 	}
@@ -79,19 +83,19 @@ func (p *parser) parseProperty() (*Property, error) {
 		return nil, nil
 	}
 
-	propType, err := p.ReadString()
+	propType, err := d.ReadString()
 	if err != nil {
 		return nil, err
 	}
 	prop.Type = PropertyType(propType)
 
 	// Value length
-	_, err = p.ReadInt32()
+	_, err = d.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	prop.Index, err = p.ReadInt32()
+	prop.Index, err = d.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
@@ -137,7 +141,7 @@ func (p *parser) parseProperty() (*Property, error) {
 
 	prop.PropertyValue = newPropValue()
 
-	err = prop.PropertyValue.parse(p, false)
+	err = prop.PropertyValue.parse(d, false)
 	if err != nil {
 		return nil, err
 	}
@@ -145,15 +149,15 @@ func (p *parser) parseProperty() (*Property, error) {
 	return prop, nil
 }
 
-func (s *serializer) serializeProperties(props []*Property) error {
+func serializeProperties(props []*Property, d *data.Data) error {
 	for _, prop := range props {
-		err := s.serializeProperty(prop)
+		err := serializeProperty(prop, d)
 		if err != nil {
 			return err
 		}
 	}
 
-	err := s.WriteNoneProp()
+	err := d.WriteNoneProp()
 	if err != nil {
 		return err
 	}
@@ -161,36 +165,36 @@ func (s *serializer) serializeProperties(props []*Property) error {
 	return nil
 }
 
-func (s *serializer) serializeProperty(prop *Property) error {
-	err := s.WriteString(prop.Name)
+func serializeProperty(prop *Property, d *data.Data) error {
+	err := d.WriteString(prop.Name)
 	if err != nil {
 		return err
 	}
 
-	err = s.WriteString(string(prop.Type))
+	err = d.WriteString(string(prop.Type))
 	if err != nil {
 		return err
 	}
 
 	// Write placeholder length and record position.
-	lenPos := s.Index()
-	err = s.WriteInt32(0)
+	lenPos := d.Index()
+	err = d.WriteInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = s.WriteInt32(prop.Index)
+	err = d.WriteInt32(prop.Index)
 	if err != nil {
 		return err
 	}
 
-	l, err := prop.serialize(s, false)
+	l, err := prop.serialize(d, false)
 	if err != nil {
 		return err
 	}
 
 	// Write length at the recorded position.
-	err = s.WriteLen(l, lenPos)
+	err = d.WriteLen(l, lenPos)
 	if err != nil {
 		return err
 	}

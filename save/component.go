@@ -98,7 +98,7 @@ func (c *Component) serializeData(s *serializer) error {
 
 	m := s.Measure()
 
-	err = s.serializeProperties(c.Properties)
+	err = serializeProperties(c.Properties, s.Data)
 	if err != nil {
 		return err
 	}
