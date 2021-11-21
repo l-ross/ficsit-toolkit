@@ -16,7 +16,9 @@ type ArrayPropertyValue struct {
 	ValueType PropertyType    `json:"value_type,omitempty"`
 	Values    []PropertyValue `json:"values,omitempty"`
 
-	// TODO: Explain the fields below.
+	//
+	// The following fields are only set if the ValueType is StructProperty
+	//
 
 	StructName      string
 	StructBytes     []byte
@@ -105,8 +107,6 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 	case StringPropertyType:
 		newPropValue = newStringPropertyValue
 	case StructPropertyType:
-		// TODO: Do these elements serve any purpose? Will they ever be anything other than expected values?
-		//  Possibly add some checks and log if they are found to differ.
 		// Name
 		v.StructName, err = p.readString()
 		if err != nil {
@@ -1220,7 +1220,7 @@ func (v *StructPropertyValue) parse(p *parser, inner bool) error {
 	case BoxStructType:
 		v.Value = &BoxStruct{}
 	case ColorStructType:
-		panic("TODO ColorStructType")
+		v.Value = &ColorStruct{}
 	case DateTimeStructType:
 		panic("TODO DateTimeStructType")
 	case FluidBoxStructType:
@@ -1283,11 +1283,21 @@ func (v *StructPropertyValue) serialize(s *serializer, inner bool) (int32, error
 //
 
 type TextPropertyValue struct {
-	String string
+	Flags int32
+	Type  TextType
+	Value TextValue
 }
 
 func newTextPropertyValue() PropertyValue {
 	return &TextPropertyValue{}
+}
+
+func (p *Property) GetTextValue() (*TextPropertyValue, error) {
+	if v, ok := p.PropertyValue.(*TextPropertyValue); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
 // TODO: Improve this to handle the other types. This is just good enough for the save file I'm using.
@@ -1297,31 +1307,57 @@ func (v *TextPropertyValue) parse(p *parser, inner bool) error {
 		return err
 	}
 
-	_, err = p.readInt32()
+	v.Flags, err = p.readInt32()
 	if err != nil {
 		return err
 	}
 
-	_, err = p.readByte()
+	textType, err := p.readByte()
 	if err != nil {
 		return err
 	}
 
-	_, err = p.readInt32()
+	v.Type = TextType(textType)
+
+	switch v.Type {
+	case BaseTextType:
+		v.Value = &BaseText{}
+	case NoneTextType:
+		v.Value = &NoneText{}
+	default:
+		return fmt.Errorf("unknown text type %v", v.Type)
+	}
+
+	err = v.Value.parse(p)
 	if err != nil {
 		return err
 	}
-
-	s, err := p.readString()
-	if err != nil {
-		return err
-	}
-
-	v.String = s
 
 	return nil
 }
 
 func (v *TextPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	panic("implement me")
+	err := s.writeNull()
+	if err != nil {
+		return 0, err
+	}
+
+	m := s.measure()
+
+	err = s.writeInt32(v.Flags)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeByte(byte(v.Type))
+	if err != nil {
+		return 0, err
+	}
+
+	err = v.Value.serialize(s)
+	if err != nil {
+		return 0, err
+	}
+
+	return m(), nil
 }

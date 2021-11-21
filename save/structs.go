@@ -94,7 +94,6 @@ func (v *BoxStruct) parse(p *parser) error {
 		return err
 	}
 
-	// TODO: Is this definitely a bool?
 	v.IsValid, err = p.readBool()
 	if err != nil {
 		return err
@@ -117,6 +116,76 @@ func (v *BoxStruct) serialize(s *serializer) (int32, error) {
 	}
 
 	err = s.writeBool(v.IsValid)
+	if err != nil {
+		return 0, err
+	}
+
+	return m(), nil
+}
+
+//
+// Color
+//
+
+type ColorStruct struct {
+	B byte
+	G byte
+	R byte
+	A byte
+}
+
+func (v *StructPropertyValue) GetColorStruct() (*ColorStruct, error) {
+	if v, ok := v.Value.(*ColorStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
+
+func (v *ColorStruct) parse(p *parser) error {
+	var err error
+	v.B, err = p.readByte()
+	if err != nil {
+		return err
+	}
+
+	v.G, err = p.readByte()
+	if err != nil {
+		return err
+	}
+
+	v.R, err = p.readByte()
+	if err != nil {
+		return err
+	}
+
+	v.A, err = p.readByte()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (v *ColorStruct) serialize(s *serializer) (int32, error) {
+	m := s.measure()
+
+	err := s.writeByte(v.B)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeByte(v.G)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeByte(v.R)
+	if err != nil {
+		return 0, err
+	}
+
+	err = s.writeByte(v.A)
 	if err != nil {
 		return 0, err
 	}

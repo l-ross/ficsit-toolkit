@@ -168,6 +168,15 @@ func TestProperties(t *testing.T) {
 			},
 		},
 		{
+			name:     "StringProperty_UTF16",
+			testData: "testdata/property_type/string_utf16.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				v, err := p.GetStringValue()
+				require.NoError(t, err)
+				assert.Equal(t, "Uranium Rods In ↑\r\nRadioactive: ☢", v)
+			},
+		},
+		{
 			name:     "StructProperty",
 			testData: "testdata/property_type/struct.dat",
 			assertValue: func(t *testing.T, p *Property) {
@@ -176,6 +185,30 @@ func TestProperties(t *testing.T) {
 				a, err := v.GetArbitraryStruct()
 				require.NoError(t, err)
 				require.Len(t, a.Properties, 3)
+			},
+		},
+		{
+			name:     "TextProperty_1",
+			testData: "testdata/property_type/text_1.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				txt, err := p.GetTextValue()
+				require.NoError(t, err)
+
+				noneTxt, err := txt.GetNoneText()
+				require.NoError(t, err)
+				assert.Equal(t, "Skoevde C", noneTxt.String)
+			},
+		},
+		{
+			name:     "TextProperty_2",
+			testData: "testdata/property_type/text_2.dat",
+			assertValue: func(t *testing.T, p *Property) {
+				txt, err := p.GetTextValue()
+				require.NoError(t, err)
+
+				baseTxt, err := txt.GetBaseText()
+				require.NoError(t, err)
+				assert.Equal(t, "Custom Name", baseTxt.Value)
 			},
 		},
 	}

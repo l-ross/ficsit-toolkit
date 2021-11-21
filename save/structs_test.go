@@ -28,6 +28,15 @@ func TestStructs(t *testing.T) {
 			},
 		},
 		{
+			name:     "Color",
+			testData: "testdata/struct/color.dat",
+			assertValue: func(t *testing.T, s *StructPropertyValue) {
+				v, err := s.GetColorStruct()
+				require.NoError(t, err)
+				assert.Equal(t, byte(0xFF), v.G)
+			},
+		},
+		{
 			name:     "InventoryItem",
 			testData: "testdata/struct/inventory_item.dat",
 			assertValue: func(t *testing.T, s *StructPropertyValue) {
