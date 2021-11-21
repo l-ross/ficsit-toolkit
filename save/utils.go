@@ -4,6 +4,15 @@ import (
 	"encoding/binary"
 	"fmt"
 	"io"
+	"strings"
+	"unicode"
+
+	unicodex "golang.org/x/text/encoding/unicode"
+)
+
+var (
+	utf16Decoder = unicodex.UTF16(unicodex.LittleEndian, unicodex.IgnoreBOM).NewDecoder()
+	utf16Encoder = unicodex.UTF16(unicodex.LittleEndian, unicodex.IgnoreBOM).NewEncoder()
 )
 
 //
@@ -76,8 +85,16 @@ func (p *parser) readString() (string, error) {
 		return "", nil
 	}
 
-	v := make([]byte, l)
-	read, err := p.body.Read(v)
+	// If the length is negative then it's UTF16 encoded.
+	isUTF16 := false
+	if l < 0 {
+		isUTF16 = true
+		l = l * -2
+	}
+
+	// Read all the bytes that make up the string.
+	b := make([]byte, l)
+	read, err := p.body.Read(b)
 	if err != nil {
 		return "", err
 	}
@@ -85,9 +102,23 @@ func (p *parser) readString() (string, error) {
 		return "", fmt.Errorf("expected to read %d but only read %d", l, read)
 	}
 
-	// Drop the null terminator
-	v = v[:l-1]
-	return string(v), nil
+	// Convert bytes to string
+	v := ""
+
+	if isUTF16 {
+		b, err := utf16Decoder.Bytes(b)
+		if err != nil {
+			return "", err
+		}
+		v = string(b)
+	} else {
+		v = string(b)
+	}
+
+	// Remove null terminator
+	v = v[:len(v)-1]
+
+	return v, nil
 }
 
 func (p *parser) readBool() (bool, error) {
@@ -226,12 +257,35 @@ func (s *serializer) writeString(str string) error {
 	// Add null termination.
 	str += "\x00"
 
-	err := s.writeInt32(int32(len(str)))
+	strLen := int32(strings.Count(str, "")) - 1
+
+	// If the string isn't just ASCII characters then adjust the length and encode
+	// the string.
+	if !isASCII(str) {
+		strLen = strLen * -1
+
+		var err error
+		str, err = utf16Encoder.String(str)
+		if err != nil {
+			return err
+		}
+	}
+
+	err := s.writeInt32(strLen)
 	if err != nil {
 		return err
 	}
 
 	return binary.Write(s.body, binary.LittleEndian, []byte(str))
+}
+
+func isASCII(s string) bool {
+	for i := 0; i < len(s); i++ {
+		if s[i] > unicode.MaxASCII {
+			return false
+		}
+	}
+	return true
 }
 
 func (s *serializer) writeNoneProp() error {
