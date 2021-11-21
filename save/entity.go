@@ -21,42 +21,42 @@ type Entity struct {
 
 func (e *Entity) parse(p *parser) error {
 	var err error
-	e.TypePath, err = p.readString()
+	e.TypePath, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.RootObject, err = p.readString()
+	e.RootObject, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.InstanceName, err = p.readString()
+	e.InstanceName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.NeedTransform, err = p.readInt32()
+	e.NeedTransform, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	e.Rotation, err = p.readFloat32Array(4)
+	e.Rotation, err = p.ReadFloat32Array(4)
 	if err != nil {
 		return err
 	}
 
-	e.Position, err = p.readFloat32Array(3)
+	e.Position, err = p.ReadFloat32Array(3)
 	if err != nil {
 		return err
 	}
 
-	e.Scale, err = p.readFloat32Array(3)
+	e.Scale, err = p.ReadFloat32Array(3)
 	if err != nil {
 		return err
 	}
 
-	e.WasPlacedInLevel, err = p.readInt32()
+	e.WasPlacedInLevel, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -65,30 +65,30 @@ func (e *Entity) parse(p *parser) error {
 }
 
 func (e *Entity) parseData(p *parser) error {
-	dataSize, err := p.readInt32()
+	dataSize, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	// Capture all bytes if debug is enabled.
-	if debug {
-		e.objectDataPos = p.body.Index - 4
-		e.objectData, err = p.debugReadDataChunk(dataSize)
-	}
+	//// Capture all bytes if debug is enabled.
+	//if debug {
+	//	e.objectDataPos = p.body.Index - 4
+	//	e.objectData, err = p.debugReadDataChunk(dataSize)
+	//}
 
-	m := p.measure()
+	m := p.Measure()
 
-	e.ParentObjectRoot, err = p.readString()
+	e.ParentObjectRoot, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.ParentObjectName, err = p.readString()
+	e.ParentObjectName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	childCount, err := p.readInt32()
+	childCount, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -98,12 +98,12 @@ func (e *Entity) parseData(p *parser) error {
 	for i := int32(0); i < childCount; i++ {
 		o := &ObjectReference{}
 
-		o.LevelName, err = p.readString()
+		o.LevelName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		o.PathName, err = p.readString()
+		o.PathName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
@@ -118,7 +118,7 @@ func (e *Entity) parseData(p *parser) error {
 
 	// ExtraCount
 	// Is this ever not zero?
-	_, err = p.readInt32()
+	_, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -137,42 +137,42 @@ func (e *Entity) parseData(p *parser) error {
 }
 
 func (e *Entity) serialize(s *serializer) error {
-	err := s.writeString(e.TypePath)
+	err := s.WriteString(e.TypePath)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.RootObject)
+	err = s.WriteString(e.RootObject)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.InstanceName)
+	err = s.WriteString(e.InstanceName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(e.NeedTransform)
+	err = s.WriteInt32(e.NeedTransform)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeFloat32Array(e.Rotation)
+	err = s.WriteFloat32Array(e.Rotation)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeFloat32Array(e.Position)
+	err = s.WriteFloat32Array(e.Position)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeFloat32Array(e.Scale)
+	err = s.WriteFloat32Array(e.Scale)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(e.WasPlacedInLevel)
+	err = s.WriteInt32(e.WasPlacedInLevel)
 	if err != nil {
 		return err
 	}
@@ -182,36 +182,36 @@ func (e *Entity) serialize(s *serializer) error {
 
 func (e *Entity) serializeData(s *serializer) error {
 	// Write placeholder length
-	lenPos := s.body.Index
-	err := s.writeInt32(0)
+	lenPos := s.Index()
+	err := s.WriteInt32(0)
 	if err != nil {
 		return err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
-	err = s.writeString(e.ParentObjectRoot)
+	err = s.WriteString(e.ParentObjectRoot)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.ParentObjectName)
+	err = s.WriteString(e.ParentObjectName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(int32(len(e.References)))
+	err = s.WriteInt32(int32(len(e.References)))
 	if err != nil {
 		return err
 	}
 
 	for _, c := range e.References {
-		err = s.writeString(c.LevelName)
+		err = s.WriteString(c.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(c.PathName)
+		err = s.WriteString(c.PathName)
 		if err != nil {
 			return err
 		}
@@ -224,7 +224,7 @@ func (e *Entity) serializeData(s *serializer) error {
 
 	// Write ExtraCount
 	// Is this always zero?
-	err = s.writeInt32(0)
+	err = s.WriteInt32(0)
 	if err != nil {
 		return err
 	}
@@ -237,7 +237,7 @@ func (e *Entity) serializeData(s *serializer) error {
 	}
 
 	// Update length
-	err = s.writeLen(m(), lenPos)
+	err = s.WriteLen(m(), lenPos)
 	if err != nil {
 		return err
 	}

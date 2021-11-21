@@ -54,7 +54,7 @@ func (v *ArbitraryStruct) parse(p *parser) error {
 }
 
 func (v *ArbitraryStruct) serialize(s *serializer) (int32, error) {
-	m := s.measure()
+	m := s.Measure()
 
 	err := s.serializeProperties(v.Properties)
 	if err != nil {
@@ -84,17 +84,17 @@ func (v *StructPropertyValue) GetBoxStruct() (*BoxStruct, error) {
 
 func (v *BoxStruct) parse(p *parser) error {
 	var err error
-	v.Min, err = p.readFloat32Array(3)
+	v.Min, err = p.ReadFloat32Array(3)
 	if err != nil {
 		return err
 	}
 
-	v.Max, err = p.readFloat32Array(3)
+	v.Max, err = p.ReadFloat32Array(3)
 	if err != nil {
 		return err
 	}
 
-	v.IsValid, err = p.readBool()
+	v.IsValid, err = p.ReadBool()
 	if err != nil {
 		return err
 	}
@@ -103,19 +103,19 @@ func (v *BoxStruct) parse(p *parser) error {
 }
 
 func (v *BoxStruct) serialize(s *serializer) (int32, error) {
-	m := s.measure()
+	m := s.Measure()
 
-	err := s.writeFloat32Array(v.Min)
+	err := s.WriteFloat32Array(v.Min)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32Array(v.Max)
+	err = s.WriteFloat32Array(v.Max)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeBool(v.IsValid)
+	err = s.WriteBool(v.IsValid)
 	if err != nil {
 		return 0, err
 	}
@@ -144,22 +144,22 @@ func (v *StructPropertyValue) GetColorStruct() (*ColorStruct, error) {
 
 func (v *ColorStruct) parse(p *parser) error {
 	var err error
-	v.B, err = p.readByte()
+	v.B, err = p.ReadByte()
 	if err != nil {
 		return err
 	}
 
-	v.G, err = p.readByte()
+	v.G, err = p.ReadByte()
 	if err != nil {
 		return err
 	}
 
-	v.R, err = p.readByte()
+	v.R, err = p.ReadByte()
 	if err != nil {
 		return err
 	}
 
-	v.A, err = p.readByte()
+	v.A, err = p.ReadByte()
 	if err != nil {
 		return err
 	}
@@ -168,24 +168,24 @@ func (v *ColorStruct) parse(p *parser) error {
 }
 
 func (v *ColorStruct) serialize(s *serializer) (int32, error) {
-	m := s.measure()
+	m := s.Measure()
 
-	err := s.writeByte(v.B)
+	err := s.WriteByte(v.B)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeByte(v.G)
+	err = s.WriteByte(v.G)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeByte(v.R)
+	err = s.WriteByte(v.R)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeByte(v.A)
+	err = s.WriteByte(v.A)
 	if err != nil {
 		return 0, err
 	}
@@ -208,7 +208,7 @@ func (v *StructPropertyValue) GetDateTimeStruct() (*DateTimeStruct, error) {
 }
 
 func (v *DateTimeStruct) parse(p *parser) error {
-	i, err := p.readInt64()
+	i, err := p.ReadInt64()
 	if err != nil {
 		return err
 	}
@@ -219,7 +219,7 @@ func (v *DateTimeStruct) parse(p *parser) error {
 }
 
 func (v *DateTimeStruct) serialize(s *serializer) (int32, error) {
-	err := s.writeInt64(int64(*v))
+	err := s.WriteInt64(int64(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -234,7 +234,7 @@ func (v *DateTimeStruct) serialize(s *serializer) (int32, error) {
 type FluidBoxStruct float32
 
 func (v *FluidBoxStruct) parse(p *parser) error {
-	f, err := p.readFloat32()
+	f, err := p.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -245,7 +245,7 @@ func (v *FluidBoxStruct) parse(p *parser) error {
 }
 
 func (v *FluidBoxStruct) serialize(s *serializer) (int32, error) {
-	return 4, s.writeFloat32(float32(*v))
+	return 4, s.WriteFloat32(float32(*v))
 }
 
 //
@@ -255,7 +255,7 @@ func (v *FluidBoxStruct) serialize(s *serializer) (int32, error) {
 type GUIDStruct []byte
 
 func (v *GUIDStruct) parse(p *parser) error {
-	b, err := p.readBytes(16)
+	b, err := p.ReadBytes(16)
 	if err != nil {
 		return err
 	}
@@ -266,7 +266,7 @@ func (v *GUIDStruct) parse(p *parser) error {
 }
 
 func (v *GUIDStruct) serialize(s *serializer) (int32, error) {
-	err := s.writeBytes(*v)
+	err := s.WriteBytes(*v)
 	if err != nil {
 		return 0, err
 	}
@@ -295,27 +295,27 @@ func (v *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, er
 
 func (v *InventoryItemStruct) parse(p *parser) error {
 	// UNKNOWN_DATA
-	_, err := p.readInt32()
+	_, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	v.ItemName, err = p.readString()
+	v.ItemName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.LevelName, err = p.readString()
+	v.LevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = p.readString()
+	v.PathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	propName, err := p.readString()
+	propName, err := p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -323,7 +323,7 @@ func (v *InventoryItemStruct) parse(p *parser) error {
 		return fmt.Errorf("found item property that was not NumItems %q", propName)
 	}
 
-	propType, err := p.readString()
+	propType, err := p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -332,18 +332,18 @@ func (v *InventoryItemStruct) parse(p *parser) error {
 	}
 
 	// Value length. Presuamble always 4.
-	_, err = p.readInt32()
+	_, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
 	// UNKNOWN_DATA
-	_, err = p.readBytes(5)
+	_, err = p.ReadBytes(5)
 	if err != nil {
 		return err
 	}
 
-	v.NumItems, err = p.readInt32()
+	v.NumItems, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -352,25 +352,25 @@ func (v *InventoryItemStruct) parse(p *parser) error {
 }
 
 func (v *InventoryItemStruct) serialize(s *serializer) (int32, error) {
-	m := s.measure()
+	m := s.Measure()
 
 	// UNKNOWN_DATA
-	err := s.writeInt32(0)
+	err := s.WriteInt32(0)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString(v.ItemName)
+	err = s.WriteString(v.ItemName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString(v.LevelName)
+	err = s.WriteString(v.LevelName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString(v.PathName)
+	err = s.WriteString(v.PathName)
 	if err != nil {
 		return 0, err
 	}
@@ -378,29 +378,29 @@ func (v *InventoryItemStruct) serialize(s *serializer) (int32, error) {
 	// Data after this is not included in the size.
 	l := m()
 
-	err = s.writeString("NumItems")
+	err = s.WriteString("NumItems")
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString("IntProperty")
+	err = s.WriteString("IntProperty")
 	if err != nil {
 		return 0, err
 	}
 
 	// Value length.
-	err = s.writeInt32(4)
+	err = s.WriteInt32(4)
 	if err != nil {
 		return 0, err
 	}
 
 	// UNKNOWN_DATA
-	err = s.writeNulls(5)
+	err = s.WriteNulls(5)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeInt32(v.NumItems)
+	err = s.WriteInt32(v.NumItems)
 	if err != nil {
 		return 0, err
 	}
@@ -429,22 +429,22 @@ func (v *StructPropertyValue) GetLinearColor() (*LinearColorStruct, error) {
 
 func (v *LinearColorStruct) parse(p *parser) error {
 	var err error
-	v.R, err = p.readFloat32()
+	v.R, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.G, err = p.readFloat32()
+	v.G, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.B, err = p.readFloat32()
+	v.B, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.A, err = p.readFloat32()
+	v.A, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -453,22 +453,22 @@ func (v *LinearColorStruct) parse(p *parser) error {
 }
 
 func (v *LinearColorStruct) serialize(s *serializer) (int32, error) {
-	err := s.writeFloat32(v.R)
+	err := s.WriteFloat32(v.R)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.G)
+	err = s.WriteFloat32(v.G)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.B)
+	err = s.WriteFloat32(v.B)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.A)
+	err = s.WriteFloat32(v.A)
 	if err != nil {
 		return 0, err
 	}
@@ -490,22 +490,22 @@ type RailroadTrackPositionStruct struct {
 func (v *RailroadTrackPositionStruct) parse(p *parser) error {
 	var err error
 
-	v.LevelName, err = p.readString()
+	v.LevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = p.readString()
+	v.PathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.Offset, err = p.readFloat32()
+	v.Offset, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Forward, err = p.readFloat32()
+	v.Forward, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -514,24 +514,24 @@ func (v *RailroadTrackPositionStruct) parse(p *parser) error {
 }
 
 func (v *RailroadTrackPositionStruct) serialize(s *serializer) (int32, error) {
-	m := s.measure()
+	m := s.Measure()
 
-	err := s.writeString(v.LevelName)
+	err := s.WriteString(v.LevelName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString(v.PathName)
+	err = s.WriteString(v.PathName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.Offset)
+	err = s.WriteFloat32(v.Offset)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.Forward)
+	err = s.WriteFloat32(v.Forward)
 	if err != nil {
 		return 0, err
 	}
@@ -552,22 +552,22 @@ type QuatStruct struct {
 
 func (v *QuatStruct) parse(p *parser) error {
 	var err error
-	v.X, err = p.readFloat32()
+	v.X, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Y, err = p.readFloat32()
+	v.Y, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Z, err = p.readFloat32()
+	v.Z, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.W, err = p.readFloat32()
+	v.W, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -576,22 +576,22 @@ func (v *QuatStruct) parse(p *parser) error {
 }
 
 func (v *QuatStruct) serialize(s *serializer) (int32, error) {
-	err := s.writeFloat32(v.X)
+	err := s.WriteFloat32(v.X)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.Y)
+	err = s.WriteFloat32(v.Y)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.Z)
+	err = s.WriteFloat32(v.Z)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.W)
+	err = s.WriteFloat32(v.W)
 	if err != nil {
 		return 0, err
 	}
@@ -611,17 +611,17 @@ type VectorStruct struct {
 
 func (v *VectorStruct) parse(p *parser) error {
 	var err error
-	v.X, err = p.readFloat32()
+	v.X, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Y, err = p.readFloat32()
+	v.Y, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Z, err = p.readFloat32()
+	v.Z, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -630,17 +630,17 @@ func (v *VectorStruct) parse(p *parser) error {
 }
 
 func (v *VectorStruct) serialize(s *serializer) (int32, error) {
-	err := s.writeFloat32(v.X)
+	err := s.WriteFloat32(v.X)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.Y)
+	err = s.WriteFloat32(v.Y)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.Z)
+	err = s.WriteFloat32(v.Z)
 	if err != nil {
 		return 0, err
 	}
@@ -659,12 +659,12 @@ type Vector2DStruct struct {
 
 func (v *Vector2DStruct) parse(p *parser) error {
 	var err error
-	v.X, err = p.readFloat32()
+	v.X, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
 
-	v.Y, err = p.readFloat32()
+	v.Y, err = p.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -673,12 +673,12 @@ func (v *Vector2DStruct) parse(p *parser) error {
 }
 
 func (v *Vector2DStruct) serialize(s *serializer) (int32, error) {
-	err := s.writeFloat32(v.X)
+	err := s.WriteFloat32(v.X)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat32(v.Y)
+	err = s.WriteFloat32(v.Y)
 	if err != nil {
 		return 0, err
 	}

@@ -99,7 +99,7 @@ func TestExtra(t *testing.T) {
 
 			// Parse extra
 			p := createTestParser(t, tt.testData)
-			e := getExtra(tt.typePath)(int32(len(p.body.Buffer)))
+			e := getExtra(tt.typePath)(int32(p.Len()))
 			err := e.Value.parse(p)
 			require.NoError(t, err)
 			assertAllBufferRead(t, p)

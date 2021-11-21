@@ -97,7 +97,7 @@ func (e *Extra) GetCircuitSubsystem() (*CircuitSubsystemExtra, error) {
 }
 
 func (e *CircuitSubsystemExtra) parse(p *parser) error {
-	count, err := p.readInt32()
+	count, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -107,17 +107,17 @@ func (e *CircuitSubsystemExtra) parse(p *parser) error {
 	for i := int32(0); i < count; i++ {
 		c := &Circuit{}
 
-		c.ID, err = p.readInt32()
+		c.ID, err = p.ReadInt32()
 		if err != nil {
 			return err
 		}
 
-		c.LevelName, err = p.readString()
+		c.LevelName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		c.PathName, err = p.readString()
+		c.PathName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
@@ -129,23 +129,23 @@ func (e *CircuitSubsystemExtra) parse(p *parser) error {
 }
 
 func (e *CircuitSubsystemExtra) serialize(s *serializer) error {
-	err := s.writeInt32(int32(len(e.Circuits)))
+	err := s.WriteInt32(int32(len(e.Circuits)))
 	if err != nil {
 		return err
 	}
 
 	for _, c := range e.Circuits {
-		err = s.writeInt32(c.ID)
+		err = s.WriteInt32(c.ID)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(c.LevelName)
+		err = s.WriteString(c.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(c.PathName)
+		err = s.WriteString(c.PathName)
 		if err != nil {
 			return err
 		}
@@ -185,7 +185,7 @@ func (e *Extra) GetConveyorBelt() (*ConveyorBeltExtra, error) {
 }
 
 func (e *ConveyorBeltExtra) parse(p *parser) error {
-	itemCount, err := p.readInt32()
+	itemCount, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -196,27 +196,27 @@ func (e *ConveyorBeltExtra) parse(p *parser) error {
 		item := &ConveyorBeltItem{}
 
 		// UNKNOWN_DATA
-		_, err = p.readInt32()
+		_, err = p.ReadInt32()
 		if err != nil {
 			return err
 		}
 
-		item.ResourceName, err = p.readString()
+		item.ResourceName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		item.LevelName, err = p.readString()
+		item.LevelName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		item.PathName, err = p.readString()
+		item.PathName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		item.Position, err = p.readFloat32()
+		item.Position, err = p.ReadFloat32()
 		if err != nil {
 			return err
 		}
@@ -228,34 +228,34 @@ func (e *ConveyorBeltExtra) parse(p *parser) error {
 }
 
 func (e *ConveyorBeltExtra) serialize(s *serializer) error {
-	err := s.writeInt32(int32(len(e.Items)))
+	err := s.WriteInt32(int32(len(e.Items)))
 	if err != nil {
 		return err
 	}
 
 	for _, i := range e.Items {
 		// UNKNOWN_DATA
-		err = s.writeInt32(0)
+		err = s.WriteInt32(0)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(i.ResourceName)
+		err = s.WriteString(i.ResourceName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(i.LevelName)
+		err = s.WriteString(i.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(i.PathName)
+		err = s.WriteString(i.PathName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeFloat32(i.Position)
+		err = s.WriteFloat32(i.Position)
 		if err != nil {
 			return err
 		}
@@ -288,7 +288,7 @@ func (e *Extra) GetGameModeExtra() (*GameModeExtra, error) {
 }
 
 func (e *GameModeExtra) parse(p *parser) error {
-	count, err := p.readInt32()
+	count, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -296,12 +296,12 @@ func (e *GameModeExtra) parse(p *parser) error {
 	for i := int32(0); i < count; i++ {
 		o := &ObjectReference{}
 
-		o.LevelName, err = p.readString()
+		o.LevelName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		o.PathName, err = p.readString()
+		o.PathName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
@@ -311,18 +311,18 @@ func (e *GameModeExtra) parse(p *parser) error {
 }
 
 func (e *GameModeExtra) serialize(s *serializer) error {
-	err := s.writeInt32(int32(len(e.Objects)))
+	err := s.WriteInt32(int32(len(e.Objects)))
 	if err != nil {
 		return err
 	}
 
 	for _, o := range e.Objects {
-		err = s.writeString(o.LevelName)
+		err = s.WriteString(o.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(o.PathName)
+		err = s.WriteString(o.PathName)
 		if err != nil {
 			return err
 		}
@@ -355,7 +355,7 @@ func (e *Extra) GetGameStateExtra() (*GameStateExtra, error) {
 }
 
 func (e *GameStateExtra) parse(p *parser) error {
-	count, err := p.readInt32()
+	count, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -363,12 +363,12 @@ func (e *GameStateExtra) parse(p *parser) error {
 	for i := int32(0); i < count; i++ {
 		o := &ObjectReference{}
 
-		o.LevelName, err = p.readString()
+		o.LevelName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		o.PathName, err = p.readString()
+		o.PathName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
@@ -380,18 +380,18 @@ func (e *GameStateExtra) parse(p *parser) error {
 }
 
 func (e *GameStateExtra) serialize(s *serializer) error {
-	err := s.writeInt32(int32(len(e.Objects)))
+	err := s.WriteInt32(int32(len(e.Objects)))
 	if err != nil {
 		return err
 	}
 
 	for _, o := range e.Objects {
-		err = s.writeString(o.LevelName)
+		err = s.WriteString(o.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(o.PathName)
+		err = s.WriteString(o.PathName)
 		if err != nil {
 			return err
 		}
@@ -429,7 +429,7 @@ func (e *Extra) GetPlayerStateExtra() (*PlayerStateExtra, error) {
 
 func (e *PlayerStateExtra) parse(p *parser) error {
 	var err error
-	e.Data, err = p.readBytes(e.len)
+	e.Data, err = p.ReadBytes(e.len)
 	if err != nil {
 		return err
 	}
@@ -438,7 +438,7 @@ func (e *PlayerStateExtra) parse(p *parser) error {
 }
 
 func (e *PlayerStateExtra) serialize(s *serializer) error {
-	return s.writeBytes(e.Data)
+	return s.WriteBytes(e.Data)
 }
 
 //
@@ -469,22 +469,22 @@ func (e *Extra) GetPowerLineExtra() (*PowerLineExtra, error) {
 
 func (e *PowerLineExtra) parse(p *parser) error {
 	var err error
-	e.SourceLevelName, err = p.readString()
+	e.SourceLevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.SourcePathName, err = p.readString()
+	e.SourcePathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.TargetLevelName, err = p.readString()
+	e.TargetLevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.TargetPathName, err = p.readString()
+	e.TargetPathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -493,22 +493,22 @@ func (e *PowerLineExtra) parse(p *parser) error {
 }
 
 func (e *PowerLineExtra) serialize(s *serializer) error {
-	err := s.writeString(e.SourceLevelName)
+	err := s.WriteString(e.SourceLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.SourcePathName)
+	err = s.WriteString(e.SourcePathName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.TargetLevelName)
+	err = s.WriteString(e.TargetLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.TargetPathName)
+	err = s.WriteString(e.TargetPathName)
 	if err != nil {
 		return err
 	}
@@ -544,27 +544,27 @@ func (e *Extra) GetTrainExtra() (*TrainExtra, error) {
 
 func (e *TrainExtra) parse(p *parser) error {
 	// UNKNOWN_DATA
-	_, err := p.readInt32()
+	_, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	e.PreviousLevelName, err = p.readString()
+	e.PreviousLevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.PreviousPathName, err = p.readString()
+	e.PreviousPathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.NextLevelName, err = p.readString()
+	e.NextLevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	e.NextPathName, err = p.readString()
+	e.NextPathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -573,27 +573,27 @@ func (e *TrainExtra) parse(p *parser) error {
 }
 
 func (e *TrainExtra) serialize(s *serializer) error {
-	err := s.writeInt32(0)
+	err := s.WriteInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.PreviousLevelName)
+	err = s.WriteString(e.PreviousLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.PreviousPathName)
+	err = s.WriteString(e.PreviousPathName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.NextLevelName)
+	err = s.WriteString(e.NextLevelName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(e.NextPathName)
+	err = s.WriteString(e.NextPathName)
 	if err != nil {
 		return err
 	}
@@ -630,7 +630,7 @@ func (e *Extra) GetUnknownExtra() (*UnknownExtra, error) {
 
 func (e *UnknownExtra) parse(p *parser) error {
 	var err error
-	e.Data, err = p.readBytes(e.len)
+	e.Data, err = p.ReadBytes(e.len)
 	if err != nil {
 		return err
 	}
@@ -639,7 +639,7 @@ func (e *UnknownExtra) parse(p *parser) error {
 }
 
 func (e *UnknownExtra) serialize(s *serializer) error {
-	return s.writeBytes(e.Data)
+	return s.WriteBytes(e.Data)
 }
 
 //
@@ -671,18 +671,18 @@ func (e *Extra) GetVehicle() (*Vehicle, error) {
 }
 
 func (e *Vehicle) parse(p *parser) error {
-	objCount, err := p.readInt32()
+	objCount, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
 	for x := int32(0); x < objCount; x++ {
-		name, err := p.readString()
+		name, err := p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		data, err := p.readBytes(53)
+		data, err := p.ReadBytes(53)
 		if err != nil {
 			return err
 		}
@@ -697,18 +697,18 @@ func (e *Vehicle) parse(p *parser) error {
 }
 
 func (e *Vehicle) serialize(s *serializer) error {
-	err := s.writeInt32(int32(len(e.Data)))
+	err := s.WriteInt32(int32(len(e.Data)))
 	if err != nil {
 		return err
 	}
 
 	for _, d := range e.Data {
-		err := s.writeString(d.Name)
+		err := s.WriteString(d.Name)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeBytes(d.Data)
+		err = s.WriteBytes(d.Data)
 		if err != nil {
 			return err
 		}

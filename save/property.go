@@ -69,7 +69,7 @@ func (p *parser) parseProperty() (*Property, error) {
 	var err error
 	prop := &Property{}
 
-	prop.Name, err = p.readString()
+	prop.Name, err = p.ReadString()
 	if err != nil {
 		return nil, err
 	}
@@ -79,19 +79,19 @@ func (p *parser) parseProperty() (*Property, error) {
 		return nil, nil
 	}
 
-	propType, err := p.readString()
+	propType, err := p.ReadString()
 	if err != nil {
 		return nil, err
 	}
 	prop.Type = PropertyType(propType)
 
 	// Value length
-	_, err = p.readInt32()
+	_, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	prop.Index, err = p.readInt32()
+	prop.Index, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func (s *serializer) serializeProperties(props []*Property) error {
 		}
 	}
 
-	err := s.writeNoneProp()
+	err := s.WriteNoneProp()
 	if err != nil {
 		return err
 	}
@@ -162,24 +162,24 @@ func (s *serializer) serializeProperties(props []*Property) error {
 }
 
 func (s *serializer) serializeProperty(prop *Property) error {
-	err := s.writeString(prop.Name)
+	err := s.WriteString(prop.Name)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(string(prop.Type))
+	err = s.WriteString(string(prop.Type))
 	if err != nil {
 		return err
 	}
 
 	// Write placeholder length and record position.
-	lenPos := s.body.Index
-	err = s.writeInt32(0)
+	lenPos := s.Index()
+	err = s.WriteInt32(0)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(prop.Index)
+	err = s.WriteInt32(prop.Index)
 	if err != nil {
 		return err
 	}
@@ -190,7 +190,7 @@ func (s *serializer) serializeProperty(prop *Property) error {
 	}
 
 	// Write length at the recorded position.
-	err = s.writeLen(l, lenPos)
+	err = s.WriteLen(l, lenPos)
 	if err != nil {
 		return err
 	}

@@ -7,7 +7,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/ViRb3/slicewriteseek"
+	"github.com/l-ross/ficsit-toolkit/save/data"
 )
 
 const (
@@ -15,7 +15,7 @@ const (
 	packageFileTag   = int64(2653586369)
 )
 
-func (p *parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
+func (p *parser) decompressBody() (*data.Data, error) {
 	chunks := make([]byte, 0)
 
 	for {
@@ -36,11 +36,7 @@ func (p *parser) decompressBody() (*slicewriteseek.SliceWriteSeeker, error) {
 		chunks = append(chunks, chunk...)
 	}
 
-	b := &slicewriteseek.SliceWriteSeeker{
-		Buffer: chunks,
-	}
-
-	return b, nil
+	return data.NewFromBytes(chunks), nil
 }
 
 type chunkHeader struct {
@@ -55,7 +51,7 @@ func (p *parser) readChunkHeader() (*chunkHeader, error) {
 
 	var err error
 
-	ch.packageFileTag, err = p.readInt64()
+	ch.packageFileTag, err = p.ReadInt64()
 	if err != nil {
 		if err == io.EOF {
 			return nil, nil
@@ -64,24 +60,24 @@ func (p *parser) readChunkHeader() (*chunkHeader, error) {
 		return nil, err
 	}
 
-	ch.maximumChunkSize, err = p.readInt64()
+	ch.maximumChunkSize, err = p.ReadInt64()
 	if err != nil {
 		return nil, err
 	}
 
-	ch.compressedLength, err = p.readInt64()
+	ch.compressedLength, err = p.ReadInt64()
 	if err != nil {
 		return nil, err
 	}
 
-	ch.uncompressedLength, err = p.readInt64()
+	ch.uncompressedLength, err = p.ReadInt64()
 	if err != nil {
 		return nil, err
 	}
 
 	// Skip the next 16 bytes as they are seemingly just a repeat the compressed
 	// and uncompressed lengths
-	err = p.skipBytes(16)
+	err = p.SkipBytes(16)
 	if err != nil {
 		return nil, err
 	}
@@ -93,7 +89,7 @@ func (p *parser) readChunkHeader() (*chunkHeader, error) {
 func (p *parser) readChunk(ch *chunkHeader) ([]byte, error) {
 	compressed := make([]byte, ch.compressedLength)
 
-	read, err := p.body.Read(compressed)
+	read, err := p.Read(compressed)
 	if err != nil {
 		return nil, err
 	}
@@ -156,7 +152,7 @@ func (s *serializer) compressBody(b []byte) error {
 			return err
 		}
 
-		err = s.writeBytes(cb.Bytes())
+		err = s.WriteBytes(cb.Bytes())
 		if err != nil {
 			return err
 		}
@@ -166,34 +162,34 @@ func (s *serializer) compressBody(b []byte) error {
 }
 
 func (s *serializer) writeChunkHeader(ch *chunkHeader) error {
-	err := s.writeInt64(ch.packageFileTag)
+	err := s.WriteInt64(ch.packageFileTag)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt64(ch.maximumChunkSize)
+	err = s.WriteInt64(ch.maximumChunkSize)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt64(ch.compressedLength)
+	err = s.WriteInt64(ch.compressedLength)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt64(ch.uncompressedLength)
+	err = s.WriteInt64(ch.uncompressedLength)
 	if err != nil {
 		return err
 	}
 
 	// Duplicate the compressed and uncompressed lengths.
 
-	err = s.writeInt64(ch.compressedLength)
+	err = s.WriteInt64(ch.compressedLength)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt64(ch.uncompressedLength)
+	err = s.WriteInt64(ch.uncompressedLength)
 	if err != nil {
 		return err
 	}

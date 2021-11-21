@@ -3,36 +3,25 @@ package save
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
 
-	"github.com/ViRb3/slicewriteseek"
+	"github.com/l-ross/ficsit-toolkit/save/data"
 )
-
-var debug = false
 
 type parser struct {
 	r io.Reader
 
-	// Body of the save file.
-	body *slicewriteseek.SliceWriteSeeker
+	*data.Data
 }
 
 func newParser(r io.Reader) (*parser, error) {
-	p := &parser{
-		r: r,
-	}
-
-	data, err := ioutil.ReadAll(p.r)
+	d, err := data.NewFromReader(r)
 	if err != nil {
 		return nil, err
 	}
 
-	p.body = &slicewriteseek.SliceWriteSeeker{
-		Buffer: data,
-		Index:  0,
-	}
-
-	return p, nil
+	return &parser{
+		Data: d,
+	}, nil
 }
 
 // Parse will parse the entire file and return a Save object that contains
@@ -59,40 +48,40 @@ func Parse(r io.Reader) (*Save, error) {
 	}
 
 	// Decompress the save file and replace p.body with the decompressed version.
-	p.body, err = p.decompressBody()
+	p.Data, err = p.decompressBody()
 	if err != nil {
 		return nil, err
 	}
 
 	err = p.parseBody(s)
 	if err != nil {
-		return nil, fmt.Errorf("parse error at %d: %w", p.body.Index, err)
+		return nil, fmt.Errorf("parse error at %d: %w", p.Index(), err)
 	}
 
 	return s, nil
 }
 
-func DumpBody(r io.Reader) ([]byte, error) {
-	p, err := newParser(r)
-	if err != nil {
-		return nil, err
-	}
-
-	_, err = p.parseHeader()
-	if err != nil {
-		return nil, err
-	}
-
-	body, err := p.decompressBody()
-	if err != nil {
-		return nil, err
-	}
-
-	return body.Buffer, nil
-}
+//func DumpBody(r io.Reader) ([]byte, error) {
+//	p, err := newParser(r)
+//	if err != nil {
+//		return nil, err
+//	}
+//
+//	_, err = p.parseHeader()
+//	if err != nil {
+//		return nil, err
+//	}
+//
+//	body, err := p.decompressBody()
+//	if err != nil {
+//		return nil, err
+//	}
+//
+//	return body.Buffer, nil
+//}
 
 func (p *parser) parseBody(s *Save) error {
-	bodyLen, err := p.readInt32()
+	bodyLen, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -101,7 +90,7 @@ func (p *parser) parseBody(s *Save) error {
 	bodyLen += 4
 
 	// Verify the body is the expected length.
-	actualLen := p.body.Len()
+	actualLen := p.Len()
 	if bodyLen != int32(actualLen) {
 		return fmt.Errorf("expected decompressed body to be %d but was %d", actualLen, bodyLen)
 	}
@@ -114,7 +103,7 @@ func (p *parser) parseBody(s *Save) error {
 
 	// Read the number of object data chunks.
 	// Should be the same as the number of objects
-	objectDataCount, err := p.readInt32()
+	objectDataCount, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -138,8 +127,8 @@ func (p *parser) parseBody(s *Save) error {
 
 	// At this point we should have reached the end of the file.
 	// Check that there is no data left.
-	if p.body.Index != int64(bodyLen) {
-		return fmt.Errorf("found %d unparsed bytes at the end of the body", p.body.Index)
+	if p.Index() != int64(bodyLen) {
+		return fmt.Errorf("found %d unparsed bytes at the end of the body", p.Index())
 	}
 
 	return nil
@@ -147,13 +136,13 @@ func (p *parser) parseBody(s *Save) error {
 
 func (p *parser) parseObjects(s *Save) error {
 	var err error
-	s.objectCount, err = p.readInt32()
+	s.objectCount, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
 	for i := int32(0); i < s.objectCount; i++ {
-		objectType, err := p.readInt32()
+		objectType, err := p.ReadInt32()
 		if err != nil {
 			return err
 		}
@@ -194,7 +183,7 @@ func (p *parser) parseObjects(s *Save) error {
 }
 
 func (p *parser) parseCollectedObjects(s *Save) error {
-	collectedObjectCount, err := p.readInt32()
+	collectedObjectCount, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -202,12 +191,12 @@ func (p *parser) parseCollectedObjects(s *Save) error {
 	for i := int32(0); i < collectedObjectCount; i++ {
 		o := &ObjectReference{}
 
-		o.LevelName, err = p.readString()
+		o.LevelName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		o.PathName, err = p.readString()
+		o.PathName, err = p.ReadString()
 		if err != nil {
 			return err
 		}

@@ -4,20 +4,17 @@ import (
 	"io/ioutil"
 	"testing"
 
+	"github.com/l-ross/ficsit-toolkit/save/data"
 	"github.com/stretchr/testify/assert"
-
-	"github.com/ViRb3/slicewriteseek"
 	"github.com/stretchr/testify/require"
 )
 
 func createTestParser(t *testing.T, filepath string) *parser {
-	data, err := ioutil.ReadFile(filepath)
+	b, err := ioutil.ReadFile(filepath)
 	require.NoError(t, err)
 
 	p := &parser{
-		body: &slicewriteseek.SliceWriteSeeker{
-			Buffer: data,
-		},
+		Data: data.NewFromBytes(b),
 	}
 
 	return p
@@ -25,18 +22,18 @@ func createTestParser(t *testing.T, filepath string) *parser {
 
 func createTestSerializer() *serializer {
 	return &serializer{
-		body: slicewriteseek.New(),
+		Data: data.New(),
 	}
 }
 
 func assertBuffersEqual(t *testing.T, p *parser, s *serializer) {
-	assert.Equal(t, p.body.Buffer, s.body.Buffer)
+	assert.Equal(t, p.Bytes(), s.Bytes())
 }
 
 func assertAllBufferRead(t *testing.T, p *parser) {
 	assert.Equal(t,
-		p.body.Index,
-		int64(len(p.body.Buffer)),
+		p.Index(),
+		int64(len(p.Bytes())),
 		"we should have consumed the entire reader",
 	)
 }

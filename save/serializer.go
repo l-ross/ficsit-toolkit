@@ -3,14 +3,13 @@ package save
 import (
 	"io"
 
-	"github.com/ViRb3/slicewriteseek"
+	"github.com/l-ross/ficsit-toolkit/save/data"
 )
 
 type serializer struct {
 	w io.Writer
 
-	// Body of the save file.
-	body *slicewriteseek.SliceWriteSeeker
+	*data.Data
 }
 
 func Serialize(w io.Writer, save *Save) error {
@@ -25,11 +24,11 @@ func Serialize(w io.Writer, save *Save) error {
 	}
 
 	// Take a copy of the uncompressed save
-	uncompressed := make([]byte, len(s.body.Buffer))
-	copy(uncompressed, s.body.Buffer)
+	uncompressed := make([]byte, s.Len())
+	copy(uncompressed, s.Bytes())
 
 	// Empty out p.body as we will now write the header / compressed data
-	s.body = slicewriteseek.New()
+	s.Data = data.New()
 
 	err = s.serializeHeader(save.Header)
 	if err != nil {
@@ -41,7 +40,7 @@ func Serialize(w io.Writer, save *Save) error {
 		return err
 	}
 
-	_, err = s.w.Write(s.body.Buffer)
+	_, err = s.w.Write(s.Bytes())
 	if err != nil {
 		return err
 	}
@@ -51,12 +50,12 @@ func Serialize(w io.Writer, save *Save) error {
 
 func (s *serializer) serializeBody(save *Save) error {
 	// Write placeholder length.
-	err := s.writeInt32(0)
+	err := s.WriteInt32(0)
 	if err != nil {
 		return err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
 	err = s.serializeObjects(save)
 	if err != nil {
@@ -73,7 +72,7 @@ func (s *serializer) serializeBody(save *Save) error {
 		return err
 	}
 
-	err = s.writeLen(m(), 0)
+	err = s.WriteLen(m(), 0)
 	if err != nil {
 		return err
 	}
@@ -83,13 +82,13 @@ func (s *serializer) serializeBody(save *Save) error {
 
 func (s *serializer) serializeObjects(save *Save) error {
 	objectCount := len(save.Components) + len(save.Entities)
-	err := s.writeInt32(int32(objectCount))
+	err := s.WriteInt32(int32(objectCount))
 	if err != nil {
 		return err
 	}
 
 	for _, e := range save.Entities {
-		err = s.writeInt32(int32(EntityType))
+		err = s.WriteInt32(int32(EntityType))
 		if err != nil {
 			return err
 		}
@@ -101,7 +100,7 @@ func (s *serializer) serializeObjects(save *Save) error {
 	}
 
 	for _, c := range save.Components {
-		err = s.writeInt32(int32(ComponentType))
+		err = s.WriteInt32(int32(ComponentType))
 		if err != nil {
 			return err
 		}
@@ -117,7 +116,7 @@ func (s *serializer) serializeObjects(save *Save) error {
 
 func (s *serializer) serializeObjectData(save *Save) error {
 	objectCount := len(save.Components) + len(save.Entities)
-	err := s.writeInt32(int32(objectCount))
+	err := s.WriteInt32(int32(objectCount))
 	if err != nil {
 		return err
 	}
@@ -140,18 +139,18 @@ func (s *serializer) serializeObjectData(save *Save) error {
 }
 
 func (s *serializer) serializeCollectedObjects(save *Save) error {
-	err := s.writeInt32(int32(len(save.CollectedObjects)))
+	err := s.WriteInt32(int32(len(save.CollectedObjects)))
 	if err != nil {
 		return err
 	}
 
 	for _, c := range save.CollectedObjects {
-		err = s.writeString(c.LevelName)
+		err = s.WriteString(c.LevelName)
 		if err != nil {
 			return err
 		}
 
-		err = s.writeString(c.PathName)
+		err = s.WriteString(c.PathName)
 		if err != nil {
 			return err
 		}

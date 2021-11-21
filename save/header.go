@@ -36,7 +36,7 @@ func (p *parser) parseHeader() (*Header, error) {
 
 	var err error
 
-	h.HeaderVersion, err = p.readInt32()
+	h.HeaderVersion, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
@@ -45,57 +45,57 @@ func (p *parser) parseHeader() (*Header, error) {
 		return nil, fmt.Errorf("only support save header version 8, got %d", h.HeaderVersion)
 	}
 
-	h.SaveVersion, err = p.readInt32()
+	h.SaveVersion, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.BuildVersion, err = p.readInt32()
+	h.BuildVersion, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.MapName, err = p.readString()
+	h.MapName, err = p.ReadString()
 	if err != nil {
 		return nil, err
 	}
 
-	h.MapOptions, err = p.readString()
+	h.MapOptions, err = p.ReadString()
 	if err != nil {
 		return nil, err
 	}
 
-	h.SessionName, err = p.readString()
+	h.SessionName, err = p.ReadString()
 	if err != nil {
 		return nil, err
 	}
 
-	h.PlayTime, err = p.readInt32()
+	h.PlayTime, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.SaveDate, err = p.readInt64()
+	h.SaveDate, err = p.ReadInt64()
 	if err != nil {
 		return nil, err
 	}
 
-	h.SessionVisibility, err = p.readByte()
+	h.SessionVisibility, err = p.ReadByte()
 	if err != nil {
 		return nil, err
 	}
 
-	h.EditorObjectVersion, err = p.readInt32()
+	h.EditorObjectVersion, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
 
-	h.ModMetadata, err = p.readString()
+	h.ModMetadata, err = p.ReadString()
 	if err != nil {
 		return nil, err
 	}
 
-	h.ModFlags, err = p.readInt32()
+	h.ModFlags, err = p.ReadInt32()
 	if err != nil {
 		return nil, err
 	}
@@ -104,62 +104,62 @@ func (p *parser) parseHeader() (*Header, error) {
 }
 
 func (s *serializer) serializeHeader(h *Header) error {
-	err := s.writeInt32(h.HeaderVersion)
+	err := s.WriteInt32(h.HeaderVersion)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(h.SaveVersion)
+	err = s.WriteInt32(h.SaveVersion)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(h.BuildVersion)
+	err = s.WriteInt32(h.BuildVersion)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(h.MapName)
+	err = s.WriteString(h.MapName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(h.MapOptions)
+	err = s.WriteString(h.MapOptions)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(h.SessionName)
+	err = s.WriteString(h.SessionName)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(h.PlayTime)
+	err = s.WriteInt32(h.PlayTime)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt64(h.SaveDate)
+	err = s.WriteInt64(h.SaveDate)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeByte(h.SessionVisibility)
+	err = s.WriteByte(h.SessionVisibility)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(h.EditorObjectVersion)
+	err = s.WriteInt32(h.EditorObjectVersion)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(h.ModMetadata)
+	err = s.WriteString(h.ModMetadata)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeInt32(h.ModFlags)
+	err = s.WriteInt32(h.ModFlags)
 	if err != nil {
 		return err
 	}

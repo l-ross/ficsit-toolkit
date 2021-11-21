@@ -38,13 +38,13 @@ func (t *TextPropertyValue) GetNoneText() (*NoneText, error) {
 
 func (t *NoneText) parse(p *parser) error {
 	var err error
-	t.CultureInvariantString, err = p.readInt32()
+	t.CultureInvariantString, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
 	// TODO: Switch on above?
-	t.String, err = p.readString()
+	t.String, err = p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -53,13 +53,13 @@ func (t *NoneText) parse(p *parser) error {
 }
 
 func (t *NoneText) serialize(s *serializer) error {
-	err := s.writeInt32(t.CultureInvariantString)
+	err := s.WriteInt32(t.CultureInvariantString)
 	if err != nil {
 		return err
 	}
 
 	// TODO: Switch on above?
-	err = s.writeString(t.String)
+	err = s.WriteString(t.String)
 	if err != nil {
 		return err
 	}
@@ -87,17 +87,17 @@ func (t *TextPropertyValue) GetBaseText() (*BaseText, error) {
 
 func (t *BaseText) parse(p *parser) error {
 	var err error
-	t.Namespace, err = p.readString()
+	t.Namespace, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	t.Key, err = p.readString()
+	t.Key, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	t.Value, err = p.readString()
+	t.Value, err = p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -106,17 +106,17 @@ func (t *BaseText) parse(p *parser) error {
 }
 
 func (t *BaseText) serialize(s *serializer) error {
-	err := s.writeString(t.Namespace)
+	err := s.WriteString(t.Namespace)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(t.Key)
+	err = s.WriteString(t.Key)
 	if err != nil {
 		return err
 	}
 
-	err = s.writeString(t.Value)
+	err = s.WriteString(t.Value)
 	if err != nil {
 		return err
 	}

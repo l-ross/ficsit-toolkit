@@ -53,19 +53,19 @@ func (v *ArrayPropertyValue) GetStructValues() ([]*StructPropertyValue, error) {
 }
 
 func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
-	valueType, err := p.readString()
+	valueType, err := p.ReadString()
 	if err != nil {
 		return err
 	}
 	v.ValueType = PropertyType(valueType)
 
 	// UNKNOWN_DATA
-	_, err = p.readByte()
+	_, err = p.ReadByte()
 	if err != nil {
 		return err
 	}
 
-	elemCount, err := p.readInt32()
+	elemCount, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -108,34 +108,34 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 		newPropValue = newStringPropertyValue
 	case StructPropertyType:
 		// Name
-		v.StructName, err = p.readString()
+		v.StructName, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
 		// Type
 		// Is this always StructProperty?
-		_, err = p.readString()
+		_, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		v.StructBytes, err = p.readBytes(8)
+		v.StructBytes, err = p.ReadBytes(8)
 		if err != nil {
 			return err
 		}
 
-		v.StructInnerType, err = p.readString()
+		v.StructInnerType, err = p.ReadString()
 		if err != nil {
 			return err
 		}
 
-		v.StructGUID, err = p.readInt32Array(4)
+		v.StructGUID, err = p.ReadInt32Array(4)
 		if err != nil {
 			return err
 		}
 
-		err = p.nextByteIsNull()
+		err = p.NextByteIsNull()
 		if err != nil {
 			return err
 		}
@@ -166,18 +166,18 @@ func (v *ArrayPropertyValue) parse(p *parser, inner bool) error {
 }
 
 func (v *ArrayPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	err := s.writeString(string(v.ValueType))
+	err := s.WriteString(string(v.ValueType))
 	if err != nil {
 		return 0, err
 	}
 
 	// UNKNOWN_DATA
-	err = s.writeNull()
+	err = s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
 	// Special handling for BytePropertyType.
 	// See parse() for more details.
@@ -187,8 +187,8 @@ func (v *ArrayPropertyValue) serialize(s *serializer, inner bool) (int32, error)
 		}
 
 		// Write placeholder element count.
-		elemCountPos := s.body.Index
-		err = s.writeInt32(0)
+		elemCountPos := s.Index()
+		err = s.WriteInt32(0)
 		if err != nil {
 			return 0, err
 		}
@@ -200,7 +200,7 @@ func (v *ArrayPropertyValue) serialize(s *serializer, inner bool) (int32, error)
 		}
 
 		// Update element count.
-		err = s.writeLen(l, elemCountPos)
+		err = s.WriteLen(l, elemCountPos)
 		if err != nil {
 			return 0, err
 		}
@@ -208,38 +208,38 @@ func (v *ArrayPropertyValue) serialize(s *serializer, inner bool) (int32, error)
 		return m(), nil
 	}
 
-	err = s.writeInt32(int32(len(v.Values)))
+	err = s.WriteInt32(int32(len(v.Values)))
 	if err != nil {
 		return 0, err
 	}
 
 	if v.ValueType == StructPropertyType {
-		err = s.writeString(v.StructName)
+		err = s.WriteString(v.StructName)
 		if err != nil {
 			return 0, err
 		}
 
-		err = s.writeString("StructProperty")
+		err = s.WriteString("StructProperty")
 		if err != nil {
 			return 0, err
 		}
 
-		err = s.writeBytes(v.StructBytes)
+		err = s.WriteBytes(v.StructBytes)
 		if err != nil {
 			return 0, err
 		}
 
-		err = s.writeString(v.StructInnerType)
+		err = s.WriteString(v.StructInnerType)
 		if err != nil {
 			return 0, err
 		}
 
-		err = s.writeInt32Array(v.StructGUID)
+		err = s.WriteInt32Array(v.StructGUID)
 		if err != nil {
 			return 0, err
 		}
 
-		err = s.writeNull()
+		err = s.WriteNull()
 		if err != nil {
 			return 0, err
 		}
@@ -275,12 +275,12 @@ func (p *Property) GetBoolValue() (bool, error) {
 }
 
 func (v *BoolPropertyValue) parse(p *parser, inner bool) error {
-	b, err := p.readBool()
+	b, err := p.ReadBool()
 	if err != nil {
 		return err
 	}
 
-	err = p.nextByteIsNull()
+	err = p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
@@ -292,15 +292,15 @@ func (v *BoolPropertyValue) parse(p *parser, inner bool) error {
 func (v *BoolPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	var err error
 	if *v {
-		err = s.writeBool(true)
+		err = s.WriteBool(true)
 	} else {
-		err = s.writeBool(false)
+		err = s.WriteBool(false)
 	}
 	if err != nil {
 		return 0, err
 	}
 
-	return 0, s.writeNull()
+	return 0, s.WriteNull()
 }
 
 //
@@ -332,26 +332,26 @@ func (v *BytePropertyValue) parse(p *parser, inner bool) error {
 	}
 
 	var err error
-	v.Type, err = p.readString()
+	v.Type, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	err = p.nextByteIsNull()
+	err = p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
 	switch v.Type {
 	case "None":
-		b, err := p.readByte()
+		b, err := p.ReadByte()
 		if err != nil {
 			return err
 		}
 
 		v.Value = []byte{b}
 	default:
-		value, err := p.readString()
+		value, err := p.ReadString()
 		if err != nil {
 			return err
 		}
@@ -372,7 +372,7 @@ func (v *BytePropertyValue) parseInner(p *parser) error {
 	v.Type = "None"
 
 	var err error
-	v.Value, err = p.readBytes(v.len)
+	v.Value, err = p.ReadBytes(v.len)
 	if err != nil {
 		return err
 	}
@@ -385,26 +385,26 @@ func (v *BytePropertyValue) serialize(s *serializer, inner bool) (int32, error) 
 		return v.serializeInner(s)
 	}
 
-	err := s.writeString(v.Type)
+	err := s.WriteString(v.Type)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeNull()
+	err = s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
 	switch v.Type {
 	case "None":
-		err = s.writeByte(v.Value[0])
+		err = s.WriteByte(v.Value[0])
 		if err != nil {
 			return 0, err
 		}
 	default:
-		err = s.writeString(string(v.Value))
+		err = s.WriteString(string(v.Value))
 		if err != nil {
 			return 0, err
 		}
@@ -414,9 +414,9 @@ func (v *BytePropertyValue) serialize(s *serializer, inner bool) (int32, error) 
 }
 
 func (v *BytePropertyValue) serializeInner(s *serializer) (int32, error) {
-	m := s.measure()
+	m := s.Measure()
 
-	err := s.writeBytes(v.Value)
+	err := s.WriteBytes(v.Value)
 	if err != nil {
 		return 0, err
 	}
@@ -444,12 +444,12 @@ func (p *Property) GetDoubleValue() (float64, error) {
 }
 
 func (v *DoublePropertyValue) parse(p *parser, inner bool) error {
-	err := p.nextByteIsNull()
+	err := p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	f, err := p.readFloat64()
+	f, err := p.ReadFloat64()
 	if err != nil {
 		return err
 	}
@@ -459,12 +459,12 @@ func (v *DoublePropertyValue) parse(p *parser, inner bool) error {
 }
 
 func (v *DoublePropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	err := s.writeNull()
+	err := s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeFloat64(float64(*v))
+	err = s.WriteFloat64(float64(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -499,17 +499,17 @@ func (v *EnumPropertyValue) parse(p *parser, inner bool) error {
 	}
 
 	var err error
-	v.Type, err = p.readString()
+	v.Type, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	err = p.nextByteIsNull()
+	err = p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	v.Value, err = p.readString()
+	v.Value, err = p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -520,7 +520,7 @@ func (v *EnumPropertyValue) parse(p *parser, inner bool) error {
 // When inside an array the entire enum is stored as a single string.
 // Split based on the delimiter ::
 func (v *EnumPropertyValue) parseInner(p *parser) error {
-	enum, err := p.readString()
+	enum, err := p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -537,22 +537,22 @@ func (v *EnumPropertyValue) parseInner(p *parser) error {
 
 func (v *EnumPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	if inner {
-		return 0, s.writeString(fmt.Sprintf("%s::%s", v.Type, v.Value))
+		return 0, s.WriteString(fmt.Sprintf("%s::%s", v.Type, v.Value))
 	}
 
-	err := s.writeString(v.Type)
+	err := s.WriteString(v.Type)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeNull()
+	err = s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
-	err = s.writeString(v.Value)
+	err = s.WriteString(v.Value)
 	if err != nil {
 		return 0, err
 	}
@@ -581,13 +581,13 @@ func (p *Property) GetFloatValue() (float32, error) {
 
 func (v *FloatPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
-		err := p.nextByteIsNull()
+		err := p.NextByteIsNull()
 		if err != nil {
 			return err
 		}
 	}
 
-	f, err := p.readFloat32()
+	f, err := p.ReadFloat32()
 	if err != nil {
 		return err
 	}
@@ -598,13 +598,13 @@ func (v *FloatPropertyValue) parse(p *parser, inner bool) error {
 
 func (v *FloatPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	if !inner {
-		err := s.writeNull()
+		err := s.WriteNull()
 		if err != nil {
 			return 0, err
 		}
 	}
 
-	err := s.writeFloat32(float32(*v))
+	err := s.WriteFloat32(float32(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -632,12 +632,12 @@ func (p *Property) GetInt8Value() (int8, error) {
 }
 
 func (v *Int8PropertyValue) parse(p *parser, inner bool) error {
-	err := p.nextByteIsNull()
+	err := p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	f, err := p.readInt8()
+	f, err := p.ReadInt8()
 	if err != nil {
 		return err
 	}
@@ -646,12 +646,12 @@ func (v *Int8PropertyValue) parse(p *parser, inner bool) error {
 }
 
 func (v *Int8PropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	err := s.writeNull()
+	err := s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeInt8(int8(*v))
+	err = s.WriteInt8(int8(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -679,12 +679,12 @@ func (p *Property) GetInt64Value() (int64, error) {
 }
 
 func (v *Int64PropertyValue) parse(p *parser, inner bool) error {
-	err := p.nextByteIsNull()
+	err := p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	f, err := p.readInt64()
+	f, err := p.ReadInt64()
 	if err != nil {
 		return err
 	}
@@ -693,12 +693,12 @@ func (v *Int64PropertyValue) parse(p *parser, inner bool) error {
 }
 
 func (v *Int64PropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	err := s.writeNull()
+	err := s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeInt64(int64(*v))
+	err = s.WriteInt64(int64(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -731,18 +731,18 @@ func (v *InterfacePropertyValue) parse(p *parser, inner bool) error {
 	var err error
 
 	if !inner {
-		err := p.nextByteIsNull()
+		err := p.NextByteIsNull()
 		if err != nil {
 			return err
 		}
 	}
 
-	v.LevelName, err = p.readString()
+	v.LevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = p.readString()
+	v.PathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -752,20 +752,20 @@ func (v *InterfacePropertyValue) parse(p *parser, inner bool) error {
 
 func (v *InterfacePropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	if !inner {
-		err := s.writeNull()
+		err := s.WriteNull()
 		if err != nil {
 			return 0, err
 		}
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
-	err := s.writeString(v.LevelName)
+	err := s.WriteString(v.LevelName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString(v.PathName)
+	err = s.WriteString(v.PathName)
 	if err != nil {
 		return 0, err
 	}
@@ -794,13 +794,13 @@ func (p *Property) GetIntValue() (int32, error) {
 
 func (v *IntPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
-		err := p.nextByteIsNull()
+		err := p.NextByteIsNull()
 		if err != nil {
 			return err
 		}
 	}
 
-	i, err := p.readInt32()
+	i, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -810,13 +810,13 @@ func (v *IntPropertyValue) parse(p *parser, inner bool) error {
 
 func (v *IntPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	if !inner {
-		err := s.writeNull()
+		err := s.WriteNull()
 		if err != nil {
 			return 0, err
 		}
 	}
 
-	err := s.writeInt32(int32(*v))
+	err := s.WriteInt32(int32(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -854,30 +854,30 @@ func (v *MapPropertyValue) parse(p *parser, inner bool) error {
 		v.keyOrder = make([]PropertyValue, 0)
 	}
 
-	keyType, err := p.readString()
+	keyType, err := p.ReadString()
 	if err != nil {
 		return err
 	}
 	v.KeyType = PropertyType(keyType)
 
-	valueType, err := p.readString()
+	valueType, err := p.ReadString()
 	if err != nil {
 		return err
 	}
 	v.ValueType = PropertyType(valueType)
 
-	err = p.nextByteIsNull()
+	err = p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
 	// UNKNOWN_DATA
-	_, err = p.readInt32()
+	_, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	count, err := p.readInt32()
+	count, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
@@ -953,30 +953,30 @@ func (v *MapPropertyValue) MarshalJSON() ([]byte, error) {
 }
 
 func (v *MapPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	err := s.writeString(string(v.KeyType))
+	err := s.WriteString(string(v.KeyType))
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString(string(v.ValueType))
+	err = s.WriteString(string(v.ValueType))
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeNull()
+	err = s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
 	// UNKNOWN_DATA
-	err = s.writeInt32(0)
+	err = s.WriteInt32(0)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeInt32(int32(len(v.keyOrder)))
+	err = s.WriteInt32(int32(len(v.keyOrder)))
 	if err != nil {
 		return 0, err
 	}
@@ -1021,12 +1021,12 @@ func (p *Property) GetNameValue() (string, error) {
 }
 
 func (v *NamePropertyValue) parse(p *parser, inner bool) error {
-	err := p.nextByteIsNull()
+	err := p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	s, err := p.readString()
+	s, err := p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -1035,14 +1035,14 @@ func (v *NamePropertyValue) parse(p *parser, inner bool) error {
 }
 
 func (v *NamePropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	err := s.writeNull()
+	err := s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
-	err = s.writeString(string(*v))
+	err = s.WriteString(string(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -1075,18 +1075,18 @@ func (v *ObjectPropertyValue) parse(p *parser, inner bool) error {
 	var err error
 
 	if !inner {
-		err := p.nextByteIsNull()
+		err := p.NextByteIsNull()
 		if err != nil {
 			return err
 		}
 	}
 
-	v.LevelName, err = p.readString()
+	v.LevelName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
 
-	v.PathName, err = p.readString()
+	v.PathName, err = p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -1096,20 +1096,20 @@ func (v *ObjectPropertyValue) parse(p *parser, inner bool) error {
 
 func (v *ObjectPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	if !inner {
-		err := s.writeNull()
+		err := s.WriteNull()
 		if err != nil {
 			return 0, err
 		}
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
-	err := s.writeString(v.LevelName)
+	err := s.WriteString(v.LevelName)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeString(v.PathName)
+	err = s.WriteString(v.PathName)
 	if err != nil {
 		return 0, err
 	}
@@ -1138,13 +1138,13 @@ func (p *Property) GetStringValue() (string, error) {
 
 func (v *StringPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
-		err := p.nextByteIsNull()
+		err := p.NextByteIsNull()
 		if err != nil {
 			return err
 		}
 	}
 
-	s, err := p.readString()
+	s, err := p.ReadString()
 	if err != nil {
 		return err
 	}
@@ -1154,15 +1154,15 @@ func (v *StringPropertyValue) parse(p *parser, inner bool) error {
 
 func (v *StringPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	if !inner {
-		err := s.writeNull()
+		err := s.WriteNull()
 		if err != nil {
 			return 0, err
 		}
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
-	err := s.writeString(string(*v))
+	err := s.WriteString(string(*v))
 	if err != nil {
 		return 0, err
 	}
@@ -1199,18 +1199,18 @@ func (p *Property) GetStructValue() (*StructPropertyValue, error) {
 
 func (v *StructPropertyValue) parse(p *parser, inner bool) error {
 	if !inner {
-		structType, err := p.readString()
+		structType, err := p.ReadString()
 		if err != nil {
 			return err
 		}
 		v.Type = StructType(structType)
 
-		v.GUID, err = p.readInt32Array(4)
+		v.GUID, err = p.ReadInt32Array(4)
 		if err != nil {
 			return err
 		}
 
-		err = p.nextByteIsNull()
+		err = p.NextByteIsNull()
 		if err != nil {
 			return err
 		}
@@ -1255,17 +1255,17 @@ func (v *StructPropertyValue) parse(p *parser, inner bool) error {
 
 func (v *StructPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
 	if !inner {
-		err := s.writeString(string(v.Type))
+		err := s.WriteString(string(v.Type))
 		if err != nil {
 			return 0, err
 		}
 
-		err = s.writeInt32Array(v.GUID)
+		err = s.WriteInt32Array(v.GUID)
 		if err != nil {
 			return 0, err
 		}
 
-		err = s.writeNull()
+		err = s.WriteNull()
 		if err != nil {
 			return 0, err
 		}
@@ -1301,25 +1301,25 @@ func (p *Property) GetTextValue() (*TextPropertyValue, error) {
 	return nil, fmt.Errorf("wrong type %s", p.Type)
 }
 
-// TODO: Improve this to handle the other types. This is just good enough for the save file I'm using.
 func (v *TextPropertyValue) parse(p *parser, inner bool) error {
-	err := p.nextByteIsNull()
+	err := p.NextByteIsNull()
 	if err != nil {
 		return err
 	}
 
-	v.Flags, err = p.readInt32()
+	v.Flags, err = p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	textType, err := p.readByte()
+	textType, err := p.ReadByte()
 	if err != nil {
 		return err
 	}
 
 	v.Type = TextType(textType)
 
+	// TODO: Handle other text types
 	switch v.Type {
 	case BaseTextType:
 		v.Value = &BaseText{}
@@ -1338,19 +1338,19 @@ func (v *TextPropertyValue) parse(p *parser, inner bool) error {
 }
 
 func (v *TextPropertyValue) serialize(s *serializer, inner bool) (int32, error) {
-	err := s.writeNull()
+	err := s.WriteNull()
 	if err != nil {
 		return 0, err
 	}
 
-	m := s.measure()
+	m := s.Measure()
 
-	err = s.writeInt32(v.Flags)
+	err = s.WriteInt32(v.Flags)
 	if err != nil {
 		return 0, err
 	}
 
-	err = s.writeByte(byte(v.Type))
+	err = s.WriteByte(byte(v.Type))
 	if err != nil {
 		return 0, err
 	}
