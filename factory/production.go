@@ -5,8 +5,8 @@ import (
 	"time"
 
 	Recipe "github.com/l-ross/ficsit-toolkit/resource/recipe"
-
 	"github.com/l-ross/ficsit-toolkit/save"
+	"github.com/l-ross/ficsit-toolkit/save/property"
 )
 
 // Production is implemented by all Satisfactory production buildings.
@@ -87,12 +87,12 @@ func (f *Factory) loadProduction(b *building, s *save.Save) (*production, error)
 		}
 	}
 
-	// TODO: Check all properties have been loaded.
+	// TODO: Check all property have been loaded.
 
 	return p, nil
 }
 
-func (p *production) setInputInventory(prop *save.Property, s *save.Save) error {
+func (p *production) setInputInventory(prop *property.Property, s *save.Save) error {
 	stacks, err := getInventoryStacks(prop, s)
 	if err != nil {
 		return err
@@ -103,7 +103,7 @@ func (p *production) setInputInventory(prop *save.Property, s *save.Save) error 
 	return nil
 }
 
-func (p *production) setOutputInventory(prop *save.Property, s *save.Save) error {
+func (p *production) setOutputInventory(prop *property.Property, s *save.Save) error {
 	stacks, err := getInventoryStacks(prop, s)
 	if err != nil {
 		return err
@@ -114,7 +114,7 @@ func (p *production) setOutputInventory(prop *save.Property, s *save.Save) error
 	return nil
 }
 
-func getInventoryStacks(prop *save.Property, s *save.Save) ([]InventoryStack, error) {
+func getInventoryStacks(prop *property.Property, s *save.Save) ([]InventoryStack, error) {
 	objValue, err := prop.GetObjectValue()
 	if err != nil {
 		return nil, err
@@ -188,7 +188,7 @@ func getInventoryStacks(prop *save.Property, s *save.Save) ([]InventoryStack, er
 	return stacks, nil
 }
 
-func (p *production) setPowerInfo(prop *save.Property, s *save.Save) error {
+func (p *production) setPowerInfo(prop *property.Property, s *save.Save) error {
 	obj, err := prop.GetObjectValue()
 	if err != nil {
 		return err
@@ -214,7 +214,7 @@ func (p *production) setPowerInfo(prop *save.Property, s *save.Save) error {
 	return nil
 }
 
-func (p *production) setRecipe(prop *save.Property) error {
+func (p *production) setRecipe(prop *property.Property) error {
 	obj, err := prop.GetObjectValue()
 	if err != nil {
 		return err
@@ -230,7 +230,7 @@ func (p *production) setRecipe(prop *save.Property) error {
 	return nil
 }
 
-func (p *production) setIsProducing(prop *save.Property) error {
+func (p *production) setIsProducing(prop *property.Property) error {
 	b, err := prop.GetBoolValue()
 	if err != nil {
 		return err
@@ -241,7 +241,7 @@ func (p *production) setIsProducing(prop *save.Property) error {
 	return nil
 }
 
-func (p *production) setTimeSinceStartOrStopProducing(prop *save.Property) error {
+func (p *production) setTimeSinceStartOrStopProducing(prop *property.Property) error {
 	f, err := prop.GetFloatValue()
 	if err != nil {
 		return err

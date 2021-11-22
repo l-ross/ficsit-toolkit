@@ -5,11 +5,8 @@ import (
 	"strings"
 
 	"github.com/l-ross/ficsit-toolkit/factory/typepath"
-
-	BuildableConveyorLift "github.com/l-ross/ficsit-toolkit/resource/buildable_conveyor_lift"
-
 	BuildableConveyorBelt "github.com/l-ross/ficsit-toolkit/resource/buildable_conveyor_belt"
-
+	BuildableConveyorLift "github.com/l-ross/ficsit-toolkit/resource/buildable_conveyor_lift"
 	"github.com/l-ross/ficsit-toolkit/save"
 	"gonum.org/v1/gonum/graph"
 	"gonum.org/v1/gonum/graph/simple"

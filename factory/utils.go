@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	ItemDescriptor "github.com/l-ross/ficsit-toolkit/resource/item_descriptor"
-
 	"github.com/l-ross/ficsit-toolkit/save"
+	"github.com/l-ross/ficsit-toolkit/save/property"
 )
 
 type InventoryStack struct {
@@ -16,7 +16,7 @@ type InventoryStack struct {
 	Quantity int
 }
 
-func getPropFromArray(name string, props []*save.Property) (*save.Property, error) {
+func getPropFromArray(name string, props []*property.Property) (*property.Property, error) {
 	for _, p := range props {
 		if p.Name == name {
 			return p, nil
@@ -26,8 +26,8 @@ func getPropFromArray(name string, props []*save.Property) (*save.Property, erro
 	return nil, fmt.Errorf("failed to find property with name %q", name)
 }
 
-func getValuesFromStructProperty(name string, s []*save.StructPropertyValue) []*save.StructPropertyValue {
-	values := make([]*save.StructPropertyValue, 0)
+func getValuesFromStructProperty(name string, s []*property.StructPropertyValue) []*property.StructPropertyValue {
+	values := make([]*property.StructPropertyValue, 0)
 
 	for _, x := range s {
 		if string(x.Type) == name {

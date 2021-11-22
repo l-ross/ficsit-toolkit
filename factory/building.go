@@ -7,21 +7,19 @@ import (
 	"time"
 
 	"github.com/l-ross/ficsit-toolkit/factory/typepath"
-
 	BuildingDescriptor "github.com/l-ross/ficsit-toolkit/resource/building_descriptor"
-
-	"gonum.org/v1/gonum/graph/simple"
-
 	Recipe "github.com/l-ross/ficsit-toolkit/resource/recipe"
 	"github.com/l-ross/ficsit-toolkit/save"
+	"github.com/l-ross/ficsit-toolkit/save/property"
+	"gonum.org/v1/gonum/graph/simple"
 )
 
 // Building is implemented by all Satisfactory buildings
 type Building interface {
 	BuildTimestamp() time.Duration
 	Recipe() Recipe.FGRecipe
-	PrimaryColor() save.LinearColor
-	SecondaryColor() save.LinearColor
+	PrimaryColor() property.LinearColorStruct
+	SecondaryColor() property.LinearColorStruct
 	Entity() save.Entity
 	ID() int64
 	TypePath() typepath.TypePath
@@ -34,8 +32,8 @@ type building struct {
 	entity          *save.Entity
 	buildTimestamp  time.Duration
 	builtWithRecipe Recipe.FGRecipe
-	primaryColor    save.LinearColor
-	secondaryColor  save.LinearColor
+	primaryColor    property.LinearColorStruct
+	secondaryColor  property.LinearColorStruct
 }
 
 // TypePath returns the type path for this building.
@@ -71,12 +69,12 @@ func (b *building) Recipe() Recipe.FGRecipe {
 }
 
 // PrimaryColor returns the RGBA of the buildings primary color.
-func (b *building) PrimaryColor() save.LinearColor {
+func (b *building) PrimaryColor() property.LinearColorStruct {
 	return b.primaryColor
 }
 
 // SecondaryColor returns the RGBA of the buildings secondary color.
-func (b *building) SecondaryColor() save.LinearColor {
+func (b *building) SecondaryColor() property.LinearColorStruct {
 	return b.secondaryColor
 }
 
@@ -136,7 +134,7 @@ func getID(instanceName string) (int64, error) {
 	return int64(id), nil
 }
 
-func (b *building) setTimestamp(p *save.Property, s *save.Save) error {
+func (b *building) setTimestamp(p *property.Property, s *save.Save) error {
 	f, err := p.GetFloatValue()
 	if err != nil {
 		return err
@@ -152,7 +150,7 @@ func (b *building) setTimestamp(p *save.Property, s *save.Save) error {
 	return nil
 }
 
-func (b *building) setRecipe(p *save.Property) error {
+func (b *building) setRecipe(p *property.Property) error {
 	o, err := p.GetObjectValue()
 	if err != nil {
 		return err
@@ -168,7 +166,7 @@ func (b *building) setRecipe(p *save.Property) error {
 	return nil
 }
 
-func (b *building) setPrimaryColor(p *save.Property) error {
+func (b *building) setPrimaryColor(p *property.Property) error {
 	l, err := b.getLinearColor(p)
 	if err != nil {
 		return err
@@ -179,7 +177,7 @@ func (b *building) setPrimaryColor(p *save.Property) error {
 	return nil
 }
 
-func (b *building) setSecondaryColor(p *save.Property) error {
+func (b *building) setSecondaryColor(p *property.Property) error {
 	l, err := b.getLinearColor(p)
 	if err != nil {
 		return err
@@ -190,7 +188,7 @@ func (b *building) setSecondaryColor(p *save.Property) error {
 	return nil
 }
 
-func (b *building) getLinearColor(p *save.Property) (*save.LinearColor, error) {
+func (b *building) getLinearColor(p *property.Property) (*property.LinearColorStruct, error) {
 	structVal, err := p.GetStructValue()
 	if err != nil {
 		return nil, err

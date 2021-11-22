@@ -4,7 +4,6 @@ import (
 	"io"
 
 	"github.com/l-ross/ficsit-toolkit/factory/typepath"
-
 	"github.com/l-ross/ficsit-toolkit/save"
 	"gonum.org/v1/gonum/graph/simple"
 )

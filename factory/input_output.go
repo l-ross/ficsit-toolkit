@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"regexp"
 
-	"gonum.org/v1/gonum/graph"
-
 	"github.com/l-ross/ficsit-toolkit/save"
+	"gonum.org/v1/gonum/graph"
 )
 
 // Connection details what a buildings input or output is connected to.

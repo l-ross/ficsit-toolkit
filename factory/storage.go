@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/l-ross/ficsit-toolkit/save"
+	"github.com/l-ross/ficsit-toolkit/save/property"
 )
 
 type storage struct {
@@ -34,7 +35,7 @@ func (f *Factory) loadStorage(b *building, save *save.Save) (*storage, error) {
 	return s, nil
 }
 
-func (s *storage) setInventory(prop *save.Property, save *save.Save) error {
+func (s *storage) setInventory(prop *property.Property, save *save.Save) error {
 	inv, err := getInventoryStacks(prop, save)
 	if err != nil {
 		return err
