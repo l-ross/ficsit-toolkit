@@ -1,14 +1,13 @@
 package save
 
-type Component struct {
-	TypePath         string      `json:"typePath"`
-	RootObject       string      `json:"rootObject"`
-	InstanceName     string      `json:"instanceName"`
-	ParentEntityName string      `json:"parentEntityName"`
-	Properties       []*Property `json:"properties"`
+import "github.com/l-ross/ficsit-toolkit/save/property"
 
-	objectDataPos int64
-	objectData    []byte
+type Component struct {
+	TypePath         string               `json:"typePath"`
+	RootObject       string               `json:"rootObject"`
+	InstanceName     string               `json:"instanceName"`
+	ParentEntityName string               `json:"parentEntityName"`
+	Properties       []*property.Property `json:"property"`
 }
 
 func (c *Component) parse(p *parser) error {
@@ -38,19 +37,12 @@ func (c *Component) parse(p *parser) error {
 
 func (c *Component) parseData(p *parser) error {
 	// Data length
-	//dataSize, err := p.readInt32()
 	_, err := p.ReadInt32()
 	if err != nil {
 		return err
 	}
 
-	// Capture all bytes if debug is enabled.
-	//if debug {
-	//	c.objectDataPos = p.body.Index - 4
-	//	c.objectData, err = p.debugReadDataChunk(dataSize)
-	//}
-
-	c.Properties, err = p.parseProperties()
+	c.Properties, err = property.ParseProperties(p.Data)
 	if err != nil {
 		return err
 	}
@@ -98,7 +90,7 @@ func (c *Component) serializeData(s *serializer) error {
 
 	m := s.Measure()
 
-	err = serializeProperties(c.Properties, s.Data)
+	err = property.SerializeProperties(c.Properties, s.Data)
 	if err != nil {
 		return err
 	}

@@ -12,35 +12,37 @@ type serializer struct {
 	*data.Data
 }
 
-func Serialize(w io.Writer, save *Save) error {
-	s := &serializer{
-		w: w,
+// Serialize the Save to the provided writer.
+func (s *Save) Serialize(w io.Writer) error {
+	sr := &serializer{
+		w:    w,
+		Data: data.New(),
 	}
 
 	// Serialize the uncompressed body.
-	err := s.serializeBody(save)
+	err := sr.serializeBody(s)
 	if err != nil {
 		return err
 	}
 
 	// Take a copy of the uncompressed save
-	uncompressed := make([]byte, s.Len())
-	copy(uncompressed, s.Bytes())
+	uncompressed := make([]byte, sr.Len())
+	copy(uncompressed, sr.Bytes())
 
 	// Empty out p.body as we will now write the header / compressed data
-	s.Data = data.New()
+	sr.Data = data.New()
 
-	err = s.serializeHeader(save.Header)
+	err = sr.serializeHeader(s.Header)
 	if err != nil {
 		return err
 	}
 
-	err = s.compressBody(uncompressed)
+	err = sr.compressBody(uncompressed)
 	if err != nil {
 		return err
 	}
 
-	_, err = s.w.Write(s.Bytes())
+	_, err = sr.w.Write(sr.Bytes())
 	if err != nil {
 		return err
 	}
@@ -87,8 +89,10 @@ func (s *serializer) serializeObjects(save *Save) error {
 		return err
 	}
 
-	for _, e := range save.Entities {
-		err = s.WriteInt32(int32(EntityType))
+	for _, eName := range save.entityOrder {
+		e := save.Entities[eName]
+
+		err = s.WriteInt32(entityType)
 		if err != nil {
 			return err
 		}
@@ -99,8 +103,10 @@ func (s *serializer) serializeObjects(save *Save) error {
 		}
 	}
 
-	for _, c := range save.Components {
-		err = s.WriteInt32(int32(ComponentType))
+	for _, cName := range save.componentOrder {
+		c := save.Components[cName]
+
+		err = s.WriteInt32(componentType)
 		if err != nil {
 			return err
 		}
@@ -121,14 +127,18 @@ func (s *serializer) serializeObjectData(save *Save) error {
 		return err
 	}
 
-	for _, e := range save.Entities {
+	for _, eName := range save.entityOrder {
+		e := save.Entities[eName]
+
 		err = e.serializeData(s)
 		if err != nil {
 			return err
 		}
 	}
 
-	for _, c := range save.Components {
+	for _, cName := range save.componentOrder {
+		c := save.Components[cName]
+
 		err = c.serializeData(s)
 		if err != nil {
 			return err

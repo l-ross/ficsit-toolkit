@@ -1,17 +1,17 @@
-package save
+package property
 
 import (
 	"testing"
 
+	"github.com/l-ross/ficsit-toolkit/save/data"
 	"github.com/stretchr/testify/assert"
-
 	"github.com/stretchr/testify/require"
 )
 
 func TestProperties(t *testing.T) {
 	t.Parallel()
 
-	// Parse properties, verify the properties value then serialise
+	// Parse property, verify the property Value then serialise
 	// back and verify it matches the original.
 
 	tests := []struct {
@@ -27,7 +27,7 @@ func TestProperties(t *testing.T) {
 				require.NoError(t, err)
 				assert.Equal(t, &ArrayPropertyValue{
 					ValueType: InterfacePropertyType,
-					Values: []PropertyValue{
+					Values: []Value{
 						&InterfacePropertyValue{
 							LevelName: "LevelName1",
 							PathName:  "PathName1",
@@ -219,10 +219,10 @@ func TestProperties(t *testing.T) {
 			t.Parallel()
 
 			// Parse property
-			p := createTestParser(t, tt.testData)
-			props, err := p.parseProperties()
+			d := data.TestData(t, tt.testData)
+			props, err := ParseProperties(d)
 			require.NoError(t, err)
-			assertAllBufferRead(t, p)
+			data.AssertAllBufferRead(t, d)
 
 			// Verify property
 			require.Len(t, props, 1, "we should have 1 property")
@@ -230,12 +230,12 @@ func TestProperties(t *testing.T) {
 			tt.assertValue(t, prop)
 
 			// Serialize property
-			s := createTestSerializer()
-			err = serializeProperties(props, s.Data)
+			d2 := data.New()
+			err = SerializeProperties(props, d2)
 			require.NoError(t, err)
 
 			// Verify serialization is correct
-			assertBuffersEqual(t, p, s)
+			assert.Equal(t, d.Bytes(), d2.Bytes())
 		})
 	}
 }

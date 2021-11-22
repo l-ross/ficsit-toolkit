@@ -1,10 +1,10 @@
-package save
+package extra
 
 import (
 	"testing"
 
+	"github.com/l-ross/ficsit-toolkit/save/data"
 	"github.com/stretchr/testify/assert"
-
 	"github.com/stretchr/testify/require"
 )
 
@@ -19,7 +19,7 @@ func TestExtra(t *testing.T) {
 	}{
 		{
 			name:     "CircuitSubsystem",
-			testData: "testdata/extra/circuit_subsystem.dat",
+			testData: "testdata/circuit_subsystem.dat",
 			typePath: "/Game/FactoryGame/-Shared/Blueprint/BP_CircuitSubsystem.BP_CircuitSubsystem_C",
 			assertValue: func(t *testing.T, e *Extra) {
 				c, err := e.GetCircuitSubsystem()
@@ -30,7 +30,7 @@ func TestExtra(t *testing.T) {
 		},
 		{
 			name:     "ConveyorBelt",
-			testData: "testdata/extra/conveyor_belt.dat",
+			testData: "testdata/conveyor_belt.dat",
 			typePath: "/Game/FactoryGame/Buildable/Factory/ConveyorBeltMk1/Build_ConveyorBeltMk1.Build_ConveyorBeltMk1_C",
 			assertValue: func(t *testing.T, e *Extra) {
 				c, err := e.GetConveyorBelt()
@@ -41,10 +41,10 @@ func TestExtra(t *testing.T) {
 		},
 		{
 			name:     "GameState",
-			testData: "testdata/extra/game_state.dat",
+			testData: "testdata/game_state.dat",
 			typePath: "/Game/FactoryGame/-Shared/Blueprint/BP_GameState.BP_GameState_C",
 			assertValue: func(t *testing.T, e *Extra) {
-				g, err := e.GetGameStateExtra()
+				g, err := e.GetGameState()
 				require.NoError(t, err)
 				require.Len(t, g.Objects, 1)
 				assert.Equal(t, "Persistent_Level:PersistentLevel.BP_PlayerState_C_2147479729", g.Objects[0].PathName)
@@ -52,36 +52,36 @@ func TestExtra(t *testing.T) {
 		},
 		{
 			name:     "PlayerState",
-			testData: "testdata/extra/player_state.dat",
+			testData: "testdata/player_state.dat",
 			typePath: "/Game/FactoryGame/Character/Player/BP_PlayerState.BP_PlayerState_C",
 			assertValue: func(t *testing.T, e *Extra) {
-				_, err := e.GetPlayerStateExtra()
+				_, err := e.GetPlayerState()
 				require.NoError(t, err)
 			},
 		},
 		{
 			name:     "PowerLine",
-			testData: "testdata/extra/power_line.dat",
+			testData: "testdata/power_line.dat",
 			typePath: "/Game/FactoryGame/Buildable/Factory/PowerLine/Build_PowerLine.Build_PowerLine_C",
 			assertValue: func(t *testing.T, e *Extra) {
-				p, err := e.GetPowerLineExtra()
+				p, err := e.GetPowerLine()
 				require.NoError(t, err)
 				assert.Equal(t, "Persistent_Level:PersistentLevel.Build_PowerPoleMk1_C_2147403233.PowerConnection", p.SourcePathName)
 			},
 		},
 		{
 			name:     "Train",
-			testData: "testdata/extra/train.dat",
+			testData: "testdata/train.dat",
 			typePath: "/Game/FactoryGame/Buildable/Vehicle/Train/Wagon/BP_FreightWagon.BP_FreightWagon_C",
 			assertValue: func(t *testing.T, e *Extra) {
-				tr, err := e.GetTrainExtra()
+				tr, err := e.GetTrain()
 				require.NoError(t, err)
 				assert.Equal(t, "Persistent_Level:PersistentLevel.BP_Locomotive_C_2147390965", tr.PreviousPathName)
 			},
 		},
 		{
 			name:     "Vehicle",
-			testData: "testdata/extra/vehicle.dat",
+			testData: "testdata/vehicle.dat",
 			typePath: "/Game/FactoryGame/Buildable/Vehicle/Tractor/BP_Tractor.BP_Tractor_C",
 			assertValue: func(t *testing.T, e *Extra) {
 				v, err := e.GetVehicle()
@@ -98,22 +98,21 @@ func TestExtra(t *testing.T) {
 			t.Parallel()
 
 			// Parse extra
-			p := createTestParser(t, tt.testData)
-			e := getExtra(tt.typePath)(int32(p.Len()))
-			err := e.Value.parse(p)
+			d := data.TestData(t, tt.testData)
+			e, err := Parse(tt.typePath, int32(d.Len()), d)
 			require.NoError(t, err)
-			assertAllBufferRead(t, p)
+			data.AssertAllBufferRead(t, d)
 
 			// Verify extra
 			tt.assertValue(t, e)
 
 			// Serialize extra
-			s := createTestSerializer()
-			err = e.Value.serialize(s)
+			d2 := data.New()
+			err = e.Value.serialize(d2)
 			require.NoError(t, err)
 
 			// Verify serialization is correct
-			assertBuffersEqual(t, p, s)
+			assert.Equal(t, d.Bytes(), d2.Bytes())
 		})
 	}
 }

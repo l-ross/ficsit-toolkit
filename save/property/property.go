@@ -1,4 +1,6 @@
-package save
+// Package property provides handling for the different property types that may be encountered within
+// a Satisfactory save file.
+package property
 
 import (
 	"fmt"
@@ -6,55 +8,44 @@ import (
 	"github.com/l-ross/ficsit-toolkit/save/data"
 )
 
+// A Property within a save.Component or save.Entity
 type Property struct {
-	Name          string       `json:"name"`
-	Type          PropertyType `json:"type"`
-	Index         int32        `json:"index"`
-	PropertyValue `json:"value"`
+	Name  string `json:"name"`
+	Type  Type   `json:"type"`
+	Index int32  `json:"index"`
+
+	// The Value of the Property.
+	//
+	// Accessing the value can be achieved by calling the appropriate Get method
+	// on the Property based on its Type.
+	Value Value `json:"value"`
 }
 
-type PropertyType string
+type Type string
 
-const (
-	ArrayPropertyType     PropertyType = "ArrayProperty"
-	BoolPropertyType      PropertyType = "BoolProperty"
-	BytePropertyType      PropertyType = "ByteProperty"
-	DoublePropertyType    PropertyType = "DoubleProperty"
-	EnumPropertyType      PropertyType = "EnumProperty"
-	FloatPropertyType     PropertyType = "FloatProperty"
-	Int8PropertyType      PropertyType = "Int8Property"
-	Int64PropertyType     PropertyType = "Int64Property"
-	InterfacePropertyType PropertyType = "InterfaceProperty"
-	IntPropertyType       PropertyType = "IntProperty"
-	MapPropertyType       PropertyType = "MapProperty"
-	NamePropertyType      PropertyType = "NameProperty"
-	ObjectPropertyType    PropertyType = "ObjectProperty"
-	StringPropertyType    PropertyType = "StrProperty"
-	StructPropertyType    PropertyType = "StructProperty"
-	TextPropertyType      PropertyType = "TextProperty"
-)
-
-type PropertyValue interface {
-	// parse the property value
+type Value interface {
+	// parse the property Value
 	//
-	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
-	// In some cases this can change the format of the property value.
-	parse(p *data.Data, inner bool) error
+	// If inner is true then the property Value is inside an ArrayProperty or MapProperty.
+	// In some cases this can change the format of the property Value.
+	parse(d *data.Data, inner bool) error
 
-	// serialize the property value and return the length of the property data.
+	// serialize the property Value and return the length of the property data.
 	// Some PropertyValue implementations always return a zero length as they aren't
 	// always set.
 	//
-	// If inner is true then the property value is inside an ArrayProperty or MapProperty.
-	// In some cases this can change the format of the property value.
-	serialize(s *data.Data, inner bool) (int32, error)
+	// If inner is true then the property Value is inside an ArrayProperty or MapProperty.
+	// In some cases this can change the format of the property Value.
+	serialize(d *data.Data, inner bool) (int32, error)
 }
 
-func (p *parser) parseProperties() ([]*Property, error) {
+type newPropValueFunc func() Value
+
+func ParseProperties(d *data.Data) ([]*Property, error) {
 	props := make([]*Property, 0)
 
 	for {
-		prop, err := parseProperty(p.Data)
+		prop, err := ParseProperty(d)
 		if err != nil {
 			return nil, err
 		}
@@ -69,7 +60,7 @@ func (p *parser) parseProperties() ([]*Property, error) {
 	return props, nil
 }
 
-func parseProperty(d *data.Data) (*Property, error) {
+func ParseProperty(d *data.Data) (*Property, error) {
 	var err error
 	prop := &Property{}
 
@@ -87,7 +78,7 @@ func parseProperty(d *data.Data) (*Property, error) {
 	if err != nil {
 		return nil, err
 	}
-	prop.Type = PropertyType(propType)
+	prop.Type = Type(propType)
 
 	// Value length
 	_, err = d.ReadInt32()
@@ -139,9 +130,9 @@ func parseProperty(d *data.Data) (*Property, error) {
 		return nil, fmt.Errorf("unknown property type %s", propType)
 	}
 
-	prop.PropertyValue = newPropValue()
+	prop.Value = newPropValue()
 
-	err = prop.PropertyValue.parse(d, false)
+	err = prop.Value.parse(d, false)
 	if err != nil {
 		return nil, err
 	}
@@ -149,9 +140,9 @@ func parseProperty(d *data.Data) (*Property, error) {
 	return prop, nil
 }
 
-func serializeProperties(props []*Property, d *data.Data) error {
+func SerializeProperties(props []*Property, d *data.Data) error {
 	for _, prop := range props {
-		err := serializeProperty(prop, d)
+		err := prop.SerializeProperty(d)
 		if err != nil {
 			return err
 		}
@@ -165,13 +156,13 @@ func serializeProperties(props []*Property, d *data.Data) error {
 	return nil
 }
 
-func serializeProperty(prop *Property, d *data.Data) error {
-	err := d.WriteString(prop.Name)
+func (p *Property) SerializeProperty(d *data.Data) error {
+	err := d.WriteString(p.Name)
 	if err != nil {
 		return err
 	}
 
-	err = d.WriteString(string(prop.Type))
+	err = d.WriteString(string(p.Type))
 	if err != nil {
 		return err
 	}
@@ -183,12 +174,12 @@ func serializeProperty(prop *Property, d *data.Data) error {
 		return err
 	}
 
-	err = d.WriteInt32(prop.Index)
+	err = d.WriteInt32(p.Index)
 	if err != nil {
 		return err
 	}
 
-	l, err := prop.serialize(d, false)
+	l, err := p.Value.serialize(d, false)
 	if err != nil {
 		return err
 	}

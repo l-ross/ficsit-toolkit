@@ -43,6 +43,8 @@ func Parse(r io.Reader) (*Save, error) {
 		Entities:         make(map[string]*Entity),
 		CollectedObjects: make([]*ObjectReference, 0),
 
+		entityOrder:              make([]string, 0),
+		componentOrder:           make([]string, 0),
 		objects:                  make([]object, 0),
 		componentsByInstanceName: make(map[string]*Component),
 	}
@@ -61,24 +63,28 @@ func Parse(r io.Reader) (*Save, error) {
 	return s, nil
 }
 
-//func DumpBody(r io.Reader) ([]byte, error) {
-//	p, err := newParser(r)
-//	if err != nil {
-//		return nil, err
-//	}
+// DumpBody will decompress the body of a Satisfactory save file and return
+// the body as a byte slice.
 //
-//	_, err = p.parseHeader()
-//	if err != nil {
-//		return nil, err
-//	}
-//
-//	body, err := p.decompressBody()
-//	if err != nil {
-//		return nil, err
-//	}
-//
-//	return body.Buffer, nil
-//}
+// Primarily used for debugging.
+func DumpBody(r io.Reader) ([]byte, error) {
+	p, err := newParser(r)
+	if err != nil {
+		return nil, err
+	}
+
+	_, err = p.parseHeader()
+	if err != nil {
+		return nil, err
+	}
+
+	body, err := p.decompressBody()
+	if err != nil {
+		return nil, err
+	}
+
+	return body.Bytes(), nil
+}
 
 func (p *parser) parseBody(s *Save) error {
 	bodyLen, err := p.ReadInt32()
@@ -147,8 +153,8 @@ func (p *parser) parseObjects(s *Save) error {
 			return err
 		}
 
-		switch ObjectType(objectType) {
-		case ComponentType:
+		switch objectType {
+		case componentType:
 			c := &Component{}
 			err = c.parse(p)
 			if err != nil {
@@ -161,7 +167,8 @@ func (p *parser) parseObjects(s *Save) error {
 
 			s.Components[c.InstanceName] = c
 			s.objects = append(s.objects, c)
-		case EntityType:
+			s.componentOrder = append(s.componentOrder, c.InstanceName)
+		case entityType:
 			e := &Entity{}
 			err := e.parse(p)
 			if err != nil {
@@ -174,6 +181,7 @@ func (p *parser) parseObjects(s *Save) error {
 
 			s.Entities[e.InstanceName] = e
 			s.objects = append(s.objects, e)
+			s.entityOrder = append(s.entityOrder, e.InstanceName)
 		default:
 			return fmt.Errorf("unknown object type %d", objectType)
 		}

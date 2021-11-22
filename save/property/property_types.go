@@ -1,4 +1,4 @@
-package save
+package property
 
 import (
 	"encoding/json"
@@ -8,15 +8,32 @@ import (
 	"github.com/l-ross/ficsit-toolkit/save/data"
 )
 
-type newPropValueFunc func() PropertyValue
+const (
+	ArrayPropertyType     Type = "ArrayProperty"
+	BoolPropertyType      Type = "BoolProperty"
+	BytePropertyType      Type = "ByteProperty"
+	DoublePropertyType    Type = "DoubleProperty"
+	EnumPropertyType      Type = "EnumProperty"
+	FloatPropertyType     Type = "FloatProperty"
+	Int8PropertyType      Type = "Int8Property"
+	Int64PropertyType     Type = "Int64Property"
+	InterfacePropertyType Type = "InterfaceProperty"
+	IntPropertyType       Type = "IntProperty"
+	MapPropertyType       Type = "MapProperty"
+	NamePropertyType      Type = "NameProperty"
+	ObjectPropertyType    Type = "ObjectProperty"
+	StringPropertyType    Type = "StrProperty"
+	StructPropertyType    Type = "StructProperty"
+	TextPropertyType      Type = "TextProperty"
+)
 
 //
 // ArrayProperty
 //
 
 type ArrayPropertyValue struct {
-	ValueType PropertyType    `json:"value_type,omitempty"`
-	Values    []PropertyValue `json:"values,omitempty"`
+	ValueType Type    `json:"value_type,omitempty"`
+	Values    []Value `json:"values,omitempty"`
 
 	//
 	// The following fields are only set if the ValueType is StructProperty
@@ -28,12 +45,12 @@ type ArrayPropertyValue struct {
 	StructGUID      []int32
 }
 
-func newArrayPropertyValue() PropertyValue {
+func newArrayPropertyValue() Value {
 	return &ArrayPropertyValue{}
 }
 
 func (p *Property) GetArrayValue() (*ArrayPropertyValue, error) {
-	if v, ok := p.PropertyValue.(*ArrayPropertyValue); ok {
+	if v, ok := p.Value.(*ArrayPropertyValue); ok {
 		return v, nil
 	}
 
@@ -42,7 +59,7 @@ func (p *Property) GetArrayValue() (*ArrayPropertyValue, error) {
 
 func (v *ArrayPropertyValue) GetStructValues() ([]*StructPropertyValue, error) {
 	if v.ValueType != StructPropertyType {
-		return nil, fmt.Errorf("wrong value type %s", v.ValueType)
+		return nil, fmt.Errorf("wrong Value type %s", v.ValueType)
 	}
 
 	values := make([]*StructPropertyValue, len(v.Values))
@@ -59,7 +76,7 @@ func (v *ArrayPropertyValue) parse(d *data.Data, inner bool) error {
 	if err != nil {
 		return err
 	}
-	v.ValueType = PropertyType(valueType)
+	v.ValueType = Type(valueType)
 
 	// UNKNOWN_DATA
 	_, err = d.ReadByte()
@@ -76,7 +93,7 @@ func (v *ArrayPropertyValue) parse(d *data.Data, inner bool) error {
 	// Rather than creating 1 entry in the array per byte we just want to parse all
 	// the data in to a single BytePropertyValue.
 	if v.ValueType == BytePropertyType {
-		v.Values = make([]PropertyValue, 1)
+		v.Values = make([]Value, 1)
 
 		elem := &BytePropertyValue{
 			len: elemCount,
@@ -91,7 +108,7 @@ func (v *ArrayPropertyValue) parse(d *data.Data, inner bool) error {
 		return nil
 	}
 
-	v.Values = make([]PropertyValue, elemCount)
+	v.Values = make([]Value, elemCount)
 
 	var newPropValue newPropValueFunc
 
@@ -142,7 +159,7 @@ func (v *ArrayPropertyValue) parse(d *data.Data, inner bool) error {
 			return err
 		}
 
-		newPropValue = func() PropertyValue {
+		newPropValue = func() Value {
 			return &StructPropertyValue{
 				Type: StructType(v.StructInnerType),
 			}
@@ -182,10 +199,10 @@ func (v *ArrayPropertyValue) serialize(d *data.Data, inner bool) (int32, error) 
 	m := d.Measure()
 
 	// Special handling for BytePropertyType.
-	// See parse() for more detaild.
+	// See Parse() for more detaild.
 	if v.ValueType == BytePropertyType {
 		if len(v.Values) != 1 {
-			return 0, fmt.Errorf("arrayproperty containg byteproperty, expected 1 value got %d", len(v.Values))
+			return 0, fmt.Errorf("arrayproperty containg byteproperty, expected 1 Value got %d", len(v.Values))
 		}
 
 		// Write placeholder element count.
@@ -263,13 +280,13 @@ func (v *ArrayPropertyValue) serialize(d *data.Data, inner bool) (int32, error) 
 
 type BoolPropertyValue bool
 
-func newBoolPropertyValue() PropertyValue {
+func newBoolPropertyValue() Value {
 	v := BoolPropertyValue(false)
 	return &v
 }
 
 func (p *Property) GetBoolValue() (bool, error) {
-	if v, ok := p.PropertyValue.(*BoolPropertyValue); ok {
+	if v, ok := p.Value.(*BoolPropertyValue); ok {
 		return bool(*v), nil
 	}
 
@@ -311,17 +328,17 @@ func (v *BoolPropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 
 type BytePropertyValue struct {
 	Type  string `json:"text,omitempty"`
-	Value []byte `json:"value,omitempty"`
+	Value []byte `json:"Value,omitempty"`
 
 	len int32
 }
 
-func newBytePropertyValue() PropertyValue {
+func newBytePropertyValue() Value {
 	return &BytePropertyValue{}
 }
 
 func (p *Property) GetByteValue() ([]byte, error) {
-	if v, ok := p.PropertyValue.(*BytePropertyValue); ok {
+	if v, ok := p.Value.(*BytePropertyValue); ok {
 		return v.Value, nil
 	}
 
@@ -365,7 +382,7 @@ func (v *BytePropertyValue) parse(d *data.Data, inner bool) error {
 }
 
 func (v *BytePropertyValue) parseInner(d *data.Data) error {
-	// If len is 0 then we must be parsing a ByteProperty in the value of a MapProperty.
+	// If len is 0 then we must be parsing a ByteProperty in the Value of a MapProperty.
 	// Best guess is that it's only a single byte.
 	if v.len == 0 {
 		v.len = 1
@@ -432,13 +449,13 @@ func (v *BytePropertyValue) serializeInner(d *data.Data) (int32, error) {
 
 type DoublePropertyValue float64
 
-func newDoublePropertyValue() PropertyValue {
+func newDoublePropertyValue() Value {
 	v := DoublePropertyValue(0)
 	return &v
 }
 
 func (p *Property) GetDoubleValue() (float64, error) {
-	if v, ok := p.PropertyValue.(*DoublePropertyValue); ok {
+	if v, ok := p.Value.(*DoublePropertyValue); ok {
 		return float64(*v), nil
 	}
 
@@ -480,15 +497,15 @@ func (v *DoublePropertyValue) serialize(d *data.Data, inner bool) (int32, error)
 
 type EnumPropertyValue struct {
 	Type  string `json:"type,omitempty"`
-	Value string `json:"value,omitempty"`
+	Value string `json:"Value,omitempty"`
 }
 
-func newEnumPropertyValue() PropertyValue {
+func newEnumPropertyValue() Value {
 	return &EnumPropertyValue{}
 }
 
 func (p *Property) GetEnumPropertyValue() (*EnumPropertyValue, error) {
-	if v, ok := p.PropertyValue.(*EnumPropertyValue); ok {
+	if v, ok := p.Value.(*EnumPropertyValue); ok {
 		return v, nil
 	}
 
@@ -529,7 +546,7 @@ func (v *EnumPropertyValue) parseInner(d *data.Data) error {
 
 	enumSplit := strings.SplitN(enum, "::", 2)
 	if len(enumSplit) != 2 {
-		return fmt.Errorf("failed to parse enum value %s", enumSplit)
+		return fmt.Errorf("failed to parse enum Value %s", enumSplit)
 	}
 
 	v.Type, v.Value = enumSplit[0], enumSplit[1]
@@ -568,13 +585,13 @@ func (v *EnumPropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 
 type FloatPropertyValue float32
 
-func newFloatPropertyValue() PropertyValue {
+func newFloatPropertyValue() Value {
 	v := FloatPropertyValue(0)
 	return &v
 }
 
 func (p *Property) GetFloatValue() (float32, error) {
-	if v, ok := p.PropertyValue.(*FloatPropertyValue); ok {
+	if v, ok := p.Value.(*FloatPropertyValue); ok {
 		return float32(*v), nil
 	}
 
@@ -620,13 +637,13 @@ func (v *FloatPropertyValue) serialize(d *data.Data, inner bool) (int32, error) 
 
 type Int8PropertyValue int8
 
-func newInt8PropertyValue() PropertyValue {
+func newInt8PropertyValue() Value {
 	v := Int8PropertyValue(0)
 	return &v
 }
 
 func (p *Property) GetInt8Value() (int8, error) {
-	if v, ok := p.PropertyValue.(*Int8PropertyValue); ok {
+	if v, ok := p.Value.(*Int8PropertyValue); ok {
 		return int8(*v), nil
 	}
 
@@ -667,13 +684,13 @@ func (v *Int8PropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 
 type Int64PropertyValue int64
 
-func newInt64PropertyValue() PropertyValue {
+func newInt64PropertyValue() Value {
 	v := Int64PropertyValue(0)
 	return &v
 }
 
 func (p *Property) GetInt64Value() (int64, error) {
-	if v, ok := p.PropertyValue.(*Int64PropertyValue); ok {
+	if v, ok := p.Value.(*Int64PropertyValue); ok {
 		return int64(*v), nil
 	}
 
@@ -717,12 +734,12 @@ type InterfacePropertyValue struct {
 	PathName  string `json:"path_name"`
 }
 
-func newInterfacePropertyValue() PropertyValue {
+func newInterfacePropertyValue() Value {
 	return &InterfacePropertyValue{}
 }
 
 func (p *Property) GetInterfaceValue() (*InterfacePropertyValue, error) {
-	if v, ok := p.PropertyValue.(*InterfacePropertyValue); ok {
+	if v, ok := p.Value.(*InterfacePropertyValue); ok {
 		return v, nil
 	}
 
@@ -781,13 +798,13 @@ func (v *InterfacePropertyValue) serialize(d *data.Data, inner bool) (int32, err
 
 type IntPropertyValue int32
 
-func newIntPropertyValue() PropertyValue {
+func newIntPropertyValue() Value {
 	v := IntPropertyValue(0)
 	return &v
 }
 
 func (p *Property) GetIntValue() (int32, error) {
-	if v, ok := p.PropertyValue.(*IntPropertyValue); ok {
+	if v, ok := p.Value.(*IntPropertyValue); ok {
 		return int32(*v), nil
 	}
 
@@ -831,19 +848,19 @@ func (v *IntPropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 //
 
 type MapPropertyValue struct {
-	KeyType   PropertyType                    `json:"key_type,omitempty"`
-	ValueType PropertyType                    `json:"value_type,omitempty"`
-	Values    map[PropertyValue]PropertyValue `json:"values,omitempty"`
+	KeyType   Type            `json:"key_type,omitempty"`
+	ValueType Type            `json:"value_type,omitempty"`
+	Values    map[Value]Value `json:"values,omitempty"`
 
-	keyOrder []PropertyValue
+	keyOrder []Value
 }
 
-func newMapPropertyValue() PropertyValue {
+func newMapPropertyValue() Value {
 	return &MapPropertyValue{}
 }
 
 func (p *Property) GetMapPropertyValue() (*MapPropertyValue, error) {
-	if v, ok := p.PropertyValue.(*MapPropertyValue); ok {
+	if v, ok := p.Value.(*MapPropertyValue); ok {
 		return v, nil
 	}
 
@@ -852,21 +869,21 @@ func (p *Property) GetMapPropertyValue() (*MapPropertyValue, error) {
 
 func (v *MapPropertyValue) parse(d *data.Data, inner bool) error {
 	if v.Values == nil {
-		v.Values = make(map[PropertyValue]PropertyValue)
-		v.keyOrder = make([]PropertyValue, 0)
+		v.Values = make(map[Value]Value)
+		v.keyOrder = make([]Value, 0)
 	}
 
 	keyType, err := d.ReadString()
 	if err != nil {
 		return err
 	}
-	v.KeyType = PropertyType(keyType)
+	v.KeyType = Type(keyType)
 
 	valueType, err := d.ReadString()
 	if err != nil {
 		return err
 	}
-	v.ValueType = PropertyType(valueType)
+	v.ValueType = Type(valueType)
 
 	err = d.NextByteIsNull()
 	if err != nil {
@@ -918,7 +935,7 @@ func (v *MapPropertyValue) parse(d *data.Data, inner bool) error {
 	case StructPropertyType:
 		newValue = newStructPropertyValue
 	default:
-		return fmt.Errorf("unsupported property type in map value %s", v.ValueType)
+		return fmt.Errorf("unsupported property type in map Value %s", v.ValueType)
 	}
 
 	for i := int32(0); i < count; i++ {
@@ -986,7 +1003,7 @@ func (v *MapPropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 	for _, k := range v.keyOrder {
 		value, ok := v.Values[k]
 		if !ok {
-			return 0, fmt.Errorf("failed to find value for key %v", k)
+			return 0, fmt.Errorf("failed to find Value for key %v", k)
 		}
 
 		_, err = k.serialize(d, true)
@@ -1009,13 +1026,13 @@ func (v *MapPropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 
 type NamePropertyValue string
 
-func newNamePropertyValue() PropertyValue {
+func newNamePropertyValue() Value {
 	v := NamePropertyValue("")
 	return &v
 }
 
 func (p *Property) GetNameValue() (string, error) {
-	if v, ok := p.PropertyValue.(*NamePropertyValue); ok {
+	if v, ok := p.Value.(*NamePropertyValue); ok {
 		return string(*v), nil
 	}
 
@@ -1061,12 +1078,12 @@ type ObjectPropertyValue struct {
 	PathName  string `json:"path_name,omitempty"`
 }
 
-func newObjectPropertyValue() PropertyValue {
+func newObjectPropertyValue() Value {
 	return &ObjectPropertyValue{}
 }
 
 func (p *Property) GetObjectValue() (*ObjectPropertyValue, error) {
-	if v, ok := p.PropertyValue.(*ObjectPropertyValue); ok {
+	if v, ok := p.Value.(*ObjectPropertyValue); ok {
 		return v, nil
 	}
 
@@ -1125,13 +1142,13 @@ func (v *ObjectPropertyValue) serialize(d *data.Data, inner bool) (int32, error)
 
 type StringPropertyValue string
 
-func newStringPropertyValue() PropertyValue {
+func newStringPropertyValue() Value {
 	v := StringPropertyValue("")
 	return &v
 }
 
 func (p *Property) GetStringValue() (string, error) {
-	if v, ok := p.PropertyValue.(*StringPropertyValue); ok {
+	if v, ok := p.Value.(*StringPropertyValue); ok {
 		return string(*v), nil
 	}
 
@@ -1176,23 +1193,23 @@ func (v *StringPropertyValue) serialize(d *data.Data, inner bool) (int32, error)
 // StructProperty
 //
 
-type StructValue interface {
-	parse(d *data.Data) error
-	serialize(d *data.Data) (int32, error)
-}
-
 type StructPropertyValue struct {
-	GUID  []int32     `json:"guid,omitempty"`
-	Type  StructType  `json:"type,omitempty"`
+	GUID []int32    `json:"guid,omitempty"`
+	Type StructType `json:"type,omitempty"`
+
+	// Value of the Struct
+	//
+	// Accessing the value can be achieved by calling the appropriate Get method
+	// on the StructPropertyValue based on its Type.
 	Value StructValue `json:"value,omitempty"`
 }
 
-func newStructPropertyValue() PropertyValue {
+func newStructPropertyValue() Value {
 	return &StructPropertyValue{}
 }
 
 func (p *Property) GetStructValue() (*StructPropertyValue, error) {
-	if v, ok := p.PropertyValue.(*StructPropertyValue); ok {
+	if v, ok := p.Value.(*StructPropertyValue); ok {
 		return v, nil
 	}
 
@@ -1288,15 +1305,15 @@ func (v *StructPropertyValue) serialize(d *data.Data, inner bool) (int32, error)
 type TextPropertyValue struct {
 	Flags int32
 	Type  TextType
-	Value TextValue
+	value textValue
 }
 
-func newTextPropertyValue() PropertyValue {
+func newTextPropertyValue() Value {
 	return &TextPropertyValue{}
 }
 
 func (p *Property) GetTextValue() (*TextPropertyValue, error) {
-	if v, ok := p.PropertyValue.(*TextPropertyValue); ok {
+	if v, ok := p.Value.(*TextPropertyValue); ok {
 		return v, nil
 	}
 
@@ -1324,14 +1341,14 @@ func (v *TextPropertyValue) parse(d *data.Data, inner bool) error {
 	// TODO: Handle other text types
 	switch v.Type {
 	case BaseTextType:
-		v.Value = &BaseText{}
+		v.value = &TextBase{}
 	case NoneTextType:
-		v.Value = &NoneText{}
+		v.value = &TextNone{}
 	default:
 		return fmt.Errorf("unknown text type %v", v.Type)
 	}
 
-	err = v.Value.parse(d)
+	err = v.value.parse(d)
 	if err != nil {
 		return err
 	}
@@ -1357,7 +1374,7 @@ func (v *TextPropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 		return 0, err
 	}
 
-	err = v.Value.serialize(d)
+	err = v.value.serialize(d)
 	if err != nil {
 		return 0, err
 	}

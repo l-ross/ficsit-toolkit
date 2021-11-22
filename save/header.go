@@ -16,6 +16,7 @@ func ParseHeader(r io.Reader) (*Header, error) {
 	return p.parseHeader()
 }
 
+// Header of a Satisfactory save file.
 type Header struct {
 	HeaderVersion       int32  `json:"headerVersion"`
 	SaveVersion         int32  `json:"saveVersion"`
@@ -173,6 +174,7 @@ func (h *Header) GetMapOptions() map[string]string {
 
 	opts := strings.Split(h.MapOptions, "?")
 
+	// If we find any improperly formed options then skip them.
 	for _, opt := range opts {
 		if opt == "" {
 			continue

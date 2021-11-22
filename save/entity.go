@@ -1,22 +1,24 @@
 package save
 
-type Entity struct {
-	TypePath         string             `json:"typePath"`
-	RootObject       string             `json:"rootObject"`
-	InstanceName     string             `json:"instanceName"`
-	NeedTransform    int32              `json:"needTransform"`
-	Rotation         []float32          `json:"rotation"`
-	Position         []float32          `json:"position"`
-	Scale            []float32          `json:"scale"`
-	WasPlacedInLevel int32              `json:"wasPlacedInLevel"`
-	ParentObjectRoot string             `json:"parentObjectRoot"`
-	ParentObjectName string             `json:"parentObjectName"`
-	References       []*ObjectReference `json:"component"`
-	Properties       []*Property        `json:"properties"`
-	Extra            *Extra             `json:"extras"`
+import (
+	"github.com/l-ross/ficsit-toolkit/save/extra"
+	"github.com/l-ross/ficsit-toolkit/save/property"
+)
 
-	objectDataPos int64
-	objectData    []byte
+type Entity struct {
+	TypePath         string               `json:"typePath"`
+	RootObject       string               `json:"rootObject"`
+	InstanceName     string               `json:"instanceName"`
+	NeedTransform    int32                `json:"needTransform"`
+	Rotation         []float32            `json:"rotation"`
+	Position         []float32            `json:"position"`
+	Scale            []float32            `json:"scale"`
+	WasPlacedInLevel int32                `json:"wasPlacedInLevel"`
+	ParentObjectRoot string               `json:"parentObjectRoot"`
+	ParentObjectName string               `json:"parentObjectName"`
+	References       []*ObjectReference   `json:"component"`
+	Properties       []*property.Property `json:"property"`
+	Extra            *extra.Extra         `json:"extras"`
 }
 
 func (e *Entity) parse(p *parser) error {
@@ -70,12 +72,6 @@ func (e *Entity) parseData(p *parser) error {
 		return err
 	}
 
-	//// Capture all bytes if debug is enabled.
-	//if debug {
-	//	e.objectDataPos = p.body.Index - 4
-	//	e.objectData, err = p.debugReadDataChunk(dataSize)
-	//}
-
 	m := p.Measure()
 
 	e.ParentObjectRoot, err = p.ReadString()
@@ -111,7 +107,7 @@ func (e *Entity) parseData(p *parser) error {
 		e.References[i] = o
 	}
 
-	e.Properties, err = p.parseProperties()
+	e.Properties, err = property.ParseProperties(p.Data)
 	if err != nil {
 		return err
 	}
@@ -126,8 +122,7 @@ func (e *Entity) parseData(p *parser) error {
 	// If we have extra data then parse it.
 	extraLen := dataSize - m()
 	if extraLen > 0 {
-		e.Extra = getExtra(e.TypePath)(extraLen)
-		err = e.Extra.Value.parse(p)
+		e.Extra, err = extra.Parse(e.TypePath, extraLen, p.Data)
 		if err != nil {
 			return err
 		}
@@ -217,7 +212,7 @@ func (e *Entity) serializeData(s *serializer) error {
 		}
 	}
 
-	err = serializeProperties(e.Properties, s.Data)
+	err = property.SerializeProperties(e.Properties, s.Data)
 	if err != nil {
 		return err
 	}
@@ -230,7 +225,7 @@ func (e *Entity) serializeData(s *serializer) error {
 	}
 
 	if e.Extra != nil {
-		err = e.Extra.Value.serialize(s)
+		err = e.Extra.Serialize(s.Data)
 		if err != nil {
 			return err
 		}

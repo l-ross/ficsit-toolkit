@@ -75,7 +75,7 @@ func (p *parser) readChunkHeader() (*chunkHeader, error) {
 		return nil, err
 	}
 
-	// Skip the next 16 bytes as they are seemingly just a repeat the compressed
+	// Skip the next 16 bytes as they are seemingly just a repeat of the compressed
 	// and uncompressed lengths
 	err = p.SkipBytes(16)
 	if err != nil {

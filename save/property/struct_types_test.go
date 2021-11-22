@@ -1,10 +1,11 @@
-package save
+package property
 
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/l-ross/ficsit-toolkit/save/data"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
@@ -13,12 +14,14 @@ func TestStructs(t *testing.T) {
 
 	tests := []struct {
 		name        string
+		structType  StructType
 		testData    string
 		assertValue func(t *testing.T, s *StructPropertyValue)
 	}{
 		{
-			name:     "Box",
-			testData: "testdata/struct/box.dat",
+			name:       "Box",
+			structType: BoxStructType,
+			testData:   "testdata/struct_type/box.dat",
 			assertValue: func(t *testing.T, s *StructPropertyValue) {
 				v, err := s.GetBoxStruct()
 				require.NoError(t, err)
@@ -28,8 +31,9 @@ func TestStructs(t *testing.T) {
 			},
 		},
 		{
-			name:     "Color",
-			testData: "testdata/struct/color.dat",
+			name:       "Color",
+			structType: ColorStructType,
+			testData:   "testdata/struct_type/color.dat",
 			assertValue: func(t *testing.T, s *StructPropertyValue) {
 				v, err := s.GetColorStruct()
 				require.NoError(t, err)
@@ -37,8 +41,9 @@ func TestStructs(t *testing.T) {
 			},
 		},
 		{
-			name:     "InventoryItem",
-			testData: "testdata/struct/inventory_item.dat",
+			name:       "InventoryItem",
+			structType: InventoryItemStructType,
+			testData:   "testdata/struct_type/inventory_item.dat",
 			assertValue: func(t *testing.T, s *StructPropertyValue) {
 				s1, err := s.GetArbitraryStruct()
 				require.NoError(t, err)
@@ -59,10 +64,10 @@ func TestStructs(t *testing.T) {
 			t.Parallel()
 
 			// Parse struct
-			p := createTestParser(t, tt.testData)
-			props, err := p.parseProperties()
+			d := data.TestData(t, tt.testData)
+			props, err := ParseProperties(d)
 			require.NoError(t, err)
-			assertAllBufferRead(t, p)
+			data.AssertAllBufferRead(t, d)
 
 			// Verify struct
 			require.Len(t, props, 1, "we should have 1 property")
@@ -71,12 +76,12 @@ func TestStructs(t *testing.T) {
 			tt.assertValue(t, structValue)
 
 			// Serialize struct
-			s := createTestSerializer()
-			err = serializeProperties(props, s.Data)
+			d2 := data.New()
+			err = SerializeProperties(props, d2)
 			require.NoError(t, err)
 
 			// Verify serialization is correct
-			assertBuffersEqual(t, p, s)
+			assert.Equal(t, d.Bytes(), d2.Bytes())
 		})
 	}
 }

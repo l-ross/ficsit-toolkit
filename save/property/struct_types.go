@@ -1,4 +1,4 @@
-package save
+package property
 
 import (
 	"fmt"
@@ -8,8 +8,12 @@ import (
 
 type StructType string
 
+type StructValue interface {
+	parse(d *data.Data) error
+	serialize(d *data.Data) (int32, error)
+}
+
 const (
-	ArbitraryStructType             StructType = "Arbitrary"
 	BoxStructType                   StructType = "Box"
 	ColorStructType                 StructType = "Color"
 	DateTimeStructType              StructType = "DateTime"
@@ -29,8 +33,6 @@ const (
 
 type ArbitraryStruct struct {
 	Properties []*Property
-
-	numProps int32
 }
 
 func (v *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
@@ -42,17 +44,12 @@ func (v *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
 }
 
 func (v *ArbitraryStruct) parse(d *data.Data) error {
-	for {
-		prop, err := parseProperty(d)
-		if err != nil {
-			return err
-		}
-		if prop == nil {
-			break
-		}
-
-		v.Properties = append(v.Properties, prop)
+	props, err := ParseProperties(d)
+	if err != nil {
+		return nil
 	}
+
+	v.Properties = props
 
 	return nil
 }
@@ -60,7 +57,7 @@ func (v *ArbitraryStruct) parse(d *data.Data) error {
 func (v *ArbitraryStruct) serialize(d *data.Data) (int32, error) {
 	m := d.Measure()
 
-	err := serializeProperties(v.Properties, d)
+	err := SerializeProperties(v.Properties, d)
 	if err != nil {
 		return 0, err
 	}
@@ -237,6 +234,14 @@ func (v *DateTimeStruct) serialize(d *data.Data) (int32, error) {
 
 type FluidBoxStruct float32
 
+func (v *StructPropertyValue) GetFluidBoxStruct() (*FluidBoxStruct, error) {
+	if v, ok := v.Value.(*FluidBoxStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
+
 func (v *FluidBoxStruct) parse(d *data.Data) error {
 	f, err := d.ReadFloat32()
 	if err != nil {
@@ -257,6 +262,14 @@ func (v *FluidBoxStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type GUIDStruct []byte
+
+func (v *StructPropertyValue) GetGUIDStruct() (*GUIDStruct, error) {
+	if v, ok := v.Value.(*GUIDStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
 
 func (v *GUIDStruct) parse(d *data.Data) error {
 	b, err := d.ReadBytes(16)
@@ -491,6 +504,14 @@ type RailroadTrackPositionStruct struct {
 	Forward   float32 `json:"forward"`
 }
 
+func (v *StructPropertyValue) GetRailroadTrackPositionStruct() (*RailroadTrackPositionStruct, error) {
+	if v, ok := v.Value.(*RailroadTrackPositionStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
+
 func (v *RailroadTrackPositionStruct) parse(d *data.Data) error {
 	var err error
 
@@ -554,6 +575,14 @@ type QuatStruct struct {
 	W float32
 }
 
+func (v *StructPropertyValue) GetQuatStruct() (*QuatStruct, error) {
+	if v, ok := v.Value.(*QuatStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
+
 func (v *QuatStruct) parse(d *data.Data) error {
 	var err error
 	v.X, err = d.ReadFloat32()
@@ -613,6 +642,14 @@ type VectorStruct struct {
 	Z float32
 }
 
+func (v *StructPropertyValue) GetVectorStruct() (*VectorStruct, error) {
+	if v, ok := v.Value.(*VectorStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
+}
+
 func (v *VectorStruct) parse(d *data.Data) error {
 	var err error
 	v.X, err = d.ReadFloat32()
@@ -659,6 +696,14 @@ func (v *VectorStruct) serialize(d *data.Data) (int32, error) {
 type Vector2DStruct struct {
 	X float32
 	Y float32
+}
+
+func (v *StructPropertyValue) GetVector2DStruct() (*Vector2DStruct, error) {
+	if v, ok := v.Value.(*Vector2DStruct); ok {
+		return v, nil
+	}
+
+	return nil, fmt.Errorf("wrong type %s", v.Type)
 }
 
 func (v *Vector2DStruct) parse(d *data.Data) error {

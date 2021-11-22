@@ -1,4 +1,4 @@
-package save
+package property
 
 import (
 	"fmt"
@@ -13,34 +13,30 @@ const (
 	BaseTextType TextType = 0x00
 )
 
-type TextValue interface {
+type textValue interface {
 	parse(d *data.Data) error
 
 	serialize(d *data.Data) error
-}
-
-func getText(t TextType) func() TextValue {
-	return nil
 }
 
 //
 // None
 //
 
-type NoneText struct {
+type TextNone struct {
 	CultureInvariantString int32
 	String                 string
 }
 
-func (t *TextPropertyValue) GetNoneText() (*NoneText, error) {
-	if v, ok := t.Value.(*NoneText); ok {
+func (t *TextPropertyValue) GetNoneText() (*TextNone, error) {
+	if v, ok := t.value.(*TextNone); ok {
 		return v, nil
 	}
 
 	return nil, fmt.Errorf("wrong text type: %v", t.Type)
 }
 
-func (t *NoneText) parse(d *data.Data) error {
+func (t *TextNone) parse(d *data.Data) error {
 	var err error
 	t.CultureInvariantString, err = d.ReadInt32()
 	if err != nil {
@@ -56,7 +52,7 @@ func (t *NoneText) parse(d *data.Data) error {
 	return nil
 }
 
-func (t *NoneText) serialize(d *data.Data) error {
+func (t *TextNone) serialize(d *data.Data) error {
 	err := d.WriteInt32(t.CultureInvariantString)
 	if err != nil {
 		return err
@@ -75,21 +71,21 @@ func (t *NoneText) serialize(d *data.Data) error {
 // Base
 //
 
-type BaseText struct {
+type TextBase struct {
 	Namespace string
 	Key       string
 	Value     string
 }
 
-func (t *TextPropertyValue) GetBaseText() (*BaseText, error) {
-	if v, ok := t.Value.(*BaseText); ok {
+func (t *TextPropertyValue) GetBaseText() (*TextBase, error) {
+	if v, ok := t.value.(*TextBase); ok {
 		return v, nil
 	}
 
 	return nil, fmt.Errorf("wrong text type: %v", t.Type)
 }
 
-func (t *BaseText) parse(d *data.Data) error {
+func (t *TextBase) parse(d *data.Data) error {
 	var err error
 	t.Namespace, err = d.ReadString()
 	if err != nil {
@@ -109,7 +105,7 @@ func (t *BaseText) parse(d *data.Data) error {
 	return nil
 }
 
-func (t *BaseText) serialize(d *data.Data) error {
+func (t *TextBase) serialize(d *data.Data) error {
 	err := d.WriteString(t.Namespace)
 	if err != nil {
 		return err
