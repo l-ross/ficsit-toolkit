@@ -33,10 +33,17 @@ type input struct {
 func (f *Factory) loadInput(b *building, s *save.Save) (*input, error) {
 	i := &input{}
 
-	var err error
-	i.c, err = f.getConnection(b, s, f.conveyorGraph.To)
+	conns, err := f.getConnections(b, s, inputRegexp, f.conveyorGraph.To)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load input: %w", err)
+	}
+
+	switch len(conns) {
+	case 0:
+	case 1:
+		i.c = conns[0]
+	default:
+		return nil, fmt.Errorf("expected to only have 1 input but had %d", len(conns))
 	}
 
 	return i, nil
@@ -48,10 +55,25 @@ func (i *input) GetInput() *Connection {
 	return i.c
 }
 
-type inputs []input
+type inputs struct {
+	c []*Connection
+}
 
-func (f *Factory) loadInputs(b *building, s *save.Save) (inputs, error) {
-	return nil, nil
+func (f *Factory) loadInputs(b *building, s *save.Save) (*inputs, error) {
+	i := &inputs{}
+
+	conns, err := f.getConnections(b, s, inputRegexp, f.conveyorGraph.To)
+	if err != nil {
+		return nil, fmt.Errorf("failed to load input: %w", err)
+	}
+
+	i.c = conns
+
+	return i, nil
+}
+
+func (i *inputs) GetInputs() []*Connection {
+	return i.c
 }
 
 type output struct {
@@ -61,10 +83,17 @@ type output struct {
 func (f *Factory) loadOutput(b *building, s *save.Save) (*output, error) {
 	o := &output{}
 
-	var err error
-	o.c, err = f.getConnection(b, s, f.conveyorGraph.From)
+	conns, err := f.getConnections(b, s, outputRegexp, f.conveyorGraph.From)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load output: %w", err)
+	}
+
+	switch len(conns) {
+	case 0:
+	case 1:
+		o.c = conns[0]
+	default:
+		return nil, fmt.Errorf("expected to only have 1 output but had %d", len(conns))
 	}
 
 	return o, nil
@@ -76,19 +105,37 @@ func (o *output) GetOutput() *Connection {
 	return o.c
 }
 
-func (f *Factory) getConnection(b *building, s *save.Save, direction func(int64) graph.Nodes) (*Connection, error) {
-	conn := &Connection{}
+type outputs struct {
+	c []*Connection
+}
+
+func (f *Factory) loadOutputs(b *building, s *save.Save) (*outputs, error) {
+	o := &outputs{}
+
+	conns, err := f.getConnections(b, s, outputRegexp, f.conveyorGraph.From)
+	if err != nil {
+		return nil, fmt.Errorf("failed to load input: %w", err)
+	}
+
+	o.c = conns
+
+	return o, nil
+}
+
+func (o *outputs) GetOutputs() []*Connection {
+	return o.c
+}
+
+func (f *Factory) getConnections(b *building, s *save.Save, re *regexp.Regexp, direction func(int64) graph.Nodes) ([]*Connection, error) {
+	conns := make([]*Connection, 0)
 
 	for _, ref := range b.entity.References {
-		if outputRegexp.MatchString(ref.PathName) {
+		if re.MatchString(ref.PathName) {
 			c := s.Components[ref.PathName]
-			if c == nil {
-				return nil, nil
-			}
 
 			connProp, err := getPropFromArray("mConnectedComponent", c.Properties)
 			if err != nil {
-				return nil, err
+				continue
 			}
 
 			obj, err := connProp.GetObjectValue()
@@ -101,15 +148,18 @@ func (f *Factory) getConnection(b *building, s *save.Save, direction func(int64)
 				return nil, err
 			}
 
+			conn := &Connection{}
 			conn = f.next(conn, id, direction)
+
+			if len(conn.ConveyorBelts) == 0 {
+				continue
+			}
+
+			conns = append(conns, conn)
 		}
 	}
 
-	if len(conn.ConveyorBelts) == 0 {
-		return nil, nil
-	}
-
-	return conn, nil
+	return conns, nil
 }
 
 func (f *Factory) next(c *Connection, n int64, direction func(int64) graph.Nodes) *Connection {
