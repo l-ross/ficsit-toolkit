@@ -90,9 +90,19 @@ func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
 		entity:   e,
 	}
 
-	// TODO: This will currently add things that don't have conveyor inputs / outputs
-	//  to the conveyorGraph e.g. Power poles.
-	f.conveyorGraph.AddNode(simple.Node(id))
+	// Only add the building to the conveyor graph if it has a reference to an input or output.
+	hasConveyor := false
+
+	for _, ref := range e.References {
+		if inputRegexp.MatchString(ref.PathName) || outputRegexp.MatchString(ref.PathName) {
+			hasConveyor = true
+			break
+		}
+	}
+
+	if hasConveyor {
+		f.conveyorGraph.AddNode(simple.Node(id))
+	}
 
 	for _, prop := range e.Properties {
 		var err error
