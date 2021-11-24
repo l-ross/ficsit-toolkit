@@ -166,6 +166,13 @@ func (b *building) setRecipe(p *property.Property) error {
 		return err
 	}
 
+	// TODO: What's the difference between RailroadTrackIntegrated_C and RailroadTrack_C?
+	switch o.PathName {
+	case "/Game/FactoryGame/Recipes/Buildings/Recipe_RailroadTrackIntegrated.Recipe_RailroadTrackIntegrated_C":
+		b.builtWithRecipe = Recipe.RailroadTrack
+		return nil
+	}
+
 	r, err := Recipe.GetByFullName(o.PathName)
 	if err != nil {
 		return err
