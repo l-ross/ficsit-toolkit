@@ -130,14 +130,14 @@ Used to transport fluids.`,
 )
 
 func GetByClassName(className string) (FGBuildablePipeline, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildablePipeline{}, fmt.Errorf("failed to find FGBuildablePipeline with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildablePipeline{
+var ClassNameToDescriptor = map[string]FGBuildablePipeline{
 	"Build_Pipeline_C":    Pipeline,
 	"Build_PipelineMK2_C": PipelineMK2,
 }

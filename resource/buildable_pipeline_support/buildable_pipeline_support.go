@@ -150,14 +150,14 @@ Useful to route pipelines in a more controlled manner and over long distances.`,
 )
 
 func GetByClassName(className string) (FGBuildablePipelineSupport, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildablePipelineSupport{}, fmt.Errorf("failed to find FGBuildablePipelineSupport with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildablePipelineSupport{
+var ClassNameToDescriptor = map[string]FGBuildablePipelineSupport{
 	"Build_HyperPoleStackable_C":   HyperPoleStackable,
 	"Build_PipeHyperSupport_C":     PipeHyperSupport,
 	"Build_PipeSupportStackable_C": PipeSupportStackable,

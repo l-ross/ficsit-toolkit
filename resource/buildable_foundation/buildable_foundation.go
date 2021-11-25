@@ -1043,14 +1043,14 @@ Still utilizes the standard foundation building grid for improved building place
 )
 
 func GetByClassName(className string) (FGBuildableFoundation, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableFoundation{}, fmt.Errorf("failed to find FGBuildableFoundation with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableFoundation{
+var ClassNameToDescriptor = map[string]FGBuildableFoundation{
 	"Build_Foundation_8x1_01_C":          Foundation8x101,
 	"Build_Foundation_8x2_01_C":          Foundation8x201,
 	"Build_Foundation_8x4_01_C":          Foundation8x401,

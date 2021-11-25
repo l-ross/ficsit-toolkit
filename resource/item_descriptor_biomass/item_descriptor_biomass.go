@@ -322,14 +322,14 @@ Biomass Burners and vehicles can use it for power.`,
 )
 
 func GetByClassName(className string) (FGItemDescriptorBiomass, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGItemDescriptorBiomass{}, fmt.Errorf("failed to find FGItemDescriptorBiomass with class name %s", className)
 }
 
-var classNameToVar = map[string]FGItemDescriptorBiomass{
+var ClassNameToDescriptor = map[string]FGItemDescriptorBiomass{
 	"Desc_Biofuel_C":              Biofuel,
 	"Desc_Fabric_C":               Fabric,
 	"Desc_FlowerPetals_C":         FlowerPetals,

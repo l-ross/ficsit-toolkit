@@ -87,14 +87,14 @@ var (
 )
 
 func GetByClassName(className string) (FGBuildableWire, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableWire{}, fmt.Errorf("failed to find FGBuildableWire with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableWire{
+var ClassNameToDescriptor = map[string]FGBuildableWire{
 	"Build_PowerLine_C":       PowerLine,
 	"Build_XmassLightsLine_C": XmassLightsLine,
 }

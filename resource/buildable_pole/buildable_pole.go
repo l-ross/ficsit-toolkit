@@ -64,13 +64,13 @@ Useful to route conveyor belts in a more controlled manner and over long distanc
 )
 
 func GetByClassName(className string) (FGBuildablePole, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildablePole{}, fmt.Errorf("failed to find FGBuildablePole with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildablePole{
+var ClassNameToDescriptor = map[string]FGBuildablePole{
 	"Build_ConveyorPole_C": ConveyorPole,
 }

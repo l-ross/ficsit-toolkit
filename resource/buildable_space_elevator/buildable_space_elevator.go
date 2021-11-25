@@ -100,13 +100,13 @@ Completing Phases in the Space Elevator will unlock new Tiers in the HUB Termina
 )
 
 func GetByClassName(className string) (FGBuildableSpaceElevator, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableSpaceElevator{}, fmt.Errorf("failed to find FGBuildableSpaceElevator with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableSpaceElevator{
+var ClassNameToDescriptor = map[string]FGBuildableSpaceElevator{
 	"Build_SpaceElevator_C": SpaceElevator,
 }

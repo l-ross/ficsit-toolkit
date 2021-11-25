@@ -62,13 +62,13 @@ R&D will assist Pioneers through the MAM to turn any valuable data into usable r
 )
 
 func GetByClassName(className string) (FGBuildableMAM, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableMAM{}, fmt.Errorf("failed to find FGBuildableMAM with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableMAM{
+var ClassNameToDescriptor = map[string]FGBuildableMAM{
 	"Build_Mam_C": Mam,
 }

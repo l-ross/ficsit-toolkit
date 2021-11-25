@@ -61,13 +61,13 @@ var (
 )
 
 func GetByClassName(className string) (FGColorGun, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGColorGun{}, fmt.Errorf("failed to find FGColorGun with class name %s", className)
 }
 
-var classNameToVar = map[string]FGColorGun{
+var ClassNameToDescriptor = map[string]FGColorGun{
 	"Equip_ColorGun_C": ColorGun,
 }

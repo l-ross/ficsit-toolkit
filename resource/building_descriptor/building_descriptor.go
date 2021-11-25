@@ -3311,14 +3311,14 @@ var (
 )
 
 func GetByClassName(className string) (FGBuildingDescriptor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildingDescriptor{}, fmt.Errorf("failed to find FGBuildingDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildingDescriptor{
+var ClassNameToDescriptor = map[string]FGBuildingDescriptor{
 	"Desc_AssemblerMk1_C":                           AssemblerMk1,
 	"Desc_Blender_C":                                Blender,
 	"Desc_CandyCaneDecor_C":                         CandyCaneDecor,

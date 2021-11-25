@@ -101,13 +101,13 @@ var (
 )
 
 func GetByClassName(className string) (FGBuildableAttachmentMerger, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableAttachmentMerger{}, fmt.Errorf("failed to find FGBuildableAttachmentMerger with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableAttachmentMerger{
+var ClassNameToDescriptor = map[string]FGBuildableAttachmentMerger{
 	"Build_ConveyorAttachmentMerger_C": ConveyorAttachmentMerger,
 }

@@ -65,13 +65,13 @@ var (
 )
 
 func GetByClassName(className string) (FGBuildableLadder, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableLadder{}, fmt.Errorf("failed to find FGBuildableLadder with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableLadder{
+var ClassNameToDescriptor = map[string]FGBuildableLadder{
 	"Build_Ladder_C": Ladder,
 }

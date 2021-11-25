@@ -123,13 +123,13 @@ Requires Power. Overclocking increases the output potential of the entire Resour
 )
 
 func GetByClassName(className string) (FGBuildableFrackingActivator, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableFrackingActivator{}, fmt.Errorf("failed to find FGBuildableFrackingActivator with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableFrackingActivator{
+var ClassNameToDescriptor = map[string]FGBuildableFrackingActivator{
 	"Build_FrackingSmasher_C": FrackingSmasher,
 }

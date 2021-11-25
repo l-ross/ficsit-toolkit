@@ -99,14 +99,14 @@ Allows up to two Power Line connections.`,
 )
 
 func GetByClassName(className string) (FGBuildableLightSource, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableLightSource{}, fmt.Errorf("failed to find FGBuildableLightSource with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableLightSource{
+var ClassNameToDescriptor = map[string]FGBuildableLightSource{
 	"Build_CeilingLight_C": CeilingLight,
 	"Build_StreetLight_C":  StreetLight,
 }

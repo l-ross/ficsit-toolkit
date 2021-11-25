@@ -316,14 +316,14 @@ Basic resource mainly used for stable foundations.`,
 )
 
 func GetByClassName(className string) (FGResourceDescriptor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGResourceDescriptor{}, fmt.Errorf("failed to find FGResourceDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGResourceDescriptor{
+var ClassNameToDescriptor = map[string]FGResourceDescriptor{
 	"Desc_Coal_C":        Coal,
 	"Desc_LiquidOil_C":   LiquidOil,
 	"Desc_NitrogenGas_C": NitrogenGas,

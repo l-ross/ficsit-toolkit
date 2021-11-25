@@ -104,13 +104,13 @@ Useful to move parts and resources from oversaturated conveyor belts.`,
 )
 
 func GetByClassName(className string) (FGBuildableAttachmentSplitter, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableAttachmentSplitter{}, fmt.Errorf("failed to find FGBuildableAttachmentSplitter with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableAttachmentSplitter{
+var ClassNameToDescriptor = map[string]FGBuildableAttachmentSplitter{
 	"Build_ConveyorAttachmentSplitter_C": ConveyorAttachmentSplitter,
 }

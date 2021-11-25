@@ -516,14 +516,14 @@ var (
 )
 
 func GetByClassName(className string) ({{.TypeName}}, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return {{.TypeName}}{}, fmt.Errorf("failed to find {{.TypeName}} with class name %s", className)
 }
 
-var classNameToVar = map[string]{{.TypeName}} {
+var ClassNameToDescriptor = map[string]{{.TypeName}} {
 	{{range .Classes}}	"{{.ClassName}}": {{.Name}},
 	{{end}}
 }
@@ -532,14 +532,14 @@ var classNameToVar = map[string]{{.TypeName}} {
 func GetByFullName(fullName string) ({{.TypeName}}, error) {
 	fullName = fmt.Sprintf("BlueprintGeneratedClass %s", fullName)
 
-	if v, ok := fullNameToVar[fullName]; ok {
+	if v, ok := FullNameToDescriptor[fullName]; ok {
 		return v, nil
 	}
 
 	return {{.TypeName}}{}, fmt.Errorf("failed to find {{.TypeName}} with full name %s", fullName)
 }
 
-var fullNameToVar = map[string]{{.TypeName}} {
+var FullNameToDescriptor = map[string]{{.TypeName}} {
 	{{range .Classes}} "{{.FullName}}": {{.Name}},
 	{{end}}
 }

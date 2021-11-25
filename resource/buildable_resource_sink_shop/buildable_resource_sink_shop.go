@@ -102,13 +102,13 @@ For those employees going the extra kilometer we have set aside special bonus mi
 )
 
 func GetByClassName(className string) (FGBuildableResourceSinkShop, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableResourceSinkShop{}, fmt.Errorf("failed to find FGBuildableResourceSinkShop with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableResourceSinkShop{
+var ClassNameToDescriptor = map[string]FGBuildableResourceSinkShop{
 	"Build_ResourceSinkShop_C": ResourceSinkShop,
 }

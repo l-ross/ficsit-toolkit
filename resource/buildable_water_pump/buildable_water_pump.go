@@ -144,13 +144,13 @@ Note that the water needs to be deep enough and that rivers do not commonly suff
 )
 
 func GetByClassName(className string) (FGBuildableWaterPump, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableWaterPump{}, fmt.Errorf("failed to find FGBuildableWaterPump with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableWaterPump{
+var ClassNameToDescriptor = map[string]FGBuildableWaterPump{
 	"Build_WaterPump_C": WaterPump,
 }

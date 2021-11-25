@@ -51,13 +51,13 @@ var (
 )
 
 func GetByClassName(className string) (FGEquipmentZipline, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGEquipmentZipline{}, fmt.Errorf("failed to find FGEquipmentZipline with class name %s", className)
 }
 
-var classNameToVar = map[string]FGEquipmentZipline{
+var ClassNameToDescriptor = map[string]FGEquipmentZipline{
 	"Equip_Zipline_C": Zipline,
 }

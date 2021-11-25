@@ -102,13 +102,13 @@ Produces 15 Gifts per minute.`,
 )
 
 func GetByClassName(className string) (FGBuildableFactorySimpleProducer, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableFactorySimpleProducer{}, fmt.Errorf("failed to find FGBuildableFactorySimpleProducer with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableFactorySimpleProducer{
+var ClassNameToDescriptor = map[string]FGBuildableFactorySimpleProducer{
 	"Build_TreeGiftProducer_C": TreeGiftProducer,
 }

@@ -170,14 +170,14 @@ Specifically made for humans to walk on.`,
 )
 
 func GetByClassName(className string) (FGBuildableWalkway, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableWalkway{}, fmt.Errorf("failed to find FGBuildableWalkway with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableWalkway{
+var ClassNameToDescriptor = map[string]FGBuildableWalkway{
 	"Build_WalkwayCross_C":    WalkwayCross,
 	"Build_WalkwayRamp_C":     WalkwayRamp,
 	"Build_WalkwayStraight_C": WalkwayStraight,

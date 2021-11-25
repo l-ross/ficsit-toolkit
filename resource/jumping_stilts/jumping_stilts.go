@@ -39,13 +39,13 @@ var (
 )
 
 func GetByClassName(className string) (FGJumpingStilts, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGJumpingStilts{}, fmt.Errorf("failed to find FGJumpingStilts with class name %s", className)
 }
 
-var classNameToVar = map[string]FGJumpingStilts{
+var ClassNameToDescriptor = map[string]FGJumpingStilts{
 	"Equip_JumpingStilts_C": JumpingStilts,
 }

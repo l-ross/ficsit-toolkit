@@ -157,14 +157,14 @@ Has an in and output for pipes.`,
 )
 
 func GetByClassName(className string) (FGBuildablePipeReservoir, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildablePipeReservoir{}, fmt.Errorf("failed to find FGBuildablePipeReservoir with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildablePipeReservoir{
+var ClassNameToDescriptor = map[string]FGBuildablePipeReservoir{
 	"Build_IndustrialTank_C":  IndustrialTank,
 	"Build_PipeStorageTank_C": PipeStorageTank,
 }

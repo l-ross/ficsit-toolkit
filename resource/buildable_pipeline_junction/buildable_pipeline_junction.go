@@ -105,13 +105,13 @@ var (
 )
 
 func GetByClassName(className string) (FGBuildablePipelineJunction, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildablePipelineJunction{}, fmt.Errorf("failed to find FGBuildablePipelineJunction with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildablePipelineJunction{
+var ClassNameToDescriptor = map[string]FGBuildablePipelineJunction{
 	"Build_PipelineJunction_Cross_C": PipelineJunctionCross,
 }

@@ -420,14 +420,14 @@ Improvised ranged weapon for self defense. Has to be reloaded after each use.`,
 )
 
 func GetByClassName(className string) (FGEquipmentDescriptor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGEquipmentDescriptor{}, fmt.Errorf("failed to find FGEquipmentDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGEquipmentDescriptor{
+var ClassNameToDescriptor = map[string]FGEquipmentDescriptor{
 	"Desc_Chainsaw_C":                           Chainsaw,
 	"BP_EqDescZipLine_C":                        EqDescZipLine,
 	"BP_EquipmentDescriptorCandyCane_C":         EquipmentDescriptorCandyCane,

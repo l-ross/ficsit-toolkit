@@ -102,14 +102,14 @@ Allows up to two Power Line connections.`,
 )
 
 func GetByClassName(className string) (FGBuildableFloodlight, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableFloodlight{}, fmt.Errorf("failed to find FGBuildableFloodlight with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableFloodlight{
+var ClassNameToDescriptor = map[string]FGBuildableFloodlight{
 	"Build_FloodlightPole_C": FloodlightPole,
 	"Build_FloodlightWall_C": FloodlightWall,
 }

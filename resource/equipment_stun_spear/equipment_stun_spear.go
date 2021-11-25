@@ -95,14 +95,14 @@ var (
 )
 
 func GetByClassName(className string) (FGEquipmentStunSpear, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGEquipmentStunSpear{}, fmt.Errorf("failed to find FGEquipmentStunSpear with class name %s", className)
 }
 
-var classNameToVar = map[string]FGEquipmentStunSpear{
+var ClassNameToDescriptor = map[string]FGEquipmentStunSpear{
 	"Equip_CandyCaneBasher_C": CandyCaneBasher,
 	"Equip_ShockShank_C":      ShockShank,
 	"Equip_StunSpear_C":       StunSpear,

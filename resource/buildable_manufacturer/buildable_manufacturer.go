@@ -508,14 +508,14 @@ Can be automated by feeding ore into it with a conveyor belt connected to the in
 )
 
 func GetByClassName(className string) (FGBuildableManufacturer, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableManufacturer{}, fmt.Errorf("failed to find FGBuildableManufacturer with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableManufacturer{
+var ClassNameToDescriptor = map[string]FGBuildableManufacturer{
 	"Build_AssemblerMk1_C":    AssemblerMk1,
 	"Build_Blender_C":         Blender,
 	"Build_ConstructorMk1_C":  ConstructorMk1,

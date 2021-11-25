@@ -51,13 +51,13 @@ var (
 )
 
 func GetByClassName(className string) (FGSuitBase, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGSuitBase{}, fmt.Errorf("failed to find FGSuitBase with class name %s", className)
 }
 
-var classNameToVar = map[string]FGSuitBase{
+var ClassNameToDescriptor = map[string]FGSuitBase{
 	"Equip_HazmatSuit_C": HazmatSuit,
 }

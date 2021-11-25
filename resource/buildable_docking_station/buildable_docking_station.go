@@ -112,13 +112,13 @@ Always refuels vehicles if it has access to a matching fuel type.
 )
 
 func GetByClassName(className string) (FGBuildableDockingStation, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableDockingStation{}, fmt.Errorf("failed to find FGBuildableDockingStation with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableDockingStation{
+var ClassNameToDescriptor = map[string]FGBuildableDockingStation{
 	"Build_TruckStation_C": TruckStation,
 }

@@ -177,14 +177,14 @@ var (
 )
 
 func GetByClassName(className string) (FGBuildableConveyorBelt, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableConveyorBelt{}, fmt.Errorf("failed to find FGBuildableConveyorBelt with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableConveyorBelt{
+var ClassNameToDescriptor = map[string]FGBuildableConveyorBelt{
 	"Build_ConveyorBeltMk1_C": ConveyorBeltMk1,
 	"Build_ConveyorBeltMk2_C": ConveyorBeltMk2,
 	"Build_ConveyorBeltMk3_C": ConveyorBeltMk3,

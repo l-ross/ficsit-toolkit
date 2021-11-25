@@ -197,14 +197,14 @@ Has two inputs and outputs for conveyor belts.`,
 )
 
 func GetByClassName(className string) (FGBuildableStorage, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableStorage{}, fmt.Errorf("failed to find FGBuildableStorage with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableStorage{
+var ClassNameToDescriptor = map[string]FGBuildableStorage{
 	"Build_StorageContainerMk1_C": StorageContainerMk1,
 	"Build_StorageContainerMk2_C": StorageContainerMk2,
 	"Build_StoragePlayer_C":       StoragePlayer,

@@ -70,13 +70,13 @@ Controls all Lights connected to the Power Grid attached to the 'Light Power Con
 )
 
 func GetByClassName(className string) (FGBuildableLightsControlPanel, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableLightsControlPanel{}, fmt.Errorf("failed to find FGBuildableLightsControlPanel with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableLightsControlPanel{
+var ClassNameToDescriptor = map[string]FGBuildableLightsControlPanel{
 	"Build_LightsControlPanel_C": LightsControlPanel,
 }

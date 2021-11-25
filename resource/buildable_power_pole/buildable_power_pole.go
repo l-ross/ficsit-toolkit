@@ -301,14 +301,14 @@ Connect Power Poles, Power Generators and factory buildings together with Power 
 )
 
 func GetByClassName(className string) (FGBuildablePowerPole, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildablePowerPole{}, fmt.Errorf("failed to find FGBuildablePowerPole with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildablePowerPole{
+var ClassNameToDescriptor = map[string]FGBuildablePowerPole{
 	"Build_PowerPoleMk1_C":            PowerPoleMk1,
 	"Build_PowerPoleMk2_C":            PowerPoleMk2,
 	"Build_PowerPoleMk3_C":            PowerPoleMk3,

@@ -39,13 +39,13 @@ var (
 )
 
 func GetByClassName(className string) (FGParachute, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGParachute{}, fmt.Errorf("failed to find FGParachute with class name %s", className)
 }
 
-var classNameToVar = map[string]FGParachute{
+var ClassNameToDescriptor = map[string]FGParachute{
 	"Equip_Parachute_C": Parachute,
 }

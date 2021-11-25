@@ -188,14 +188,14 @@ Can be eaten to restore two health segments.`,
 )
 
 func GetByClassName(className string) (FGConsumableDescriptor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGConsumableDescriptor{}, fmt.Errorf("failed to find FGConsumableDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGConsumableDescriptor{
+var ClassNameToDescriptor = map[string]FGConsumableDescriptor{
 	"Desc_Berry_C":                   Berry,
 	"BP_EquipmentDescriptorBeacon_C": EquipmentDescriptorBeacon,
 	"Desc_Medkit_C":                  Medkit,

@@ -218,14 +218,14 @@ Needs to be connected to a powered Railway to function.`,
 )
 
 func GetByClassName(className string) (FGBuildableTrainPlatformCargo, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableTrainPlatformCargo{}, fmt.Errorf("failed to find FGBuildableTrainPlatformCargo with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableTrainPlatformCargo{
+var ClassNameToDescriptor = map[string]FGBuildableTrainPlatformCargo{
 	"Build_TrainDockingStation_C":       TrainDockingStation,
 	"Build_TrainDockingStationLiquid_C": TrainDockingStationLiquid,
 }

@@ -1959,14 +1959,14 @@ One of the most basic parts.`,
 )
 
 func GetByClassName(className string) (FGItemDescriptor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGItemDescriptor{}, fmt.Errorf("failed to find FGItemDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGItemDescriptor{
+var ClassNameToDescriptor = map[string]FGItemDescriptor{
 	"Desc_AluminaSolution_C":           AluminaSolution,
 	"Desc_AluminumCasing_C":            AluminumCasing,
 	"Desc_AluminumIngot_C":             AluminumIngot,

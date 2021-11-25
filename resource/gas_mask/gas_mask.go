@@ -49,13 +49,13 @@ var (
 )
 
 func GetByClassName(className string) (FGGasMask, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGGasMask{}, fmt.Errorf("failed to find FGGasMask with class name %s", className)
 }
 
-var classNameToVar = map[string]FGGasMask{
+var ClassNameToDescriptor = map[string]FGGasMask{
 	"Equip_GasMask_C": GasMask,
 }

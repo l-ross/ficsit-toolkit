@@ -151,14 +151,14 @@ var (
 )
 
 func GetByClassName(className string) (FGPoleDescriptor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGPoleDescriptor{}, fmt.Errorf("failed to find FGPoleDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGPoleDescriptor{
+var ClassNameToDescriptor = map[string]FGPoleDescriptor{
 	"Desc_ConveyorPole_C":          ConveyorPole,
 	"Desc_ConveyorPoleStackable_C": ConveyorPoleStackable,
 	"Desc_HyperPoleStackable_C":    HyperPoleStackable,

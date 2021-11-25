@@ -56,13 +56,13 @@ Can be attached to walls and ceilings.`,
 )
 
 func GetByClassName(className string) (FGBuildableSnowDispenser, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableSnowDispenser{}, fmt.Errorf("failed to find FGBuildableSnowDispenser with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableSnowDispenser{
+var ClassNameToDescriptor = map[string]FGBuildableSnowDispenser{
 	"Build_SnowDispenser_C": SnowDispenser,
 }

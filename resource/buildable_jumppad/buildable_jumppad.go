@@ -137,13 +137,13 @@ Caution: Be sure to land safely!`,
 )
 
 func GetByClassName(className string) (FGBuildableJumppad, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableJumppad{}, fmt.Errorf("failed to find FGBuildableJumppad with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableJumppad{
+var ClassNameToDescriptor = map[string]FGBuildableJumppad{
 	"Build_JumpPadAdjustable_C": JumpPadAdjustable,
 }

@@ -107,13 +107,13 @@ var (
 )
 
 func GetByClassName(className string) (FGBuildableTrainPlatformEmpty, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableTrainPlatformEmpty{}, fmt.Errorf("failed to find FGBuildableTrainPlatformEmpty with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableTrainPlatformEmpty{
+var ClassNameToDescriptor = map[string]FGBuildableTrainPlatformEmpty{
 	"Build_TrainPlatformEmpty_C": TrainPlatformEmpty,
 }

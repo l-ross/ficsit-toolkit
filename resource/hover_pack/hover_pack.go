@@ -99,13 +99,13 @@ var (
 )
 
 func GetByClassName(className string) (FGHoverPack, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGHoverPack{}, fmt.Errorf("failed to find FGHoverPack with class name %s", className)
 }
 
-var classNameToVar = map[string]FGHoverPack{
+var ClassNameToDescriptor = map[string]FGHoverPack{
 	"Equip_HoverPack_C": HoverPack,
 }

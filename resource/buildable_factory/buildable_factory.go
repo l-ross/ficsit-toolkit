@@ -330,14 +330,14 @@ You will finally have a friend!
 )
 
 func GetByClassName(className string) (FGBuildableFactory, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableFactory{}, fmt.Errorf("failed to find FGBuildableFactory with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableFactory{
+var ClassNameToDescriptor = map[string]FGBuildableFactory{
 	"Build_CandyCaneDecor_C": CandyCaneDecor,
 	"Build_JumpPad_C":        JumpPad,
 	"Build_JumpPadTilted_C":  JumpPadTilted,

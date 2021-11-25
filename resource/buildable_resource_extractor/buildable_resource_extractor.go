@@ -303,14 +303,14 @@ Can be built on an Oil Node to extract Crude Oil. Extraction rates depend on nod
 )
 
 func GetByClassName(className string) (FGBuildableResourceExtractor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableResourceExtractor{}, fmt.Errorf("failed to find FGBuildableResourceExtractor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableResourceExtractor{
+var ClassNameToDescriptor = map[string]FGBuildableResourceExtractor{
 	"Build_MinerMk1_C": MinerMk1,
 	"Build_MinerMk2_C": MinerMk2,
 	"Build_MinerMk3_C": MinerMk3,

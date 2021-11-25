@@ -185,14 +185,14 @@ var (
 )
 
 func GetByClassName(className string) (FGVehicleDescriptor, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGVehicleDescriptor{}, fmt.Errorf("failed to find FGVehicleDescriptor with class name %s", className)
 }
 
-var classNameToVar = map[string]FGVehicleDescriptor{
+var ClassNameToDescriptor = map[string]FGVehicleDescriptor{
 	"Desc_CyberWagon_C":     CyberWagon,
 	"Desc_DroneTransport_C": DroneTransport,
 	"Desc_Explorer_C":       Explorer,

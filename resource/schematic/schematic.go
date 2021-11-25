@@ -12100,14 +12100,14 @@ var (
 )
 
 func GetByClassName(className string) (FGSchematic, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGSchematic{}, fmt.Errorf("failed to find FGSchematic with class name %s", className)
 }
 
-var classNameToVar = map[string]FGSchematic{
+var ClassNameToDescriptor = map[string]FGSchematic{
 	"Research_ACarapace_0_C":                           ACarapace0,
 	"Research_ACarapace_1_C":                           ACarapace1,
 	"Research_ACarapace_2_C":                           ACarapace2,
@@ -12420,14 +12420,14 @@ var classNameToVar = map[string]FGSchematic{
 func GetByFullName(fullName string) (FGSchematic, error) {
 	fullName = fmt.Sprintf("BlueprintGeneratedClass %s", fullName)
 
-	if v, ok := fullNameToVar[fullName]; ok {
+	if v, ok := FullNameToDescriptor[fullName]; ok {
 		return v, nil
 	}
 
 	return FGSchematic{}, fmt.Errorf("failed to find FGSchematic with full name %s", fullName)
 }
 
-var fullNameToVar = map[string]FGSchematic{
+var FullNameToDescriptor = map[string]FGSchematic{
 	"BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_0.Research_ACarapace_0_C":                                          ACarapace0,
 	"BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_1.Research_ACarapace_1_C":                                          ACarapace1,
 	"BlueprintGeneratedClass /Game/FactoryGame/Schematics/Research/AlienOrganisms_RS/Research_ACarapace_2.Research_ACarapace_2_C":                                          ACarapace2,

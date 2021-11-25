@@ -62,13 +62,13 @@ Has a wide turn angle so make sure to plan it out properly.`,
 )
 
 func GetByClassName(className string) (FGBuildableRailroadTrack, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableRailroadTrack{}, fmt.Errorf("failed to find FGBuildableRailroadTrack with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableRailroadTrack{
+var ClassNameToDescriptor = map[string]FGBuildableRailroadTrack{
 	"Build_RailroadTrack_C": RailroadTrack,
 }

@@ -60,13 +60,13 @@ A Hyper Tube Entrance needs to be attached to power and enter a Hyper Tube syste
 )
 
 func GetByClassName(className string) (FGBuildablePipeHyper, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildablePipeHyper{}, fmt.Errorf("failed to find FGBuildablePipeHyper with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildablePipeHyper{
+var ClassNameToDescriptor = map[string]FGBuildablePipeHyper{
 	"Build_PipeHyper_C": PipeHyper,
 }

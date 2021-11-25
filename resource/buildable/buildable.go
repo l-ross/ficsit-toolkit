@@ -248,14 +248,14 @@ These parts can then be used in construction of different factory buildings, veh
 )
 
 func GetByClassName(className string) (FGBuildable, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildable{}, fmt.Errorf("failed to find FGBuildable with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildable{
+var ClassNameToDescriptor = map[string]FGBuildable{
 	"Build_ConveyorPoleWall_C":        ConveyorPoleWall,
 	"Build_HyperTubeWallHole_C":       HyperTubeWallHole,
 	"Build_HyperTubeWallSupport_C":    HyperTubeWallSupport,

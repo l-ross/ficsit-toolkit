@@ -59,13 +59,13 @@ var (
 )
 
 func GetByClassName(className string) (FGObjectScanner, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGObjectScanner{}, fmt.Errorf("failed to find FGObjectScanner with class name %s", className)
 }
 
-var classNameToVar = map[string]FGObjectScanner{
+var ClassNameToDescriptor = map[string]FGObjectScanner{
 	"Equip_ObjectScanner_C": ObjectScanner,
 }

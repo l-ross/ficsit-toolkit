@@ -6713,14 +6713,14 @@ var (
 )
 
 func GetByClassName(className string) (FGRecipe, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGRecipe{}, fmt.Errorf("failed to find FGRecipe with class name %s", className)
 }
 
-var classNameToVar = map[string]FGRecipe{
+var ClassNameToDescriptor = map[string]FGRecipe{
 	"Recipe_AILimiter_C":                              AILimiter,
 	"Recipe_Alternate_AdheredIronPlate_C":             AlternateAdheredIronPlate,
 	"Recipe_Alternate_AlcladCasing_C":                 AlternateAlcladCasing,
@@ -7144,14 +7144,14 @@ var classNameToVar = map[string]FGRecipe{
 func GetByFullName(fullName string) (FGRecipe, error) {
 	fullName = fmt.Sprintf("BlueprintGeneratedClass %s", fullName)
 
-	if v, ok := fullNameToVar[fullName]; ok {
+	if v, ok := FullNameToDescriptor[fullName]; ok {
 		return v, nil
 	}
 
 	return FGRecipe{}, fmt.Errorf("failed to find FGRecipe with full name %s", fullName)
 }
 
-var fullNameToVar = map[string]FGRecipe{
+var FullNameToDescriptor = map[string]FGRecipe{
 	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/Assembler/Recipe_AILimiter.Recipe_AILimiter_C":                                                                      AILimiter,
 	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_AdheredIronPlate.Recipe_Alternate_AdheredIronPlate_C":                 AlternateAdheredIronPlate,
 	"BlueprintGeneratedClass /Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AlcladCasing.Recipe_Alternate_AlcladCasing_C":                         AlternateAlcladCasing,

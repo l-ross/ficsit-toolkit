@@ -112,13 +112,13 @@ You can connect power to the train station to power up the trains on the railway
 )
 
 func GetByClassName(className string) (FGBuildableRailroadStation, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableRailroadStation{}, fmt.Errorf("failed to find FGBuildableRailroadStation with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableRailroadStation{
+var ClassNameToDescriptor = map[string]FGBuildableRailroadStation{
 	"Build_TrainStation_C": TrainStation,
 }

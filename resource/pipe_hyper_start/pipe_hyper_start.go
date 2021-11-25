@@ -123,13 +123,13 @@ var (
 )
 
 func GetByClassName(className string) (FGPipeHyperStart, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGPipeHyperStart{}, fmt.Errorf("failed to find FGPipeHyperStart with class name %s", className)
 }
 
-var classNameToVar = map[string]FGPipeHyperStart{
+var ClassNameToDescriptor = map[string]FGPipeHyperStart{
 	"Build_PipeHyperStart_C": PipeHyperStart,
 }

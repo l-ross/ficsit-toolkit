@@ -112,13 +112,13 @@ Participating pioneers will be compensated with Coupons to be spend at the AWESO
 )
 
 func GetByClassName(className string) (FGBuildableResourceSink, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableResourceSink{}, fmt.Errorf("failed to find FGBuildableResourceSink with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableResourceSink{
+var ClassNameToDescriptor = map[string]FGBuildableResourceSink{
 	"Build_ResourceSink_C": ResourceSink,
 }

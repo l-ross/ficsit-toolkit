@@ -613,14 +613,14 @@ The windows allow Pioneers to see through the wall.`,
 )
 
 func GetByClassName(className string) (FGBuildableWall, error) {
-	if v, ok := classNameToVar[className]; ok {
+	if v, ok := ClassNameToDescriptor[className]; ok {
 		return v, nil
 	}
 
 	return FGBuildableWall{}, fmt.Errorf("failed to find FGBuildableWall with class name %s", className)
 }
 
-var classNameToVar = map[string]FGBuildableWall{
+var ClassNameToDescriptor = map[string]FGBuildableWall{
 	"Build_Fence_01_C":                   Fence01,
 	"Build_Wall_8x4_01_C":                Wall8x401,
 	"Build_Wall_8x4_02_C":                Wall8x402,
