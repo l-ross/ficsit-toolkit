@@ -14,8 +14,8 @@ import (
 type Production interface {
 	PowerConsumption() float32
 	CurrentRecipe() *Recipe.FGRecipe
-	InputInventory() []InventoryStack
-	OutputInventory() []InventoryStack
+	InputInventory() []*InventoryStack
+	OutputInventory() []*InventoryStack
 	IsProducing() bool
 	TimeSinceStartOrStopProducing() time.Duration
 }
@@ -23,8 +23,8 @@ type Production interface {
 type production struct {
 	powerConsumption              float32
 	currentRecipe                 *Recipe.FGRecipe
-	inputInventory                []InventoryStack
-	outputInventory               []InventoryStack
+	inputInventory                []*InventoryStack
+	outputInventory               []*InventoryStack
 	isProducing                   bool
 	timeSinceStartOrStopProducing time.Duration
 }
@@ -41,12 +41,12 @@ func (p *production) CurrentRecipe() *Recipe.FGRecipe {
 }
 
 // InputInventory returns the input inventory of this building.
-func (p *production) InputInventory() []InventoryStack {
+func (p *production) InputInventory() []*InventoryStack {
 	return p.inputInventory
 }
 
 // OutputInventory returns the output inventory of this building.
-func (p *production) OutputInventory() []InventoryStack {
+func (p *production) OutputInventory() []*InventoryStack {
 	return p.outputInventory
 }
 
@@ -112,80 +112,6 @@ func (p *production) setOutputInventory(prop *property.Property, s *save.Save) e
 	p.outputInventory = stacks
 
 	return nil
-}
-
-func getInventoryStacks(prop *property.Property, s *save.Save) ([]InventoryStack, error) {
-	objValue, err := prop.GetObjectValue()
-	if err != nil {
-		return nil, err
-	}
-
-	component, ok := s.Components[objValue.PathName]
-	if !ok {
-		return nil, fmt.Errorf("failed to find component %s", objValue.PathName)
-	}
-
-	p, err := getPropFromArray("mInventoryStacks", component.Properties)
-	if err != nil {
-		return nil, err
-	}
-
-	arrayProp, err := p.GetArrayValue()
-	if err != nil {
-		return nil, err
-	}
-
-	structProps, err := arrayProp.GetStructValues()
-	if err != nil {
-		return nil, err
-	}
-
-	stackProps := getValuesFromStructProperty("InventoryStack", structProps)
-	if len(structProps) == 0 {
-		return nil, fmt.Errorf("failed to find InventoryStack")
-	}
-
-	stacks := make([]InventoryStack, 0)
-
-	for _, p := range stackProps {
-		as, err := p.GetArbitraryStruct()
-		if err != nil {
-			return nil, err
-		}
-
-		itemProp, err := getPropFromArray("Item", as.Properties)
-		if err != nil {
-			return nil, err
-		}
-
-		itemStruct, err := itemProp.GetStructValue()
-		if err != nil {
-			return nil, err
-		}
-
-		iiStruct, err := itemStruct.GetInventoryItemStruct()
-		if err != nil {
-			return nil, err
-		}
-
-		if iiStruct.ItemName == "" {
-			continue
-		}
-
-		i, err := getItemDescriptorByName(iiStruct.ItemName)
-		if err != nil {
-			return nil, err
-		}
-
-		is := InventoryStack{
-			Item:     i,
-			Quantity: int(iiStruct.NumItems),
-		}
-
-		stacks = append(stacks, is)
-	}
-
-	return stacks, nil
 }
 
 func (p *production) setPowerInfo(prop *property.Property, s *save.Save) error {

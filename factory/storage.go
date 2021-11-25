@@ -8,11 +8,11 @@ import (
 )
 
 type storage struct {
-	inventory []InventoryStack
+	inventory []*InventoryStack
 }
 
 // Inventory returns the contents of this building.
-func (s *storage) Inventory() []InventoryStack {
+func (s *storage) Inventory() []*InventoryStack {
 	return s.inventory
 }
 

@@ -3,7 +3,6 @@ package factory
 import (
 	"io"
 
-	"github.com/l-ross/ficsit-toolkit/factory/typepath"
 	"github.com/l-ross/ficsit-toolkit/save"
 	"gonum.org/v1/gonum/graph/simple"
 )
@@ -21,6 +20,9 @@ type Factory struct {
 	StorageContainers map[int64]*StorageContainer
 	Conveyors         map[int64]Conveyor
 	Production        map[int64]Production
+
+	// Stores the next ID that should be assigned for a building in the conveyorGraph.
+	nextID int64
 }
 
 // Load the provided Satisfactory save file.
@@ -44,7 +46,7 @@ func Load(r io.Reader) (*Factory, error) {
 
 	// Load all buildings
 	for _, e := range s.Entities {
-		if isBuilding(e) {
+		if isLoadableBuilding(e) {
 			b, err := f.loadBuilding(e, s)
 			if err != nil {
 				return nil, err
@@ -82,17 +84,7 @@ func Load(r io.Reader) (*Factory, error) {
 	return f, nil
 }
 
-func isBuilding(e *save.Entity) bool {
-	if e.ParentObjectName != "Persistent_Level:PersistentLevel.BuildableSubsystem" {
-		return false
-	}
-
-	// Check if the type path exists in our prioritizedLoading.
-	for _, loaders := range prioritizedLoading {
-		if _, ok := loaders[typepath.TypePath(e.TypePath)]; ok {
-			return true
-		}
-	}
-
-	return true
+func (f *Factory) id() int64 {
+	f.nextID++
+	return f.nextID
 }

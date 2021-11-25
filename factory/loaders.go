@@ -5,6 +5,20 @@ import (
 	"github.com/l-ross/ficsit-toolkit/save"
 )
 
+func init() {
+	loadable = make(map[typepath.TypePath]bool)
+
+	for _, p := range prioritizedLoading {
+		for t := range p {
+			loadable[t] = true
+		}
+	}
+}
+
+// Populated by flattening prioritizedLoading to determine all the building type paths
+// we are interested in loading.
+var loadable map[typepath.TypePath]bool
+
 type loader func(f *Factory, b *building, s *save.Save) (Building, error)
 
 // When loading we need to ensure that some buildings are loaded before others.
@@ -32,4 +46,20 @@ var prioritizedLoading = []map[typepath.TypePath]loader{
 		typepath.StorageContainerMk2: (*Factory).loadStorageContainer,
 		typepath.Constructor:         (*Factory).loadConstructor,
 	},
+}
+
+// isLoadableBuilding will return true if the entity is a building we are interested in loading.
+func isLoadableBuilding(e *save.Entity) bool {
+	if e.ParentObjectName != "Persistent_Level:PersistentLevel.BuildableSubsystem" {
+		return false
+	}
+
+	// Only load buildings we are interested in.
+	t := typepath.TypePath(e.TypePath)
+
+	if _, ok := loadable[t]; ok {
+		return true
+	}
+
+	return false
 }

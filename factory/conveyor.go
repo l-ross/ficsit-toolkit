@@ -14,7 +14,7 @@ import (
 
 // Conveyor is implemented by ConveyorBelt and ConveyorLift
 type Conveyor interface {
-	BeltContents() []InventoryStack
+	BeltContents() []*InventoryStack
 }
 
 type ConveyorBelt struct {
@@ -22,12 +22,12 @@ type ConveyorBelt struct {
 
 	BeltDescriptor BuildableConveyorBelt.FGBuildableConveyorBelt
 
-	beltContents []InventoryStack
+	beltContents []*InventoryStack
 	*building
 }
 
 // BeltContents will return the items that are currently on this ConveyorBelt
-func (c *ConveyorBelt) BeltContents() []InventoryStack {
+func (c *ConveyorBelt) BeltContents() []*InventoryStack {
 	return c.beltContents
 }
 
@@ -71,12 +71,12 @@ type ConveyorLift struct {
 	Mark           int
 	LiftDescriptor BuildableConveyorLift.FGBuildableConveyorLift
 
-	beltContents []InventoryStack
+	beltContents []*InventoryStack
 	*building
 }
 
 // BeltContents will return the items that are currently on this ConveyorLift
-func (c *ConveyorLift) BeltContents() []InventoryStack {
+func (c *ConveyorLift) BeltContents() []*InventoryStack {
 	return c.beltContents
 }
 
@@ -116,7 +116,7 @@ func (f *Factory) loadConveyorLift(b *building, s *save.Save) (Building, error) 
 	return c, nil
 }
 
-func loadBeltContents(b *building) ([]InventoryStack, error) {
+func loadBeltContents(b *building) ([]*InventoryStack, error) {
 	e, err := b.entity.Extra.GetConveyorBelt()
 	if err != nil {
 		return nil, err
@@ -128,21 +128,23 @@ func loadBeltContents(b *building) ([]InventoryStack, error) {
 		itemCount[item.ResourceName]++
 	}
 
-	is := make([]InventoryStack, 0)
+	stacks := make([]*InventoryStack, 0)
 
 	for item, count := range itemCount {
-		iDesc, err := getItemDescriptorByName(item)
+		split := strings.Split(item, ".")
+		if len(split) != 2 {
+			return nil, fmt.Errorf("failed to split item name %q to get class name", item)
+		}
+
+		is, err := getInventoryStack(item, count)
 		if err != nil {
 			return nil, err
 		}
 
-		is = append(is, InventoryStack{
-			Item:     iDesc,
-			Quantity: count,
-		})
+		stacks = append(stacks, is)
 	}
 
-	return is, nil
+	return stacks, nil
 }
 
 func (f *Factory) loadConveyorConnection(c *save.Component) error {

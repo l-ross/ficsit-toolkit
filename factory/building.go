@@ -79,13 +79,8 @@ func (b *building) SecondaryColor() property.LinearColorStruct {
 }
 
 func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
-	id, err := getID(e.InstanceName)
-	if err != nil {
-		return nil, err
-	}
-
 	b := &building{
-		id:       id,
+		id:       f.id(),
 		typePath: typepath.TypePath(e.TypePath),
 		entity:   e,
 	}
@@ -101,7 +96,7 @@ func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
 	}
 
 	if hasConveyor {
-		f.conveyorGraph.AddNode(simple.Node(id))
+		f.conveyorGraph.AddNode(simple.Node(b.id))
 	}
 
 	for _, prop := range e.Properties {
@@ -164,13 +159,6 @@ func (b *building) setRecipe(p *property.Property) error {
 	o, err := p.GetObjectValue()
 	if err != nil {
 		return err
-	}
-
-	// TODO: What's the difference between RailroadTrackIntegrated_C and RailroadTrack_C?
-	switch o.PathName {
-	case "/Game/FactoryGame/Recipes/Buildings/Recipe_RailroadTrackIntegrated.Recipe_RailroadTrackIntegrated_C":
-		b.builtWithRecipe = Recipe.RailroadTrack
-		return nil
 	}
 
 	r, err := Recipe.GetByFullName(o.PathName)
