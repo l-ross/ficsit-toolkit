@@ -14,8 +14,7 @@
 # Satisfactory save files
 *.sav
 
-# Extensions used for dumped data during debugging.
-*.dump
-*.json
+# WIP directory
+wip/
 
 .DS_STORE
