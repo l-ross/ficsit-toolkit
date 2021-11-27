@@ -7,178 +7,178 @@ import (
 )
 
 type FGBuildableConveyorLift struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsReversed                             bool
-	MIsUseable                              bool
-	MItemMeshMap                            string
-	MItems                                  string
-	MMaterialNameToInstanceManager          string
-	MMeshHeight                             float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MSpeed                                  float64
-	MToggleDormancyOnInteraction            bool
-	MTopTransform                           string
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsReversed                        bool
+	MIsUseable                         bool
+	MItemMeshMap                       string
+	MItems                             string
+	MMeshHeight                        float64
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSkipBuildEffect                   bool
+	MSnappedPassthroughs               string
+	MSpeed                             float64
+	MToggleDormancyOnInteraction       bool
+	MTopTransform                      string
+	MaxRenderDistance                  float64
 }
 
 var (
 	ConveyorLiftMk1 = FGBuildableConveyorLift{
-		Name:                                    "ConveyorLiftMk1",
-		ClassName:                               "Build_ConveyorLiftMk1_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MDescription:                            `Transports up to 60 resources per minute. Used to move resources between floors.`,
-		MDisplayName:                            `Conveyor Lift Mk.1`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsReversed:                             false,
-		MIsUseable:                              false,
-		MItemMeshMap:                            `()`,
-		MItems:                                  `()`,
-		MMaterialNameToInstanceManager:          `()`,
-		MMeshHeight:                             200.000000,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MSpeed:                                  120.000000,
-		MToggleDormancyOnInteraction:            false,
-		MTopTransform:                           `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
-		MaxRenderDistance:                       -1.000000,
+		Name:                               "ConveyorLiftMk1",
+		ClassName:                          "Build_ConveyorLiftMk1_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
+		MDescription:                       `Transports up to 60 resources per minute. Used to move resources between floors.`,
+		MDisplayName:                       `Conveyor Lift Mk.1`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsReversed:                        false,
+		MIsUseable:                         false,
+		MItemMeshMap:                       `()`,
+		MItems:                             `()`,
+		MMeshHeight:                        200.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MSnappedPassthroughs:               ``,
+		MSpeed:                             120.000000,
+		MToggleDormancyOnInteraction:       false,
+		MTopTransform:                      `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
+		MaxRenderDistance:                  -1.000000,
 	}
 
 	ConveyorLiftMk2 = FGBuildableConveyorLift{
-		Name:                                    "ConveyorLiftMk2",
-		ClassName:                               "Build_ConveyorLiftMk2_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MDescription:                            `Transports up to 120 resources per minute. Used to move resources between floors.`,
-		MDisplayName:                            `Conveyor Lift Mk.2`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsReversed:                             false,
-		MIsUseable:                              false,
-		MItemMeshMap:                            `()`,
-		MItems:                                  `()`,
-		MMaterialNameToInstanceManager:          `()`,
-		MMeshHeight:                             200.000000,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MSpeed:                                  240.000000,
-		MToggleDormancyOnInteraction:            false,
-		MTopTransform:                           `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
-		MaxRenderDistance:                       -1.000000,
+		Name:                               "ConveyorLiftMk2",
+		ClassName:                          "Build_ConveyorLiftMk2_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
+		MDescription:                       `Transports up to 120 resources per minute. Used to move resources between floors.`,
+		MDisplayName:                       `Conveyor Lift Mk.2`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsReversed:                        false,
+		MIsUseable:                         false,
+		MItemMeshMap:                       `()`,
+		MItems:                             `()`,
+		MMeshHeight:                        200.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MSnappedPassthroughs:               ``,
+		MSpeed:                             240.000000,
+		MToggleDormancyOnInteraction:       false,
+		MTopTransform:                      `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
+		MaxRenderDistance:                  -1.000000,
 	}
 
 	ConveyorLiftMk3 = FGBuildableConveyorLift{
-		Name:                                    "ConveyorLiftMk3",
-		ClassName:                               "Build_ConveyorLiftMk3_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MDescription:                            `Transports up to 270 resources per minute. Used to move resources between floors.`,
-		MDisplayName:                            `Conveyor Lift Mk.3`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsReversed:                             false,
-		MIsUseable:                              false,
-		MItemMeshMap:                            `()`,
-		MItems:                                  `()`,
-		MMaterialNameToInstanceManager:          `()`,
-		MMeshHeight:                             200.000000,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MSpeed:                                  540.000000,
-		MToggleDormancyOnInteraction:            false,
-		MTopTransform:                           `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
-		MaxRenderDistance:                       -1.000000,
+		Name:                               "ConveyorLiftMk3",
+		ClassName:                          "Build_ConveyorLiftMk3_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
+		MDescription:                       `Transports up to 270 resources per minute. Used to move resources between floors.`,
+		MDisplayName:                       `Conveyor Lift Mk.3`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsReversed:                        false,
+		MIsUseable:                         false,
+		MItemMeshMap:                       `()`,
+		MItems:                             `()`,
+		MMeshHeight:                        200.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MSnappedPassthroughs:               ``,
+		MSpeed:                             540.000000,
+		MToggleDormancyOnInteraction:       false,
+		MTopTransform:                      `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
+		MaxRenderDistance:                  -1.000000,
 	}
 
 	ConveyorLiftMk4 = FGBuildableConveyorLift{
-		Name:                                    "ConveyorLiftMk4",
-		ClassName:                               "Build_ConveyorLiftMk4_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MDescription:                            `Transports up to 480 resources per minute. Used to move resources between floors.`,
-		MDisplayName:                            `Conveyor Lift Mk.4`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsReversed:                             false,
-		MIsUseable:                              false,
-		MItemMeshMap:                            `()`,
-		MItems:                                  `()`,
-		MMaterialNameToInstanceManager:          `()`,
-		MMeshHeight:                             200.000000,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MSpeed:                                  960.000000,
-		MToggleDormancyOnInteraction:            false,
-		MTopTransform:                           `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
-		MaxRenderDistance:                       -1.000000,
+		Name:                               "ConveyorLiftMk4",
+		ClassName:                          "Build_ConveyorLiftMk4_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
+		MDescription:                       `Transports up to 480 resources per minute. Used to move resources between floors.`,
+		MDisplayName:                       `Conveyor Lift Mk.4`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsReversed:                        false,
+		MIsUseable:                         false,
+		MItemMeshMap:                       `()`,
+		MItems:                             `()`,
+		MMeshHeight:                        200.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MSnappedPassthroughs:               ``,
+		MSpeed:                             960.000000,
+		MToggleDormancyOnInteraction:       false,
+		MTopTransform:                      `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
+		MaxRenderDistance:                  -1.000000,
 	}
 
 	ConveyorLiftMk5 = FGBuildableConveyorLift{
-		Name:                                    "ConveyorLiftMk5",
-		ClassName:                               "Build_ConveyorLiftMk5_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MDescription:                            `Transports up to 780 resources per minute. Used to move resources between floors.`,
-		MDisplayName:                            `Conveyor Lift Mk.5`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsReversed:                             false,
-		MIsUseable:                              false,
-		MItemMeshMap:                            `()`,
-		MItems:                                  `()`,
-		MMaterialNameToInstanceManager:          `()`,
-		MMeshHeight:                             200.000000,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MSpeed:                                  1560.000000,
-		MToggleDormancyOnInteraction:            false,
-		MTopTransform:                           `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
-		MaxRenderDistance:                       -1.000000,
+		Name:                               "ConveyorLiftMk5",
+		ClassName:                          "Build_ConveyorLiftMk5_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
+		MDescription:                       `Transports up to 780 resources per minute. Used to move resources between floors.`,
+		MDisplayName:                       `Conveyor Lift Mk.5`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsReversed:                        false,
+		MIsUseable:                         false,
+		MItemMeshMap:                       `()`,
+		MItems:                             `()`,
+		MMeshHeight:                        200.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MSnappedPassthroughs:               ``,
+		MSpeed:                             1560.000000,
+		MToggleDormancyOnInteraction:       false,
+		MTopTransform:                      `(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),Translation=(X=0.000000,Y=0.000000,Z=0.000000),Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))`,
+		MaxRenderDistance:                  -1.000000,
 	}
 )
 

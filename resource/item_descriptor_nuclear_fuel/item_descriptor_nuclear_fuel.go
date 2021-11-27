@@ -13,6 +13,7 @@ type FGItemDescriptorNuclearFuel struct {
 	ClassName               string
 	MAbbreviatedDisplayName string
 	MAmountOfWaste          int
+	MBuildMenuPriority      float64
 	MCanBeDiscarded         bool
 	MDescription            string
 	MDisplayName            string
@@ -20,6 +21,7 @@ type FGItemDescriptorNuclearFuel struct {
 	MFluidColor             string
 	MForm                   resource.Form
 	MGasColor               string
+	MMenuPriority           float64
 	MPersistentBigIcon      string
 	MRadioactiveDecay       float64
 	MRememberPickUp         bool
@@ -27,6 +29,7 @@ type FGItemDescriptorNuclearFuel struct {
 	MSmallIcon              string
 	MSpentFuelClass         string
 	MStackSize              resource.StackSize
+	MSubCategories          string
 }
 
 var (
@@ -35,6 +38,7 @@ var (
 		ClassName:               "Desc_NuclearFuelRod_C",
 		MAbbreviatedDisplayName: ``,
 		MAmountOfWaste:          50,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MDescription: `Used as fuel for the Nuclear Power Plant.
 
@@ -45,6 +49,7 @@ Caution: Moderately Radioactive.`,
 		MFluidColor:         `(B=0,G=0,R=0,A=0)`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:       0.000000,
 		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Parts/NuclearFuelRod/UI/IconDesc_NuclearFuelRod_256.IconDesc_NuclearFuelRod_256`,
 		MRadioactiveDecay:   50.000000,
 		MRememberPickUp:     false,
@@ -52,6 +57,7 @@ Caution: Moderately Radioactive.`,
 		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Parts/NuclearFuelRod/UI/IconDesc_NuclearFuelRod_64.IconDesc_NuclearFuelRod_64`,
 		MSpentFuelClass:     `BlueprintGeneratedClass'/Game/FactoryGame/Resource/Parts/NuclearWaste/Desc_NuclearWaste.Desc_NuclearWaste_C'`,
 		MStackSize:          resource.Small,
+		MSubCategories:      ``,
 	}
 
 	PlutoniumFuelRod = FGItemDescriptorNuclearFuel{
@@ -59,6 +65,7 @@ Caution: Moderately Radioactive.`,
 		ClassName:               "Desc_PlutoniumFuelRod_C",
 		MAbbreviatedDisplayName: ``,
 		MAmountOfWaste:          10,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MDescription: `Used as fuel for the Nuclear Power Plant.
 
@@ -69,6 +76,7 @@ Caution: HIGHLY Radioactive.`,
 		MFluidColor:         `(B=0,G=0,R=0,A=0)`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:       0.000000,
 		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Parts/PlutoniumFuelRods/UI/IconDesc_PlutoniumFuelRod_256.IconDesc_PlutoniumFuelRod_256`,
 		MRadioactiveDecay:   250.000000,
 		MRememberPickUp:     false,
@@ -76,6 +84,7 @@ Caution: HIGHLY Radioactive.`,
 		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Parts/PlutoniumFuelRods/UI/IconDesc_PlutoniumFuelRod_64.IconDesc_PlutoniumFuelRod_64`,
 		MSpentFuelClass:     `BlueprintGeneratedClass'/Game/FactoryGame/Resource/Parts/NuclearWaste/Desc_PlutoniumWaste.Desc_PlutoniumWaste_C'`,
 		MStackSize:          resource.Small,
+		MSubCategories:      ``,
 	}
 )
 

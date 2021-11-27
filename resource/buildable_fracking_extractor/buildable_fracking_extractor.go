@@ -9,92 +9,90 @@ import (
 )
 
 type FGBuildableFrackingExtractor struct {
-	Name                                    string
-	ClassName                               string
-	MAddToSignificanceManager               bool
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MAllowedResourceForms                   string
-	MAllowedResources                       string
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCachedSkeletalMeshes                   string
-	MCanChangePotential                     bool
-	MDescription                            string
-	MDisplayName                            string
-	MEffectUpdateInterval                   float64
-	MExcludeFromMaterialInstancing          string
-	MExtractCycleTime                       float64
-	MExtractStartupTime                     float64
-	MExtractStartupTimer                    float64
-	MExtractorTypeName                      string
-	MFluidStackSizeDefault                  resource.StackSize
-	MFluidStackSizeMultiplier               int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MItemsPerCycle                          int
-	MMaterialNameToInstanceManager          string
-	MMaxPotential                           float64
-	MMaxPotentialIncreasePerCrystal         float64
-	MMinPotential                           float64
-	MMinimumProducingTime                   float64
-	MMinimumStoppedTime                     float64
-	MNumCyclesForProductivity               int
-	MOnHasPowerChanged                      string
-	MOnHasProductionChanged                 string
-	MOnHasStandbyChanged                    string
-	MOnProductionStatusChanged              string
-	MOnlyAllowCertainResources              bool
-	MPipeOutputConnections                  string
-	MPowerConsumption                       float64
-	MPowerConsumptionExponent               float64
-	MReplicatedFlowRate                     float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSignificanceRange                      float64
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
-	OnReplicationDetailActorCreatedEvent    string
+	Name                                 string
+	ClassName                            string
+	MAddToSignificanceManager            bool
+	MAllowColoring                       bool
+	MAllowedResourceForms                string
+	MAllowedResources                    string
+	MAttachmentPoints                    string
+	MBuildEffectSpeed                    float64
+	MCachedSkeletalMeshes                string
+	MCanChangePotential                  bool
+	MCreateClearanceMeshRepresentation   bool
+	MDescription                         string
+	MDisplayName                         string
+	MDoesHaveShutdownAnimation           bool
+	MEffectUpdateInterval                float64
+	MExtractCycleTime                    float64
+	MExtractStartupTime                  float64
+	MExtractStartupTimer                 float64
+	MExtractorTypeName                   string
+	MFluidStackSizeDefault               resource.StackSize
+	MFluidStackSizeMultiplier            int
+	MForceNetUpdateOnRegisterPlayer      bool
+	MHideOnBuildEffectStart              bool
+	MHighlightVector                     string
+	MInteractingPlayers                  string
+	MIsUseable                           bool
+	MItemsPerCycle                       int
+	MMaxPotential                        float64
+	MMaxPotentialIncreasePerCrystal      float64
+	MMinPotential                        float64
+	MMinimumProducingTime                float64
+	MMinimumStoppedTime                  float64
+	MNumCyclesForProductivity            int
+	MOnHasPowerChanged                   string
+	MOnHasProductionChanged              string
+	MOnHasStandbyChanged                 string
+	MOnlyAllowCertainResources           bool
+	MPipeOutputConnections               string
+	MPowerConsumption                    float64
+	MPowerConsumptionExponent            float64
+	MReplicatedFlowRate                  float64
+	MShouldModifyWorldGrid               bool
+	MShouldShowAttachmentPointVisuals    bool
+	MShouldShowHighlight                 bool
+	MSignificanceRange                   float64
+	MSkipBuildEffect                     bool
+	MToggleDormancyOnInteraction         bool
+	MaxRenderDistance                    float64
+	OnReplicationDetailActorCreatedEvent string
 }
 
 var (
 	FrackingExtractor = FGBuildableFrackingExtractor{
-		Name:                                    "FrackingExtractor",
-		ClassName:                               "Build_FrackingExtractor_C",
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MAllowedResourceForms:                   `(RF_LIQUID,RF_GAS)`,
-		MAllowedResources:                       `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"')`,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     true,
+		Name:                               "FrackingExtractor",
+		ClassName:                          "Build_FrackingExtractor_C",
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAllowedResourceForms:              `(RF_LIQUID,RF_GAS)`,
+		MAllowedResources:                  `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C"')`,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                true,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Normal extraction rate: 60m³ fluid per minute.
 Head Lift: 10 meters.
 (Allows fluids to be transported 10 meters upwards.)
 
 Can be placed on the activated sub-nodes of a Resource Well to collect the pressurized resources. Does not require Power.`,
 		MDisplayName:                         `Resource Well Extractor`,
+		MDoesHaveShutdownAnimation:           false,
 		MEffectUpdateInterval:                0.000000,
-		MExcludeFromMaterialInstancing:       ``,
 		MExtractCycleTime:                    1.000000,
 		MExtractStartupTime:                  -10.000000,
 		MExtractStartupTimer:                 10.000000,
 		MExtractorTypeName:                   `None`,
 		MFluidStackSizeDefault:               resource.Fluid,
 		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  ``,
 		MForceNetUpdateOnRegisterPlayer:      false,
 		MHideOnBuildEffectStart:              false,
 		MHighlightVector:                     `(X=0.000000,Y=0.000000,Z=0.000000)`,
 		MInteractingPlayers:                  ``,
 		MIsUseable:                           true,
 		MItemsPerCycle:                       1000,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -104,13 +102,13 @@ Can be placed on the activated sub-nodes of a Resource Well to collect the press
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MOnlyAllowCertainResources:           true,
 		MPipeOutputConnections:               ``,
 		MPowerConsumption:                    0.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MReplicatedFlowRate:                  0.000000,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   18000.000000,
 		MSkipBuildEffect:                     false,

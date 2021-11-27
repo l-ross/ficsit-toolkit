@@ -7,97 +7,97 @@ import (
 )
 
 type FGBuildableFloodlight struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFixtureAngle                           int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHasPower                               bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsDay                                  bool
-	MIsEnabled                              bool
-	MIsUseable                              bool
-	MLightControlData                       string
-	MMaterialNameToInstanceManager          string
-	MPowerConsumption                       float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MFixtureAngle                      int
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHasPower                          bool
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsDay                             bool
+	MIsEnabled                         bool
+	MIsUseable                         bool
+	MLightControlData                  string
+	MPowerConsumption                  float64
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSkipBuildEffect                   bool
+	MToggleDormancyOnInteraction       bool
+	MaxRenderDistance                  float64
+	OnBuildableLightSourceStateChanged string
 }
 
 var (
 	FloodlightPole = FGBuildableFloodlight{
-		Name:                                    "FloodlightPole",
-		ClassName:                               "Build_FloodlightPole_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "FloodlightPole",
+		ClassName:                          "Build_FloodlightPole_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `A tall light tower, specifically designed for illuminating large or outdoor spaces.
 
 Light color and intensity can be modified.
 Allows up to two Power Line connections.`,
-		MDisplayName:                    `Flood Light Tower`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFixtureAngle:                   50,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsDay:                          false,
-		MIsEnabled:                      true,
-		MIsUseable:                      true,
-		MLightControlData:               `(Intensity=1.000000)`,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConsumption:               6.000000,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                       `Flood Light Tower`,
+		MFixtureAngle:                      50,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHasPower:                          false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsDay:                             false,
+		MIsEnabled:                         true,
+		MIsUseable:                         true,
+		MLightControlData:                  `(Intensity=1.000000)`,
+		MPowerConsumption:                  6.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MToggleDormancyOnInteraction:       false,
+		MaxRenderDistance:                  -1.000000,
+		OnBuildableLightSourceStateChanged: `()`,
 	}
 
 	FloodlightWall = FGBuildableFloodlight{
-		Name:                                    "FloodlightWall",
-		ClassName:                               "Build_FloodlightWall_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "FloodlightWall",
+		ClassName:                          "Build_FloodlightWall_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Can be attached to Walls and Foundations to illuminate large spaces.
 
 Light color and intensity can be modified.
 Allows up to two Power Line connections.`,
-		MDisplayName:                    `Wall Mounted Flood Light`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFixtureAngle:                   30,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsDay:                          false,
-		MIsEnabled:                      true,
-		MIsUseable:                      false,
-		MLightControlData:               `(Intensity=1.000000)`,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConsumption:               6.000000,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                       `Wall Mounted Flood Light`,
+		MFixtureAngle:                      30,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHasPower:                          false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsDay:                             false,
+		MIsEnabled:                         true,
+		MIsUseable:                         false,
+		MLightControlData:                  `(Intensity=1.000000)`,
+		MPowerConsumption:                  6.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MToggleDormancyOnInteraction:       false,
+		MaxRenderDistance:                  -1.000000,
+		OnBuildableLightSourceStateChanged: `()`,
 	}
 )
 

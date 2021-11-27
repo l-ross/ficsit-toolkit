@@ -9,91 +9,90 @@ import (
 )
 
 type FGBuildableJumppad struct {
-	Name                                    string
-	ClassName                               string
-	CharactersToLaunch                      string
-	ComponentsToLaunch                      string
-	MAddToSignificanceManager               bool
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCachedSkeletalMeshes                   string
-	MCanChangePotential                     bool
-	MChargeRateMultiplier                   float64
-	MCurrentPowerLevel                      float64
-	MDescription                            string
-	MDestinationMeshHeightOffset            float64
-	MDisplayName                            string
-	MEffectUpdateInterval                   float64
-	MExcludeFromMaterialInstancing          string
-	MFluidStackSizeDefault                  resource.StackSize
-	MFluidStackSizeMultiplier               int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHasPowerForLaunch                      bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MKillTimer                              string
-	MLaunchAngle                            float64
-	MLaunchPowerCost                        float64
-	MLaunchVelocity                         float64
-	MMaterialNameToInstanceManager          string
-	MMaxPotential                           float64
-	MMaxPotentialIncreasePerCrystal         float64
-	MMinPotential                           float64
-	MMinimumProducingTime                   float64
-	MMinimumStoppedTime                     float64
-	MNumArrows                              int
-	MNumCyclesForProductivity               int
-	MOnHasPowerChanged                      string
-	MOnHasProductionChanged                 string
-	MOnHasStandbyChanged                    string
-	MOnProductionStatusChanged              string
-	MPlayerChainJumpResetTime               float64
-	MPowerBankCapacity                      float64
-	MPowerConsumption                       float64
-	MPowerConsumptionExponent               float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MShowTrajectoryCounter                  int
-	MSignificanceRange                      float64
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MTrajectoryData                         string
-	MTrajectoryGravityMultiplier            float64
-	MTrajectoryMeshRotation                 string
-	MTrajectoryMeshScale                    string
-	MaxRenderDistance                       float64
-	OnReplicationDetailActorCreatedEvent    string
-	VehiclesToLaunch                        string
+	Name                                 string
+	ClassName                            string
+	CharactersToLaunch                   string
+	ComponentsToLaunch                   string
+	MAddToSignificanceManager            bool
+	MAllowColoring                       bool
+	MAttachmentPoints                    string
+	MBuildEffectSpeed                    float64
+	MCachedSkeletalMeshes                string
+	MCanChangePotential                  bool
+	MChargeRateMultiplier                float64
+	MCreateClearanceMeshRepresentation   bool
+	MCurrentPowerLevel                   float64
+	MDescription                         string
+	MDestinationMeshHeightOffset         float64
+	MDisplayName                         string
+	MDoesHaveShutdownAnimation           bool
+	MEffectUpdateInterval                float64
+	MFluidStackSizeDefault               resource.StackSize
+	MFluidStackSizeMultiplier            int
+	MForceNetUpdateOnRegisterPlayer      bool
+	MHasPowerForLaunch                   bool
+	MHideOnBuildEffectStart              bool
+	MHighlightVector                     string
+	MInteractingPlayers                  string
+	MIsUseable                           bool
+	MKillTimer                           string
+	MLaunchAngle                         float64
+	MLaunchPowerCost                     float64
+	MLaunchVelocity                      float64
+	MMaxPotential                        float64
+	MMaxPotentialIncreasePerCrystal      float64
+	MMinPotential                        float64
+	MMinimumProducingTime                float64
+	MMinimumStoppedTime                  float64
+	MNumArrows                           int
+	MNumCyclesForProductivity            int
+	MOnHasPowerChanged                   string
+	MOnHasProductionChanged              string
+	MOnHasStandbyChanged                 string
+	MPlayerChainJumpResetTime            float64
+	MPowerBankCapacity                   float64
+	MPowerConsumption                    float64
+	MPowerConsumptionExponent            float64
+	MShouldModifyWorldGrid               bool
+	MShouldShowAttachmentPointVisuals    bool
+	MShouldShowHighlight                 bool
+	MShowTrajectoryCounter               int
+	MSignificanceRange                   float64
+	MSkipBuildEffect                     bool
+	MToggleDormancyOnInteraction         bool
+	MTrajectoryData                      string
+	MTrajectoryGravityMultiplier         float64
+	MTrajectoryMeshRotation              string
+	MTrajectoryMeshScale                 string
+	MaxRenderDistance                    float64
+	OnReplicationDetailActorCreatedEvent string
+	VehiclesToLaunch                     string
 }
 
 var (
 	JumpPadAdjustable = FGBuildableJumppad{
-		Name:                                    "JumpPadAdjustable",
-		ClassName:                               "Build_JumpPadAdjustable_C",
-		CharactersToLaunch:                      ``,
-		ComponentsToLaunch:                      ``,
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     false,
-		MChargeRateMultiplier:                   1.000000,
-		MCurrentPowerLevel:                      0.000000,
+		Name:                               "JumpPadAdjustable",
+		ClassName:                          "Build_JumpPadAdjustable_C",
+		CharactersToLaunch:                 ``,
+		ComponentsToLaunch:                 ``,
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                false,
+		MChargeRateMultiplier:              1.000000,
+		MCreateClearanceMeshRepresentation: true,
+		MCurrentPowerLevel:                 0.000000,
 		MDescription: `Used for quick, vertical traversal.
 The launch angle can be adjusted while building.
 Caution: Be sure to land safely!`,
 		MDestinationMeshHeightOffset:         430.000000,
 		MDisplayName:                         `Jump Pad`,
+		MDoesHaveShutdownAnimation:           false,
 		MEffectUpdateInterval:                0.000000,
-		MExcludeFromMaterialInstancing:       ``,
 		MFluidStackSizeDefault:               resource.Fluid,
 		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  ``,
 		MForceNetUpdateOnRegisterPlayer:      false,
 		MHasPowerForLaunch:                   false,
 		MHideOnBuildEffectStart:              false,
@@ -104,7 +103,6 @@ Caution: Be sure to land safely!`,
 		MLaunchAngle:                         -1.000000,
 		MLaunchPowerCost:                     20.000000,
 		MLaunchVelocity:                      2500.000000,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -115,12 +113,12 @@ Caution: Be sure to land safely!`,
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPlayerChainJumpResetTime:            8.000000,
 		MPowerBankCapacity:                   100.000000,
 		MPowerConsumption:                    5.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MShowTrajectoryCounter:               0,
 		MSignificanceRange:                   18000.000000,

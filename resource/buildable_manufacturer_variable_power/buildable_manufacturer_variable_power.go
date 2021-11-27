@@ -9,93 +9,92 @@ import (
 )
 
 type FGBuildableManufacturerVariablePower struct {
-	Name                                    string
-	ClassName                               string
-	IsPowered                               bool
-	MAddToSignificanceManager               bool
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCachedSkeletalMeshes                   string
-	MCanChangePotential                     bool
-	MCurrentProducingSeekTime               float64
-	MCurrentRecipeChanged                   string
-	MDescription                            string
-	MDisplayName                            string
-	MEffectUpdateInterval                   float64
-	MEstimatedMaximumPowerConsumption       float64
-	MEstimatedMininumPowerConsumption       float64
-	MExcludeFromMaterialInstancing          string
-	MFactoryInputConnections                string
-	MFactoryOutputConnections               string
-	MFluidStackSizeDefault                  resource.StackSize
-	MFluidStackSizeMultiplier               int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MGameTimeAtProducing                    float64
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MLightningTimer                         string
-	MManufacturingSpeed                     float64
-	MMaterialNameToInstanceManager          string
-	MMaxPotential                           float64
-	MMaxPotentialIncreasePerCrystal         float64
-	MMinPotential                           float64
-	MMinimumProducingTime                   float64
-	MMinimumStoppedTime                     float64
-	MNumCyclesForProductivity               int
-	MOnHasPowerChanged                      string
-	MOnHasProductionChanged                 string
-	MOnHasStandbyChanged                    string
-	MOnProductionStatusChanged              string
-	MPipeInputConnections                   string
-	MPipeOutputConnections                  string
-	MPowerConsumption                       float64
-	MPowerConsumptionExponent               float64
-	MSequenceDuration                       float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSignificanceRange                      float64
-	MSkipBuildEffect                        bool
-	MStartVector_VFX_Large_End              string
-	MStartVector_VFX_Large_Start            string
-	MStartVector_VFX_Medium_End             string
-	MStartVector_VFX_Medium_Start           string
-	MStartVector_VFX_Small_End              string
-	MStartVector_VFX_Small_Start            string
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
-	OnReplicationDetailActorCreatedEvent    string
+	Name                                 string
+	ClassName                            string
+	IsPowered                            bool
+	MAddToSignificanceManager            bool
+	MAllowColoring                       bool
+	MAttachmentPoints                    string
+	MBuildEffectSpeed                    float64
+	MCachedSkeletalMeshes                string
+	MCanChangePotential                  bool
+	MCreateClearanceMeshRepresentation   bool
+	MCurrentProducingSeekTime            float64
+	MCurrentRecipeChanged                string
+	MDescription                         string
+	MDisplayName                         string
+	MDoesHaveShutdownAnimation           bool
+	MEffectUpdateInterval                float64
+	MEstimatedMaximumPowerConsumption    float64
+	MEstimatedMininumPowerConsumption    float64
+	MFactoryInputConnections             string
+	MFactoryOutputConnections            string
+	MFluidStackSizeDefault               resource.StackSize
+	MFluidStackSizeMultiplier            int
+	MForceNetUpdateOnRegisterPlayer      bool
+	MGameTimeAtProducing                 float64
+	MHideOnBuildEffectStart              bool
+	MHighlightVector                     string
+	MInteractingPlayers                  string
+	MIsUseable                           bool
+	MLightningTimer                      string
+	MManufacturingSpeed                  float64
+	MMaxPotential                        float64
+	MMaxPotentialIncreasePerCrystal      float64
+	MMinPotential                        float64
+	MMinimumProducingTime                float64
+	MMinimumStoppedTime                  float64
+	MNumCyclesForProductivity            int
+	MOnHasPowerChanged                   string
+	MOnHasProductionChanged              string
+	MOnHasStandbyChanged                 string
+	MPipeInputConnections                string
+	MPipeOutputConnections               string
+	MPowerConsumption                    float64
+	MPowerConsumptionExponent            float64
+	MSequenceDuration                    float64
+	MShouldModifyWorldGrid               bool
+	MShouldShowAttachmentPointVisuals    bool
+	MShouldShowHighlight                 bool
+	MSignificanceRange                   float64
+	MSkipBuildEffect                     bool
+	MStartVector_VFX_Large_End           string
+	MStartVector_VFX_Large_Start         string
+	MStartVector_VFX_Medium_End          string
+	MStartVector_VFX_Medium_Start        string
+	MStartVector_VFX_Small_End           string
+	MStartVector_VFX_Small_Start         string
+	MToggleDormancyOnInteraction         bool
+	MaxRenderDistance                    float64
+	OnReplicationDetailActorCreatedEvent string
 }
 
 var (
 	HadronCollider = FGBuildableManufacturerVariablePower{
-		Name:                                    "HadronCollider",
-		ClassName:                               "Build_HadronCollider_C",
-		IsPowered:                               false,
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     true,
-		MCurrentProducingSeekTime:               0.000000,
-		MCurrentRecipeChanged:                   `()`,
+		Name:                               "HadronCollider",
+		ClassName:                          "Build_HadronCollider_C",
+		IsPowered:                          false,
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                true,
+		MCreateClearanceMeshRepresentation: true,
+		MCurrentProducingSeekTime:          0.000000,
+		MCurrentRecipeChanged:              `()`,
 		MDescription: `The FICSIT Particle Accelerator uses electromagnetic fields to propel particles to very high speeds and energies. The specific design allows for a variety of processes, such as matter generation and conversion.
 
 Warning: Power usage is extremely high, unstable, and varies per recipe.`,
 		MDisplayName:                         `Particle Accelerator`,
+		MDoesHaveShutdownAnimation:           false,
 		MEffectUpdateInterval:                0.000000,
 		MEstimatedMaximumPowerConsumption:    1500.000000,
 		MEstimatedMininumPowerConsumption:    250.000000,
-		MExcludeFromMaterialInstancing:       ``,
 		MFactoryInputConnections:             ``,
 		MFactoryOutputConnections:            ``,
 		MFluidStackSizeDefault:               resource.Fluid,
 		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  ``,
 		MForceNetUpdateOnRegisterPlayer:      false,
 		MGameTimeAtProducing:                 0.000000,
 		MHideOnBuildEffectStart:              false,
@@ -104,7 +103,6 @@ Warning: Power usage is extremely high, unstable, and varies per recipe.`,
 		MIsUseable:                           true,
 		MLightningTimer:                      `()`,
 		MManufacturingSpeed:                  1.000000,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -114,13 +112,13 @@ Warning: Power usage is extremely high, unstable, and varies per recipe.`,
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPipeInputConnections:                ``,
 		MPipeOutputConnections:               ``,
 		MPowerConsumption:                    0.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MSequenceDuration:                    60.000000,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   20000.000000,
 		MSkipBuildEffect:                     false,

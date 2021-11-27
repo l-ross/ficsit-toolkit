@@ -9,75 +9,73 @@ import (
 )
 
 type FGBuildableResourceSinkShop struct {
-	Name                                    string
-	ClassName                               string
-	MAddToSignificanceManager               bool
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCachedSkeletalMeshes                   string
-	MCanChangePotential                     bool
-	MDescription                            string
-	MDisplayName                            string
-	MEffectUpdateInterval                   float64
-	MExcludeFromMaterialInstancing          string
-	MFluidStackSizeDefault                  resource.StackSize
-	MFluidStackSizeMultiplier               int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MMaterialNameToInstanceManager          string
-	MMaxPotential                           float64
-	MMaxPotentialIncreasePerCrystal         float64
-	MMinPotential                           float64
-	MMinimumProducingTime                   float64
-	MMinimumStoppedTime                     float64
-	MNumCyclesForProductivity               int
-	MOnHasPowerChanged                      string
-	MOnHasProductionChanged                 string
-	MOnHasStandbyChanged                    string
-	MOnProductionStatusChanged              string
-	MPowerConsumption                       float64
-	MPowerConsumptionExponent               float64
-	MShopInventoryDefaultSize               int
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSignificanceRange                      float64
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
-	OnReplicationDetailActorCreatedEvent    string
+	Name                                 string
+	ClassName                            string
+	MAddToSignificanceManager            bool
+	MAllowColoring                       bool
+	MAttachmentPoints                    string
+	MBuildEffectSpeed                    float64
+	MCachedSkeletalMeshes                string
+	MCanChangePotential                  bool
+	MCreateClearanceMeshRepresentation   bool
+	MDescription                         string
+	MDisplayName                         string
+	MDoesHaveShutdownAnimation           bool
+	MEffectUpdateInterval                float64
+	MFluidStackSizeDefault               resource.StackSize
+	MFluidStackSizeMultiplier            int
+	MForceNetUpdateOnRegisterPlayer      bool
+	MHideOnBuildEffectStart              bool
+	MHighlightVector                     string
+	MInteractingPlayers                  string
+	MIsUseable                           bool
+	MMaxPotential                        float64
+	MMaxPotentialIncreasePerCrystal      float64
+	MMinPotential                        float64
+	MMinimumProducingTime                float64
+	MMinimumStoppedTime                  float64
+	MNumCyclesForProductivity            int
+	MOnHasPowerChanged                   string
+	MOnHasProductionChanged              string
+	MOnHasStandbyChanged                 string
+	MPowerConsumption                    float64
+	MPowerConsumptionExponent            float64
+	MShopInventoryDefaultSize            int
+	MShouldModifyWorldGrid               bool
+	MShouldShowAttachmentPointVisuals    bool
+	MShouldShowHighlight                 bool
+	MSignificanceRange                   float64
+	MSkipBuildEffect                     bool
+	MToggleDormancyOnInteraction         bool
+	MaxRenderDistance                    float64
+	OnReplicationDetailActorCreatedEvent string
 }
 
 var (
 	ResourceSinkShop = FGBuildableResourceSinkShop{
-		Name:                                    "ResourceSinkShop",
-		ClassName:                               "Build_ResourceSinkShop_C",
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     false,
+		Name:                               "ResourceSinkShop",
+		ClassName:                          "Build_ResourceSinkShop_C",
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                false,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Redeem your FICSIT Coupons here! 
 For those employees going the extra kilometer we have set aside special bonus milestones and rewards! Get your Coupons in the AWESOME Sink program now!
 
 *No refunds possible.`,
 		MDisplayName:                         `AWESOME Shop`,
+		MDoesHaveShutdownAnimation:           false,
 		MEffectUpdateInterval:                0.000000,
-		MExcludeFromMaterialInstancing:       ``,
 		MFluidStackSizeDefault:               resource.Fluid,
 		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  ``,
 		MForceNetUpdateOnRegisterPlayer:      false,
 		MHideOnBuildEffectStart:              false,
 		MHighlightVector:                     `(X=0.000000,Y=0.000000,Z=0.000000)`,
 		MInteractingPlayers:                  ``,
 		MIsUseable:                           true,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -87,11 +85,11 @@ For those employees going the extra kilometer we have set aside special bonus mi
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPowerConsumption:                    0.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MShopInventoryDefaultSize:            30,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   18000.000000,
 		MSkipBuildEffect:                     false,

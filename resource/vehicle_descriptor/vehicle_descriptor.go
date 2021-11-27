@@ -22,6 +22,7 @@ type FGVehicleDescriptor struct {
 	MFuelConsumption        float64
 	MGasColor               string
 	MInventorySize          int
+	MMenuPriority           float64
 	MPersistentBigIcon      string
 	MPowerConsumption       string
 	MRadioactiveDecay       float64
@@ -38,20 +39,22 @@ var (
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      4.000000,
 		MCanBeDiscarded:         true,
-		MDescription:            ``,
-		MDisplayName:            ``,
-		MEnergyValue:            0.000000,
-		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
-		MForm:                   resource.Invalid,
-		MFuelConsumption:        150.000000,
-		MGasColor:               `(B=0,G=0,R=0,A=0)`,
-		MInventorySize:          1,
-		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_512.Cyberwagon_512`,
-		MRadioactiveDecay:       0.000000,
-		MRememberPickUp:         false,
-		MSmallIcon:              `Texture2D /Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_256.Cyberwagon_256`,
-		MStackSize:              resource.One,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
+		MDescription: `Absolutely indestructible.
+Needs no further introduction.`,
+		MDisplayName:       `Cyber Wagon`,
+		MEnergyValue:       0.000000,
+		MFluidColor:        `(B=0,G=0,R=0,A=0)`,
+		MForm:              resource.Invalid,
+		MFuelConsumption:   150.000000,
+		MGasColor:          `(B=0,G=0,R=0,A=0)`,
+		MInventorySize:     1,
+		MMenuPriority:      4.000000,
+		MPersistentBigIcon: `Texture2D /Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_512.Cyberwagon_512`,
+		MRadioactiveDecay:  0.000000,
+		MRememberPickUp:    false,
+		MSmallIcon:         `Texture2D /Game/FactoryGame/Buildable/Vehicle/Cyberwagon/UI/Cyberwagon_256.Cyberwagon_256`,
+		MStackSize:         resource.One,
+		MSubCategories:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
 	}
 
 	DroneTransport = FGVehicleDescriptor{
@@ -60,19 +63,27 @@ var (
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      6.000000,
 		MCanBeDiscarded:         true,
-		MDescription:            ``,
-		MDisplayName:            ``,
-		MEnergyValue:            0.000000,
-		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
-		MForm:                   resource.Invalid,
-		MGasColor:               `(B=0,G=0,R=0,A=0)`,
-		MInventorySize:          9,
-		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Factory/DroneStation/UI/IconDesc_Drone_512.IconDesc_Drone_512`,
-		MRadioactiveDecay:       0.000000,
-		MRememberPickUp:         false,
-		MSmallIcon:              `Texture2D /Game/FactoryGame/Buildable/Factory/DroneStation/UI/IconDesc_Drone_256.IconDesc_Drone_256`,
-		MStackSize:              resource.Medium,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
+		MDescription: `Has to be built on a Drone Port.
+
+Fuel: Batteries, based on travel distance.
+Refuels at any of its connected Ports, if able.
+
+9-slot inventory.
+
+Transports available input back and forth between its home and destination Ports. Drone Status and other details are shown on its home Drone Port.`,
+		MDisplayName:       `Drone`,
+		MEnergyValue:       0.000000,
+		MFluidColor:        `(B=0,G=0,R=0,A=0)`,
+		MForm:              resource.Invalid,
+		MGasColor:          `(B=0,G=0,R=0,A=0)`,
+		MInventorySize:     9,
+		MMenuPriority:      6.000000,
+		MPersistentBigIcon: `Texture2D /Game/FactoryGame/Buildable/Factory/DroneStation/UI/IconDesc_Drone_512.IconDesc_Drone_512`,
+		MRadioactiveDecay:  0.000000,
+		MRememberPickUp:    false,
+		MSmallIcon:         `Texture2D /Game/FactoryGame/Buildable/Factory/DroneStation/UI/IconDesc_Drone_256.IconDesc_Drone_256`,
+		MStackSize:         resource.Medium,
+		MSubCategories:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
 	}
 
 	Explorer = FGVehicleDescriptor{
@@ -81,20 +92,25 @@ var (
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      3.000000,
 		MCanBeDiscarded:         true,
-		MDescription:            ``,
-		MDisplayName:            ``,
-		MEnergyValue:            0.000000,
-		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
-		MForm:                   resource.Invalid,
-		MFuelConsumption:        90.000000,
-		MGasColor:               `(B=0,G=0,R=0,A=0)`,
-		MInventorySize:          24,
-		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Vehicle/Explorer/UI/Explorer_512.Explorer_512`,
-		MRadioactiveDecay:       0.000000,
-		MRememberPickUp:         false,
-		MSmallIcon:              `Texture2D /Game/FactoryGame/Buildable/Vehicle/Explorer/UI/Explorer_256.Explorer_256`,
-		MStackSize:              resource.One,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
+		MDescription: `Fuel: Any fuel type
+
+24-slot inventory. Has a built-in craft bench.
+
+Fast and nimble exploration vehicle. Tuned for really rough terrain and able to climb almost vertical surfaces.`,
+		MDisplayName:       `Explorer`,
+		MEnergyValue:       0.000000,
+		MFluidColor:        `(B=0,G=0,R=0,A=0)`,
+		MForm:              resource.Invalid,
+		MFuelConsumption:   90.000000,
+		MGasColor:          `(B=0,G=0,R=0,A=0)`,
+		MInventorySize:     24,
+		MMenuPriority:      3.000000,
+		MPersistentBigIcon: `Texture2D /Game/FactoryGame/Buildable/Vehicle/Explorer/UI/Explorer_512.Explorer_512`,
+		MRadioactiveDecay:  0.000000,
+		MRememberPickUp:    false,
+		MSmallIcon:         `Texture2D /Game/FactoryGame/Buildable/Vehicle/Explorer/UI/Explorer_256.Explorer_256`,
+		MStackSize:         resource.One,
+		MSubCategories:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
 	}
 
 	FreightWagon = FGVehicleDescriptor{
@@ -103,19 +119,22 @@ var (
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      50.000000,
 		MCanBeDiscarded:         true,
-		MDescription:            ``,
-		MDisplayName:            ``,
-		MEnergyValue:            0.000000,
-		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
-		MForm:                   resource.Invalid,
-		MGasColor:               `(B=0,G=0,R=0,A=0)`,
-		MInventorySize:          32,
-		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Wagon/UI/FreightCar_512.FreightCar_512`,
-		MRadioactiveDecay:       0.000000,
-		MRememberPickUp:         false,
-		MSmallIcon:              `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Wagon/UI/FreightCar_256.FreightCar_256`,
-		MStackSize:              resource.Medium,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Trains.SC_Trains_C"')`,
+		MDescription: `The Freight Car can be built on Railways and attached to an Electric Locomotive or other Freight Car to transport resources. 
+Resources are loaded and unloaded at Freight Platforms.
+Has a 1600m³ or 32 slot capacity, depending on the resources.`,
+		MDisplayName:       `Freight Car`,
+		MEnergyValue:       0.000000,
+		MFluidColor:        `(B=0,G=0,R=0,A=0)`,
+		MForm:              resource.Invalid,
+		MGasColor:          `(B=0,G=0,R=0,A=0)`,
+		MInventorySize:     32,
+		MMenuPriority:      50.000000,
+		MPersistentBigIcon: `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Wagon/UI/FreightCar_512.FreightCar_512`,
+		MRadioactiveDecay:  0.000000,
+		MRememberPickUp:    false,
+		MSmallIcon:         `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Wagon/UI/FreightCar_256.FreightCar_256`,
+		MStackSize:         resource.Medium,
+		MSubCategories:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Trains.SC_Trains_C"')`,
 	}
 
 	Locomotive = FGVehicleDescriptor{
@@ -124,19 +143,24 @@ var (
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      49.000000,
 		MCanBeDiscarded:         true,
-		MDescription:            ``,
-		MDisplayName:            ``,
-		MEnergyValue:            0.000000,
-		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
-		MForm:                   resource.Invalid,
-		MGasColor:               `(B=0,G=0,R=0,A=0)`,
-		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Locomotive/UI/Locomotive_512.Locomotive_512`,
-		MPowerConsumption:       `(Min=25.000000,Max=110.000000)`,
-		MRadioactiveDecay:       0.000000,
-		MRememberPickUp:         false,
-		MSmallIcon:              `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Locomotive/UI/Locomotive_256.Locomotive_256`,
-		MStackSize:              resource.One,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Trains.SC_Trains_C"')`,
+		MDescription: `The Locomotive is used to move Freight Cars from station to station.
+Requires between 25-110 MW of power to drive. 
+Must be built on railway.
+
+Nicknamed 'Leif' by FICSIT pioneers because of its reliability.`,
+		MDisplayName:       `Electric Locomotive`,
+		MEnergyValue:       0.000000,
+		MFluidColor:        `(B=0,G=0,R=0,A=0)`,
+		MForm:              resource.Invalid,
+		MGasColor:          `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:      49.000000,
+		MPersistentBigIcon: `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Locomotive/UI/Locomotive_512.Locomotive_512`,
+		MPowerConsumption:  `(Min=25.000000,Max=110.000000)`,
+		MRadioactiveDecay:  0.000000,
+		MRememberPickUp:    false,
+		MSmallIcon:         `Texture2D /Game/FactoryGame/Buildable/Vehicle/Train/Locomotive/UI/Locomotive_256.Locomotive_256`,
+		MStackSize:         resource.One,
+		MSubCategories:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Trains.SC_Trains_C"')`,
 	}
 
 	Tractor = FGVehicleDescriptor{
@@ -145,20 +169,26 @@ var (
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      1.000000,
 		MCanBeDiscarded:         true,
-		MDescription:            ``,
-		MDisplayName:            ``,
-		MEnergyValue:            0.000000,
-		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
-		MForm:                   resource.Invalid,
-		MFuelConsumption:        55.000000,
-		MGasColor:               `(B=0,G=0,R=0,A=0)`,
-		MInventorySize:          25,
-		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Vehicle/Tractor/UI/Tractor_512.Tractor_512`,
-		MRadioactiveDecay:       0.000000,
-		MRememberPickUp:         false,
-		MSmallIcon:              `Texture2D /Game/FactoryGame/Buildable/Vehicle/Tractor/UI/Tractor_256.Tractor_256`,
-		MStackSize:              resource.One,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
+		MDescription: `Fuel: Any fuel type
+
+25-slot inventory. Has a built-in craft bench.
+Can be automated to pick up and deliver resources at truck stations.
+
+Nicknamed the Sugarcube by FICSIT pioneers with the justification “It’s pretty sweet, y’know”.`,
+		MDisplayName:       `Tractor`,
+		MEnergyValue:       0.000000,
+		MFluidColor:        `(B=0,G=0,R=0,A=0)`,
+		MForm:              resource.Invalid,
+		MFuelConsumption:   55.000000,
+		MGasColor:          `(B=0,G=0,R=0,A=0)`,
+		MInventorySize:     25,
+		MMenuPriority:      1.000000,
+		MPersistentBigIcon: `Texture2D /Game/FactoryGame/Buildable/Vehicle/Tractor/UI/Tractor_512.Tractor_512`,
+		MRadioactiveDecay:  0.000000,
+		MRememberPickUp:    false,
+		MSmallIcon:         `Texture2D /Game/FactoryGame/Buildable/Vehicle/Tractor/UI/Tractor_256.Tractor_256`,
+		MStackSize:         resource.One,
+		MSubCategories:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
 	}
 
 	Truck = FGVehicleDescriptor{
@@ -167,20 +197,26 @@ var (
 		MAbbreviatedDisplayName: ``,
 		MBuildMenuPriority:      2.000000,
 		MCanBeDiscarded:         true,
-		MDescription:            ``,
-		MDisplayName:            ``,
-		MEnergyValue:            0.000000,
-		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
-		MForm:                   resource.Invalid,
-		MFuelConsumption:        75.000000,
-		MGasColor:               `(B=0,G=0,R=0,A=0)`,
-		MInventorySize:          48,
-		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Vehicle/Truck/UI/Truck_512.Truck_512`,
-		MRadioactiveDecay:       0.000000,
-		MRememberPickUp:         false,
-		MSmallIcon:              `Texture2D /Game/FactoryGame/Buildable/Vehicle/Truck/UI/Truck_256.Truck_256`,
-		MStackSize:              resource.One,
-		MSubCategories:          `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
+		MDescription: `Fuel: Any fuel type
+
+48-slot inventory. Has a built-in craft bench.
+Can be automated to pick up and deliver resources at truck stations.
+
+Nicknamed the Unit by FICSIT pioneers because of its massive frame.`,
+		MDisplayName:       `Truck`,
+		MEnergyValue:       0.000000,
+		MFluidColor:        `(B=0,G=0,R=0,A=0)`,
+		MForm:              resource.Invalid,
+		MFuelConsumption:   75.000000,
+		MGasColor:          `(B=0,G=0,R=0,A=0)`,
+		MInventorySize:     48,
+		MMenuPriority:      2.000000,
+		MPersistentBigIcon: `Texture2D /Game/FactoryGame/Buildable/Vehicle/Truck/UI/Truck_512.Truck_512`,
+		MRadioactiveDecay:  0.000000,
+		MRememberPickUp:    false,
+		MSmallIcon:         `Texture2D /Game/FactoryGame/Buildable/Vehicle/Truck/UI/Truck_256.Truck_256`,
+		MStackSize:         resource.One,
+		MSubCategories:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Interface/UI/InGame/BuildMenu/BuildCategories/Sub_Transport/SC_Vehicles.SC_Vehicles_C"')`,
 	}
 )
 

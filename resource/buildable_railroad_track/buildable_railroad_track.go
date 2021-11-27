@@ -7,57 +7,61 @@ import (
 )
 
 type FGBuildableRailroadTrack struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MConnections                            string
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsOwnedByPlatform                      bool
-	MIsUseable                              bool
-	MMaterialNameToInstanceManager          string
-	MMeshLength                             float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MConnections                       string
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsOwnedByPlatform                 bool
+	MIsUseable                         bool
+	MMeshLength                        float64
+	MOverlappingTracks                 string
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSignalBlockID                     int
+	MSkipBuildEffect                   bool
+	MToggleDormancyOnInteraction       bool
+	MVehicles                          string
+	MaxRenderDistance                  float64
 }
 
 var (
 	RailroadTrack = FGBuildableRailroadTrack{
-		Name:                                    "RailroadTrack",
-		ClassName:                               "Build_RailroadTrack_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MConnections:                            `(FGRailroadTrackConnectionComponent'"/Game/FactoryGame/Buildable/Factory/Train/Track/Build_RailroadTrack.Default__Build_RailroadTrack_C:TrackConnection0"',FGRailroadTrackConnectionComponent'"/Game/FactoryGame/Buildable/Factory/Train/Track/Build_RailroadTrack.Default__Build_RailroadTrack_C:TrackConnection1"')`,
+		Name:                               "RailroadTrack",
+		ClassName:                          "Build_RailroadTrack_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MConnections:                       `(FGRailroadTrackConnectionComponent'"/Game/FactoryGame/Buildable/Factory/Train/Track/Build_RailroadTrack.Default__Build_RailroadTrack_C:TrackConnection0"',FGRailroadTrackConnectionComponent'"/Game/FactoryGame/Buildable/Factory/Train/Track/Build_RailroadTrack.Default__Build_RailroadTrack_C:TrackConnection1"')`,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Used to transport trains in a reliable and fast manner.
 Has a wide turn angle so make sure to plan it out properly.`,
-		MDisplayName:                    `Railway`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsOwnedByPlatform:              false,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MMeshLength:                     1200.000000,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Railway`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsOwnedByPlatform:                false,
+		MIsUseable:                        false,
+		MMeshLength:                       1200.000000,
+		MOverlappingTracks:                ``,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSignalBlockID:                    0,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MVehicles:                         `()`,
+		MaxRenderDistance:                 -1.000000,
 	}
 )
 

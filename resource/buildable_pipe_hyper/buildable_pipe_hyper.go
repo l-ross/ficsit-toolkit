@@ -7,55 +7,57 @@ import (
 )
 
 type FGBuildablePipeHyper struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MMaterialNameToInstanceManager          string
-	MMeshLength                             float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MSplineData                             string
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MExitOffset                        string
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsUseable                         bool
+	MMeshLength                        float64
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSkipBuildEffect                   bool
+	MSnappedPassthroughs               string
+	MSplineData                        string
+	MToggleDormancyOnInteraction       bool
+	MaxRenderDistance                  float64
 }
 
 var (
 	PipeHyper = FGBuildablePipeHyper{
-		Name:                                    "PipeHyper",
-		ClassName:                               "Build_PipeHyper_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PipeHyper",
+		ClassName:                          "Build_PipeHyper_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Tubes for transporting FICSIT employees.
-A Hyper Tube Entrance needs to be attached to power and enter a Hyper Tube system.`,
-		MDisplayName:                    `Hyper Tube`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MMeshLength:                     100.000000,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MSplineData:                     ``,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+A Hypertube Entrance needs to be attached to power and enter a Hypertube system.`,
+		MDisplayName:                      `Hypertube`,
+		MExitOffset:                       `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        false,
+		MMeshLength:                       100.000000,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MSnappedPassthroughs:              ``,
+		MSplineData:                       ``,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 )
 

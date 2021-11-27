@@ -20,6 +20,7 @@ type FGPoleDescriptor struct {
 	MFluidColor             string
 	MForm                   resource.Form
 	MGasColor               string
+	MMenuPriority           float64
 	MPersistentBigIcon      string
 	MRadioactiveDecay       float64
 	MRememberPickUp         bool
@@ -41,6 +42,7 @@ var (
 		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
 		MForm:                   resource.Invalid,
 		MGasColor:               `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:           30.000000,
 		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Factory/ConveyorPole/UI/IconDesc_ConveyorPole_512.IconDesc_ConveyorPole_512`,
 		MRadioactiveDecay:       0.000000,
 		MRememberPickUp:         false,
@@ -61,6 +63,7 @@ var (
 		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
 		MForm:                   resource.Invalid,
 		MGasColor:               `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:           30.000000,
 		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Factory/ConveyorPoleMulti/UI/ConveyorPoleMulti_512.ConveyorPoleMulti_512`,
 		MRadioactiveDecay:       0.000000,
 		MRememberPickUp:         false,
@@ -81,6 +84,7 @@ var (
 		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
 		MForm:                   resource.Invalid,
 		MGasColor:               `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:           10.000000,
 		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Factory/HyperTubeWallSupport/UI/IconDesc_HyperTubeStackable_512.IconDesc_HyperTubeStackable_512`,
 		MRadioactiveDecay:       0.000000,
 		MRememberPickUp:         false,
@@ -101,6 +105,7 @@ var (
 		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
 		MForm:                   resource.Invalid,
 		MGasColor:               `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:           3.000000,
 		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Factory/PipeHyperSupport/UI/HyperTubePole_512.HyperTubePole_512`,
 		MRadioactiveDecay:       0.000000,
 		MRememberPickUp:         false,
@@ -121,6 +126,7 @@ var (
 		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
 		MForm:                   resource.Invalid,
 		MGasColor:               `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:           1.000000,
 		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Factory/PipePole/UI/PipePole_Stackable_512.PipePole_Stackable_512`,
 		MRadioactiveDecay:       0.000000,
 		MRememberPickUp:         false,
@@ -141,6 +147,7 @@ var (
 		MFluidColor:             `(B=0,G=0,R=0,A=0)`,
 		MForm:                   resource.Invalid,
 		MGasColor:               `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:           1.000000,
 		MPersistentBigIcon:      `Texture2D /Game/FactoryGame/Buildable/Factory/PipePole/UI/PipePole_512.PipePole_512`,
 		MRadioactiveDecay:       0.000000,
 		MRememberPickUp:         false,

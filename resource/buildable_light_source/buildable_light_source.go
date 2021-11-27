@@ -7,94 +7,96 @@ import (
 )
 
 type FGBuildableLightSource struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHasPower                               bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsDay                                  bool
-	MIsEnabled                              bool
-	MIsUseable                              bool
-	MLightControlData                       string
-	MMaterialNameToInstanceManager          string
-	MPowerConsumption                       float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHasPower                          bool
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsDay                             bool
+	MIsEnabled                         bool
+	MIsUseable                         bool
+	MLightControlData                  string
+	MPowerConsumption                  float64
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSkipBuildEffect                   bool
+	MToggleDormancyOnInteraction       bool
+	MaxRenderDistance                  float64
+	NewCustomizationData               string
+	OnBuildableLightSourceStateChanged string
 }
 
 var (
 	CeilingLight = FGBuildableLightSource{
-		Name:                                    "CeilingLight",
-		ClassName:                               "Build_CeilingLight_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "CeilingLight",
+		ClassName:                          "Build_CeilingLight_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Can be placed on ceilings to light up indoor factory spaces.
 
 Light color and intensity can be modified.
 Allows up to two Power Line connections.`,
-		MDisplayName:                    `Ceiling Light`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsDay:                          false,
-		MIsEnabled:                      true,
-		MIsUseable:                      false,
-		MLightControlData:               `(Intensity=1.000000)`,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConsumption:               2.000000,
-		MShouldModifyWorldGrid:          false,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                       `Ceiling Light`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHasPower:                          false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsDay:                             false,
+		MIsEnabled:                         true,
+		MIsUseable:                         false,
+		MLightControlData:                  `(Intensity=1.000000)`,
+		MPowerConsumption:                  2.000000,
+		MShouldModifyWorldGrid:             false,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MToggleDormancyOnInteraction:       false,
+		MaxRenderDistance:                  -1.000000,
+		OnBuildableLightSourceStateChanged: `()`,
 	}
 
 	StreetLight = FGBuildableLightSource{
-		Name:                                    "StreetLight",
-		ClassName:                               "Build_StreetLight_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "StreetLight",
+		ClassName:                          "Build_StreetLight_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `A small Street Light, perfect for lighting up factory pathways and roads.
 
 Light color and intensity can be modified.
 Allows up to two Power Line connections.`,
-		MDisplayName:                    `Street Light`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsDay:                          false,
-		MIsEnabled:                      true,
-		MIsUseable:                      true,
-		MLightControlData:               `(Intensity=1.000000)`,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConsumption:               1.000000,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                       `Street Light`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHasPower:                          false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsDay:                             false,
+		MIsEnabled:                         true,
+		MIsUseable:                         true,
+		MLightControlData:                  `(Intensity=1.000000)`,
+		MPowerConsumption:                  1.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MToggleDormancyOnInteraction:       false,
+		MaxRenderDistance:                  -1.000000,
+		NewCustomizationData:               `(OverrideColorData=(PrimaryColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),SecondaryColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000)))`,
+		OnBuildableLightSourceStateChanged: `()`,
 	}
 )
 

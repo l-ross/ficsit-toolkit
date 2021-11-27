@@ -9,294 +9,284 @@ import (
 )
 
 type FGBuildablePowerPole struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHasPower                               bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MMaterialNameToInstanceManager          string
-	MPowerConnections                       string
-	MPowerPoleType                          resource.PowerPoleType
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHasPower                          bool
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsUseable                         bool
+	MPowerConnections                  string
+	MPowerPoleType                     resource.PowerPoleType
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSkipBuildEffect                   bool
+	MToggleDormancyOnInteraction       bool
+	MaxRenderDistance                  float64
 }
 
 var (
 	PowerPoleMk1 = FGBuildablePowerPole{
-		Name:                                    "PowerPoleMk1",
-		ClassName:                               "Build_PowerPoleMk1_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleMk1",
+		ClassName:                          "Build_PowerPoleMk1_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Can handle up to 4 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Power Pole Mk.1`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      true,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.Pole,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Power Pole Mk.1`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        true,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.Pole,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleMk2 = FGBuildablePowerPole{
-		Name:                                    "PowerPoleMk2",
-		ClassName:                               "Build_PowerPoleMk2_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleMk2",
+		ClassName:                          "Build_PowerPoleMk2_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Can handle up to 7 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Power Pole Mk.2`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      true,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.Pole,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Power Pole Mk.2`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        true,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.Pole,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleMk3 = FGBuildablePowerPole{
-		Name:                                    "PowerPoleMk3",
-		ClassName:                               "Build_PowerPoleMk3_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleMk3",
+		ClassName:                          "Build_PowerPoleMk3_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Can handle up to 10 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Power Pole Mk.3`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      true,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.Pole,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Power Pole Mk.3`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        true,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.Pole,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleWall = FGBuildablePowerPole{
-		Name:                                    "PowerPoleWall",
-		ClassName:                               "Build_PowerPoleWall_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleWall",
+		ClassName:                          "Build_PowerPoleWall_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Power Pole that attaches to a wall.
 
 Can handle up to 4 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Wall Outlet Mk.1`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.Wall,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Wall Outlet Mk.1`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        false,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.Wall,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleWallDouble = FGBuildablePowerPole{
-		Name:                                    "PowerPoleWallDouble",
-		ClassName:                               "Build_PowerPoleWallDouble_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleWallDouble",
+		ClassName:                          "Build_PowerPoleWallDouble_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Power Pole that attaches to a wall. Has one connector on each side of the wall.
 
 Can handle up to 4 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Double Wall Outlet Mk.1`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.WallDouble,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Double Wall Outlet Mk.1`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        false,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.WallDouble,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleWallDoubleMk2 = FGBuildablePowerPole{
-		Name:                                    "PowerPoleWallDoubleMk2",
-		ClassName:                               "Build_PowerPoleWallDouble_Mk2_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleWallDoubleMk2",
+		ClassName:                          "Build_PowerPoleWallDouble_Mk2_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Power Pole that attaches to a wall. Has one connector on each side of the wall.
 
 Can handle up to 7 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Double Wall Outlet Mk.2`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.WallDouble,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Double Wall Outlet Mk.2`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        false,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.WallDouble,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleWallDoubleMk3 = FGBuildablePowerPole{
-		Name:                                    "PowerPoleWallDoubleMk3",
-		ClassName:                               "Build_PowerPoleWallDouble_Mk3_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleWallDoubleMk3",
+		ClassName:                          "Build_PowerPoleWallDouble_Mk3_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Power Pole that attaches to a wall. Has one connector on each side of the wall.
 
 Can handle up to 10 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Double Wall Outlet Mk.3`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.WallDouble,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Double Wall Outlet Mk.3`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        false,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.WallDouble,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleWallMk2 = FGBuildablePowerPole{
-		Name:                                    "PowerPoleWallMk2",
-		ClassName:                               "Build_PowerPoleWall_Mk2_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleWallMk2",
+		ClassName:                          "Build_PowerPoleWall_Mk2_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Power Pole that attaches to a wall.
 
 Can handle up to 7 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Wall Outlet Mk.2`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.Wall,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Wall Outlet Mk.2`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        false,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.Wall,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 
 	PowerPoleWallMk3 = FGBuildablePowerPole{
-		Name:                                    "PowerPoleWallMk3",
-		ClassName:                               "Build_PowerPoleWall_Mk3_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
+		Name:                               "PowerPoleWallMk3",
+		ClassName:                          "Build_PowerPoleWall_Mk3_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCreateClearanceMeshRepresentation: true,
 		MDescription: `Power Pole that attaches to a wall.
 
 Can handle up to 10 Power Line connections.
 
 Connect Power Poles, Power Generators and factory buildings together with Power Lines to create a power grid. The power grid supplies the connected buildings with power.`,
-		MDisplayName:                    `Wall Outlet Mk.3`,
-		MExcludeFromMaterialInstancing:  ``,
-		MFogPlaneTransforms:             ``,
-		MForceNetUpdateOnRegisterPlayer: false,
-		MHasPower:                       false,
-		MHideOnBuildEffectStart:         false,
-		MHighlightVector:                `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:             ``,
-		MIsUseable:                      false,
-		MMaterialNameToInstanceManager:  `()`,
-		MPowerConnections:               ``,
-		MPowerPoleType:                  resource.Wall,
-		MShouldModifyWorldGrid:          true,
-		MShouldShowHighlight:            false,
-		MSkipBuildEffect:                false,
-		MToggleDormancyOnInteraction:    false,
-		MaxRenderDistance:               -1.000000,
+		MDisplayName:                      `Wall Outlet Mk.3`,
+		MForceNetUpdateOnRegisterPlayer:   false,
+		MHasPower:                         false,
+		MHideOnBuildEffectStart:           false,
+		MHighlightVector:                  `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:               ``,
+		MIsUseable:                        false,
+		MPowerConnections:                 ``,
+		MPowerPoleType:                    resource.Wall,
+		MShouldModifyWorldGrid:            true,
+		MShouldShowAttachmentPointVisuals: false,
+		MShouldShowHighlight:              false,
+		MSkipBuildEffect:                  false,
+		MToggleDormancyOnInteraction:      false,
+		MaxRenderDistance:                 -1.000000,
 	}
 )
 

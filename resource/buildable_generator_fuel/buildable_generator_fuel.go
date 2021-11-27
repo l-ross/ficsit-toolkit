@@ -9,28 +9,28 @@ import (
 )
 
 type FGBuildableGeneratorFuel struct {
-	Name                                    string
-	ClassName                               string
-	MAddToSignificanceManager               bool
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MAvailableFuelClasses                   string
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCachedInputConnections                 string
-	MCachedLoadPercentage                   float64
-	MCachedPipeInputConnections             string
-	MCachedSkeletalMeshes                   string
-	MCanChangePotential                     bool
-	MDefaultFuelClasses                     string
-	MDescription                            string
-	MDisplayName                            string
-	MEffectUpdateInterval                   float64
-	MExcludeFromMaterialInstancing          string
-	MFluidStackSizeDefault                  resource.StackSize
-	MFluidStackSizeMultiplier               int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MFuel                                   []struct {
+	Name                               string
+	ClassName                          string
+	MAddToSignificanceManager          bool
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MAvailableFuelClasses              string
+	MBuildEffectSpeed                  float64
+	MCachedInputConnections            string
+	MCachedLoadPercentage              float64
+	MCachedPipeInputConnections        string
+	MCachedSkeletalMeshes              string
+	MCanChangePotential                bool
+	MCreateClearanceMeshRepresentation bool
+	MDefaultFuelClasses                string
+	MDescription                       string
+	MDisplayName                       string
+	MDoesHaveShutdownAnimation         bool
+	MEffectUpdateInterval              float64
+	MFluidStackSizeDefault             resource.StackSize
+	MFluidStackSizeMultiplier          int
+	MForceNetUpdateOnRegisterPlayer    bool
+	MFuel                              []struct {
 		MByproduct                 string
 		MByproductAmount           string
 		MFuelClass                 string
@@ -46,7 +46,6 @@ type FGBuildableGeneratorFuel struct {
 	MIsFullBlast                         bool
 	MIsUseable                           bool
 	MLoadPercentage                      float64
-	MMaterialNameToInstanceManager       string
 	MMaxPotential                        float64
 	MMaxPotentialIncreasePerCrystal      float64
 	MMinPotential                        float64
@@ -56,7 +55,6 @@ type FGBuildableGeneratorFuel struct {
 	MOnHasPowerChanged                   string
 	MOnHasProductionChanged              string
 	MOnHasStandbyChanged                 string
-	MOnProductionStatusChanged           string
 	MPowerConsumption                    float64
 	MPowerConsumptionExponent            float64
 	MPowerProduction                     float64
@@ -64,6 +62,7 @@ type FGBuildableGeneratorFuel struct {
 	MRTPCInterval                        float64
 	MRequiresSupplementalResource        bool
 	MShouldModifyWorldGrid               bool
+	MShouldShowAttachmentPointVisuals    bool
 	MShouldShowHighlight                 bool
 	MSignificanceRange                   float64
 	MSkipBuildEffect                     bool
@@ -78,29 +77,29 @@ type FGBuildableGeneratorFuel struct {
 
 var (
 	GeneratorBiomass = FGBuildableGeneratorFuel{
-		Name:                                    "GeneratorBiomass",
-		ClassName:                               "Build_GeneratorBiomass_C",
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MAvailableFuelClasses:                   ``,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedInputConnections:                 ``,
-		MCachedLoadPercentage:                   0.000000,
-		MCachedPipeInputConnections:             ``,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     true,
-		MDefaultFuelClasses:                     `(/Script/FactoryGame.FGItemDescriptorBiomass)`,
+		Name:                               "GeneratorBiomass",
+		ClassName:                          "Build_GeneratorBiomass_C",
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MAvailableFuelClasses:              ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedInputConnections:            ``,
+		MCachedLoadPercentage:              0.000000,
+		MCachedPipeInputConnections:        ``,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                true,
+		MCreateClearanceMeshRepresentation: true,
+		MDefaultFuelClasses:                `(/Script/FactoryGame.FGItemDescriptorBiomass)`,
 		MDescription: `Burns various forms of biomass to generate electricity for the power grid.
 Has no input and must therefore be fed biomass manually.
 
 Resource consumption will automatically be lowered to meet power demands.`,
 		MDisplayName:                    `Biomass Burner`,
+		MDoesHaveShutdownAnimation:      false,
 		MEffectUpdateInterval:           1.000000,
-		MExcludeFromMaterialInstancing:  ``,
 		MFluidStackSizeDefault:          resource.Fluid,
 		MFluidStackSizeMultiplier:       1,
-		MFogPlaneTransforms:             ``,
 		MForceNetUpdateOnRegisterPlayer: false,
 		MFuel: []struct {
 			MByproduct                 string
@@ -124,7 +123,6 @@ Resource consumption will automatically be lowered to meet power demands.`,
 		MIsFullBlast:                         false,
 		MIsUseable:                           true,
 		MLoadPercentage:                      0.000000,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -134,13 +132,13 @@ Resource consumption will automatically be lowered to meet power demands.`,
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPowerConsumption:                    0.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MPowerProduction:                     30.000000,
 		MPowerProductionExponent:             1.300000,
 		MRequiresSupplementalResource:        false,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   12000.000000,
 		MSkipBuildEffect:                     false,
@@ -152,28 +150,28 @@ Resource consumption will automatically be lowered to meet power demands.`,
 	}
 
 	GeneratorCoal = FGBuildableGeneratorFuel{
-		Name:                                    "GeneratorCoal",
-		ClassName:                               "Build_GeneratorCoal_C",
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MAvailableFuelClasses:                   ``,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedInputConnections:                 ``,
-		MCachedPipeInputConnections:             ``,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     true,
-		MDefaultFuelClasses:                     `(/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C,/Game/FactoryGame/Resource/Parts/CompactedCoal/Desc_CompactedCoal.Desc_CompactedCoal_C,/Game/FactoryGame/Resource/Parts/PetroleumCoke/Desc_PetroleumCoke.Desc_PetroleumCoke_C)`,
+		Name:                               "GeneratorCoal",
+		ClassName:                          "Build_GeneratorCoal_C",
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MAvailableFuelClasses:              ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedInputConnections:            ``,
+		MCachedPipeInputConnections:        ``,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                true,
+		MCreateClearanceMeshRepresentation: true,
+		MDefaultFuelClasses:                `(/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C,/Game/FactoryGame/Resource/Parts/CompactedCoal/Desc_CompactedCoal.Desc_CompactedCoal_C,/Game/FactoryGame/Resource/Parts/PetroleumCoke/Desc_PetroleumCoke.Desc_PetroleumCoke_C)`,
 		MDescription: `Burns Coal to boil Water, the produced steam rotates turbines to generate electricity for the power grid.
 Has a Conveyor Belt and Pipe input, so both the Coal and Water supply can be automated.
 
-Caution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.`,
+Caution: Always generates at the set clock speed. Shuts down if fuel requirements are not met.`,
 		MDisplayName:                    `Coal Generator`,
+		MDoesHaveShutdownAnimation:      true,
 		MEffectUpdateInterval:           0.000000,
-		MExcludeFromMaterialInstancing:  ``,
 		MFluidStackSizeDefault:          resource.Fluid,
 		MFluidStackSizeMultiplier:       1,
-		MFogPlaneTransforms:             `((Translation=(X=199.904510,Y=1143.047119,Z=162.721100)))`,
 		MForceNetUpdateOnRegisterPlayer: false,
 		MFuel: []struct {
 			MByproduct                 string
@@ -209,7 +207,6 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MIsFullBlast:                         true,
 		MIsUseable:                           true,
 		MLoadPercentage:                      0.000000,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -219,13 +216,13 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPowerConsumption:                    0.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MPowerProduction:                     75.000000,
 		MPowerProductionExponent:             1.300000,
 		MRequiresSupplementalResource:        true,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   20000.000000,
 		MSkipBuildEffect:                     false,
@@ -239,29 +236,29 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 	}
 
 	GeneratorFuel = FGBuildableGeneratorFuel{
-		Name:                                    "GeneratorFuel",
-		ClassName:                               "Build_GeneratorFuel_C",
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MAvailableFuelClasses:                   ``,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedInputConnections:                 ``,
-		MCachedLoadPercentage:                   0.000000,
-		MCachedPipeInputConnections:             ``,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     true,
-		MDefaultFuelClasses:                     `(/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C,/Game/FactoryGame/Resource/Parts/Turbofuel/Desc_LiquidTurboFuel.Desc_LiquidTurboFuel_C,/Game/FactoryGame/Resource/Parts/BioFuel/Desc_LiquidBiofuel.Desc_LiquidBiofuel_C)`,
+		Name:                               "GeneratorFuel",
+		ClassName:                          "Build_GeneratorFuel_C",
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MAvailableFuelClasses:              ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedInputConnections:            ``,
+		MCachedLoadPercentage:              0.000000,
+		MCachedPipeInputConnections:        ``,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                true,
+		MCreateClearanceMeshRepresentation: true,
+		MDefaultFuelClasses:                `(/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C,/Game/FactoryGame/Resource/Parts/Turbofuel/Desc_LiquidTurboFuel.Desc_LiquidTurboFuel_C,/Game/FactoryGame/Resource/Parts/BioFuel/Desc_LiquidBiofuel.Desc_LiquidBiofuel_C)`,
 		MDescription: `Consumes Fuel to generate electricity for the power grid.
 Has a Pipe input so the Fuel supply can be automated.
 
-Caution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.`,
+Caution: Always generates at the set clock speed. Shuts down if fuel requirements are not met.`,
 		MDisplayName:                    `Fuel Generator`,
+		MDoesHaveShutdownAnimation:      false,
 		MEffectUpdateInterval:           2.000000,
-		MExcludeFromMaterialInstancing:  ``,
 		MFluidStackSizeDefault:          resource.Fluid,
 		MFluidStackSizeMultiplier:       1,
-		MFogPlaneTransforms:             ``,
 		MForceNetUpdateOnRegisterPlayer: false,
 		MFuel: []struct {
 			MByproduct                 string
@@ -297,7 +294,6 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MIsFullBlast:                         true,
 		MIsUseable:                           true,
 		MLoadPercentage:                      0.000000,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -307,7 +303,6 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPowerConsumption:                    0.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MPowerProduction:                     150.000000,
@@ -315,6 +310,7 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MRTPCInterval:                        0.000000,
 		MRequiresSupplementalResource:        false,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   18000.000000,
 		MSkipBuildEffect:                     false,

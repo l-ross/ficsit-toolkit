@@ -12,6 +12,7 @@ type FGConsumableDescriptor struct {
 	Name                    string
 	ClassName               string
 	MAbbreviatedDisplayName string
+	MBuildMenuPriority      float64
 	MCanBeDiscarded         bool
 	MCustomHandsMeshScale   float64
 	MCustomLocation         string
@@ -23,12 +24,14 @@ type FGConsumableDescriptor struct {
 	MForm                   resource.Form
 	MGasColor               string
 	MHealthGain             float64
+	MMenuPriority           float64
 	MPersistentBigIcon      string
 	MRadioactiveDecay       float64
 	MRememberPickUp         bool
 	MResourceSinkPoints     int
 	MSmallIcon              string
 	MStackSize              resource.StackSize
+	MSubCategories          string
 }
 
 var (
@@ -36,6 +39,7 @@ var (
 		Name:                    "Berry",
 		ClassName:               "Desc_Berry_C",
 		MAbbreviatedDisplayName: ``,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MCustomHandsMeshScale:   1.000000,
 		MCustomLocation:         `(X=0.000000,Y=0.000000,Z=0.000000)`,
@@ -50,18 +54,21 @@ Can be eaten to restore one health segment.`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
 		MHealthGain:         10.000000,
-		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Environment/Berry/UI/Berry_256.Berry_256`,
+		MMenuPriority:       0.000000,
+		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Environment/Berry/UI/IconDesc_Berry_256.IconDesc_Berry_256`,
 		MRadioactiveDecay:   0.000000,
 		MRememberPickUp:     true,
 		MResourceSinkPoints: 0,
-		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Environment/Berry/UI/Berry_64.Berry_64`,
+		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Environment/Berry/UI/IconDesc_Berry_64.IconDesc_Berry_64`,
 		MStackSize:          resource.Small,
+		MSubCategories:      ``,
 	}
 
 	EquipmentDescriptorBeacon = FGConsumableDescriptor{
 		Name:                    "EquipmentDescriptorBeacon",
 		ClassName:               "BP_EquipmentDescriptorBeacon_C",
 		MAbbreviatedDisplayName: ``,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MCustomHandsMeshScale:   1.000000,
 		MCustomLocation:         `(X=0.000000,Y=0.000000,Z=0.000000)`,
@@ -75,18 +82,21 @@ Used to mark areas of interest. Displayed on your compass with the color and nam
 		MFluidColor:         `(B=0,G=0,R=0,A=0)`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:       0.000000,
 		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Equipment/Beacon/UI/IconDesc_Beacon_256.IconDesc_Beacon_256`,
 		MRadioactiveDecay:   0.000000,
 		MRememberPickUp:     false,
 		MResourceSinkPoints: 320,
 		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Equipment/Beacon/UI/IconDesc_Beacon_64.IconDesc_Beacon_64`,
 		MStackSize:          resource.Medium,
+		MSubCategories:      ``,
 	}
 
 	Medkit = FGConsumableDescriptor{
 		Name:                    "Medkit",
 		ClassName:               "Desc_Medkit_C",
 		MAbbreviatedDisplayName: ``,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MCustomHandsMeshScale:   0.200000,
 		MCustomLocation:         `(X=0.000000,Y=0.000000,Z=0.000000)`,
@@ -101,18 +111,21 @@ Can be inhaled to fully restore health.`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
 		MHealthGain:         100.000000,
+		MMenuPriority:       0.000000,
 		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Equipment/Medkit/UI/Inhaler_256.Inhaler_256`,
 		MRadioactiveDecay:   0.000000,
 		MRememberPickUp:     false,
 		MResourceSinkPoints: 67,
 		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Equipment/Medkit/UI/Inhaler_64.Inhaler_64`,
 		MStackSize:          resource.Small,
+		MSubCategories:      ``,
 	}
 
 	Nut = FGConsumableDescriptor{
 		Name:                    "Nut",
 		ClassName:               "Desc_Nut_C",
 		MAbbreviatedDisplayName: ``,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MCustomHandsMeshScale:   1.000000,
 		MCustomLocation:         `(X=0.000000,Y=0.000000,Z=0.000000)`,
@@ -127,18 +140,21 @@ Can be eaten to restore half a health segment.`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
 		MHealthGain:         5.000000,
+		MMenuPriority:       0.000000,
 		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Environment/Nut/UI/Nut_256_New.Nut_256_New`,
 		MRadioactiveDecay:   0.000000,
 		MRememberPickUp:     true,
 		MResourceSinkPoints: 0,
 		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Environment/Nut/UI/Nut_64_new.Nut_64_new`,
 		MStackSize:          resource.Medium,
+		MSubCategories:      ``,
 	}
 
 	Parachute = FGConsumableDescriptor{
 		Name:                    "Parachute",
 		ClassName:               "Desc_Parachute_C",
 		MAbbreviatedDisplayName: ``,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MCustomHandsMeshScale:   1.000000,
 		MCustomLocation:         `(X=0.000000,Y=0.000000,Z=0.000000)`,
@@ -152,18 +168,21 @@ Slows down your fall when activated in mid-air.`,
 		MFluidColor:         `(B=0,G=0,R=0,A=0)`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
+		MMenuPriority:       0.000000,
 		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Equipment/Beacon/UI/Parachute_256.Parachute_256`,
 		MRadioactiveDecay:   0.000000,
 		MRememberPickUp:     false,
 		MResourceSinkPoints: 608,
 		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Equipment/Beacon/UI/Parachute_64.Parachute_64`,
 		MStackSize:          resource.Small,
+		MSubCategories:      ``,
 	}
 
 	Shroom = FGConsumableDescriptor{
 		Name:                    "Shroom",
 		ClassName:               "Desc_Shroom_C",
 		MAbbreviatedDisplayName: ``,
+		MBuildMenuPriority:      0.000000,
 		MCanBeDiscarded:         true,
 		MCustomHandsMeshScale:   1.000000,
 		MCustomLocation:         `(X=0.000000,Y=0.000000,Z=0.000000)`,
@@ -178,12 +197,14 @@ Can be eaten to restore two health segments.`,
 		MForm:               resource.Solid,
 		MGasColor:           `(B=0,G=0,R=0,A=0)`,
 		MHealthGain:         20.000000,
+		MMenuPriority:       0.000000,
 		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Resource/Environment/DesertShroom/UI/Mushroom_256.Mushroom_256`,
 		MRadioactiveDecay:   0.000000,
 		MRememberPickUp:     true,
 		MResourceSinkPoints: 0,
 		MSmallIcon:          `Texture2D /Game/FactoryGame/Resource/Environment/DesertShroom/UI/Mushroom_64.Mushroom_64`,
 		MStackSize:          resource.Small,
+		MSubCategories:      ``,
 	}
 )
 

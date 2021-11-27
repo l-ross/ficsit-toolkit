@@ -9,82 +9,80 @@ import (
 )
 
 type FGBuildableRadarTower struct {
-	Name                                    string
-	ClassName                               string
-	MAddToSignificanceManager               bool
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCachedSkeletalMeshes                   string
-	MCanChangePotential                     bool
-	MCurrentExpansionStep                   int
-	MDescription                            string
-	MDisplayName                            string
-	MEffectUpdateInterval                   float64
-	MExcludeFromMaterialInstancing          string
-	MFluidStackSizeDefault                  resource.StackSize
-	MFluidStackSizeMultiplier               int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MMapText                                string
-	MMaterialNameToInstanceManager          string
-	MMaxPotential                           float64
-	MMaxPotentialIncreasePerCrystal         float64
-	MMaxRevealRadius                        float64
-	MMinPotential                           float64
-	MMinRevealRadius                        float64
-	MMinimumProducingTime                   float64
-	MMinimumStoppedTime                     float64
-	MNumCyclesForProductivity               int
-	MNumRadarExpansionSteps                 int
-	MOnHasPowerChanged                      string
-	MOnHasProductionChanged                 string
-	MOnHasStandbyChanged                    string
-	MOnProductionStatusChanged              string
-	MPowerConsumption                       float64
-	MPowerConsumptionExponent               float64
-	MRadarExpansionInterval                 float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSignificanceRange                      float64
-	MSkipBuildEffect                        bool
-	MTimeToNextExpansion                    float64
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
-	OnRadarTowerRadiusUpdated               string
-	OnReplicationDetailActorCreatedEvent    string
+	Name                                 string
+	ClassName                            string
+	MAddToSignificanceManager            bool
+	MAllowColoring                       bool
+	MAttachmentPoints                    string
+	MBuildEffectSpeed                    float64
+	MCachedSkeletalMeshes                string
+	MCanChangePotential                  bool
+	MCreateClearanceMeshRepresentation   bool
+	MCurrentExpansionStep                int
+	MDescription                         string
+	MDisplayName                         string
+	MDoesHaveShutdownAnimation           bool
+	MEffectUpdateInterval                float64
+	MFluidStackSizeDefault               resource.StackSize
+	MFluidStackSizeMultiplier            int
+	MForceNetUpdateOnRegisterPlayer      bool
+	MHideOnBuildEffectStart              bool
+	MHighlightVector                     string
+	MInteractingPlayers                  string
+	MIsUseable                           bool
+	MMapText                             string
+	MMaxPotential                        float64
+	MMaxPotentialIncreasePerCrystal      float64
+	MMaxRevealRadius                     float64
+	MMinPotential                        float64
+	MMinRevealRadius                     float64
+	MMinimumProducingTime                float64
+	MMinimumStoppedTime                  float64
+	MNumCyclesForProductivity            int
+	MNumRadarExpansionSteps              int
+	MOnHasPowerChanged                   string
+	MOnHasProductionChanged              string
+	MOnHasStandbyChanged                 string
+	MPowerConsumption                    float64
+	MPowerConsumptionExponent            float64
+	MRadarExpansionInterval              float64
+	MShouldModifyWorldGrid               bool
+	MShouldShowAttachmentPointVisuals    bool
+	MShouldShowHighlight                 bool
+	MSignificanceRange                   float64
+	MSkipBuildEffect                     bool
+	MTimeToNextExpansion                 float64
+	MToggleDormancyOnInteraction         bool
+	MaxRenderDistance                    float64
+	OnRadarTowerRadiusUpdated            string
+	OnReplicationDetailActorCreatedEvent string
 }
 
 var (
 	RadarTower = FGBuildableRadarTower{
-		Name:                                    "RadarTower",
-		ClassName:                               "Build_RadarTower_C",
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     false,
-		MCurrentExpansionStep:                   0,
+		Name:                               "RadarTower",
+		ClassName:                          "Build_RadarTower_C",
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                false,
+		MCreateClearanceMeshRepresentation: true,
+		MCurrentExpansionStep:              0,
 		MDescription: `Reveals an area around itself on the map. The area is gradually revealed over time up to a maximum.
 Placing the tower higher up increases the maximum area revealed.`,
 		MDisplayName:                         `Radar Tower`,
+		MDoesHaveShutdownAnimation:           false,
 		MEffectUpdateInterval:                0.000000,
-		MExcludeFromMaterialInstancing:       ``,
 		MFluidStackSizeDefault:               resource.Fluid,
 		MFluidStackSizeMultiplier:            1,
-		MFogPlaneTransforms:                  ``,
 		MForceNetUpdateOnRegisterPlayer:      false,
 		MHideOnBuildEffectStart:              false,
 		MHighlightVector:                     `(X=0.000000,Y=0.000000,Z=0.000000)`,
 		MInteractingPlayers:                  ``,
 		MIsUseable:                           true,
 		MMapText:                             `Radar Tower`,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMaxRevealRadius:                     70000.000000,
@@ -97,11 +95,11 @@ Placing the tower higher up increases the maximum area revealed.`,
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPowerConsumption:                    30.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MRadarExpansionInterval:              300.000000,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   18000.000000,
 		MSkipBuildEffect:                     false,

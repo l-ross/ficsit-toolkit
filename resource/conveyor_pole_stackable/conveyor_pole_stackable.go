@@ -7,58 +7,56 @@ import (
 )
 
 type FGConveyorPoleStackable struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCanStack                               bool
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHeight                                 float64
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MMaterialNameToInstanceManager          string
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MStackHeight                            float64
-	MToggleDormancyOnInteraction            bool
-	MUseStaticHeight                        bool
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MCanStack                          bool
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHeight                            float64
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsUseable                         bool
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSkipBuildEffect                   bool
+	MStackHeight                       float64
+	MToggleDormancyOnInteraction       bool
+	MUseStaticHeight                   bool
+	MaxRenderDistance                  float64
 }
 
 var (
 	ConveyorPoleStackable = FGConveyorPoleStackable{
-		Name:                                    "ConveyorPoleStackable",
-		ClassName:                               "Build_ConveyorPoleStackable_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCanStack:                               true,
-		MDescription:                            `Support for conveyor belts. Can be stacked on other stackable supports.`,
-		MDisplayName:                            `Stackable Conveyor Pole`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHeight:                                 100.000000,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsUseable:                              false,
-		MMaterialNameToInstanceManager:          `()`,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MStackHeight:                            200.000000,
-		MToggleDormancyOnInteraction:            false,
-		MUseStaticHeight:                        true,
-		MaxRenderDistance:                       -1.000000,
+		Name:                               "ConveyorPoleStackable",
+		ClassName:                          "Build_ConveyorPoleStackable_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCanStack:                          true,
+		MCreateClearanceMeshRepresentation: false,
+		MDescription:                       `Support for conveyor belts. Can be stacked on other stackable supports.`,
+		MDisplayName:                       `Stackable Conveyor Pole`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHeight:                            100.000000,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsUseable:                         false,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MStackHeight:                       200.000000,
+		MToggleDormancyOnInteraction:       false,
+		MUseStaticHeight:                   true,
+		MaxRenderDistance:                  -1.000000,
 	}
 )
 

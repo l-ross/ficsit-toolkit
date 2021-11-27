@@ -11,27 +11,52 @@ import (
 type FGGolfCartDispenser struct {
 	Name                   string
 	ClassName              string
+	CanDisplayDisqualifier bool
 	MArmAnimation          string
 	MAttachSocket          string
 	MBackAnimation         string
+	MBuildDisqualifierText string
 	MCostToUse             string
 	MEquipmentSlot         resource.EquipmentSlot
 	MHasPersistentOwner    bool
+	MMaxSpawnDistance      float64
 	MPlaceDistanceMax      float64
+	MSpawningClearance     float64
 	MUseDefaultPrimaryFire bool
 }
 
 var (
-	GolfCartDispenser = FGGolfCartDispenser{
-		Name:                   "GolfCartDispenser",
-		ClassName:              "Equip_GolfCartDispenser_C",
+	GoldGolfCartDispenser = FGGolfCartDispenser{
+		Name:                   "GoldGolfCartDispenser",
+		ClassName:              "Equip_GoldGolfCartDispenser_C",
+		CanDisplayDisqualifier: true,
 		MArmAnimation:          `AE_Generic2Hand`,
 		MAttachSocket:          `hand_rSocket`,
 		MBackAnimation:         `BE_None`,
+		MBuildDisqualifierText: `Vehicles cannot be built or deployed on top of existing vehicles.`,
 		MCostToUse:             ``,
 		MEquipmentSlot:         resource.Arms,
 		MHasPersistentOwner:    false,
+		MMaxSpawnDistance:      3000.000000,
 		MPlaceDistanceMax:      1000.000000,
+		MSpawningClearance:     1.050000,
+		MUseDefaultPrimaryFire: false,
+	}
+
+	GolfCartDispenser = FGGolfCartDispenser{
+		Name:                   "GolfCartDispenser",
+		ClassName:              "Equip_GolfCartDispenser_C",
+		CanDisplayDisqualifier: true,
+		MArmAnimation:          `AE_Generic2Hand`,
+		MAttachSocket:          `hand_rSocket`,
+		MBackAnimation:         `BE_None`,
+		MBuildDisqualifierText: `Vehicles cannot be built or deployed on top of existing vehicles.`,
+		MCostToUse:             ``,
+		MEquipmentSlot:         resource.Arms,
+		MHasPersistentOwner:    false,
+		MMaxSpawnDistance:      3000.000000,
+		MPlaceDistanceMax:      1000.000000,
+		MSpawningClearance:     1.050000,
 		MUseDefaultPrimaryFire: false,
 	}
 )
@@ -45,5 +70,6 @@ func GetByClassName(className string) (FGGolfCartDispenser, error) {
 }
 
 var ClassNameToDescriptor = map[string]FGGolfCartDispenser{
-	"Equip_GolfCartDispenser_C": GolfCartDispenser,
+	"Equip_GoldGolfCartDispenser_C": GoldGolfCartDispenser,
+	"Equip_GolfCartDispenser_C":     GolfCartDispenser,
 }

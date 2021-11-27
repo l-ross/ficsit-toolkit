@@ -7,82 +7,79 @@ import (
 )
 
 type FGBuildableWire struct {
-	Name                                    string
-	ClassName                               string
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MConnections                            string
-	MDescription                            string
-	MDisplayName                            string
-	MExcludeFromMaterialInstancing          string
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MHideOnBuildEffectStart                 bool
-	MHighlightVector                        string
-	MInteractingPlayers                     string
-	MIsUseable                              bool
-	MLengthPerCost                          float64
-	MMaterialNameToInstanceManager          string
-	MMaxLength                              float64
-	MShouldModifyWorldGrid                  bool
-	MShouldShowHighlight                    bool
-	MSkipBuildEffect                        bool
-	MToggleDormancyOnInteraction            bool
-	MaxRenderDistance                       float64
+	Name                               string
+	ClassName                          string
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MBuildEffectSpeed                  float64
+	MConnections                       string
+	MCreateClearanceMeshRepresentation bool
+	MDescription                       string
+	MDisplayName                       string
+	MForceNetUpdateOnRegisterPlayer    bool
+	MHideOnBuildEffectStart            bool
+	MHighlightVector                   string
+	MInteractingPlayers                string
+	MIsUseable                         bool
+	MLengthPerCost                     float64
+	MMaxLength                         float64
+	MShouldModifyWorldGrid             bool
+	MShouldShowAttachmentPointVisuals  bool
+	MShouldShowHighlight               bool
+	MSkipBuildEffect                   bool
+	MToggleDormancyOnInteraction       bool
+	MaxRenderDistance                  float64
 }
 
 var (
 	PowerLine = FGBuildableWire{
-		Name:                                    "PowerLine",
-		ClassName:                               "Build_PowerLine_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MConnections:                            `None`,
-		MDescription:                            `Used to connect Power Poles, Power Generators and Factory buildings.`,
-		MDisplayName:                            `Power Line`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsUseable:                              false,
-		MLengthPerCost:                          2500.000000,
-		MMaterialNameToInstanceManager:          `()`,
-		MMaxLength:                              10000.000000,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MToggleDormancyOnInteraction:            false,
-		MaxRenderDistance:                       1000.000000,
+		Name:                               "PowerLine",
+		ClassName:                          "Build_PowerLine_C",
+		MAllowColoring:                     false,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MConnections:                       `None`,
+		MCreateClearanceMeshRepresentation: true,
+		MDescription:                       `Used to connect Power Poles, Power Generators and Factory buildings.`,
+		MDisplayName:                       `Power Line`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsUseable:                         false,
+		MLengthPerCost:                     2500.000000,
+		MMaxLength:                         10000.000000,
+		MShouldModifyWorldGrid:             false,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MToggleDormancyOnInteraction:       false,
+		MaxRenderDistance:                  1000.000000,
 	}
 
 	XmassLightsLine = FGBuildableWire{
-		Name:                                    "XmassLightsLine",
-		ClassName:                               "Build_XmassLightsLine_C",
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MConnections:                            `None`,
-		MDescription:                            `Used to connect Power Poles, Power Generators and Factory buildings. Has pretty lights to boot!`,
-		MDisplayName:                            `FICSMAS Power Light`,
-		MExcludeFromMaterialInstancing:          ``,
-		MFogPlaneTransforms:                     ``,
-		MForceNetUpdateOnRegisterPlayer:         false,
-		MHideOnBuildEffectStart:                 false,
-		MHighlightVector:                        `(X=0.000000,Y=0.000000,Z=0.000000)`,
-		MInteractingPlayers:                     ``,
-		MIsUseable:                              false,
-		MLengthPerCost:                          2500.000000,
-		MMaterialNameToInstanceManager:          `()`,
-		MMaxLength:                              10000.000000,
-		MShouldModifyWorldGrid:                  true,
-		MShouldShowHighlight:                    false,
-		MSkipBuildEffect:                        false,
-		MToggleDormancyOnInteraction:            false,
-		MaxRenderDistance:                       1000.000000,
+		Name:                               "XmassLightsLine",
+		ClassName:                          "Build_XmassLightsLine_C",
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MBuildEffectSpeed:                  0.000000,
+		MConnections:                       `None`,
+		MCreateClearanceMeshRepresentation: true,
+		MDescription:                       `Used to connect Power Poles, Power Generators and Factory buildings. Has pretty lights to boot!`,
+		MDisplayName:                       `FICSMAS Power Light`,
+		MForceNetUpdateOnRegisterPlayer:    false,
+		MHideOnBuildEffectStart:            false,
+		MHighlightVector:                   `(X=0.000000,Y=0.000000,Z=0.000000)`,
+		MInteractingPlayers:                ``,
+		MIsUseable:                         false,
+		MLengthPerCost:                     2500.000000,
+		MMaxLength:                         10000.000000,
+		MShouldModifyWorldGrid:             true,
+		MShouldShowAttachmentPointVisuals:  false,
+		MShouldShowHighlight:               false,
+		MSkipBuildEffect:                   false,
+		MToggleDormancyOnInteraction:       false,
+		MaxRenderDistance:                  1000.000000,
 	}
 )
 

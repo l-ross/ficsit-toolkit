@@ -18,14 +18,23 @@ import (
 	"golang.org/x/text/transform"
 )
 
-var file string
+var (
+	file         string
+	buildVersion string
+)
 
 func init() {
+	pflag.StringVarP(&buildVersion, "build", "b", "", "Build version of the game")
 	pflag.StringVarP(&file, "file", "f", "./Docs.json", "Path to the Docs.json file")
 }
 
 func main() {
 	pflag.Parse()
+
+	if buildVersion == "" {
+		pflag.Usage()
+		log.Fatal("build version must be set")
+	}
 
 	err := realMain()
 	if err != nil {
@@ -53,6 +62,33 @@ func realMain() error {
 		if err != nil {
 			return err
 		}
+	}
+
+	// Create build_version.go
+	err = generateFile(buildVersionTpl, "../build_version.go", buildVersion)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func generateFile(t *template.Template, fileName string, v interface{}) error {
+	var b bytes.Buffer
+
+	err := t.Execute(&b, v)
+	if err != nil {
+		return err
+	}
+
+	formatted, err := format.Source(b.Bytes())
+	if err != nil {
+		return err
+	}
+
+	err = ioutil.WriteFile(fileName, formatted, 0700)
+	if err != nil {
+		return err
 	}
 
 	return nil
@@ -257,19 +293,7 @@ func (r *Resource) generate() error {
 		return err
 	}
 
-	var b bytes.Buffer
-
-	err = tpl.Execute(&b, r)
-	if err != nil {
-		return err
-	}
-
-	formatted, err := format.Source(b.Bytes())
-	if err != nil {
-		return err
-	}
-
-	err = ioutil.WriteFile(fileName, formatted, 0700)
+	err = generateFile(tpl, fileName, r)
 	if err != nil {
 		return err
 	}
@@ -564,3 +588,10 @@ var arrayStructValTpl = template.Must(template.New("ArrayStructVal").Parse(`[]st
 	},
 	{{end}}
 }`))
+
+var buildVersionTpl = template.Must(template.New("BuildVersion").Parse(`
+package resource
+
+// BuildVersion is the version of the game that this package and its subdirectories were generated from.
+const BuildVersion = "{{.}}"
+`))

@@ -9,29 +9,29 @@ import (
 )
 
 type FGBuildableGeneratorNuclear struct {
-	Name                                    string
-	ClassName                               string
-	MAddToSignificanceManager               bool
-	MAllowCleranceSeparationEvenIfStackedOn bool
-	MAvailableFuelClasses                   string
-	MBlockSharingMaterialInstanceMapping    bool
-	MBuildEffectSpeed                       float64
-	MCachedInputConnections                 string
-	MCachedLoadPercentage                   float64
-	MCachedPipeInputConnections             string
-	MCachedSkeletalMeshes                   string
-	MCanChangePotential                     bool
-	MCurrentGeneratorNuclearWarning         string
-	MDefaultFuelClasses                     string
-	MDescription                            string
-	MDisplayName                            string
-	MEffectUpdateInterval                   float64
-	MExcludeFromMaterialInstancing          string
-	MFluidStackSizeDefault                  resource.StackSize
-	MFluidStackSizeMultiplier               int
-	MFogPlaneTransforms                     string
-	MForceNetUpdateOnRegisterPlayer         bool
-	MFuel                                   []struct {
+	Name                               string
+	ClassName                          string
+	MAddToSignificanceManager          bool
+	MAllowColoring                     bool
+	MAttachmentPoints                  string
+	MAvailableFuelClasses              string
+	MBuildEffectSpeed                  float64
+	MCachedInputConnections            string
+	MCachedLoadPercentage              float64
+	MCachedPipeInputConnections        string
+	MCachedSkeletalMeshes              string
+	MCanChangePotential                bool
+	MCreateClearanceMeshRepresentation bool
+	MCurrentGeneratorNuclearWarning    string
+	MDefaultFuelClasses                string
+	MDescription                       string
+	MDisplayName                       string
+	MDoesHaveShutdownAnimation         bool
+	MEffectUpdateInterval              float64
+	MFluidStackSizeDefault             resource.StackSize
+	MFluidStackSizeMultiplier          int
+	MForceNetUpdateOnRegisterPlayer    bool
+	MFuel                              []struct {
 		MByproduct                 string
 		MByproductAmount           int
 		MFuelClass                 string
@@ -47,7 +47,6 @@ type FGBuildableGeneratorNuclear struct {
 	MIsFullBlast                         bool
 	MIsUseable                           bool
 	MLoadPercentage                      float64
-	MMaterialNameToInstanceManager       string
 	MMaxPotential                        float64
 	MMaxPotentialIncreasePerCrystal      float64
 	MMinPotential                        float64
@@ -57,13 +56,13 @@ type FGBuildableGeneratorNuclear struct {
 	MOnHasPowerChanged                   string
 	MOnHasProductionChanged              string
 	MOnHasStandbyChanged                 string
-	MOnProductionStatusChanged           string
 	MPowerConsumption                    float64
 	MPowerConsumptionExponent            float64
 	MPowerProduction                     float64
 	MPowerProductionExponent             float64
 	MRequiresSupplementalResource        bool
 	MShouldModifyWorldGrid               bool
+	MShouldShowAttachmentPointVisuals    bool
 	MShouldShowHighlight                 bool
 	MSignificanceRange                   float64
 	MSkipBuildEffect                     bool
@@ -77,31 +76,31 @@ type FGBuildableGeneratorNuclear struct {
 
 var (
 	GeneratorNuclear = FGBuildableGeneratorNuclear{
-		Name:                                    "GeneratorNuclear",
-		ClassName:                               "Build_GeneratorNuclear_C",
-		MAddToSignificanceManager:               true,
-		MAllowCleranceSeparationEvenIfStackedOn: false,
-		MAvailableFuelClasses:                   ``,
-		MBlockSharingMaterialInstanceMapping:    false,
-		MBuildEffectSpeed:                       0.000000,
-		MCachedInputConnections:                 ``,
-		MCachedLoadPercentage:                   0.000000,
-		MCachedPipeInputConnections:             ``,
-		MCachedSkeletalMeshes:                   ``,
-		MCanChangePotential:                     true,
-		MCurrentGeneratorNuclearWarning:         `GNW_None`,
-		MDefaultFuelClasses:                     `(/Game/FactoryGame/Resource/Parts/NuclearFuelRod/Desc_NuclearFuelRod.Desc_NuclearFuelRod_C,/Game/FactoryGame/Resource/Parts/PlutoniumFuelRods/Desc_PlutoniumFuelRod.Desc_PlutoniumFuelRod_C)`,
+		Name:                               "GeneratorNuclear",
+		ClassName:                          "Build_GeneratorNuclear_C",
+		MAddToSignificanceManager:          true,
+		MAllowColoring:                     true,
+		MAttachmentPoints:                  ``,
+		MAvailableFuelClasses:              ``,
+		MBuildEffectSpeed:                  0.000000,
+		MCachedInputConnections:            ``,
+		MCachedLoadPercentage:              0.000000,
+		MCachedPipeInputConnections:        ``,
+		MCachedSkeletalMeshes:              ``,
+		MCanChangePotential:                true,
+		MCreateClearanceMeshRepresentation: true,
+		MCurrentGeneratorNuclearWarning:    `GNW_None`,
+		MDefaultFuelClasses:                `(/Game/FactoryGame/Resource/Parts/NuclearFuelRod/Desc_NuclearFuelRod.Desc_NuclearFuelRod_C,/Game/FactoryGame/Resource/Parts/PlutoniumFuelRods/Desc_PlutoniumFuelRod.Desc_PlutoniumFuelRod_C)`,
 		MDescription: `Consumes Nuclear Fuel Rods and Water to produce electricity for the power grid.
 
 Produces Nuclear Waste, which is extracted from the conveyor belt output.
 
-Caution: Always generates at the set clockspeed. Shuts down if fuel requirements are not met.`,
+Caution: Always generates at the set clock speed. Shuts down if fuel requirements are not met.`,
 		MDisplayName:                    `Nuclear Power Plant`,
+		MDoesHaveShutdownAnimation:      true,
 		MEffectUpdateInterval:           2.000000,
-		MExcludeFromMaterialInstancing:  ``,
 		MFluidStackSizeDefault:          resource.Fluid,
 		MFluidStackSizeMultiplier:       1,
-		MFogPlaneTransforms:             `((Translation=(X=-200.000000,Y=2088.737549,Z=181.784302)),(Translation=(X=200.000000,Y=2088.737549,Z=181.784302)))`,
 		MForceNetUpdateOnRegisterPlayer: false,
 		MFuel: []struct {
 			MByproduct                 string
@@ -131,7 +130,6 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MIsFullBlast:                         true,
 		MIsUseable:                           true,
 		MLoadPercentage:                      0.000000,
-		MMaterialNameToInstanceManager:       `()`,
 		MMaxPotential:                        1.000000,
 		MMaxPotentialIncreasePerCrystal:      0.500000,
 		MMinPotential:                        0.010000,
@@ -141,13 +139,13 @@ Caution: Always generates at the set clockspeed. Shuts down if fuel requirements
 		MOnHasPowerChanged:                   `()`,
 		MOnHasProductionChanged:              `()`,
 		MOnHasStandbyChanged:                 `()`,
-		MOnProductionStatusChanged:           `()`,
 		MPowerConsumption:                    0.000000,
 		MPowerConsumptionExponent:            1.600000,
 		MPowerProduction:                     2500.000000,
 		MPowerProductionExponent:             1.321928,
 		MRequiresSupplementalResource:        true,
 		MShouldModifyWorldGrid:               true,
+		MShouldShowAttachmentPointVisuals:    false,
 		MShouldShowHighlight:                 false,
 		MSignificanceRange:                   8000.000000,
 		MSkipBuildEffect:                     false,
