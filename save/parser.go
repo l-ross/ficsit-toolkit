@@ -24,8 +24,7 @@ func newParser(r io.Reader) (*parser, error) {
 	}, nil
 }
 
-// Parse will parse the entire file and return a Save object that contains
-// the entire data structure of the file.
+// Parse a Satisfactory save file
 func Parse(r io.Reader) (*Save, error) {
 	p, err := newParser(r)
 	if err != nil {
