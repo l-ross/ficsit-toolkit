@@ -21,8 +21,10 @@ type Property struct {
 	Value Value `json:"value"`
 }
 
+// Type of a Property
 type Type string
 
+// Value of a Property
 type Value interface {
 	// parse the property Value
 	//

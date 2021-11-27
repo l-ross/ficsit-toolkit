@@ -3,13 +3,18 @@ package save
 
 // A Save file for Satisfactory
 type Save struct {
-	Header           *Header               `json:"header"`
-	Components       map[string]*Component `json:"components"`
-	Entities         map[string]*Entity    `json:"entities"`
-	CollectedObjects []*ObjectReference    `json:"collected_objects"`
+	// Header of the save file.
+	Header *Header `json:"header"`
+	// Components within the save file. The key is the InstanceName of the Component.
+	Components map[string]*Component `json:"components"`
+	// Entities within the save file. The key is the InstanceName of the Entity.
+	Entities         map[string]*Entity `json:"entities"`
+	CollectedObjects []*ObjectReference `json:"collected_objects"`
 
 	// Store the order we parsed entities / components in so that when serializing we
 	// write them back in the same order.
+	// TODO: If we add a new entity or component it won't be serialized as it's not
+	//  in the below order slice.
 	entityOrder    []string
 	componentOrder []string
 

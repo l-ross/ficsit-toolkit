@@ -13,7 +13,7 @@ const (
 	BaseTextType TextType = 0x00
 )
 
-type textValue interface {
+type TextValue interface {
 	parse(d *data.Data) error
 
 	serialize(d *data.Data) error
@@ -24,12 +24,12 @@ type textValue interface {
 //
 
 type TextNone struct {
-	CultureInvariantString int32
-	String                 string
+	CultureInvariantString int32  `json:"culture_invariant_string,omitempty"`
+	String                 string `json:"string,omitempty"`
 }
 
 func (t *TextPropertyValue) GetNoneText() (*TextNone, error) {
-	if v, ok := t.value.(*TextNone); ok {
+	if v, ok := t.Value.(*TextNone); ok {
 		return v, nil
 	}
 
@@ -72,13 +72,13 @@ func (t *TextNone) serialize(d *data.Data) error {
 //
 
 type TextBase struct {
-	Namespace string
-	Key       string
-	Value     string
+	Namespace string `json:"namespace,omitempty"`
+	Key       string `json:"key,omitempty"`
+	Value     string `json:"value,omitempty"`
 }
 
 func (t *TextPropertyValue) GetBaseText() (*TextBase, error) {
-	if v, ok := t.value.(*TextBase); ok {
+	if v, ok := t.Value.(*TextBase); ok {
 		return v, nil
 	}
 

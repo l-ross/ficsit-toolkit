@@ -1,3 +1,5 @@
+// Package data provides the ability to read and write the necessary data types
+// from a decompressed Satisfactory save body.
 package data
 
 import (
@@ -46,14 +48,17 @@ func NewFromBytes(b []byte) *Data {
 	}
 }
 
+// Index returns the current position in Data that the next read or write will occur at.
 func (d *Data) Index() int64 {
 	return d.sws.Index
 }
 
+// Bytes returns the underlying byte slice.
 func (d *Data) Bytes() []byte {
 	return d.sws.Buffer
 }
 
+// Len returns the length of the underlying byte slice.
 func (d *Data) Len() int64 {
 	return d.sws.Len()
 }

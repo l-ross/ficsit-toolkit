@@ -32,7 +32,7 @@ const (
 //
 
 type ArbitraryStruct struct {
-	Properties []*Property
+	Properties []*Property `json:"properties,omitempty"`
 }
 
 func (v *StructPropertyValue) GetArbitraryStruct() (*ArbitraryStruct, error) {
@@ -70,9 +70,9 @@ func (v *ArbitraryStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type BoxStruct struct {
-	Min     []float32
-	Max     []float32
-	IsValid bool
+	Min     []float32 `json:"min,omitempty"`
+	Max     []float32 `json:"max,omitempty"`
+	IsValid bool      `json:"is_valid,omitempty"`
 }
 
 func (v *StructPropertyValue) GetBoxStruct() (*BoxStruct, error) {
@@ -129,10 +129,10 @@ func (v *BoxStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type ColorStruct struct {
-	B byte
-	G byte
-	R byte
-	A byte
+	B byte `json:"b,omitempty"`
+	G byte `json:"g,omitempty"`
+	R byte `json:"r,omitempty"`
+	A byte `json:"a,omitempty"`
 }
 
 func (v *StructPropertyValue) GetColorStruct() (*ColorStruct, error) {
@@ -296,10 +296,10 @@ func (v *GUIDStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type InventoryItemStruct struct {
-	ItemName  string
-	LevelName string
-	PathName  string
-	NumItems  int32
+	ItemName  string `json:"item_name,omitempty"`
+	LevelName string `json:"level_name,omitempty"`
+	PathName  string `json:"path_name,omitempty"`
+	NumItems  int32  `json:"num_items,omitempty"`
 }
 
 func (v *StructPropertyValue) GetInventoryItemStruct() (*InventoryItemStruct, error) {
@@ -430,10 +430,10 @@ func (v *InventoryItemStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type LinearColorStruct struct {
-	R float32
-	G float32
-	B float32
-	A float32
+	R float32 `json:"r,omitempty"`
+	G float32 `json:"g,omitempty"`
+	B float32 `json:"b,omitempty"`
+	A float32 `json:"a,omitempty"`
 }
 
 func (v *StructPropertyValue) GetLinearColor() (*LinearColorStruct, error) {
@@ -498,10 +498,10 @@ func (v *LinearColorStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type RailroadTrackPositionStruct struct {
-	LevelName string  `json:"levelName"`
-	PathName  string  `json:"pathName"`
-	Offset    float32 `json:"offset"`
-	Forward   float32 `json:"forward"`
+	LevelName string  `json:"levelName,omitempty"`
+	PathName  string  `json:"pathName,omitempty"`
+	Offset    float32 `json:"offset,omitempty"`
+	Forward   float32 `json:"forward,omitempty"`
 }
 
 func (v *StructPropertyValue) GetRailroadTrackPositionStruct() (*RailroadTrackPositionStruct, error) {
@@ -569,10 +569,10 @@ func (v *RailroadTrackPositionStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type QuatStruct struct {
-	X float32
-	Y float32
-	Z float32
-	W float32
+	X float32 `json:"x,omitempty"`
+	Y float32 `json:"y,omitempty"`
+	Z float32 `json:"z,omitempty"`
+	W float32 `json:"w,omitempty"`
 }
 
 func (v *StructPropertyValue) GetQuatStruct() (*QuatStruct, error) {
@@ -637,9 +637,9 @@ func (v *QuatStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type VectorStruct struct {
-	X float32
-	Y float32
-	Z float32
+	X float32 `json:"x,omitempty"`
+	Y float32 `json:"y,omitempty"`
+	Z float32 `json:"z,omitempty"`
 }
 
 func (v *StructPropertyValue) GetVectorStruct() (*VectorStruct, error) {
@@ -694,8 +694,8 @@ func (v *VectorStruct) serialize(d *data.Data) (int32, error) {
 //
 
 type Vector2DStruct struct {
-	X float32
-	Y float32
+	X float32 `json:"x,omitempty"`
+	Y float32 `json:"y,omitempty"`
 }
 
 func (v *StructPropertyValue) GetVector2DStruct() (*Vector2DStruct, error) {

@@ -124,6 +124,7 @@ func (d *Data) ReadBool() (bool, error) {
 	return true, nil
 }
 
+// NextByteIsNull will return an error if the next byte is not a null.
 func (d *Data) NextByteIsNull() error {
 	b, err := d.ReadByte()
 	if err != nil {
@@ -141,10 +142,11 @@ func (d *Data) SkipBytes(l int64) error {
 	return err
 }
 
-// Reads a data chunk and returns the bytes with the length of the
+// DebugReadDataChunk reads a data chunk and returns the bytes with the length of the
 // chunk prepended.
-// Resets p.sws back to where the function started reading from.
-// Useful when debugging a data chunk.
+//
+// Once reading has completed the index is wound back to the starting position before
+// the read. Useful in some debugging scenarios.
 func (d *Data) DebugReadDataChunk(l int32) ([]byte, error) {
 	pos := d.sws.Index
 

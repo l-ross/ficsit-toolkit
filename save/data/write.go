@@ -114,8 +114,11 @@ func (d *Data) WriteNoneProp() error {
 	return d.WriteString("None")
 }
 
-// WriteLen writes the int32 at the specified index.
-// Resets its position to its original location after writing.
+// WriteLen writes the int32 at the specified index and then resets the Index
+// of Data back to its original position.
+//
+// Useful in situations where we don't know what the length of something will be until
+// we have written it. We can write a placeholder length, write the data and then update the length.
 func (d *Data) WriteLen(i int32, idx int64) error {
 	currentPos := d.sws.Index
 

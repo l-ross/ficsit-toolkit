@@ -39,10 +39,10 @@ type ArrayPropertyValue struct {
 	// The following fields are only set if the ValueType is StructProperty
 	//
 
-	StructName      string
-	StructBytes     []byte
-	StructInnerType string
-	StructGUID      []int32
+	StructName      string  `json:"struct_name,omitempty"`
+	StructBytes     []byte  `json:"struct_bytes,omitempty"`
+	StructInnerType string  `json:"struct_inner_type,omitempty"`
+	StructGUID      []int32 `json:"struct_guid,omitempty"`
 }
 
 func newArrayPropertyValue() Value {
@@ -852,6 +852,11 @@ type MapPropertyValue struct {
 	ValueType Type            `json:"value_type,omitempty"`
 	Values    map[Value]Value `json:"values,omitempty"`
 
+	// Maintain the order of the keys so that when we serialize back
+	// the property we maintain the key order. Makes testing easier.
+	//
+	// TODO: If a new value is added to Values then it won't be serialized as it's
+	//  not in keyOrder.
 	keyOrder []Value
 }
 
@@ -1303,9 +1308,9 @@ func (v *StructPropertyValue) serialize(d *data.Data, inner bool) (int32, error)
 //
 
 type TextPropertyValue struct {
-	Flags int32
-	Type  TextType
-	value textValue
+	Flags int32     `json:"flags"`
+	Type  TextType  `json:"type"`
+	Value TextValue `json:"value"`
 }
 
 func newTextPropertyValue() Value {
@@ -1341,14 +1346,14 @@ func (v *TextPropertyValue) parse(d *data.Data, inner bool) error {
 	// TODO: Handle other text types
 	switch v.Type {
 	case BaseTextType:
-		v.value = &TextBase{}
+		v.Value = &TextBase{}
 	case NoneTextType:
-		v.value = &TextNone{}
+		v.Value = &TextNone{}
 	default:
 		return fmt.Errorf("unknown text type %v", v.Type)
 	}
 
-	err = v.value.parse(d)
+	err = v.Value.parse(d)
 	if err != nil {
 		return err
 	}
@@ -1374,7 +1379,7 @@ func (v *TextPropertyValue) serialize(d *data.Data, inner bool) (int32, error) {
 		return 0, err
 	}
 
-	err = v.value.serialize(d)
+	err = v.Value.serialize(d)
 	if err != nil {
 		return 0, err
 	}

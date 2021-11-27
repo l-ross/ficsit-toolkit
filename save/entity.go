@@ -16,9 +16,9 @@ type Entity struct {
 	WasPlacedInLevel int32                `json:"wasPlacedInLevel"`
 	ParentObjectRoot string               `json:"parentObjectRoot"`
 	ParentObjectName string               `json:"parentObjectName"`
-	References       []*ObjectReference   `json:"component"`
-	Properties       []*property.Property `json:"property"`
-	Extra            *extra.Extra         `json:"extras"`
+	References       []*ObjectReference   `json:"references"`
+	Properties       []*property.Property `json:"properties"`
+	Extra            *extra.Extra         `json:"extra"`
 }
 
 func (e *Entity) parse(p *parser) error {
