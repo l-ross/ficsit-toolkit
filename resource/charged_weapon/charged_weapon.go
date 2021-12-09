@@ -58,7 +58,7 @@ var (
 		Name:                             "NobeliskDetonator",
 		ClassName:                        "Equip_NobeliskDetonator_C",
 		MAimTime:                         1.000000,
-		MAllowedAmmoClasses:              `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NobeliskExplosive/Desc_NobeliskExplosive.Desc_NobeliskExplosive_C"')`,
+		MAllowedAmmoClasses:              `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/NobeliskExplosive/Desc_NobeliskExplosive.Desc_NobeliskExplosive_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SnowballProjectile/Desc_SnowballProjectile.Desc_SnowballProjectile_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Fireworks/Desc_Fireworks_Projectile_01.Desc_Fireworks_Projectile_01_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Fireworks/Desc_Fireworks_Projectile_02.Desc_Fireworks_Projectile_02_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Events/Christmas/Fireworks/Desc_Fireworks_Projectile_03.Desc_Fireworks_Projectile_03_C"')`,
 		MAmmoCycleMode:                   `IE_Released`,
 		MAmmoSwitchUsedRadialMenu:        false,
 		MArmAnimation:                    `AE_Nobelisk`,
@@ -98,51 +98,6 @@ var (
 		MWeaponDamageMultiplier:          1.000000,
 		MWeaponState:                     `EWS_Unequipped`,
 	}
-
-	SnowballWeaponMittens = FGChargedWeapon{
-		Name:                             "SnowballWeaponMittens",
-		ClassName:                        "Equip_SnowballWeaponMittens_C",
-		MAimTime:                         1.000000,
-		MAllowedAmmoClasses:              `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/Parts/SnowballProjectile/Desc_SnowballProjectile.Desc_SnowballProjectile_C"')`,
-		MAmmoCycleMode:                   `IE_Released`,
-		MAmmoSwitchUsedRadialMenu:        false,
-		MArmAnimation:                    `AE_Generic1Hand`,
-		MAttachSocket:                    `hand_lSocket`,
-		MAutoReloadDelay:                 1.000000,
-		MAutoReloadTimerHandle:           `()`,
-		MAutomaticallyReload:             false,
-		MBackAnimation:                   `BE_None`,
-		MBaseAimTime:                     0.000000,
-		MBaseFiringDispersion:            0.000000,
-		MBaseRestingDispersion:           0.000000,
-		MBlockSprintWhenFiring:           true,
-		MCostToUse:                       ``,
-		MCurrentAmmoCount:                0,
-		MCurrentDispersion:               0.000000,
-		MDelayBetweenSecondaryTriggers:   0.000000,
-		MDispensedProjectiles:            ``,
-		MDispersionChangePerShot:         0.000000,
-		MEquipmentSlot:                   resource.Arms,
-		MFireRate:                        0.500000,
-		MFiringBlocksDispersionReduction: false,
-		MFiringDispersion:                3.000000,
-		MHasPersistentOwner:              false,
-		MIsPendingExecuteFire:            false,
-		MMaxChargeTime:                   0.300000,
-		MMaxThrowForce:                   3500,
-		MMinThrowForce:                   800,
-		MOldState:                        `(EWS_Unequipped)`,
-		MOnAmmoCyclingPressed:            `()`,
-		MOnAmmoCyclingReleased:           `()`,
-		MOnWeaponStateChanged:            `()`,
-		MRadialMenuShowUpTime:            0.200000,
-		MReloadTime:                      0.200000,
-		MRestingDispersion:               0.200000,
-		MShowCycleAmmoRadialMenuTimer:    `()`,
-		MUseDefaultPrimaryFire:           false,
-		MWeaponDamageMultiplier:          1.000000,
-		MWeaponState:                     `EWS_Unequipped`,
-	}
 )
 
 func GetByClassName(className string) (FGChargedWeapon, error) {
@@ -154,6 +109,5 @@ func GetByClassName(className string) (FGChargedWeapon, error) {
 }
 
 var ClassNameToDescriptor = map[string]FGChargedWeapon{
-	"Equip_NobeliskDetonator_C":     NobeliskDetonator,
-	"Equip_SnowballWeaponMittens_C": SnowballWeaponMittens,
+	"Equip_NobeliskDetonator_C": NobeliskDetonator,
 }

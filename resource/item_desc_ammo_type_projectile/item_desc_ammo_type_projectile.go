@@ -82,14 +82,16 @@ var (
 	}
 
 	SnowballProjectile = FGItemDescAmmoTypeProjectile{
-		Name:                             "SnowballProjectile",
-		ClassName:                        "Desc_SnowballProjectile_C",
-		AmmoFiredDelegate:                `()`,
-		MAbbreviatedDisplayName:          ``,
-		MAmmoDamageFalloff:               `(EditorCurveData=(DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=CurveFloat'"/Game/FactoryGame/Resource/Parts/CartridgeStandard/LinearDamageFalloff.LinearDamageFalloff"')`,
-		MBuildMenuPriority:               0.000000,
-		MCanBeDiscarded:                  true,
-		MDescription:                     `Compressed dihydrogen monoxide crystals.`,
+		Name:                    "SnowballProjectile",
+		ClassName:               "Desc_SnowballProjectile_C",
+		AmmoFiredDelegate:       `()`,
+		MAbbreviatedDisplayName: ``,
+		MAmmoDamageFalloff:      `(EditorCurveData=(DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=CurveFloat'"/Game/FactoryGame/Resource/Parts/CartridgeStandard/LinearDamageFalloff.LinearDamageFalloff"')`,
+		MBuildMenuPriority:      0.000000,
+		MCanBeDiscarded:         true,
+		MDescription: `Compressed dihydrogen monoxide crystals.
+
+Alternative Nobelisk Ammo. Use G to swap!`,
 		MDispersionPerShotChangeModifier: 0.000000,
 		MDisplayName:                     `Snowball`,
 		MEnergyValue:                     0.000000,

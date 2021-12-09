@@ -13,6 +13,7 @@ type FGBuildableConveyorBelt struct {
 	MAttachmentPoints                  string
 	MBuildEffectSpeed                  float64
 	MCreateClearanceMeshRepresentation bool
+	MCustomSkins                       string
 	MDescription                       string
 	MDisplayName                       string
 	MForceNetUpdateOnRegisterPlayer    bool
@@ -41,6 +42,7 @@ var (
 		MAttachmentPoints:                  ``,
 		MBuildEffectSpeed:                  0.000000,
 		MCreateClearanceMeshRepresentation: true,
+		MCustomSkins:                       `(/Game/FactoryGame/Buildable/-Shared/Customization/Skins/SkinDesc_Test1.SkinDesc_Test1_C)`,
 		MDescription:                       `Transports up to 60 resources per minute. Used to move resources between buildings.`,
 		MDisplayName:                       `Conveyor Belt Mk.1`,
 		MForceNetUpdateOnRegisterPlayer:    false,
@@ -68,6 +70,7 @@ var (
 		MAttachmentPoints:                  ``,
 		MBuildEffectSpeed:                  0.000000,
 		MCreateClearanceMeshRepresentation: true,
+		MCustomSkins:                       `(/Game/FactoryGame/Buildable/-Shared/Customization/Skins/SkinDesc_Test1.SkinDesc_Test1_C)`,
 		MDescription:                       `Transports up to 120 resources per minute. Used to move resources between buildings.`,
 		MDisplayName:                       `Conveyor Belt Mk.2`,
 		MForceNetUpdateOnRegisterPlayer:    false,
@@ -95,6 +98,7 @@ var (
 		MAttachmentPoints:                  ``,
 		MBuildEffectSpeed:                  0.000000,
 		MCreateClearanceMeshRepresentation: true,
+		MCustomSkins:                       `(/Game/FactoryGame/Buildable/-Shared/Customization/Skins/SkinDesc_Test1.SkinDesc_Test1_C)`,
 		MDescription:                       `Transports up to 270 resources per minute. Used to move resources between buildings.`,
 		MDisplayName:                       `Conveyor Belt Mk.3`,
 		MForceNetUpdateOnRegisterPlayer:    false,
@@ -122,6 +126,7 @@ var (
 		MAttachmentPoints:                  ``,
 		MBuildEffectSpeed:                  0.000000,
 		MCreateClearanceMeshRepresentation: true,
+		MCustomSkins:                       `(/Game/FactoryGame/Buildable/-Shared/Customization/Skins/SkinDesc_Test1.SkinDesc_Test1_C)`,
 		MDescription:                       `Transports up to 480 resources per minute. Used to move resources between buildings.`,
 		MDisplayName:                       `Conveyor Belt Mk.4`,
 		MForceNetUpdateOnRegisterPlayer:    false,
@@ -149,6 +154,7 @@ var (
 		MAttachmentPoints:                  ``,
 		MBuildEffectSpeed:                  0.000000,
 		MCreateClearanceMeshRepresentation: true,
+		MCustomSkins:                       `(/Game/FactoryGame/Buildable/-Shared/Customization/Skins/SkinDesc_Test1.SkinDesc_Test1_C)`,
 		MDescription:                       `Transports up to 780 resources per minute. Used to move resources between buildings.`,
 		MDisplayName:                       `Conveyor Belt Mk.5`,
 		MForceNetUpdateOnRegisterPlayer:    false,

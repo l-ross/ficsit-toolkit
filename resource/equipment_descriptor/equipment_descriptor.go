@@ -329,31 +329,6 @@ Standard issue electroshock self defense weapon for melee range.`,
 		MSubCategories:      ``,
 	}
 
-	EquipmentDescriptorSnowballMittens = FGEquipmentDescriptor{
-		Name:                    "EquipmentDescriptorSnowballMittens",
-		ClassName:               "BP_EquipmentDescriptorSnowballMittens_C",
-		MAbbreviatedDisplayName: ``,
-		MBuildMenuPriority:      0.000000,
-		MCanBeDiscarded:         true,
-		MDescription: `Slot: Hands
-Ammo: Snowball
-
-*Disclaimer: Snowballs in pile not included in ammo reserve.`,
-		MDisplayName:        `Snowball Pile`,
-		MEnergyValue:        0.000000,
-		MFluidColor:         `(B=0,G=0,R=0,A=0)`,
-		MForm:               resource.Solid,
-		MGasColor:           `(B=0,G=0,R=0,A=0)`,
-		MMenuPriority:       0.000000,
-		MPersistentBigIcon:  `Texture2D /Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_SnowballMittens_256.IconDesc_SnowballMittens_256`,
-		MRadioactiveDecay:   0.000000,
-		MRememberPickUp:     false,
-		MResourceSinkPoints: 1,
-		MSmallIcon:          `Texture2D /Game/FactoryGame/Events/Christmas/Parts/UI/IconDesc_SnowballMittens_64.IconDesc_SnowballMittens_64`,
-		MStackSize:          resource.One,
-		MSubCategories:      ``,
-	}
-
 	EquipmentDescriptorStunSpear = FGEquipmentDescriptor{
 		Name:                    "EquipmentDescriptorStunSpear",
 		ClassName:               "BP_EquipmentDescriptorStunSpear_C",
@@ -496,7 +471,6 @@ var ClassNameToDescriptor = map[string]FGEquipmentDescriptor{
 	"BP_EquipmentDescriptorObjectScanner_C":     EquipmentDescriptorObjectScanner,
 	"BP_EquipmentDescriptorRifle_C":             EquipmentDescriptorRifle,
 	"BP_EquipmentDescriptorShockShank_C":        EquipmentDescriptorShockShank,
-	"BP_EquipmentDescriptorSnowballMittens_C":   EquipmentDescriptorSnowballMittens,
 	"BP_EquipmentDescriptorStunSpear_C":         EquipmentDescriptorStunSpear,
 	"Desc_GolfCart_C":                           GolfCart,
 	"Desc_GolfCartGold_C":                       GolfCartGold,

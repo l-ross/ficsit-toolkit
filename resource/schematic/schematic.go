@@ -40,6 +40,7 @@ type FGSchematic struct {
 	MUnlockName         string
 	MUnlocks            []struct {
 		Class                         string
+		MEmotes                       string
 		MItemsToGive                  string
 		MNumArmEquipmentSlotsToUnlock int
 		MNumInventorySlotsToUnlock    int
@@ -94,6 +95,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -130,6 +132,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -166,6 +169,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -202,6 +206,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -249,6 +254,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -351,6 +357,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -387,6 +394,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -423,6 +431,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -470,6 +479,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -517,6 +527,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -564,6 +575,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -611,6 +623,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -658,6 +671,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -705,6 +719,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -752,6 +767,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -799,6 +815,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -846,6 +863,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -893,6 +911,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -940,6 +959,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -987,6 +1007,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1034,6 +1055,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1081,6 +1103,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1128,6 +1151,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1175,6 +1199,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1222,6 +1247,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1269,6 +1295,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1316,6 +1343,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1363,6 +1391,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1410,6 +1439,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1457,6 +1487,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1493,6 +1524,7 @@ var (
 		MType:                              resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1540,6 +1572,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1587,6 +1620,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1634,6 +1668,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1681,6 +1716,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1728,6 +1764,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1775,6 +1812,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1822,6 +1860,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1869,6 +1908,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1916,6 +1956,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -1963,6 +2004,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2010,6 +2052,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2057,6 +2100,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2104,6 +2148,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2151,6 +2196,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2198,6 +2244,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2245,6 +2292,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2292,6 +2340,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2339,6 +2388,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2386,6 +2436,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2433,6 +2484,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2469,6 +2521,7 @@ var (
 		MType:                              resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2516,6 +2569,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2563,6 +2617,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2610,6 +2665,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2657,6 +2713,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2693,6 +2750,7 @@ var (
 		MType:                              resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2740,6 +2798,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2787,6 +2846,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2834,6 +2894,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2881,6 +2942,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2928,6 +2990,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -2975,6 +3038,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3022,6 +3086,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3069,6 +3134,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3116,6 +3182,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3163,6 +3230,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3210,6 +3278,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3257,6 +3326,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3304,6 +3374,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3351,6 +3422,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3398,6 +3470,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3445,6 +3518,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3492,6 +3566,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3539,6 +3614,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3586,6 +3662,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3633,6 +3710,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3669,6 +3747,7 @@ var (
 		MType:                              resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3705,6 +3784,7 @@ var (
 		MType:                              resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3752,6 +3832,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3799,6 +3880,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3846,6 +3928,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3882,6 +3965,7 @@ var (
 		MType:                              resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3929,6 +4013,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -3976,6 +4061,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4023,6 +4109,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4070,6 +4157,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4117,6 +4205,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4164,6 +4253,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4211,6 +4301,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4258,6 +4349,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4305,6 +4397,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4352,6 +4445,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4399,6 +4493,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4446,6 +4541,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4493,6 +4589,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4540,6 +4637,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4587,6 +4685,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4634,6 +4733,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4670,6 +4770,7 @@ var (
 		MType:                              resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4717,6 +4818,7 @@ var (
 		MType:               resource.Alternate,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4764,6 +4866,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4800,6 +4903,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4847,6 +4951,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4894,6 +4999,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4941,6 +5047,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -4988,6 +5095,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5035,6 +5143,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5071,6 +5180,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5118,6 +5228,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5154,6 +5265,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5190,6 +5302,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5227,6 +5340,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5263,6 +5377,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5299,6 +5414,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5357,6 +5473,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5393,6 +5510,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5429,6 +5547,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5465,6 +5584,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5501,6 +5621,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5537,6 +5658,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5573,6 +5695,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5609,6 +5732,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5645,6 +5769,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5703,6 +5828,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5739,6 +5865,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5780,6 +5907,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5827,6 +5955,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5874,6 +6003,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5910,6 +6040,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5957,6 +6088,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -5993,6 +6125,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6029,6 +6162,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6076,6 +6210,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6112,6 +6247,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6148,6 +6284,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6184,6 +6321,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6231,6 +6369,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6278,6 +6417,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6325,6 +6465,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6372,6 +6513,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6419,6 +6561,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6466,6 +6609,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6513,6 +6657,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6549,6 +6694,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6589,6 +6735,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6625,6 +6772,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6672,6 +6820,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6719,6 +6868,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6755,6 +6905,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6802,6 +6953,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6853,6 +7005,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6904,6 +7057,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -6955,6 +7109,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7002,6 +7157,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7053,6 +7209,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7104,6 +7261,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7151,6 +7309,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7202,6 +7361,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7249,6 +7409,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7307,6 +7468,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7347,6 +7509,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7387,6 +7550,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7438,6 +7602,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7474,6 +7639,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7514,6 +7680,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7561,6 +7728,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7608,6 +7776,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7655,6 +7824,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7702,6 +7872,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7738,6 +7909,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7774,6 +7946,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7810,6 +7983,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7846,6 +8020,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7904,6 +8079,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7940,6 +8116,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -7976,6 +8153,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8016,6 +8194,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8052,6 +8231,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8088,6 +8268,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8124,6 +8305,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8171,6 +8353,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8218,6 +8401,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8265,6 +8449,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8301,6 +8486,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8348,6 +8534,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8384,6 +8571,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8435,6 +8623,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8503,6 +8692,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8561,6 +8751,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8608,6 +8799,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8655,6 +8847,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8702,6 +8895,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8749,6 +8943,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8785,6 +8980,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8821,6 +9017,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8857,6 +9054,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8893,6 +9091,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8929,6 +9128,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -8969,6 +9169,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9020,6 +9221,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9056,6 +9258,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9103,6 +9306,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9150,6 +9354,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9186,6 +9391,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9233,6 +9439,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9280,6 +9487,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9316,6 +9524,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9352,6 +9561,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9388,6 +9598,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9446,6 +9657,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9482,6 +9694,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9606,6 +9819,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9653,6 +9867,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9700,6 +9915,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9747,6 +9963,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9783,6 +10000,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9819,6 +10037,7 @@ var (
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9866,6 +10085,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9913,6 +10133,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9960,6 +10181,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -9996,6 +10218,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10043,6 +10266,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10079,6 +10303,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10126,6 +10351,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10162,6 +10388,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10198,6 +10425,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10255,6 +10483,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10291,6 +10520,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10327,6 +10557,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10364,6 +10595,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10400,6 +10632,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10436,6 +10669,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10494,6 +10728,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10530,6 +10765,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10565,6 +10801,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10601,6 +10838,7 @@ var (
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10670,6 +10908,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10717,6 +10956,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10764,6 +11004,7 @@ var (
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10811,6 +11052,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10858,6 +11100,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10905,6 +11148,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10952,6 +11196,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -10999,6 +11244,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11046,6 +11292,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11093,6 +11340,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11140,6 +11388,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11187,6 +11436,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11234,6 +11484,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11281,6 +11532,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11328,6 +11580,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11375,6 +11628,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11422,6 +11676,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11469,6 +11724,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11516,6 +11772,7 @@ var (
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11552,6 +11809,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11588,6 +11846,7 @@ var (
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11626,6 +11885,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                   resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11673,6 +11933,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11720,6 +11981,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11756,6 +12018,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11792,6 +12055,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11828,6 +12092,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11867,6 +12132,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11911,6 +12177,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11947,6 +12214,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -11987,6 +12255,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12028,6 +12297,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MUnlockName:                        `Build Gun Upgrade: Customizer`,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12071,6 +12341,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12116,6 +12387,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12152,6 +12424,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12192,6 +12465,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12228,6 +12502,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12264,6 +12539,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12308,6 +12584,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12344,6 +12621,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12389,6 +12667,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12425,6 +12704,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12461,6 +12741,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12497,6 +12778,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12537,6 +12819,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12573,6 +12856,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12614,6 +12898,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12654,6 +12939,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12690,6 +12976,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12730,6 +13017,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12766,6 +13054,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12811,6 +13100,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12847,6 +13137,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12883,6 +13174,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12923,6 +13215,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -12968,6 +13261,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13004,6 +13298,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13045,6 +13340,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13094,6 +13390,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13130,6 +13427,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13170,6 +13468,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13206,6 +13505,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Milestone,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13246,6 +13546,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13282,6 +13583,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13329,6 +13631,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13365,6 +13668,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13401,6 +13705,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13417,6 +13722,10 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 				Class:                        `BP_UnlockScannableResource_C`,
 				MResourcePairsToAddToScanner: `((ResourceDescriptor=BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"'))`,
 				MResourcesToAddToScanner:     `(BlueprintGeneratedClass'"/Game/FactoryGame/Resource/RawResources/OreIron/Desc_OreIron.Desc_OreIron_C"')`,
+			},
+			{
+				Class:   `BP_UnlockEmote_C`,
+				MEmotes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_Clap.Emote_Clap_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_BuildGunSpin.Emote_BuildGunSpin_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_FacePalm.Emote_FacePalm_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_Rock.Emote_Rock_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_Paper.Emote_Paper_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_Scissors.Emote_Scissors_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_Point.Emote_Point_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_Wave.Emote_Wave_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Emotes/Emote_Heart.Emote_Heart_C"')`,
 			},
 		},
 	}
@@ -13453,6 +13762,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13489,6 +13799,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13525,6 +13836,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13561,6 +13873,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13597,6 +13910,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13633,6 +13947,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13669,6 +13984,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13705,6 +14021,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13752,6 +14069,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13799,6 +14117,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13835,6 +14154,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13882,6 +14202,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13929,6 +14250,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -13976,6 +14298,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14023,6 +14346,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14070,6 +14394,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14117,6 +14442,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14164,6 +14490,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Custom,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14211,6 +14538,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14247,6 +14575,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14284,6 +14613,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14364,6 +14694,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14422,6 +14753,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14480,6 +14812,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14538,6 +14871,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14574,6 +14908,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14610,6 +14945,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14657,6 +14993,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14693,6 +15030,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14744,6 +15082,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14780,6 +15119,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14831,6 +15171,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14883,6 +15224,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14935,6 +15277,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -14986,6 +15329,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15037,6 +15381,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.Tutorial,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15073,6 +15418,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15109,6 +15455,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15156,6 +15503,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15203,6 +15551,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15250,6 +15599,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:               resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15290,6 +15640,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15326,6 +15677,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15362,6 +15714,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15398,6 +15751,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15434,6 +15788,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15474,6 +15829,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15510,6 +15866,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15546,6 +15903,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15582,6 +15940,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15618,6 +15977,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15654,6 +16014,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15690,6 +16051,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15726,6 +16088,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15736,7 +16099,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		}{
 			{
 				Class:    `BP_UnlockRecipe_C`,
-				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Holiday/Recipe_SnowballWeapon.Recipe_SnowballWeapon_C"',BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Holiday/Recipe_Snowball.Recipe_Snowball_C"')`,
+				MRecipes: `(BlueprintGeneratedClass'"/Game/FactoryGame/Recipes/Holiday/Recipe_Snowball.Recipe_Snowball_C"')`,
 			},
 		},
 	}
@@ -15762,6 +16125,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.MAM,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
@@ -15798,6 +16162,7 @@ Once unlocked, Roof Materials will become available for purchase in the Customiz
 		MType:                              resource.ResourceSink,
 		MUnlocks: []struct {
 			Class                         string
+			MEmotes                       string
 			MItemsToGive                  string
 			MNumArmEquipmentSlotsToUnlock int
 			MNumInventorySlotsToUnlock    int
