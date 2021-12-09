@@ -42,7 +42,7 @@ func (p *parser) parseHeader() (*Header, error) {
 		return nil, err
 	}
 
-	if h.HeaderVersion != 8 {
+	if h.HeaderVersion != 9 {
 		return nil, fmt.Errorf("only support save header version 8, got %d", h.HeaderVersion)
 	}
 
