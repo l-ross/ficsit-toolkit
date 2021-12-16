@@ -42,10 +42,9 @@ func Parse(r io.Reader) (*Save, error) {
 		Entities:         make(map[string]*Entity),
 		CollectedObjects: make([]*ObjectReference, 0),
 
-		entityOrder:              make([]string, 0),
-		componentOrder:           make([]string, 0),
-		objects:                  make([]object, 0),
-		componentsByInstanceName: make(map[string]*Component),
+		entityOrder:    make([]string, 0),
+		componentOrder: make([]string, 0),
+		objects:        make([]object, 0),
 	}
 
 	// Decompress the save file and replace p.body with the decompressed version.

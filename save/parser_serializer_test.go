@@ -58,10 +58,9 @@ func TestIdentical(t *testing.T) {
 		Entities:         make(map[string]*Entity),
 		CollectedObjects: make([]*ObjectReference, 0),
 
-		entityOrder:              make([]string, 0),
-		componentOrder:           make([]string, 0),
-		objects:                  make([]object, 0),
-		componentsByInstanceName: make(map[string]*Component),
+		entityOrder:    make([]string, 0),
+		componentOrder: make([]string, 0),
+		objects:        make([]object, 0),
 	}
 
 	err = p.parseBody(save)
