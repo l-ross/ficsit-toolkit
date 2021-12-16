@@ -11,9 +11,6 @@
 # IDE files
 .idea
 
-# Satisfactory save files
-*.sav
-
 # WIP directory
 wip/
 
