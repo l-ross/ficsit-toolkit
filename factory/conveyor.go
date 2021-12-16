@@ -9,7 +9,6 @@ import (
 	BuildableConveyorLift "github.com/l-ross/ficsit-toolkit/resource/buildable_conveyor_lift"
 	"github.com/l-ross/ficsit-toolkit/save"
 	"gonum.org/v1/gonum/graph"
-	"gonum.org/v1/gonum/graph/simple"
 )
 
 // Conveyor is implemented by ConveyorBelt and ConveyorLift
@@ -62,7 +61,7 @@ func (f *Factory) loadConveyorBelt(b *building, s *save.Save) (Building, error) 
 		return nil, err
 	}
 
-	f.Conveyors[c.ID()] = c
+	f.Conveyors[c.InstanceName()] = c
 
 	return c, nil
 }
@@ -111,7 +110,7 @@ func (f *Factory) loadConveyorLift(b *building, s *save.Save) (Building, error) 
 		return nil, err
 	}
 
-	f.Conveyors[c.ID()] = c
+	f.Conveyors[c.InstanceName()] = c
 
 	return c, nil
 }
@@ -148,11 +147,14 @@ func loadBeltContents(b *building) ([]*InventoryStack, error) {
 }
 
 func (f *Factory) loadConveyorConnection(c *save.Component) error {
-	n1, err := getID(c.InstanceName)
-	if err != nil {
-		return err
+	iName := strings.Split(c.InstanceName, ".")[0] + "." + strings.Split(c.InstanceName, ".")[1]
+	fmt.Println(iName)
+
+	b1 := f.Buildings[iName]
+	if b1 == nil {
+		return nil
 	}
-	var n2 int64
+	var b2 Building
 
 	// Assume we are going from node 1 to node 2.
 	n1ToN2 := true
@@ -178,14 +180,15 @@ func (f *Factory) loadConveyorConnection(c *save.Component) error {
 			if err != nil {
 				return err
 			}
-			n2, err = getID(o.PathName)
-			if err != nil {
-				return err
-			}
+
+			// TODO: Fix this
+			iName := strings.Split(o.PathName, ".")[0] + "." + strings.Split(o.PathName, ".")[1]
+
+			b2 = f.Buildings[iName]
 		}
 	}
 
-	if n2 == 0 {
+	if b2 == nil {
 		return nil
 	}
 
@@ -193,9 +196,9 @@ func (f *Factory) loadConveyorConnection(c *save.Component) error {
 
 	// Create edge based on direction.
 	if n1ToN2 {
-		e = f.conveyorGraph.NewEdge(simple.Node(n1), simple.Node(n2))
+		e = f.conveyorGraph.NewEdge(b1, b2)
 	} else {
-		e = f.conveyorGraph.NewEdge(simple.Node(n2), simple.Node(n1))
+		e = f.conveyorGraph.NewEdge(b2, b1)
 	}
 
 	f.conveyorGraph.SetEdge(e)

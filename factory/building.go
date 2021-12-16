@@ -11,11 +11,11 @@ import (
 	Recipe "github.com/l-ross/ficsit-toolkit/resource/recipe"
 	"github.com/l-ross/ficsit-toolkit/save"
 	"github.com/l-ross/ficsit-toolkit/save/property"
-	"gonum.org/v1/gonum/graph/simple"
 )
 
 // Building is implemented by all Satisfactory buildings
 type Building interface {
+	InstanceName() string
 	BuildTimestamp() time.Duration
 	Recipe() Recipe.FGRecipe
 	PrimaryColor() property.LinearColorStruct
@@ -27,6 +27,7 @@ type Building interface {
 
 type building struct {
 	id              int64
+	instanceName    string
 	descriptor      BuildingDescriptor.FGBuildingDescriptor
 	typePath        typepath.TypePath
 	entity          *save.Entity
@@ -34,6 +35,10 @@ type building struct {
 	builtWithRecipe Recipe.FGRecipe
 	primaryColor    property.LinearColorStruct
 	secondaryColor  property.LinearColorStruct
+}
+
+func (b *building) InstanceName() string {
+	return b.instanceName
 }
 
 // TypePath returns the type path for this building.
@@ -80,9 +85,10 @@ func (b *building) SecondaryColor() property.LinearColorStruct {
 
 func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
 	b := &building{
-		id:       f.id(),
-		typePath: typepath.TypePath(e.TypePath),
-		entity:   e,
+		id:           f.id(),
+		instanceName: e.InstanceName,
+		typePath:     typepath.TypePath(e.TypePath),
+		entity:       e,
 	}
 
 	// Only add the building to the conveyor graph if it has a reference to an input or output.
@@ -96,7 +102,7 @@ func (f *Factory) loadBuilding(e *save.Entity, s *save.Save) (Building, error) {
 	}
 
 	if hasConveyor {
-		f.conveyorGraph.AddNode(simple.Node(b.id))
+		f.conveyorGraph.AddNode(b)
 	}
 
 	for _, prop := range e.Properties {

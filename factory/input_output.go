@@ -3,6 +3,7 @@ package factory
 import (
 	"fmt"
 	"regexp"
+	"strings"
 
 	"github.com/l-ross/ficsit-toolkit/save"
 	"gonum.org/v1/gonum/graph"
@@ -143,13 +144,11 @@ func (f *Factory) getConnections(b *building, s *save.Save, re *regexp.Regexp, d
 				return nil, err
 			}
 
-			id, err := getID(obj.PathName)
-			if err != nil {
-				return nil, err
-			}
+			// TODO: Fix this
+			iName := strings.Split(obj.PathName, ".")[0] + "." + strings.Split(obj.PathName, ".")[1]
 
 			conn := &Connection{}
-			conn = f.next(conn, id, direction)
+			conn = f.next(conn, iName, direction)
 
 			if len(conn.ConveyorBelts) == 0 {
 				continue
@@ -162,8 +161,8 @@ func (f *Factory) getConnections(b *building, s *save.Save, re *regexp.Regexp, d
 	return conns, nil
 }
 
-func (f *Factory) next(c *Connection, n int64, direction func(int64) graph.Nodes) *Connection {
-	b := f.Buildings[n]
+func (f *Factory) next(c *Connection, instanceName string, direction func(int64) graph.Nodes) *Connection {
+	b := f.Buildings[instanceName]
 	switch b.(type) {
 	case nil:
 		return c
@@ -171,15 +170,20 @@ func (f *Factory) next(c *Connection, n int64, direction func(int64) graph.Nodes
 		c.ConveyorBelts = append(c.ConveyorBelts, b.(Conveyor))
 
 		// TODO: Check we only have 1 connected node
-		nodes := direction(n)
+		nodes := direction(b.ID())
 		if !nodes.Next() {
 			return c
 		}
 
 		node := nodes.Node()
+		if node == nil {
+			return c
+		}
+
+		nextB := node.(Building)
 
 		// TODO: Stop possible infinite loop
-		return f.next(c, node.ID(), direction)
+		return f.next(c, nextB.InstanceName(), direction)
 	}
 
 	c.Connected = b

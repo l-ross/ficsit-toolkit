@@ -14,12 +14,12 @@ const (
 type Factory struct {
 	s                 *save.Save
 	conveyorGraph     *simple.DirectedGraph
-	Buildings         map[int64]Building
-	Mergers           map[int64]*Merger
-	Splitters         map[int64]*Splitter
-	StorageContainers map[int64]*StorageContainer
-	Conveyors         map[int64]Conveyor
-	Production        map[int64]Production
+	Buildings         map[string]Building
+	Mergers           map[string]*Merger
+	Splitters         map[string]*Splitter
+	StorageContainers map[string]*StorageContainer
+	Conveyors         map[string]Conveyor
+	Production        map[string]Production
 
 	// Stores the next ID that should be assigned for a building in the conveyorGraph.
 	nextID int64
@@ -35,13 +35,13 @@ func Load(r io.Reader) (*Factory, error) {
 	f := &Factory{
 		s:             s,
 		conveyorGraph: simple.NewDirectedGraph(),
-		Buildings:     make(map[int64]Building),
-		Production:    make(map[int64]Production),
-		Conveyors:     make(map[int64]Conveyor),
+		Buildings:     make(map[string]Building),
+		Production:    make(map[string]Production),
+		Conveyors:     make(map[string]Conveyor),
 
-		Mergers:           make(map[int64]*Merger),
-		Splitters:         make(map[int64]*Splitter),
-		StorageContainers: make(map[int64]*StorageContainer),
+		Mergers:           make(map[string]*Merger),
+		Splitters:         make(map[string]*Splitter),
+		StorageContainers: make(map[string]*StorageContainer),
 	}
 
 	// Load all buildings
@@ -52,7 +52,7 @@ func Load(r io.Reader) (*Factory, error) {
 				return nil, err
 			}
 
-			f.Buildings[b.ID()] = b
+			f.Buildings[b.InstanceName()] = b
 		}
 	}
 
@@ -76,7 +76,7 @@ func Load(r io.Reader) (*Factory, error) {
 					return nil, err
 				}
 
-				f.Buildings[b2.ID()] = b2
+				f.Buildings[b2.InstanceName()] = b2
 			}
 		}
 	}

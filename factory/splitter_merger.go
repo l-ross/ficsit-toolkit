@@ -32,7 +32,7 @@ func (f *Factory) loadSplitter(b *building, s *save.Save) (Building, error) {
 		outputs:  o,
 	}
 
-	f.Splitters[b.id] = spl
+	f.Splitters[b.InstanceName()] = spl
 
 	return spl, nil
 }
@@ -67,7 +67,7 @@ func (f *Factory) loadMerger(b *building, s *save.Save) (Building, error) {
 		output:   o,
 	}
 
-	f.Mergers[b.id] = m
+	f.Mergers[b.InstanceName()] = m
 
 	return m, nil
 }

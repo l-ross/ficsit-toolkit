@@ -38,7 +38,7 @@ func (f *Factory) loadStorageContainer(b *building, save *save.Save) (Building, 
 		return nil, fmt.Errorf("unknown storage type path %s", b.typePath)
 	}
 
-	f.StorageContainers[b.id] = s
+	f.StorageContainers[b.InstanceName()] = s
 
 	return s, nil
 }
