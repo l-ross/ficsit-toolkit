@@ -6,6 +6,10 @@ import (
 	"strings"
 )
 
+const (
+	supportedHeaderVersion = 9
+)
+
 // ParseHeader will only parse the header of the save file and return it.
 func ParseHeader(r io.Reader) (*Header, error) {
 	p, err := newParser(r)
@@ -42,8 +46,8 @@ func (p *parser) parseHeader() (*Header, error) {
 		return nil, err
 	}
 
-	if h.HeaderVersion != 9 {
-		return nil, fmt.Errorf("only support save header version 8, got %d", h.HeaderVersion)
+	if h.HeaderVersion != supportedHeaderVersion {
+		return nil, fmt.Errorf("only support save header version %d, got %d", supportedHeaderVersion, h.HeaderVersion)
 	}
 
 	h.SaveVersion, err = p.ReadInt32()
