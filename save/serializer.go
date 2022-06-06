@@ -89,32 +89,102 @@ func (s *serializer) serializeObjects(save *Save) error {
 		return err
 	}
 
-	for _, eName := range save.entityOrder {
-		e := save.Entities[eName]
+	// Write entities
+	//
+	// If the Save was originally parsed from a save file we want to write
+	// back all the original entities in the order they were read and then
+	// append any newly added entities. This consistency makes testing easier.
 
-		err = s.WriteInt32(entityType)
+	unserializedEntities := make(map[string]struct{})
+	for _, e := range save.Entities {
+		unserializedEntities[e.InstanceName] = struct{}{}
+	}
+
+	// Write all the entities that were originally parsed out of the save file.
+	for _, eName := range save.entityOrder {
+		err := s.writeEntity(save, eName)
 		if err != nil {
 			return err
 		}
 
-		err = e.serialize(s)
+		delete(unserializedEntities, eName)
+	}
+
+	// Write all remaining entities.
+	for eName := range unserializedEntities {
+		err := s.writeEntity(save, eName)
 		if err != nil {
 			return err
 		}
 	}
 
+	// Write components
+	//
+	// If the Save was originally parsed from a save file we want to write
+	// back all the original component in the order they were read and then
+	// append any newly added components. This consistency makes testing easier.
+
+	unserializedComponents := make(map[string]struct{})
+	for _, c := range save.Components {
+		unserializedComponents[c.InstanceName] = struct{}{}
+	}
+
+	// Write all the components that were originally parsed out of the save file.
 	for _, cName := range save.componentOrder {
-		c := save.Components[cName]
-
-		err = s.WriteInt32(componentType)
+		err := s.writeComponent(save, cName)
 		if err != nil {
 			return err
 		}
 
-		err = c.serialize(s)
+		delete(unserializedComponents, cName)
+	}
+
+	// Write all remaining components.
+	for cName := range unserializedComponents {
+		err := s.writeComponent(save, cName)
 		if err != nil {
 			return err
 		}
+	}
+
+	return nil
+}
+
+func (s *serializer) writeEntity(save *Save, eName string) error {
+	e := save.Entities[eName]
+	if e == nil {
+		// Entity was deleted from the map so is nil.
+		return nil
+	}
+
+	err := s.WriteInt32(entityType)
+	if err != nil {
+		return err
+	}
+
+	err = e.serialize(s)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (s *serializer) writeComponent(save *Save, cName string) error {
+	c := save.Components[cName]
+	if c == nil {
+		// Component was deleted from the map so is nil.
+		return nil
+	}
+
+	err := s.WriteInt32(componentType)
+	if err != nil {
+		return err
+	}
+
+	err = c.serialize(s)
+	if err != nil {
+		return err
 	}
 
 	return nil
