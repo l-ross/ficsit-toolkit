@@ -148,7 +148,6 @@ func loadBeltContents(b *building) ([]*InventoryStack, error) {
 
 func (f *Factory) loadConveyorConnection(c *save.Component) error {
 	iName := strings.Split(c.InstanceName, ".")[0] + "." + strings.Split(c.InstanceName, ".")[1]
-	fmt.Println(iName)
 
 	b1 := f.Buildings[iName]
 	if b1 == nil {
